@@ -20,9 +20,12 @@ global.TravelTo = function (creepName: string, target: RoomPosition): void {
   cs.assignTask(TaskGoto.new(target));
 };
 
-function globalReset(): void {
+function onGlobalReset(): void {
   log.info("Global reset");
 }
+
+// Runs on global resets
+onGlobalReset();
 
 function unwrappedLoop(): void {
   preTick();

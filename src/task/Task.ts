@@ -17,7 +17,7 @@ export enum TaskCode {
 }
 
 const MAX_TASKS_ID = 9999999;
-export abstract class Task<DataType extends TaskData> {
+export abstract class Task<DataType extends TaskData, Target extends RoomObject | null> {
   private protoTask: ProtoTask<DataType>;
   public creep: Civis;
 
@@ -71,12 +71,12 @@ export abstract class Task<DataType extends TaskData> {
     return this.protoTask.type;
   }
 
-  public get target(): RoomObject | null {
+  public get target(): Target | null {
     if (!this.protoTask._target) {
       return null;
     }
 
-    return deref(this.protoTask._target.id);
+    return deref(this.protoTask._target.id) as Target | null;
   }
 
   public get targetPos(): RoomPosition | null {

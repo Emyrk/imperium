@@ -1,3 +1,4 @@
+import { Civis, CivisRunCode } from "civis/Civis";
 import { log } from "lib/log/log";
 
 const MAX_PID_NUMBER = 99999;
@@ -8,13 +9,14 @@ export enum ProcessCode {
   TERMINATE = 3
 }
 
-type ProgramConstructor<T> = new (pid: number) => Process<T>;
-export type NewProcessProto<DataType> = Omit<ProtoProcess<DataType>, "scheduled">;
+type ProgramConstructor<T extends ProcessData> = new (pid: number) => Process<T>;
+export type NewProcessProto<DataType extends ProcessData> = Omit<ProtoProcess<DataType>, "scheduled">;
 
 // TODO: Somehow manage creeps here.
-export abstract class Process<DataType> {
+export abstract class Process<DataType extends ProcessData> {
   public pid: number;
   private _children: (Process<any> | undefined)[];
+  private _civis: { [creepName: string]: Civis } = {};
 
   // When you print "top", you can see the last exec return.
   _lastExec: ProcessCode = ProcessCode.SUCCESS;
@@ -22,6 +24,24 @@ export abstract class Process<DataType> {
   constructor(pid: number) {
     this.pid = pid;
     this._children = this.scheduled.children.map(pid => Process.initializeProgram(pid));
+    this.creepNames.filter(name => {
+      const creep = Game.creeps[name];
+      if (!creep) {
+        return false;
+      }
+
+      this._civis[name] = new Civis(creep);
+      return true;
+    });
+  }
+
+  public assignCivis(creep: Creep) {
+    this._civis[creep.name] = new Civis(creep);
+    this.memory.data.creeps.push(creep.name);
+  }
+
+  private get creepNames(): string[] {
+    return this.memory.data.creeps;
   }
 
   get memory(): ProtoProcess<DataType> {
@@ -56,6 +76,15 @@ export abstract class Process<DataType> {
       }
       ret = ProcessCode.ERROR;
     }
+
+    // Run the creeps
+    Object.values(this._civis).forEach(civis => {
+      const code = civis.run();
+      if (code === CivisRunCode.Dead) {
+        delete this._civis[civis.name];
+        this.memory.data.creeps = this.memory.data.creeps.filter(name => name !== civis.name);
+      }
+    });
 
     // Run the children
     this._children.forEach(child => {
@@ -92,7 +121,7 @@ export abstract class Process<DataType> {
     return ret;
   }
 
-  public launchChildProcess<ChildDataType>(newProgram: NewProcessProto<ChildDataType>): number {
+  public launchChildProcess<ChildDataType extends ProcessData>(newProgram: NewProcessProto<ChildDataType>): number {
     return Process.launchChildProcess(this.pid, newProgram);
   }
 
@@ -107,7 +136,7 @@ export abstract class Process<DataType> {
 
   // Registered list of processes
   private static programs: { [type: string]: ProgramConstructor<any> } = {};
-  static register<T>(type: string, program: ProgramConstructor<T>) {
+  static register<T extends ProcessData>(type: string, program: ProgramConstructor<T>) {
     Process.programs[type] = program;
   }
 
@@ -140,7 +169,7 @@ export abstract class Process<DataType> {
     return Memory.scheduler.pidCounter++;
   }
 
-  public static launchProcess<DataType>(proto: NewProcessProto<DataType>): number {
+  public static launchProcess<DataType extends ProcessData>(proto: NewProcessProto<DataType>): number {
     const pid = Process.nextPid();
 
     Memory.processes[pid] = {
@@ -154,7 +183,10 @@ export abstract class Process<DataType> {
     return pid;
   }
 
-  public static launchChildProcess<DataType>(parent: number, proto: NewProcessProto<DataType>): number {
+  public static launchChildProcess<DataType extends ProcessData>(
+    parent: number,
+    proto: NewProcessProto<DataType>
+  ): number {
     const pid = this.launchProcess(proto);
     Memory.processes[parent].scheduled.children.push(pid);
     Memory.processes[pid].scheduled.parent = parent;

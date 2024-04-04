@@ -3,7 +3,7 @@ import { Tasks } from "task/Tasks";
 
 export interface TaskGotoData extends TaskData {}
 
-export class TaskGoto extends Task<TaskGotoData> {
+export class TaskGoto extends Task<TaskGotoData, null> {
   public static type = "goto";
 
   public static new(

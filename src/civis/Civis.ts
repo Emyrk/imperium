@@ -3,19 +3,27 @@ import { log } from "lib/log/log";
 import { Task, TaskCode } from "task/Task";
 import { Tasks } from "task/Tasks";
 
+export enum CivisRunCode {
+  Spawning = "spawning",
+  Alive = "alive",
+  Dead = "dead"
+}
+
 export class Civis {
+  public name: string;
   private creep: Creep; // The creep that this wrapper class will control
-  private _cachedTask: Task<TaskData> | null = null;
+  private _cachedTask: Task<TaskData, any> | null = null;
 
   constructor(creep: Creep) {
     this.creep = creep;
+    this.name = creep.name;
   }
 
   private refresh(): void {
     this.creep = Game.creeps[this.creep.name];
   }
 
-  get task(): Task<TaskData> | null {
+  get task(): Task<TaskData, any> | null {
     if (!this.creep.memory.task) {
       return null;
     }
@@ -27,7 +35,7 @@ export class Civis {
     return Tasks.initialize(this, this.creep.memory.task);
   }
 
-  assignTask(task: Task<TaskData> | ProtoTask<TaskData> | null, from?: string): void {
+  assignTask(task: Task<TaskData, any> | ProtoTask<TaskData> | null, from?: string): void {
     const existingTask = this.task;
     if (existingTask) {
       let fromMsg = "";
@@ -57,16 +65,22 @@ export class Civis {
     }
   }
 
-  run(): boolean {
+  run(): CivisRunCode {
     this.refresh();
 
+    if (!this.creep) {
+      // This creep has died
+      this.task?.finally();
+      return CivisRunCode.Dead;
+    }
+
     if (this.creep.spawning) {
-      return false;
+      return CivisRunCode.Spawning;
     }
 
     if (!this.task) {
       this.creep.say("idle");
-      return false;
+      return CivisRunCode.Alive;
     }
 
     const ret = this.task.run();
@@ -85,7 +99,7 @@ export class Civis {
       case TaskCode.MOVING:
     }
 
-    return true;
+    return CivisRunCode.Alive;
   }
 
   // Movement and location -------------------------------------------------------------------------------------------
@@ -102,12 +116,67 @@ export class Civis {
     return moveTo(this.creep, { pos: destination, range: range }, options);
   }
 
-  // Pass throughs ---------------------------------------------------------------------------------------------------
+  // Pass through ---------------------------------------------------------------------------------------------------
   get pos(): RoomPosition {
     return this.creep.pos;
   }
-
-  get name(): string {
-    return this.creep.name;
+  get store(): StoreDefinition {
+    return this.creep.store;
   }
+
+  // Actions
+  harvest(source: Source | Mineral) {
+    return this.creep.harvest(source);
+  }
+
+  pickup(resource: Resource) {
+    return this.creep.pickup(resource);
+  }
+
+  repair(target: Structure) {
+    return this.creep.repair(target);
+  }
+
+  reserveController(controller: StructureController) {
+    return this.creep.reserveController(controller);
+  }
+
+  signController(target: StructureController, text: string) {
+    return this.creep.signController(target, text);
+  }
+
+  upgradeController(controller: StructureController) {
+    return this.creep.upgradeController(controller);
+  }
+
+  suicide() {
+    return this.creep.suicide();
+  }
+
+  transfer(target: Creep | Civis | Structure, resourceType: ResourceConstant = RESOURCE_ENERGY, amount?: number) {
+    let result: ScreepsReturnCode;
+    if (target instanceof Civis) {
+      result = this.creep.transfer(target.creep, resourceType, amount);
+    } else {
+      result = this.creep.transfer(target, resourceType, amount);
+    }
+    return result;
+  }
+
+  withdraw(target: Structure | Tombstone, resourceType: ResourceConstant = RESOURCE_ENERGY, amount?: number) {
+    return this.creep.withdraw(target, resourceType, amount);
+  }
+
+  // Body configuration and related data -----------------------------------------------------------------------------
+
+  getActiveBodyparts(type: BodyPartConstant): number {
+    return this.creep.getActiveBodyparts(type);
+  }
+
+  /* The same as creep.getActiveBodyparts, but just counts bodyparts regardless of condition. */
+  getBodyparts(partType: BodyPartConstant): number {
+    return _.filter(this.creep.body, (part: BodyPartDefinition) => part.type == partType).length;
+  }
+
+  // Extra stuff -----------------------------------------------------------------------------------------------------
 }
