@@ -1,0 +1,1 @@
+Civis is a Latin word that translates to "citizen" or "fellow citizen".
