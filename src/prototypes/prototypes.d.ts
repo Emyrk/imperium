@@ -56,3 +56,23 @@ interface Source {
   // that will be added to the source every tick.
   avgRegenRate: number;
 }
+
+interface Room {
+  print: string;
+  my: boolean;
+  owner: string | undefined;
+
+  // Some accessors
+  towers: StructureTower[];
+  spawns: StructureSpawn[];
+  extensions: StructureExtension[];
+  sources: Source[];
+  openSpawns: StructureSpawn[];
+  hostiles: Creep[];
+  minerals: Mineral[];
+
+  // scout(): boolean;
+  // roomCallback?: (roomName: string) => CostMatrix | boolean;
+  // stationCreep will tell the room a creep wants to be stationary here.
+  // stationCreep?: (pos: RoomPosition) => void;
+}

@@ -24,6 +24,10 @@ export class Civis {
   }
 
   get task(): Task<TaskData, any> | null {
+    if (!this.creep) {
+      return null;
+    }
+
     if (!this.creep.memory.task) {
       return null;
     }
@@ -36,6 +40,10 @@ export class Civis {
   }
 
   assignTask(task: Task<TaskData, any> | ProtoTask<TaskData> | null, from?: string): void {
+    if (!this.creep) {
+      return;
+    }
+
     const existingTask = this.task;
     if (existingTask) {
       let fromMsg = "";
@@ -45,9 +53,7 @@ export class Civis {
 
       existingTask.finally();
       log.debug(
-        `${fromMsg}${this.creep.name} called 'finally()' on task ${existingTask.describe()}. NewTask: ${
-          existingTask.type
-        }`
+        `${fromMsg}${this.name} called 'finally()' on task ${existingTask.describe()}. NewTask: ${existingTask.type}`
       );
     }
 

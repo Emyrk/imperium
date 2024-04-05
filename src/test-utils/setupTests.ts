@@ -3,8 +3,8 @@
 // import { MemPromise } from "lib/promise/Promise";
 import * as mover from "emyrk-screeps-cartographer";
 import { MoveOpts, MoveTarget } from "emyrk-screeps-cartographer";
-import "../declarations/globals";
-import "../lib/prototypes/RoomPosition";
+import "../declarations/global";
+import "../prototypes/RoomPosition";
 
 beforeEach(() => {
   // Make sure memory/game/etc are reset for each test.

@@ -194,6 +194,10 @@ export abstract class Process<DataType extends ProcessData> {
     Process.programs[type] = program;
   }
 
+  static get<Program extends Process<any>>(pid: number): Program | undefined {
+    return this.initializeProgram(pid) as Program;
+  }
+
   static _processByPid: { [pid: number]: Process<any> } = {};
   public static initializeProgram(pid: number): Process<any> | undefined {
     const proto = Memory.processes[pid];
