@@ -22,10 +22,17 @@ import { log } from "lib/log/log";
 import { ProgramHarvestSource } from "program/HarvestSource/HarvestSource";
 import { Process } from "kernel/Process";
 import { Top } from "kernel/Top";
+import { ProgramSpawnControl } from "program/SpawnControl/SpawnControl";
 
 // @ts-ignore
 global.Harvest = function (target: Source): void {
-  const process = ProgramHarvestSource.new(target);
+  const room = Game.rooms[target.pos.roomName];
+  if (!room.memory.spawnPid) {
+    const proto = ProgramSpawnControl.new(target.pos.roomName);
+    room.memory.spawnPid = Process.launchProcess(proto);
+  }
+
+  const process = ProgramHarvestSource.new(target, room.memory.spawnPid!);
   Process.launchProcess(process);
 };
 

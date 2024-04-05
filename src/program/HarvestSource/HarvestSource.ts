@@ -1,4 +1,5 @@
 import { Process, ProcessCode } from "kernel/Process";
+import { ProgramCivisManager } from "program/SpawnControl/CivisManager";
 import ControlFlowLoop from "task/controlflows/Loop/Loop";
 import { TaskHarvest } from "task/instances/harvest";
 import { TaskTransfer } from "task/instances/transfer";
@@ -6,20 +7,30 @@ import { TaskTransfer } from "task/instances/transfer";
 export interface ProgramHarvestSourceData extends ProcessData {
   sourceID: string;
   spawningCreep?: string;
+  spawnPid: number;
+  mgrPid?: number;
 }
 
 export class ProgramHarvestSource extends Process<ProgramHarvestSourceData> {
   public static type = "harvest-source";
 
-  public static new(source: Source) {
+  public static new(source: Source, spawnPid: number) {
     return Process.newProgram<ProgramHarvestSourceData>(
       ProgramHarvestSource.type,
       `${source.pos.roomName}_harvest_${source.id.substring(-4)}`,
       {
         roomName: source.room.name,
-        sourceID: source.id
+        sourceID: source.id,
+        spawnPid: spawnPid
       }
     );
+  }
+
+  private get manager(): ProgramCivisManager {
+    if (!this.data.mgrPid) {
+      this.data.mgrPid = this.launchChildProcess(ProgramCivisManager.new(this.data.spawnPid, "har"));
+    }
+    return Process.get(this.data.mgrPid!) as ProgramCivisManager;
   }
 
   private get source(): Source | null {
@@ -31,30 +42,15 @@ export class ProgramHarvestSource extends Process<ProgramHarvestSourceData> {
       // Developer error?  Or source disappeared which seems improbable.
       return ProcessCode.ERROR;
     }
+    this.manager; // Ensure we have a managing civis pid
 
-    const name = this.source.id + "_har";
-
-    if (this.data.spawningCreep) {
-      const creep = Game.creeps[this.data.spawningCreep];
-      if (!creep) {
-        delete this.data.spawningCreep;
-        return ProcessCode.ERROR;
-      }
-      this.assignCivis(creep);
-      this.data.spawningCreep = undefined;
-    }
-    if (this.civis.length <= 0 && !this.data.spawningCreep) {
-      const code = Game.spawns["Spawn1"].spawnCreep([WORK, MOVE, CARRY], name, {
-        memory: {
-          task: ControlFlowLoop.new([TaskHarvest.new(this.source!), TaskTransfer.new(Game.spawns["Spawn1"])])
-        }
+    if (this.manager.total() < 1) {
+      this.manager.requestCreep([WORK, MOVE, CARRY], {
+        role: "harvest",
+        task: ControlFlowLoop.new([TaskHarvest.new(this.source!), TaskTransfer.new(Game.spawns["Spawn1"])])
       });
-      this.data.spawningCreep = name;
-      if (code !== OK) {
-        // TODO
-        return ProcessCode.ERROR;
-      }
     }
+
     return ProcessCode.SUCCESS;
   }
 

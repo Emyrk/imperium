@@ -1,4 +1,4 @@
-import { SpawnRequest, insertRequest } from "./SpawnControl";
+import { SpawnRequest, deleteRequest, insertRequest } from "./SpawnControl";
 
 describe("SpawnControl", () => {
   it.each([
@@ -72,7 +72,7 @@ describe("SpawnControl", () => {
           {
             creep: {
               bodyParts: [WORK, WORK, WORK],
-              name: "equal_costly",
+              name: "equal_super_expensive",
               mem: {}
             },
             priority: 0
@@ -102,7 +102,7 @@ describe("SpawnControl", () => {
           },
           priority: 0
         },
-        expected: ["zero", "cheap", "equal_expensive", "equal_costly", "low_prio"]
+        expected: ["zero", "cheap", "equal_expensive", "equal_super_expensive", "low_prio"]
       }
     ]
   ])("sort(%s)", (_, tdd) => {
@@ -110,13 +110,22 @@ describe("SpawnControl", () => {
     tdd.start.forEach(request => insertRequest(sorted, request));
     insertRequest(sorted, tdd.insert);
 
-    expect(sorted).toEqual(
-      tdd.expected.map(name => {
-        if (tdd.insert.creep.name === name) {
-          return tdd.insert;
-        }
-        return tdd.start.find(request => request.creep.name === name);
-      })
-    );
+    let expected = tdd.expected.map(name => {
+      if (tdd.insert.creep.name === name) {
+        return tdd.insert;
+      }
+      return tdd.start.find(request => request.creep.name === name);
+    });
+    expect(sorted).toEqual(expected);
+
+    // Try deletes
+    while (sorted.length > 0) {
+      const del = sorted[Math.floor(Math.random() * sorted.length)];
+      deleteRequest(sorted, del.creep.name);
+
+      expected = expected.filter(req => req!.creep.name !== del.creep.name);
+      expect(sorted).not.toContain(del);
+      expect(sorted).toEqual(expected);
+    }
   });
 });

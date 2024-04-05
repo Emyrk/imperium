@@ -71,8 +71,9 @@ export abstract class Process<DataType extends ProcessData> {
     return Object.values(this._civis);
   }
 
-  public assignCivis(creep: Creep) {
-    this._civis[creep.name] = new Civis(creep);
+  public assignCivis(creep: Creep): void {
+    const civis = new Civis(creep);
+    this._civis[creep.name] = civis;
     this.memory.data.creeps.push(creep.name);
   }
 

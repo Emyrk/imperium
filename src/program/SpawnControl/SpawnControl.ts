@@ -30,6 +30,10 @@ export class ProgramSpawnControl extends Process<ProgramSpawnControlData> {
     insertRequest(this.sortedQueue, request);
   }
 
+  public cancelRequest(name: string): void {
+    deleteRequest(this.sortedQueue, name);
+  }
+
   public execute(): ProcessCode {
     if (!this.room) {
       return ProcessCode.ERROR;
@@ -78,11 +82,21 @@ export class ProgramSpawnControl extends Process<ProgramSpawnControlData> {
   }
 
   selfTerminate(): ProcessCode {
+    this.sortedQueue.forEach(req => req.onComplete(false));
     return ProcessCode.SUCCESS;
   }
 }
 
 Process.register(ProgramSpawnControl.type, ProgramSpawnControl);
+
+export function deleteRequest(requests: SpawnRequest[], name: string) {
+  for (let i = 0; i < requests.length; i++) {
+    if (requests[i].creep.name === name) {
+      requests.splice(i, 1);
+      return;
+    }
+  }
+}
 
 export function insertRequest(requests: Omit<SpawnRequest, "onComplete">[], request: Omit<SpawnRequest, "onComplete">) {
   let i = 0;
@@ -102,3 +116,5 @@ export function insertRequest(requests: Omit<SpawnRequest, "onComplete">[], requ
 
   requests.splice(i, 0, request);
 }
+
+Process.register(ProgramSpawnControl.type, ProgramSpawnControl);
