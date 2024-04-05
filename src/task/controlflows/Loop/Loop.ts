@@ -50,7 +50,9 @@ export default class ControlFlowLoop extends Task<ControlFlowLoopData, null> {
     const proto = protoTask as ProtoTask<ControlFlowLoopData>;
     super(civi, proto);
     // Load all the tasks.
-    this.tasks = proto.data.tasks.map(t => Tasks.initialize(civi, t));
+    this.tasks = proto.data.tasks.map(t => {
+      return Tasks.initialize(civi, t);
+    });
   }
 
   work(): TaskCode {

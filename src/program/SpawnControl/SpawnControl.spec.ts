@@ -1,131 +1,114 @@
 import { SpawnRequest, deleteRequest, insertRequest } from "./SpawnControl";
-
-describe("SpawnControl", () => {
-  it.each([
-    [
-      "empty",
+import { test, expect } from "vitest";
+test("SpawnRequest", () => {});
+describe.each([
+  { name: "empty", start: [] as SpawnRequest[], insert: {} as SpawnRequest, expected: ["test"] },
+  {
+    name: "priority_only",
+    start: [
       {
-        start: [] as SpawnRequest[],
-        insert: {
-          creep: {
-            bodyParts: [MOVE],
-            name: "test",
-            mem: {}
-          },
-          priority: 0
+        creep: {
+          bodyParts: [MOVE],
+          name: "zero",
+          mem: { role: "" }
         },
-        expected: ["test"]
-      }
-    ],
-    [
-      "priority_only",
+        priority: 10
+      },
       {
-        start: [
-          {
-            creep: {
-              bodyParts: [MOVE],
-              name: "zero",
-              mem: {}
-            },
-            priority: 10
-          },
-          {
-            creep: {
-              bodyParts: [MOVE],
-              name: "one",
-              mem: {}
-            },
-            priority: 0
-          },
-          {
-            creep: {
-              bodyParts: [MOVE],
-              name: "two",
-              mem: {}
-            },
-            priority: -5
-          }
-        ] as SpawnRequest[],
-        insert: {
-          creep: {
-            bodyParts: [MOVE],
-            name: "test",
-            mem: {}
-          },
-          priority: 5
+        creep: {
+          bodyParts: [MOVE],
+          name: "one",
+          mem: { role: "" }
         },
-        expected: ["zero", "test", "one", "two"]
-      }
-    ],
-    [
-      "energy_cost",
+        priority: 0
+      },
       {
-        start: [
-          {
-            creep: {
-              bodyParts: [MOVE],
-              name: "zero",
-              mem: {}
-            },
-            priority: 10
-          },
-          {
-            creep: {
-              bodyParts: [WORK, WORK, WORK],
-              name: "equal_super_expensive",
-              mem: {}
-            },
-            priority: 0
-          },
-          {
-            creep: {
-              bodyParts: [WORK, WORK],
-              name: "equal_expensive",
-              mem: {}
-            },
-            priority: 0
-          },
-          {
-            creep: {
-              bodyParts: [MOVE],
-              name: "low_prio",
-              mem: {}
-            },
-            priority: -5
-          }
-        ] as SpawnRequest[],
-        insert: {
-          creep: {
-            bodyParts: [MOVE, WORK],
-            name: "cheap",
-            mem: {}
-          },
-          priority: 0
+        creep: {
+          bodyParts: [MOVE],
+          name: "two",
+          mem: { role: "" }
         },
-        expected: ["zero", "cheap", "equal_expensive", "equal_super_expensive", "low_prio"]
+        priority: -5
       }
-    ]
-  ])("sort(%s)", (_, tdd) => {
+    ] as SpawnRequest[],
+    insert: {
+      creep: {
+        bodyParts: [MOVE],
+        name: "test",
+        mem: { role: "" }
+      },
+      priority: 5
+    },
+    expected: ["zero", "test", "one", "two"]
+  },
+  {
+    name: "energy_cost",
+    start: [
+      {
+        creep: {
+          bodyParts: [MOVE],
+          name: "zero",
+          mem: { role: "" }
+        },
+        priority: 10
+      },
+      {
+        creep: {
+          bodyParts: [WORK, WORK, WORK],
+          name: "equal_super_expensive",
+          mem: { role: "" }
+        },
+        priority: 0
+      },
+      {
+        creep: {
+          bodyParts: [WORK, WORK],
+          name: "equal_expensive",
+          mem: { role: "" }
+        },
+        priority: 0
+      },
+      {
+        creep: {
+          bodyParts: [MOVE],
+          name: "low_prio",
+          mem: { role: "" }
+        },
+        priority: -5
+      }
+    ] as SpawnRequest[],
+    insert: {
+      creep: {
+        bodyParts: [MOVE, WORK],
+        name: "cheap",
+        mem: { role: "" }
+      },
+      priority: 0
+    },
+    expected: ["zero", "cheap", "equal_expensive", "equal_super_expensive", "low_prio"]
+  }
+])("sort($name)", ({ start, insert, expected }) => {
+  test(`returns ${expected}`, () => {
     const sorted = [] as SpawnRequest[];
-    tdd.start.forEach(request => insertRequest(sorted, request));
-    insertRequest(sorted, tdd.insert);
+    start.forEach(request => insertRequest(sorted, request));
+    insertRequest(sorted, insert);
 
-    let expected = tdd.expected.map(name => {
-      if (tdd.insert.creep.name === name) {
-        return tdd.insert;
+    let mappedExpected = expected.map(name => {
+      if (insert.creep.name === name) {
+        return insert;
       }
-      return tdd.start.find(request => request.creep.name === name);
+      return start.find(request => request.creep.name === name);
     });
-    expect(sorted).toEqual(expected);
+    expect(sorted).toEqual(mappedExpected);
 
     // Try deletes
     while (sorted.length > 0) {
       const del = sorted[Math.floor(Math.random() * sorted.length)];
       deleteRequest(sorted, del.creep.name);
 
-      expected = expected.filter(req => req!.creep.name !== del.creep.name);
+      mappedExpected = mappedExpected.filter(req => req!.creep.name !== del.creep.name);
       expect(sorted).not.toContain(del);
-      expect(sorted).toEqual(expected);
+      expect(sorted).toEqual(mappedExpected);
     }
   });
 });
