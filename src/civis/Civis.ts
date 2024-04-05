@@ -11,7 +11,7 @@ export enum CivisRunCode {
 
 export class Civis {
   public name: string;
-  private creep: Creep; // The creep that this wrapper class will control
+  public creep: Creep; // The creep that this wrapper class will control
   private _cachedTask: Task<TaskData, any> | null = null;
 
   constructor(creep: Creep) {
@@ -20,7 +20,7 @@ export class Civis {
   }
 
   private refresh(): void {
-    this.creep = Game.creeps[this.creep.name];
+    this.creep = Game.creeps[this.name];
   }
 
   get task(): Task<TaskData, any> | null {
@@ -125,6 +125,10 @@ export class Civis {
   }
 
   // Actions
+  build(site: ConstructionSite) {
+    return this.creep.build(site);
+  }
+
   harvest(source: Source | Mineral) {
     return this.creep.harvest(source);
   }

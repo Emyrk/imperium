@@ -63,6 +63,10 @@ export abstract class Task<DataType extends TaskData, Target extends RoomObject 
     this.protoTask = protoTask;
   }
 
+  public get data(): DataType {
+    return this.protoTask.data;
+  }
+
   public get proto(): ProtoTask<DataType> {
     return this.protoTask;
   }

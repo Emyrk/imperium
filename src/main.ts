@@ -9,6 +9,8 @@ import "prototypes/RoomPosition"; // RoomPosition prototypes
 import "prototypes/Room"; // Non-structure room prototypes
 import "prototypes/Structures"; // Prototypes for accessed structures
 import "prototypes/Miscellaneous"; // Everything else
+import "declarations/global";
+import "manual"; // Manual commands
 
 import { profiler } from "lib/profiler/profile";
 import { preTick, reconcileTraffic } from "emyrk-screeps-cartographer";
@@ -16,21 +18,15 @@ import { Stats } from "lib/stats/stats";
 import { USE_PROFILER } from "config";
 import ErrorMapper from "lib/filemap/ErrorMapper";
 import { Civis } from "civis/Civis";
-import { TaskGoto } from "task/instances/goto";
-import "declarations/global";
 import { log } from "lib/log/log";
-import { TaskHarvest } from "task/instances/harvest";
+import { ProgramHarvestSource } from "program/HarvestSource/HarvestSource";
+import { Process } from "kernel/Process";
+import { Top } from "kernel/Top";
 
 // @ts-ignore
-global.Harvest = function (creepName: string, target: Source): void {
-  const creep = Game.creeps[creepName];
-  if (!creep) {
-    console.log(`No creep with name ${creepName}`);
-    return;
-  }
-
-  const cs = new Civis(creep);
-  cs.assignTask(TaskHarvest.new(target));
+global.Harvest = function (target: Source): void {
+  const process = ProgramHarvestSource.new(target);
+  Process.launchProcess(process);
 };
 
 function onGlobalReset(): void {
@@ -44,14 +40,11 @@ function unwrappedLoop(): void {
   preTick();
 
   // Do all screepy shit
-
-  Object.values(Game.creeps).forEach(creep => {
-    const civis = new Civis(Game.creeps[creep.name]);
-    civis.run();
-  });
+  Process.runRootPIDs();
 
   reconcileTraffic();
   Stats.report();
+  Top.printTop();
 }
 
 function profiledLoop(): void {

@@ -1,5 +1,7 @@
 import { Civis, CivisRunCode } from "civis/Civis";
 import { log } from "lib/log/log";
+import { profile } from "lib/profiler/decorator";
+import { RecordTiming, Timing } from "./timing";
 
 const MAX_PID_NUMBER = 99999;
 export enum ProcessCode {
@@ -13,6 +15,7 @@ type ProgramConstructor<T extends ProcessData> = new (pid: number) => Process<T>
 export type NewProcessProto<DataType extends ProcessData> = Omit<ProtoProcess<DataType>, "scheduled">;
 
 // TODO: Somehow manage creeps here.
+@profile
 export abstract class Process<DataType extends ProcessData> {
   public pid: number;
   private _children: (Process<any> | undefined)[];
@@ -20,6 +23,34 @@ export abstract class Process<DataType extends ProcessData> {
 
   // When you print "top", you can see the last exec return.
   _lastExec: ProcessCode = ProcessCode.SUCCESS;
+  // Whole time it took to do "run()".
+  //  Includes children execution.
+  //  Includes civis execution.
+  _processTiming?: Timing;
+  // Includes only "execute". No children. No civis.
+  _processTimingSelf?: Timing;
+  // Includes only civis execution.
+  _processTimingCivis?: Timing;
+  _processCivisQuantity: number = 0;
+
+  // First tick since global reset or spawn
+  _firstTick: number = 0;
+
+  public static newProgram<Data extends ProcessData>(
+    type: string,
+    label: string,
+    data: Omit<Data, "creeps">
+  ): NewProcessProto<Data> {
+    return {
+      type: type,
+      label: label,
+      data: {
+        ...data,
+        creeps: []
+        // This is so jank and weird
+      } as unknown as Data
+    };
+  }
 
   constructor(pid: number) {
     this.pid = pid;
@@ -33,6 +64,11 @@ export abstract class Process<DataType extends ProcessData> {
       this._civis[name] = new Civis(creep);
       return true;
     });
+    this._firstTick = Game.time;
+  }
+
+  public get civis(): Civis[] {
+    return Object.values(this._civis);
   }
 
   public assignCivis(creep: Creep) {
@@ -42,6 +78,14 @@ export abstract class Process<DataType extends ProcessData> {
 
   private get creepNames(): string[] {
     return this.memory.data.creeps;
+  }
+
+  get label(): string {
+    return this.memory.label;
+  }
+
+  get data(): DataType {
+    return this.memory.data;
   }
 
   get memory(): ProtoProcess<DataType> {
@@ -58,6 +102,7 @@ export abstract class Process<DataType extends ProcessData> {
   }
 
   public run(): ProcessCode {
+    const start = Game.cpu.getUsed();
     let ret = ProcessCode.SUCCESS;
 
     // Run the process
@@ -76,15 +121,23 @@ export abstract class Process<DataType extends ProcessData> {
       }
       ret = ProcessCode.ERROR;
     }
+    this._processTimingSelf = RecordTiming(start, this._processTiming);
 
+    const civisStart = Game.cpu.getUsed();
     // Run the creeps
     Object.values(this._civis).forEach(civis => {
       const code = civis.run();
       if (code === CivisRunCode.Dead) {
         delete this._civis[civis.name];
         this.memory.data.creeps = this.memory.data.creeps.filter(name => name !== civis.name);
+        delete Memory.creeps[civis.name];
       }
     });
+
+    this._processCivisQuantity = this.civis.length;
+    if (this.civis.length > 0 || this._processTimingCivis) {
+      this._processTimingCivis = RecordTiming(civisStart, this._processTimingCivis);
+    }
 
     // Run the children
     this._children.forEach(child => {
@@ -103,6 +156,7 @@ export abstract class Process<DataType extends ProcessData> {
     });
 
     this._lastExec = ret;
+    this._processTiming = RecordTiming(start, this._processTiming);
     return ret;
   }
 
@@ -163,6 +217,11 @@ export abstract class Process<DataType extends ProcessData> {
   }
 
   static nextPid() {
+    if (!Memory.scheduler) {
+      Memory.scheduler = {
+        pidCounter: 1
+      };
+    }
     if (!Memory.scheduler.pidCounter || Memory.scheduler.pidCounter >= MAX_PID_NUMBER) {
       Memory.scheduler.pidCounter = 1;
     }
@@ -196,7 +255,11 @@ export abstract class Process<DataType extends ProcessData> {
     return pid;
   }
 
-  public runRootPIDs() {
+  public static runRootPIDs() {
+    if (!Memory.processes) {
+      Memory.processes = {};
+    }
+
     Object.values(Memory.processes).forEach(proto => {
       if (proto.scheduled.parent) {
         // The parent will execute this process.
@@ -211,9 +274,3 @@ export abstract class Process<DataType extends ProcessData> {
     });
   }
 }
-
-// export class ProgramExample extends Process<ProgramExampleData> {
-//   /// .....
-// }
-
-// Process.register(ProgramExample.type, ProgramExample);
