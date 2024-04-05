@@ -85,28 +85,3 @@ Object.defineProperty(Room.prototype, "hostiles", {
   },
   configurable: true
 });
-
-Room.prototype.scout = function (): boolean {
-  if (!this.memory) {
-    this.memory = {};
-  }
-
-  if (this.memory.scouted) return true;
-
-  const room = Game.rooms[this.name];
-  if (!room) {
-    return false;
-  }
-
-  if (room.controller) {
-    this.memory.controller = room.controller.pos;
-  }
-
-  this.memory.sources = room.sources.map(s => s.pos);
-  this.memory.minerals = room.minerals.map(m => {
-    return { pos: m.pos, mineralType: m.mineralType };
-  });
-  this.memory.scouted = true;
-
-  return true;
-};

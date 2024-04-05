@@ -1,14 +1,14 @@
 import { Civis } from "civis/Civis";
 import { Task } from "./Task";
 
-type TaskConstructor<T extends TaskData> = new (creep: Civis, protoTask: ProtoTask<T>) => Task<T>;
+type TaskConstructor<T extends TaskData> = new (creep: Civis, protoTask: ProtoTask<T>) => Task<T, any>;
 
 export class Tasks {
   static tasks: {
     [type: string]: TaskConstructor<any>;
   } = {};
 
-  static initialize<T extends TaskData>(creep: Civis, protoTask: ProtoTask<T>): Task<T> {
+  static initialize<T extends TaskData>(creep: Civis, protoTask: ProtoTask<T>): Task<T, any> {
     const taskType = protoTask.type;
     if (taskType === "") {
       throw new Error(`Task type on ${creep.name} cannot be empty.`);

@@ -116,7 +116,7 @@ export abstract class Task<DataType extends TaskData, Target extends RoomObject 
     // The task should be run!
     // First check if we are in range of the target.
     const targetPos = this.targetPos;
-    if (targetPos && this.creep.pos.inRangeTo(targetPos, this.options.targetRange)) {
+    if (targetPos && !this.creep.pos.inRangeTo(targetPos, this.options.targetRange)) {
       // Move!
       this.moveToTarget();
       return TaskCode.MOVING;

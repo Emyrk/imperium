@@ -1,3 +1,15 @@
+/* tslint:disable:ordered-imports */
+
+"use strict";
+// Import ALL the things! ==============================================================================================
+import "declarations/global"; // Global functions accessible from CLI
+import "prototypes/Creep"; // Creep prototypes
+import "prototypes/RoomObject"; // RoomObject and targeting prototypes
+import "prototypes/RoomPosition"; // RoomPosition prototypes
+import "prototypes/Room"; // Non-structure room prototypes
+import "prototypes/Structures"; // Prototypes for accessed structures
+import "prototypes/Miscellaneous"; // Everything else
+
 import { profiler } from "lib/profiler/profile";
 import { preTick, reconcileTraffic } from "emyrk-screeps-cartographer";
 import { Stats } from "lib/stats/stats";
@@ -7,9 +19,10 @@ import { Civis } from "civis/Civis";
 import { TaskGoto } from "task/instances/goto";
 import "declarations/global";
 import { log } from "lib/log/log";
+import { TaskHarvest } from "task/instances/harvest";
 
 // @ts-ignore
-global.TravelTo = function (creepName: string, target: RoomPosition): void {
+global.Harvest = function (creepName: string, target: Source): void {
   const creep = Game.creeps[creepName];
   if (!creep) {
     console.log(`No creep with name ${creepName}`);
@@ -17,7 +30,7 @@ global.TravelTo = function (creepName: string, target: RoomPosition): void {
   }
 
   const cs = new Civis(creep);
-  cs.assignTask(TaskGoto.new(target));
+  cs.assignTask(TaskHarvest.new(target));
 };
 
 function onGlobalReset(): void {

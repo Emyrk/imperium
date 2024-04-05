@@ -20,3 +20,11 @@ interface ProtoRoomObject {
 }
 
 type Coord = { x: number; y: number };
+
+// I am not sure why we need RoomCoord
+interface RoomCoord {
+  x: number;
+  y: number;
+  xDir: string;
+  yDir: string;
+}

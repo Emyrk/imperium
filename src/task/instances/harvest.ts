@@ -1,4 +1,5 @@
 import { RANGES } from "lib/constants/creep";
+import { log } from "lib/log/log";
 import { Task, TaskCode } from "task/Task";
 import { Tasks } from "task/Tasks";
 
@@ -24,15 +25,18 @@ export class TaskHarvest extends Task<TaskHarvestData, Source> {
   }
 
   isValid(): boolean {
-    return this.target !== null && this.creep.store.getFreeCapacity() <= 0;
+    return this.target !== null && this.creep.store.getFreeCapacity() > 0;
   }
 
   work(): TaskCode {
     if (this.target === null) {
       return TaskCode.INVALID;
     }
-    this.creep.harvest(this.target);
-    return TaskCode.DONE_WORKING;
+    const ret = this.creep.harvest(this.target);
+    if (ret !== OK && Game.time % 5 === 0) {
+      log.error(`${this.creep.name} harvesting error: ${ret}`);
+    }
+    return TaskCode.WORKING;
   }
 
   describe(): string {
