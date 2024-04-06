@@ -1,3 +1,6 @@
+// CostMatrix is exactly the same as the actual cost matrix code.
+// It uses a bitmap to store the cost values for each tile in the room.
+// This CostMatrix is empty, and needs to be populated with values.
 export class CostMatrix {
   private _bits: Uint8Array;
   constructor(bits: Uint8Array = new Uint8Array(2500)) {

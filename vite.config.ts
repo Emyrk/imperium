@@ -5,7 +5,11 @@ export default defineConfig({
     // ...
     root: "src",
     globals: true,
-    environment: "../test/environments/vitest-environment-constants.ts",
-    setupFiles: ["../test/setups/setup_game.ts"]
+    // environment: "../test/environments/vitest-environment-constants.ts",
+    setupFiles: ["../test/setups/setup_game.ts"],
+    environmentMatchGlobs: [
+      ["**/*.spec.ts", "node"],
+      ["**/*.test.ts", "../test/environments/vitest-environment-fake.ts"]
+    ]
   }
 });

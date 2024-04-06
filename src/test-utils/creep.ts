@@ -1,5 +1,5 @@
 import { mockInstanceOf } from "screeps-jest";
-import { GenerateID, Store, saveObject } from "test-utils/helpers";
+import { GenerateID, Store, saveObject } from "./helpers";
 
 export function setStore(creep: Creep, resourceType: ResourceConstant, amount: number): void {
   // @ts-ignore

@@ -4,9 +4,9 @@ import { vi } from "vitest";
 import "declarations/global";
 
 beforeEach(() => {
-  mover.moveTo;
-  // The move library needs to be mocked
-  vi.spyOn(mover, "moveTo").mockImplementation(fakeMoveTo);
+  // mover.moveTo;
+  // // The move library needs to be mocked
+  // vi.spyOn(mover, "moveTo").mockImplementation(fakeMoveTo);
 });
 
 afterEach(() => {});

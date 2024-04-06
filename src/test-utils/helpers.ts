@@ -1,3 +1,5 @@
+// The FakeGame stores all objects in a flat map. If you save the object
+// then you will be able to retrieve it with getObjectById or deref.
 export function saveObject<D extends _HasId>(obj: D): void {
   // @ts-ignore
   Game.byID[obj.id] = obj;

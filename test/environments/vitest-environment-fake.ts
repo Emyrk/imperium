@@ -5,7 +5,7 @@ import { Game as FakeGame } from "../fakes/Game";
 import { RoomPosition as FakeRoomPosition } from "../fakes/RoomPosition";
 
 export default <Environment>{
-  name: "constants",
+  name: "fake",
   transformMode: builtinEnvironments.node.transformMode,
   // optional - only if you support "experimental-vm" pool
   async setupVM() {

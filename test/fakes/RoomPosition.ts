@@ -7,6 +7,8 @@ const BOTTOM_LEFT = 6;
 const LEFT = 7;
 const TOP_LEFT = 8;
 
+// RoomPosition does it's best to implement all the actual RoomPosition functions.
+// Implementations are more naive, without any actual pathfinding.
 export class RoomPosition {
   public x: number;
   public y: number;

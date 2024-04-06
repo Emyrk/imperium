@@ -1,3 +1,4 @@
+// RoomVisuals are a noop.
 export class RoomVisual {
   roomName: string;
 
