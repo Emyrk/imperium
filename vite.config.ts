@@ -1,15 +1,3 @@
-import { defineConfig } from "vitest/config";
+import { defineWorkspace } from "vitest/config";
 
-export default defineConfig({
-  test: {
-    // ...
-    root: "src",
-    globals: true,
-    // environment: "../test/environments/vitest-environment-constants.ts",
-    setupFiles: ["../test/setups/setup_game.ts"],
-    environmentMatchGlobs: [
-      ["**/*.spec.ts", "node"],
-      ["**/*.test.ts", "../test/environments/vitest-environment-fake.ts"]
-    ]
-  }
-});
+export default defineWorkspace(["tests/vitest.config.{fake,node}.ts"]);
