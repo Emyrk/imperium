@@ -10,7 +10,7 @@ function setupGlobals(globalObject: any) {
  * Initializes all game constants.
  * @see https://docs.screeps.com/api/#Constants
  */
-function setupConstants(globalObject: any) {
+export function setupConstants(globalObject: any) {
   Object.assign(globalObject, {
     OK: 0,
     ERR_NOT_OWNER: -1,

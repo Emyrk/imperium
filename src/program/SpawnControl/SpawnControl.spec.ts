@@ -1,6 +1,5 @@
 import { SpawnRequest, deleteRequest, insertRequest } from "./SpawnControl";
 import { test, expect } from "vitest";
-test("SpawnRequest", () => {});
 describe.each([
   // { name: "empty", start: [] as SpawnRequest[], insert: {} as SpawnRequest, expected: [] },
   {
@@ -88,7 +87,7 @@ describe.each([
     expected: ["zero", "cheap", "equal_expensive", "equal_super_expensive", "low_prio"]
   }
 ])("sort($name)", ({ start, insert, expected }) => {
-  test(`returns ${expected}`, () => {
+  test(`returns name`, () => {
     const sorted = [] as SpawnRequest[];
     start.forEach(request => insertRequest(sorted, request));
     insertRequest(sorted, insert);

@@ -3,6 +3,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from 'rollup-plugin-typescript2';
 import screeps from 'rollup-plugin-screeps';
+import replace from '@rollup/plugin-replace'
 
 let cfg;
 const dest = process.env.DEST;
@@ -29,6 +30,9 @@ export default {
     resolve(),
     commonjs(),
     typescript({ tsconfig: './tsconfig.json' }),
+    replace({ 
+      'import.meta.vitest': 'undefined', 
+    }) ,
     screeps({ config: cfg, dryRun: cfg == null })
   ]
 };

@@ -114,6 +114,9 @@ export class Log {
   static sourceMap: any;
 
   static init() {
+    if (!Log.useMemory()) {
+      return;
+    }
     _.defaultsDeep(Memory, {
       log: {
         level: LOG_LEVEL,
@@ -127,7 +130,16 @@ export class Log {
     Log.init();
   }
 
+  private static useMemory(): boolean {
+    // Unit tests should not fail because of this.
+    // @ts-ignore
+    return Boolean(global.Memory);
+  }
+
   get level(): number {
+    if (!Log.useMemory()) {
+      return LogLevels.DEBUG;
+    }
     return Memory.log.level;
   }
 
@@ -166,6 +178,9 @@ export class Log {
   }
 
   get showSource(): boolean {
+    if (!Log.useMemory()) {
+      return true;
+    }
     return Memory.log.showSource;
   }
 
@@ -174,6 +189,9 @@ export class Log {
   }
 
   get showTick(): boolean {
+    if (!Log.useMemory()) {
+      return false;
+    }
     return Memory.log.showTick;
   }
 
