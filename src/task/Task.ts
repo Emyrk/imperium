@@ -45,6 +45,12 @@ export abstract class Task<DataType extends TaskData, Target extends RoomObject 
   }
 
   private static nextID(): string {
+    // Unit tests fail if you do not have this check.
+    // @ts-ignore
+    if (global.Memory === undefined) {
+      return "tsk-test";
+    }
+
     if (!Memory.tasks) {
       Memory.tasks = {
         currentID: 1

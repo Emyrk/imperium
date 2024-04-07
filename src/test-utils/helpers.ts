@@ -34,56 +34,77 @@ export function CreepFields(body: BodyPartConstant[]): { [fields: string]: any }
   };
 }
 
-export interface StoreValue {
-  max: number;
-  current: number;
-}
-
 export class FakeStore {
-  values: Record<ResourceConstant, StoreValue>;
+  max: number | null = null;
+  values: Record<ResourceConstant, number>;
+  // allowAll defaults to using 0 instead of null for all resources.
+  all: boolean = false;
+
   constructor() {
-    this.values = {} as Record<ResourceConstant, StoreValue>;
+    this.values = {} as Record<ResourceConstant, number>;
   }
 
-  public getFreeCapacity(t: ResourceConstant): number | null {
-    if (this.values[t] === undefined) {
+  public getFreeCapacity(t?: ResourceConstant): number | null {
+    if (!this.max) {
       return null;
     }
-    const { max, current } = this.values[t];
-    return max - current;
+
+    const used = this.getUsedCapacity();
+    if (!used) return this.max;
+    return this.max - used;
   }
 
-  public getUsedCapacity(t: ResourceConstant): number | null {
-    if (this.values[t] === undefined) {
+  public getUsedCapacity(t?: ResourceConstant): number | null {
+    if (!this.max) {
       return null;
     }
-    const { max, current } = this.values[t];
-    return current;
+
+    return this.amount(t);
   }
 
-  public getCapacity(t: ResourceConstant): number | null {
-    if (this.values[t] === undefined) {
+  public getCapacity(t?: ResourceConstant): number | null {
+    return this.max;
+  }
+
+  public allowAll(): void {
+    this.all = true;
+  }
+
+  public setStore(t: ResourceConstant, current: number): void {
+    this.values[t] = current;
+  }
+
+  public setMax(max: number): void {
+    this.max = max;
+  }
+
+  private amount(t?: ResourceConstant): number | null {
+    if (!t) {
+      return _.sum(Object.values(this.values));
+    }
+
+    const v = this.values[t];
+    if (v === undefined) {
+      if (this.all) {
+        return 0;
+      }
       return null;
     }
-    const { max, current } = this.values[t];
-    return max;
-  }
-
-  public setStore(t: ResourceConstant, current: number, max?: number): void {
-    if (max === undefined) {
-      max = this.values[t].max;
-    }
-    this.values[t] = { max, current };
+    return v;
   }
 }
 
 // @ts-ignore
-export function Store(opts: { [t: ResourceConstant]: StoreValue }): FakeStore {
+export function Store(max: number, all: boolean, resources?: { [t: ResourceConstant]: number }): FakeStore {
   const f = new FakeStore();
-  Object.keys(opts).forEach(t => {
-    // @ts-ignore
-    const v = opts[t];
-    f.setStore(t as ResourceConstant, v.current, v.max);
-  });
+  if (resources) {
+    Object.keys(resources).forEach(t => {
+      // @ts-ignore
+      const v = resources[t];
+      f.setStore(t as ResourceConstant, v);
+    });
+  }
+  f.max = max === 0 ? null : max;
+  f.all = all;
   return f;
 }

@@ -1,11 +1,14 @@
 import { mockInstanceOf } from "screeps-jest";
-import { GenerateID, Store, saveObject } from "./helpers";
+import { GenerateID, Store, saveObject } from "test-utils/helpers";
+import { mockPos } from "./utils";
 
 export function setStore(creep: Creep, resourceType: ResourceConstant, amount: number): void {
   // @ts-ignore
   creep.store.setStore(resourceType, amount);
 }
 
+// MockCreep creates a new creep with the given body parts and optional fields.
+// It is a helper to help populate a lot of the usual fields.
 export function MockCreep(body: BodyPartConstant[], mockFields: { [name: string]: any } = {}): Creep {
   const id = GenerateID();
   let name = id;
@@ -14,17 +17,8 @@ export function MockCreep(body: BodyPartConstant[], mockFields: { [name: string]
   }
 
   // Custom pos handling
-  const pos = new RoomPosition(25, 25, "test");
-  if (mockFields.pos) {
-    pos.x = mockFields.pos.x;
-    pos.y = mockFields.pos.y;
-    if (mockFields.pos.roomName) {
-      pos.roomName = mockFields.pos.roomName;
-    } else {
-      pos.roomName = "test";
-    }
-    delete mockFields.pos;
-  }
+  const pos = mockPos(new RoomPosition(25, 25, "test"), mockFields.pos);
+  delete mockFields.pos;
 
   let fakeMove = false;
   if (!mockFields.move) {
@@ -37,24 +31,26 @@ export function MockCreep(body: BodyPartConstant[], mockFields: { [name: string]
     body: Body(body),
     hits: body.length * 100,
     hitsMax: body.length * 100,
-    store: Store({ energy: { max: body.filter(p => p === CARRY).length * CARRY_CAPACITY, current: 0 } }),
+    store: Store(body.filter(p => p === CARRY).length * CARRY_CAPACITY, true),
     spawning: false,
     ticksToLive: 1000,
     room: { name: "test" },
     saying: "",
     fatigue: 0,
+    say: () => OK,
     ...mockFields
   });
 
-  // @ts-ignore
-  Memory.creeps[creep.name] = {
-    task: undefined
-  };
-
+  // Faked are faked fields vs mocked fields.
+  // This will override the mocked fields.
   const faked: { [name: string]: any } = {
-    memory: Memory.creeps[creep.name],
     pos: pos
   };
+
+  // @ts-ignore
+  if (global.Memory) {
+    faked.memory = Memory.creeps[creep.name];
+  }
 
   if (fakeMove) {
     // Instant move
@@ -84,6 +80,7 @@ export function MockCreep(body: BodyPartConstant[], mockFields: { [name: string]
     };
   }
 
+  // Add the faked fields to the creep.
   Object.keys(faked).forEach(key => {
     if (!mockFields[key]) {
       // @ts-ignore
@@ -91,9 +88,18 @@ export function MockCreep(body: BodyPartConstant[], mockFields: { [name: string]
     }
   });
 
+  // save it to the game state
   Game.creeps[creep.name] = creep;
-
   saveObject(creep);
+
+  // @ts-ignore
+  if (global.Memory) {
+    // @ts-ignore
+    Memory.creeps[creep.name] = {
+      task: undefined
+    };
+  }
+
   return creep;
 }
 
