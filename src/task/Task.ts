@@ -82,7 +82,7 @@ export abstract class Task<DataType extends TaskData, Target extends RoomObject 
   }
 
   public get target(): Target | null {
-    if (!this.protoTask._target) {
+    if (!this.protoTask._target || this.protoTask._target.id === "") {
       return null;
     }
 

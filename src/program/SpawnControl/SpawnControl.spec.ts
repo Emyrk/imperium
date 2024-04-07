@@ -1,7 +1,7 @@
 import { SpawnRequest, deleteRequest, insertRequest } from "./SpawnControl";
 import { test, expect, describe } from "vitest";
 
-describe.each([
+test.each([
   // { name: "empty", start: [] as SpawnRequest[], insert: {} as SpawnRequest, expected: [] },
   {
     name: "priority_only",
@@ -87,28 +87,26 @@ describe.each([
     },
     expected: ["zero", "cheap", "equal_expensive", "equal_super_expensive", "low_prio"]
   }
-])("sort($name)", ({ start, insert, expected }) => {
-  test(`returns name`, () => {
-    const sorted = [] as SpawnRequest[];
-    start.forEach(request => insertRequest(sorted, request));
-    insertRequest(sorted, insert);
+])("sort($name)", ({ name, start, insert, expected }) => {
+  const sorted = [] as SpawnRequest[];
+  start.forEach(request => insertRequest(sorted, request));
+  insertRequest(sorted, insert);
 
-    let mappedExpected = expected.map(name => {
-      if (insert.creep && insert.creep.name === name) {
-        return insert;
-      }
-      return start.find(request => request.creep.name === name);
-    });
-    expect(sorted).toEqual(mappedExpected);
-
-    // Try deletes
-    while (sorted.length > 0) {
-      const del = sorted[Math.floor(Math.random() * sorted.length)];
-      deleteRequest(sorted, del.creep.name);
-
-      mappedExpected = mappedExpected.filter(req => req!.creep.name !== del.creep.name);
-      expect(sorted).not.toContain(del);
-      expect(sorted).toEqual(mappedExpected);
+  let mappedExpected = expected.map(name => {
+    if (insert.creep && insert.creep.name === name) {
+      return insert;
     }
+    return start.find(request => request.creep.name === name);
   });
+  expect(sorted).toEqual(mappedExpected);
+
+  // Try deletes
+  while (sorted.length > 0) {
+    const del = sorted[Math.floor(Math.random() * sorted.length)];
+    deleteRequest(sorted, del.creep.name);
+
+    mappedExpected = mappedExpected.filter(req => req!.creep.name !== del.creep.name);
+    expect(sorted).not.toContain(del);
+    expect(sorted).toEqual(mappedExpected);
+  }
 });

@@ -84,4 +84,26 @@ describe("Harvest task", () => {
     civis.run();
     expect(moved).toBe(true);
   });
+
+  it("no carry is invalid", () => {
+    const source = MockSource();
+    const proto = TaskHarvest.new(source);
+
+    const creep = MockCreep([MOVE, WORK]);
+    const civis = new Civis(creep);
+    const task = Tasks.initialize(civis, proto);
+    expect(task.isValid()).toBe(false);
+  });
+
+  it("full store is invalid", () => {
+    const source = MockSource();
+    const proto = TaskHarvest.new(source);
+
+    const creep = MockCreep([MOVE, WORK, CARRY], {
+      store: { getFreeCapacity: () => 0 }
+    });
+    const civis = new Civis(creep);
+    const task = Tasks.initialize(civis, proto);
+    expect(task.isValid()).toBe(false);
+  });
 });
