@@ -33,6 +33,20 @@ export class Stats {
     }
   }
 
+  // Logging a metric will convert it to a prometheus metric on the other side of the scraper.
+  // Examples:
+  // Using '.' to separate namespaces by creating a new object nesting.
+  //  Stats.log("cpu.getUsed", Game.cpu.getUsed());
+  // Naming with '_' can be used to separate namespaces on the prom end.
+  // It has essentially the same effect as '.'.
+  //  Stats.log("cpu_getUsed", Game.cpu.getUsed());
+  // Nesting the values also works
+  //  Stats.log("cpu", { getUsed: Game.cpu.getUsed() });
+  // And labels are supported, which works well with nesting
+  //  Stats.log("cpu", { getUsed: Game.cpu.getUsed() }, { room: "W1N8" });
+  // TODO: @emyrk I would really prefer a more "prometheus client" like api for this.
+  //  This implementation just feels very cheap, but it has downsides like if a metric is not
+  //  reported on a given tick, it will be lost.
   static log(
     key: string,
     value: number | { [key: string]: number } | undefined,
