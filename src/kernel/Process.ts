@@ -218,6 +218,8 @@ export abstract class Process<DataType extends ProcessData> {
     const ret = this.selfTerminate();
     delete Process._processByPid[this.pid];
 
+    // Remove this process metrics
+    this.instanceMetrics.reset();
     return ret;
   }
 
