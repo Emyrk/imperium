@@ -30,7 +30,7 @@ export abstract class Process<DataType extends ProcessData> {
   // Whole time it took to do "run()".
   //  Includes children execution.
   //  Includes civis execution.
-
+  //
   // Process Execution
   // ┌───────────────────────────────────────────────┐
   // │                                               │
@@ -41,11 +41,12 @@ export abstract class Process<DataType extends ProcessData> {
   // │ └──────────┘ └───────────┘ └────────────┴───┘ │
   // │                                               │
   // └───────────────────────────────────────────────┘
-  //   │          │ │           │              │
-  //   ├──────────┘ └───────────┘              │
-  //   │   Self         Civis                  │
-  //   └───────────────────────────────────────┘
+  //   │          │ │           │                   │
+  //   ├──────────┘ └───────────┘                   │
+  //   │   Self         Civis                       │
+  //   └────────────────────────────────────────────┘
   //                Process
+  //
   _processTiming?: Timing; // *Process* execution time.
   // Includes only "execute". No children. No civis.
   _processTimingSelf?: Timing; // *Self* execution time.
@@ -57,6 +58,7 @@ export abstract class Process<DataType extends ProcessData> {
   private instanceMetrics;
   private timingProcessMetric;
   private timingCivisMetric;
+  private civisCountMetric;
   private timingSelfMetric;
 
   // First tick since global reset or spawn
@@ -101,6 +103,7 @@ export abstract class Process<DataType extends ProcessData> {
     this.timingProcessMetric = this.instanceMetrics.object("cpu_process", {});
     this.timingCivisMetric = this.instanceMetrics.object("cpu_civis", {});
     this.timingSelfMetric = this.instanceMetrics.object("cpu_self", {});
+    this.civisCountMetric = this.instanceMetrics.gauge("civis_count");
   }
 
   public get civis(): Civis[] {
@@ -203,6 +206,7 @@ export abstract class Process<DataType extends ProcessData> {
     this.timingProcessMetric.set(this._processTiming);
     this.timingCivisMetric.set(this._processTimingCivis);
     this.timingSelfMetric.set(this._processTimingSelf);
+    this.civisCountMetric.set(this._processCivisQuantity);
     return ret;
   }
 
