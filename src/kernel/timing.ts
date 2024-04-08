@@ -6,6 +6,7 @@ export interface Timing {
   last: number;
   avg: number;
 }
+
 export function RecordTiming(start: number, last?: Timing): Timing {
   const first = last ? last.firstTick : Game.time;
   const taken = Game.cpu.getUsed() - start;

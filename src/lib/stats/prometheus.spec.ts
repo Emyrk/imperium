@@ -59,4 +59,12 @@ describe("Prometheus", () => {
     room.reset();
     expect(metrics.json()).toMatchSnapshot();
   });
+
+  it("nameless group", () => {
+    const room = metrics.group("room");
+    const labeledRoom = room.group("", { room: "E11S53" });
+    const controller = labeledRoom.group("controller", { owner: "me" });
+    controller.gauge("level").set(100);
+    expect(metrics.json()).toMatchSnapshot();
+  });
 });

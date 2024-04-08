@@ -9,11 +9,15 @@
 //   }
 // }
 
+import { profile } from "lib/profiler/decorator";
+
 export type Labels = Record<string, string>;
 
 export interface Gauge {
   set(value: number): void;
   clear(): void;
+  // Helpful to read the value without setting it
+  read(): number | undefined;
 }
 
 // Object is dangerous to use, prefer to use gauges
@@ -21,6 +25,7 @@ export interface Object {
   set(value: any): void;
 }
 
+@profile
 class Metrics {
   private _metrics: { [key: string]: any } = {};
   private clear?: () => void;
@@ -46,6 +51,9 @@ class Metrics {
       },
       clear: () => {
         this._metrics[metricName] = null;
+      },
+      read: () => {
+        return this._metrics[metricName];
       }
     };
   }

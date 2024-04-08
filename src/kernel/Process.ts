@@ -2,6 +2,7 @@ import { Civis, CivisRunCode } from "civis/Civis";
 import { log } from "lib/log/log";
 import { profile } from "lib/profiler/decorator";
 import { RecordTiming, Timing } from "./timing";
+import { metrics } from "lib/stats/prometheus";
 
 const MAX_PID_NUMBER = 99999;
 export enum ProcessCode {
@@ -20,18 +21,43 @@ export abstract class Process<DataType extends ProcessData> {
   public pid: number;
   private _children: (Process<any> | undefined)[];
   private _civis: { [creepName: string]: Civis } = {};
+  // Prometheus style metrics. Static group is for all processes.
+  private static processMetrics = metrics.group("process");
 
   // When you print "top", you can see the last exec return.
   _lastExec: ProcessCode = ProcessCode.SUCCESS;
+
   // Whole time it took to do "run()".
   //  Includes children execution.
   //  Includes civis execution.
-  _processTiming?: Timing;
+
+  // Process Execution
+  // ┌───────────────────────────────────────────────┐
+  // │                                               │
+  // │ ┌──────────┐ ┌───────────┐ ┌────────────┬───┐ │
+  // │ │          │ │           │ │            │|||│ │
+  // │ │execute() │ │My Civis() │ │Children()  ||||│ │
+  // │ │          │ │           │ │            │|||│ │
+  // │ └──────────┘ └───────────┘ └────────────┴───┘ │
+  // │                                               │
+  // └───────────────────────────────────────────────┘
+  //   │          │ │           │              │
+  //   ├──────────┘ └───────────┘              │
+  //   │   Self         Civis                  │
+  //   └───────────────────────────────────────┘
+  //                Process
+  _processTiming?: Timing; // *Process* execution time.
   // Includes only "execute". No children. No civis.
-  _processTimingSelf?: Timing;
+  _processTimingSelf?: Timing; // *Self* execution time.
   // Includes only civis execution.
-  _processTimingCivis?: Timing;
+  _processTimingCivis?: Timing; // *Civis* execution time.
   _processCivisQuantity: number = 0;
+
+  // metrics
+  private instanceMetrics;
+  private timingProcessMetric;
+  private timingCivisMetric;
+  private timingSelfMetric;
 
   // First tick since global reset or spawn
   _firstTick: number = 0;
@@ -65,6 +91,16 @@ export abstract class Process<DataType extends ProcessData> {
       return true;
     });
     this._firstTick = Game.time;
+
+    // Create the instanced metric group for this process.
+    this.instanceMetrics = Process.processMetrics.group("instance", {
+      room: this.data.roomName || "none",
+      type: this.type,
+      label: this.label
+    });
+    this.timingProcessMetric = this.instanceMetrics.object("cpu_process", {});
+    this.timingCivisMetric = this.instanceMetrics.object("cpu_civis", {});
+    this.timingSelfMetric = this.instanceMetrics.object("cpu_self", {});
   }
 
   public get civis(): Civis[] {
@@ -79,6 +115,10 @@ export abstract class Process<DataType extends ProcessData> {
 
   private get creepNames(): string[] {
     return this.memory.data.creeps;
+  }
+
+  get type(): string {
+    return this.memory.type;
   }
 
   get label(): string {
@@ -158,6 +198,11 @@ export abstract class Process<DataType extends ProcessData> {
 
     this._lastExec = ret;
     this._processTiming = RecordTiming(start, this._processTiming);
+
+    // Metrics
+    this.timingProcessMetric.set(this._processTiming);
+    this.timingCivisMetric.set(this._processTimingCivis);
+    this.timingSelfMetric.set(this._processTimingSelf);
     return ret;
   }
 
