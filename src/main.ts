@@ -23,6 +23,8 @@ import { ProgramHarvestSource } from "program/HarvestSource/HarvestSource";
 import { Process } from "kernel/Process";
 import { Top } from "kernel/Top";
 import { ProgramSpawnControl } from "program/SpawnControl/SpawnControl";
+import { metrics, reportMetrics } from "lib/stats/prometheus";
+import { BaseCollector } from "lib/stats/collectors";
 
 // @ts-ignore
 global.Harvest = function (target: Source): void {
@@ -36,6 +38,7 @@ global.Harvest = function (target: Source): void {
   Process.launchProcess(process);
 };
 
+var collector = new BaseCollector();
 function onGlobalReset(): void {
   log.info("Global reset");
 }
@@ -50,8 +53,14 @@ function unwrappedLoop(): void {
   Process.runRootPIDs();
 
   reconcileTraffic();
-  Stats.report();
+  // Report metrics to memory segment. These will be exported
+  // to prometheus.
+  if (Game.time % 20 === 0) {
+    reportMetrics(77, metrics);
+  }
   Top.printTop();
+
+  collector.loop();
 }
 
 function profiledLoop(): void {
