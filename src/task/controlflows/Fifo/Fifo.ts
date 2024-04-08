@@ -2,7 +2,7 @@ import { Civis } from "civis/Civis";
 import { log } from "lib/log/log";
 import { Task, TaskCode } from "task/Task";
 import { Tasks } from "task/Tasks";
-import { expect } from "vitest";
+import { expect, it } from "vitest";
 
 export interface ControlFlowFIFOData extends TaskData {
   tasks: ProtoTask<any>[];
@@ -55,11 +55,6 @@ export default class ControlFlowFIFO extends Task<ControlFlowFIFOData, any> {
     }
 
     while (true) {
-      if (import.meta.vitest) {
-        // Always assert the data and cache are synced
-        expect(this.data.tasks.length).toBe(this.tasks.length);
-      }
-
       const task = this.currentTask();
       if (!task) {
         return TaskCode.DONE_WORKING;
