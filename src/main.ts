@@ -49,18 +49,18 @@ onGlobalReset();
 function unwrappedLoop(): void {
   preTick();
 
-  // Do all screepy shit
   Process.runRootPIDs();
 
   reconcileTraffic();
+
+  Top.printTop();
+
+  collector.loop();
   // Report metrics to memory segment. These will be exported
   // to prometheus.
   if (Game.time % 20 === 0) {
     reportMetrics(77, metrics);
   }
-  Top.printTop();
-
-  collector.loop();
 }
 
 function profiledLoop(): void {
