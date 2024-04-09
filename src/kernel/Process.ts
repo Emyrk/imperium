@@ -176,6 +176,7 @@ export abstract class Process<DataType extends ProcessData> {
     const civisStart = Game.cpu.getUsed();
 
     // Run the creeps
+    this._processCivisIntents.start();
     Object.values(this._civis).forEach(civis => {
       const code = civis.run();
       this._processCivisIntents.include(civis);
@@ -187,6 +188,8 @@ export abstract class Process<DataType extends ProcessData> {
       }
     });
 
+    this._processCivisIntents.end();
+    this.civisIntentsMetric.set(this._processCivisIntents.metrics);
     this._processCivisQuantity = this.civis.length;
     if (this.civis.length > 0 || this._processTimingCivis) {
       this._processTimingCivis = RecordTiming(civisStart, this._processTimingCivis);
