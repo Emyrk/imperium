@@ -28,6 +28,6 @@ export class IntentMetricCollector {
   }
 
   //   toJSON(): Record<CivisIntents, number> {
-  //     return this.intents;
+  //     return this.last;
   //   }
 }
