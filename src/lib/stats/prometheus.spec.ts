@@ -67,4 +67,15 @@ describe("Prometheus", () => {
     controller.gauge("level").set(100);
     expect(metrics.json()).toMatchSnapshot();
   });
+
+  it("object key label", () => {
+    const room = metrics.group("room");
+    const intents = room.objectKeyLabel("intents", "intent");
+    intents.set({
+      harvest: 1,
+      upgrade: 2
+    });
+
+    expect(metrics.json()).toMatchSnapshot();
+  });
 });

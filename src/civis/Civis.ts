@@ -2,6 +2,7 @@ import { MoveOpts, moveTo } from "emyrk-screeps-cartographer";
 import { log } from "lib/log/log";
 import { Task, TaskCode } from "task/Task";
 import { Tasks } from "task/Tasks";
+import { CivisIntentsBit, Intents } from "./intents";
 
 export enum CivisRunCode {
   Spawning = "spawning",
@@ -71,8 +72,11 @@ export class Civis {
     }
   }
 
+  // uint64 bitmap for all non-offensive intents
+  public intents: Intents = new Intents();
   run(): CivisRunCode {
     this.refresh();
+    this.intents.reset();
 
     if (!this.creep) {
       // This creep has died
@@ -130,37 +134,41 @@ export class Civis {
     return this.creep.store;
   }
 
+  private catchIntent(bit: CivisIntentsBit, ret: ScreepsReturnCode): ScreepsReturnCode {
+    if (ret === OK) {
+      // Increment by 1. If we get more than 255 in here... problems
+      this.intents.increment(bit);
+    }
+    return ret;
+  }
+
   // Actions
   build(site: ConstructionSite) {
-    return this.creep.build(site);
+    return this.catchIntent(CivisIntentsBit.Build, this.creep.build(site));
   }
 
   harvest(source: Source | Mineral) {
-    return this.creep.harvest(source);
+    return this.catchIntent(CivisIntentsBit.Harvest, this.creep.harvest(source));
   }
 
   pickup(resource: Resource) {
-    return this.creep.pickup(resource);
+    return this.catchIntent(CivisIntentsBit.Pickup, this.creep.pickup(resource));
   }
 
   repair(target: Structure) {
-    return this.creep.repair(target);
+    return this.catchIntent(CivisIntentsBit.Repair, this.creep.repair(target));
   }
 
   reserveController(controller: StructureController) {
-    return this.creep.reserveController(controller);
+    return this.catchIntent(CivisIntentsBit.ReserveController, this.creep.reserveController(controller));
   }
 
   signController(target: StructureController, text: string) {
-    return this.creep.signController(target, text);
+    return this.catchIntent(CivisIntentsBit.SignController, this.creep.signController(target, text));
   }
 
   upgradeController(controller: StructureController) {
-    return this.creep.upgradeController(controller);
-  }
-
-  suicide() {
-    return this.creep.suicide();
+    return this.catchIntent(CivisIntentsBit.UpgradeController, this.creep.upgradeController(controller));
   }
 
   transfer(target: Creep | Civis | Structure, resourceType: ResourceConstant = RESOURCE_ENERGY, amount?: number) {
@@ -170,11 +178,17 @@ export class Civis {
     } else {
       result = this.creep.transfer(target, resourceType, amount);
     }
+
+    this.catchIntent(CivisIntentsBit.Transfer, result);
     return result;
   }
 
   withdraw(target: Structure | Tombstone, resourceType: ResourceConstant = RESOURCE_ENERGY, amount?: number) {
-    return this.creep.withdraw(target, resourceType, amount);
+    return this.catchIntent(CivisIntentsBit.Withdraw, this.creep.withdraw(target, resourceType, amount));
+  }
+
+  suicide() {
+    return this.creep.suicide();
   }
 
   // Body configuration and related data -----------------------------------------------------------------------------

@@ -14,10 +14,8 @@ import "manual"; // Manual commands
 
 import { profiler } from "lib/profiler/profile";
 import { preTick, reconcileTraffic } from "emyrk-screeps-cartographer";
-import { Stats } from "lib/stats/stats";
 import { USE_PROFILER } from "config";
 import ErrorMapper from "lib/filemap/ErrorMapper";
-import { Civis } from "civis/Civis";
 import { log } from "lib/log/log";
 import { ProgramHarvestSource } from "program/HarvestSource/HarvestSource";
 import { Process } from "kernel/Process";

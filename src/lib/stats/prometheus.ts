@@ -71,6 +71,18 @@ class Metrics {
     };
   }
 
+  // objectKeyLabel is a special case that allows using a record<string,any> where the
+  // string key value is the label value. The label name is defined by the function call.
+  objectKeyLabel(name: string, labelName: string): Object {
+    return {
+      set: (value: Record<string, any>) => {
+        Object.keys(value).forEach(labelValue => {
+          this._metrics[`${name}{${labelName}=${labelValue}}`] = value[labelValue];
+        });
+      }
+    };
+  }
+
   reset(): void {
     if (!this.clear) {
       throw new Error("Metrics.delete() called without a clear function set");

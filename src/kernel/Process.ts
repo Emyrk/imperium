@@ -3,6 +3,7 @@ import { log } from "lib/log/log";
 import { profile } from "lib/profiler/decorator";
 import { RecordTiming, Timing } from "./timing";
 import { metrics } from "lib/stats/prometheus";
+import { IntentMetric, IntentMetricCollector } from "./intents";
 
 const MAX_PID_NUMBER = 99999;
 export enum ProcessCode {
@@ -53,6 +54,7 @@ export abstract class Process<DataType extends ProcessData> {
   // Includes only civis execution.
   _processTimingCivis?: Timing; // *Civis* execution time.
   _processCivisQuantity: number = 0;
+  _processCivisIntents: IntentMetricCollector = new IntentMetricCollector();
 
   // metrics
   private instanceMetrics;
@@ -60,6 +62,7 @@ export abstract class Process<DataType extends ProcessData> {
   private timingCivisMetric;
   private civisCountMetric;
   private timingSelfMetric;
+  private civisIntentsMetric;
 
   // First tick since global reset or spawn
   _firstTick: number = 0;
@@ -103,7 +106,10 @@ export abstract class Process<DataType extends ProcessData> {
     this.timingProcessMetric = this.instanceMetrics.object("cpu_process", {});
     this.timingCivisMetric = this.instanceMetrics.object("cpu_civis", {});
     this.timingSelfMetric = this.instanceMetrics.object("cpu_self", {});
-    this.civisCountMetric = this.instanceMetrics.gauge("civis_count");
+
+    const civisMetrics = this.instanceMetrics.group("civis");
+    this.civisCountMetric = civisMetrics.gauge("count");
+    this.civisIntentsMetric = civisMetrics.objectKeyLabel("intents", "intent");
   }
 
   public get civis(): Civis[] {
@@ -168,9 +174,12 @@ export abstract class Process<DataType extends ProcessData> {
     this._processTimingSelf = RecordTiming(start, this._processTiming);
 
     const civisStart = Game.cpu.getUsed();
+
     // Run the creeps
     Object.values(this._civis).forEach(civis => {
       const code = civis.run();
+      this._processCivisIntents.include(civis);
+
       if (code === CivisRunCode.Dead) {
         delete this._civis[civis.name];
         this.memory.data.creeps = this.memory.data.creeps.filter(name => name !== civis.name);
@@ -207,6 +216,7 @@ export abstract class Process<DataType extends ProcessData> {
     this.timingCivisMetric.set(this._processTimingCivis);
     this.timingSelfMetric.set(this._processTimingSelf);
     this.civisCountMetric.set(this._processCivisQuantity);
+    this.civisIntentsMetric.set(this._processCivisIntents);
     return ret;
   }
 

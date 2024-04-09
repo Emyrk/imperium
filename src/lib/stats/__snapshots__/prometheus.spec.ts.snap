@@ -9,3 +9,5 @@ exports[`Prometheus > cpu group 1`] = `"{"cpu":{"limit":10000,"heap_statistics":
 exports[`Prometheus > nameless group 1`] = `"{"room":{"{room=E11S53}":{"controller{owner=me}":{"level":100}}}}"`;
 
 exports[`Prometheus > nested group 1`] = `"{"global{foo=bar}":{"room{room=E11S53}":{"controller{owner=me}":{"level":100}}}}"`;
+
+exports[`Prometheus > object key label 1`] = `"{"room":{"intents{intent=harvest}":1,"intents{intent=upgrade}":2}}"`;
