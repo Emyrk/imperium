@@ -20,33 +20,36 @@ export class IntentMetricCollector {
     this.intents.reset();
   }
 
-  end(): void {
+  end(): number {
+    let total = 0;
     // Hard code this list, no loops. I hope this is fast.
-    this.endIntent(CivisIntentsBit.Attack);
-    this.endIntent(CivisIntentsBit.AttackController);
-    this.endIntent(CivisIntentsBit.Build);
-    this.endIntent(CivisIntentsBit.Dismantle);
-    this.endIntent(CivisIntentsBit.Harvest);
-    this.endIntent(CivisIntentsBit.Heal);
-    this.endIntent(CivisIntentsBit.Move);
-    this.endIntent(CivisIntentsBit.Pickup);
-    this.endIntent(CivisIntentsBit.RangedAttack);
-    this.endIntent(CivisIntentsBit.RangedHeal);
-    this.endIntent(CivisIntentsBit.Repair);
-    this.endIntent(CivisIntentsBit.ReserveController);
-    this.endIntent(CivisIntentsBit.SignController);
-    this.endIntent(CivisIntentsBit.Transfer);
-    this.endIntent(CivisIntentsBit.UpgradeController);
-    this.endIntent(CivisIntentsBit.Withdraw);
+    total += this.endIntent(CivisIntentsBit.Attack);
+    total += this.endIntent(CivisIntentsBit.AttackController);
+    total += this.endIntent(CivisIntentsBit.Build);
+    total += this.endIntent(CivisIntentsBit.Dismantle);
+    total += this.endIntent(CivisIntentsBit.Harvest);
+    total += this.endIntent(CivisIntentsBit.Heal);
+    total += this.endIntent(CivisIntentsBit.Move);
+    total += this.endIntent(CivisIntentsBit.Pickup);
+    total += this.endIntent(CivisIntentsBit.RangedAttack);
+    total += this.endIntent(CivisIntentsBit.RangedHeal);
+    total += this.endIntent(CivisIntentsBit.Repair);
+    total += this.endIntent(CivisIntentsBit.ReserveController);
+    total += this.endIntent(CivisIntentsBit.SignController);
+    total += this.endIntent(CivisIntentsBit.Transfer);
+    total += this.endIntent(CivisIntentsBit.UpgradeController);
+    total += this.endIntent(CivisIntentsBit.Withdraw);
+    return total;
   }
 
-  endIntent(bit: CivisIntentsBit): void {
+  endIntent(bit: CivisIntentsBit): number {
     const last = this.intents.read(bit);
     this.metrics[intentName(bit)] = {
       last: last,
       avg: exponentialMovingAverage(this.metrics[bit].avg, last, 100),
       total: this.metrics[bit].total + last
     };
+    return last;
   }
 
   include(civis: Civis): void {
