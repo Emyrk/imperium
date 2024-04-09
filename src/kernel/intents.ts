@@ -1,4 +1,5 @@
 import { Civis } from "civis/Civis";
+import { Intents } from "civis/intents";
 import { profile } from "lib/profiler/decorator";
 
 export interface IntentMetric {
@@ -9,25 +10,21 @@ export interface IntentMetric {
 
 @profile
 export class IntentMetricCollector {
-  private intents: number = 0;
-  private offensiveIntents: number = 0;
+  private intents: Intents = new Intents();
 
   private last: Record<string, number> = {};
   constructor() {}
 
   start(): void {
-    this.intents = 0;
-    this.offensiveIntents = 0;
+    this.intents.reset();
   }
 
   end(): void {
     // Loop through all intents, build the metrics
-    for (let i = 0; i < 64; i++) {}
   }
 
   include(civis: Civis): void {
-    // this.intents += civis.intents;
-    // this.offensiveIntents += civis.offensiveIntents;
+    this.intents.merge(civis.intents);
   }
 
   //   toJSON(): Record<CivisIntents, number> {
