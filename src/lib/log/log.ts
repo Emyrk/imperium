@@ -253,6 +253,10 @@ export class Log {
     }
   }
 
+  printObject(obj: any) {
+    console.log.apply(this, this.buildArguments(LogLevels.DEBUG).concat(JSON.stringify(obj)));
+  }
+
   getFileLine(upStack = 4): string {
     const stack = new Error("").stack;
 

@@ -44,11 +44,17 @@ export class IntentMetricCollector {
 
   endIntent(bit: CivisIntentsBit): number {
     const last = this.intents.read(bit);
-    this.metrics[intentName(bit)] = {
-      last: last,
-      avg: exponentialMovingAverage(this.metrics[bit].avg, last, 100),
-      total: this.metrics[bit].total + last
-    };
+    const lastMetric = this.metrics[intentName(bit)];
+    if (!lastMetric) {
+      this.metrics[intentName(bit)] = { last: last, avg: last, total: last };
+    } else {
+      this.metrics[intentName(bit)] = {
+        last: last,
+        avg: exponentialMovingAverage(lastMetric.avg, last, 100),
+        total: lastMetric.total + last
+      };
+    }
+
     return last;
   }
 

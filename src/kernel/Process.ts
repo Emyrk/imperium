@@ -290,6 +290,7 @@ export abstract class Process<DataType extends ProcessData> {
       Memory.scheduler = {
         pidCounter: 1
       };
+      Memory.processes = {};
     }
     if (!Memory.scheduler.pidCounter || Memory.scheduler.pidCounter >= MAX_PID_NUMBER) {
       Memory.scheduler.pidCounter = 1;

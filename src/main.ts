@@ -23,6 +23,7 @@ import { Top } from "kernel/Top";
 import { ProgramSpawnControl } from "program/SpawnControl/SpawnControl";
 import { metrics, reportMetrics } from "lib/stats/prometheus";
 import { BaseCollector } from "lib/stats/collectors";
+import { ProgramBasicRoom } from "program/BasicRoom/BasicRoom";
 
 // @ts-ignore
 global.Harvest = function (target: Source): void {
@@ -46,6 +47,16 @@ onGlobalReset();
 
 function unwrappedLoop(): void {
   preTick();
+
+  // This feels a bit janky to put this here, but works for now.
+  Object.values(Game.spawns).forEach(spawn => {
+    const room = spawn.room;
+    if (room.memory)
+      if (!room.memory.roomPid) {
+        const proto = ProgramBasicRoom.new(room.name);
+        room.memory.roomPid = Process.launchProcess(proto);
+      }
+  });
 
   Process.runRootPIDs();
 

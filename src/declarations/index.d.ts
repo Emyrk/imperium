@@ -28,3 +28,7 @@ interface RoomCoord {
   xDir: string;
   yDir: string;
 }
+
+interface RoomMemory {
+  roomPid?: number;
+}

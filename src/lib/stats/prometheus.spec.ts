@@ -19,7 +19,7 @@ describe("Prometheus", () => {
     metrics.reset();
   });
 
-  it("basic gauge", () => {
+  it("Basic gauge", () => {
     const gauge = metrics.group("room", { room: "E11S53" }).gauge("tick", {});
     gauge.set(100);
     expect(metrics.json()).toMatchSnapshot();
