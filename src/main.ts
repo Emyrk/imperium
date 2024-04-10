@@ -12,7 +12,6 @@ import "prototypes/Miscellaneous"; // Everything else
 import "declarations/global";
 import "manual"; // Manual commands
 
-import { profiler } from "lib/profiler/profile";
 import { preTick, reconcileTraffic } from "emyrk-screeps-cartographer";
 import { USE_PROFILER } from "config";
 import ErrorMapper from "lib/filemap/ErrorMapper";
@@ -24,10 +23,15 @@ import { ProgramSpawnControl } from "program/SpawnControl/SpawnControl";
 import { metrics, reportMetrics } from "lib/stats/prometheus";
 import { BaseCollector } from "lib/stats/collectors";
 import { ProgramBasicRoom } from "program/BasicRoom/BasicRoom";
+import { enable, wrap } from "lib/profiler/screeps-profiler";
 
 var collector = new BaseCollector();
 function onGlobalReset(): void {
   log.info("Global reset");
+  if (USE_PROFILER) {
+    log.info("Profiling enabled");
+    enable();
+  }
 }
 
 // Runs on global resets
@@ -61,7 +65,7 @@ function unwrappedLoop(): void {
 }
 
 function profiledLoop(): void {
-  profiler.wrap(unwrappedLoop);
+  wrap(unwrappedLoop);
 }
 // When compiling TS to JS and bundling with rollup, the line numbers and file names in error messages change
 // This utility uses source maps to get the line numbers and file names of the original, TS source code
