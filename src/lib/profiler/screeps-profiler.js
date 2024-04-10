@@ -1,49 +1,69 @@
 "use strict";
 
+// This is a modified version of screeps-profiler taken from https://github.com/samogot/screeps-profiler
+
 let usedOnStart = 0;
 let enabled = false;
 let depth = 0;
 let parentFn = "(tick)";
 
-function setupProfiler() {
-  if (!Memory.profiler) {
-    Memory.profiler = {
-      type: "",
-      map: {},
-      totalTime: 0,
-      enabledTick: -1
-    };
-  }
+function AlreadyWrappedError() {
+  this.name = "AlreadyWrappedError";
+  this.message = "Error attempted to double wrap a function.";
+  this.stack = new Error().stack;
+}
 
+function setupProfiler() {
   depth = 0; // reset depth, this needs to be done each tick.
-  // @ts-ignore
+  parentFn = "(tick)";
   Game.profiler = {
-    callgrind() {
-      return Profiler.callgrind();
-    },
-    stream(duration: number, filter: string) {
+    stream(duration, filter) {
       setupMemory("stream", duration || 10, filter);
     },
-    email(duration: number, filter: string) {
+    email(duration, filter) {
       setupMemory("email", duration || 100, filter);
     },
-    profile(duration: number, filter: string) {
+    profile(duration, filter) {
       setupMemory("profile", duration || 100, filter);
     },
-    background(filter: string) {
+    background(filter) {
       setupMemory("background", false, filter);
     },
+    callgrind() {
+      const id = `id${Math.random()}`;
+      /* eslint-disable */
+      const download = `
+<script>
+  var element = document.getElementById('${id}');
+  if (!element) {
+    element = document.createElement('a');
+    element.setAttribute('id', '${id}');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,${encodeURIComponent(Profiler.callgrind())}');
+    element.setAttribute('download', 'callgrind.out.${Game.time}');
+  
+    element.style.display = 'none';
+    document.body.appendChild(element);
+  
+    element.click();
+  }
+</script>
+      `;
+      /* eslint-enable */
+      console.log(
+        download
+          .split("\n")
+          .map(s => s.trim())
+          .join("")
+      );
+    },
     restart() {
-      if (!Memory.profiler) {
-        throw new Error("Profiler not active, can't restart.");
-      }
       if (Profiler.isProfiling()) {
         const filter = Memory.profiler.filter;
-        let duration: boolean | number = false;
+        let duration = false;
         if (!!Memory.profiler.disableTick) {
           // Calculate the original duration, profile is enabled on the tick after the first call,
           // so add 1.
-          duration = (Memory.profiler.disableTick as number) - Memory.profiler.enabledTick + 1;
+          duration = Memory.profiler.disableTick - Memory.profiler.enabledTick + 1;
         }
         const type = Memory.profiler.type;
         setupMemory(type, duration, filter);
@@ -56,9 +76,9 @@ function setupProfiler() {
   overloadCPUCalc();
 }
 
-function setupMemory(profileType: string, duration: boolean | number, filter: string | undefined) {
+function setupMemory(profileType, duration, filter) {
   resetMemory();
-  const disableTick = Number.isInteger(duration) ? Game.time + (duration as number) : 0;
+  const disableTick = Number.isInteger(duration) ? Game.time + duration : false;
   if (!Memory.profiler) {
     Memory.profiler = {
       map: {},
@@ -72,21 +92,20 @@ function setupMemory(profileType: string, duration: boolean | number, filter: st
 }
 
 function resetMemory() {
-  delete Memory.profiler;
+  Memory.profiler = null;
 }
 
 function overloadCPUCalc() {
   if (Game.rooms.sim) {
     usedOnStart = 0; // This needs to be reset, but only in the sim.
     Game.cpu.getUsed = function getUsed() {
-      // @ts-ignore
       return performance.now() - usedOnStart;
     };
   }
 }
 
-function getFilter(): string | undefined {
-  return Memory.profiler?.filter;
+function getFilter() {
+  return Memory.profiler.filter;
 }
 
 const functionBlackList = [
@@ -94,71 +113,70 @@ const functionBlackList = [
   "constructor" // es6 class constructors need to be called with `new`
 ];
 
-function wrapFunction(obj: object, key: PropertyKey, className?: string) {
-  // Was Reflect.getOwnPropertyDescriptor
-  const descriptor = Object.getOwnPropertyDescriptor(obj, key);
-  if (!descriptor || descriptor.get || descriptor.set) {
-    return;
+const commonProperties = ["length", "name", "arguments", "caller", "prototype"];
+
+function wrapFunction(name, originalFunction) {
+  if (originalFunction.profilerWrapped) {
+    throw new AlreadyWrappedError();
   }
 
-  if (key === "constructor") {
-    return;
-  }
-
-  const originalFunction = descriptor.value;
-  if (!originalFunction || typeof originalFunction !== "function") {
-    return;
-  }
-
-  // set a key for the object in memory
-  if (!className) {
-    className = obj.constructor ? `${obj.constructor.name}` : "";
-  }
-  const memKey = className + `:${String(key)}`;
-
-  // set a tag so we don't wrap a function twice
-  const savedName = `__${String(key)}__`;
-  if (savedName in obj) {
-    return;
-  }
-
-  // @ts-ignore
-  obj[savedName] = originalFunction;
-  //   Reflect.set(obj, savedName, originalFunction);
-
-  ///////////
-
-  // Reflect.set(obj, key,
-  // @ts-ignore
-  obj[key] = function (this: any, ...args: any[]) {
-    if (Profiler.isProfiling() && (!getFilter() || memKey.indexOf(getFilter()!) > -1)) {
-      const curParent = parentFn;
-      parentFn = memKey;
-      depth++;
+  function wrappedFunction() {
+    if (Profiler.isProfiling()) {
+      const nameMatchesFilter = name === getFilter();
       const start = Game.cpu.getUsed();
-      // Call
-      const result = originalFunction.apply(this, args);
-      // After
-      depth--;
+      if (nameMatchesFilter) {
+        depth++;
+      }
+      const curParent = parentFn;
+      parentFn = name;
+      let result;
+      if (this && this.constructor === wrappedFunction) {
+        // eslint-disable-next-line new-cap
+        result = new originalFunction(...arguments);
+      } else {
+        result = originalFunction.apply(this, arguments);
+      }
       parentFn = curParent;
-      const end = Game.cpu.getUsed();
-      // Record
-      // TODO: Make parents work
-      Profiler.record(memKey, end - start, parentFn);
+      if (depth > 0 || !getFilter()) {
+        const end = Game.cpu.getUsed();
+        Profiler.record(name, end - start, parentFn);
+      }
+      if (nameMatchesFilter) {
+        depth--;
+      }
       return result;
     }
-    return originalFunction.apply(this, args);
-  };
+
+    if (this && this.constructor === wrappedFunction) {
+      // eslint-disable-next-line new-cap
+      return new originalFunction(...arguments);
+    }
+    return originalFunction.apply(this, arguments);
+  }
+
+  wrappedFunction.profilerWrapped = true;
+  wrappedFunction.toString = () => `// screeps-profiler wrapped function:\n${originalFunction.toString()}`;
+
+  Object.getOwnPropertyNames(originalFunction).forEach(property => {
+    if (!commonProperties.includes(property)) {
+      wrappedFunction[property] = originalFunction[property];
+    }
+  });
+
+  return wrappedFunction;
 }
+
 function hookUpPrototypes() {
   Profiler.prototypes.forEach(proto => {
     profileObjectFunctions(proto.val, proto.name);
   });
 }
 
-function profileObjectFunctions(object: Object, label: string) {
-  // @ts-ignore // TODO: Check this again
-  const objectToWrap = object.prototype ? object.prototype : object;
+function profileObjectFunctions(object, label) {
+  if (object.prototype) {
+    profileObjectFunctions(object.prototype, label);
+  }
+  const objectToWrap = object;
 
   Object.getOwnPropertyNames(objectToWrap).forEach(functionName => {
     const extendedLabel = `${label}.${functionName}`;
@@ -184,13 +202,11 @@ function profileObjectFunctions(object: Object, label: string) {
 
       if (descriptor.get) {
         const extendedLabelGet = `${extendedLabel}:get`;
-        // @ts-ignore
         profileDescriptor.get = profileFunction(descriptor.get, extendedLabelGet);
       }
 
       if (descriptor.set) {
         const extendedLabelSet = `${extendedLabel}:set`;
-        // @ts-ignore
         profileDescriptor.set = profileFunction(descriptor.set, extendedLabelSet);
       }
 
@@ -199,7 +215,7 @@ function profileObjectFunctions(object: Object, label: string) {
     }
 
     const isFunction = typeof descriptor.value === "function";
-    if (!isFunction) {
+    if (!isFunction || !descriptor.writable) {
       return;
     }
     const originalFunction = objectToWrap[functionName];
@@ -209,7 +225,7 @@ function profileObjectFunctions(object: Object, label: string) {
   return objectToWrap;
 }
 
-function profileFunction(fn: any, functionName: string, className?: string) {
+function profileFunction(fn, functionName) {
   const fnName = functionName || fn.name;
   if (!fnName) {
     console.log("Couldn't find a function name for - ", fn);
@@ -217,7 +233,7 @@ function profileFunction(fn: any, functionName: string, className?: string) {
     return fn;
   }
 
-  return wrapFunction(fn, fnName, className);
+  return wrapFunction(fnName, fn);
 }
 
 const Profiler = {
@@ -230,9 +246,6 @@ const Profiler = {
   },
 
   callgrind() {
-    if (!Memory.profiler) {
-      return;
-    }
     const elapsedTicks = Game.time - Memory.profiler.enabledTick + 1;
     Memory.profiler.map["(tick)"].calls = elapsedTicks;
     Memory.profiler.map["(tick)"].time = Memory.profiler.totalTime;
@@ -258,8 +271,8 @@ const Profiler = {
     return body;
   },
 
-  output(passedOutputLengthLimit: number = 1000) {
-    const outputLengthLimit = passedOutputLengthLimit;
+  output(passedOutputLengthLimit) {
+    const outputLengthLimit = passedOutputLengthLimit || 1000;
     if (!Memory.profiler || !Memory.profiler.enabledTick) {
       return "Profiler not active.";
     }
@@ -280,9 +293,6 @@ const Profiler = {
     let done = false;
     while (!done && allLines.length) {
       const line = allLines.shift();
-      if (!line) {
-        break;
-      }
       // each line added adds the line length plus a new line character.
       if (currentLength + line.length + 1 < outputLengthLimit) {
         lines.push(line);
@@ -295,14 +305,10 @@ const Profiler = {
     return lines.join("\n");
   },
 
-  lines(): string[] {
-    if (!Memory.profiler) {
-      throw new Error("Memory profiler is not defined");
-    }
-
+  lines() {
     const stats = Object.keys(Memory.profiler.map)
       .map(functionName => {
-        const functionCalls = Memory.profiler!.map[functionName];
+        const functionCalls = Memory.profiler.map[functionName];
         return {
           name: functionName,
           calls: functionCalls.calls,
@@ -322,17 +328,47 @@ const Profiler = {
   },
 
   prototypes: [
-    { name: "Game", val: Game }
-    // { name: "Room", val: Room },
-    // { name: "Structure", val: Structure },
-    // { name: "Spawn", val: Spawn },
-    // { name: "Creep", val: Creep }
-    // { name: "RoomPosition", val: RoomPosition },
-    // { name: "Source", val: Source },
-    // { name: "Flag", val: Flag }
-  ] as { name: string; val: any }[],
+    { name: "Game", val: global.Game },
+    { name: "Map", val: global.Game.map },
+    { name: "Market", val: global.Game.market },
+    { name: "PathFinder", val: global.PathFinder },
+    { name: "RawMemory", val: global.RawMemory },
+    { name: "ConstructionSite", val: global.ConstructionSite },
+    { name: "Creep", val: global.Creep },
+    { name: "Flag", val: global.Flag },
+    { name: "Mineral", val: global.Mineral },
+    { name: "Nuke", val: global.Nuke },
+    { name: "OwnedStructure", val: global.OwnedStructure },
+    { name: "CostMatrix", val: global.PathFinder.CostMatrix },
+    { name: "Resource", val: global.Resource },
+    { name: "Room", val: global.Room },
+    { name: "RoomObject", val: global.RoomObject },
+    { name: "RoomPosition", val: global.RoomPosition },
+    { name: "RoomVisual", val: global.RoomVisual },
+    { name: "Source", val: global.Source },
+    { name: "Structure", val: global.Structure },
+    { name: "StructureContainer", val: global.StructureContainer },
+    { name: "StructureController", val: global.StructureController },
+    { name: "StructureExtension", val: global.StructureExtension },
+    { name: "StructureExtractor", val: global.StructureExtractor },
+    { name: "StructureKeeperLair", val: global.StructureKeeperLair },
+    { name: "StructureLab", val: global.StructureLab },
+    { name: "StructureLink", val: global.StructureLink },
+    { name: "StructureNuker", val: global.StructureNuker },
+    { name: "StructureObserver", val: global.StructureObserver },
+    { name: "StructurePowerBank", val: global.StructurePowerBank },
+    { name: "StructurePowerSpawn", val: global.StructurePowerSpawn },
+    { name: "StructurePortal", val: global.StructurePortal },
+    { name: "StructureRampart", val: global.StructureRampart },
+    { name: "StructureRoad", val: global.StructureRoad },
+    { name: "StructureSpawn", val: global.StructureSpawn },
+    { name: "StructureStorage", val: global.StructureStorage },
+    { name: "StructureTerminal", val: global.StructureTerminal },
+    { name: "StructureTower", val: global.StructureTower },
+    { name: "StructureWall", val: global.StructureWall }
+  ],
 
-  checkMapItem(functionName: string, map: any = Memory.profiler!.map) {
+  checkMapItem(functionName, map = Memory.profiler.map) {
     if (!map[functionName]) {
       // eslint-disable-next-line no-param-reassign
       map[functionName] = {
@@ -343,40 +379,22 @@ const Profiler = {
     }
   },
 
-  record(functionName: string, time: number, parent: string) {
-    if (!Memory.profiler) {
-      throw new Error("Memory profiler is not defined");
-    }
-
-    // TODO: Fix this, we should not need this here.
-    if (!Memory.profiler.map) {
-      Memory.profiler.map = {};
-    }
-
-    Profiler.checkMapItem(functionName);
+  record(functionName, time, parent) {
+    this.checkMapItem(functionName);
     Memory.profiler.map[functionName].calls++;
     Memory.profiler.map[functionName].time += time;
     if (parent) {
-      Profiler.checkMapItem(parent);
-      Profiler.checkMapItem(functionName, Memory.profiler.map[parent].subs);
+      this.checkMapItem(parent);
+      this.checkMapItem(functionName, Memory.profiler.map[parent].subs);
       Memory.profiler.map[parent].subs[functionName].calls++;
       Memory.profiler.map[parent].subs[functionName].time += time;
     }
-
-    // if (!Memory.profiler.map[functionName]) {
-    //   Memory.profiler.map[functionName] = {
-    //     time: 0,
-    //     calls: 0
-    //   };
-    // }
-    // Memory.profiler.map[functionName].calls++;
-    // Memory.profiler.map[functionName].time += time;
   },
 
   endTick() {
-    if (Game.time >= Memory.profiler!.enabledTick) {
+    if (Game.time >= Memory.profiler.enabledTick) {
       const cpuUsed = Game.cpu.getUsed();
-      Memory.profiler!.totalTime += cpuUsed;
+      Memory.profiler.totalTime += cpuUsed;
       Profiler.report();
     }
   },
@@ -397,23 +415,23 @@ const Profiler = {
   },
 
   type() {
-    return Memory.profiler!.type;
+    return Memory.profiler.type;
   },
 
   shouldPrint() {
     const streaming = Profiler.type() === "stream";
     const profiling = Profiler.type() === "profile";
-    const onEndingTick = Memory.profiler!.disableTick === Game.time;
+    const onEndingTick = Memory.profiler.disableTick === Game.time;
     return streaming || (profiling && onEndingTick);
   },
 
   shouldEmail() {
-    return Profiler.type() === "email" && Memory.profiler!.disableTick === Game.time;
+    return Profiler.type() === "email" && Memory.profiler.disableTick === Game.time;
   }
 };
 
-export module profiler {
-  export function wrap(callback: () => any) {
+module.exports = {
+  wrap(callback) {
     if (enabled) {
       setupProfiler();
     }
@@ -439,16 +457,17 @@ export module profiler {
     }
 
     return callback();
-  }
+  },
 
-  export function enable() {
+  enable() {
     enabled = true;
-    // hookUpPrototypes();
-  }
+    hookUpPrototypes();
+  },
 
-  export const output = Profiler.output;
+  output: Profiler.output,
+  callgrind: Profiler.callgrind,
 
-  // export const registerObject = profileObjectFunctions;
-  export const registerFN = profileFunction;
-  // export const registerClass = profileObjectFunctions;
-}
+  registerObject: profileObjectFunctions,
+  registerFN: profileFunction,
+  registerClass: profileObjectFunctions
+};
