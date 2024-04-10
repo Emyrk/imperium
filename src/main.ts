@@ -25,18 +25,6 @@ import { metrics, reportMetrics } from "lib/stats/prometheus";
 import { BaseCollector } from "lib/stats/collectors";
 import { ProgramBasicRoom } from "program/BasicRoom/BasicRoom";
 
-// @ts-ignore
-global.Harvest = function (target: Source): void {
-  const room = Game.rooms[target.pos.roomName];
-  if (!room.memory.spawnPid) {
-    const proto = ProgramSpawnControl.new(target.pos.roomName);
-    room.memory.spawnPid = Process.launchProcess(proto);
-  }
-
-  const process = ProgramHarvestSource.new(target, room.memory.spawnPid!);
-  Process.launchProcess(process);
-};
-
 var collector = new BaseCollector();
 function onGlobalReset(): void {
   log.info("Global reset");

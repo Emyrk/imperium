@@ -2,16 +2,16 @@ import { Process, ProcessCode } from "kernel/Process";
 import { ProgramHarvestSource } from "program/HarvestSource/HarvestSource";
 import { ProgramSpawnControl } from "program/SpawnControl/SpawnControl";
 
-export interface ProgramBaiscRoomData extends ProcessData {
+export interface ProgramBasicRoomData extends ProcessData {
   spawnPid?: number;
   harvestPids: { [source: string]: number };
 }
 
-export class ProgramBasicRoom extends Process<ProgramBaiscRoomData> {
+export class ProgramBasicRoom extends Process<ProgramBasicRoomData> {
   public static type = "Basic-room";
 
   public static new(roomName: string) {
-    return Process.newProgram<ProgramBaiscRoomData>(ProgramBasicRoom.type, roomName, {
+    return Process.newProgram<ProgramBasicRoomData>(ProgramBasicRoom.type, roomName, {
       roomName: roomName,
       harvestPids: {}
     });
