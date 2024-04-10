@@ -10,6 +10,8 @@ interface TopRow {
   avgExecTime: number;
   totalExecTime: number;
   ticks: string;
+
+  intentsLast: number;
 }
 
 interface TopRowPads {
@@ -58,8 +60,8 @@ export class Top {
     //   };
     // }
 
-    const header = ["  ", "PID", "TICKS", "LABEL", "AVG", "LAST", "TOTAL"];
-    const rowPads = [1, pads.pid, pads.ticks, pads.label, pads.avgExec, pads.exec];
+    const header = ["  ", "PID", "TICKS", "LABEL", "AVG", "LAST", "TOTAL", "INTENTS"];
+    const rowPads = [1, pads.pid, pads.ticks, pads.label, pads.avgExec, pads.exec, 4];
     console.log(Top.line(header, rowPads));
     // console.log(
     //   Top.line(
@@ -98,7 +100,8 @@ export class Top {
             row.label,
             row.avgExecTime.toFixed(2),
             row.lastExecTime.toFixed(2),
-            Top.formatTotalExecTime(row.totalExecTime)
+            Top.formatTotalExecTime(row.totalExecTime),
+            row.intentsLast.toString()
           ],
           rowPads
         )
@@ -180,11 +183,13 @@ export class Top {
         lastExecTime: me._processTiming?.last ?? 0,
         avgExecTime: me._processTiming?.avg ?? 0,
         totalExecTime: me._processTiming?.total ?? 0,
-        ticks: Top.totalTicks(me._firstTick)
+        ticks: Top.totalTicks(me._firstTick),
+        intentsLast: 0 // defer to the civis row to record intents
       }
     ];
 
     if (me._processTimingCivis) {
+      me._processCivisIntents;
       const creepLabel = "  ".repeat(depth) + "└ " + `${me._processCivisQuantity}_creeps`;
       rows.push({
         pid: me.pid,
@@ -194,7 +199,8 @@ export class Top {
         lastExecTime: me._processTimingCivis.last,
         avgExecTime: me._processTimingCivis.avg,
         totalExecTime: me._processTimingCivis.total,
-        ticks: Top.totalTicks(me._firstTick)
+        ticks: Top.totalTicks(me._firstTick),
+        intentsLast: me._processCivisIntents.totalIntents
       });
     }
 

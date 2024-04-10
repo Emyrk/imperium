@@ -12,12 +12,14 @@ export interface IntentMetric {
 @profile
 export class IntentMetricCollector {
   private intents: Intents = new Intents();
+  public totalIntents: number = 0;
   public metrics: Record<string, IntentMetric> = {};
 
   constructor() {}
 
   start(): void {
     this.intents.reset();
+    this.totalIntents = 0;
   }
 
   end(): number {
@@ -39,6 +41,7 @@ export class IntentMetricCollector {
     total += this.endIntent(CivisIntentsBit.Transfer);
     total += this.endIntent(CivisIntentsBit.UpgradeController);
     total += this.endIntent(CivisIntentsBit.Withdraw);
+    this.totalIntents = total;
     return total;
   }
 
