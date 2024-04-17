@@ -185,6 +185,7 @@ export abstract class Process<DataType extends ProcessData> {
         delete this._civis[civis.name];
         this.memory.data.creeps = this.memory.data.creeps.filter(name => name !== civis.name);
         delete Memory.creeps[civis.name];
+        log.info(`Civis ${civis.name} has died, clearing memory.`);
       }
     });
 
