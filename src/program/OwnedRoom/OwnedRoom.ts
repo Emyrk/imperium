@@ -3,10 +3,12 @@ import { log } from "lib/log/log";
 import { ProgramHarvestSource } from "program/HarvestSource/HarvestSource";
 import { ProgramSpawnControl } from "program/SpawnControl/SpawnControl";
 import { ProgramStaticHarvest } from "program/StaticHarvest/StaticHarvest";
+import { ProgramTowerDefense } from "program/TowerDefense/TowerDefense";
 import { RoomCostMatrix } from "room/RoomCostMatrix";
 
 export interface ProgramOwnedRoomData extends ProcessData {
   spawnPid?: number;
+  towersPid?: number;
   harvestPids: { [source: string]: number };
 }
 
@@ -31,6 +33,10 @@ export class ProgramOwnedRoom extends Process<ProgramOwnedRoomData> {
   public execute(): ProcessCode {
     if (!this.data.spawnPid) {
       this.data.spawnPid = this.launchChildProcess(ProgramSpawnControl.new(this.data.roomName));
+    }
+
+    if (this.data.towersPid) {
+      this.data.towersPid = this.launchChildProcess(ProgramTowerDefense.new(this.data.roomName));
     }
 
     // Static mine all sources.

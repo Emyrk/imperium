@@ -1,3 +1,8 @@
+interface Creep {
+  inRampart: boolean;
+  isInvader: boolean;
+}
+
 interface RoomPosition {}
 
 interface RoomObject {
