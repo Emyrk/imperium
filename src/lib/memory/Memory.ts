@@ -17,6 +17,8 @@ const BUCKET_CPU_HALT = 4000;
 @profile
 export class Mem {
   static load(): void {
+    return;
+    // @ts-ignore
     if (lastTime && lastMemory && Game.time == lastTime + 1) {
       // @ts-ignore
       delete global.Memory;
