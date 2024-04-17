@@ -133,6 +133,12 @@ export class Civis {
   get store(): StoreDefinition {
     return this.creep.store;
   }
+  get ticksToLive(): number | undefined {
+    return this.creep.ticksToLive;
+  }
+  get body(): BodyPartDefinition[] {
+    return this.creep.body;
+  }
 
   private catchIntent(bit: CivisIntentsBit, ret: ScreepsReturnCode): ScreepsReturnCode {
     if (ret === OK) {

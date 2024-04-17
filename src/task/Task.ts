@@ -149,7 +149,7 @@ export abstract class Task<DataType extends TaskData, Target extends RoomObject 
   abstract isValid(): boolean;
   abstract work(): TaskCode;
   // describe is purely for debugging
-  abstract describe(): void;
+  abstract describe(): string;
 }
 
 function protoTarget(tgt: RoomPosition | RoomObject | ProtoPos | undefined): ProtoTaskTarget | undefined {

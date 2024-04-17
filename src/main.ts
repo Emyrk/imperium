@@ -24,6 +24,9 @@ import { metrics, reportMetrics } from "lib/stats/prometheus";
 import { BaseCollector } from "lib/stats/collectors";
 import { ProgramBasicRoom } from "program/BasicRoom/BasicRoom";
 import { enable, wrap } from "lib/profiler/screeps-profiler";
+import { RoomCostMatrix } from "room/RoomCostMatrix";
+import { Mem } from "lib/memory/Memory";
+import { ProgramEmpire } from "program/Empire/Empire";
 
 var collector = new BaseCollector();
 function onGlobalReset(): void {
@@ -32,6 +35,11 @@ function onGlobalReset(): void {
     log.info("Profiling enabled");
     enable();
   }
+
+  // Force all room cost matrices to be recalculated.
+  RoomCostMatrix.loop(true);
+  // Make sure the empire is running
+  ProgramEmpire.bootstrap();
 }
 
 // Runs on global resets
@@ -40,17 +48,15 @@ onGlobalReset();
 function unwrappedLoop(): void {
   preTick();
 
-  // This feels a bit janky to put this here, but works for now.
-  Object.values(Game.spawns).forEach(spawn => {
-    const room = spawn.room;
-    if (room.memory)
-      if (!room.memory.roomPid) {
-        const proto = ProgramBasicRoom.new(room.name);
-        room.memory.roomPid = Process.launchProcess(proto);
-      }
-  });
+  Mem.load();
+  if (!Mem.shouldRun()) {
+    console.log("Memory.shouldRun() returned false; halting CPU");
+    return;
+  }
+  Mem.clean();
 
   Process.runRootPIDs();
+  RoomCostMatrix.loop();
 
   reconcileTraffic();
 

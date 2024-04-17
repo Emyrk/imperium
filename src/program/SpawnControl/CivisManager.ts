@@ -3,10 +3,23 @@ import { ProgramSpawnControl, SpawnRequest } from "./SpawnControl";
 import { TickQueue } from "lib/tick/TickQueue";
 import { Process, ProcessCode } from "kernel/Process";
 import { log } from "lib/log/log";
+import { energyCost } from "civis/creep";
 
 interface pendingCreep {
   name: string;
   checkAt: number;
+}
+
+// BootstrapBody covers the "bootstrap" problem. Where if you run
+// out of energy, your requested creep is too expensive to spawn.
+// So you need to spawn a cheaper creep to get the energy to spawn
+// more.
+//
+// After X stale time for a request, the body will change to the bootstrapBody
+export interface BootstrapBody {
+  body: BodyPartConstant[];
+  bootstrapBody: BodyPartConstant[];
+  staleTime: number;
 }
 
 const MAX_CIVIS_ID = 9999999;
@@ -16,8 +29,13 @@ export interface ProgramCivisManagerData extends ProcessData {
   checkAlive: pendingCreep[];
 }
 
+// TODO: Implement "wish list" api for creeps. So you just say "I want 5 harvesters"
+// and this code will maintain that amount. It would request them so they are ready
+// when the old one dies.
 export class ProgramCivisManager extends Process<ProgramCivisManagerData> {
   private queued: { [name: string]: SpawnRequest } = {};
+  private bootStrapBodies: { [name: string]: { body: BootstrapBody; req: SpawnRequest } } = {};
+
   //   private aliveQueue: TickQueue<string> = new TickQueue();
 
   public static type = "civis-manager";
@@ -66,6 +84,7 @@ export class ProgramCivisManager extends Process<ProgramCivisManagerData> {
   private onComplete(name: string): (success: boolean) => void {
     return (success: boolean) => {
       delete this.queued[name];
+      delete this.bootStrapBodies[name];
       if (success) {
         this.data.checkAlive.push({ name, checkAt: Game.time + 1 });
       }
@@ -73,21 +92,34 @@ export class ProgramCivisManager extends Process<ProgramCivisManagerData> {
   }
 
   public requestCreep(
-    body: BodyPartConstant[],
+    body: BodyPartConstant[] | BootstrapBody,
     mem: CreepMemory,
     priority: number = 0,
     prefix: string = this.data.prefix
   ): string {
+    let bodyParts: BodyPartConstant[];
+    if ("body" in body) {
+      bodyParts = body.body;
+    } else {
+      bodyParts = body;
+    }
+
     const name = `${prefix}_${ProgramCivisManager.nextID()}`;
     const request: SpawnRequest = {
       creep: {
         mem: mem,
-        bodyParts: body,
+        bodyParts: bodyParts,
         name: name
       },
       priority: priority,
-      onComplete: this.onComplete(name)
+      onComplete: this.onComplete(name),
+      requestedAt: Game.time
     };
+
+    // Tracked!
+    if ("body" in body) {
+      this.bootStrapBodies[name] = { body, req: request };
+    }
 
     this.spawner().requestCreep(request);
     this.queued[request.creep.name] = request;
@@ -104,6 +136,26 @@ export class ProgramCivisManager extends Process<ProgramCivisManagerData> {
       }
       this.assignCivis(Game.creeps[pending.name]);
     }
+
+    // TODO: Run this less often then every tick?
+    Object.values(this.bootStrapBodies).forEach(({ body, req }) => {
+      if (req.requestedAt + body.staleTime < Game.time) {
+        // Oof, we have a stale request we need to update.
+        // Cancel the original request
+        this.spawner().cancelRequest(req.creep.name);
+
+        // Update the body
+        req.creep.bodyParts = body.bootstrapBody;
+        // Re-request
+        this.spawner().requestCreep(req);
+        // Log for later.
+        log.warning(
+          `Creep ${req.creep.name} is stale, detected bootstrap spawn problem.  Updating body to cost ${energyCost(
+            req.creep.bodyParts
+          )}`
+        );
+      }
+    });
 
     return ProcessCode.SUCCESS;
   }

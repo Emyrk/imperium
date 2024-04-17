@@ -72,9 +72,11 @@ interface Room {
   minerals: Mineral[];
 
   // scout(): boolean;
-  // roomCallback?: (roomName: string) => CostMatrix | boolean;
-  // stationCreep will tell the room a creep wants to be stationary here.
-  // stationCreep?: (pos: RoomPosition) => void;
+
+  // blockSquare will tell the creeps to avoid this square.
+  //  - 1 use is to reserve the square for a creep to mine and not get shoved.
+  blockSquare?: (pos: RoomPosition) => void;
+  roomCallback?: (roomName: string) => CostMatrix | boolean;
 }
 
 interface RoomVisual {

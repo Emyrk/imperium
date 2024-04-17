@@ -34,7 +34,7 @@ export class ProgramHarvestSource extends Process<ProgramHarvestSourceData> {
   }
 
   private get source(): Source | null {
-    return deref(this.memory.data.sourceID) as Source | null;
+    return deref(this.data.sourceID) as Source | null;
   }
 
   public execute(): ProcessCode {

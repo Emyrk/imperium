@@ -3,28 +3,31 @@ import { log } from "lib/log/log";
 import { Task, TaskCode } from "task/Task";
 import { Tasks } from "task/Tasks";
 
-export interface TaskHarvestData extends TaskData {}
+export interface TaskHarvestData extends TaskData {
+  dropMining: boolean;
+}
 
 export class TaskHarvest extends Task<TaskHarvestData, Source> {
   public static type = "harvest";
 
-  public static new(
-    target: Source,
-    range: number = RANGES.HARVEST,
-    opts: MoveOptsProto = {}
-  ): ProtoTask<TaskHarvestData> {
+  public static new(target: Source, dropMining: boolean = false, opts: MoveOptsProto = {}): ProtoTask<TaskHarvestData> {
     return Task.newTask<TaskHarvestData>(
       TaskHarvest.type,
       target,
-      {},
       {
-        targetRange: range,
+        dropMining: dropMining
+      },
+      {
+        targetRange: RANGES.HARVEST,
         moveOptions: opts
       }
     );
   }
 
   isValid(): boolean {
+    if (this.data.dropMining) {
+      return true;
+    }
     return this.target !== null && this.creep.store.getFreeCapacity() > 0;
   }
 

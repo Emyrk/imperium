@@ -327,10 +327,12 @@ const Profiler = {
     return lines;
   },
 
-  prototypes: [
+  // The simulator for some reason has issues here.
+  // So make it an empty slice in that case.
+  prototypes: global.Game ? [
     { name: "Game", val: global.Game },
-    { name: "Map", val: global.Game.map },
-    { name: "Market", val: global.Game.market },
+    { name: "Map", val: global.Game.map  },
+    { name: "Market", val: global.Game.market  },
     { name: "PathFinder", val: global.PathFinder },
     { name: "RawMemory", val: global.RawMemory },
     { name: "ConstructionSite", val: global.ConstructionSite },
@@ -366,7 +368,7 @@ const Profiler = {
     { name: "StructureTerminal", val: global.StructureTerminal },
     { name: "StructureTower", val: global.StructureTower },
     { name: "StructureWall", val: global.StructureWall }
-  ],
+  ] : [],
 
   checkMapItem(functionName, map = Memory.profiler.map) {
     if (!map[functionName]) {
@@ -460,6 +462,11 @@ module.exports = {
   },
 
   enable() {
+    // Do not enable in sim
+    if(Game.rooms["sim"]) {
+      return
+    }
+
     enabled = true;
     hookUpPrototypes();
   },

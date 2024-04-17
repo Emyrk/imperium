@@ -8,6 +8,8 @@ export interface SpawnRequest {
   // Queue specific fields
   priority: number;
   onComplete: (success: boolean) => void;
+  // Tick request was made. For tracking
+  requestedAt: number;
 }
 
 export interface ProgramSpawnControlData extends ProcessData {}
