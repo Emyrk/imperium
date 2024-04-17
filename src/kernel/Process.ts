@@ -3,7 +3,7 @@ import { log } from "lib/log/log";
 import { profile } from "lib/profiler/decorator";
 import { RecordTiming, Timing } from "./timing";
 import { metrics } from "lib/stats/prometheus";
-import { IntentMetric, IntentMetricCollector } from "./intents";
+import { IntentMetricCollector } from "./intents";
 
 const MAX_PID_NUMBER = 99999;
 export enum ProcessCode {
