@@ -179,7 +179,7 @@ export class ProgramStaticHarvest extends Process<ProgramStaticHarvestData> {
     let cap = this.room().energyCapacityAvailable;
     let needWork = this.workNeeded();
 
-    const body = [MOVE, CARRY, WORK, WORK];
+    let body = [MOVE, CARRY, WORK, WORK];
     needWork -= 2;
     let addMove = true;
     while (energyCost(body) < cap - 150 && needWork > 0) {
@@ -190,6 +190,7 @@ export class ProgramStaticHarvest extends Process<ProgramStaticHarvestData> {
       addMove = !addMove;
       needWork -= 1;
     }
+    body = [MOVE, CARRY, WORK];
 
     this.data.workParts = body.filter(part => part === WORK).length;
     const spot = this.data.miningSpot;

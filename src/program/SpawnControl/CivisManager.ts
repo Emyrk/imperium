@@ -83,10 +83,13 @@ export class ProgramCivisManager extends Process<ProgramCivisManagerData> {
 
   private onComplete(name: string): (success: boolean) => void {
     return (success: boolean) => {
-      delete this.queued[name];
-      delete this.bootStrapBodies[name];
+      // We need to delete the queued request on the next game tick
       if (success) {
         this.data.checkAlive.push({ name, checkAt: Game.time + 1 });
+      } else {
+        // It failed, so remove from the queue
+        delete this.queued[name];
+        delete this.bootStrapBodies[name];
       }
     };
   }
@@ -129,6 +132,10 @@ export class ProgramCivisManager extends Process<ProgramCivisManagerData> {
   public execute(): ProcessCode {
     const names = _.remove(this.data.checkAlive, c => Game.time >= c.checkAt);
     for (const pending of names) {
+      // Always delete from the queue
+      delete this.queued[pending.name];
+      delete this.bootStrapBodies[pending.name];
+
       const creep = Game.creeps[pending.name];
       if (!creep) {
         log.error(`Civis ${pending.name} is not alive`);
