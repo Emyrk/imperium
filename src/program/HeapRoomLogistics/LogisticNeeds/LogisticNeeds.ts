@@ -273,7 +273,7 @@ export function totalNeeded(available: LogisticsNeeded): number {
 
 export function totalPending(promises: LogisticsNeedPromise[]): number {
   return promises.reduce((total, promise) => {
-    if (promise.exists()) {
+    if (!promise.exists()) {
       return total;
     }
 

@@ -4,6 +4,7 @@ import { TickQueue } from "lib/tick/TickQueue";
 import { Process, ProcessCode } from "kernel/Process";
 import { log } from "lib/log/log";
 import { energyCost } from "civis/creep";
+import { profile } from "lib/profiler/decorator";
 
 interface pendingCreep {
   name: string;
@@ -32,6 +33,7 @@ export interface ProgramCivisManagerData extends ProcessData {
 // TODO: Implement "wish list" api for creeps. So you just say "I want 5 harvesters"
 // and this code will maintain that amount. It would request them so they are ready
 // when the old one dies.
+@profile
 export class ProgramCivisManager extends Process<ProgramCivisManagerData> {
   private queued: { [name: string]: SpawnRequest } = {};
   private bootStrapBodies: { [name: string]: { body: BootstrapBody; req: SpawnRequest } } = {};
