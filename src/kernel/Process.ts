@@ -21,7 +21,7 @@ export type NewProcessProto<DataType extends ProcessData> = Omit<ProtoProcess<Da
 @profile
 export abstract class Process<DataType extends ProcessData> {
   public pid: number;
-  private _children: (Process<any> | undefined)[];
+  private _children: (Process<any> | undefined)[] = [];
   private _civis: { [creepName: string]: Civis } = {};
   // Prometheus style metrics. Static group is for all processes.
   private static processMetrics = metrics.group("process");
@@ -84,9 +84,28 @@ export abstract class Process<DataType extends ProcessData> {
     };
   }
 
+  private reloadChildren() {
+    this.scheduled.children.forEach(pid => {
+      // If the child already exists, abort
+      if (this._children.find(c => c?.pid === pid)) {
+        return;
+      }
+      // No child? Init and push.
+      this._children.push(Process.initializeProgram(pid));
+    });
+
+    // Remove any children that no longer exist.
+    this._children = this._children.filter(c => {
+      if (!c) {
+        return false;
+      }
+      return this.scheduled.children.includes(c.pid);
+    });
+  }
+
   constructor(pid: number) {
     this.pid = pid;
-    this._children = this.scheduled.children.map(pid => Process.initializeProgram(pid));
+    this.reloadChildren();
     this.creepNames.filter(name => {
       const creep = Game.creeps[name];
       if (!creep) {
@@ -171,6 +190,9 @@ export abstract class Process<DataType extends ProcessData> {
       log.error(mapped);
       ret = ProcessCode.ERROR;
     }
+    // Set the executed flag to true.
+    this.executed = true;
+
     this._processTimingSelf = RecordTiming(start, this._processTiming);
 
     const civisStart = Game.cpu.getUsed();
@@ -197,6 +219,11 @@ export abstract class Process<DataType extends ProcessData> {
     }
 
     // Run the children
+    if (this.scheduled.reloadChildren) {
+      this.reloadChildren();
+      this.scheduled.reloadChildren = false;
+    }
+
     this._children.forEach(child => {
       if (!child) {
         if (Game.time % 15 === 0) {
@@ -261,6 +288,7 @@ export abstract class Process<DataType extends ProcessData> {
     return Process.launchChildProcess(this.pid, newProgram);
   }
 
+  public executed: boolean = false;
   public abstract execute(): ProcessCode;
   abstract selfTerminate(): ProcessCode;
 
@@ -336,8 +364,7 @@ export abstract class Process<DataType extends ProcessData> {
     const pid = this.launchProcess(proto);
     Memory.processes[parent].scheduled.children.push(pid);
     Memory.processes[pid].scheduled.parent = parent;
-
-    // Also need to push to the heap process.
+    Memory.processes[parent].scheduled.reloadChildren = true;
 
     return pid;
   }

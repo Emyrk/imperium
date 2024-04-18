@@ -31,7 +31,7 @@ export class ProgramVillage extends Process<ProgramVillageData> {
   }
 
   public static new(roomName: string) {
-    return Process.newProgram<ProgramVillageData>(ProgramVillage.type, roomName, {
+    return Process.newProgram<ProgramVillageData>(ProgramVillage.type, `${roomName}_village`, {
       roomName: roomName,
       harvestPids: {}
     });

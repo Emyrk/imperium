@@ -2,7 +2,7 @@ import { CostMatrix } from "./CostMatrix";
 import { RoomPosition } from "./RoomPosition";
 
 export class PathFinder {
-  CostMatrix = new CostMatrix();
+  public static CostMatrix = new CostMatrix();
 
   // Search is a super naive implementation of pathfinding.
   // It just goes in a straight line to the goal's x position, then the y.

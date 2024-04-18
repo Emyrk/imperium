@@ -32,6 +32,7 @@ export default <Environment>{
       spawns: {},
       pathFinderData: {}
     };
+    global.UNIT_TESTING = true;
 
     return {
       teardown() {

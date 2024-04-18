@@ -31,4 +31,6 @@ interface ScheduledProcess {
   // Optional sleep to halt process execution until
   // this game tick.
   sleepUntil?: number;
+  // Indicator to reload children at the earliest opportunity.
+  reloadChildren?: boolean;
 }

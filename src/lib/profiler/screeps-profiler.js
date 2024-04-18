@@ -329,7 +329,7 @@ const Profiler = {
 
   // The simulator for some reason has issues here.
   // So make it an empty slice in that case.
-  prototypes: global.Game ? [
+  prototypes: global.Game && !UNIT_TESTING? [
     { name: "Game", val: global.Game },
     { name: "Map", val: global.Game.map  },
     { name: "Market", val: global.Game.market  },

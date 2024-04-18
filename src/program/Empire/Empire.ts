@@ -1,5 +1,6 @@
 import { Process, ProcessCode } from "kernel/Process";
 import { ProgramState } from "lib/SharedState/ProgramState";
+import { log } from "lib/log/log";
 import { ProgramVillage } from "program/Village/Village";
 
 export interface ProgramEmpireData extends ProcessData {
@@ -29,10 +30,10 @@ export class ProgramEmpire extends Process<ProgramEmpireData> {
 
   public constructor(pid: number) {
     super(pid);
-    this.villages(true);
   }
 
   public execute(): ProcessCode {
+    this.villages(!this.executed);
     return ProcessCode.SUCCESS;
   }
 

@@ -28,6 +28,7 @@ export default <Environment>{
     // FakeGame is pretty much required because we use 'deref' to load from memory.
     // Objects need to be saved to game to be pulled back.
     global.Game = new FakeGame();
+    global.UNIT_TESTING = true;
 
     return {
       teardown() {

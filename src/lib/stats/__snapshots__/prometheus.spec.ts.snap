@@ -1,5 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`Prometheus > Basic gauge 1`] = `"{"room{room=E11S53}":{"tick":100}}"`;
+
 exports[`Prometheus > basic gauge 1`] = `"{"room{room=E11S53}":{"tick":100}}"`;
 
 exports[`Prometheus > cleared group 1`] = `"{"global{foo=bar}":{"room{room=E11S53}":{}}}"`;

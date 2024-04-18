@@ -64,13 +64,15 @@ export class ProgramSpawnControl extends Process<ProgramSpawnControlData> {
         const code = spawn.spawnCreep(requestCreep.bodyParts, requestCreep.name, { memory: requestCreep.mem });
         switch (code) {
           case OK:
-            this.sortedQueue.pop();
+            this.sortedQueue.shift();
             avail -= energyCost(requestCreep);
             request.onComplete(true);
             break;
           case ERR_NAME_EXISTS:
-            this.sortedQueue.pop();
-            log.error(`${this.data.roomName} SpawnControl: error name already exists ${requestCreep.name} :: ${code}`);
+            this.sortedQueue.shift();
+            log.error(
+              `${this.data.roomName} SpawnControl: error name already exists ${requestCreep.name}/${requestCreep.mem.role} :: ${code}`
+            );
             request.onComplete(false);
             break;
           case ERR_NOT_ENOUGH_ENERGY:
