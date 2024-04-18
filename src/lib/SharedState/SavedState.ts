@@ -110,6 +110,9 @@ export class SavedState<MemArgs, HeapArgs> {
   }
 
   exists(): boolean {
+    if (!this) {
+      return false;
+    }
     return !this.deleted();
   }
 

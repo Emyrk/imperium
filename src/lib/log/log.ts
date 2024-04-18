@@ -124,6 +124,8 @@ export class Log {
         showTick: LOG_PRINT_TICK
       }
     });
+    //@ts-ignore
+    global.setLogLevel = Log.setLogLevel;
   }
 
   constructor() {
@@ -143,7 +145,7 @@ export class Log {
     return Memory.log.level;
   }
 
-  setLogLevel(value: number) {
+  static setLogLevel(value: number) {
     let changeValue = true;
     switch (value) {
       case LogLevels.ERROR:

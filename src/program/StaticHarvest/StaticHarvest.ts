@@ -224,7 +224,8 @@ export class ProgramStaticHarvest extends Process<ProgramStaticHarvestData> {
   }
 
   private maintainHarvester(): void {
-    if (this.spawn.total() < 1) {
+    if (this.spawn.total() === 0) {
+      log.info(`No miners for ${this.data.sourceID}.  Requesting one.`);
       this.requestHarvester();
       return;
     }
@@ -235,6 +236,7 @@ export class ProgramStaticHarvest extends Process<ProgramStaticHarvestData> {
       // The minion will die right as we spawn the new one.
       // TODO: Account for travel time as well!
       if (min && min.ticksToLive && min.ticksToLive < min.body.length * CREEP_SPAWN_TIME) {
+        log.info(`Miner ${min.name} is about to die.  Requesting a new one.`);
         this.requestHarvester();
         return;
       }
