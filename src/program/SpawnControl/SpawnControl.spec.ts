@@ -1,5 +1,5 @@
-import { SpawnRequest, deleteRequest, insertRequest } from "./SpawnControl";
-import { test, expect, describe } from "vitest";
+import { ProgramSpawnControl, SpawnRequest, deleteRequest, insertRequest } from "./SpawnControl";
+import { test, expect, describe, it } from "vitest";
 
 test.each([
   // { name: "empty", start: [] as SpawnRequest[], insert: {} as SpawnRequest, expected: [] },

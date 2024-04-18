@@ -17,7 +17,7 @@ interface testFIFORun {
 }
 
 describe("Fifo", () => {
-  const source = MockSource();
+  const source = MockSource({ energy: 10 });
 
   it("registered", () => {
     const creep = MockCreep([MOVE, WORK]);

@@ -11,6 +11,7 @@ export function MockSource(mockFields: { [name: string]: any } = {}): Source {
     ref: id,
     id: id,
     pos: pos,
+    energy: 3000,
     ...mockFields
   });
 

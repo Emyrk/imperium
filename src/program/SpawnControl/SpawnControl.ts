@@ -19,6 +19,10 @@ export class ProgramSpawnControl extends Process<ProgramSpawnControlData> {
   public static type = "spawn";
   private sortedQueue: SpawnRequest[] = [];
 
+  constructor(pid: number) {
+    super(pid);
+  }
+
   public static new(roomName: string) {
     return Process.newProgram<ProgramSpawnControlData>(ProgramSpawnControl.type, `${roomName}_spawn`, {
       roomName: roomName
@@ -38,17 +42,17 @@ export class ProgramSpawnControl extends Process<ProgramSpawnControlData> {
   }
 
   public execute(): ProcessCode {
+    // Visual will always be 1 tick behind. :shrug:
+    this.visual();
     if (!this.room) {
       return ProcessCode.ERROR;
     } else if (this.sortedQueue.length === 0) {
-      this.visual();
       return ProcessCode.SLEEPING;
     }
 
     // Spawns that are not currently spawning
     const spawns = this.room.openSpawns;
     if (spawns.length === 0) {
-      this.visual();
       return ProcessCode.SLEEPING;
     }
 
@@ -85,7 +89,6 @@ export class ProgramSpawnControl extends Process<ProgramSpawnControlData> {
       }
     }
 
-    this.visual();
     return ProcessCode.SUCCESS;
   }
 
@@ -94,6 +97,7 @@ export class ProgramSpawnControl extends Process<ProgramSpawnControlData> {
     return ProcessCode.SUCCESS;
   }
 
+  // TODO: Optimize this to only redraw on changes.
   visual(coord: Coord = { x: 39.5, y: 39 }): void {
     const requests = this.sortedQueue;
     const totalRows = 10;

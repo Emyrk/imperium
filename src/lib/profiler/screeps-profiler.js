@@ -13,6 +13,10 @@ function AlreadyWrappedError() {
   this.stack = new Error().stack;
 }
 
+function isUnitTesting() {
+  return Boolean(global.UNIT_TESTING)
+}
+
 function setupProfiler() {
   depth = 0; // reset depth, this needs to be done each tick.
   parentFn = "(tick)";
@@ -329,7 +333,7 @@ const Profiler = {
 
   // The simulator for some reason has issues here.
   // So make it an empty slice in that case.
-  prototypes: global.Game && !UNIT_TESTING? [
+  prototypes: global.Game && !isUnitTesting() ? [
     { name: "Game", val: global.Game },
     { name: "Map", val: global.Game.map  },
     { name: "Market", val: global.Game.market  },
@@ -463,7 +467,7 @@ module.exports = {
 
   enable() {
     // Do not enable in sim
-    if(Game.rooms["sim"]) {
+    if(Game.rooms["sim"] || isUnitTesting()) {
       return
     }
 

@@ -190,8 +190,6 @@ export class ProgramStaticHarvest extends Process<ProgramStaticHarvestData> {
       addMove = !addMove;
       needWork -= 1;
     }
-    // TODO: Remove this later.
-    body = [MOVE];
 
     this.data.workParts = body.filter(part => part === WORK).length;
     const spot = this.data.miningSpot;
