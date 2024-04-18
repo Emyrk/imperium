@@ -4,6 +4,7 @@ import { profile } from "lib/profiler/decorator";
 import { RecordTiming, Timing } from "./timing";
 import { metrics } from "lib/stats/prometheus";
 import { IntentMetricCollector } from "./intents";
+import ErrorMapper from "lib/filemap/ErrorMapper";
 
 const MAX_PID_NUMBER = 99999;
 export enum ProcessCode {
@@ -166,9 +167,8 @@ export abstract class Process<DataType extends ProcessData> {
     } catch (e) {
       const err = e as Error;
       log.error(`${err.name}| Error in process ${this.pid} '${this.memory.label}' on execute: ${e}`);
-      if (err.stack) {
-        log.error(err.stack);
-      }
+      const mapped = ErrorMapper.sourceMappedStackTrace(err);
+      log.error(mapped);
       ret = ProcessCode.ERROR;
     }
     this._processTimingSelf = RecordTiming(start, this._processTiming);

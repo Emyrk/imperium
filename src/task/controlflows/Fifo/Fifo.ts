@@ -113,6 +113,7 @@ export default class ControlFlowFIFO extends Task<ControlFlowFIFOData, any> {
     _.forEach(this.tasks, t => {
       t.finally();
     });
+    super.finally();
   }
 
   describe(): string {

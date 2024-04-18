@@ -150,6 +150,7 @@ export default class ControlFlowLoop extends Task<ControlFlowLoopData, null> {
     _.forEach(this.tasks, t => {
       t.finally();
     });
+    super.finally();
   }
 
   describe(): string {

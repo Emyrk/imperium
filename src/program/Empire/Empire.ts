@@ -1,8 +1,10 @@
 import { Process, ProcessCode } from "kernel/Process";
+import { ProgramState } from "lib/SharedState/ProgramState";
 import { ProgramOwnedRoom } from "program/OwnedRoom/OwnedRoom";
 
 export interface ProgramEmpireData extends ProcessData {
   ownedRoomPids: Record<string, number>;
+  statePid?: number;
 }
 
 export class ProgramEmpire extends Process<ProgramEmpireData> {
@@ -52,6 +54,10 @@ export class ProgramEmpire extends Process<ProgramEmpireData> {
       const ownedRoomProcess = ProgramOwnedRoom.new(room.name);
       this.data.ownedRoomPids[room.name] = this.launchChildProcess(ownedRoomProcess);
     });
+
+    if(!this.data.statePid) {
+      this.data.statePid = this.launchChildProcess(ProgramState.new());
+    }
   }
 
   selfTerminate(): ProcessCode {

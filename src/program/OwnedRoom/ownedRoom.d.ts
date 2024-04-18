@@ -1,0 +1,3 @@
+interface RoomMemory {
+  ownedRoomPid?: number;
+}

@@ -6,6 +6,8 @@ import ControlFlowLoop from "task/controlflows/Loop/Loop";
 import { TaskGoto } from "task/instances/goto";
 import { TaskHarvest } from "task/instances/harvest";
 import { TaskStaticHarvest } from "./StaticHarvestTask";
+import { ProgramOwnedRoom } from "program/OwnedRoom/OwnedRoom";
+import { Civis } from "civis/Civis";
 
 export interface ProgramStaticHarvestData extends ProcessData {
   sourceID: string;
@@ -53,6 +55,11 @@ export class ProgramStaticHarvest extends Process<ProgramStaticHarvestData> {
     return Game.rooms[this.data.roomName];
   }
 
+  // Override
+  public get civis(): Civis[] {
+    return this.spawn.civis;
+  }
+
   private get spawn(): ProgramCivisManager {
     if (!this.data.mgrPid) {
       this.data.mgrPid = this.launchChildProcess(ProgramCivisManager.new(this.data.spawnPid, "har"));
@@ -62,6 +69,28 @@ export class ProgramStaticHarvest extends Process<ProgramStaticHarvestData> {
 
   private get source(): Source | null {
     return deref(this.data.sourceID) as Source | null;
+  }
+
+  private dropPile(): Resource | null {
+    if (!this.data.miningSpot) {
+      return null;
+    }
+
+    const result = this.room().lookForAt(
+      LOOK_RESOURCES,
+      new RoomPosition(this.data.miningSpot.x, this.data.miningSpot.y, this.data.roomName)
+    );
+    if (result.length > 0) {
+      return result[0];
+    }
+    return null;
+  }
+
+  private container(): StructureContainer | null {
+    if (!this.data.containerRef) {
+      return null;
+    }
+    return Game.getObjectById<StructureContainer>(this.data.containerRef as Id<StructureContainer>);
   }
 
   // existingContainer searches if a container already exists.
@@ -201,8 +230,8 @@ export class ProgramStaticHarvest extends Process<ProgramStaticHarvestData> {
     }
 
     // If the civis is alive and none are queued.
-    if (this.civis.length === 1 && this.spawn.totalQueued() === 0) {
-      const min = this.civis[0];
+    if (this.spawn.civis.length === 1 && this.spawn.totalQueued() === 0) {
+      const min = this.spawn.civis[0];
       // The minion will die right as we spawn the new one.
       // TODO: Account for travel time as well!
       if (min && min.ticksToLive && min.ticksToLive < min.body.length * CREEP_SPAWN_TIME) {
@@ -219,6 +248,11 @@ export class ProgramStaticHarvest extends Process<ProgramStaticHarvestData> {
       return;
     }
 
+    if (this.data.containerRef) {
+      // Container exists, we are good!
+      return;
+    }
+
     if (!this.data.containerRef) {
       // Is the container built?
       const result = this.room()
@@ -227,6 +261,7 @@ export class ProgramStaticHarvest extends Process<ProgramStaticHarvestData> {
       if (result) {
         this.data.containerRef = result.id;
         log.info(`Container built for ${this.data.sourceID}`);
+        return;
       }
     }
 
@@ -236,7 +271,7 @@ export class ProgramStaticHarvest extends Process<ProgramStaticHarvestData> {
       if (sites.length > 0) {
         this.data.constructionSiteRef = sites[0].id;
       } else {
-        log.info(`Construction site planned for ${this.data.sourceID}`);
+        log.info(`Construction site is required for for ${this.data.sourceID}`);
       }
     }
 
@@ -256,6 +291,20 @@ export class ProgramStaticHarvest extends Process<ProgramStaticHarvestData> {
     }
   }
 
+  private announceResources(): void {
+    const core = ProgramOwnedRoom.getByRoom(this.data.roomName);
+    if (core) {
+      const pile = this.dropPile();
+      if (pile && core.heapLogistics()) {
+        core.heapLogistics()!.announceAvailable(pile.ref, RESOURCE_ENERGY);
+      }
+      const container = this.container();
+      if (container && core.heapLogistics()) {
+        core.heapLogistics()!.announceAvailable(container.ref, RESOURCE_ENERGY);
+      }
+    }
+  }
+
   public execute(): ProcessCode {
     if (!this.source) {
       // Developer error?  Or source disappeared which seems improbable.
@@ -265,6 +314,7 @@ export class ProgramStaticHarvest extends Process<ProgramStaticHarvestData> {
     this.pickSite();
     this.ensureContainer();
     this.maintainHarvester();
+    this.announceResources();
 
     return ProcessCode.SUCCESS;
   }

@@ -6,6 +6,7 @@ import { Tasks } from "task/Tasks";
 
 export interface TaskTransferData extends TaskData {
   resourceType: ResourceConstant;
+  amount?: number;
 }
 
 export class TaskTransfer extends Task<TaskTransferData, AnyStoreStructure | Creep> {
@@ -14,6 +15,7 @@ export class TaskTransfer extends Task<TaskTransferData, AnyStoreStructure | Cre
   public static new(
     target: AnyStoreStructure,
     resourceType: ResourceConstant = RESOURCE_ENERGY,
+    amount: number | undefined = undefined,
     range: number = RANGES.TRANSFER,
     opts: MoveOptsProto = {}
   ): ProtoTask<TaskTransferData> {
@@ -21,7 +23,8 @@ export class TaskTransfer extends Task<TaskTransferData, AnyStoreStructure | Cre
       TaskTransfer.type,
       target,
       {
-        resourceType: resourceType
+        resourceType: resourceType,
+        amount: amount
       },
       {
         targetRange: range,
@@ -42,7 +45,7 @@ export class TaskTransfer extends Task<TaskTransferData, AnyStoreStructure | Cre
     if (this.target === null) {
       return TaskCode.INVALID;
     }
-    const ret = this.creep.transfer(this.target, this.data.resourceType);
+    const ret = this.creep.transfer(this.target, this.data.resourceType, this.data.amount);
     if (ret !== OK && Game.time % 5 === 0) {
       log.error(`${this.creep.name} transfer error: ${ret}`);
     }

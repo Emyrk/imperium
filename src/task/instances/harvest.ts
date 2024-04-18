@@ -35,6 +35,11 @@ export class TaskHarvest extends Task<TaskHarvestData, Source> {
     if (this.target === null) {
       return TaskCode.INVALID;
     }
+
+    if (this.target.energy === 0) {
+      return TaskCode.NOTHING_DONE;
+    }
+
     const ret = this.creep.harvest(this.target);
     if (ret !== OK && Game.time % 5 === 0) {
       log.error(`${this.creep.name} harvesting error: ${ret}`);

@@ -80,7 +80,10 @@ export class Civis {
 
     if (!this.creep) {
       // This creep has died
-      this.task?.finally();
+      if (this.task) {
+        this.task.finally();
+        log.info(`${this.name} died with task ${this.task.describe()}, finally() called.`);
+      }
       return CivisRunCode.Dead;
     }
 
@@ -100,7 +103,7 @@ export class Civis {
       case TaskCode.TIMEOUT:
       case TaskCode.DONE_WORKING:
         this.task.finally();
-        // this.assignTask(null, `TaskDone: ${ret}`);
+        this.assignTask(null, `TaskDone: ${ret}`);
         break;
 
       // Let the task be

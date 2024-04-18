@@ -25,6 +25,11 @@ export interface Object {
   set(value: any): void;
 }
 
+export const METRICS_SAMPLE_RATE = 100;
+export function sample(): boolean {
+  return Game.time % METRICS_SAMPLE_RATE === 0;
+}
+
 @profile
 class Metrics {
   private _metrics: { [key: string]: any } = {};

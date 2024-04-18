@@ -6,6 +6,7 @@ import "declarations/global"; // Global functions accessible from CLI
 import "prototypes/Creep"; // Creep prototypes
 import "prototypes/RoomObject"; // RoomObject and targeting prototypes
 import "prototypes/RoomPosition"; // RoomPosition prototypes
+import "prototypes/RoomVisual"; // RoomVisual prototypes
 import "prototypes/Room"; // Non-structure room prototypes
 import "prototypes/Structures"; // Prototypes for accessed structures
 import "prototypes/Miscellaneous"; // Everything else
@@ -16,13 +17,10 @@ import { preTick, reconcileTraffic } from "emyrk-screeps-cartographer";
 import { USE_PROFILER } from "config";
 import ErrorMapper from "lib/filemap/ErrorMapper";
 import { log } from "lib/log/log";
-import { ProgramHarvestSource } from "program/HarvestSource/HarvestSource";
 import { Process } from "kernel/Process";
 import { Top } from "kernel/Top";
-import { ProgramSpawnControl } from "program/SpawnControl/SpawnControl";
 import { metrics, reportMetrics } from "lib/stats/prometheus";
 import { BaseCollector } from "lib/stats/collectors";
-import { ProgramBasicRoom } from "program/BasicRoom/BasicRoom";
 import { enable, wrap } from "lib/profiler/screeps-profiler";
 import { RoomCostMatrix } from "room/RoomCostMatrix";
 import { Mem } from "lib/memory/Memory";

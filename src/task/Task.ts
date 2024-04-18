@@ -1,4 +1,5 @@
 import { Civis } from "civis/Civis";
+import { SavedState } from "lib/SharedState/SavedState";
 
 export enum TaskCode {
   // Return WORKING when the task needs to continue on the next tick.
@@ -37,6 +38,7 @@ export abstract class Task<DataType extends TaskData, Target extends RoomObject 
       _target: protoTarget(target),
       tickIssued: Game.time,
       options: options,
+      states: [] as string[],
       data: {
         ...data,
         id: Task.nextID()
@@ -71,6 +73,13 @@ export abstract class Task<DataType extends TaskData, Target extends RoomObject 
 
   public get data(): DataType {
     return this.protoTask.data;
+  }
+
+  public get states(): string[] {
+    if (!this.protoTask.states) {
+      return [];
+    }
+    return this.protoTask.states;
   }
 
   public get proto(): ProtoTask<DataType> {
@@ -114,6 +123,11 @@ export abstract class Task<DataType extends TaskData, Target extends RoomObject 
     return this.creep.goTo(this.targetPos, range, this.options.moveOptions);
   }
 
+  // tracking a state will delete it on "finally()"
+  public track(state: SavedState<any, any>): void {
+    this.protoTask.states.push(state.id);
+  }
+
   run(): TaskCode {
     if (this.options.deadlineTick && Game.time > this.options.deadlineTick) {
       return TaskCode.TIMEOUT;
@@ -144,7 +158,12 @@ export abstract class Task<DataType extends TaskData, Target extends RoomObject 
     return this.work();
   }
 
-  public finally(): void {}
+  public finally(): void {
+    // Clean up associated states
+    this.states.forEach(state => {
+      SavedState.cleanupByID(state);
+    });
+  }
 
   abstract isValid(): boolean;
   abstract work(): TaskCode;

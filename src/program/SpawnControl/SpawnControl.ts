@@ -1,6 +1,7 @@
-import { ProtoSpawnCreep, energyCost } from "civis/creep";
+import { ProtoSpawnCreep, energyCost, simpleBodyString } from "civis/creep";
 import { Process, ProcessCode } from "kernel/Process";
 import { log } from "lib/log/log";
+import { Visualizer } from "lib/visualizer/Visualizer";
 
 export interface SpawnRequest {
   creep: ProtoSpawnCreep;
@@ -40,12 +41,14 @@ export class ProgramSpawnControl extends Process<ProgramSpawnControlData> {
     if (!this.room) {
       return ProcessCode.ERROR;
     } else if (this.sortedQueue.length === 0) {
+      this.visual();
       return ProcessCode.SLEEPING;
     }
 
     // Spawns that are not currently spawning
     const spawns = this.room.openSpawns;
     if (spawns.length === 0) {
+      this.visual();
       return ProcessCode.SLEEPING;
     }
 
@@ -80,12 +83,42 @@ export class ProgramSpawnControl extends Process<ProgramSpawnControlData> {
       }
     }
 
-    return ProcessCode.SLEEPING;
+    this.visual();
+    return ProcessCode.SUCCESS;
   }
 
   selfTerminate(): ProcessCode {
     this.sortedQueue.forEach(req => req.onComplete(false));
     return ProcessCode.SUCCESS;
+  }
+
+  visual(coord: Coord = { x: 39.5, y: 39 }): void {
+    const requests = this.sortedQueue;
+    const totalRows = 10;
+    const rows = requests.slice(0, totalRows).reduce((acc: string[], req) => {
+      if (!req) {
+        acc.push("-");
+        return acc;
+      }
+      acc.push(
+        `${req.priority} ${req.creep.name.slice(0, 6)} | ${simpleBodyString(req.creep)} | ${energyCost(
+          req.creep
+        ).toString()}`
+      );
+      return acc;
+    }, []);
+
+    const boxCoords = Visualizer.section(
+      `Spawn Control :: ${rows.length}/${requests.length}`,
+      { x: coord.x, y: coord.y, roomName: this.room!.name },
+      10,
+      totalRows
+    );
+
+    for (let i = 0; i < rows.length; i++) {
+      const coords = Visualizer.sectionRow(boxCoords, i);
+      Visualizer.text(rows[i], { x: coords.x, y: coords.y, roomName: this.room!.name });
+    }
   }
 }
 

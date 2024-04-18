@@ -31,6 +31,8 @@ interface ProtoTask<DataType extends TaskData> {
   options: TaskOptions;
   // Task specific data
   data: DataType;
+  // Persistent data for all tasks.
+  states: string[]; // States are cleared on finally()
 }
 
 // Copied from movement library.

@@ -7,5 +7,5 @@ interface Memory {
   resetBucket?: boolean;
   haltTick?: number;
   nextID?: number;
-  nextPromiseID?: number;
+  nextStateID?: number;
 }

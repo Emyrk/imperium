@@ -9,31 +9,51 @@ export interface TaskRepairData extends TaskData {}
 export class TaskRepair extends Task<TaskRepairData, Structure> {
   public static type = "repair";
 
-  public static new(
-    target: Structure,
-    range: number = RANGES.BUILD,
-    opts: MoveOptsProto = {}
-  ): ProtoTask<TaskRepairData> {
+  public static new(target: Structure | ProtoPos, opts: MoveOptsProto = {}): ProtoTask<TaskRepairData> {
     return Task.newTask<TaskRepairData>(
       TaskRepair.type,
       target,
       {},
       {
-        targetRange: range,
+        targetRange: RANGES.BUILD,
         moveOptions: opts
       }
     );
   }
 
+  get repairTarget(): Structure | undefined {
+    if (!super.target) {
+      if (super.targetPos) {
+        const sts = super.targetPos.lookFor(LOOK_STRUCTURES);
+        if (sts.length > 0) {
+          return sts[0];
+        }
+      }
+      return undefined;
+    }
+    return super.target as Structure;
+  }
+
   isValid(): boolean {
-    return this.target !== null && this.creep.store.getFreeCapacity() > 0 && this.target.hits < this.target.hitsMax;
+    const target = this.repairTarget;
+    if (!target) {
+      return false;
+    }
+
+    if (target.hits >= target.hitsMax) {
+      return false;
+    }
+
+    return this.creep.store.getUsedCapacity(RESOURCE_ENERGY) > 0;
   }
 
   work(): TaskCode {
-    if (this.target === null) {
+    const target = this.repairTarget;
+    if (!target) {
       return TaskCode.INVALID;
     }
-    const ret = this.creep.repair(this.target);
+
+    const ret = this.creep.repair(target);
     if (ret !== OK && Game.time % 5 === 0) {
       log.error(`${this.creep.name} repair error: ${ret}`);
     }
