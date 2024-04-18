@@ -225,6 +225,7 @@ export abstract class Process<DataType extends ProcessData> {
   }
 
   public terminate(): ProcessCode {
+    // Ask each child to kill themselves
     this._children.forEach(child => {
       if (!child) {
         return;
@@ -233,11 +234,26 @@ export abstract class Process<DataType extends ProcessData> {
       this.removeChild(child.pid);
     });
 
+    // Run our own cleanup routine.
     const ret = this.selfTerminate();
+
+    // Remove from our parent.
+    if (this.scheduled.parent) {
+      Memory.processes[this.scheduled.parent].scheduled.children = Memory.processes[
+        this.scheduled.parent
+      ].scheduled.children.filter(c => c !== this.pid);
+    }
+
+    // Remove from the cache
     delete Process._processByPid[this.pid];
 
     // Remove this process metrics
     this.instanceMetrics.reset();
+
+    // Remove from memory
+    delete Memory.processes[this.pid];
+
+    log.info(`Process ${this.pid} terminated with code ${ret}`);
     return ret;
   }
 
@@ -277,7 +293,7 @@ export abstract class Process<DataType extends ProcessData> {
 
     const program = Process.programs[proto.type];
     if (!program) {
-      log.error(`No program found for process type ${proto.type}`);
+      log.error(`[${proto.scheduled.pid}] No program found for process type ${proto.type}`);
       return;
     }
 
@@ -324,6 +340,15 @@ export abstract class Process<DataType extends ProcessData> {
     // Also need to push to the heap process.
 
     return pid;
+  }
+
+  public static kill(pid: number): string {
+    const process = Process.get(pid);
+    if (!process) return `Process '${pid}' not found.`;
+
+    process.terminate();
+
+    return "Killed process.";
   }
 
   public static runRootPIDs() {

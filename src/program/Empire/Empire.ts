@@ -1,9 +1,9 @@
 import { Process, ProcessCode } from "kernel/Process";
 import { ProgramState } from "lib/SharedState/ProgramState";
-import { ProgramOwnedRoom } from "program/OwnedRoom/OwnedRoom";
+import { ProgramVillage } from "program/Village/Village";
 
 export interface ProgramEmpireData extends ProcessData {
-  ownedRoomPids: Record<string, number>;
+  villagePids: Record<string, number>;
   statePid?: number;
 }
 
@@ -23,27 +23,31 @@ export class ProgramEmpire extends Process<ProgramEmpireData> {
     return Process.newProgram<ProgramEmpireData>(ProgramEmpire.type, "empire", {
       // No room, it covers all rooms.
       roomName: "",
-      ownedRoomPids: {}
+      villagePids: {}
     });
   }
 
   public constructor(pid: number) {
     super(pid);
-    this.ownedRooms(true);
+    this.villages(true);
   }
 
   public execute(): ProcessCode {
     return ProcessCode.SUCCESS;
   }
 
-  private ownedRooms(force?: boolean) {
+  private villages(force?: boolean) {
     // No need to do this very often
     if (!force && Game.time % 100 !== 0) {
       return;
     }
 
+    if (!this.data.villagePids) {
+      this.data.villagePids = {};
+    }
+
     Object.values(Game.rooms).forEach(room => {
-      if (this.data.ownedRoomPids[room.name]) return;
+      if (this.data.villagePids[room.name]) return;
 
       if (!room.spawns.find(s => s.my)) {
         // We don't have a spawn in the room, so ignore it.
@@ -51,11 +55,11 @@ export class ProgramEmpire extends Process<ProgramEmpireData> {
       }
 
       // Start the room up in a process
-      const ownedRoomProcess = ProgramOwnedRoom.new(room.name);
-      this.data.ownedRoomPids[room.name] = this.launchChildProcess(ownedRoomProcess);
+      const villageProcess = ProgramVillage.new(room.name);
+      this.data.villagePids[room.name] = this.launchChildProcess(villageProcess);
     });
 
-    if(!this.data.statePid) {
+    if (!this.data.statePid) {
       this.data.statePid = this.launchChildProcess(ProgramState.new());
     }
   }

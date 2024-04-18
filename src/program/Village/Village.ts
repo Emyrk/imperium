@@ -7,31 +7,31 @@ import { ProgramStaticHarvest } from "program/StaticHarvest/StaticHarvest";
 import { ProgramTowerDefense } from "program/TowerDefense/TowerDefense";
 import { RoomCostMatrix } from "room/RoomCostMatrix";
 
-export interface ProgramOwnedRoomData extends ProcessData {
+export interface ProgramVillageData extends ProcessData {
   spawnPid?: number;
   towersPid?: number;
   harvestPids: { [source: string]: number };
   logisticsPid?: number;
 }
 
-export class ProgramOwnedRoom extends Process<ProgramOwnedRoomData> {
-  public static type = "owned-room";
+export class ProgramVillage extends Process<ProgramVillageData> {
+  public static type = "village";
 
   public constructor(pid: number) {
     super(pid);
-    this.room.memory.ownedRoomPid = pid;
+    this.room.memory.villagePid = pid;
   }
 
-  static getByRoom(roomName: string): ProgramOwnedRoom | undefined {
-    const pid = Memory.rooms[roomName].ownedRoomPid;
+  static getByRoom(roomName: string): ProgramVillage | undefined {
+    const pid = Memory.rooms[roomName].villagePid;
     if (!pid) {
       return undefined;
     }
-    return Process.get(pid) as ProgramOwnedRoom;
+    return Process.get(pid) as ProgramVillage;
   }
 
   public static new(roomName: string) {
-    return Process.newProgram<ProgramOwnedRoomData>(ProgramOwnedRoom.type, roomName, {
+    return Process.newProgram<ProgramVillageData>(ProgramVillage.type, roomName, {
       roomName: roomName,
       harvestPids: {}
     });
@@ -78,4 +78,4 @@ export class ProgramOwnedRoom extends Process<ProgramOwnedRoomData> {
   }
 }
 
-Process.register(ProgramOwnedRoom.type, ProgramOwnedRoom);
+Process.register(ProgramVillage.type, ProgramVillage);

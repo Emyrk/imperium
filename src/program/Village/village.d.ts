@@ -1,3 +1,3 @@
 interface RoomMemory {
-  ownedRoomPid?: number;
+  villagePid?: number;
 }

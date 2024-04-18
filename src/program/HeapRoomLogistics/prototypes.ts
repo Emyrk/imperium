@@ -1,22 +1,22 @@
-import { ProgramOwnedRoom } from "program/OwnedRoom/OwnedRoom";
+import { ProgramVillage } from "program/Village/Village";
 
 Room.prototype.announceAvailable = function (ref: string, resourceType: ResourceConstant) {
-  if (this.memory.ownedRoomPid) {
-    const logi = ProgramOwnedRoom.getByRoom(this.name)?.heapLogistics();
+  if (this.memory.villagePid) {
+    const logi = ProgramVillage.getByRoom(this.name)?.heapLogistics();
     logi?.announceAvailable(ref, resourceType);
   }
 };
 
 Room.prototype.announceDeath = function (pos: ProtoPos) {
-  if (this.memory.ownedRoomPid) {
-    const logi = ProgramOwnedRoom.getByRoom(this.name)?.heapLogistics();
+  if (this.memory.villagePid) {
+    const logi = ProgramVillage.getByRoom(this.name)?.heapLogistics();
     logi?.announceDeath(pos);
   }
 };
 
 Room.prototype.announceNeeded = function (ref: string, needType: LogisticsNeedType, resourceType: ResourceConstant) {
-  if (this.memory.ownedRoomPid) {
-    const logi = ProgramOwnedRoom.getByRoom(this.name)?.heapLogistics();
+  if (this.memory.villagePid) {
+    const logi = ProgramVillage.getByRoom(this.name)?.heapLogistics();
     logi?.announceNeeded(ref, needType, resourceType);
   }
 };

@@ -6,8 +6,8 @@ import ControlFlowLoop from "task/controlflows/Loop/Loop";
 import { TaskGoto } from "task/instances/goto";
 import { TaskHarvest } from "task/instances/harvest";
 import { TaskStaticHarvest } from "./StaticHarvestTask";
-import { ProgramOwnedRoom } from "program/OwnedRoom/OwnedRoom";
 import { Civis } from "civis/Civis";
+import { ProgramVillage } from "program/Village/Village";
 
 export interface ProgramStaticHarvestData extends ProcessData {
   sourceID: string;
@@ -295,7 +295,7 @@ export class ProgramStaticHarvest extends Process<ProgramStaticHarvestData> {
   }
 
   private announceResources(): void {
-    const core = ProgramOwnedRoom.getByRoom(this.data.roomName);
+    const core = ProgramVillage.getByRoom(this.data.roomName);
     if (core) {
       const pile = this.dropPile();
       if (pile && core.heapLogistics()) {
