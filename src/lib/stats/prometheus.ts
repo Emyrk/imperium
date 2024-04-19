@@ -114,7 +114,8 @@ const clearRoot = () => {
 export let metrics = new Metrics({}, clearRoot);
 
 export function reportMetrics(segmentID: number, metrics: Metrics) {
-  RawMemory.segments[segmentID] = JSON.stringify(metrics.json());
+  console.log("Reporting metrics", metrics.json());
+  RawMemory.segments[segmentID] = metrics.json();
 }
 
 type labelPairs = {

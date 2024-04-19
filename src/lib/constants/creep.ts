@@ -1,5 +1,6 @@
 export const RANGES = {
   BUILD: 3,
+  UPGRADE: 3,
   REPAIR: 3,
   TRANSFER: 1,
   WITHDRAW: 1,

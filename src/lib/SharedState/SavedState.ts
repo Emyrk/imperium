@@ -25,18 +25,18 @@ export class SavedState<MemArgs, HeapArgs> {
     return SavedState._byID[id];
   }
 
-  public static stats() {
-    if (!sample()) {
+  public static stats(force?: boolean) {
+    if (!force && !sample()) {
       return;
     }
     SavedState.totalCount.set(Object.keys(Memory.savedStates).length);
   }
 
-  public static loop() {
+  public static loop(force?: boolean) {
     if (Game.time % 25 === 0) {
       SavedState.cleanup();
     }
-    SavedState.stats();
+    SavedState.stats(force);
   }
 
   public static cleanup() {

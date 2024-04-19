@@ -22,7 +22,7 @@ export class ProgramState extends Process<ProgramStateData> {
   }
 
   public execute(): ProcessCode {
-    SavedState.loop();
+    SavedState.loop(!this.executed);
     return ProcessCode.SUCCESS;
   }
 

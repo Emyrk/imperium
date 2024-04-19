@@ -63,7 +63,7 @@ function unwrappedLoop(): void {
   collector.loop();
   // Report metrics to memory segment. These will be exported
   // to prometheus.
-  if (Game.time % 20 === 0) {
+  if (Game.time % 1 === 0) {
     reportMetrics(77, metrics);
   }
 }

@@ -3,6 +3,8 @@ import { builtinEnvironments } from "vitest/environments";
 import setupGlobals from "../setups/constants";
 import { Game as FakeGame } from "../fakes/Game";
 import { RoomPosition as FakeRoomPosition } from "../fakes/RoomPosition";
+import { RoomVisual as FakeRoomVisual } from "../fakes/RoomVisual";
+import { CostMatrix as FakeCostMatrix } from "../fakes/CostMatrix";
 
 export default <Environment>{
   name: "fake",
@@ -25,6 +27,8 @@ export default <Environment>{
     setupGlobals(global);
     global.Game = new FakeGame();
     global.RoomPosition = FakeRoomPosition;
+    global.RoomVisual = FakeRoomVisual;
+    global.CostMatrix = FakeCostMatrix;
     global.Memory = {
       creeps: {},
       flags: {},

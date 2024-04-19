@@ -1,4 +1,5 @@
 import { mockInstanceOf } from "screeps-jest";
+import { RoomTerrain } from "../../../test/fakes/RoomTerrain";
 
 export function MockRoom(name: string, mockFields: { [name: string]: any } = {}): Room {
   const room = mockInstanceOf<Room>({
@@ -28,4 +29,8 @@ export function MockRoom(name: string, mockFields: { [name: string]: any } = {})
   Game.rooms[room.name] = room;
 
   return room;
+}
+
+export function Terrain(center: Coord, terrain: string): RoomTerrain {
+  return new RoomTerrain();
 }
