@@ -78,7 +78,7 @@ export class ProgramRoomHauling extends Process<ProgramRoomHaulingData> {
     }
 
     const haul = "haul";
-    while (this.creeps().total(haul) < 1) {
+    while (this.creeps().total(haul) < 1 && this.room().sources.length > 1) {
       let body = [MOVE, CARRY];
       let avail = cap - energyCost(body);
       while (avail > 100) {
