@@ -101,8 +101,18 @@ export class ProgramRoomHauling extends Process<ProgramRoomHaulingData> {
     const workHaul = "work-haul";
     // TODO: I think this is too many creeps?
     let limit = this.room().sources.length + 1;
-
     const storage = this.room().storage;
+    // This is so bad...
+    if (storage && storage.store.getUsedCapacity(RESOURCE_ENERGY) > 300000) {
+      limit += 1;
+    }
+    if (storage && storage.store.getUsedCapacity(RESOURCE_ENERGY) > 500000) {
+      limit += 1;
+    }
+    if (storage && storage.store.getUsedCapacity(RESOURCE_ENERGY) > 800000) {
+      limit += 1;
+    }
+
     while (this.creeps().total(workHaul) < limit) {
       const body = CalcCreepBody(cap, ProgramRoomHauling.workHaulBodies);
       this.creeps().requestCreep(
