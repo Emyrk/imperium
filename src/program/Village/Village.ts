@@ -1,6 +1,7 @@
 import { Process, ProcessCode } from "kernel/Process";
 import { log } from "lib/log/log";
 import { profile } from "lib/profiler/decorator";
+import { GlobalCollector } from "main";
 import { ProgramHarvestSource } from "program/HarvestSource/HarvestSource";
 import { ProgramHeapRoomLogistics } from "program/HeapRoomLogistics/HeapRoomLogistics";
 import { ProgramSpawnControl } from "program/SpawnControl/SpawnControl";
@@ -22,6 +23,7 @@ export class ProgramVillage extends Process<ProgramVillageData> {
   public constructor(pid: number) {
     super(pid);
     this.room.memory.villagePid = pid;
+    GlobalCollector.trackRoom(this.room);
   }
 
   static getByRoom(roomName: string): ProgramVillage | undefined {

@@ -26,7 +26,7 @@ import { RoomCostMatrix } from "room/RoomCostMatrix";
 import { Mem } from "lib/memory/Memory";
 import { ProgramEmpire } from "program/Empire/Empire";
 
-var collector = new BaseCollector();
+export var GlobalCollector = new BaseCollector();
 function onGlobalReset(): void {
   log.info("Global reset");
   if (USE_PROFILER) {
@@ -60,7 +60,7 @@ function unwrappedLoop(): void {
 
   Top.printTop();
 
-  collector.loop();
+  GlobalCollector.loop();
   // Report metrics to memory segment. These will be exported
   // to prometheus.
   if (Game.time % 25 === 0) {

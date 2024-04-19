@@ -126,6 +126,11 @@ export class Civis {
     }
     options.visualizePathStyle = options.visualizePathStyle ?? { stroke: "#ffffff" };
 
+    // We sometimes will place a room callback on a given room to affect movement.
+    if (destination.room?.roomCallback) {
+      options.roomCallback = destination.room?.roomCallback;
+    }
+
     return moveTo(this.creep, { pos: destination, range: range }, options);
   }
 

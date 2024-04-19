@@ -55,7 +55,7 @@ export abstract class Process<DataType extends ProcessData> {
   // Includes only civis execution.
   _processTimingCivis?: Timing; // *Civis* execution time.
   _processCivisQuantity: number = 0;
-  _processCivisIntents: IntentMetricCollector = new IntentMetricCollector();
+  // _processCivisIntents: IntentMetricCollector = new IntentMetricCollector();
 
   // metrics
   private instanceMetrics;
@@ -63,7 +63,7 @@ export abstract class Process<DataType extends ProcessData> {
   private timingCivisMetric;
   private civisCountMetric;
   private timingSelfMetric;
-  private civisIntentsMetric;
+  // private civisIntentsMetric;
 
   // First tick since global reset or spawn
   _firstTick: number = 0;
@@ -129,7 +129,7 @@ export abstract class Process<DataType extends ProcessData> {
 
     const civisMetrics = this.instanceMetrics.group("civis");
     this.civisCountMetric = civisMetrics.gauge("count");
-    this.civisIntentsMetric = civisMetrics.objectKeyLabel("intents", "intent");
+    // this.civisIntentsMetric = civisMetrics.objectKeyLabel("intents", "intent");
   }
 
   public get civis(): Civis[] {
@@ -198,10 +198,10 @@ export abstract class Process<DataType extends ProcessData> {
     const civisStart = Game.cpu.getUsed();
 
     // Run the creeps
-    this._processCivisIntents.start();
+    // this._processCivisIntents.start();
     Object.values(this._civis).forEach(civis => {
       const code = civis.run();
-      this._processCivisIntents.include(civis);
+      // this._processCivisIntents.include(civis);
 
       if (code === CivisRunCode.Dead) {
         delete this._civis[civis.name];
@@ -211,8 +211,8 @@ export abstract class Process<DataType extends ProcessData> {
       }
     });
 
-    this._processCivisIntents.end();
-    this.civisIntentsMetric.set(this._processCivisIntents.metrics);
+    // this._processCivisIntents.end();
+    // this.civisIntentsMetric.set(this._processCivisIntents.metrics);
     this._processCivisQuantity = this.civis.length;
     if (this.civis.length > 0 || this._processTimingCivis) {
       this._processTimingCivis = RecordTiming(civisStart, this._processTimingCivis);
@@ -247,7 +247,7 @@ export abstract class Process<DataType extends ProcessData> {
     this.timingCivisMetric.set(this._processTimingCivis);
     this.timingSelfMetric.set(this._processTimingSelf);
     this.civisCountMetric.set(this._processCivisQuantity);
-    this.civisIntentsMetric.set(this._processCivisIntents);
+    // this.civisIntentsMetric.set(this._processCivisIntents);
     return ret;
   }
 

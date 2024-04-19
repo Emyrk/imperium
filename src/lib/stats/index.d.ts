@@ -7,5 +7,8 @@ interface Memory {
       avgCPU: number;
       lastGlobalReset: number;
     };
+    collectors: {
+      rooms: string[];
+    };
   };
 }
