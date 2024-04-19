@@ -1,5 +1,6 @@
 import { Process, ProcessCode } from "kernel/Process";
 import { log } from "lib/log/log";
+import { profile } from "lib/profiler/decorator";
 import { ProgramHarvestSource } from "program/HarvestSource/HarvestSource";
 import { ProgramHeapRoomLogistics } from "program/HeapRoomLogistics/HeapRoomLogistics";
 import { ProgramSpawnControl } from "program/SpawnControl/SpawnControl";
@@ -14,6 +15,7 @@ export interface ProgramVillageData extends ProcessData {
   logisticsPid?: number;
 }
 
+@profile
 export class ProgramVillage extends Process<ProgramVillageData> {
   public static type = "village";
 
@@ -35,6 +37,44 @@ export class ProgramVillage extends Process<ProgramVillageData> {
       roomName: roomName,
       harvestPids: {}
     });
+  }
+
+  // Sell excess I guess...
+  private marketSell(): void {
+    if (Game.time % 500 !== 0) {
+      return;
+    }
+
+    const terminal = this.room.terminal;
+    if (!terminal) {
+      return;
+    }
+
+    if (terminal.store.getUsedCapacity(RESOURCE_ENERGY) < 50000) {
+      return;
+    }
+
+    // There is a better way then assuming an 8k transaction cost.
+    const avail = terminal.store.getUsedCapacity(RESOURCE_ENERGY) - 8000;
+
+    // Go sell energy!
+    // TODO: We should offload this to the golang imo. It is expensive?
+    const orders = Game.market.getAllOrders(order => {
+      return (
+        order.type === ORDER_BUY && order.resourceType === RESOURCE_ENERGY && order.price > 17,
+        order.remainingAmount > 20000,
+        Game.market.calcTransactionCost(1000, this.room.name, order.roomName!) < 8000
+      );
+    });
+    if (orders.length === 0) return;
+
+    const order = orders[0];
+    const ret = Game.market.deal(order.id, avail, this.room.name);
+    if (ret != OK) {
+      log.error(`Failed to sell energy from ${this.room.name}, order=${order.id}: ${ret}`);
+      return;
+    }
+    log.info(`Sold ${avail} energy for ${order.price} to ${order.roomName} from ${this.room.name}!`);
   }
 
   private get room(): Room {
@@ -63,6 +103,8 @@ export class ProgramVillage extends Process<ProgramVillageData> {
       const harvestProcess = ProgramStaticHarvest.new(source, this.data.spawnPid!);
       this.data.harvestPids[source.id] = this.launchChildProcess(harvestProcess);
     });
+
+    this.marketSell();
     return ProcessCode.SUCCESS;
   }
 
