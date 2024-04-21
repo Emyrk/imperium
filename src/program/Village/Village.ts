@@ -4,6 +4,7 @@ import { profile } from "lib/profiler/decorator";
 import { GlobalCollector } from "main";
 import { ProgramHarvestSource } from "program/HarvestSource/HarvestSource";
 import { ProgramHeapRoomLogistics } from "program/HeapRoomLogistics/HeapRoomLogistics";
+import { PriorityMode } from "program/HeapRoomLogistics/LogisticNeeds/priorities";
 import { ProgramSpawnControl } from "program/SpawnControl/SpawnControl";
 import { ProgramStaticHarvest } from "program/StaticHarvest/StaticHarvest";
 import { ProgramTowerDefense } from "program/TowerDefense/TowerDefense";
@@ -52,23 +53,29 @@ export class ProgramVillage extends Process<ProgramVillageData> {
       return;
     }
 
-    if (terminal.store.getUsedCapacity(RESOURCE_ENERGY) < 50000) {
+    if (terminal.store.getUsedCapacity(RESOURCE_ENERGY) < 200000) {
       return;
     }
 
-    // There is a better way then assuming an 8k transaction cost.
-    const avail = terminal.store.getUsedCapacity(RESOURCE_ENERGY) - 8000;
+    // Never sell more than this.
+    const avail = 50000;
 
     // Go sell energy!
     // TODO: We should offload this to the golang imo. It is expensive?
     const orders = Game.market.getAllOrders(order => {
       return (
-        order.type === ORDER_BUY && order.resourceType === RESOURCE_ENERGY && order.price > 17,
-        order.remainingAmount > 20000,
-        Game.market.calcTransactionCost(1000, this.room.name, order.roomName!) < 8000
+        order.roomName !== undefined &&
+        order.type === ORDER_BUY &&
+        order.resourceType === RESOURCE_ENERGY &&
+        order.price > 17 &&
+        order.remainingAmount > 20000 &&
+        Game.market.calcTransactionCost(Math.min(order.remainingAmount, avail), this.room.name, order.roomName!) < 15000
       );
     });
-    if (orders.length === 0) return;
+    if (orders.length === 0) {
+      log.info(`No orders to sell energy from ${this.room.name}`);
+      return;
+    }
 
     const order = orders[0];
     const ret = Game.market.deal(order.id, avail, this.room.name);
@@ -101,6 +108,10 @@ export class ProgramVillage extends Process<ProgramVillageData> {
       this.data.logisticsPid = this.launchChildProcess(
         ProgramHeapRoomLogistics.new(this.data.roomName, this.data.spawnPid!)
       );
+
+      if (this.room.name === "E11S53") {
+        this.heapLogistics()?.updateNeedsMode(PriorityMode.STORE);
+      }
     }
 
     // Static mine all sources.

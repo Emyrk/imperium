@@ -57,7 +57,11 @@ export enum Priority {
 }
 
 export enum PriorityMode {
-  NORMAL
+  // Normal operations. Spend energy and upgrade the controller.
+  NORMAL,
+  // Store up an excess of energy. Do not upgrade the controller if we
+  // do not have a surplus.
+  STORE
 }
 
 export interface ProgramPriorityManagerData extends ProcessData {
@@ -129,6 +133,14 @@ export class ProgramPriorityManager extends Process<ProgramPriorityManagerData> 
       return Priority.HIGH;
     } else if (pct < 0.9) {
       return Priority.MEDIUM;
+    }
+
+    if (
+      mode === PriorityMode.STORE &&
+      this.room.storage &&
+      this.room.storage.store.getUsedCapacity(RESOURCE_ENERGY) < 900000
+    ) {
+      return Priority.NEVER;
     }
 
     return Priority.LOW;

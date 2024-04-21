@@ -30,7 +30,3 @@ export function MockRoom(name: string, mockFields: { [name: string]: any } = {})
 
   return room;
 }
-
-export function Terrain(center: Coord, terrain: string): RoomTerrain {
-  return new RoomTerrain();
-}

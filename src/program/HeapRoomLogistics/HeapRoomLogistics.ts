@@ -10,7 +10,7 @@ import { TickQueue } from "./TickQueue";
 import "./prototypes";
 import { ProgramRoomLogisticsBootstrap } from "./RoomLogisticsBootstrap";
 import { ProgramRoomHauling } from "./RoomHauling/RoomHauling";
-import { Priority, ProgramPriorityManager } from "./LogisticNeeds/priorities";
+import { Priority, PriorityMode, ProgramPriorityManager } from "./LogisticNeeds/priorities";
 import { TaskBuild } from "task/instances/build";
 import { TaskRepair } from "task/instances/repair";
 import { TaskTransfer } from "task/instances/transfer";
@@ -78,6 +78,10 @@ export class ProgramHeapRoomLogistics extends Process<ProgramHeapRoomLogisticsDa
     this.deathQueue = new TickQueue<deathQueueItem>();
     this.available = new LogisticsAvailable(this.room);
     this.needs = new LogisticNeeds(this.room, this.priorities());
+  }
+
+  public updateNeedsMode(mode: PriorityMode): void {
+    this.needs.setMode(mode);
   }
 
   // announceDeath will look for dropped resources

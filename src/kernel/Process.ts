@@ -194,6 +194,9 @@ export abstract class Process<DataType extends ProcessData> {
       const mapped = ErrorMapper.sourceMappedStackTrace(err);
       log.error(mapped);
       ret = ProcessCode.ERROR;
+      if (err.stack) {
+        log.error("Unmapepd stack:", err.stack);
+      }
     }
     // Set the executed flag to true.
     this.executed = true;

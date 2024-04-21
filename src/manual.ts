@@ -48,3 +48,5 @@ global.scout = function (fromRoom: string, roomName: string): void {
   });
   log.info(`Scout request to ${roomName} was made.`);
 };
+
+// global.towerDrain = function (roomName: string): void {};

@@ -108,13 +108,13 @@ export class ProgramRoomHauling extends Process<ProgramRoomHaulingData> {
     let limit = this.room().sources.length + 1;
     const storage = this.room().storage;
     // This is so bad...
-    if (storage && storage.store.getUsedCapacity(RESOURCE_ENERGY) > 300000) {
+    if (this.room().name != "E11S53" && storage && storage.store.getUsedCapacity(RESOURCE_ENERGY) > 300000) {
       limit += 1;
     }
-    if (storage && storage.store.getUsedCapacity(RESOURCE_ENERGY) > 500000) {
+    if (this.room().name != "E11S53" && storage && storage.store.getUsedCapacity(RESOURCE_ENERGY) > 500000) {
       limit += 1;
     }
-    if (storage && storage.store.getUsedCapacity(RESOURCE_ENERGY) > 800000) {
+    if (this.room().name != "E11S53" && storage && storage.store.getUsedCapacity(RESOURCE_ENERGY) > 800000) {
       limit += 1;
     }
 

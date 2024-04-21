@@ -126,7 +126,7 @@ function wrapFunction(name, originalFunction) {
 
   function wrappedFunction() {
     if (Profiler.isProfiling()) {
-      const nameMatchesFilter = name === getFilter();
+      const nameMatchesFilter = name.includes( getFilter());
       const start = Game.cpu.getUsed();
       if (nameMatchesFilter) {
         depth++;

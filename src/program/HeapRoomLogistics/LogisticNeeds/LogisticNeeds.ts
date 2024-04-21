@@ -46,10 +46,16 @@ export class LogisticNeeds {
   private needs: { [key: string]: LogisticsNeeded } = {};
   private room: Room;
   private priorities: ProgramPriorityManager;
+  private mode: PriorityMode;
 
-  constructor(room: Room, mgr: ProgramPriorityManager) {
+  constructor(room: Room, mgr: ProgramPriorityManager, mode: PriorityMode = PriorityMode.NORMAL) {
     this.room = room;
     this.priorities = mgr;
+    this.mode = mode;
+  }
+
+  public setMode(mode: PriorityMode) {
+    this.mode = mode;
   }
 
   public sortedList(): LogisticsNeeded[] {
@@ -117,7 +123,7 @@ export class LogisticNeeds {
       return undefined;
     }
 
-    let priority = this.priorities.priority(need, PriorityMode.NORMAL, obj);
+    let priority = this.priorities.priority(need, this.mode, obj);
     let quantity = 0;
     switch (need.type) {
       case "transfer":

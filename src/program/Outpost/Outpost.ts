@@ -35,6 +35,7 @@ interface buildingData {
 //  - Storage
 //  - Link
 //  - Terminal
+// TODO: Extension filling from storage.
 @profile
 export class ProgramOutpost extends Process<ProgramOutpostData> {
   public static type = "outpost";
