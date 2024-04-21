@@ -189,7 +189,6 @@ export class Top {
     ];
 
     if (me._processTimingCivis) {
-      me._processCivisIntents;
       const creepLabel = "  ".repeat(depth) + "└ " + `${me._processCivisQuantity}_creeps`;
       rows.push({
         pid: me.pid,
@@ -200,7 +199,7 @@ export class Top {
         avgExecTime: me._processTimingCivis.avg,
         totalExecTime: me._processTimingCivis.total,
         ticks: Top.totalTicks(me._firstTick),
-        intentsLast: me._processCivisIntents.totalIntents
+        intentsLast: -1 //me._processCivisIntents.totalIntents
       });
     }
 

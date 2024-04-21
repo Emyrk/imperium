@@ -6,6 +6,10 @@ export interface TaskGotoData extends TaskData {}
 export class TaskGoto extends Task<TaskGotoData, null> {
   public static type = "goto";
 
+  public static newToRoom(roomName: string, opts: MoveOptsProto = {}): ProtoTask<TaskData> {
+    return TaskGoto.new(new RoomPosition(25, 25, roomName), 23, opts);
+  }
+
   public static new(
     target: RoomPosition | RoomObject | ProtoPos,
     range: number = 0,

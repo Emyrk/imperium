@@ -25,6 +25,7 @@ import { enable, wrap } from "lib/profiler/screeps-profiler";
 import { RoomCostMatrix } from "room/RoomCostMatrix";
 import { Mem } from "lib/memory/Memory";
 import { ProgramEmpire } from "program/Empire/Empire";
+import "program/Outpost/Outpost";
 
 export var GlobalCollector = new BaseCollector();
 function onGlobalReset(): void {

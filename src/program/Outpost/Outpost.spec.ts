@@ -1,10 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { ProgramMinimalVillage, candidateRing } from "./MinVillage";
 import { MockRoom } from "test-utils/mocks/room";
-import { Process } from "kernel/Process";
-import { MockSource } from "test-utils/mocks/source";
 import { MockController } from "test-utils/mocks/controller";
 import { RoomTerrain, RoomTerrains } from "../../../test/fakes/RoomTerrain";
+import { candidateRing, layoutCenter } from "./layout";
 
 describe("Ring", () => {
   it("distance 0", () => {
@@ -39,7 +37,7 @@ describe("CandidatePosition", () => {
     });
 
     // Empty room should be the first candidate
-    const candidate = ProgramMinimalVillage.layoutCenter(room);
+    const candidate = layoutCenter(room);
     expect(candidate).toEqual({ x: controller.pos.x - 2, y: controller.pos.y - 2 });
   });
 
@@ -52,7 +50,7 @@ describe("CandidatePosition", () => {
     });
 
     // Empty room should be the first candidate
-    const candidate = ProgramMinimalVillage.layoutCenter(room);
+    const candidate = layoutCenter(room);
     expect(candidate).toEqual(undefined);
   });
 
@@ -66,7 +64,20 @@ describe("CandidatePosition", () => {
     });
 
     // Empty room should be the first candidate
-    const candidate = ProgramMinimalVillage.layoutCenter(room);
+    const candidate = layoutCenter(room);
+    expect(candidate).toEqual({ x: 39, y: 24 });
+  });
+
+  it("E11S54", () => {
+    const roomName = "test";
+    const controller = MockController({ pos: { x: 37, y: 26, roomName: roomName } });
+    const room = MockRoom(roomName, {
+      getTerrain: () => RoomTerrains.E11S54(),
+      controller: controller
+    });
+
+    // Empty room should be the first candidate
+    const candidate = layoutCenter(room);
     expect(candidate).toEqual({ x: 39, y: 24 });
   });
 });

@@ -75,6 +75,7 @@ interface Room {
   openSpawns: StructureSpawn[];
   hostiles: Creep[];
   minerals: Mineral[];
+  ConstructionSites: ConstructionSite[];
 
   // scout(): boolean;
 

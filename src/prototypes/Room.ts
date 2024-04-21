@@ -60,6 +60,13 @@ Object.defineProperty(Room.prototype, "sources", {
   configurable: true
 });
 
+Object.defineProperty(Room.prototype, "constructionSites", {
+  get() {
+    return this.find(FIND_CONSTRUCTION_SITES, {});
+  },
+  configurable: true
+});
+
 Object.defineProperty(Room.prototype, "minerals", {
   get() {
     return this.find(FIND_MINERALS, {});

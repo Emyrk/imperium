@@ -33,8 +33,8 @@ export class ProgramSpawnControl extends Process<ProgramSpawnControlData> {
     return Game.rooms[this.memory.data.roomName];
   }
 
-  public requestCreep(request: SpawnRequest): void {
-    insertRequest(this.sortedQueue, request);
+  public requestCreep(request: Omit<SpawnRequest, "requestedAt">): void {
+    insertRequest(this.sortedQueue, { ...request, requestedAt: Game.time });
   }
 
   public cancelRequest(name: string): void {

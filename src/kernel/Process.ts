@@ -171,6 +171,11 @@ export abstract class Process<DataType extends ProcessData> {
     this.scheduled.children = this.scheduled.children.filter(c => c !== childPid);
   }
 
+  // suspend will sleep the program for some number of ticks.
+  public suspend(duration: number) {
+    this.scheduled.sleepUntil = Game.time + duration;
+  }
+
   public run(): ProcessCode {
     const start = Game.cpu.getUsed();
     let ret = ProcessCode.SUCCESS;

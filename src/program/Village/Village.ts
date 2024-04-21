@@ -83,10 +83,15 @@ export class ProgramVillage extends Process<ProgramVillageData> {
     return Game.rooms[this.data.roomName];
   }
 
-  public execute(): ProcessCode {
+  public spawn(): ProgramSpawnControl {
     if (!this.data.spawnPid) {
       this.data.spawnPid = this.launchChildProcess(ProgramSpawnControl.new(this.data.roomName));
     }
+    return Process.get(this.data.spawnPid) as ProgramSpawnControl;
+  }
+
+  public execute(): ProcessCode {
+    this.spawn();
 
     if (!this.data.towersPid) {
       this.data.towersPid = this.launchChildProcess(ProgramTowerDefense.new(this.data.roomName));
@@ -94,7 +99,7 @@ export class ProgramVillage extends Process<ProgramVillageData> {
 
     if (!this.data.logisticsPid) {
       this.data.logisticsPid = this.launchChildProcess(
-        ProgramHeapRoomLogistics.new(this.data.roomName, this.data.spawnPid)
+        ProgramHeapRoomLogistics.new(this.data.roomName, this.data.spawnPid!)
       );
     }
 

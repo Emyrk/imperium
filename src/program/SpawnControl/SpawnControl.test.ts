@@ -35,8 +35,7 @@ describe("SpawnControl", () => {
       priority: 0,
       onComplete: function (success: boolean): void {
         // noop
-      },
-      requestedAt: 0
+      }
     });
     spawn.requestCreep({
       creep: {
@@ -47,8 +46,7 @@ describe("SpawnControl", () => {
       priority: -1,
       onComplete: function (success: boolean): void {
         // noop
-      },
-      requestedAt: 0
+      }
     });
 
     spawn.execute();
