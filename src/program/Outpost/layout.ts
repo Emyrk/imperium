@@ -1,4 +1,5 @@
 import { RANGES } from "lib/constants/creep";
+import { coordDistance } from "lib/utils/distance";
 
 export interface ValidLayout {
   // Center is where the spawn should spawn the managing creep.
@@ -7,6 +8,7 @@ export interface ValidLayout {
   spawnCoord: Coord;
   // Coord where the spawn should spawn non-managing creeps.
   spawnOut: Coord;
+  storageCoord: Coord;
   freeTiles: Coord[];
 }
 
@@ -48,15 +50,25 @@ export function layout(room: Room): ValidLayout | undefined {
   if (path.path[0].x === center.x && path.path[0].y === center.y) {
     trail = path.path.slice(1);
   }
-  trail[0];
+
+  // Ring omitted the reserved squares.
+  let ring = squares.ring.filter(coord => !(coord === trail[0] || coord === trail[1]));
+
+  const spawnOut = trail[1];
+  let storageCoord: Coord | undefined = ring.find(coord => {
+    return coordDistance(coord, spawnOut) === 1;
+  });
+
+  if (!storageCoord) {
+    return undefined;
+  }
 
   return {
     center: center,
     spawnCoord: trail[0],
-    spawnOut: trail[1],
-    freeTiles: squares.ring.filter(coord => {
-      !(coord.x === trail[0].x && coord.y === trail[0].y) && !(coord.x === trail[1].x && coord.y === trail[1].y);
-    })
+    spawnOut: spawnOut,
+    storageCoord: storageCoord,
+    freeTiles: ring.filter(coord => coord !== storageCoord)
   };
 }
 
@@ -81,8 +93,10 @@ export function layoutCenter(room: Room): layoutRing | undefined {
   let candidates = candidateRing({ x: controller.pos.x, y: controller.pos.y }, 2);
   const terrain = room.getTerrain();
 
+  let ring = [];
   let index = 0;
   CandidateLoop: for (index; index < candidates.length; index++) {
+    ring = [];
     // Find a candidate that will work.
     const coord = candidates[index];
     // Check the box
@@ -91,15 +105,16 @@ export function layoutCenter(room: Room): layoutRing | undefined {
         if (terrain.get(x, y) === TERRAIN_MASK_WALL) {
           continue CandidateLoop;
         }
+        ring.push({ x: x, y: y });
       }
     }
     break CandidateLoop;
   }
 
   // return the coord of the candidate that passed.
-  if (index >= candidates.length) {
+  if (index < candidates.length) {
     return {
-      ring: candidates,
+      ring: ring,
       center: candidates[index]
     };
   }

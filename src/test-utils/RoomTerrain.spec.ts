@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { RoomTerrain } from "../../test/fakes/RoomTerrain";
+import { RoomTerrain, RoomTerrains } from "../../test/fakes/RoomTerrain";
 
 describe("RoomTerrain", () => {
   it("empty", () => {
@@ -29,6 +29,11 @@ describe("RoomTerrain", () => {
     expectRow(terrain, 0, 2, [s, s, s, w, 0, w, s, s, s]);
     expectRow(terrain, 0, 3, [0, 0, 0, TERRAIN_MASK_WALL, TERRAIN_MASK_WALL, TERRAIN_MASK_WALL, 0, 0, 0]);
   });
+
+  // it("E11S54", () => {
+  //   const terrain = RoomTerrains.E11S54();
+  //   console.log(RoomTerrains.visualize(terrain));
+  // });
 });
 
 function expectRow(terrain: RoomTerrain, x: number, y: number, expected: number[]) {

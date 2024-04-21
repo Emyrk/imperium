@@ -79,10 +79,10 @@ export class ProgramOutpost extends Process<ProgramOutpostData> {
     return {
       center: blueprint.center,
       spawn: blueprint.spawnCoord,
+      storage: blueprint.storageCoord,
       tower: blueprint.freeTiles[0],
-      storage: blueprint.freeTiles[1],
-      link: blueprint.freeTiles[2],
-      terminal: blueprint.freeTiles[3]
+      link: blueprint.freeTiles[1],
+      terminal: blueprint.freeTiles[2]
     };
   }
 
@@ -110,7 +110,7 @@ global.OutpostLayout = function (roomName: string) {
   room.createFlag(blueprint.tower.x, blueprint.tower.y, `${room.name}_tower`, COLOR_GREY);
   room.createFlag(blueprint.storage.x, blueprint.storage.y, `${room.name}_storage`, COLOR_ORANGE);
   room.createFlag(blueprint.link.x, blueprint.link.y, `${room.name}_link`, COLOR_CYAN);
-  room.createFlag(blueprint.link.x, blueprint.link.y, `${room.name}_terminal`, COLOR_PURPLE);
+  room.createFlag(blueprint.terminal.x, blueprint.terminal.y, `${room.name}_terminal`, COLOR_PURPLE);
 };
 
 // interface buildingData {

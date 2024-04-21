@@ -38,7 +38,7 @@ describe("CandidatePosition", () => {
 
     // Empty room should be the first candidate
     const candidate = layoutCenter(room);
-    expect(candidate).toEqual({ x: controller.pos.x - 2, y: controller.pos.y - 2 });
+    expect(candidate?.center).toEqual({ x: controller.pos.x - 2, y: controller.pos.y - 2 });
   });
 
   it("no valid candidates", () => {
@@ -65,12 +65,12 @@ describe("CandidatePosition", () => {
 
     // Empty room should be the first candidate
     const candidate = layoutCenter(room);
-    expect(candidate).toEqual({ x: 39, y: 24 });
+    expect(candidate?.center).toEqual({ x: 39, y: 24 });
   });
 
   it("E11S54", () => {
     const roomName = "test";
-    const controller = MockController({ pos: { x: 37, y: 26, roomName: roomName } });
+    const controller = MockController({ pos: { x: 24, y: 42, roomName: roomName } });
     const room = MockRoom(roomName, {
       getTerrain: () => RoomTerrains.E11S54(),
       controller: controller
@@ -78,6 +78,6 @@ describe("CandidatePosition", () => {
 
     // Empty room should be the first candidate
     const candidate = layoutCenter(room);
-    expect(candidate).toEqual({ x: 39, y: 24 });
+    expect(candidate?.center).toEqual({ x: 22, y: 43 });
   });
 });

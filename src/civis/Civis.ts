@@ -53,9 +53,9 @@ export class Civis {
       }
 
       existingTask.finally();
-      log.debug(
-        `${fromMsg}${this.name} called 'finally()' on task ${existingTask.describe()}. NewTask: ${existingTask.type}`
-      );
+      // log.debug(
+      //   `${fromMsg}${this.name} called 'finally()' on task ${existingTask.describe()}. NewTask: ${existingTask.type}`
+      // );
     }
 
     // Delete the existing task
