@@ -193,7 +193,7 @@ export abstract class Process<DataType extends ProcessData> {
     // Set the executed flag to true.
     this.executed = true;
 
-    this._processTimingSelf = RecordTiming(start, this._processTiming);
+    this._processTimingSelf = RecordTiming(start, this._processTimingSelf);
 
     const civisStart = Game.cpu.getUsed();
 

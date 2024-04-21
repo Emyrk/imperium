@@ -118,6 +118,7 @@ export class BaseCollector {
           terminal_used_total: this.room.gauge("terminal_used_total", { room: roomName }),
           terminal_free_total: this.room.gauge("terminal_free_total", { room: roomName })
         };
+        this.rooms[roomName] = roomMetrics;
       }
     }
     // TODO: If you delete a room, we should remove it from the collector.
