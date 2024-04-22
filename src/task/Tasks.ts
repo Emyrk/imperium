@@ -1,8 +1,10 @@
 import { Civis } from "civis/Civis";
 import { Task } from "./Task";
+import { profile } from "lib/profiler/decorator";
 
 type TaskConstructor<T extends TaskData> = new (creep: Civis, protoTask: ProtoTask<T>) => Task<T, any>;
 
+@profile
 export class Tasks {
   static tasks: {
     [type: string]: TaskConstructor<any>;

@@ -29,6 +29,17 @@ interface RoomCoord {
   yDir: string;
 }
 
+interface RoomMineral {
+  pos: ProtoPos;
+  mineralType: MineralConstant;
+}
+
 interface RoomMemory {
   roomPid?: number;
+
+  // scouted is set to true if the room has been scouted.
+  scouted?: boolean;
+  sources?: ProtoPos[];
+  controller?: ProtoPos;
+  minerals?: RoomMineral[];
 }

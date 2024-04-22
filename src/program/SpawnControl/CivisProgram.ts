@@ -24,7 +24,7 @@ const MAX_CIVIS_ID = 9999999;
 
 export interface CivisProgramData extends ProcessData {
   civisProgram: {
-    spawnerPid: number;
+    spawnerPid?: number;
     prefix: string;
     checkAlive: pendingCreep[];
   };
@@ -38,7 +38,8 @@ export abstract class CivisProgram<DataType extends CivisProgramData> extends Pr
   public static newCivisProgram<Data extends CivisProgramData>(
     type: string,
     label: string,
-    spawnPid: number,
+    // You can always set this later
+    spawnPid: number | undefined,
     prefix: string,
     data: Omit<Data, keyof CivisProgramData> & { roomName: string }
   ): NewProcessProto<Data> {
@@ -70,7 +71,14 @@ export abstract class CivisProgram<DataType extends CivisProgramData> extends Pr
     return Memory.civisID;
   }
 
+  public setSpawnPid(pid: number): void {
+    this.data.civisProgram.spawnerPid = pid;
+  }
+
   private spawner(): ProgramSpawnControl {
+    if (!this.data.civisProgram.spawnerPid) {
+      throw new Error("No spawner pid set");
+    }
     return Process.get(this.data.civisProgram.spawnerPid) as ProgramSpawnControl;
   }
 
@@ -84,6 +92,10 @@ export abstract class CivisProgram<DataType extends CivisProgramData> extends Pr
 
   public total(role?: string): number {
     return this.totalQueued(role) + this.civis.filter(c => !role || c.creep.memory.role === role).length;
+  }
+
+  public alive(role?: string): number {
+    return this.civis.filter(c => !role || c.creep.memory.role === role).length;
   }
 
   private onComplete(name: string): (success: boolean) => void {

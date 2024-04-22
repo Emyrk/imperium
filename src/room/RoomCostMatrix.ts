@@ -6,20 +6,12 @@ export class RoomCostMatrix {
   private static roomCostMatrix: { [roomName: string]: RoomCostMatrix } = {};
 
   public static setupRoom(roomName: string): void {
-    if (!Game.rooms[roomName]) {
-      return;
-    }
-
-    if (Game.rooms[roomName].roomCallback && Game.rooms[roomName].blockSquare) {
+    if (this.roomCostMatrix[roomName]) {
       return;
     }
 
     const cm = RoomCostMatrix.roomCostMatrix[roomName] || new RoomCostMatrix(roomName);
     RoomCostMatrix.roomCostMatrix[roomName] = cm;
-
-    // @ts-ignore
-    Game.rooms[roomName].roomCallback = RoomCostMatrix.callback;
-    Game.rooms[roomName].blockSquare = RoomCostMatrix.blockSquare;
   }
 
   static blockSquare(pos: ProtoPos, weight?: number): void {
@@ -35,11 +27,10 @@ export class RoomCostMatrix {
     rcm.csm.set(pos.x, pos.y, weight);
   }
 
-  static callback(roomName: string): boolean | CostMatrix | undefined {
+  static callback(roomName: string): boolean | CostMatrix {
     const rcm = RoomCostMatrix.roomCostMatrix[roomName];
     if (!rcm || !rcm.room || !rcm.csm) {
-      // Return undefined to use the previous behavior.
-      return undefined;
+      return false;
     }
     return rcm.csm;
   }

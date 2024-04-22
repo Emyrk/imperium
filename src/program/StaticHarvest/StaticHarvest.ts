@@ -8,6 +8,7 @@ import { TaskStaticHarvest } from "./StaticHarvestTask";
 import { Civis } from "civis/Civis";
 import { ProgramVillage } from "program/Village/Village";
 import { BootstrapBody, CivisProgram, CivisProgramData } from "program/SpawnControl/CivisProgram";
+import { RoomCostMatrix } from "room/RoomCostMatrix";
 
 export interface ProgramStaticHarvestData extends CivisProgramData {
   sourceID: string;
@@ -308,6 +309,11 @@ export class ProgramStaticHarvest extends CivisProgram<ProgramStaticHarvestData>
     this.maintainHarvester();
     this.announceResources();
 
+    // This can be an issue if the first one happens before the room is ready I think?
+    if (!this.executed || Game.time % 250 === 0) {
+      this.reserveSite();
+    }
+
     super.execute();
     return ProcessCode.SUCCESS;
   }
@@ -323,7 +329,7 @@ export class ProgramStaticHarvest extends CivisProgram<ProgramStaticHarvestData>
       return;
     }
 
-    this.room().blockSquare!(new RoomPosition(this.data.miningSpot.x, this.data.miningSpot.y, this.data.roomName));
+    RoomCostMatrix.blockSquare(new RoomPosition(this.data.miningSpot.x, this.data.miningSpot.y, this.data.roomName));
   }
 }
 

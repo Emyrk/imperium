@@ -51,7 +51,7 @@ export class ProgramRoomHauling extends CivisProgram<ProgramRoomHaulingData> {
   // maintain creeps
   private maintainCreeps() {
     // We do not need to run this every tick.
-    if (Game.time % 1 !== 0) return;
+    if (Game.time % 10 !== 0) return;
     const cap = this.room().energyCapacityAvailable;
 
     const boot = "boot";

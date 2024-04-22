@@ -1,5 +1,6 @@
 import { RANGES } from "lib/constants/creep";
 import { log } from "lib/log/log";
+import { profile } from "lib/profiler/decorator";
 import { Task, TaskCode } from "task/Task";
 import { Tasks } from "task/Tasks";
 
@@ -7,10 +8,15 @@ export interface TaskHarvestData extends TaskData {
   dropMining: boolean;
 }
 
+@profile
 export class TaskHarvest extends Task<TaskHarvestData, Source> {
   public static type = "harvest";
 
-  public static new(target: Source, dropMining: boolean = false, opts: MoveOptsProto = {}): ProtoTask<TaskHarvestData> {
+  public static new(
+    target: Source | ProtoPos,
+    dropMining: boolean = false,
+    opts: MoveOptsProto = {}
+  ): ProtoTask<TaskHarvestData> {
     return Task.newTask<TaskHarvestData>(
       TaskHarvest.type,
       target,
@@ -22,6 +28,17 @@ export class TaskHarvest extends Task<TaskHarvestData, Source> {
         moveOptions: opts
       }
     );
+  }
+
+  get target(): Source {
+    if (super.target) {
+      return super.target as Source;
+    }
+    const src = super.targetPos?.lookFor(LOOK_SOURCES)[0];
+    if (!src) {
+      throw new Error("No source found at target position for harvest");
+    }
+    return src;
   }
 
   isValid(): boolean {

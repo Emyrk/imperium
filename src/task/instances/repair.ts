@@ -1,11 +1,13 @@
 import { Civis } from "civis/Civis";
 import { RANGES } from "lib/constants/creep";
 import { log } from "lib/log/log";
+import { profile } from "lib/profiler/decorator";
 import { Task, TaskCode } from "task/Task";
 import { Tasks } from "task/Tasks";
 
 export interface TaskRepairData extends TaskData {}
 
+@profile
 export class TaskRepair extends Task<TaskRepairData, Structure> {
   public static type = "repair";
 

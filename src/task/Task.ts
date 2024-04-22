@@ -1,5 +1,6 @@
 import { Civis } from "civis/Civis";
 import { SavedState } from "lib/SharedState/SavedState";
+import { profile } from "lib/profiler/decorator";
 
 export enum TaskCode {
   // Return WORKING when the task needs to continue on the next tick.
@@ -18,6 +19,8 @@ export enum TaskCode {
 }
 
 const MAX_TASKS_ID = 9999999;
+
+@profile
 export abstract class Task<DataType extends TaskData, Target extends RoomObject | null> {
   private protoTask: ProtoTask<DataType>;
   public creep: Civis;
@@ -90,12 +93,24 @@ export abstract class Task<DataType extends TaskData, Target extends RoomObject 
     return this.protoTask.type;
   }
 
+  updateTarget(target: RoomObject | ProtoPos | RoomPosition | undefined): void {
+    this.proto._target = protoTarget(target);
+    this.cachedTarget = null;
+  }
+
+  // If someone updates the target, we need to reset this.
+  private cachedTarget: Target | null = null;
   public get target(): Target | null {
+    if (this.cachedTarget) {
+      return this.cachedTarget;
+    }
+
     if (!this.protoTask._target || this.protoTask._target.id === "") {
       return null;
     }
 
-    return deref(this.protoTask._target.id) as Target | null;
+    this.cachedTarget = deref(this.protoTask._target.id) as Target | null;
+    return this.cachedTarget;
   }
 
   public get targetPos(): RoomPosition | null {

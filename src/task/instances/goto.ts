@@ -1,8 +1,10 @@
+import { profile } from "lib/profiler/decorator";
 import { Task, TaskCode } from "task/Task";
 import { Tasks } from "task/Tasks";
 
 export interface TaskGotoData extends TaskData {}
 
+@profile
 export class TaskGoto extends Task<TaskGotoData, null> {
   public static type = "goto";
 

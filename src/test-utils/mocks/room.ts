@@ -1,8 +1,10 @@
 import { mockInstanceOf } from "screeps-jest";
 import { RoomTerrain } from "../../../test/fakes/RoomTerrain";
+import { RoomVisual as FakeRoomVisual } from "../../../test/fakes/RoomVisual";
 
 export function MockRoom(name: string, mockFields: { [name: string]: any } = {}): Room {
   const room = mockInstanceOf<Room>({
+    visual: new FakeRoomVisual(name),
     name: name,
     ...mockFields
   });

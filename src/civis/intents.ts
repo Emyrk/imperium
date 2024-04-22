@@ -1,3 +1,5 @@
+import { profile } from "lib/profiler/decorator";
+
 export enum CivisIntentsBit {
   Attack = 0,
   AttackController = 8,
@@ -56,6 +58,7 @@ export function intentName(bit: CivisIntentsBit): string {
   }
 }
 
+@profile
 export class Intents {
   public intents: Uint32Array = new Uint32Array(4).fill(0);
   public increment(bit: CivisIntentsBit): void {

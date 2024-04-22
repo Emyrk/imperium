@@ -23,7 +23,8 @@ export default <Environment>{
   },
   setup(global: any, options: Record<string, any>) {
     setupConstants(global);
-    // Room Position has nothing to do with global state. It's used a lot, and should be included.
+    // Room Position has nothing to do with global state. It's used a lot,
+    // and should be included.
     global.RoomPosition = FakeRoomPosition;
     // FakeGame is pretty much required because we use 'deref' to load from memory.
     // Objects need to be saved to game to be pulled back.

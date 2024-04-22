@@ -271,6 +271,14 @@ export abstract class Process<DataType extends ProcessData> {
     this.timingSelfMetric.set(this._processTimingSelf);
     this.civisCountMetric.set(this._processCivisQuantity);
     // this.civisIntentsMetric.set(this._processCivisIntents);
+
+    // This spikes the CPU usage and is not accurate for a running process.
+    if (this._firstTick === Game.time) {
+      delete this._processTimingFull;
+      delete this._processTiming;
+      delete this._processTimingSelf;
+      delete this._processTimingCivis;
+    }
     return ret;
   }
 

@@ -1,9 +1,11 @@
 import { RANGES } from "lib/constants/creep";
+import { profile } from "lib/profiler/decorator";
 import { Task, TaskCode } from "task/Task";
 import { Tasks } from "task/Tasks";
 
 export interface TaskUpgradeData extends TaskData {}
 
+@profile
 export class TaskUpgrade extends Task<TaskUpgradeData, StructureController> {
   static type = "upgrade";
   public static new(target: StructureController): ProtoTask<TaskUpgradeData> {

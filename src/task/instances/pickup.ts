@@ -1,9 +1,11 @@
 import { RANGES } from "lib/constants/creep";
+import { profile } from "lib/profiler/decorator";
 import { Task, TaskCode } from "task/Task";
 import { Tasks } from "task/Tasks";
 
 export interface TaskPickupData extends TaskData {}
 
+@profile
 export class TaskPickup extends Task<TaskPickupData, Resource> {
   static type = "pickup";
   public static new(target: Resource): ProtoTask<TaskPickupData> {

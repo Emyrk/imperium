@@ -3,9 +3,9 @@ import { profile } from "lib/profiler/decorator";
 import { ProgramSpawnControl } from "program/SpawnControl/SpawnControl";
 import { ProgramTowerDefense } from "program/TowerDefense/TowerDefense";
 import { layout } from "./layout";
+import { CivisProgram, CivisProgramData } from "program/SpawnControl/CivisProgram";
 
-export interface ProgramOutpostData extends ProcessData {
-  spawnPid?: number;
+export interface ProgramOutpostData extends CivisProgramData {
   towersPid?: number;
   layout?: {
     center: Coord;
@@ -37,7 +37,7 @@ interface buildingData {
 //  - Terminal
 // TODO: Extension filling from storage.
 @profile
-export class ProgramOutpost extends Process<ProgramOutpostData> {
+export class ProgramOutpost extends CivisProgram<ProgramOutpostData> {
   public static type = "outpost";
 
   public constructor(pid: number) {
@@ -45,9 +45,22 @@ export class ProgramOutpost extends Process<ProgramOutpostData> {
   }
 
   public static new(roomName: string) {
-    return Process.newProgram<ProgramOutpostData>(ProgramOutpost.type, `${roomName}_outpost`, {
-      roomName: roomName
-    });
+    return CivisProgram.newCivisProgram<ProgramOutpostData>(
+      ProgramOutpost.type,
+      `${roomName}_outpost`,
+      undefined,
+      "out",
+      {
+        roomName: roomName
+      }
+    );
+  }
+
+  public spawn(): ProgramSpawnControl {
+    if (!this.data.civisProgram.spawnerPid) {
+      this.data.civisProgram.spawnerPid = this.launchChildProcess(ProgramSpawnControl.new(this.data.roomName));
+    }
+    return Process.get(this.data.civisProgram.spawnerPid) as ProgramSpawnControl;
   }
 
   private get room(): Room {
@@ -60,8 +73,8 @@ export class ProgramOutpost extends Process<ProgramOutpostData> {
       return ProcessCode.ERROR;
     }
 
-    if (!this.data.spawnPid) {
-      this.data.spawnPid = this.launchChildProcess(ProgramSpawnControl.new(this.data.roomName));
+    if (!this.data.civisProgram.spawnerPid) {
+      this.spawn();
     }
 
     if (!this.data.towersPid) {
@@ -113,12 +126,3 @@ global.OutpostLayout = function (roomName: string) {
   room.createFlag(blueprint.link.x, blueprint.link.y, `${room.name}_link`, COLOR_CYAN);
   room.createFlag(blueprint.terminal.x, blueprint.terminal.y, `${room.name}_terminal`, COLOR_PURPLE);
 };
-
-// interface buildingData {
-//     center: Coord;
-//     spawn: Coord;
-//     tower: Coord;
-//     storage: Coord;
-//     link: Coord;
-//     terminal: Coord;
-//   }

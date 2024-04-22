@@ -1,3 +1,4 @@
+import { ProgramRoomRemoteHarvest } from "RoomRemoteHarvest/RoomRemoteHarvest";
 import { Process, ProcessCode } from "kernel/Process";
 import { log } from "lib/log/log";
 import { profile } from "lib/profiler/decorator";
@@ -15,6 +16,7 @@ export interface ProgramVillageData extends ProcessData {
   towersPid?: number;
   harvestPids: { [source: string]: number };
   logisticsPid?: number;
+  remotesPid?: number;
 }
 
 @profile
@@ -97,8 +99,18 @@ export class ProgramVillage extends Process<ProgramVillageData> {
     return Process.get(this.data.spawnPid) as ProgramSpawnControl;
   }
 
+  public remotes(): ProgramRoomRemoteHarvest {
+    if (!this.data.remotesPid) {
+      this.data.remotesPid = this.launchChildProcess(
+        ProgramRoomRemoteHarvest.new(this.data.roomName, this.data.spawnPid!)
+      );
+    }
+    return Process.get(this.data.remotesPid) as ProgramRoomRemoteHarvest;
+  }
+
   public execute(): ProcessCode {
     this.spawn();
+    this.remotes();
 
     if (!this.data.towersPid) {
       this.data.towersPid = this.launchChildProcess(ProgramTowerDefense.new(this.data.roomName));

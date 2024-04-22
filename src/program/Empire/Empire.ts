@@ -1,10 +1,12 @@
 import { Process, ProcessCode } from "kernel/Process";
 import { ProgramState } from "lib/SharedState/ProgramState";
 import { log } from "lib/log/log";
+import { ProgramOutpost } from "program/Outpost/Outpost";
 import { ProgramVillage } from "program/Village/Village";
 
 export interface ProgramEmpireData extends ProcessData {
   villagePids: Record<string, number>;
+  outpostPids: Record<string, number>;
   statePid?: number;
 }
 
@@ -24,7 +26,8 @@ export class ProgramEmpire extends Process<ProgramEmpireData> {
     return Process.newProgram<ProgramEmpireData>(ProgramEmpire.type, "empire", {
       // No room, it covers all rooms.
       roomName: "",
-      villagePids: {}
+      villagePids: {},
+      outpostPids: {}
     });
   }
 
@@ -46,18 +49,28 @@ export class ProgramEmpire extends Process<ProgramEmpireData> {
     if (!this.data.villagePids) {
       this.data.villagePids = {};
     }
+    if (!this.data.outpostPids) {
+      this.data.outpostPids = {};
+    }
 
     Object.values(Game.rooms).forEach(room => {
       if (this.data.villagePids[room.name]) return;
+      if (this.data.outpostPids[room.name]) return;
 
-      if (!room.spawns.find(s => s.my)) {
-        // We don't have a spawn in the room, so ignore it.
+      // Spawn must be named something with "Spawn" in it
+      if (room.spawns.find(s => s.my && s.name.includes("Spawn"))) {
+        // Start the room up in a process
+        const villageProcess = ProgramVillage.new(room.name);
+        this.data.villagePids[room.name] = this.launchChildProcess(villageProcess);
         return;
       }
 
-      // Start the room up in a process
-      const villageProcess = ProgramVillage.new(room.name);
-      this.data.villagePids[room.name] = this.launchChildProcess(villageProcess);
+      // Spawn must be named something with "Outpost" in it
+      if (room.spawns.find(s => s.my && s.name.includes("Outpost"))) {
+        const outpostProcess = ProgramOutpost.new(room.name);
+        this.data.outpostPids[room.name] = this.launchChildProcess(outpostProcess);
+        return;
+      }
     });
 
     if (!this.data.statePid) {

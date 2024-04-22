@@ -1,6 +1,7 @@
 import { Civis } from "civis/Civis";
 import { RANGES } from "lib/constants/creep";
 import { log } from "lib/log/log";
+import { profile } from "lib/profiler/decorator";
 import { Task, TaskCode } from "task/Task";
 import { Tasks } from "task/Tasks";
 
@@ -9,6 +10,7 @@ export interface TaskTransferData extends TaskData {
   amount?: number;
 }
 
+@profile
 export class TaskTransfer extends Task<TaskTransferData, AnyStoreStructure | Creep> {
   public static type = "transfer";
 

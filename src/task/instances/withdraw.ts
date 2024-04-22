@@ -1,5 +1,6 @@
 import { isStoreStructure } from "declarations/typeGuards";
 import { RANGES } from "lib/constants/creep";
+import { profile } from "lib/profiler/decorator";
 import { Task, TaskCode } from "task/Task";
 import { Tasks } from "task/Tasks";
 
@@ -8,6 +9,7 @@ export interface TaskWithdrawData extends TaskData {
   amount?: number;
 }
 
+@profile
 export class TaskWithdraw extends Task<TaskWithdrawData, Structure | Tombstone> {
   static type = "withdraw";
   public static new(

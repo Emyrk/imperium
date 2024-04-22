@@ -77,12 +77,7 @@ interface Room {
   minerals: Mineral[];
   ConstructionSites: ConstructionSite[];
 
-  // scout(): boolean;
-
-  // blockSquare will tell the creeps to avoid this square.
-  //  - 1 use is to reserve the square for a creep to mine and not get shoved.
-  blockSquare?: (pos: RoomPosition) => void;
-  roomCallback?: (roomName: string) => CostMatrix | boolean;
+  scout(): boolean;
 }
 
 interface RoomVisual {

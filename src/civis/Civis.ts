@@ -3,6 +3,8 @@ import { log } from "lib/log/log";
 import { Task, TaskCode } from "task/Task";
 import { Tasks } from "task/Tasks";
 import { CivisIntentsBit, Intents } from "./intents";
+import { profile } from "lib/profiler/decorator";
+import { RoomCostMatrix } from "room/RoomCostMatrix";
 
 export enum CivisRunCode {
   Spawning = "spawning",
@@ -10,6 +12,7 @@ export enum CivisRunCode {
   Dead = "dead"
 }
 
+@profile
 export class Civis {
   public name: string;
   public creep: Creep; // The creep that this wrapper class will control
@@ -127,9 +130,7 @@ export class Civis {
     options.visualizePathStyle = options.visualizePathStyle ?? { stroke: "#ffffff" };
 
     // We sometimes will place a room callback on a given room to affect movement.
-    if (destination.room?.roomCallback) {
-      options.roomCallback = destination.room?.roomCallback;
-    }
+    options.roomCallback = RoomCostMatrix.callback;
 
     return moveTo(this.creep, { pos: destination, range: range }, options);
   }
@@ -157,6 +158,10 @@ export class Civis {
   }
 
   // Actions
+  attack(target: Creep | Structure) {
+    return this.catchIntent(CivisIntentsBit.Attack, this.creep.attack(target));
+  }
+
   build(site: ConstructionSite) {
     return this.catchIntent(CivisIntentsBit.Build, this.creep.build(site));
   }
@@ -183,6 +188,14 @@ export class Civis {
 
   upgradeController(controller: StructureController) {
     return this.catchIntent(CivisIntentsBit.UpgradeController, this.creep.upgradeController(controller));
+  }
+
+  attackController(controller: StructureController) {
+    return this.catchIntent(CivisIntentsBit.AttackController, this.creep.attackController(controller));
+  }
+
+  claimController(controller: StructureController) {
+    return this.catchIntent(CivisIntentsBit.AttackController, this.creep.claimController(controller));
   }
 
   transfer(target: Creep | Civis | Structure, resourceType: ResourceConstant = RESOURCE_ENERGY, amount?: number) {

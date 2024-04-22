@@ -14,12 +14,24 @@ export interface SpawnRequest {
   requestedAt: number;
 }
 
+interface HasSpawn {
+  spawn(): ProgramSpawnControl;
+}
+
 export interface ProgramSpawnControlData extends ProcessData {}
 
 @profile
 export class ProgramSpawnControl extends Process<ProgramSpawnControlData> {
   public static type = "spawn";
   private sortedQueue: SpawnRequest[] = [];
+
+  static getByRoom(roomName: string): ProgramSpawnControl | undefined {
+    const pid = Memory.rooms[roomName].villagePid;
+    if (!pid) {
+      return undefined;
+    }
+    return (Process.get(pid)! as unknown as HasSpawn).spawn();
+  }
 
   constructor(pid: number) {
     super(pid);
@@ -56,7 +68,7 @@ export class ProgramSpawnControl extends Process<ProgramSpawnControlData> {
 
     // Spawns that are not currently spawning
     const spawns = this.room.openSpawns;
-    if (spawns.length === 0) {
+    if (!spawns || spawns.length === 0) {
       return ProcessCode.SLEEPING;
     }
 

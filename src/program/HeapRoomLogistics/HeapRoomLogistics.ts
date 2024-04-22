@@ -316,81 +316,90 @@ export class ProgramHeapRoomLogistics extends Process<ProgramHeapRoomLogisticsDa
   ): LogisticsNeeded | null {
     const needs = this.needs.sortedList();
     const canWork = hauler.getBodyparts(WORK) > 0;
-    // TODO: Do not loop because it is already sorted. Allow exit early.
-    return needs.reduce<{ selected: LogisticsNeeded | null; distance: number }>(
-      (current, need) => {
-        if (minPriority && need.priority < minPriority) {
-          return current;
-        }
+    let current = { selected: null as LogisticsNeeded | null, distance: 1000 };
 
-        if (this.room.storage && this.room.storage.ref === need.ref && preventStorage) {
-          return current;
-        }
+    for (let i = 0; i < needs.length; i++) {
+      const need = needs[i];
+      if (minPriority && need.priority < minPriority) {
+        continue;
+      }
 
-        if (need.resourceType !== resourceType) {
-          return current;
-        }
+      if (this.room.storage && this.room.storage.ref === need.ref && preventStorage) {
+        continue;
+      }
 
-        if (need.amount === 0) {
-          return current;
-        }
+      if (need.resourceType !== resourceType) {
+        continue;
+      }
 
-        const needAmount = totalNeeded(need);
-        if (needAmount === 0) {
-          return current;
-        }
+      if (need.amount === 0) {
+        continue;
+      }
 
-        // If we can't work, we can't do anything but transfer.
-        if (need.type !== "transfer" && !canWork) {
-          return current;
-        }
-        const dist = pos.getRangeToXY(need.pos.x, need.pos.y);
+      const needAmount = totalNeeded(need);
+      if (needAmount === 0) {
+        continue;
+      }
 
-        const useNew = {
-          selected: need,
-          distance: dist
-        };
+      // If we can't work, we can't do anything but transfer.
+      if (need.type !== "transfer" && !canWork) {
+        continue;
+      }
+      const dist = pos.getRangeToXY(need.pos.x, need.pos.y);
 
-        // If all things are equal, and you can work, prefer a job that requires work.
-        if (
-          canWork &&
-          current.selected &&
-          current.selected.type === "transfer" &&
-          need.type !== "transfer" &&
-          current.selected.priority === need.priority
-        ) {
-          return useNew;
-        }
+      const useNew = {
+        selected: need,
+        distance: dist
+      };
 
-        if (!current.selected) {
-          return useNew;
-        }
+      // If all things are equal, and you can work, prefer a job that requires work.
+      if (
+        canWork &&
+        current.selected &&
+        current.selected.type === "transfer" &&
+        need.type !== "transfer" &&
+        current.selected.priority === need.priority
+      ) {
+        current = useNew;
+        continue;
+      }
 
-        // TODO: Should add a case to prefer distance over priority if we have some resources we
-        // can drop off real quick. If we are empty, go purely on priority.
+      if (!current.selected) {
+        current = useNew;
+        continue;
+      }
 
-        if (need.priority > current.selected.priority) {
-          return useNew;
-        }
+      // TODO: Should add a case to prefer distance over priority if we have some resources we
+      // can drop off real quick. If we are empty, go purely on priority.
 
-        // Prefer distance
-        if (chaining && dist < current.distance && current.selected.priority === need.priority) {
-          return useNew;
-        }
+      if (need.priority > current.selected.priority) {
+        current = useNew;
+        continue;
+      }
 
-        // Randomly select something if they are equal based on a coin flip.
-        // Use needAmount + Game.time. Not perfect, but it is deterministic, which is good.
-        // This will always prefer later elements in the list, since the first has more possibilities
-        // to be overwritten. Need to implement a system to move things up/down based on their
-        // fulfillment.
-        if (current.selected.priority === need.priority && (needAmount + Game.time) % 2 === 0) {
-          return useNew;
-        }
+      // Prefer distance
+      if (chaining && dist < current.distance && current.selected.priority === need.priority) {
+        current = useNew;
+        continue;
+      }
 
-        return current;
-      },
-      { selected: null, distance: 1000 }
-    ).selected;
+      // Randomly select something if they are equal based on a coin flip.
+      // Use needAmount + Game.time. Not perfect, but it is deterministic, which is good.
+      // This will always prefer later elements in the list, since the first has more possibilities
+      // to be overwritten. Need to implement a system to move things up/down based on their
+      // fulfillment.
+      if (current.selected.priority === need.priority && (needAmount + Game.time) % 2 === 0) {
+        current = useNew;
+        continue;
+      }
+
+      // Needs are sorted, so the rest of the list will never be selected.
+      if (need.priority < current.selected.priority) {
+        break;
+      }
+    }
+
+    return current.selected;
   }
 
   private haulerPickup(
