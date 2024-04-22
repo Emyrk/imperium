@@ -1,15 +1,15 @@
 import { energyCost } from "civis/creep";
 import { Process, ProcessCode } from "kernel/Process";
 import { log } from "lib/log/log";
-import { BootstrapBody, ProgramCivisManager } from "program/SpawnControl/CivisManager";
 import ControlFlowLoop from "task/controlflows/Loop/Loop";
 import { TaskGoto } from "task/instances/goto";
 import { TaskHarvest } from "task/instances/harvest";
 import { TaskStaticHarvest } from "./StaticHarvestTask";
 import { Civis } from "civis/Civis";
 import { ProgramVillage } from "program/Village/Village";
+import { BootstrapBody, CivisProgram, CivisProgramData } from "program/SpawnControl/CivisProgram";
 
-export interface ProgramStaticHarvestData extends ProcessData {
+export interface ProgramStaticHarvestData extends CivisProgramData {
   sourceID: string;
   spawnPid: number;
 
@@ -30,12 +30,14 @@ export interface ProgramStaticHarvestData extends ProcessData {
   mgrPid?: number;
 }
 
-export class ProgramStaticHarvest extends Process<ProgramStaticHarvestData> {
+export class ProgramStaticHarvest extends CivisProgram<ProgramStaticHarvestData> {
   public static type = "static-harvest";
   public static new(source: Source, spawnPid: number) {
-    return Process.newProgram<ProgramStaticHarvestData>(
+    return CivisProgram.newCivisProgram<ProgramStaticHarvestData>(
       ProgramStaticHarvest.type,
       `${source.pos.roomName}_static_harvest_${source.id.substring(-4)}`,
+      spawnPid,
+      "har",
       {
         roomName: source.room.name,
         sourceID: source.id,
@@ -53,18 +55,6 @@ export class ProgramStaticHarvest extends Process<ProgramStaticHarvestData> {
 
   private room(): Room {
     return Game.rooms[this.data.roomName];
-  }
-
-  // Override
-  public get civis(): Civis[] {
-    return this.spawn.civis;
-  }
-
-  private get spawn(): ProgramCivisManager {
-    if (!this.data.mgrPid) {
-      this.data.mgrPid = this.launchChildProcess(ProgramCivisManager.new(this.data.spawnPid, "har"));
-    }
-    return Process.get(this.data.mgrPid!) as ProgramCivisManager;
   }
 
   private get source(): Source | null {
@@ -193,7 +183,7 @@ export class ProgramStaticHarvest extends Process<ProgramStaticHarvestData> {
 
     this.data.workParts = body.filter(part => part === WORK).length;
     const spot = this.data.miningSpot;
-    this.spawn.requestCreep(
+    this.requestCreep(
       {
         body: body,
         staleTime: 150,
@@ -224,15 +214,15 @@ export class ProgramStaticHarvest extends Process<ProgramStaticHarvestData> {
   }
 
   private maintainHarvester(): void {
-    if (this.spawn.total() === 0) {
+    if (this.total() === 0) {
       log.info(`No miners for ${this.data.sourceID}.  Requesting one.`);
       this.requestHarvester();
       return;
     }
 
     // If the civis is alive and none are queued.
-    if (this.spawn.civis.length === 1 && this.spawn.totalQueued() === 0) {
-      const min = this.spawn.civis[0];
+    if (this.civis.length === 1 && this.totalQueued() === 0) {
+      const min = this.civis[0];
       // The minion will die right as we spawn the new one.
       // TODO: Account for travel time as well!
       if (min && min.ticksToLive && min.ticksToLive < min.body.length * CREEP_SPAWN_TIME) {
@@ -318,10 +308,12 @@ export class ProgramStaticHarvest extends Process<ProgramStaticHarvestData> {
     this.maintainHarvester();
     this.announceResources();
 
+    super.execute();
     return ProcessCode.SUCCESS;
   }
 
   selfTerminate(): ProcessCode {
+    super.selfTerminate();
     return ProcessCode.SUCCESS;
   }
 

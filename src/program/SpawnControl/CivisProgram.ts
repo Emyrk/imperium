@@ -1,10 +1,7 @@
-import { Civis } from "civis/Civis";
+import { NewProcessProto, Process, ProcessCode } from "kernel/Process";
 import { ProgramSpawnControl, SpawnRequest } from "./SpawnControl";
-import { TickQueue } from "lib/tick/TickQueue";
-import { Process, ProcessCode } from "kernel/Process";
 import { log } from "lib/log/log";
 import { energyCost } from "civis/creep";
-import { profile } from "lib/profiler/decorator";
 
 interface pendingCreep {
   name: string;
@@ -24,31 +21,41 @@ export interface BootstrapBody {
 }
 
 const MAX_CIVIS_ID = 9999999;
-export interface ProgramCivisManagerData extends ProcessData {
-  spawnerPid: number;
-  prefix: string;
-  checkAlive: pendingCreep[];
+
+export interface CivisProgramData extends ProcessData {
+  civisProgram: {
+    spawnerPid: number;
+    prefix: string;
+    checkAlive: pendingCreep[];
+  };
 }
 
-// TODO: Implement "wish list" api for creeps. So you just say "I want 5 harvesters"
-// and this code will maintain that amount. It would request them so they are ready
-// when the old one dies.
-@profile
-export class ProgramCivisManager extends Process<ProgramCivisManagerData> {
+// CivisProgram handles managing civis and the spawn controller.
+export abstract class CivisProgram<DataType extends CivisProgramData> extends Process<DataType> {
   private queued: { [name: string]: SpawnRequest } = {};
   private bootStrapBodies: { [name: string]: { body: BootstrapBody; req: SpawnRequest } } = {};
 
-  //   private aliveQueue: TickQueue<string> = new TickQueue();
-
-  public static type = "civis-manager";
-
-  public static new(spawnerPid: number, prefix: string) {
-    return Process.newProgram<ProgramCivisManagerData>(ProgramCivisManager.type, "civis_manager", {
-      spawnerPid,
-      prefix,
-      roomName: Process.get(spawnerPid)?.data.roomName,
-      checkAlive: []
-    });
+  public static newCivisProgram<Data extends CivisProgramData>(
+    type: string,
+    label: string,
+    spawnPid: number,
+    prefix: string,
+    data: Omit<Data, keyof CivisProgramData> & { roomName: string }
+  ): NewProcessProto<Data> {
+    return {
+      type: type,
+      label: label,
+      data: {
+        ...data,
+        creeps: [],
+        civisProgram: {
+          spawnerPid: spawnPid,
+          prefix: prefix,
+          checkAlive: []
+        }
+        // This is so jank and weird
+      } as unknown as Data
+    };
   }
 
   private static nextID(): number {
@@ -63,17 +70,13 @@ export class ProgramCivisManager extends Process<ProgramCivisManagerData> {
     return Memory.civisID;
   }
 
+  private spawner(): ProgramSpawnControl {
+    return Process.get(this.data.civisProgram.spawnerPid) as ProgramSpawnControl;
+  }
+
   constructor(pid: number) {
     super(pid);
   }
-
-  private spawner(): ProgramSpawnControl {
-    return Process.get(this.data.spawnerPid) as ProgramSpawnControl;
-  }
-
-  //   public alive(role?: string): Civis[] {
-  //     return [];
-  //   }
 
   public totalQueued(role?: string): number {
     return Object.values(this.queued).filter(r => !role || r.creep.mem.role === role).length;
@@ -87,7 +90,7 @@ export class ProgramCivisManager extends Process<ProgramCivisManagerData> {
     return (success: boolean) => {
       // We need to delete the queued request on the next game tick
       if (success) {
-        this.data.checkAlive.push({ name, checkAt: Game.time + 1 });
+        this.data.civisProgram.checkAlive.push({ name, checkAt: Game.time + 1 });
       } else {
         // It failed, so remove from the queue
         delete this.queued[name];
@@ -100,7 +103,7 @@ export class ProgramCivisManager extends Process<ProgramCivisManagerData> {
     body: BodyPartConstant[] | BootstrapBody,
     mem: CreepMemory,
     priority: number = 0,
-    prefix: string = this.data.prefix
+    prefix: string = this.data.civisProgram.prefix
   ): string {
     let bodyParts: BodyPartConstant[];
     if ("body" in body) {
@@ -109,7 +112,7 @@ export class ProgramCivisManager extends Process<ProgramCivisManagerData> {
       bodyParts = body;
     }
 
-    const name = `${prefix}_${ProgramCivisManager.nextID()}`;
+    const name = `${prefix}_${CivisProgram.nextID()}`;
     const request: SpawnRequest = {
       creep: {
         mem: mem,
@@ -132,7 +135,7 @@ export class ProgramCivisManager extends Process<ProgramCivisManagerData> {
   }
 
   public execute(): ProcessCode {
-    const names = _.remove(this.data.checkAlive, c => Game.time >= c.checkAt);
+    const names = _.remove(this.data.civisProgram.checkAlive, c => Game.time >= c.checkAt);
     for (const pending of names) {
       // Always delete from the queue
       delete this.queued[pending.name];
@@ -146,25 +149,27 @@ export class ProgramCivisManager extends Process<ProgramCivisManagerData> {
       this.assignCivis(Game.creeps[pending.name]);
     }
 
-    // TODO: Run this less often then every tick?
-    Object.values(this.bootStrapBodies).forEach(({ body, req }) => {
-      if (req.requestedAt + body.staleTime < Game.time) {
-        // Oof, we have a stale request we need to update.
-        // Cancel the original request
-        this.spawner().cancelRequest(req.creep.name);
+    // This does not need to be run every tick.
+    if (Game.time % 25 === 0) {
+      Object.values(this.bootStrapBodies).forEach(({ body, req }) => {
+        if (req.requestedAt + body.staleTime < Game.time) {
+          // Oof, we have a stale request we need to update.
+          // Cancel the original request
+          this.spawner().cancelRequest(req.creep.name);
 
-        // Update the body
-        req.creep.bodyParts = body.bootstrapBody;
-        // Re-request
-        this.spawner().requestCreep(req);
-        // Log for later.
-        log.warning(
-          `Creep ${req.creep.name} is stale, detected bootstrap spawn problem.  Updating body to cost ${energyCost(
-            req.creep.bodyParts
-          )}`
-        );
-      }
-    });
+          // Update the body
+          req.creep.bodyParts = body.bootstrapBody;
+          // Re-request
+          this.spawner().requestCreep(req);
+          // Log for later.
+          log.warning(
+            `Creep ${req.creep.name} is stale, detected bootstrap spawn problem.  Updating body to cost ${energyCost(
+              req.creep.bodyParts
+            )}`
+          );
+        }
+      });
+    }
 
     return ProcessCode.SUCCESS;
   }
@@ -176,5 +181,3 @@ export class ProgramCivisManager extends Process<ProgramCivisManagerData> {
     return ProcessCode.SUCCESS;
   }
 }
-
-Process.register(ProgramCivisManager.type, ProgramCivisManager);

@@ -45,13 +45,16 @@ export abstract class Process<DataType extends ProcessData> {
   // └───────────────────────────────────────────────┘
   //   │          │ │           │                   │
   //   ├──────────┘ └───────────┘                   │
-  //   │   Self         Civis                       │
+  //   │   Self         Civis   │                   │
+  //   └────────────────────────┘                   |
+  //   │            Process                         |
   //   └────────────────────────────────────────────┘
-  //                Process
-  //
+  //                      Full
+
   _processTiming?: Timing; // *Process* execution time.
   // Includes only "execute". No children. No civis.
   _processTimingSelf?: Timing; // *Self* execution time.
+  _processTimingFull?: Timing; // *Full* execution time.
   // Includes only civis execution.
   _processTimingCivis?: Timing; // *Civis* execution time.
   _processCivisQuantity: number = 0;
@@ -59,10 +62,12 @@ export abstract class Process<DataType extends ProcessData> {
 
   // metrics
   private instanceMetrics;
+  private timingFullMetric;
   private timingProcessMetric;
   private timingCivisMetric;
-  private civisCountMetric;
   private timingSelfMetric;
+  private civisCountMetric;
+  private civisIntentsCountMetric;
   // private civisIntentsMetric;
 
   // First tick since global reset or spawn
@@ -123,12 +128,14 @@ export abstract class Process<DataType extends ProcessData> {
       type: this.type,
       label: this.label
     });
+    this.timingFullMetric = this.instanceMetrics.object("cpu_full", {});
     this.timingProcessMetric = this.instanceMetrics.object("cpu_process", {});
     this.timingCivisMetric = this.instanceMetrics.object("cpu_civis", {});
     this.timingSelfMetric = this.instanceMetrics.object("cpu_self", {});
 
     const civisMetrics = this.instanceMetrics.group("civis");
     this.civisCountMetric = civisMetrics.gauge("count");
+    this.civisIntentsCountMetric = civisMetrics.object("intents_count");
     // this.civisIntentsMetric = civisMetrics.objectKeyLabel("intents", "intent");
   }
 
@@ -136,8 +143,14 @@ export abstract class Process<DataType extends ProcessData> {
     return Object.values(this._civis);
   }
 
-  public assignCivis(creep: Creep): void {
-    const civis = new Civis(creep);
+  public assignCivis(creep: Creep | Civis): void {
+    let civis: Civis;
+    if ("creep" in creep) {
+      civis = creep;
+    } else {
+      civis = new Civis(creep);
+    }
+
     this._civis[creep.name] = civis;
     this.memory.data.creeps.push(creep.name);
   }
@@ -195,7 +208,7 @@ export abstract class Process<DataType extends ProcessData> {
       log.error(mapped);
       ret = ProcessCode.ERROR;
       if (err.stack) {
-        log.error("Unmapepd stack:", err.stack);
+        log.error("Unmapped stack:", err.stack);
       }
     }
     // Set the executed flag to true.
@@ -225,6 +238,7 @@ export abstract class Process<DataType extends ProcessData> {
     if (this.civis.length > 0 || this._processTimingCivis) {
       this._processTimingCivis = RecordTiming(civisStart, this._processTimingCivis);
     }
+    this._processTiming = RecordTiming(start, this._processTiming);
 
     // Run the children
     if (this.scheduled.reloadChildren) {
@@ -248,9 +262,10 @@ export abstract class Process<DataType extends ProcessData> {
     });
 
     this._lastExec = ret;
-    this._processTiming = RecordTiming(start, this._processTiming);
+    this._processTimingFull = RecordTiming(start, this._processTimingFull);
 
     // Metrics
+    this.timingFullMetric.set(this._processTimingFull);
     this.timingProcessMetric.set(this._processTiming);
     this.timingCivisMetric.set(this._processTimingCivis);
     this.timingSelfMetric.set(this._processTimingSelf);
@@ -297,6 +312,7 @@ export abstract class Process<DataType extends ProcessData> {
   }
 
   public executed: boolean = false;
+
   public abstract execute(): ProcessCode;
   abstract selfTerminate(): ProcessCode;
 

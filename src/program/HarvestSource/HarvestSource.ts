@@ -1,36 +1,31 @@
 import { Process, ProcessCode } from "kernel/Process";
-import { ProgramCivisManager } from "program/SpawnControl/CivisManager";
+import { CivisProgram, CivisProgramData } from "program/SpawnControl/CivisProgram";
 import ControlFlowLoop from "task/controlflows/Loop/Loop";
 import { TaskHarvest } from "task/instances/harvest";
 import { TaskTransfer } from "task/instances/transfer";
 
-export interface ProgramHarvestSourceData extends ProcessData {
+export interface ProgramHarvestSourceData extends CivisProgramData {
   sourceID: string;
   spawningCreep?: string;
   spawnPid: number;
   mgrPid?: number;
 }
 
-export class ProgramHarvestSource extends Process<ProgramHarvestSourceData> {
+export class ProgramHarvestSource extends CivisProgram<ProgramHarvestSourceData> {
   public static type = "harvest-source";
 
   public static new(source: Source, spawnPid: number) {
-    return Process.newProgram<ProgramHarvestSourceData>(
+    return CivisProgram.newCivisProgram<ProgramHarvestSourceData>(
       ProgramHarvestSource.type,
       `${source.pos.roomName}_harvest_${source.id.substring(-4)}`,
+      spawnPid,
+      "har",
       {
         roomName: source.room.name,
         sourceID: source.id,
         spawnPid: spawnPid
       }
     );
-  }
-
-  private get manager(): ProgramCivisManager {
-    if (!this.data.mgrPid) {
-      this.data.mgrPid = this.launchChildProcess(ProgramCivisManager.new(this.data.spawnPid, "har"));
-    }
-    return Process.get(this.data.mgrPid!) as ProgramCivisManager;
   }
 
   private get source(): Source | null {
@@ -42,20 +37,21 @@ export class ProgramHarvestSource extends Process<ProgramHarvestSourceData> {
       // Developer error?  Or source disappeared which seems improbable.
       return ProcessCode.ERROR;
     }
-    this.manager; // Ensure we have a managing civis pid
 
-    if (this.manager.total() < 1) {
-      this.manager.requestCreep([WORK, MOVE, CARRY], {
+    if (this.total() < 1) {
+      this.requestCreep([WORK, MOVE, CARRY], {
         role: "harvest",
         task: ControlFlowLoop.new([TaskHarvest.new(this.source!), TaskTransfer.new(Game.spawns["Spawn1"])])
       });
     }
 
+    super.execute();
     return ProcessCode.SUCCESS;
   }
 
   selfTerminate(): ProcessCode {
-    throw new Error("Method not implemented.");
+    super.selfTerminate();
+    return ProcessCode.SUCCESS;
   }
 }
 

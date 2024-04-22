@@ -1,23 +1,28 @@
 import { Process, ProcessCode } from "kernel/Process";
 import { ProgramHeapRoomLogistics } from "../HeapRoomLogistics";
 import { profile } from "lib/profiler/decorator";
-import { ProgramCivisManager } from "program/SpawnControl/CivisManager";
 import { CalcCreepBody, energyCost } from "civis/creep";
-import { Civis } from "civis/Civis";
+import { CivisProgram, CivisProgramData } from "program/SpawnControl/CivisProgram";
 
-export interface ProgramRoomHaulingData extends ProcessData {
+export interface ProgramRoomHaulingData extends CivisProgramData {
   spawnPid: number;
   mgrPid?: number;
 }
 
 @profile
-export class ProgramRoomHauling extends Process<ProgramRoomHaulingData> {
+export class ProgramRoomHauling extends CivisProgram<ProgramRoomHaulingData> {
   public static type = "room-hauling";
   public static new(roomName: string, spawnPid: number) {
-    return Process.newProgram<ProgramRoomHaulingData>(ProgramRoomHauling.type, `${roomName}_hauling`, {
+    return CivisProgram.newCivisProgram<ProgramRoomHaulingData>(
+      ProgramRoomHauling.type,
+      `${roomName}_hauling`,
       spawnPid,
-      roomName
-    });
+      "haul",
+      {
+        spawnPid,
+        roomName
+      }
+    );
   }
 
   constructor(pid: number) {
@@ -31,20 +36,6 @@ export class ProgramRoomHauling extends Process<ProgramRoomHaulingData> {
 
   private room(): Room {
     return Game.rooms[this.data.roomName];
-  }
-
-  private creeps(): ProgramCivisManager {
-    if (!this.data.mgrPid) {
-      const proto = ProgramCivisManager.new(this.data.spawnPid, "haul");
-      const pid = this.launchChildProcess(proto);
-      this.data.mgrPid = pid;
-    }
-    return Process.get(this.data.mgrPid) as ProgramCivisManager;
-  }
-
-  // Override
-  public get civis(): Civis[] {
-    return this.creeps().civis;
   }
 
   private assignCreepJobs(): void {
@@ -65,8 +56,8 @@ export class ProgramRoomHauling extends Process<ProgramRoomHaulingData> {
 
     const boot = "boot";
     // Bootstrap under 300 energy only if no one is alive
-    while (this.civis.length === 0 && this.creeps().total(boot) < 1) {
-      this.creeps().requestCreep(
+    while (this.civis.length === 0 && this.total(boot) < 1) {
+      this.requestCreep(
         [MOVE, CARRY, MOVE, CARRY, MOVE, CARRY],
         {
           role: boot,
@@ -78,7 +69,7 @@ export class ProgramRoomHauling extends Process<ProgramRoomHaulingData> {
     }
 
     const haul = "haul";
-    while (this.creeps().total(haul) < 1) {
+    while (this.total(haul) < 1) {
       let body = [MOVE, CARRY];
       let avail = cap - energyCost(body);
       let maxBodySize = 25;
@@ -92,7 +83,7 @@ export class ProgramRoomHauling extends Process<ProgramRoomHaulingData> {
         if (body.length > maxBodySize) break;
       }
 
-      this.creeps().requestCreep(
+      this.requestCreep(
         body,
         {
           role: haul,
@@ -118,9 +109,9 @@ export class ProgramRoomHauling extends Process<ProgramRoomHaulingData> {
       limit += 1;
     }
 
-    while (this.creeps().total(workHaul) < limit) {
+    while (this.total(workHaul) < limit) {
       const body = CalcCreepBody(cap, ProgramRoomHauling.workHaulBodies);
-      this.creeps().requestCreep(
+      this.requestCreep(
         body,
         {
           role: workHaul,
@@ -134,13 +125,14 @@ export class ProgramRoomHauling extends Process<ProgramRoomHaulingData> {
 
   execute(): ProcessCode {
     this.logistics();
-    this.creeps();
     this.maintainCreeps();
     this.assignCreepJobs();
+    super.execute();
     return ProcessCode.SUCCESS;
   }
 
   selfTerminate(): ProcessCode {
+    super.selfTerminate();
     return ProcessCode.SUCCESS;
   }
 
