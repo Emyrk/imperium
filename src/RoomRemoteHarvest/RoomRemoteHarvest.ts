@@ -103,6 +103,7 @@ export class ProgramRoomRemoteHarvest extends CivisProgram<ProgramRoomRemoteHarv
     });
 
     this.visual();
+    super.execute();
     return ProcessCode.SUCCESS;
   }
 
@@ -121,7 +122,7 @@ export class ProgramRoomRemoteHarvest extends CivisProgram<ProgramRoomRemoteHarv
   private executeHarvestRoom(roomName: string): void {
     const targetRoom = Game.rooms[roomName];
     const targetRoomMemory = Memory.rooms[roomName];
-    if (!targetRoomMemory || !targetRoomMemory.harvestScouted) {
+    if (!targetRoomMemory || !targetRoomMemory.scouted) {
       if (targetRoom) {
         targetRoom.scout();
         return;
@@ -237,7 +238,9 @@ export class ProgramRoomRemoteHarvest extends CivisProgram<ProgramRoomRemoteHarv
       if (this.total(roleName) > 0) return;
 
       if (lastSpawnIsh && lastSpawnIsh + 1450 > Game.time) {
-        log.warning(`Skipping spawn of ${roleName} in ${roomName} due to recent death.`);
+        if (Game.time % 15 === 0) {
+          log.warning(`Skipping spawn of ${roleName} in ${roomName} due to recent death.`);
+        }
         return;
       }
 
@@ -265,9 +268,15 @@ export class ProgramRoomRemoteHarvest extends CivisProgram<ProgramRoomRemoteHarv
           alwaysValid: true
         })
       },
-      -5,
+      // This is cheap, put it higher in the queue
+      3,
       `scout-${roomName}`
     );
+  }
+
+  public selfTerminate(): ProcessCode {
+    super.selfTerminate();
+    return ProcessCode.SUCCESS;
   }
 }
 

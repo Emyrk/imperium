@@ -9,7 +9,8 @@ import { RoomCostMatrix } from "room/RoomCostMatrix";
 export enum CivisRunCode {
   Spawning = "spawning",
   Alive = "alive",
-  Dead = "dead"
+  Dead = "dead",
+  Unknown = "unknown"
 }
 
 @profile
@@ -130,7 +131,7 @@ export class Civis {
     options.visualizePathStyle = options.visualizePathStyle ?? { stroke: "#ffffff" };
 
     // We sometimes will place a room callback on a given room to affect movement.
-    options.roomCallback = RoomCostMatrix.callback;
+    options.roomCallback = RoomCostMatrix.callbackForRoom(destination.roomName);
 
     return moveTo(this.creep, { pos: destination, range: range }, options);
   }

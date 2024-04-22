@@ -27,6 +27,14 @@ export class RoomCostMatrix {
     rcm.csm.set(pos.x, pos.y, weight);
   }
 
+  static callbackForRoom(room: string): ((roomName: string) => boolean | CostMatrix) | undefined {
+    const rcm = RoomCostMatrix.roomCostMatrix[room];
+    if (!rcm) {
+      return undefined;
+    }
+    return RoomCostMatrix.callback;
+  }
+
   static callback(roomName: string): boolean | CostMatrix {
     const rcm = RoomCostMatrix.roomCostMatrix[roomName];
     if (!rcm || !rcm.room || !rcm.csm) {

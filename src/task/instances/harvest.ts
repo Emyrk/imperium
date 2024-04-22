@@ -34,6 +34,7 @@ export class TaskHarvest extends Task<TaskHarvestData, Source> {
     if (super.target) {
       return super.target as Source;
     }
+
     const src = super.targetPos?.lookFor(LOOK_SOURCES)[0];
     if (!src) {
       throw new Error("No source found at target position for harvest");
@@ -45,11 +46,11 @@ export class TaskHarvest extends Task<TaskHarvestData, Source> {
     if (this.data.dropMining) {
       return true;
     }
-    return this.target !== null && this.creep.store.getFreeCapacity() > 0;
+    return this.targetPos !== null && this.creep.store.getFreeCapacity() > 0;
   }
 
   work(): TaskCode {
-    if (this.target === null) {
+    if (this.targetPos === null) {
       return TaskCode.INVALID;
     }
 

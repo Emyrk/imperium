@@ -27,6 +27,11 @@ export class TaskAttack extends Task<TaskAttackData, Creep | Structure | null> {
     if (!this.target) {
       return TaskCode.DONE_WORKING;
     }
+
+    if (!this.target.hits) {
+      return TaskCode.DONE_WORKING;
+    }
+
     const ret = this.creep.attack(this.target);
     return TaskCode.WORKING;
   }

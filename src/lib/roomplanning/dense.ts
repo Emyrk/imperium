@@ -1,7 +1,7 @@
 import { RANGES } from "lib/constants/creep";
-import { coordDistance } from "lib/utils/distance";
+import { coordDistance, equalCoords } from "lib/utils/distance";
 
-export interface ValidLayout {
+export interface ValidDenseLayout {
   // Center is where the spawn should spawn the managing creep.
   center: Coord;
   // Where to place the spawn. This is important for the spawnOut.
@@ -12,7 +12,9 @@ export interface ValidLayout {
   freeTiles: Coord[];
 }
 
-export function layout(room: Room): ValidLayout | undefined {
+// layoutDense finds a 3x3 open area near the controller. The center can
+// upgrade the controller.
+export function layoutDense(room: Room): ValidDenseLayout | undefined {
   const squares = layoutCenter(room);
   if (!squares) {
     // TODO: try again somewhere else?
@@ -52,23 +54,23 @@ export function layout(room: Room): ValidLayout | undefined {
   }
 
   // Ring omitted the reserved squares.
-  let ring = squares.ring.filter(coord => !(coord === trail[0] || coord === trail[1]));
-
+  const spawnCoord = trail[0];
   const spawnOut = trail[1];
+  let ring = squares.ring.filter(coord => !(equalCoords(coord, spawnCoord) || equalCoords(coord, spawnOut)));
+
   let storageCoord: Coord | undefined = ring.find(coord => {
     return coordDistance(coord, spawnOut) === 1;
   });
-
   if (!storageCoord) {
     return undefined;
   }
 
   return {
     center: center,
-    spawnCoord: trail[0],
+    spawnCoord: spawnCoord,
     spawnOut: spawnOut,
     storageCoord: storageCoord,
-    freeTiles: ring.filter(coord => coord !== storageCoord)
+    freeTiles: ring.filter(coord => !equalCoords(coord, storageCoord!))
   };
 }
 
@@ -77,6 +79,7 @@ interface layoutRing {
   center: Coord;
 }
 
+// Will find an open 3x3 area that can still upgrade the controller.
 export function layoutCenter(room: Room): layoutRing | undefined {
   // Minimal layout for a village is to surround the controller with:
   //  - Spawn
@@ -90,7 +93,7 @@ export function layoutCenter(room: Room): layoutRing | undefined {
   const controller = room.controller!;
   // Check the ring around the controller.
   // Start at the top left.
-  let candidates = candidateRing({ x: controller.pos.x, y: controller.pos.y }, 2);
+  let candidates = candidateRing({ x: controller.pos.x, y: controller.pos.y }, 3);
   const terrain = room.getTerrain();
 
   let ring = [];
@@ -105,9 +108,14 @@ export function layoutCenter(room: Room): layoutRing | undefined {
         if (terrain.get(x, y) === TERRAIN_MASK_WALL) {
           continue CandidateLoop;
         }
-        ring.push({ x: x, y: y });
+        // Exclude the center
+        if (!(x === coord.x && y === coord.y)) {
+          ring.push({ x: x, y: y });
+        }
       }
     }
+
+    // This candidate has an open 3x3!
     break CandidateLoop;
   }
 

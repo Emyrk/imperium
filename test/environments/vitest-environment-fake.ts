@@ -5,6 +5,7 @@ import { Game as FakeGame } from "../fakes/Game";
 import { RoomPosition as FakeRoomPosition } from "../fakes/RoomPosition";
 import { RoomVisual as FakeRoomVisual } from "../fakes/RoomVisual";
 import { CostMatrix as FakeCostMatrix } from "../fakes/CostMatrix";
+import { PathFinder as FakePathFinder } from "../fakes/PathFinder";
 
 export default <Environment>{
   name: "fake",
@@ -29,6 +30,7 @@ export default <Environment>{
     global.RoomPosition = FakeRoomPosition;
     global.RoomVisual = FakeRoomVisual;
     global.CostMatrix = FakeCostMatrix;
+    global.PathFinder = FakePathFinder;
     global.Memory = {
       creeps: {},
       flags: {},

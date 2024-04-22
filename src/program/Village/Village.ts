@@ -3,13 +3,13 @@ import { Process, ProcessCode } from "kernel/Process";
 import { log } from "lib/log/log";
 import { profile } from "lib/profiler/decorator";
 import { GlobalCollector } from "main";
-import { ProgramHarvestSource } from "program/HarvestSource/HarvestSource";
+import { ProgramBlueprint } from "program/Blueprint/Blueprint";
+import { layoutDensePlans } from "program/Blueprint/layouts";
 import { ProgramHeapRoomLogistics } from "program/HeapRoomLogistics/HeapRoomLogistics";
 import { PriorityMode } from "program/HeapRoomLogistics/LogisticNeeds/priorities";
 import { ProgramSpawnControl } from "program/SpawnControl/SpawnControl";
 import { ProgramStaticHarvest } from "program/StaticHarvest/StaticHarvest";
 import { ProgramTowerDefense } from "program/TowerDefense/TowerDefense";
-import { RoomCostMatrix } from "room/RoomCostMatrix";
 
 export interface ProgramVillageData extends ProcessData {
   spawnPid?: number;
@@ -17,6 +17,7 @@ export interface ProgramVillageData extends ProcessData {
   harvestPids: { [source: string]: number };
   logisticsPid?: number;
   remotesPid?: number;
+  blueprintPid?: number;
 }
 
 @profile
@@ -100,7 +101,7 @@ export class ProgramVillage extends Process<ProgramVillageData> {
   }
 
   public remotes(): ProgramRoomRemoteHarvest {
-    if (!this.data.remotesPid) {
+    if (!this.data.remotesPid || !Process.get(this.data.remotesPid)) {
       this.data.remotesPid = this.launchChildProcess(
         ProgramRoomRemoteHarvest.new(this.data.roomName, this.data.spawnPid!)
       );
@@ -108,9 +109,27 @@ export class ProgramVillage extends Process<ProgramVillageData> {
     return Process.get(this.data.remotesPid) as ProgramRoomRemoteHarvest;
   }
 
+  public blueprint(): ProgramBlueprint {
+    if (!this.data.blueprintPid) {
+      this.data.blueprintPid = this.launchChildProcess(ProgramBlueprint.new(this.data.roomName, true));
+    }
+    return Process.get(this.data.blueprintPid) as ProgramBlueprint;
+  }
+
   public execute(): ProcessCode {
     this.spawn();
     this.remotes();
+    this.blueprint();
+
+    if (!this.executed) {
+      this.blueprint().reset();
+      const plans = layoutDensePlans(this.room);
+      if (!plans) {
+        log.error(`Failed to generate plans for ${this.room.name}`);
+      } else {
+        this.blueprint().add(plans);
+      }
+    }
 
     if (!this.data.towersPid) {
       this.data.towersPid = this.launchChildProcess(ProgramTowerDefense.new(this.data.roomName));

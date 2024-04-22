@@ -91,7 +91,7 @@ export abstract class CivisProgram<DataType extends CivisProgramData> extends Pr
   }
 
   public total(role?: string): number {
-    return this.totalQueued(role) + this.civis.filter(c => !role || c.creep.memory.role === role).length;
+    return this.totalQueued(role) + this.alive(role);
   }
 
   public alive(role?: string): number {

@@ -221,7 +221,21 @@ export abstract class Process<DataType extends ProcessData> {
     // Run the creeps
     // this._processCivisIntents.start();
     Object.values(this._civis).forEach(civis => {
-      const code = civis.run();
+      let code = CivisRunCode.Unknown;
+      try {
+        code = civis.run();
+      } catch (e) {
+        const err = e as Error;
+        log.error(
+          `${err.name}| Error in process ${this.pid} '${this.memory.label}' on civis ${civis.name}.run(): ${e}`
+        );
+        const mapped = ErrorMapper.sourceMappedStackTrace(err);
+        log.error(mapped);
+        ret = ProcessCode.ERROR;
+        if (err.stack) {
+          log.error("Unmapped stack:", err.stack);
+        }
+      }
       // this._processCivisIntents.include(civis);
 
       if (code === CivisRunCode.Dead) {
@@ -251,6 +265,13 @@ export abstract class Process<DataType extends ProcessData> {
         if (Game.time % 15 === 0) {
           log.warning(`Child process not found for ${this.pid}`);
         }
+        return;
+      }
+
+      if (!child.memory) {
+        child.terminate();
+        this.removeChild(child.pid);
+        log.error(`Child process ${child.pid} has no memory, terminating.`);
         return;
       }
       const childRet = child.run();

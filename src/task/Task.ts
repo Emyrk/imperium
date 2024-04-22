@@ -1,5 +1,6 @@
 import { Civis } from "civis/Civis";
 import { SavedState } from "lib/SharedState/SavedState";
+import { log } from "lib/log/log";
 import { profile } from "lib/profiler/decorator";
 
 export enum TaskCode {
@@ -118,10 +119,14 @@ export abstract class Task<DataType extends TaskData, Target extends RoomObject 
       return null;
     }
 
-    const target = this.target;
-    if (target) {
-      return target.pos;
+    if (this.cachedTarget) {
+      return this.cachedTarget.pos;
     }
+
+    // const target = this.target;
+    // if (target) {
+    //   return target.pos;
+    // }
 
     return derefRoomPosition(this.protoTask._target.pos);
   }
@@ -157,7 +162,10 @@ export abstract class Task<DataType extends TaskData, Target extends RoomObject 
     const targetPos = this.targetPos;
     if (targetPos && !this.creep.pos.inRangeTo(targetPos, this.options.targetRange)) {
       // Move!
-      this.moveToTarget();
+      const ret = this.moveToTarget();
+      if (ret !== OK && Game.time % 10 === 0) {
+        log.error(`${this.creep.name} moveToTarget(${this.targetPos}) failed with ${ret}`);
+      }
       return TaskCode.MOVING;
     }
 

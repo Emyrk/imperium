@@ -2,8 +2,8 @@ import { Process, ProcessCode } from "kernel/Process";
 import { profile } from "lib/profiler/decorator";
 import { ProgramSpawnControl } from "program/SpawnControl/SpawnControl";
 import { ProgramTowerDefense } from "program/TowerDefense/TowerDefense";
-import { layout } from "./layout";
 import { CivisProgram, CivisProgramData } from "program/SpawnControl/CivisProgram";
+import { layoutDense } from "lib/roomplanning/dense";
 
 export interface ProgramOutpostData extends CivisProgramData {
   towersPid?: number;
@@ -85,7 +85,7 @@ export class ProgramOutpost extends CivisProgram<ProgramOutpostData> {
   }
 
   public static createBlueprint(room: Room): buildingData | undefined {
-    const blueprint = layout(room);
+    const blueprint = layoutDense(room);
     if (!blueprint) {
       return;
     }
