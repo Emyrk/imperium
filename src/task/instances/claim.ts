@@ -45,10 +45,11 @@ export class TaskClaim extends Task<TaskClaimData, StructureController | null> {
       return TaskCode.DONE_WORKING;
     }
 
-    if (!this.target) {
+    // This can happen if just a room is provided at the start. We need to update the
+    // target and the range.
+    if (this.options.targetRange !== RANGES.TRANSFER) {
       this.updateTarget(controller);
       this.options.targetRange = RANGES.TRANSFER;
-      return TaskCode.WORKING;
     }
 
     let ret;

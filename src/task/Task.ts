@@ -95,7 +95,7 @@ export abstract class Task<DataType extends TaskData, Target extends RoomObject 
   }
 
   updateTarget(target: RoomObject | ProtoPos | RoomPosition | undefined): void {
-    this.proto._target = protoTarget(target);
+    this.protoTask._target = protoTarget(target);
     this.cachedTarget = null;
   }
 
@@ -122,11 +122,6 @@ export abstract class Task<DataType extends TaskData, Target extends RoomObject 
     if (this.cachedTarget) {
       return this.cachedTarget.pos;
     }
-
-    // const target = this.target;
-    // if (target) {
-    //   return target.pos;
-    // }
 
     return derefRoomPosition(this.protoTask._target.pos);
   }
