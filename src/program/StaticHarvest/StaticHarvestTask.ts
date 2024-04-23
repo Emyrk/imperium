@@ -47,45 +47,70 @@ export class TaskStaticHarvest extends Task<TaskStaticHarvestData, null> {
     return true;
   }
 
-  work(): TaskCode {
-    // TODO: We do not need to do this lookup every tick. We should cache things and "sleep" when
-    // we are in repair mode.
+  private checked = false;
+  private containerConstructionSite?: ConstructionSite;
+  private container?: StructureContainer;
+  private updateConstructionSites(force?: boolean): void {
+    if (!force && !this.checked && Game.time % 500 !== 0) {
+      return;
+    }
+
+    // Reset, this will be updated
+    this.container = undefined;
+    this.containerConstructionSite = undefined;
+    // Look at the spot where we expect a container to be
     const found = this.targetPos!.look();
     const tgt = _.find(found, look => {
       if (look.constructionSite) {
+        this.containerConstructionSite = look.constructionSite;
         return true;
       }
       if (look.structure && look.structure.structureType === STRUCTURE_CONTAINER) {
+        this.container = look.structure as StructureContainer;
         return true;
       }
       return false;
     });
 
-    if (!tgt) {
-      return TaskCode.NOTHING_DONE;
-    }
+    this.checked = true;
+  }
 
-    if (tgt?.constructionSite) {
-      const site = tgt.constructionSite;
+  work(): TaskCode {
+    // Update our cached references.
+    this.updateConstructionSites(false);
+
+    if (this.containerConstructionSite) {
+      const site = this.containerConstructionSite;
       if (site.progress < site.progressTotal) {
         const ret = this.creep?.build(site);
         if (ret !== OK) {
           log.error(`ContainerSource:build:${ret} from ${this.creep!.name} on ${site.ref}`);
         }
         return TaskCode.WORKING;
+      } else {
+        this.updateConstructionSites(true);
+        // We could keep going, but the next tick will figure it out with the updated sites.
+        return TaskCode.NOTHING_DONE;
       }
     }
 
-    if (tgt.structure) {
-      const cont = tgt.structure as StructureContainer;
-      if (cont.hits < cont.hitsMax) {
-        const ret = this.creep?.repair(cont);
+    // Check if the container needs to be repaired.
+    if (this.container) {
+      if (this.container.hits < this.container.hitsMax) {
+        const ret = this.creep?.repair(this.container);
         if (ret !== OK) {
-          log.error(`ContainerSource:repair:${ret} from ${this.creep!.name} on ${cont.ref}`);
+          log.error(`ContainerSource:repair:${ret} from ${this.creep!.name} on ${this.container.ref}`);
         }
         return TaskCode.WORKING;
       }
     }
+
+    // TODO: Do links!
+    // if (this.data.linkSpot) {
+    //   // Link code active
+    //   // TODO: Disable the container stuff once links can run the show.
+    //   const link = this.data.linkSpot.lookFor(LOOK_STRUCTURES)[0] as StructureLink;
+    // }
 
     return TaskCode.NOTHING_DONE;
   }

@@ -114,6 +114,9 @@ export class ProgramSpawnControl extends Process<ProgramSpawnControlData> {
 
     let avail = this.room.energyAvailable;
     for (const spawn of spawns) {
+      if (this.sortedQueue.length === 0) {
+        break;
+      }
       if (avail <= 0) {
         break;
       }

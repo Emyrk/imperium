@@ -1,6 +1,8 @@
+import { isStoreStructure } from "declarations/typeGuards";
 import { Process } from "kernel/Process";
 import { Top as TopF } from "kernel/Top";
 import { log } from "lib/log/log";
+import { ProgramHaulSpecific } from "program/HaulSpecific/HaulSpecific";
 import { ProgramVillage } from "program/Village/Village";
 import { TaskGoto } from "task/instances/goto";
 import { vi } from "vitest";
@@ -49,4 +51,36 @@ global.scout = function (fromRoom: string, roomName: string): void {
   log.info(`Scout request to ${roomName} was made.`);
 };
 
+// @ts-ignore
+global.haul = function (fromRef: string, toRef: string): void {
+  const from = deref(fromRef);
+  const to = deref(toRef);
+  if (!from || !to) {
+    log.error(`Hauling from ${from} to ${to} failed. One of the objects was not found.`);
+    return;
+  }
+
+  if (!isStoreStructure(to)) {
+    log.error(`Hauling from ${from} to ${to} failed. The target is not a store structure.`);
+    return;
+  }
+
+  const fromRoom = from.room;
+  const toRoom = to.room;
+
+  if (!fromRoom || !toRoom) {
+    log.error(`Hauling from ${from} to ${to} failed. One of the objects did not have a room.`);
+    return;
+  }
+
+  const village = ProgramVillage.getByRoom(fromRoom.name);
+  if (!village) {
+    log.error(`Hauling from ${from} to ${to} failed. No village process found for ${fromRoom.name}.`);
+    return;
+  }
+
+  const proto = ProgramHaulSpecific.new(fromRoom.name, village.data.spawnPid!, fromRef, to);
+  const pid = village.launchChildProcess(proto);
+  log.info(`Hauling from ${from} to ${to} launched with pid ${pid}`);
+};
 // global.towerDrain = function (roomName: string): void {};
