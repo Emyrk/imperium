@@ -10,6 +10,7 @@ import { PriorityMode } from "program/HeapRoomLogistics/LogisticNeeds/priorities
 import { ProgramSpawnControl } from "program/SpawnControl/SpawnControl";
 import { ProgramStaticHarvest } from "program/StaticHarvest/StaticHarvest";
 import { ProgramTowerDefense } from "program/TowerDefense/TowerDefense";
+import { RoomVillage } from "./interface";
 
 export interface ProgramVillageData extends ProcessData {
   spawnPid?: number;
@@ -20,10 +21,13 @@ export interface ProgramVillageData extends ProcessData {
   blueprintPid?: number;
 
   blueprintSet?: boolean;
+
+  // Important buildings.
+  primaryLinkPos?: Coord;
 }
 
 @profile
-export class ProgramVillage extends Process<ProgramVillageData> {
+export class ProgramVillage extends Process<ProgramVillageData> implements RoomVillage {
   public static type = "village";
 
   public constructor(pid: number) {
@@ -32,7 +36,7 @@ export class ProgramVillage extends Process<ProgramVillageData> {
     GlobalCollector.trackRoom(this.room);
   }
 
-  static getByRoom(roomName: string): ProgramVillage | undefined {
+  static getByRoom(roomName: string): RoomVillage | undefined {
     const pid = Memory.rooms[roomName].villagePid;
     if (!pid) {
       return undefined;
@@ -118,11 +122,51 @@ export class ProgramVillage extends Process<ProgramVillageData> {
     return Process.get(this.data.blueprintPid) as ProgramBlueprint;
   }
 
+  private link?: StructureLink;
+  private updatePrimaryLink(force?: Boolean): void {
+    if (!force && Game.time % 312 !== 0) {
+      return;
+    }
+
+    if (!this.data.primaryLinkPos) {
+      return;
+    }
+
+    if (!this.link) {
+      const at = this.room.lookAt(this.data.primaryLinkPos.x, this.data.primaryLinkPos.y);
+      const link = at.find(l => l.structure?.structureType === STRUCTURE_LINK)?.structure;
+      if (!link) {
+        return;
+      }
+
+      this.link = link as StructureLink;
+      // this.updateSecondaryLinks(true);
+    }
+  }
+
+  // primaryLink is required for the village API.
+  public primaryLink(): StructureLink | undefined {
+    return this.link;
+  }
+
+  // private updateSecondaryLinks(force: boolean): void {
+  //   if (!force && Game.time % 500 !== 0) {
+  //     return;
+  //   }
+
+  //   if (!this.primaryLink) {
+  //     return;
+  //   }
+  //   this.otherLinks = this.room.links.filter(l => l !== this.primaryLink);
+  // }
+
   public execute(): ProcessCode {
     this.spawn();
     this.remotes();
     this.blueprint();
+    this.updatePrimaryLink(!this.executed);
 
+    // This sets up the blueprint for the room.
     if (!this.data.blueprintSet && !this.executed) {
       const plans = layoutDensePlans(this.room);
       if (!plans) {
@@ -130,6 +174,8 @@ export class ProgramVillage extends Process<ProgramVillageData> {
       } else {
         this.blueprint().add(plans);
         this.data.blueprintSet = true;
+        // primary link is where we will send energy to.
+        this.data.primaryLinkPos = plans.buildings[STRUCTURE_LINK][0].pos;
       }
     }
 

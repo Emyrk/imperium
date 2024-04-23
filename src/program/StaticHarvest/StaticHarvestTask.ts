@@ -1,11 +1,15 @@
 import { RANGES } from "lib/constants/creep";
 import { log } from "lib/log/log";
 import { profile } from "lib/profiler/decorator";
+import { ProgramVillage } from "program/Village/Village";
+import { RoomVillage } from "program/Village/interface";
 import { Task, TaskCode } from "task/Task";
 import { Tasks } from "task/Tasks";
 
 export interface TaskStaticHarvestData extends TaskData {
   linkSpot?: Coord;
+  // Allows calling into the harvest pid from the creep.
+  harvestPid: number;
 }
 
 @profile
@@ -15,6 +19,7 @@ export class TaskStaticHarvest extends Task<TaskStaticHarvestData, null> {
 
   public static new(
     target: RoomPosition,
+    harvestPid: number,
     linkSpot?: Coord,
     opts: MoveOptsProto = {}
   ): ProtoTask<TaskStaticHarvestData> {
@@ -22,7 +27,8 @@ export class TaskStaticHarvest extends Task<TaskStaticHarvestData, null> {
       TaskStaticHarvest.type,
       target,
       {
-        linkSpot: linkSpot
+        linkSpot: linkSpot,
+        harvestPid: harvestPid
       },
       {
         targetRange: _.min([RANGES.REPAIR, RANGES.BUILD]),
@@ -60,7 +66,8 @@ export class TaskStaticHarvest extends Task<TaskStaticHarvestData, null> {
     this.containerConstructionSite = undefined;
     // Look at the spot where we expect a container to be
     const found = this.targetPos!.look();
-    const tgt = _.find(found, look => {
+    // Stop at the first thing found. Both cannot
+    _.find(found, look => {
       if (look.constructionSite) {
         this.containerConstructionSite = look.constructionSite;
         return true;
@@ -75,42 +82,69 @@ export class TaskStaticHarvest extends Task<TaskStaticHarvestData, null> {
     this.checked = true;
   }
 
-  work(): TaskCode {
-    // Update our cached references.
-    this.updateConstructionSites(false);
+  linkWork(): TaskCode {
+    return TaskCode.NOTHING_DONE;
+  }
 
-    if (this.containerConstructionSite) {
-      const site = this.containerConstructionSite;
+  private village?: RoomVillage;
+  work(): TaskCode {
+    // TODO: Cache state and only update every so often.
+    // If a link spot exists, we might be able to stop using the container.
+    if (this.data.linkSpot) {
+      if (!this.village) {
+        this.village = ProgramVillage.getByRoom(this.creep.pos.roomName);
+      }
+
+      if (!this.village) {
+        log.error(`StaticHarvest:work:No village found for ${this.creep.pos.roomName}`);
+        return TaskCode.NOTHING_DONE;
+      }
+
+      if (this.village.primaryLink()) {
+        return this.linkWork();
+      }
+    }
+
+    // Default to container work.
+    // TODO: Extract this to it's own method.
+    // TODO: We do not need to do this lookup every tick. We should cache things and "sleep" when
+    // we are in repair mode.
+    const found = this.targetPos!.look();
+    const tgt = _.find(found, look => {
+      if (look.constructionSite) {
+        return true;
+      }
+      if (look.structure && look.structure.structureType === STRUCTURE_CONTAINER) {
+        return true;
+      }
+      return false;
+    });
+
+    if (!tgt) {
+      return TaskCode.NOTHING_DONE;
+    }
+
+    if (tgt?.constructionSite) {
+      const site = tgt.constructionSite;
       if (site.progress < site.progressTotal) {
         const ret = this.creep?.build(site);
         if (ret !== OK) {
           log.error(`ContainerSource:build:${ret} from ${this.creep!.name} on ${site.ref}`);
         }
         return TaskCode.WORKING;
-      } else {
-        this.updateConstructionSites(true);
-        // We could keep going, but the next tick will figure it out with the updated sites.
-        return TaskCode.NOTHING_DONE;
       }
     }
 
-    // Check if the container needs to be repaired.
-    if (this.container) {
-      if (this.container.hits < this.container.hitsMax) {
-        const ret = this.creep?.repair(this.container);
+    if (tgt.structure) {
+      const cont = tgt.structure as StructureContainer;
+      if (cont.hits < cont.hitsMax) {
+        const ret = this.creep?.repair(cont);
         if (ret !== OK) {
-          log.error(`ContainerSource:repair:${ret} from ${this.creep!.name} on ${this.container.ref}`);
+          log.error(`ContainerSource:repair:${ret} from ${this.creep!.name} on ${cont.ref}`);
         }
         return TaskCode.WORKING;
       }
     }
-
-    // TODO: Do links!
-    // if (this.data.linkSpot) {
-    //   // Link code active
-    //   // TODO: Disable the container stuff once links can run the show.
-    //   const link = this.data.linkSpot.lookFor(LOOK_STRUCTURES)[0] as StructureLink;
-    // }
 
     return TaskCode.NOTHING_DONE;
   }

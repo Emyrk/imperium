@@ -9,6 +9,7 @@ import { ProgramVillage } from "program/Village/Village";
 import { BootstrapBody, CivisProgram, CivisProgramData } from "program/SpawnControl/CivisProgram";
 import { RoomCostMatrix } from "room/RoomCostMatrix";
 import { equalCoords } from "lib/utils/distance";
+import { RoomVillage } from "program/Village/interface";
 
 export interface ProgramStaticHarvestData extends CivisProgramData {
   sourceID: string;
@@ -61,6 +62,10 @@ export class ProgramStaticHarvest extends CivisProgram<ProgramStaticHarvestData>
 
   private room(): Room {
     return Game.rooms[this.data.roomName];
+  }
+
+  private village(): RoomVillage {
+    return ProgramVillage.getByRoom(this.data.roomName)!;
   }
 
   private get source(): Source | null {
@@ -303,7 +308,7 @@ export class ProgramStaticHarvest extends CivisProgram<ProgramStaticHarvestData>
               priority: 10
             }),
             // Maintain/build the container
-            TaskStaticHarvest.new(new RoomPosition(spot.x, spot.y, this.data.roomName), this.data.linkSpot),
+            TaskStaticHarvest.new(new RoomPosition(spot.x, spot.y, this.data.roomName), this.pid, this.data.linkSpot),
             // Drop min harvest
             TaskHarvest.new(this.source!, true)
           ],

@@ -70,6 +70,7 @@ interface Room {
   // Some accessors
   towers: StructureTower[];
   spawns: StructureSpawn[];
+  links: StructureLink[];
   extensions: StructureExtension[];
   sources: Source[];
   openSpawns: StructureSpawn[];

@@ -67,6 +67,15 @@ Object.defineProperty(Room.prototype, "constructionSites", {
   configurable: true
 });
 
+Object.defineProperty(Room.prototype, "links", {
+  get() {
+    return this.find(FIND_STRUCTURES, {
+      filter: (s: Structure) => s.structureType == STRUCTURE_LINK
+    });
+  },
+  configurable: true
+});
+
 Object.defineProperty(Room.prototype, "minerals", {
   get() {
     return this.find(FIND_MINERALS, {});

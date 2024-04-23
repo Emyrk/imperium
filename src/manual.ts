@@ -79,7 +79,7 @@ global.haul = function (fromRef: string, toRef: string): void {
     return;
   }
 
-  const proto = ProgramHaulSpecific.new(fromRoom.name, village.data.spawnPid!, fromRef, to);
+  const proto = ProgramHaulSpecific.new(fromRoom.name, village.spawn().pid, fromRef, to);
   const pid = village.launchChildProcess(proto);
   log.info(`Hauling from ${from} to ${to} launched with pid ${pid}`);
 };
