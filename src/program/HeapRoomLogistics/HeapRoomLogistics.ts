@@ -128,8 +128,8 @@ export class ProgramHeapRoomLogistics extends Process<ProgramHeapRoomLogisticsDa
   execute(): ProcessCode {
     this.popQueues();
     // TODO: Re-enable visuals. Testing cpu without
-    // this.available.visual();
-    // this.needs.visual();
+    this.available.visual();
+    this.needs.visual();
 
     if (!this.data.needsPid) {
       const proto = ProgramRoomLogisticsBootstrap.new(this.data.roomName);

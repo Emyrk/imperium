@@ -4,18 +4,26 @@ import { profile } from "lib/profiler/decorator";
 import { Task, TaskCode } from "task/Task";
 import { Tasks } from "task/Tasks";
 
-export interface TaskStaticHarvestData extends TaskData {}
+export interface TaskStaticHarvestData extends TaskData {
+  linkSpot?: Coord;
+}
 
 @profile
 export class TaskStaticHarvest extends Task<TaskStaticHarvestData, null> {
   public static type = "static-harvest";
   private harvestPower?: number;
 
-  public static new(target: RoomPosition, opts: MoveOptsProto = {}): ProtoTask<TaskStaticHarvestData> {
+  public static new(
+    target: RoomPosition,
+    linkSpot?: Coord,
+    opts: MoveOptsProto = {}
+  ): ProtoTask<TaskStaticHarvestData> {
     return Task.newTask<TaskStaticHarvestData>(
       TaskStaticHarvest.type,
       target,
-      {},
+      {
+        linkSpot: linkSpot
+      },
       {
         targetRange: _.min([RANGES.REPAIR, RANGES.BUILD]),
         moveOptions: opts

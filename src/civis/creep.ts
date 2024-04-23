@@ -3,6 +3,8 @@ export interface ProtoSpawnCreep {
   name: string;
   bodyParts: BodyPartConstant[];
   mem: CreepMemory;
+  spawnDirection?: DirectionConstant;
+  spawnID?: string;
 }
 
 export function simpleBodyString(bodyParts: BodyPartConstant[] | ProtoSpawnCreep): string {

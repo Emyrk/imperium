@@ -18,6 +18,8 @@ export interface ProgramVillageData extends ProcessData {
   logisticsPid?: number;
   remotesPid?: number;
   blueprintPid?: number;
+
+  blueprintSet?: boolean;
 }
 
 @profile
@@ -121,13 +123,13 @@ export class ProgramVillage extends Process<ProgramVillageData> {
     this.remotes();
     this.blueprint();
 
-    if (!this.executed) {
-      this.blueprint().reset();
+    if (!this.data.blueprintSet && !this.executed) {
       const plans = layoutDensePlans(this.room);
       if (!plans) {
         log.error(`Failed to generate plans for ${this.room.name}`);
       } else {
         this.blueprint().add(plans);
+        this.data.blueprintSet = true;
       }
     }
 

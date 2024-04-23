@@ -18,7 +18,10 @@ interface HasSpawn {
   spawn(): ProgramSpawnControl;
 }
 
-export interface ProgramSpawnControlData extends ProcessData {}
+export interface ProgramSpawnControlData extends ProcessData {
+  // blockSpawnDirections prevents spawning in this direction by default.
+  blockSpawnDirections: { [ref: string]: DirectionConstant[] };
+}
 
 @profile
 export class ProgramSpawnControl extends Process<ProgramSpawnControlData> {
@@ -39,7 +42,8 @@ export class ProgramSpawnControl extends Process<ProgramSpawnControlData> {
 
   public static new(roomName: string) {
     return Process.newProgram<ProgramSpawnControlData>(ProgramSpawnControl.type, `${roomName}_spawn`, {
-      roomName: roomName
+      roomName: roomName,
+      blockSpawnDirections: {}
     });
   }
 
@@ -48,6 +52,16 @@ export class ProgramSpawnControl extends Process<ProgramSpawnControlData> {
   }
 
   public requestCreep(request: Omit<SpawnRequest, "requestedAt">): void {
+    if (request.creep.spawnID) {
+      if (!this.room?.spawns.find(spawn => spawn.id === request.creep.spawnID)) {
+        log.error(
+          `${this.data.roomName} SpawnControl: SpawnID ${request.creep.spawnID} not found, but was requested. Ditching the request.`
+        );
+        request.onComplete(false);
+        return;
+      }
+    }
+
     insertRequest(this.sortedQueue, { ...request, requestedAt: Game.time });
     this.resetVisuals();
   }
@@ -55,6 +69,32 @@ export class ProgramSpawnControl extends Process<ProgramSpawnControlData> {
   public cancelRequest(name: string): void {
     deleteRequest(this.sortedQueue, name);
     this.resetVisuals();
+  }
+
+  private cachedSpawnDirections: { [ref: string]: DirectionConstant[] } = {};
+  private spawnDirections(spawn: StructureSpawn): DirectionConstant[] {
+    if (!this.data.blockSpawnDirections) {
+      this.data.blockSpawnDirections = {};
+    }
+
+    if (this.cachedSpawnDirections[spawn.id]) {
+      return this.cachedSpawnDirections[spawn.id];
+    }
+
+    let all = [TOP, TOP_RIGHT, RIGHT, BOTTOM_RIGHT, BOTTOM, BOTTOM_LEFT, LEFT, TOP_LEFT];
+    if (this.data.blockSpawnDirections[spawn.id]) {
+      this.cachedSpawnDirections[spawn.id] = all.filter(dir => !this.data.blockSpawnDirections[spawn.id].includes(dir));
+      return this.cachedSpawnDirections[spawn.id];
+    }
+    return all;
+  }
+
+  public blockSpawnDirection(spawnID: string, dir: DirectionConstant) {
+    if (!this.data.blockSpawnDirections[spawnID]) {
+      this.data.blockSpawnDirections[spawnID] = [];
+    }
+    this.data.blockSpawnDirections[spawnID].push(dir);
+    delete this.cachedSpawnDirections[spawnID];
   }
 
   public execute(): ProcessCode {
@@ -78,11 +118,19 @@ export class ProgramSpawnControl extends Process<ProgramSpawnControlData> {
         break;
       }
 
-      const request = this.sortedQueue[0];
+      let request = this.sortedQueue[0];
+      if (request.creep.spawnID && request.creep.spawnID !== spawn.id) {
+        // TODO: Allow other spawns to operate. We need to reorder the request, or fix the .shift() below that
+        // pops the request off the queue.
+        break;
+      }
       const requestCreep = request.creep;
       if (energyCost(requestCreep) <= avail) {
         this.resetVisuals();
-        const code = spawn.spawnCreep(requestCreep.bodyParts, requestCreep.name, { memory: requestCreep.mem });
+        const code = spawn.spawnCreep(requestCreep.bodyParts, requestCreep.name, {
+          memory: requestCreep.mem,
+          directions: requestCreep.spawnDirection ? [requestCreep.spawnDirection] : this.spawnDirections(spawn)
+        });
         switch (code) {
           case OK:
             this.sortedQueue.shift();

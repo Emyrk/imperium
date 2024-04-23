@@ -29,7 +29,9 @@ export class TaskBuild extends Task<TaskBuildData, ConstructionSite> {
 
   isValid(): boolean {
     return (
-      this.target !== null && this.creep.store.getFreeCapacity() > 0 && this.target.progress < this.target.progressTotal
+      this.target !== null &&
+      this.creep.store.getUsedCapacity(RESOURCE_ENERGY) > 0 &&
+      this.target.progress < this.target.progressTotal
     );
   }
 

@@ -10,11 +10,11 @@ export function layoutDensePlans(room: Room): (BuildingPlans & { center: Coord }
   return {
     center: layout.center,
     buildings: {
-      [STRUCTURE_ROAD]: [{ pos: layout.center }],
+      // [STRUCTURE_ROAD]: [{ pos: layout.center }],
       [STRUCTURE_SPAWN]: [{ pos: layout.spawnCoord }],
-      [STRUCTURE_STORAGE]: [{ pos: layout.storageCoord }],
-      [STRUCTURE_LINK]: [{ pos: layout.freeTiles[1] }],
-      [STRUCTURE_TERMINAL]: [{ pos: layout.freeTiles[2] }]
+      [STRUCTURE_STORAGE]: [{ pos: layout.storageCoord, rcl: 4 }],
+      [STRUCTURE_LINK]: [{ pos: layout.freeTiles[1], rcl: 6 }],
+      [STRUCTURE_TERMINAL]: [{ pos: layout.freeTiles[2], rcl: 6 }]
     }
   };
 }

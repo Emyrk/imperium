@@ -5,10 +5,10 @@ import ControlFlowLoop from "task/controlflows/Loop/Loop";
 import { TaskGoto } from "task/instances/goto";
 import { TaskHarvest } from "task/instances/harvest";
 import { TaskStaticHarvest } from "./StaticHarvestTask";
-import { Civis } from "civis/Civis";
 import { ProgramVillage } from "program/Village/Village";
 import { BootstrapBody, CivisProgram, CivisProgramData } from "program/SpawnControl/CivisProgram";
 import { RoomCostMatrix } from "room/RoomCostMatrix";
+import { equalCoords } from "lib/utils/distance";
 
 export interface ProgramStaticHarvestData extends CivisProgramData {
   sourceID: string;
@@ -26,6 +26,11 @@ export interface ProgramStaticHarvestData extends CivisProgramData {
   constructionSiteRef?: string;
   containerRef?: string;
   lastPileRef?: string;
+
+  // Link
+  constructionLinkRef?: string;
+  linkRef?: string;
+  linkSpot?: Coord;
 
   // For handling creeps
   mgrPid?: number;
@@ -157,6 +162,104 @@ export class ProgramStaticHarvest extends CivisProgram<ProgramStaticHarvestData>
     }
   }
 
+  // existingLink searches if a link already exists.
+  // If the pid is killed, this allows reusing the previous pid's link.
+  private existingLink(): StructureLink | undefined {
+    if (!this.source) {
+      return undefined;
+    }
+    const neighbors = this.source.pos.neighbors;
+    for (let i = 0; i < neighbors.length; i++) {
+      const cont = neighbors[i].lookFor(LOOK_STRUCTURES).find(structure => structure.structureType === STRUCTURE_LINK);
+      if (cont) {
+        return cont as StructureLink;
+      }
+    }
+
+    return undefined;
+  }
+
+  private pickLink(): void {
+    if (!this.data.miningSpot || this.data.linkSpot) {
+      return;
+    }
+
+    const existing = this.existingLink();
+    if (existing) {
+      this.data.linkSpot = existing.pos;
+      this.data.linkRef = existing.ref;
+      return;
+    }
+
+    const miningSpot = new RoomPosition(this.data.miningSpot.x, this.data.miningSpot.y, this.data.roomName);
+    const avoid = this.source!.pos.neighbors;
+    const candidates = miningSpot.availableNeighbors(true).filter(
+      spot =>
+        !(
+          // If it is either of these, exclude it.
+          (
+            avoid.find(fs => equalCoords(fs, spot)) ||
+            this.data.invalidConstructionSites.find(fs => equalCoords(fs, spot))
+          )
+        )
+    );
+
+    if (candidates.length === 0) {
+      log.error(`No link sites found for source ${this.data.sourceID}`);
+      return;
+    }
+
+    this.data.linkSpot = candidates[0];
+    const ret = this.room().createConstructionSite(this.data.linkSpot.x, this.data.linkSpot.y, STRUCTURE_LINK);
+    if (ret !== OK) {
+      log.error(`Failed to create link construction site for ${this.data.sourceID} in ${this.data.roomName}`);
+    }
+  }
+
+  private ensureLink(): void {
+    if (!this.data.linkSpot) {
+      return;
+    }
+
+    if (this.data.linkRef) {
+      // Link exists, we are good!
+      return;
+    }
+
+    if (!this.data.linkRef) {
+      // Is the container built?
+      const result = this.room()
+        .lookForAt(LOOK_STRUCTURES, this.data.linkSpot.x, this.data.linkSpot.y)
+        .find(structure => structure.structureType === STRUCTURE_LINK);
+      if (result) {
+        this.data.linkRef = result.id;
+        log.info(`Link built for ${this.data.sourceID}`);
+        return;
+      }
+    }
+
+    if (!this.data.constructionLinkRef) {
+      // Is there a construction site?
+      const sites = this.room().lookForAt(LOOK_CONSTRUCTION_SITES, this.data.linkSpot.x, this.data.linkSpot.y);
+      if (sites.length > 0) {
+        this.data.constructionLinkRef = sites[0].id;
+      } else {
+        log.info(`Construction site is required for for ${this.data.sourceID}`);
+      }
+    }
+
+    if (!this.data.constructionLinkRef && !this.data.linkRef) {
+      const ret = this.room().createConstructionSite(this.data.linkSpot.x, this.data.linkSpot.y, STRUCTURE_LINK);
+      if (ret == ERR_INVALID_TARGET) {
+        this.data.invalidConstructionSites.push(this.data.linkSpot);
+        this.data.linkSpot = undefined;
+        this.pickLink();
+        log.error(`Link could not be build for ${this.data.sourceID}! Picking a new site.`);
+        return;
+      }
+    }
+  }
+
   // clac the number of work parts needed to mine the source
   private workNeeded(): number {
     // Always +1 because my miner misses some ticks to repairing.
@@ -200,7 +303,7 @@ export class ProgramStaticHarvest extends CivisProgram<ProgramStaticHarvestData>
               priority: 10
             }),
             // Maintain/build the container
-            TaskStaticHarvest.new(new RoomPosition(spot.x, spot.y, this.data.roomName)),
+            TaskStaticHarvest.new(new RoomPosition(spot.x, spot.y, this.data.roomName), this.data.linkSpot),
             // Drop min harvest
             TaskHarvest.new(this.source!, true)
           ],
@@ -312,6 +415,11 @@ export class ProgramStaticHarvest extends CivisProgram<ProgramStaticHarvestData>
     // This can be an issue if the first one happens before the room is ready I think?
     if (!this.executed || Game.time % 250 === 0) {
       this.reserveSite();
+    }
+
+    if (this.room().controller!.level >= 6) {
+      this.pickLink();
+      this.ensureLink();
     }
 
     super.execute();

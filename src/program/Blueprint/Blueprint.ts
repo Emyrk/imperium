@@ -1,4 +1,7 @@
+import { exists } from "fs";
 import { Process, ProcessCode } from "kernel/Process";
+import { log } from "lib/log/log";
+import { equalCoords } from "lib/utils/distance";
 
 export interface BuildingPlans {
   buildings: { [key in STRUCTURE_CONTAINER as string]: BlueprintPlan[] };
@@ -44,7 +47,10 @@ export class ProgramBlueprint extends Process<BlueprintData> {
 
         const site = pos.lookFor(LOOK_CONSTRUCTION_SITES)[0];
         if (!site) {
-          this.room.createConstructionSite(pos, type as BuildableStructureConstant);
+          const ret = this.room.createConstructionSite(pos, type as BuildableStructureConstant);
+          if (ret !== OK) {
+            console.log(`Failed to create construction site for ${type} at ${pos}`);
+          }
         }
       }
     }
@@ -55,6 +61,7 @@ export class ProgramBlueprint extends Process<BlueprintData> {
       this.visual();
       return ProcessCode.SUCCESS;
     }
+
     if (this.refreshSites || Game.time % 137 === 0) {
       this.checkSites();
       this.refreshSites = false;
@@ -77,8 +84,17 @@ export class ProgramBlueprint extends Process<BlueprintData> {
       if (!this.data.buildings[type]) {
         this.data.buildings[type] = [];
       }
-      this.data.buildings[type].push(...plan);
+
+      plan.forEach(plan => {
+        const exists = this.data.buildings[type].find(exists => equalCoords(exists.pos, plan.pos));
+        if (!exists) {
+          this.data.buildings[type].push(plan);
+          return;
+        }
+        log.error(`Blueprint: ${this.room.name} already has a plan for ${type} at ${plan.pos}`);
+      });
     }
+
     this.refreshSites = true;
   }
 

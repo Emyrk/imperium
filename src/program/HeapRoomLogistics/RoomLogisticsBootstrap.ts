@@ -81,14 +81,14 @@ export class ProgramRoomLogisticsBootstrap extends Process<ProgramRoomLogisticsB
   }
 
   private maintainTerminal(force: boolean): void {
-    if (!force && Game.time % 100 !== 0) {
-      return; // We do not need to run this often at all
-    }
-
-    const terminal = this.room.terminal;
-    if (terminal) {
-      this.room.announceNeeded(terminal.ref, "transfer", RESOURCE_ENERGY);
-    }
+    // Disable terminal for now
+    // if (!force && Game.time % 100 !== 0) {
+    //   return; // We do not need to run this often at all
+    // }
+    // const terminal = this.room.terminal;
+    // if (terminal) {
+    //   this.room.announceNeeded(terminal.ref, "transfer", RESOURCE_ENERGY);
+    // }
   }
 
   // Storage and controller priorities could get stale if they are not interacted
