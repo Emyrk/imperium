@@ -62,7 +62,7 @@ export class ProgramBlueprint extends Process<BlueprintData> {
       return ProcessCode.SUCCESS;
     }
 
-    if (this.refreshSites || Game.time % 137 === 0) {
+    if (this.refreshSites || Game.time % 500 === 0) {
       this.checkSites();
       this.refreshSites = false;
     }
