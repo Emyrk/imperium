@@ -1,21 +1,21 @@
 import { describe, expect, it } from "vitest";
-import { RoomTerrain, RoomTerrains } from "../../test/fakes/RoomTerrain";
+import { FakeRoomTerrain } from "../../test/fakes/RoomTerrain";
 
 describe("RoomTerrain", () => {
   it("empty", () => {
-    const terrain = new RoomTerrain("");
+    const terrain = new FakeRoomTerrain("");
     expect(terrain.get(0, 0)).toBe(0);
   });
 
   it("walls", () => {
-    const terrain = new RoomTerrain("wwwwww");
+    const terrain = new FakeRoomTerrain("wwwwww");
     for (let i = 0; i < 6; i++) {
       expect(terrain.get(i, 0)).toBe(TERRAIN_MASK_WALL);
     }
   });
 
   it("square", () => {
-    const terrain = new RoomTerrain(`
+    const terrain = new FakeRoomTerrain(`
     ...www...
     sssw.wsss
     sssw.wsss

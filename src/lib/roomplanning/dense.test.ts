@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { MockRoom } from "test-utils/mocks/room";
 import { MockController } from "test-utils/mocks/controller";
-import { RoomTerrain, RoomTerrains } from "../../../test/fakes/RoomTerrain";
+import { FakeRoomTerrain, RoomTerrains } from "../../../test/fakes/RoomTerrain";
 import { candidateRing, layoutCenter, layoutDense } from "./dense";
 import { sources } from "../../../dist/main.js.map";
 import { MockSource } from "test-utils/mocks/source";
@@ -34,7 +34,7 @@ describe("CandidatePosition", () => {
     const roomName = "test";
     const controller = MockController({ pos: { x: 25, y: 25, roomName: roomName } });
     const room = MockRoom(roomName, {
-      getTerrain: () => new RoomTerrain(""),
+      getTerrain: () => new FakeRoomTerrain(""),
       controller: controller
     });
 

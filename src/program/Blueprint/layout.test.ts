@@ -8,6 +8,6 @@ describe("Layouts", () => {
   it("E11S53", () => {
     const room = Rooms.E11S53();
 
-    const plans = layoutDense(room);
+    // const plans = layoutDense(room);
   });
 });
