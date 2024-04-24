@@ -60,7 +60,7 @@ export class ProgramBlueprint extends Process<BlueprintData> {
         if (!site) {
           const ret = this.room.createConstructionSite(pos, type as BuildableStructureConstant);
           if (ret !== OK) {
-            console.log(`Failed to create construction site for ${type} at ${pos}`);
+            log.error(`Failed to create construction site for ${type} at ${pos}`);
           }
         }
       }

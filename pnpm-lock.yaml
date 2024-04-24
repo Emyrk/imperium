@@ -14,6 +14,9 @@ dependencies:
   emyrk-screeps-cartographer:
     specifier: ^1.9.0
     version: 1.9.1
+  pathfinding:
+    specifier: github:jbrown123/PathFinding.js
+    version: github.com/jbrown123/PathFinding.js/e5bc6588fff6f477327432030d3fdc1ecdf1f033
   source-map:
     specifier: ~0.6.1
     version: 0.6.1
@@ -5650,3 +5653,11 @@ packages:
     resolution: {integrity: sha512-9bnSc/HEW2uRy67wc+T8UwauLuPJVn28jb+GtJY16iiKWyvmYJRXVT4UamsAEGQfPohgr2q4Tq0sQbQlxTfi1g==}
     engines: {node: '>=12.20'}
     dev: true
+
+  github.com/jbrown123/PathFinding.js/e5bc6588fff6f477327432030d3fdc1ecdf1f033:
+    resolution: {tarball: https://codeload.github.com/jbrown123/PathFinding.js/tar.gz/e5bc6588fff6f477327432030d3fdc1ecdf1f033}
+    name: pathfinding
+    version: 0.4.18
+    dependencies:
+      heap: 0.2.5
+    dev: false

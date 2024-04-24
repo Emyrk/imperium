@@ -1,8 +1,19 @@
 // The FakeGame stores all objects in a flat map. If you save the object
 // then you will be able to retrieve it with getObjectById or deref.
 export function saveObject<D extends _HasId>(obj: D): void {
-  // @ts-ignore
-  Game.byID[obj.id] = obj;
+  if (!Game.testing_byID) {
+    Game.testing_byID = {};
+  }
+
+  Game.testing_byID[obj.id] = obj;
+}
+
+export function saveStructure<D extends Structure>(obj: D): void {
+  Game.testing_byID[obj.id] = obj;
+  if (!Game.testing_roomObjects[obj.pos.roomName]) {
+    Game.testing_roomObjects[obj.pos.roomName] = [];
+  }
+  Game.testing_roomObjects[obj.pos.roomName].push(obj);
 }
 
 export function GenerateID(): string {
@@ -15,6 +26,8 @@ export function GenerateID(): string {
 
 export function CreepFields(body: BodyPartConstant[]): { [fields: string]: any } {
   const id = (Math.random() + 1).toString(36).substring(7);
+  const carryCap = body.filter(p => p === CARRY).length * CARRY_CAPACITY;
+
   return {
     id: GenerateID(),
     name: id,
@@ -25,7 +38,7 @@ export function CreepFields(body: BodyPartConstant[]): { [fields: string]: any }
     // memory: {},
     pos: new RoomPosition(25, 25, "test"),
     room: { name: "test" },
-    store: Store({ RESOURCE_ENERGY: { max: body.filter(p => p === CARRY).length * CARRY_CAPACITY, current: 0 } }),
+    store: Store(carryCap, true),
     saying: (): string => "",
     spawning: false,
     ticksToLive: 1000

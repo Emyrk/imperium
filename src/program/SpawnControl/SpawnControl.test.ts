@@ -1,15 +1,15 @@
 import { describe, expect, it } from "vitest";
 import { ProgramSpawnControl } from "./SpawnControl";
 import { MockRoom } from "test-utils/mocks/room";
-import { mockInstanceOf } from "screeps-jest";
 import { Process } from "kernel/Process";
+import { MockSpawn } from "test-utils/mocks/structures";
 
 describe("SpawnControl", () => {
   // Make sure the spawned creep pops the first element from the queue.
   it("Pop request", () => {
     const room = MockRoom("test", {
       openSpawns: [
-        mockInstanceOf<StructureSpawn>({
+        MockSpawn({
           name: "test",
           spawnCreep(body: BodyPartConstant[], name: string, opts?: SpawnOptions): ScreepsReturnCode {
             return OK;

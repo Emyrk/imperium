@@ -1,5 +1,6 @@
 import { CostMatrix } from "./CostMatrix";
 import { RoomPosition } from "./RoomPosition";
+import { AStarFinder, Grid } from "pathfinding";
 
 export class PathFinder {
   public static CostMatrix = new CostMatrix();
@@ -14,8 +15,45 @@ export class PathFinder {
       | Array<RoomPosition | { pos: RoomPosition; range: number }>,
     opts?: PathFinderOpts
   ): PathFinderPath {
+    const cm = new CostMatrix();
+    let heuristicWeight = Math.min(9, Math.max(1, opts?.heuristicWeight || 1.2));
+    if (Game.rooms) {
+      const plains = Math.min(254, Math.max(1, opts?.plainCost || 1));
+      const swamps = Math.min(254, Math.max(1, opts?.swampCost || 5));
+
+      // Now we need the CostMatrix for the room if we can find it.
+      const room = Game.rooms[origin.roomName];
+      if (room && room.getTerrain) {
+        const terrain = room.getTerrain();
+        for (let x = 0; x < 50; x++) {
+          for (let y = 0; y < 50; y++) {
+            const terrainType = terrain.get(x, y);
+            switch (terrainType) {
+              case 0:
+                cm.set(x, y, plains);
+                break;
+              case TERRAIN_MASK_SWAMP:
+                cm.set(x, y, swamps);
+                break;
+              case TERRAIN_MASK_WALL:
+                cm.set(x, y, Infinity);
+                break;
+            }
+          }
+        }
+
+        // TODO: Add structures to the CostMatrix.
+      }
+    }
+
     goal = Array.isArray(goal) ? goal[0] : goal;
     const goalPos = "pos" in goal ? goal.pos : goal;
+
+    const finder = new AStarFinder({
+      diagonalMovement: 1,
+      weight: heuristicWeight
+    });
+    finder.findPath(origin.x, origin.y, goalPos.x, goalPos.y, new Grid(cm));
 
     let path = [];
     while (origin.x != goalPos.x) {
@@ -46,6 +84,17 @@ export class PathFinder {
   }
 }
 
+function cmToGrid(cm: CostMatrix): Grid {
+  const grid = new Grid(50, 50);
+  for (let x = 0; x < 50; x++) {
+    for (let y = 0; y < 50; y++) {
+      grid.setWeightAt(x, y, cm.get(x, y));
+      grid.setWalkableAt(x, y, cm.get(x, y) < Infinity);
+    }
+  }
+  return grid;
+}
+
 interface defaultCostMatrixOpts {
   ignoreDestructibleStructures: boolean;
   ignoreCreeps: boolean;
@@ -60,7 +109,7 @@ interface obstacle {
   y: number;
 }
 
-function defaultCostMatrix(roomId: string, opts: defaultCostMatrixOpts, creep: Creep, roomObjects: obstacle[]) {
+function defaultCostMatrix(room: Room, opts: defaultCostMatrixOpts, roomObjects: obstacle[]) {
   if (creep.room.name !== roomId) {
     // disallow movement via unknown terrain
     return false;

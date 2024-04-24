@@ -88,7 +88,7 @@ export class RoomTerrain extends FakeCostMatrix {
     }
   }
 
-  get(xx: number, yy: number): 0 | TERRAIN_MASK_WALL | TERRAIN_MASK_SWAMP | TERRAIN_MASK_LAVA {
-    return super.get(xx, yy) as 0 | TERRAIN_MASK_WALL | TERRAIN_MASK_SWAMP | TERRAIN_MASK_LAVA;
+  get(xx: number, yy: number): 0 | TERRAIN_MASK_WALL | TERRAIN_MASK_SWAMP {
+    return super.get(xx, yy) as 0 | TERRAIN_MASK_WALL | TERRAIN_MASK_SWAMP;
   }
 }

@@ -14,6 +14,8 @@ export type MoveTarget = {
   range: number;
 };
 
+export interface CachingStrategy {}
+
 export interface MoveOpts extends PathFinderOpts {
   /**
    * Caching strategy to use to save paths. Defaults to HeapCache.

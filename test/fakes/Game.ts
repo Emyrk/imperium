@@ -1,6 +1,7 @@
 export class Game {
   cpu: any;
-  byID: { [id: string]: RoomObject } = {};
+  testing_roomObjects: { [roomName: string]: Structure[] } = {};
+  testing_byID: { [id: string]: RoomObject } = {};
   creeps: { [name: string]: Creep } = {};
   rooms: { [name: string]: Room } = {};
   spawns: { [name: string]: StructureSpawn } = {};
@@ -9,7 +10,7 @@ export class Game {
 
   getObjectById(id: string): any {
     const obj =
-      this.byID[id] ||
+      this.testing_byID[id] ||
       _.find(this.creeps, c => c.id === id) ||
       _.find(this.spawns, r => r.id === id) ||
       _.find(this.structures, s => s.id === id);
