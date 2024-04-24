@@ -3,7 +3,7 @@ import { Process, ProcessCode } from "kernel/Process";
 import { log } from "lib/log/log";
 import { profile } from "lib/profiler/decorator";
 import { GlobalCollector } from "main";
-import { ProgramBlueprint } from "program/Blueprint/Blueprint";
+import { BuildingPlans, ProgramBlueprint } from "program/Blueprint/Blueprint";
 import { layoutDensePlans } from "program/Blueprint/layouts";
 import { ProgramHeapRoomLogistics } from "program/HeapRoomLogistics/HeapRoomLogistics";
 import { PriorityMode } from "program/HeapRoomLogistics/LogisticNeeds/priorities";
@@ -20,7 +20,7 @@ export interface ProgramVillageData extends ProcessData {
   remotesPid?: number;
   blueprintPid?: number;
 
-  blueprintSet?: boolean;
+  primaryBuildings?: BuildingPlans & { center: Coord };
 
   // Important buildings.
   primaryLinkPos?: Coord;
@@ -167,13 +167,13 @@ export class ProgramVillage extends Process<ProgramVillageData> implements RoomV
     this.updatePrimaryLink(!this.executed);
 
     // This sets up the blueprint for the room.
-    if (!this.data.blueprintSet && !this.executed) {
+    if (!this.data.primaryBuildings && !this.executed) {
       const plans = layoutDensePlans(this.room);
       if (!plans) {
         log.error(`Failed to generate plans for ${this.room.name}`);
       } else {
         this.blueprint().add(plans);
-        this.data.blueprintSet = true;
+        this.data.primaryBuildings = plans;
         // primary link is where we will send energy to.
         this.data.primaryLinkPos = plans.buildings[STRUCTURE_LINK][0].pos;
       }

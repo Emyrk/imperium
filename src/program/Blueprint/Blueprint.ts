@@ -10,6 +10,7 @@ export interface BuildingPlans {
 export interface BlueprintPlan {
   pos: Coord;
   rcl?: number;
+  power?: boolean;
 }
 
 export interface BlueprintData extends ProcessData {
@@ -37,8 +38,18 @@ export class ProgramBlueprint extends Process<BlueprintData> {
 
   private refreshSites: boolean = true;
   private checkSites(): void {
+    const roomRCL = this.room.controller?.level || 0;
+    const power = this.room.controller?.isPowerEnabled || false;
+
     for (const [type, plans] of Object.entries(this.data.buildings)) {
       for (const plan of plans) {
+        if (plan.rcl && plan.rcl > roomRCL) {
+          continue;
+        }
+        if (plan.power && !power) {
+          continue;
+        }
+
         const pos = new RoomPosition(plan.pos.x, plan.pos.y, this.room.name);
         const struct = pos.lookForStructure(type as BuildableStructureConstant);
         if (struct) {
