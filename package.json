@@ -59,6 +59,7 @@
   },
   "dependencies": {
     "@screeps/engine": "^4.2.22",
+    "@types/pathfinding": "^0.0.9",
     "cloc": "2.0.0-cloc",
     "emyrk-screeps-cartographer": "^1.9.0",
     "pathfinding": "github:jbrown123/PathFinding.js",

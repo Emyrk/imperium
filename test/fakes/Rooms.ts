@@ -62,4 +62,40 @@ export class Rooms {
       ...mockFields
     });
   }
+
+  // TODO: Use renderer to get some really nice visuals.
+  public static visualize(room: Room, callback?: (x: number, y: number) => string | undefined): string {
+    const terrain = room.getTerrain();
+    if (!callback) {
+      callback = (x: number, y: number) => undefined;
+    }
+
+    return RoomTerrains.visualize(terrain, (x: number, y: number): string | undefined => {
+      const override = callback(x, y);
+      if (override) {
+        return override;
+      }
+
+      // TODO: Add objects.
+      return undefined;
+    });
+  }
+
+  public static pathCallback(
+    path: PathFinderPath,
+    callback?: (x: number, y: number) => string | undefined
+  ): (x: number, y: number) => string | undefined {
+    if (!callback) {
+      callback = (x: number, y: number) => undefined;
+    }
+
+    return (x: number, y: number) => {
+      const override = callback(x, y);
+      if (override) {
+        return override;
+      }
+
+      return path.path.some(pos => pos.x === x && pos.y === y) ? "X" : undefined;
+    };
+  }
 }

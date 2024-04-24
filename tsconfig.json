@@ -16,7 +16,7 @@
     "types": [
       "vitest/importMeta",
       "node"
-    ]
+    ],
   },
   "exclude": [
     "node_modules"

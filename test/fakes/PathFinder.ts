@@ -1,6 +1,6 @@
-import { CostMatrix } from "./CostMatrix";
-import { RoomPosition } from "./RoomPosition";
 import { AStarFinder, Grid } from "pathfinding";
+import { CostMatrix } from "./CostMatrix";
+import { RoomPosition as FakeRoomPosition } from "./RoomPosition";
 
 export class PathFinder {
   public static CostMatrix = new CostMatrix();
@@ -53,34 +53,42 @@ export class PathFinder {
       diagonalMovement: 1,
       weight: heuristicWeight
     });
-    finder.findPath(origin.x, origin.y, goalPos.x, goalPos.y, new Grid(cm));
-
-    let path = [];
-    while (origin.x != goalPos.x) {
-      if (origin.x > goalPos.x) {
-        origin.x--;
-      } else {
-        origin.x++;
-      }
-      path.push(new RoomPosition(origin.x, origin.y, origin.roomName));
-    }
-
-    while (origin.y != goalPos.y) {
-      if (origin.y > goalPos.y) {
-        origin.y--;
-      } else {
-        origin.y++;
-      }
-      path.push(new RoomPosition(origin.x, origin.y, origin.roomName));
-    }
-
+    const path = finder.findPath(origin.x, origin.y, goalPos.x, goalPos.y, cmToGrid(cm));
     return {
       // @ts-ignore
-      path: path,
+      path: path.map(([x, y]) => new FakeRoomPosition(x, y, origin.roomName)),
       ops: path.length,
-      cost: 0,
+      cost: path.reduce((acc, [x, y]) => acc + cm.get(x, y), 0),
       incomplete: false
     };
+
+    // Super simple path finding
+    // let path = [];
+    // while (origin.x != goalPos.x) {
+    //   if (origin.x > goalPos.x) {
+    //     origin.x--;
+    //   } else {
+    //     origin.x++;
+    //   }
+    //   path.push(new RoomPosition(origin.x, origin.y, origin.roomName));
+    // }
+
+    // while (origin.y != goalPos.y) {
+    //   if (origin.y > goalPos.y) {
+    //     origin.y--;
+    //   } else {
+    //     origin.y++;
+    //   }
+    //   path.push(new RoomPosition(origin.x, origin.y, origin.roomName));
+    // }
+
+    // return {
+    //   // @ts-ignore
+    //   path: path,
+    //   ops: path.length,
+    //   cost: 0,
+    //   incomplete: false
+    // };
   }
 }
 
@@ -88,8 +96,9 @@ function cmToGrid(cm: CostMatrix): Grid {
   const grid = new Grid(50, 50);
   for (let x = 0; x < 50; x++) {
     for (let y = 0; y < 50; y++) {
+      // @ts-ignore
       grid.setWeightAt(x, y, cm.get(x, y));
-      grid.setWalkableAt(x, y, cm.get(x, y) < Infinity);
+      grid.setWalkableAt(x, y, cm.get(x, y) < 255);
     }
   }
   return grid;
@@ -109,60 +118,60 @@ interface obstacle {
   y: number;
 }
 
-function defaultCostMatrix(room: Room, opts: defaultCostMatrixOpts, roomObjects: obstacle[]) {
-  if (creep.room.name !== roomId) {
-    // disallow movement via unknown terrain
-    return false;
-  }
+// function defaultCostMatrix(room: Room, opts: defaultCostMatrixOpts, roomObjects: obstacle[]) {
+//   if (creep.room.name !== roomId) {
+//     // disallow movement via unknown terrain
+//     return false;
+//   }
 
-  const costs = new CostMatrix();
+//   const costs = new CostMatrix();
 
-  let obstacleTypes: string[] = _.clone(OBSTACLE_OBJECT_TYPES);
+//   let obstacleTypes: string[] = _.clone(OBSTACLE_OBJECT_TYPES);
 
-  if (opts.ignoreDestructibleStructures) {
-    obstacleTypes = _.without(
-      obstacleTypes,
-      "constructedWall",
-      "rampart",
-      "spawn",
-      "extension",
-      "link",
-      "storage",
-      "observer",
-      "tower",
-      "powerBank",
-      "powerSpawn",
-      "lab",
-      "terminal"
-    );
-  }
-  if (opts.ignoreCreeps) {
-    obstacleTypes = _.without(obstacleTypes, "creep");
-  }
+//   if (opts.ignoreDestructibleStructures) {
+//     obstacleTypes = _.without(
+//       obstacleTypes,
+//       "constructedWall",
+//       "rampart",
+//       "spawn",
+//       "extension",
+//       "link",
+//       "storage",
+//       "observer",
+//       "tower",
+//       "powerBank",
+//       "powerSpawn",
+//       "lab",
+//       "terminal"
+//     );
+//   }
+//   if (opts.ignoreCreeps) {
+//     obstacleTypes = _.without(obstacleTypes, "creep");
+//   }
 
-  _.forEach(roomObjects, function (object) {
-    if (
-      _.contains(obstacleTypes, object.type) ||
-      (!opts.ignoreDestructibleStructures &&
-        object.type == "rampart" &&
-        !object.isPublic &&
-        object.user != creep.owner.username) ||
-      (!opts.ignoreDestructibleStructures &&
-        object.type == "constructionSite" &&
-        object.user == creep.owner.username &&
-        _.contains(OBSTACLE_OBJECT_TYPES, object.type))
-    ) {
-      costs.set(object.x, object.y, Infinity);
-    }
+//   _.forEach(roomObjects, function (object) {
+//     if (
+//       _.contains(obstacleTypes, object.type) ||
+//       (!opts.ignoreDestructibleStructures &&
+//         object.type == "rampart" &&
+//         !object.isPublic &&
+//         object.user != creep.owner.username) ||
+//       (!opts.ignoreDestructibleStructures &&
+//         object.type == "constructionSite" &&
+//         object.user == creep.owner.username &&
+//         _.contains(OBSTACLE_OBJECT_TYPES, object.type))
+//     ) {
+//       costs.set(object.x, object.y, Infinity);
+//     }
 
-    if (object.type == "swamp" && costs.get(object.x, object.y) == 0) {
-      costs.set(object.x, object.y, opts.ignoreRoads ? 5 : 10);
-    }
+//     if (object.type == "swamp" && costs.get(object.x, object.y) == 0) {
+//       costs.set(object.x, object.y, opts.ignoreRoads ? 5 : 10);
+//     }
 
-    if (!opts.ignoreRoads && object.type == "road" && costs.get(object.x, object.y) < Infinity) {
-      costs.set(object.x, object.y, 1);
-    }
-  });
+//     if (!opts.ignoreRoads && object.type == "road" && costs.get(object.x, object.y) < Infinity) {
+//       costs.set(object.x, object.y, 1);
+//     }
+//   });
 
-  return costs;
-}
+//   return costs;
+// }
