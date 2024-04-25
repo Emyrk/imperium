@@ -1,0 +1,138 @@
+{
+  "a87b0774c89f868": {
+    "room": "W1N9",
+    "type": "controller",
+    "x": 30,
+    "y": 5,
+    "level": 1,
+    "_id": "a87b0774c89f868",
+    "meta": {
+      "revision": 2,
+      "created": 1477476568201,
+      "version": 0,
+      "updated": 1509885251875
+    },
+    "$loki": 232,
+    "user": "e3b732c504eb83a",
+    "progress": 0,
+    "downgradeTime": 20002,
+    "safeMode": 20001
+  },
+  "2c060774c890e50": {
+    "room": "W1N9",
+    "type": "source",
+    "x": 37,
+    "y": 10,
+    "energy": 1400,
+    "energyCapacity": 3000,
+    "ticksToRegeneration": 300,
+    "_id": "2c060774c890e50",
+    "meta": {
+      "revision": 53,
+      "created": 1477476568201,
+      "version": 0,
+      "updated": 1510155984331
+    },
+    "$loki": 233,
+    "nextRegenerationTime": 302,
+    "invaderHarvested": 100
+  },
+  "2c27c2c91235fc1": {
+    "name": "h1",
+    "x": 36,
+    "y": 8,
+    "body": [
+      {
+        "type": "move",
+        "hits": 100
+      },
+      {
+        "type": "move",
+        "hits": 100
+      },
+      {
+        "type": "work",
+        "hits": 100
+      },
+      {
+        "type": "carry",
+        "hits": 100
+      }
+    ],
+    "energy": 50,
+    "energyCapacity": 50,
+    "type": "creep",
+    "room": "W1N9",
+    "user": "e3b732c504eb83a",
+    "hits": 400,
+    "hitsMax": 400,
+    "spawning": false,
+    "fatigue": 8,
+    "notifyWhenAttacked": true,
+    "_id": "2c27c2c91235fc1",
+    "meta": {
+      "revision": 88,
+      "created": 1509885251875,
+      "version": 0,
+      "updated": 1510155985774
+    },
+    "$loki": 351,
+    "ageTime": 1513,
+    "actionLog": {
+      "attacked": null,
+      "healed": null,
+      "attack": null,
+      "rangedAttack": null,
+      "rangedMassAttack": null,
+      "rangedHeal": null,
+      "harvest": null,
+      "heal": null,
+      "repair": null,
+      "build": null,
+      "say": null,
+      "upgradeController": null,
+      "reserveController": null
+    }
+  },
+  "89c432c50548380": {
+    "type": "spawn",
+    "room": "W1N9",
+    "x": 36,
+    "y": 5,
+    "name": "Spawn1",
+    "user": "e3b732c504eb83a",
+    "energy": 200,
+    "energyCapacity": 300,
+    "hits": 5000,
+    "hitsMax": 5000,
+    "spawning": null,
+    "notifyWhenAttacked": false,
+    "_id": "89c432c50548380",
+    "meta": {
+      "revision": 99,
+      "created": 1479132598356,
+      "version": 0,
+      "updated": 1510155985774
+    },
+    "$loki": 347,
+    "off": false,
+    "_off": false
+  },
+  "a7156164dc455c0": {
+    "type": "mineral",
+    "mineralType": "K",
+    "mineralAmount": 68063.44087625173,
+    "x": 32,
+    "y": 17,
+    "room": "W1N9",
+    "_id": "a7156164dc455c0",
+    "meta": {
+      "revision": 1,
+      "created": 1477570874820,
+      "version": 0,
+      "updated": 1477570878117
+    },
+    "$loki": 318,
+    "density": 2
+  }
+}
