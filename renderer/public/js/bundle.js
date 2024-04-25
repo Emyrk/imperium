@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 87);
+/******/ 	return __webpack_require__(__webpack_require__.s = 105);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -260,11 +260,9 @@ process.umask = function() { return 0; };
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -321,12 +319,10 @@ module.exports = invariant;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2014-2015, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -393,11 +389,9 @@ module.exports = warning;
 "use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -533,12 +527,10 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -547,7 +539,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 var _prodInvariant = __webpack_require__(3);
 
 var DOMProperty = __webpack_require__(13);
-var ReactDOMComponentFlags = __webpack_require__(61);
+var ReactDOMComponentFlags = __webpack_require__(68);
 
 var invariant = __webpack_require__(1);
 
@@ -735,11 +727,9 @@ module.exports = ReactDOMComponentTree;
 "use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -775,12 +765,10 @@ module.exports = ExecutionEnvironment;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2016-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2016-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -1160,12 +1148,10 @@ module.exports = ReactComponentTreeHook;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2016-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2016-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -1177,7 +1163,7 @@ module.exports = ReactComponentTreeHook;
 var debugTool = null;
 
 if (process.env.NODE_ENV !== 'production') {
-  var ReactDebugTool = __webpack_require__(113);
+  var ReactDebugTool = __webpack_require__(133);
   debugTool = ReactDebugTool;
 }
 
@@ -1193,11 +1179,9 @@ module.exports = { debugTool: debugTool };
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -1234,12 +1218,10 @@ module.exports = emptyFunction;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -1268,12 +1250,10 @@ module.exports = ReactCurrentOwner;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -1282,11 +1262,11 @@ module.exports = ReactCurrentOwner;
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
-var CallbackQueue = __webpack_require__(65);
+var CallbackQueue = __webpack_require__(72);
 var PooledClass = __webpack_require__(15);
-var ReactFeatureFlags = __webpack_require__(66);
+var ReactFeatureFlags = __webpack_require__(73);
 var ReactReconciler = __webpack_require__(18);
-var Transaction = __webpack_require__(28);
+var Transaction = __webpack_require__(29);
 
 var invariant = __webpack_require__(1);
 
@@ -1481,7 +1461,7 @@ function enqueueUpdate(component) {
  * if no updates are currently being performed.
  */
 function asap(callback, context) {
-  !batchingStrategy.isBatchingUpdates ? process.env.NODE_ENV !== 'production' ? invariant(false, 'ReactUpdates.asap: Can\'t enqueue an asap callback in a context whereupdates are not being batched.') : _prodInvariant('125') : void 0;
+  invariant(batchingStrategy.isBatchingUpdates, "ReactUpdates.asap: Can't enqueue an asap callback in a context where" + 'updates are not being batched.');
   asapCallbackQueue.enqueue(callback, context);
   asapEnqueued = true;
 }
@@ -1525,12 +1505,10 @@ module.exports = ReactUpdates;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -1706,6 +1684,33 @@ _assign(SyntheticEvent.prototype, {
 
 SyntheticEvent.Interface = EventInterface;
 
+/**
+ * Helper to reduce boilerplate when creating subclasses.
+ *
+ * @param {function} Class
+ * @param {?object} Interface
+ */
+SyntheticEvent.augmentClass = function (Class, Interface) {
+  var Super = this;
+
+  var E = function () {};
+  E.prototype = Super.prototype;
+  var prototype = new E();
+
+  _assign(prototype, Class.prototype);
+  Class.prototype = prototype;
+  Class.prototype.constructor = Class;
+
+  Class.Interface = _assign({}, Super.Interface, Interface);
+  Class.augmentClass = Super.augmentClass;
+
+  PooledClass.addPoolingTo(Class, PooledClass.fourArgumentPooler);
+};
+
+/** Proxying after everything set on SyntheticEvent
+  * to resolve Proxy issue on some WebKit browsers
+  * in which some Event properties are set to undefined (GH#10010)
+  */
 if (process.env.NODE_ENV !== 'production') {
   if (isProxySupported) {
     /*eslint-disable no-func-assign */
@@ -1729,28 +1734,6 @@ if (process.env.NODE_ENV !== 'production') {
     /*eslint-enable no-func-assign */
   }
 }
-/**
- * Helper to reduce boilerplate when creating subclasses.
- *
- * @param {function} Class
- * @param {?object} Interface
- */
-SyntheticEvent.augmentClass = function (Class, Interface) {
-  var Super = this;
-
-  var E = function () {};
-  E.prototype = Super.prototype;
-  var prototype = new E();
-
-  _assign(prototype, Class.prototype);
-  Class.prototype = prototype;
-  Class.prototype.constructor = Class;
-
-  Class.Interface = _assign({}, Super.Interface, Interface);
-  Class.augmentClass = Super.augmentClass;
-
-  PooledClass.addPoolingTo(Class, PooledClass.fourArgumentPooler);
-};
 
 PooledClass.addPoolingTo(SyntheticEvent, PooledClass.fourArgumentPooler);
 
@@ -1797,12 +1780,10 @@ function getPooledWarningPropertyDefinition(propName, getVal) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -2012,12 +1993,10 @@ module.exports = DOMProperty;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2014-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -2028,10 +2007,10 @@ var _assign = __webpack_require__(4);
 var ReactCurrentOwner = __webpack_require__(10);
 
 var warning = __webpack_require__(2);
-var canDefineProperty = __webpack_require__(25);
+var canDefineProperty = __webpack_require__(27);
 var hasOwnProperty = Object.prototype.hasOwnProperty;
 
-var REACT_ELEMENT_TYPE = __webpack_require__(55);
+var REACT_ELEMENT_TYPE = __webpack_require__(61);
 
 var RESERVED_PROPS = {
   key: true,
@@ -2359,12 +2338,10 @@ module.exports = ReactElement;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -2477,12 +2454,10 @@ module.exports = PooledClass;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -2490,24 +2465,24 @@ module.exports = PooledClass;
 
 var _assign = __webpack_require__(4);
 
-var ReactBaseClasses = __webpack_require__(53);
-var ReactChildren = __webpack_require__(88);
-var ReactDOMFactories = __webpack_require__(92);
+var ReactBaseClasses = __webpack_require__(59);
+var ReactChildren = __webpack_require__(106);
+var ReactDOMFactories = __webpack_require__(110);
 var ReactElement = __webpack_require__(14);
-var ReactPropTypes = __webpack_require__(96);
-var ReactVersion = __webpack_require__(98);
+var ReactPropTypes = __webpack_require__(114);
+var ReactVersion = __webpack_require__(118);
 
-var createReactClass = __webpack_require__(99);
-var onlyChild = __webpack_require__(101);
+var createReactClass = __webpack_require__(119);
+var onlyChild = __webpack_require__(121);
 
 var createElement = ReactElement.createElement;
 var createFactory = ReactElement.createFactory;
 var cloneElement = ReactElement.cloneElement;
 
 if (process.env.NODE_ENV !== 'production') {
-  var lowPriorityWarning = __webpack_require__(33);
-  var canDefineProperty = __webpack_require__(25);
-  var ReactElementValidator = __webpack_require__(57);
+  var lowPriorityWarning = __webpack_require__(36);
+  var canDefineProperty = __webpack_require__(27);
+  var ReactElementValidator = __webpack_require__(63);
   var didWarnPropTypesDeprecated = false;
   createElement = ReactElementValidator.createElement;
   createFactory = ReactElementValidator.createFactory;
@@ -2616,11 +2591,9 @@ module.exports = React;
 "use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -2659,18 +2632,16 @@ module.exports = reactProdInvariant;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
 
 
-var ReactRef = __webpack_require__(111);
+var ReactRef = __webpack_require__(131);
 var ReactInstrumentation = __webpack_require__(8);
 
 var warning = __webpack_require__(2);
@@ -2831,22 +2802,20 @@ module.exports = ReactReconciler;
 
 "use strict";
 /**
- * Copyright 2015-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2015-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
 
 
-var DOMNamespaces = __webpack_require__(43);
-var setInnerHTML = __webpack_require__(30);
+var DOMNamespaces = __webpack_require__(44);
+var setInnerHTML = __webpack_require__(31);
 
-var createMicrosoftUnsafeLocalFunction = __webpack_require__(44);
-var setTextContent = __webpack_require__(70);
+var createMicrosoftUnsafeLocalFunction = __webpack_require__(45);
+var setTextContent = __webpack_require__(77);
 
 var ELEMENT_NODE_TYPE = 1;
 var DOCUMENT_FRAGMENT_NODE_TYPE = 11;
@@ -2954,22 +2923,20 @@ module.exports = DOMLazyTree;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
 
 
 var EventPluginHub = __webpack_require__(21);
-var EventPluginUtils = __webpack_require__(37);
+var EventPluginUtils = __webpack_require__(38);
 
-var accumulateInto = __webpack_require__(62);
-var forEachAccumulated = __webpack_require__(63);
+var accumulateInto = __webpack_require__(69);
+var forEachAccumulated = __webpack_require__(70);
 var warning = __webpack_require__(2);
 
 var getListener = EventPluginHub.getListener;
@@ -3094,12 +3061,10 @@ module.exports = EventPropagators;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -3107,12 +3072,12 @@ module.exports = EventPropagators;
 
 var _prodInvariant = __webpack_require__(3);
 
-var EventPluginRegistry = __webpack_require__(27);
-var EventPluginUtils = __webpack_require__(37);
-var ReactErrorUtils = __webpack_require__(38);
+var EventPluginRegistry = __webpack_require__(28);
+var EventPluginUtils = __webpack_require__(38);
+var ReactErrorUtils = __webpack_require__(39);
 
-var accumulateInto = __webpack_require__(62);
-var forEachAccumulated = __webpack_require__(63);
+var accumulateInto = __webpack_require__(69);
+var forEachAccumulated = __webpack_require__(70);
 var invariant = __webpack_require__(1);
 
 /**
@@ -3374,12 +3339,10 @@ module.exports = EventPluginHub;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -3387,7 +3350,7 @@ module.exports = EventPluginHub;
 
 var SyntheticEvent = __webpack_require__(12);
 
-var getEventTarget = __webpack_require__(39);
+var getEventTarget = __webpack_require__(40);
 
 /**
  * @interface UIEvent
@@ -3438,12 +3401,10 @@ module.exports = SyntheticUIEvent;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -3487,6 +3448,681 @@ module.exports = ReactInstanceMap;
 /* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
+/* WEBPACK VAR INJECTION */(function(process) {// .dirname, .basename, and .extname methods are extracted from Node.js v8.11.1,
+// backported and transplited with Babel, with backwards-compat fixes
+
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+// resolves . and .. elements in a path array with directory names there
+// must be no slashes, empty elements, or device names (c:\) in the array
+// (so also no leading and trailing slashes - it does not distinguish
+// relative and absolute paths)
+function normalizeArray(parts, allowAboveRoot) {
+  // if the path tries to go above the root, `up` ends up > 0
+  var up = 0;
+  for (var i = parts.length - 1; i >= 0; i--) {
+    var last = parts[i];
+    if (last === '.') {
+      parts.splice(i, 1);
+    } else if (last === '..') {
+      parts.splice(i, 1);
+      up++;
+    } else if (up) {
+      parts.splice(i, 1);
+      up--;
+    }
+  }
+
+  // if the path is allowed to go above the root, restore leading ..s
+  if (allowAboveRoot) {
+    for (; up--; up) {
+      parts.unshift('..');
+    }
+  }
+
+  return parts;
+}
+
+// path.resolve([from ...], to)
+// posix version
+exports.resolve = function() {
+  var resolvedPath = '',
+      resolvedAbsolute = false;
+
+  for (var i = arguments.length - 1; i >= -1 && !resolvedAbsolute; i--) {
+    var path = (i >= 0) ? arguments[i] : process.cwd();
+
+    // Skip empty and invalid entries
+    if (typeof path !== 'string') {
+      throw new TypeError('Arguments to path.resolve must be strings');
+    } else if (!path) {
+      continue;
+    }
+
+    resolvedPath = path + '/' + resolvedPath;
+    resolvedAbsolute = path.charAt(0) === '/';
+  }
+
+  // At this point the path should be resolved to a full absolute path, but
+  // handle relative paths to be safe (might happen when process.cwd() fails)
+
+  // Normalize the path
+  resolvedPath = normalizeArray(filter(resolvedPath.split('/'), function(p) {
+    return !!p;
+  }), !resolvedAbsolute).join('/');
+
+  return ((resolvedAbsolute ? '/' : '') + resolvedPath) || '.';
+};
+
+// path.normalize(path)
+// posix version
+exports.normalize = function(path) {
+  var isAbsolute = exports.isAbsolute(path),
+      trailingSlash = substr(path, -1) === '/';
+
+  // Normalize the path
+  path = normalizeArray(filter(path.split('/'), function(p) {
+    return !!p;
+  }), !isAbsolute).join('/');
+
+  if (!path && !isAbsolute) {
+    path = '.';
+  }
+  if (path && trailingSlash) {
+    path += '/';
+  }
+
+  return (isAbsolute ? '/' : '') + path;
+};
+
+// posix version
+exports.isAbsolute = function(path) {
+  return path.charAt(0) === '/';
+};
+
+// posix version
+exports.join = function() {
+  var paths = Array.prototype.slice.call(arguments, 0);
+  return exports.normalize(filter(paths, function(p, index) {
+    if (typeof p !== 'string') {
+      throw new TypeError('Arguments to path.join must be strings');
+    }
+    return p;
+  }).join('/'));
+};
+
+
+// path.relative(from, to)
+// posix version
+exports.relative = function(from, to) {
+  from = exports.resolve(from).substr(1);
+  to = exports.resolve(to).substr(1);
+
+  function trim(arr) {
+    var start = 0;
+    for (; start < arr.length; start++) {
+      if (arr[start] !== '') break;
+    }
+
+    var end = arr.length - 1;
+    for (; end >= 0; end--) {
+      if (arr[end] !== '') break;
+    }
+
+    if (start > end) return [];
+    return arr.slice(start, end - start + 1);
+  }
+
+  var fromParts = trim(from.split('/'));
+  var toParts = trim(to.split('/'));
+
+  var length = Math.min(fromParts.length, toParts.length);
+  var samePartsLength = length;
+  for (var i = 0; i < length; i++) {
+    if (fromParts[i] !== toParts[i]) {
+      samePartsLength = i;
+      break;
+    }
+  }
+
+  var outputParts = [];
+  for (var i = samePartsLength; i < fromParts.length; i++) {
+    outputParts.push('..');
+  }
+
+  outputParts = outputParts.concat(toParts.slice(samePartsLength));
+
+  return outputParts.join('/');
+};
+
+exports.sep = '/';
+exports.delimiter = ':';
+
+exports.dirname = function (path) {
+  if (typeof path !== 'string') path = path + '';
+  if (path.length === 0) return '.';
+  var code = path.charCodeAt(0);
+  var hasRoot = code === 47 /*/*/;
+  var end = -1;
+  var matchedSlash = true;
+  for (var i = path.length - 1; i >= 1; --i) {
+    code = path.charCodeAt(i);
+    if (code === 47 /*/*/) {
+        if (!matchedSlash) {
+          end = i;
+          break;
+        }
+      } else {
+      // We saw the first non-path separator
+      matchedSlash = false;
+    }
+  }
+
+  if (end === -1) return hasRoot ? '/' : '.';
+  if (hasRoot && end === 1) {
+    // return '//';
+    // Backwards-compat fix:
+    return '/';
+  }
+  return path.slice(0, end);
+};
+
+function basename(path) {
+  if (typeof path !== 'string') path = path + '';
+
+  var start = 0;
+  var end = -1;
+  var matchedSlash = true;
+  var i;
+
+  for (i = path.length - 1; i >= 0; --i) {
+    if (path.charCodeAt(i) === 47 /*/*/) {
+        // If we reached a path separator that was not part of a set of path
+        // separators at the end of the string, stop now
+        if (!matchedSlash) {
+          start = i + 1;
+          break;
+        }
+      } else if (end === -1) {
+      // We saw the first non-path separator, mark this as the end of our
+      // path component
+      matchedSlash = false;
+      end = i + 1;
+    }
+  }
+
+  if (end === -1) return '';
+  return path.slice(start, end);
+}
+
+// Uses a mixed approach for backwards-compatibility, as ext behavior changed
+// in new Node.js versions, so only basename() above is backported here
+exports.basename = function (path, ext) {
+  var f = basename(path);
+  if (ext && f.substr(-1 * ext.length) === ext) {
+    f = f.substr(0, f.length - ext.length);
+  }
+  return f;
+};
+
+exports.extname = function (path) {
+  if (typeof path !== 'string') path = path + '';
+  var startDot = -1;
+  var startPart = 0;
+  var end = -1;
+  var matchedSlash = true;
+  // Track the state of characters (if any) we see before our first dot and
+  // after any path separator we find
+  var preDotState = 0;
+  for (var i = path.length - 1; i >= 0; --i) {
+    var code = path.charCodeAt(i);
+    if (code === 47 /*/*/) {
+        // If we reached a path separator that was not part of a set of path
+        // separators at the end of the string, stop now
+        if (!matchedSlash) {
+          startPart = i + 1;
+          break;
+        }
+        continue;
+      }
+    if (end === -1) {
+      // We saw the first non-path separator, mark this as the end of our
+      // extension
+      matchedSlash = false;
+      end = i + 1;
+    }
+    if (code === 46 /*.*/) {
+        // If this is our first dot, mark it as the start of our extension
+        if (startDot === -1)
+          startDot = i;
+        else if (preDotState !== 1)
+          preDotState = 1;
+    } else if (startDot !== -1) {
+      // We saw a non-dot and non-path separator before our dot, so we should
+      // have a good chance at having a non-empty extension
+      preDotState = -1;
+    }
+  }
+
+  if (startDot === -1 || end === -1 ||
+      // We saw a non-dot character immediately before the dot
+      preDotState === 0 ||
+      // The (right-most) trimmed path component is exactly '..'
+      preDotState === 1 && startDot === end - 1 && startDot === startPart + 1) {
+    return '';
+  }
+  return path.slice(startDot, end);
+};
+
+function filter (xs, f) {
+    if (xs.filter) return xs.filter(f);
+    var res = [];
+    for (var i = 0; i < xs.length; i++) {
+        if (f(xs[i], i, xs)) res.push(xs[i]);
+    }
+    return res;
+}
+
+// String.prototype.substr - negative index don't work in IE8
+var substr = 'ab'.substr(-1) === 'b'
+    ? function (str, start, len) { return str.substr(start, len) }
+    : function (str, start, len) {
+        if (start < 0) start = str.length + start;
+        return str.substr(start, len);
+    }
+;
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var undefined;
+
+var $Error = __webpack_require__(230);
+var $EvalError = __webpack_require__(231);
+var $RangeError = __webpack_require__(232);
+var $ReferenceError = __webpack_require__(233);
+var $SyntaxError = __webpack_require__(100);
+var $TypeError = __webpack_require__(34);
+var $URIError = __webpack_require__(234);
+
+var $Function = Function;
+
+// eslint-disable-next-line consistent-return
+var getEvalledConstructor = function (expressionSyntax) {
+	try {
+		return $Function('"use strict"; return (' + expressionSyntax + ').constructor;')();
+	} catch (e) {}
+};
+
+var $gOPD = Object.getOwnPropertyDescriptor;
+if ($gOPD) {
+	try {
+		$gOPD({}, '');
+	} catch (e) {
+		$gOPD = null; // this is IE 8, which has a broken gOPD
+	}
+}
+
+var throwTypeError = function () {
+	throw new $TypeError();
+};
+var ThrowTypeError = $gOPD
+	? (function () {
+		try {
+			// eslint-disable-next-line no-unused-expressions, no-caller, no-restricted-properties
+			arguments.callee; // IE 8 does not throw here
+			return throwTypeError;
+		} catch (calleeThrows) {
+			try {
+				// IE 8 throws on Object.getOwnPropertyDescriptor(arguments, '')
+				return $gOPD(arguments, 'callee').get;
+			} catch (gOPDthrows) {
+				return throwTypeError;
+			}
+		}
+	}())
+	: throwTypeError;
+
+var hasSymbols = __webpack_require__(235)();
+var hasProto = __webpack_require__(236)();
+
+var getProto = Object.getPrototypeOf || (
+	hasProto
+		? function (x) { return x.__proto__; } // eslint-disable-line no-proto
+		: null
+);
+
+var needsEval = {};
+
+var TypedArray = typeof Uint8Array === 'undefined' || !getProto ? undefined : getProto(Uint8Array);
+
+var INTRINSICS = {
+	__proto__: null,
+	'%AggregateError%': typeof AggregateError === 'undefined' ? undefined : AggregateError,
+	'%Array%': Array,
+	'%ArrayBuffer%': typeof ArrayBuffer === 'undefined' ? undefined : ArrayBuffer,
+	'%ArrayIteratorPrototype%': hasSymbols && getProto ? getProto([][Symbol.iterator]()) : undefined,
+	'%AsyncFromSyncIteratorPrototype%': undefined,
+	'%AsyncFunction%': needsEval,
+	'%AsyncGenerator%': needsEval,
+	'%AsyncGeneratorFunction%': needsEval,
+	'%AsyncIteratorPrototype%': needsEval,
+	'%Atomics%': typeof Atomics === 'undefined' ? undefined : Atomics,
+	'%BigInt%': typeof BigInt === 'undefined' ? undefined : BigInt,
+	'%BigInt64Array%': typeof BigInt64Array === 'undefined' ? undefined : BigInt64Array,
+	'%BigUint64Array%': typeof BigUint64Array === 'undefined' ? undefined : BigUint64Array,
+	'%Boolean%': Boolean,
+	'%DataView%': typeof DataView === 'undefined' ? undefined : DataView,
+	'%Date%': Date,
+	'%decodeURI%': decodeURI,
+	'%decodeURIComponent%': decodeURIComponent,
+	'%encodeURI%': encodeURI,
+	'%encodeURIComponent%': encodeURIComponent,
+	'%Error%': $Error,
+	'%eval%': eval, // eslint-disable-line no-eval
+	'%EvalError%': $EvalError,
+	'%Float32Array%': typeof Float32Array === 'undefined' ? undefined : Float32Array,
+	'%Float64Array%': typeof Float64Array === 'undefined' ? undefined : Float64Array,
+	'%FinalizationRegistry%': typeof FinalizationRegistry === 'undefined' ? undefined : FinalizationRegistry,
+	'%Function%': $Function,
+	'%GeneratorFunction%': needsEval,
+	'%Int8Array%': typeof Int8Array === 'undefined' ? undefined : Int8Array,
+	'%Int16Array%': typeof Int16Array === 'undefined' ? undefined : Int16Array,
+	'%Int32Array%': typeof Int32Array === 'undefined' ? undefined : Int32Array,
+	'%isFinite%': isFinite,
+	'%isNaN%': isNaN,
+	'%IteratorPrototype%': hasSymbols && getProto ? getProto(getProto([][Symbol.iterator]())) : undefined,
+	'%JSON%': typeof JSON === 'object' ? JSON : undefined,
+	'%Map%': typeof Map === 'undefined' ? undefined : Map,
+	'%MapIteratorPrototype%': typeof Map === 'undefined' || !hasSymbols || !getProto ? undefined : getProto(new Map()[Symbol.iterator]()),
+	'%Math%': Math,
+	'%Number%': Number,
+	'%Object%': Object,
+	'%parseFloat%': parseFloat,
+	'%parseInt%': parseInt,
+	'%Promise%': typeof Promise === 'undefined' ? undefined : Promise,
+	'%Proxy%': typeof Proxy === 'undefined' ? undefined : Proxy,
+	'%RangeError%': $RangeError,
+	'%ReferenceError%': $ReferenceError,
+	'%Reflect%': typeof Reflect === 'undefined' ? undefined : Reflect,
+	'%RegExp%': RegExp,
+	'%Set%': typeof Set === 'undefined' ? undefined : Set,
+	'%SetIteratorPrototype%': typeof Set === 'undefined' || !hasSymbols || !getProto ? undefined : getProto(new Set()[Symbol.iterator]()),
+	'%SharedArrayBuffer%': typeof SharedArrayBuffer === 'undefined' ? undefined : SharedArrayBuffer,
+	'%String%': String,
+	'%StringIteratorPrototype%': hasSymbols && getProto ? getProto(''[Symbol.iterator]()) : undefined,
+	'%Symbol%': hasSymbols ? Symbol : undefined,
+	'%SyntaxError%': $SyntaxError,
+	'%ThrowTypeError%': ThrowTypeError,
+	'%TypedArray%': TypedArray,
+	'%TypeError%': $TypeError,
+	'%Uint8Array%': typeof Uint8Array === 'undefined' ? undefined : Uint8Array,
+	'%Uint8ClampedArray%': typeof Uint8ClampedArray === 'undefined' ? undefined : Uint8ClampedArray,
+	'%Uint16Array%': typeof Uint16Array === 'undefined' ? undefined : Uint16Array,
+	'%Uint32Array%': typeof Uint32Array === 'undefined' ? undefined : Uint32Array,
+	'%URIError%': $URIError,
+	'%WeakMap%': typeof WeakMap === 'undefined' ? undefined : WeakMap,
+	'%WeakRef%': typeof WeakRef === 'undefined' ? undefined : WeakRef,
+	'%WeakSet%': typeof WeakSet === 'undefined' ? undefined : WeakSet
+};
+
+if (getProto) {
+	try {
+		null.error; // eslint-disable-line no-unused-expressions
+	} catch (e) {
+		// https://github.com/tc39/proposal-shadowrealm/pull/384#issuecomment-1364264229
+		var errorProto = getProto(getProto(e));
+		INTRINSICS['%Error.prototype%'] = errorProto;
+	}
+}
+
+var doEval = function doEval(name) {
+	var value;
+	if (name === '%AsyncFunction%') {
+		value = getEvalledConstructor('async function () {}');
+	} else if (name === '%GeneratorFunction%') {
+		value = getEvalledConstructor('function* () {}');
+	} else if (name === '%AsyncGeneratorFunction%') {
+		value = getEvalledConstructor('async function* () {}');
+	} else if (name === '%AsyncGenerator%') {
+		var fn = doEval('%AsyncGeneratorFunction%');
+		if (fn) {
+			value = fn.prototype;
+		}
+	} else if (name === '%AsyncIteratorPrototype%') {
+		var gen = doEval('%AsyncGenerator%');
+		if (gen && getProto) {
+			value = getProto(gen.prototype);
+		}
+	}
+
+	INTRINSICS[name] = value;
+
+	return value;
+};
+
+var LEGACY_ALIASES = {
+	__proto__: null,
+	'%ArrayBufferPrototype%': ['ArrayBuffer', 'prototype'],
+	'%ArrayPrototype%': ['Array', 'prototype'],
+	'%ArrayProto_entries%': ['Array', 'prototype', 'entries'],
+	'%ArrayProto_forEach%': ['Array', 'prototype', 'forEach'],
+	'%ArrayProto_keys%': ['Array', 'prototype', 'keys'],
+	'%ArrayProto_values%': ['Array', 'prototype', 'values'],
+	'%AsyncFunctionPrototype%': ['AsyncFunction', 'prototype'],
+	'%AsyncGenerator%': ['AsyncGeneratorFunction', 'prototype'],
+	'%AsyncGeneratorPrototype%': ['AsyncGeneratorFunction', 'prototype', 'prototype'],
+	'%BooleanPrototype%': ['Boolean', 'prototype'],
+	'%DataViewPrototype%': ['DataView', 'prototype'],
+	'%DatePrototype%': ['Date', 'prototype'],
+	'%ErrorPrototype%': ['Error', 'prototype'],
+	'%EvalErrorPrototype%': ['EvalError', 'prototype'],
+	'%Float32ArrayPrototype%': ['Float32Array', 'prototype'],
+	'%Float64ArrayPrototype%': ['Float64Array', 'prototype'],
+	'%FunctionPrototype%': ['Function', 'prototype'],
+	'%Generator%': ['GeneratorFunction', 'prototype'],
+	'%GeneratorPrototype%': ['GeneratorFunction', 'prototype', 'prototype'],
+	'%Int8ArrayPrototype%': ['Int8Array', 'prototype'],
+	'%Int16ArrayPrototype%': ['Int16Array', 'prototype'],
+	'%Int32ArrayPrototype%': ['Int32Array', 'prototype'],
+	'%JSONParse%': ['JSON', 'parse'],
+	'%JSONStringify%': ['JSON', 'stringify'],
+	'%MapPrototype%': ['Map', 'prototype'],
+	'%NumberPrototype%': ['Number', 'prototype'],
+	'%ObjectPrototype%': ['Object', 'prototype'],
+	'%ObjProto_toString%': ['Object', 'prototype', 'toString'],
+	'%ObjProto_valueOf%': ['Object', 'prototype', 'valueOf'],
+	'%PromisePrototype%': ['Promise', 'prototype'],
+	'%PromiseProto_then%': ['Promise', 'prototype', 'then'],
+	'%Promise_all%': ['Promise', 'all'],
+	'%Promise_reject%': ['Promise', 'reject'],
+	'%Promise_resolve%': ['Promise', 'resolve'],
+	'%RangeErrorPrototype%': ['RangeError', 'prototype'],
+	'%ReferenceErrorPrototype%': ['ReferenceError', 'prototype'],
+	'%RegExpPrototype%': ['RegExp', 'prototype'],
+	'%SetPrototype%': ['Set', 'prototype'],
+	'%SharedArrayBufferPrototype%': ['SharedArrayBuffer', 'prototype'],
+	'%StringPrototype%': ['String', 'prototype'],
+	'%SymbolPrototype%': ['Symbol', 'prototype'],
+	'%SyntaxErrorPrototype%': ['SyntaxError', 'prototype'],
+	'%TypedArrayPrototype%': ['TypedArray', 'prototype'],
+	'%TypeErrorPrototype%': ['TypeError', 'prototype'],
+	'%Uint8ArrayPrototype%': ['Uint8Array', 'prototype'],
+	'%Uint8ClampedArrayPrototype%': ['Uint8ClampedArray', 'prototype'],
+	'%Uint16ArrayPrototype%': ['Uint16Array', 'prototype'],
+	'%Uint32ArrayPrototype%': ['Uint32Array', 'prototype'],
+	'%URIErrorPrototype%': ['URIError', 'prototype'],
+	'%WeakMapPrototype%': ['WeakMap', 'prototype'],
+	'%WeakSetPrototype%': ['WeakSet', 'prototype']
+};
+
+var bind = __webpack_require__(55);
+var hasOwn = __webpack_require__(238);
+var $concat = bind.call(Function.call, Array.prototype.concat);
+var $spliceApply = bind.call(Function.apply, Array.prototype.splice);
+var $replace = bind.call(Function.call, String.prototype.replace);
+var $strSlice = bind.call(Function.call, String.prototype.slice);
+var $exec = bind.call(Function.call, RegExp.prototype.exec);
+
+/* adapted from https://github.com/lodash/lodash/blob/4.17.15/dist/lodash.js#L6735-L6744 */
+var rePropName = /[^%.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|%$))/g;
+var reEscapeChar = /\\(\\)?/g; /** Used to match backslashes in property paths. */
+var stringToPath = function stringToPath(string) {
+	var first = $strSlice(string, 0, 1);
+	var last = $strSlice(string, -1);
+	if (first === '%' && last !== '%') {
+		throw new $SyntaxError('invalid intrinsic syntax, expected closing `%`');
+	} else if (last === '%' && first !== '%') {
+		throw new $SyntaxError('invalid intrinsic syntax, expected opening `%`');
+	}
+	var result = [];
+	$replace(string, rePropName, function (match, number, quote, subString) {
+		result[result.length] = quote ? $replace(subString, reEscapeChar, '$1') : number || match;
+	});
+	return result;
+};
+/* end adaptation */
+
+var getBaseIntrinsic = function getBaseIntrinsic(name, allowMissing) {
+	var intrinsicName = name;
+	var alias;
+	if (hasOwn(LEGACY_ALIASES, intrinsicName)) {
+		alias = LEGACY_ALIASES[intrinsicName];
+		intrinsicName = '%' + alias[0] + '%';
+	}
+
+	if (hasOwn(INTRINSICS, intrinsicName)) {
+		var value = INTRINSICS[intrinsicName];
+		if (value === needsEval) {
+			value = doEval(intrinsicName);
+		}
+		if (typeof value === 'undefined' && !allowMissing) {
+			throw new $TypeError('intrinsic ' + name + ' exists, but is not available. Please file an issue!');
+		}
+
+		return {
+			alias: alias,
+			name: intrinsicName,
+			value: value
+		};
+	}
+
+	throw new $SyntaxError('intrinsic ' + name + ' does not exist!');
+};
+
+module.exports = function GetIntrinsic(name, allowMissing) {
+	if (typeof name !== 'string' || name.length === 0) {
+		throw new $TypeError('intrinsic name must be a non-empty string');
+	}
+	if (arguments.length > 1 && typeof allowMissing !== 'boolean') {
+		throw new $TypeError('"allowMissing" argument must be a boolean');
+	}
+
+	if ($exec(/^%?[^%]*%?$/, name) === null) {
+		throw new $SyntaxError('`%` may not be present anywhere but at the beginning and end of the intrinsic name');
+	}
+	var parts = stringToPath(name);
+	var intrinsicBaseName = parts.length > 0 ? parts[0] : '';
+
+	var intrinsic = getBaseIntrinsic('%' + intrinsicBaseName + '%', allowMissing);
+	var intrinsicRealName = intrinsic.name;
+	var value = intrinsic.value;
+	var skipFurtherCaching = false;
+
+	var alias = intrinsic.alias;
+	if (alias) {
+		intrinsicBaseName = alias[0];
+		$spliceApply(parts, $concat([0, 1], alias));
+	}
+
+	for (var i = 1, isOwn = true; i < parts.length; i += 1) {
+		var part = parts[i];
+		var first = $strSlice(part, 0, 1);
+		var last = $strSlice(part, -1);
+		if (
+			(
+				(first === '"' || first === "'" || first === '`')
+				|| (last === '"' || last === "'" || last === '`')
+			)
+			&& first !== last
+		) {
+			throw new $SyntaxError('property names with quotes must have matching quotes');
+		}
+		if (part === 'constructor' || !isOwn) {
+			skipFurtherCaching = true;
+		}
+
+		intrinsicBaseName += '.' + part;
+		intrinsicRealName = '%' + intrinsicBaseName + '%';
+
+		if (hasOwn(INTRINSICS, intrinsicRealName)) {
+			value = INTRINSICS[intrinsicRealName];
+		} else if (value != null) {
+			if (!(part in value)) {
+				if (!allowMissing) {
+					throw new $TypeError('base intrinsic for ' + name + ' exists, but the property is not available.');
+				}
+				return void undefined;
+			}
+			if ($gOPD && (i + 1) >= parts.length) {
+				var desc = $gOPD(value, part);
+				isOwn = !!desc;
+
+				// By convention, when a data property is converted to an accessor
+				// property to emulate a data property that does not suffer from
+				// the override mistake, that accessor's getter is marked with
+				// an `originalValue` property. Here, when we detect this, we
+				// uphold the illusion by pretending to see that original data
+				// property, i.e., returning the value rather than the getter
+				// itself.
+				if (isOwn && 'get' in desc && !('originalValue' in desc.get)) {
+					value = desc.get;
+				} else {
+					value = value[part];
+				}
+			} else {
+				isOwn = hasOwn(value, part);
+				value = value[part];
+			}
+
+			if (isOwn && !skipFurtherCaching) {
+				INTRINSICS[intrinsicRealName] = value;
+			}
+		}
+	}
+	return value;
+};
+
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 
 
@@ -3494,17 +4130,15 @@ module.exports = __webpack_require__(16);
 
 
 /***/ }),
-/* 25 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -3526,43 +4160,15 @@ module.exports = canDefineProperty;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 26 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- *
- */
-
-
-
-var emptyObject = {};
-
-if (process.env.NODE_ENV !== 'production') {
-  Object.freeze(emptyObject);
-}
-
-module.exports = emptyObject;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
-/* 27 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -3811,17 +4417,15 @@ module.exports = EventPluginRegistry;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -4045,26 +4649,24 @@ module.exports = TransactionImpl;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
 
 
 var SyntheticUIEvent = __webpack_require__(22);
-var ViewportMetrics = __webpack_require__(69);
+var ViewportMetrics = __webpack_require__(76);
 
-var getEventModifierState = __webpack_require__(41);
+var getEventModifierState = __webpack_require__(42);
 
 /**
  * @interface MouseEvent
@@ -4122,29 +4724,27 @@ SyntheticUIEvent.augmentClass(SyntheticMouseEvent, MouseEventInterface);
 module.exports = SyntheticMouseEvent;
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
 
 
 var ExecutionEnvironment = __webpack_require__(6);
-var DOMNamespaces = __webpack_require__(43);
+var DOMNamespaces = __webpack_require__(44);
 
 var WHITESPACE_TEST = /^[ \r\n\t\f]/;
 var NONVISIBLE_TEST = /<(!--|link|noscript|meta|script|style)[ \r\n\t\f\/>]/;
 
-var createMicrosoftUnsafeLocalFunction = __webpack_require__(44);
+var createMicrosoftUnsafeLocalFunction = __webpack_require__(45);
 
 // SVG temp container for IE lacking innerHTML
 var reusableSVGContainer;
@@ -4225,17 +4825,15 @@ if (ExecutionEnvironment.canUseDOM) {
 module.exports = setInnerHTML;
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2016-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2016-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * Based on the escape-html library, which is used under the MIT License below:
  *
@@ -4352,17 +4950,15 @@ function escapeTextContentForBrowser(text) {
 module.exports = escapeTextContentForBrowser;
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -4370,12 +4966,12 @@ module.exports = escapeTextContentForBrowser;
 
 var _assign = __webpack_require__(4);
 
-var EventPluginRegistry = __webpack_require__(27);
-var ReactEventEmitterMixin = __webpack_require__(137);
-var ViewportMetrics = __webpack_require__(69);
+var EventPluginRegistry = __webpack_require__(28);
+var ReactEventEmitterMixin = __webpack_require__(157);
+var ViewportMetrics = __webpack_require__(76);
 
-var getVendorPrefixedEventName = __webpack_require__(138);
-var isEventSupported = __webpack_require__(40);
+var getVendorPrefixedEventName = __webpack_require__(158);
+var isEventSupported = __webpack_require__(41);
 
 /**
  * Summary of `ReactBrowserEventEmitter` event handling:
@@ -4681,17 +5277,50 @@ var ReactBrowserEventEmitter = _assign({}, ReactEventEmitterMixin, {
 module.exports = ReactBrowserEventEmitter;
 
 /***/ }),
-/* 33 */
+/* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/** @type {import('./type')} */
+module.exports = TypeError;
+
+
+/***/ }),
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2014-2015, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ */
+
+
+
+var emptyObject = {};
+
+if (process.env.NODE_ENV !== 'production') {
+  Object.freeze(emptyObject);
+}
+
+module.exports = emptyObject;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -4752,109 +5381,7 @@ module.exports = lowPriorityWarning;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 34 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * 
- */
-
-function makeEmptyFunction(arg) {
-  return function () {
-    return arg;
-  };
-}
-
-/**
- * This function accepts and discards inputs; it has no side effects. This is
- * primarily useful idiomatically for overridable function endpoints which
- * always need to be callable, since JS lacks a null-call idiom ala Cocoa.
- */
-var emptyFunction = function emptyFunction() {};
-
-emptyFunction.thatReturns = makeEmptyFunction;
-emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
-emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
-emptyFunction.thatReturnsNull = makeEmptyFunction(null);
-emptyFunction.thatReturnsThis = function () {
-  return this;
-};
-emptyFunction.thatReturnsArgument = function (arg) {
-  return arg;
-};
-
-module.exports = emptyFunction;
-
-/***/ }),
-/* 35 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- */
-
-
-
-/**
- * Use invariant() to assert state which your program assumes to be true.
- *
- * Provide sprintf-style format (only %s is supported) and arguments
- * to provide information about what broke and what you were
- * expecting.
- *
- * The invariant message will be stripped in production, but the invariant
- * will remain to ensure logic does not differ in production.
- */
-
-var validateFormat = function validateFormat(format) {};
-
-if (process.env.NODE_ENV !== 'production') {
-  validateFormat = function validateFormat(format) {
-    if (format === undefined) {
-      throw new Error('invariant requires an error message argument');
-    }
-  };
-}
-
-function invariant(condition, format, a, b, c, d, e, f) {
-  validateFormat(format);
-
-  if (!condition) {
-    var error;
-    if (format === undefined) {
-      error = new Error('Minified exception occurred; use the non-minified dev environment ' + 'for the full error message and additional helpful warnings.');
-    } else {
-      var args = [a, b, c, d, e, f];
-      var argIndex = 0;
-      error = new Error(format.replace(/%s/g, function () {
-        return args[argIndex++];
-      }));
-      error.name = 'Invariant Violation';
-    }
-
-    error.framesToPop = 1; // we don't care about invariant's own frame
-    throw error;
-  }
-}
-
-module.exports = invariant;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4873,17 +5400,15 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -4891,7 +5416,7 @@ module.exports = ReactPropTypesSecret;
 
 var _prodInvariant = __webpack_require__(3);
 
-var ReactErrorUtils = __webpack_require__(38);
+var ReactErrorUtils = __webpack_require__(39);
 
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
@@ -5105,17 +5630,15 @@ module.exports = EventPluginUtils;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -5172,7 +5695,9 @@ if (process.env.NODE_ENV !== 'production') {
   if (typeof window !== 'undefined' && typeof window.dispatchEvent === 'function' && typeof document !== 'undefined' && typeof document.createEvent === 'function') {
     var fakeNode = document.createElement('react');
     ReactErrorUtils.invokeGuardedCallback = function (name, func, a) {
-      var boundFunc = func.bind(null, a);
+      var boundFunc = function () {
+        func(a);
+      };
       var evtType = 'react-' + name;
       fakeNode.addEventListener(evtType, boundFunc, false);
       var evt = document.createEvent('Event');
@@ -5187,17 +5712,15 @@ module.exports = ReactErrorUtils;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -5227,17 +5750,15 @@ function getEventTarget(nativeEvent) {
 module.exports = getEventTarget;
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -5292,17 +5813,15 @@ function isEventSupported(eventNameSuffix, capture) {
 module.exports = isEventSupported;
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -5340,30 +5859,28 @@ function getEventModifierState(nativeEvent) {
 module.exports = getEventModifierState;
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
 
 
 var DOMLazyTree = __webpack_require__(19);
-var Danger = __webpack_require__(122);
+var Danger = __webpack_require__(142);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactInstrumentation = __webpack_require__(8);
 
-var createMicrosoftUnsafeLocalFunction = __webpack_require__(44);
-var setInnerHTML = __webpack_require__(30);
-var setTextContent = __webpack_require__(70);
+var createMicrosoftUnsafeLocalFunction = __webpack_require__(45);
+var setInnerHTML = __webpack_require__(31);
+var setTextContent = __webpack_require__(77);
 
 function getNodeAfter(parentNode, node) {
   // Special case for text components, which return [open, close] comments
@@ -5572,17 +6089,15 @@ module.exports = DOMChildrenOperations;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -5597,17 +6112,15 @@ var DOMNamespaces = {
 module.exports = DOMNamespaces;
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -5634,17 +6147,15 @@ var createMicrosoftUnsafeLocalFunction = function (func) {
 module.exports = createMicrosoftUnsafeLocalFunction;
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -5652,8 +6163,8 @@ module.exports = createMicrosoftUnsafeLocalFunction;
 
 var _prodInvariant = __webpack_require__(3);
 
-var ReactPropTypesSecret = __webpack_require__(74);
-var propTypesFactory = __webpack_require__(58);
+var ReactPropTypesSecret = __webpack_require__(81);
+var propTypesFactory = __webpack_require__(64);
 
 var React = __webpack_require__(16);
 var PropTypes = propTypesFactory(React.isValidElement);
@@ -5778,17 +6289,15 @@ module.exports = LinkedValueUtils;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2014-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -5828,17 +6337,15 @@ module.exports = ReactComponentEnvironment;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  * 
@@ -5901,17 +6408,15 @@ function shallowEqual(objA, objB) {
 module.exports = shallowEqual;
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -5948,17 +6453,15 @@ function shouldUpdateReactComponent(prevElement, nextElement) {
 module.exports = shouldUpdateReactComponent;
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -6012,17 +6515,15 @@ var KeyEscapeUtils = {
 module.exports = KeyEscapeUtils;
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2015-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2015-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -6252,17 +6753,15 @@ module.exports = ReactUpdateQueue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2015-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2015-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -6629,17 +7128,15 @@ module.exports = validateDOMNesting;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -6684,17 +7181,1741 @@ function getEventCharCode(nativeEvent) {
 module.exports = getEventCharCode;
 
 /***/ }),
-/* 53 */
+/* 54 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = minimatch
+minimatch.Minimatch = Minimatch
+
+var path = (function () { try { return __webpack_require__(24) } catch (e) {}}()) || {
+  sep: '/'
+}
+minimatch.sep = path.sep
+
+var GLOBSTAR = minimatch.GLOBSTAR = Minimatch.GLOBSTAR = {}
+var expand = __webpack_require__(220)
+
+var plTypes = {
+  '!': { open: '(?:(?!(?:', close: '))[^/]*?)'},
+  '?': { open: '(?:', close: ')?' },
+  '+': { open: '(?:', close: ')+' },
+  '*': { open: '(?:', close: ')*' },
+  '@': { open: '(?:', close: ')' }
+}
+
+// any single thing other than /
+// don't need to escape / when using new RegExp()
+var qmark = '[^/]'
+
+// * => any number of characters
+var star = qmark + '*?'
+
+// ** when dots are allowed.  Anything goes, except .. and .
+// not (^ or / followed by one or two dots followed by $ or /),
+// followed by anything, any number of times.
+var twoStarDot = '(?:(?!(?:\\\/|^)(?:\\.{1,2})($|\\\/)).)*?'
+
+// not a ^ or / followed by a dot,
+// followed by anything, any number of times.
+var twoStarNoDot = '(?:(?!(?:\\\/|^)\\.).)*?'
+
+// characters that need to be escaped in RegExp.
+var reSpecials = charSet('().*{}+?[]^$\\!')
+
+// "abc" -> { a:true, b:true, c:true }
+function charSet (s) {
+  return s.split('').reduce(function (set, c) {
+    set[c] = true
+    return set
+  }, {})
+}
+
+// normalizes slashes.
+var slashSplit = /\/+/
+
+minimatch.filter = filter
+function filter (pattern, options) {
+  options = options || {}
+  return function (p, i, list) {
+    return minimatch(p, pattern, options)
+  }
+}
+
+function ext (a, b) {
+  b = b || {}
+  var t = {}
+  Object.keys(a).forEach(function (k) {
+    t[k] = a[k]
+  })
+  Object.keys(b).forEach(function (k) {
+    t[k] = b[k]
+  })
+  return t
+}
+
+minimatch.defaults = function (def) {
+  if (!def || typeof def !== 'object' || !Object.keys(def).length) {
+    return minimatch
+  }
+
+  var orig = minimatch
+
+  var m = function minimatch (p, pattern, options) {
+    return orig(p, pattern, ext(def, options))
+  }
+
+  m.Minimatch = function Minimatch (pattern, options) {
+    return new orig.Minimatch(pattern, ext(def, options))
+  }
+  m.Minimatch.defaults = function defaults (options) {
+    return orig.defaults(ext(def, options)).Minimatch
+  }
+
+  m.filter = function filter (pattern, options) {
+    return orig.filter(pattern, ext(def, options))
+  }
+
+  m.defaults = function defaults (options) {
+    return orig.defaults(ext(def, options))
+  }
+
+  m.makeRe = function makeRe (pattern, options) {
+    return orig.makeRe(pattern, ext(def, options))
+  }
+
+  m.braceExpand = function braceExpand (pattern, options) {
+    return orig.braceExpand(pattern, ext(def, options))
+  }
+
+  m.match = function (list, pattern, options) {
+    return orig.match(list, pattern, ext(def, options))
+  }
+
+  return m
+}
+
+Minimatch.defaults = function (def) {
+  return minimatch.defaults(def).Minimatch
+}
+
+function minimatch (p, pattern, options) {
+  assertValidPattern(pattern)
+
+  if (!options) options = {}
+
+  // shortcut: comments match nothing.
+  if (!options.nocomment && pattern.charAt(0) === '#') {
+    return false
+  }
+
+  return new Minimatch(pattern, options).match(p)
+}
+
+function Minimatch (pattern, options) {
+  if (!(this instanceof Minimatch)) {
+    return new Minimatch(pattern, options)
+  }
+
+  assertValidPattern(pattern)
+
+  if (!options) options = {}
+
+  pattern = pattern.trim()
+
+  // windows support: need to use /, not \
+  if (!options.allowWindowsEscape && path.sep !== '/') {
+    pattern = pattern.split(path.sep).join('/')
+  }
+
+  this.options = options
+  this.set = []
+  this.pattern = pattern
+  this.regexp = null
+  this.negate = false
+  this.comment = false
+  this.empty = false
+  this.partial = !!options.partial
+
+  // make the set of regexps etc.
+  this.make()
+}
+
+Minimatch.prototype.debug = function () {}
+
+Minimatch.prototype.make = make
+function make () {
+  var pattern = this.pattern
+  var options = this.options
+
+  // empty patterns and comments match nothing.
+  if (!options.nocomment && pattern.charAt(0) === '#') {
+    this.comment = true
+    return
+  }
+  if (!pattern) {
+    this.empty = true
+    return
+  }
+
+  // step 1: figure out negation, etc.
+  this.parseNegate()
+
+  // step 2: expand braces
+  var set = this.globSet = this.braceExpand()
+
+  if (options.debug) this.debug = function debug() { console.error.apply(console, arguments) }
+
+  this.debug(this.pattern, set)
+
+  // step 3: now we have a set, so turn each one into a series of path-portion
+  // matching patterns.
+  // These will be regexps, except in the case of "**", which is
+  // set to the GLOBSTAR object for globstar behavior,
+  // and will not contain any / characters
+  set = this.globParts = set.map(function (s) {
+    return s.split(slashSplit)
+  })
+
+  this.debug(this.pattern, set)
+
+  // glob --> regexps
+  set = set.map(function (s, si, set) {
+    return s.map(this.parse, this)
+  }, this)
+
+  this.debug(this.pattern, set)
+
+  // filter out everything that didn't compile properly.
+  set = set.filter(function (s) {
+    return s.indexOf(false) === -1
+  })
+
+  this.debug(this.pattern, set)
+
+  this.set = set
+}
+
+Minimatch.prototype.parseNegate = parseNegate
+function parseNegate () {
+  var pattern = this.pattern
+  var negate = false
+  var options = this.options
+  var negateOffset = 0
+
+  if (options.nonegate) return
+
+  for (var i = 0, l = pattern.length
+    ; i < l && pattern.charAt(i) === '!'
+    ; i++) {
+    negate = !negate
+    negateOffset++
+  }
+
+  if (negateOffset) this.pattern = pattern.substr(negateOffset)
+  this.negate = negate
+}
+
+// Brace expansion:
+// a{b,c}d -> abd acd
+// a{b,}c -> abc ac
+// a{0..3}d -> a0d a1d a2d a3d
+// a{b,c{d,e}f}g -> abg acdfg acefg
+// a{b,c}d{e,f}g -> abdeg acdeg abdeg abdfg
+//
+// Invalid sets are not expanded.
+// a{2..}b -> a{2..}b
+// a{b}c -> a{b}c
+minimatch.braceExpand = function (pattern, options) {
+  return braceExpand(pattern, options)
+}
+
+Minimatch.prototype.braceExpand = braceExpand
+
+function braceExpand (pattern, options) {
+  if (!options) {
+    if (this instanceof Minimatch) {
+      options = this.options
+    } else {
+      options = {}
+    }
+  }
+
+  pattern = typeof pattern === 'undefined'
+    ? this.pattern : pattern
+
+  assertValidPattern(pattern)
+
+  // Thanks to Yeting Li <https://github.com/yetingli> for
+  // improving this regexp to avoid a ReDOS vulnerability.
+  if (options.nobrace || !/\{(?:(?!\{).)*\}/.test(pattern)) {
+    // shortcut. no need to expand.
+    return [pattern]
+  }
+
+  return expand(pattern)
+}
+
+var MAX_PATTERN_LENGTH = 1024 * 64
+var assertValidPattern = function (pattern) {
+  if (typeof pattern !== 'string') {
+    throw new TypeError('invalid pattern')
+  }
+
+  if (pattern.length > MAX_PATTERN_LENGTH) {
+    throw new TypeError('pattern is too long')
+  }
+}
+
+// parse a component of the expanded set.
+// At this point, no pattern may contain "/" in it
+// so we're going to return a 2d array, where each entry is the full
+// pattern, split on '/', and then turned into a regular expression.
+// A regexp is made at the end which joins each array with an
+// escaped /, and another full one which joins each regexp with |.
+//
+// Following the lead of Bash 4.1, note that "**" only has special meaning
+// when it is the *only* thing in a path portion.  Otherwise, any series
+// of * is equivalent to a single *.  Globstar behavior is enabled by
+// default, and can be disabled by setting options.noglobstar.
+Minimatch.prototype.parse = parse
+var SUBPARSE = {}
+function parse (pattern, isSub) {
+  assertValidPattern(pattern)
+
+  var options = this.options
+
+  // shortcuts
+  if (pattern === '**') {
+    if (!options.noglobstar)
+      return GLOBSTAR
+    else
+      pattern = '*'
+  }
+  if (pattern === '') return ''
+
+  var re = ''
+  var hasMagic = !!options.nocase
+  var escaping = false
+  // ? => one single character
+  var patternListStack = []
+  var negativeLists = []
+  var stateChar
+  var inClass = false
+  var reClassStart = -1
+  var classStart = -1
+  // . and .. never match anything that doesn't start with .,
+  // even when options.dot is set.
+  var patternStart = pattern.charAt(0) === '.' ? '' // anything
+  // not (start or / followed by . or .. followed by / or end)
+  : options.dot ? '(?!(?:^|\\\/)\\.{1,2}(?:$|\\\/))'
+  : '(?!\\.)'
+  var self = this
+
+  function clearStateChar () {
+    if (stateChar) {
+      // we had some state-tracking character
+      // that wasn't consumed by this pass.
+      switch (stateChar) {
+        case '*':
+          re += star
+          hasMagic = true
+        break
+        case '?':
+          re += qmark
+          hasMagic = true
+        break
+        default:
+          re += '\\' + stateChar
+        break
+      }
+      self.debug('clearStateChar %j %j', stateChar, re)
+      stateChar = false
+    }
+  }
+
+  for (var i = 0, len = pattern.length, c
+    ; (i < len) && (c = pattern.charAt(i))
+    ; i++) {
+    this.debug('%s\t%s %s %j', pattern, i, re, c)
+
+    // skip over any that are escaped.
+    if (escaping && reSpecials[c]) {
+      re += '\\' + c
+      escaping = false
+      continue
+    }
+
+    switch (c) {
+      /* istanbul ignore next */
+      case '/': {
+        // completely not allowed, even escaped.
+        // Should already be path-split by now.
+        return false
+      }
+
+      case '\\':
+        clearStateChar()
+        escaping = true
+      continue
+
+      // the various stateChar values
+      // for the "extglob" stuff.
+      case '?':
+      case '*':
+      case '+':
+      case '@':
+      case '!':
+        this.debug('%s\t%s %s %j <-- stateChar', pattern, i, re, c)
+
+        // all of those are literals inside a class, except that
+        // the glob [!a] means [^a] in regexp
+        if (inClass) {
+          this.debug('  in class')
+          if (c === '!' && i === classStart + 1) c = '^'
+          re += c
+          continue
+        }
+
+        // if we already have a stateChar, then it means
+        // that there was something like ** or +? in there.
+        // Handle the stateChar, then proceed with this one.
+        self.debug('call clearStateChar %j', stateChar)
+        clearStateChar()
+        stateChar = c
+        // if extglob is disabled, then +(asdf|foo) isn't a thing.
+        // just clear the statechar *now*, rather than even diving into
+        // the patternList stuff.
+        if (options.noext) clearStateChar()
+      continue
+
+      case '(':
+        if (inClass) {
+          re += '('
+          continue
+        }
+
+        if (!stateChar) {
+          re += '\\('
+          continue
+        }
+
+        patternListStack.push({
+          type: stateChar,
+          start: i - 1,
+          reStart: re.length,
+          open: plTypes[stateChar].open,
+          close: plTypes[stateChar].close
+        })
+        // negation is (?:(?!js)[^/]*)
+        re += stateChar === '!' ? '(?:(?!(?:' : '(?:'
+        this.debug('plType %j %j', stateChar, re)
+        stateChar = false
+      continue
+
+      case ')':
+        if (inClass || !patternListStack.length) {
+          re += '\\)'
+          continue
+        }
+
+        clearStateChar()
+        hasMagic = true
+        var pl = patternListStack.pop()
+        // negation is (?:(?!js)[^/]*)
+        // The others are (?:<pattern>)<type>
+        re += pl.close
+        if (pl.type === '!') {
+          negativeLists.push(pl)
+        }
+        pl.reEnd = re.length
+      continue
+
+      case '|':
+        if (inClass || !patternListStack.length || escaping) {
+          re += '\\|'
+          escaping = false
+          continue
+        }
+
+        clearStateChar()
+        re += '|'
+      continue
+
+      // these are mostly the same in regexp and glob
+      case '[':
+        // swallow any state-tracking char before the [
+        clearStateChar()
+
+        if (inClass) {
+          re += '\\' + c
+          continue
+        }
+
+        inClass = true
+        classStart = i
+        reClassStart = re.length
+        re += c
+      continue
+
+      case ']':
+        //  a right bracket shall lose its special
+        //  meaning and represent itself in
+        //  a bracket expression if it occurs
+        //  first in the list.  -- POSIX.2 2.8.3.2
+        if (i === classStart + 1 || !inClass) {
+          re += '\\' + c
+          escaping = false
+          continue
+        }
+
+        // handle the case where we left a class open.
+        // "[z-a]" is valid, equivalent to "\[z-a\]"
+        // split where the last [ was, make sure we don't have
+        // an invalid re. if so, re-walk the contents of the
+        // would-be class to re-translate any characters that
+        // were passed through as-is
+        // TODO: It would probably be faster to determine this
+        // without a try/catch and a new RegExp, but it's tricky
+        // to do safely.  For now, this is safe and works.
+        var cs = pattern.substring(classStart + 1, i)
+        try {
+          RegExp('[' + cs + ']')
+        } catch (er) {
+          // not a valid class!
+          var sp = this.parse(cs, SUBPARSE)
+          re = re.substr(0, reClassStart) + '\\[' + sp[0] + '\\]'
+          hasMagic = hasMagic || sp[1]
+          inClass = false
+          continue
+        }
+
+        // finish up the class.
+        hasMagic = true
+        inClass = false
+        re += c
+      continue
+
+      default:
+        // swallow any state char that wasn't consumed
+        clearStateChar()
+
+        if (escaping) {
+          // no need
+          escaping = false
+        } else if (reSpecials[c]
+          && !(c === '^' && inClass)) {
+          re += '\\'
+        }
+
+        re += c
+
+    } // switch
+  } // for
+
+  // handle the case where we left a class open.
+  // "[abc" is valid, equivalent to "\[abc"
+  if (inClass) {
+    // split where the last [ was, and escape it
+    // this is a huge pita.  We now have to re-walk
+    // the contents of the would-be class to re-translate
+    // any characters that were passed through as-is
+    cs = pattern.substr(classStart + 1)
+    sp = this.parse(cs, SUBPARSE)
+    re = re.substr(0, reClassStart) + '\\[' + sp[0]
+    hasMagic = hasMagic || sp[1]
+  }
+
+  // handle the case where we had a +( thing at the *end*
+  // of the pattern.
+  // each pattern list stack adds 3 chars, and we need to go through
+  // and escape any | chars that were passed through as-is for the regexp.
+  // Go through and escape them, taking care not to double-escape any
+  // | chars that were already escaped.
+  for (pl = patternListStack.pop(); pl; pl = patternListStack.pop()) {
+    var tail = re.slice(pl.reStart + pl.open.length)
+    this.debug('setting tail', re, pl)
+    // maybe some even number of \, then maybe 1 \, followed by a |
+    tail = tail.replace(/((?:\\{2}){0,64})(\\?)\|/g, function (_, $1, $2) {
+      if (!$2) {
+        // the | isn't already escaped, so escape it.
+        $2 = '\\'
+      }
+
+      // need to escape all those slashes *again*, without escaping the
+      // one that we need for escaping the | character.  As it works out,
+      // escaping an even number of slashes can be done by simply repeating
+      // it exactly after itself.  That's why this trick works.
+      //
+      // I am sorry that you have to see this.
+      return $1 + $1 + $2 + '|'
+    })
+
+    this.debug('tail=%j\n   %s', tail, tail, pl, re)
+    var t = pl.type === '*' ? star
+      : pl.type === '?' ? qmark
+      : '\\' + pl.type
+
+    hasMagic = true
+    re = re.slice(0, pl.reStart) + t + '\\(' + tail
+  }
+
+  // handle trailing things that only matter at the very end.
+  clearStateChar()
+  if (escaping) {
+    // trailing \\
+    re += '\\\\'
+  }
+
+  // only need to apply the nodot start if the re starts with
+  // something that could conceivably capture a dot
+  var addPatternStart = false
+  switch (re.charAt(0)) {
+    case '[': case '.': case '(': addPatternStart = true
+  }
+
+  // Hack to work around lack of negative lookbehind in JS
+  // A pattern like: *.!(x).!(y|z) needs to ensure that a name
+  // like 'a.xyz.yz' doesn't match.  So, the first negative
+  // lookahead, has to look ALL the way ahead, to the end of
+  // the pattern.
+  for (var n = negativeLists.length - 1; n > -1; n--) {
+    var nl = negativeLists[n]
+
+    var nlBefore = re.slice(0, nl.reStart)
+    var nlFirst = re.slice(nl.reStart, nl.reEnd - 8)
+    var nlLast = re.slice(nl.reEnd - 8, nl.reEnd)
+    var nlAfter = re.slice(nl.reEnd)
+
+    nlLast += nlAfter
+
+    // Handle nested stuff like *(*.js|!(*.json)), where open parens
+    // mean that we should *not* include the ) in the bit that is considered
+    // "after" the negated section.
+    var openParensBefore = nlBefore.split('(').length - 1
+    var cleanAfter = nlAfter
+    for (i = 0; i < openParensBefore; i++) {
+      cleanAfter = cleanAfter.replace(/\)[+*?]?/, '')
+    }
+    nlAfter = cleanAfter
+
+    var dollar = ''
+    if (nlAfter === '' && isSub !== SUBPARSE) {
+      dollar = '$'
+    }
+    var newRe = nlBefore + nlFirst + nlAfter + dollar + nlLast
+    re = newRe
+  }
+
+  // if the re is not "" at this point, then we need to make sure
+  // it doesn't match against an empty path part.
+  // Otherwise a/* will match a/, which it should not.
+  if (re !== '' && hasMagic) {
+    re = '(?=.)' + re
+  }
+
+  if (addPatternStart) {
+    re = patternStart + re
+  }
+
+  // parsing just a piece of a larger pattern.
+  if (isSub === SUBPARSE) {
+    return [re, hasMagic]
+  }
+
+  // skip the regexp for non-magical patterns
+  // unescape anything in it, though, so that it'll be
+  // an exact match against a file etc.
+  if (!hasMagic) {
+    return globUnescape(pattern)
+  }
+
+  var flags = options.nocase ? 'i' : ''
+  try {
+    var regExp = new RegExp('^' + re + '$', flags)
+  } catch (er) /* istanbul ignore next - should be impossible */ {
+    // If it was an invalid regular expression, then it can't match
+    // anything.  This trick looks for a character after the end of
+    // the string, which is of course impossible, except in multi-line
+    // mode, but it's not a /m regex.
+    return new RegExp('$.')
+  }
+
+  regExp._glob = pattern
+  regExp._src = re
+
+  return regExp
+}
+
+minimatch.makeRe = function (pattern, options) {
+  return new Minimatch(pattern, options || {}).makeRe()
+}
+
+Minimatch.prototype.makeRe = makeRe
+function makeRe () {
+  if (this.regexp || this.regexp === false) return this.regexp
+
+  // at this point, this.set is a 2d array of partial
+  // pattern strings, or "**".
+  //
+  // It's better to use .match().  This function shouldn't
+  // be used, really, but it's pretty convenient sometimes,
+  // when you just want to work with a regex.
+  var set = this.set
+
+  if (!set.length) {
+    this.regexp = false
+    return this.regexp
+  }
+  var options = this.options
+
+  var twoStar = options.noglobstar ? star
+    : options.dot ? twoStarDot
+    : twoStarNoDot
+  var flags = options.nocase ? 'i' : ''
+
+  var re = set.map(function (pattern) {
+    return pattern.map(function (p) {
+      return (p === GLOBSTAR) ? twoStar
+      : (typeof p === 'string') ? regExpEscape(p)
+      : p._src
+    }).join('\\\/')
+  }).join('|')
+
+  // must match entire pattern
+  // ending in a * or ** will make it less strict.
+  re = '^(?:' + re + ')$'
+
+  // can match anything, as long as it's not this.
+  if (this.negate) re = '^(?!' + re + ').*$'
+
+  try {
+    this.regexp = new RegExp(re, flags)
+  } catch (ex) /* istanbul ignore next - should be impossible */ {
+    this.regexp = false
+  }
+  return this.regexp
+}
+
+minimatch.match = function (list, pattern, options) {
+  options = options || {}
+  var mm = new Minimatch(pattern, options)
+  list = list.filter(function (f) {
+    return mm.match(f)
+  })
+  if (mm.options.nonull && !list.length) {
+    list.push(pattern)
+  }
+  return list
+}
+
+Minimatch.prototype.match = function match (f, partial) {
+  if (typeof partial === 'undefined') partial = this.partial
+  this.debug('match', f, this.pattern)
+  // short-circuit in the case of busted things.
+  // comments, etc.
+  if (this.comment) return false
+  if (this.empty) return f === ''
+
+  if (f === '/' && partial) return true
+
+  var options = this.options
+
+  // windows: need to use /, not \
+  if (path.sep !== '/') {
+    f = f.split(path.sep).join('/')
+  }
+
+  // treat the test path as a set of pathparts.
+  f = f.split(slashSplit)
+  this.debug(this.pattern, 'split', f)
+
+  // just ONE of the pattern sets in this.set needs to match
+  // in order for it to be valid.  If negating, then just one
+  // match means that we have failed.
+  // Either way, return on the first hit.
+
+  var set = this.set
+  this.debug(this.pattern, 'set', set)
+
+  // Find the basename of the path by looking for the last non-empty segment
+  var filename
+  var i
+  for (i = f.length - 1; i >= 0; i--) {
+    filename = f[i]
+    if (filename) break
+  }
+
+  for (i = 0; i < set.length; i++) {
+    var pattern = set[i]
+    var file = f
+    if (options.matchBase && pattern.length === 1) {
+      file = [filename]
+    }
+    var hit = this.matchOne(file, pattern, partial)
+    if (hit) {
+      if (options.flipNegate) return true
+      return !this.negate
+    }
+  }
+
+  // didn't get any hits.  this is success if it's a negative
+  // pattern, failure otherwise.
+  if (options.flipNegate) return false
+  return this.negate
+}
+
+// set partial to true to test if, for example,
+// "/a/b" matches the start of "/*/b/*/d"
+// Partial means, if you run out of file before you run
+// out of pattern, then that's fine, as long as all
+// the parts match.
+Minimatch.prototype.matchOne = function (file, pattern, partial) {
+  var options = this.options
+
+  this.debug('matchOne',
+    { 'this': this, file: file, pattern: pattern })
+
+  this.debug('matchOne', file.length, pattern.length)
+
+  for (var fi = 0,
+      pi = 0,
+      fl = file.length,
+      pl = pattern.length
+      ; (fi < fl) && (pi < pl)
+      ; fi++, pi++) {
+    this.debug('matchOne loop')
+    var p = pattern[pi]
+    var f = file[fi]
+
+    this.debug(pattern, p, f)
+
+    // should be impossible.
+    // some invalid regexp stuff in the set.
+    /* istanbul ignore if */
+    if (p === false) return false
+
+    if (p === GLOBSTAR) {
+      this.debug('GLOBSTAR', [pattern, p, f])
+
+      // "**"
+      // a/**/b/**/c would match the following:
+      // a/b/x/y/z/c
+      // a/x/y/z/b/c
+      // a/b/x/b/x/c
+      // a/b/c
+      // To do this, take the rest of the pattern after
+      // the **, and see if it would match the file remainder.
+      // If so, return success.
+      // If not, the ** "swallows" a segment, and try again.
+      // This is recursively awful.
+      //
+      // a/**/b/**/c matching a/b/x/y/z/c
+      // - a matches a
+      // - doublestar
+      //   - matchOne(b/x/y/z/c, b/**/c)
+      //     - b matches b
+      //     - doublestar
+      //       - matchOne(x/y/z/c, c) -> no
+      //       - matchOne(y/z/c, c) -> no
+      //       - matchOne(z/c, c) -> no
+      //       - matchOne(c, c) yes, hit
+      var fr = fi
+      var pr = pi + 1
+      if (pr === pl) {
+        this.debug('** at the end')
+        // a ** at the end will just swallow the rest.
+        // We have found a match.
+        // however, it will not swallow /.x, unless
+        // options.dot is set.
+        // . and .. are *never* matched by **, for explosively
+        // exponential reasons.
+        for (; fi < fl; fi++) {
+          if (file[fi] === '.' || file[fi] === '..' ||
+            (!options.dot && file[fi].charAt(0) === '.')) return false
+        }
+        return true
+      }
+
+      // ok, let's see if we can swallow whatever we can.
+      while (fr < fl) {
+        var swallowee = file[fr]
+
+        this.debug('\nglobstar while', file, fr, pattern, pr, swallowee)
+
+        // XXX remove this slice.  Just pass the start index.
+        if (this.matchOne(file.slice(fr), pattern.slice(pr), partial)) {
+          this.debug('globstar found match!', fr, fl, swallowee)
+          // found a match.
+          return true
+        } else {
+          // can't swallow "." or ".." ever.
+          // can only swallow ".foo" when explicitly asked.
+          if (swallowee === '.' || swallowee === '..' ||
+            (!options.dot && swallowee.charAt(0) === '.')) {
+            this.debug('dot detected!', file, fr, pattern, pr)
+            break
+          }
+
+          // ** swallows a segment, and continue.
+          this.debug('globstar swallow a segment, and continue')
+          fr++
+        }
+      }
+
+      // no match was found.
+      // However, in partial mode, we can't say this is necessarily over.
+      // If there's more *pattern* left, then
+      /* istanbul ignore if */
+      if (partial) {
+        // ran out of file
+        this.debug('\n>>> no match, partial?', file, fr, pattern, pr)
+        if (fr === fl) return true
+      }
+      return false
+    }
+
+    // something other than **
+    // non-magic patterns just have to match exactly
+    // patterns with magic have been turned into regexps.
+    var hit
+    if (typeof p === 'string') {
+      hit = f === p
+      this.debug('string match', p, f, hit)
+    } else {
+      hit = f.match(p)
+      this.debug('pattern match', p, f, hit)
+    }
+
+    if (!hit) return false
+  }
+
+  // Note: ending in / means that we'll get a final ""
+  // at the end of the pattern.  This can only match a
+  // corresponding "" at the end of the file.
+  // If the file ends in /, then it can only match a
+  // a pattern that ends in /, unless the pattern just
+  // doesn't have any more for it. But, a/b/ should *not*
+  // match "a/b/*", even though "" matches against the
+  // [^/]*? pattern, except in partial mode, where it might
+  // simply not be reached yet.
+  // However, a/b/ should still satisfy a/*
+
+  // now either we fell off the end of the pattern, or we're done.
+  if (fi === fl && pi === pl) {
+    // ran out of pattern and filename at the same time.
+    // an exact hit!
+    return true
+  } else if (fi === fl) {
+    // ran out of file, but still had pattern left.
+    // this is ok if we're doing the match as part of
+    // a glob fs traversal.
+    return partial
+  } else /* istanbul ignore else */ if (pi === pl) {
+    // ran out of pattern, still have file left.
+    // this is only acceptable if we're on the very last
+    // empty segment of a file with a trailing slash.
+    // a/* should match a/b/
+    return (fi === fl - 1) && (file[fi] === '')
+  }
+
+  // should be unreachable.
+  /* istanbul ignore next */
+  throw new Error('wtf?')
+}
+
+// replace stuff like \* with *
+function globUnescape (s) {
+  return s.replace(/\\(.)/g, '$1')
+}
+
+function regExpEscape (s) {
+  return s.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&')
+}
+
+
+/***/ }),
+/* 55 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var implementation = __webpack_require__(237);
+
+module.exports = Function.prototype.bind || implementation;
+
+
+/***/ }),
+/* 56 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var GetIntrinsic = __webpack_require__(25);
+
+/** @type {import('.')} */
+var $defineProperty = GetIntrinsic('%Object.defineProperty%', true) || false;
+if ($defineProperty) {
+	try {
+		$defineProperty({}, 'a', { value: 1 });
+	} catch (e) {
+		// IE 8 has a broken defineProperty
+		$defineProperty = false;
+	}
+}
+
+module.exports = $defineProperty;
+
+
+/***/ }),
+/* 57 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(process) {// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+var getOwnPropertyDescriptors = Object.getOwnPropertyDescriptors ||
+  function getOwnPropertyDescriptors(obj) {
+    var keys = Object.keys(obj);
+    var descriptors = {};
+    for (var i = 0; i < keys.length; i++) {
+      descriptors[keys[i]] = Object.getOwnPropertyDescriptor(obj, keys[i]);
+    }
+    return descriptors;
+  };
+
+var formatRegExp = /%[sdj%]/g;
+exports.format = function(f) {
+  if (!isString(f)) {
+    var objects = [];
+    for (var i = 0; i < arguments.length; i++) {
+      objects.push(inspect(arguments[i]));
+    }
+    return objects.join(' ');
+  }
+
+  var i = 1;
+  var args = arguments;
+  var len = args.length;
+  var str = String(f).replace(formatRegExp, function(x) {
+    if (x === '%%') return '%';
+    if (i >= len) return x;
+    switch (x) {
+      case '%s': return String(args[i++]);
+      case '%d': return Number(args[i++]);
+      case '%j':
+        try {
+          return JSON.stringify(args[i++]);
+        } catch (_) {
+          return '[Circular]';
+        }
+      default:
+        return x;
+    }
+  });
+  for (var x = args[i]; i < len; x = args[++i]) {
+    if (isNull(x) || !isObject(x)) {
+      str += ' ' + x;
+    } else {
+      str += ' ' + inspect(x);
+    }
+  }
+  return str;
+};
+
+
+// Mark that a method should not be used.
+// Returns a modified function which warns once by default.
+// If --no-deprecation is set, then it is a no-op.
+exports.deprecate = function(fn, msg) {
+  if (typeof process !== 'undefined' && process.noDeprecation === true) {
+    return fn;
+  }
+
+  // Allow for deprecating things in the process of starting up.
+  if (typeof process === 'undefined') {
+    return function() {
+      return exports.deprecate(fn, msg).apply(this, arguments);
+    };
+  }
+
+  var warned = false;
+  function deprecated() {
+    if (!warned) {
+      if (process.throwDeprecation) {
+        throw new Error(msg);
+      } else if (process.traceDeprecation) {
+        console.trace(msg);
+      } else {
+        console.error(msg);
+      }
+      warned = true;
+    }
+    return fn.apply(this, arguments);
+  }
+
+  return deprecated;
+};
+
+
+var debugs = {};
+var debugEnviron;
+exports.debuglog = function(set) {
+  if (isUndefined(debugEnviron))
+    debugEnviron = process.env.NODE_DEBUG || '';
+  set = set.toUpperCase();
+  if (!debugs[set]) {
+    if (new RegExp('\\b' + set + '\\b', 'i').test(debugEnviron)) {
+      var pid = process.pid;
+      debugs[set] = function() {
+        var msg = exports.format.apply(exports, arguments);
+        console.error('%s %d: %s', set, pid, msg);
+      };
+    } else {
+      debugs[set] = function() {};
+    }
+  }
+  return debugs[set];
+};
+
+
+/**
+ * Echos the value of a value. Trys to print the value out
+ * in the best way possible given the different types.
+ *
+ * @param {Object} obj The object to print out.
+ * @param {Object} opts Optional options object that alters the output.
+ */
+/* legacy: obj, showHidden, depth, colors*/
+function inspect(obj, opts) {
+  // default options
+  var ctx = {
+    seen: [],
+    stylize: stylizeNoColor
+  };
+  // legacy...
+  if (arguments.length >= 3) ctx.depth = arguments[2];
+  if (arguments.length >= 4) ctx.colors = arguments[3];
+  if (isBoolean(opts)) {
+    // legacy...
+    ctx.showHidden = opts;
+  } else if (opts) {
+    // got an "options" object
+    exports._extend(ctx, opts);
+  }
+  // set default options
+  if (isUndefined(ctx.showHidden)) ctx.showHidden = false;
+  if (isUndefined(ctx.depth)) ctx.depth = 2;
+  if (isUndefined(ctx.colors)) ctx.colors = false;
+  if (isUndefined(ctx.customInspect)) ctx.customInspect = true;
+  if (ctx.colors) ctx.stylize = stylizeWithColor;
+  return formatValue(ctx, obj, ctx.depth);
+}
+exports.inspect = inspect;
+
+
+// http://en.wikipedia.org/wiki/ANSI_escape_code#graphics
+inspect.colors = {
+  'bold' : [1, 22],
+  'italic' : [3, 23],
+  'underline' : [4, 24],
+  'inverse' : [7, 27],
+  'white' : [37, 39],
+  'grey' : [90, 39],
+  'black' : [30, 39],
+  'blue' : [34, 39],
+  'cyan' : [36, 39],
+  'green' : [32, 39],
+  'magenta' : [35, 39],
+  'red' : [31, 39],
+  'yellow' : [33, 39]
+};
+
+// Don't use 'blue' not visible on cmd.exe
+inspect.styles = {
+  'special': 'cyan',
+  'number': 'yellow',
+  'boolean': 'yellow',
+  'undefined': 'grey',
+  'null': 'bold',
+  'string': 'green',
+  'date': 'magenta',
+  // "name": intentionally not styling
+  'regexp': 'red'
+};
+
+
+function stylizeWithColor(str, styleType) {
+  var style = inspect.styles[styleType];
+
+  if (style) {
+    return '\u001b[' + inspect.colors[style][0] + 'm' + str +
+           '\u001b[' + inspect.colors[style][1] + 'm';
+  } else {
+    return str;
+  }
+}
+
+
+function stylizeNoColor(str, styleType) {
+  return str;
+}
+
+
+function arrayToHash(array) {
+  var hash = {};
+
+  array.forEach(function(val, idx) {
+    hash[val] = true;
+  });
+
+  return hash;
+}
+
+
+function formatValue(ctx, value, recurseTimes) {
+  // Provide a hook for user-specified inspect functions.
+  // Check that value is an object with an inspect function on it
+  if (ctx.customInspect &&
+      value &&
+      isFunction(value.inspect) &&
+      // Filter out the util module, it's inspect function is special
+      value.inspect !== exports.inspect &&
+      // Also filter out any prototype objects using the circular check.
+      !(value.constructor && value.constructor.prototype === value)) {
+    var ret = value.inspect(recurseTimes, ctx);
+    if (!isString(ret)) {
+      ret = formatValue(ctx, ret, recurseTimes);
+    }
+    return ret;
+  }
+
+  // Primitive types cannot have properties
+  var primitive = formatPrimitive(ctx, value);
+  if (primitive) {
+    return primitive;
+  }
+
+  // Look up the keys of the object.
+  var keys = Object.keys(value);
+  var visibleKeys = arrayToHash(keys);
+
+  if (ctx.showHidden) {
+    keys = Object.getOwnPropertyNames(value);
+  }
+
+  // IE doesn't make error fields non-enumerable
+  // http://msdn.microsoft.com/en-us/library/ie/dww52sbt(v=vs.94).aspx
+  if (isError(value)
+      && (keys.indexOf('message') >= 0 || keys.indexOf('description') >= 0)) {
+    return formatError(value);
+  }
+
+  // Some type of object without properties can be shortcutted.
+  if (keys.length === 0) {
+    if (isFunction(value)) {
+      var name = value.name ? ': ' + value.name : '';
+      return ctx.stylize('[Function' + name + ']', 'special');
+    }
+    if (isRegExp(value)) {
+      return ctx.stylize(RegExp.prototype.toString.call(value), 'regexp');
+    }
+    if (isDate(value)) {
+      return ctx.stylize(Date.prototype.toString.call(value), 'date');
+    }
+    if (isError(value)) {
+      return formatError(value);
+    }
+  }
+
+  var base = '', array = false, braces = ['{', '}'];
+
+  // Make Array say that they are Array
+  if (isArray(value)) {
+    array = true;
+    braces = ['[', ']'];
+  }
+
+  // Make functions say that they are functions
+  if (isFunction(value)) {
+    var n = value.name ? ': ' + value.name : '';
+    base = ' [Function' + n + ']';
+  }
+
+  // Make RegExps say that they are RegExps
+  if (isRegExp(value)) {
+    base = ' ' + RegExp.prototype.toString.call(value);
+  }
+
+  // Make dates with properties first say the date
+  if (isDate(value)) {
+    base = ' ' + Date.prototype.toUTCString.call(value);
+  }
+
+  // Make error with message first say the error
+  if (isError(value)) {
+    base = ' ' + formatError(value);
+  }
+
+  if (keys.length === 0 && (!array || value.length == 0)) {
+    return braces[0] + base + braces[1];
+  }
+
+  if (recurseTimes < 0) {
+    if (isRegExp(value)) {
+      return ctx.stylize(RegExp.prototype.toString.call(value), 'regexp');
+    } else {
+      return ctx.stylize('[Object]', 'special');
+    }
+  }
+
+  ctx.seen.push(value);
+
+  var output;
+  if (array) {
+    output = formatArray(ctx, value, recurseTimes, visibleKeys, keys);
+  } else {
+    output = keys.map(function(key) {
+      return formatProperty(ctx, value, recurseTimes, visibleKeys, key, array);
+    });
+  }
+
+  ctx.seen.pop();
+
+  return reduceToSingleString(output, base, braces);
+}
+
+
+function formatPrimitive(ctx, value) {
+  if (isUndefined(value))
+    return ctx.stylize('undefined', 'undefined');
+  if (isString(value)) {
+    var simple = '\'' + JSON.stringify(value).replace(/^"|"$/g, '')
+                                             .replace(/'/g, "\\'")
+                                             .replace(/\\"/g, '"') + '\'';
+    return ctx.stylize(simple, 'string');
+  }
+  if (isNumber(value))
+    return ctx.stylize('' + value, 'number');
+  if (isBoolean(value))
+    return ctx.stylize('' + value, 'boolean');
+  // For some reason typeof null is "object", so special case here.
+  if (isNull(value))
+    return ctx.stylize('null', 'null');
+}
+
+
+function formatError(value) {
+  return '[' + Error.prototype.toString.call(value) + ']';
+}
+
+
+function formatArray(ctx, value, recurseTimes, visibleKeys, keys) {
+  var output = [];
+  for (var i = 0, l = value.length; i < l; ++i) {
+    if (hasOwnProperty(value, String(i))) {
+      output.push(formatProperty(ctx, value, recurseTimes, visibleKeys,
+          String(i), true));
+    } else {
+      output.push('');
+    }
+  }
+  keys.forEach(function(key) {
+    if (!key.match(/^\d+$/)) {
+      output.push(formatProperty(ctx, value, recurseTimes, visibleKeys,
+          key, true));
+    }
+  });
+  return output;
+}
+
+
+function formatProperty(ctx, value, recurseTimes, visibleKeys, key, array) {
+  var name, str, desc;
+  desc = Object.getOwnPropertyDescriptor(value, key) || { value: value[key] };
+  if (desc.get) {
+    if (desc.set) {
+      str = ctx.stylize('[Getter/Setter]', 'special');
+    } else {
+      str = ctx.stylize('[Getter]', 'special');
+    }
+  } else {
+    if (desc.set) {
+      str = ctx.stylize('[Setter]', 'special');
+    }
+  }
+  if (!hasOwnProperty(visibleKeys, key)) {
+    name = '[' + key + ']';
+  }
+  if (!str) {
+    if (ctx.seen.indexOf(desc.value) < 0) {
+      if (isNull(recurseTimes)) {
+        str = formatValue(ctx, desc.value, null);
+      } else {
+        str = formatValue(ctx, desc.value, recurseTimes - 1);
+      }
+      if (str.indexOf('\n') > -1) {
+        if (array) {
+          str = str.split('\n').map(function(line) {
+            return '  ' + line;
+          }).join('\n').substr(2);
+        } else {
+          str = '\n' + str.split('\n').map(function(line) {
+            return '   ' + line;
+          }).join('\n');
+        }
+      }
+    } else {
+      str = ctx.stylize('[Circular]', 'special');
+    }
+  }
+  if (isUndefined(name)) {
+    if (array && key.match(/^\d+$/)) {
+      return str;
+    }
+    name = JSON.stringify('' + key);
+    if (name.match(/^"([a-zA-Z_][a-zA-Z_0-9]*)"$/)) {
+      name = name.substr(1, name.length - 2);
+      name = ctx.stylize(name, 'name');
+    } else {
+      name = name.replace(/'/g, "\\'")
+                 .replace(/\\"/g, '"')
+                 .replace(/(^"|"$)/g, "'");
+      name = ctx.stylize(name, 'string');
+    }
+  }
+
+  return name + ': ' + str;
+}
+
+
+function reduceToSingleString(output, base, braces) {
+  var numLinesEst = 0;
+  var length = output.reduce(function(prev, cur) {
+    numLinesEst++;
+    if (cur.indexOf('\n') >= 0) numLinesEst++;
+    return prev + cur.replace(/\u001b\[\d\d?m/g, '').length + 1;
+  }, 0);
+
+  if (length > 60) {
+    return braces[0] +
+           (base === '' ? '' : base + '\n ') +
+           ' ' +
+           output.join(',\n  ') +
+           ' ' +
+           braces[1];
+  }
+
+  return braces[0] + base + ' ' + output.join(', ') + ' ' + braces[1];
+}
+
+
+// NOTE: These type checking functions intentionally don't use `instanceof`
+// because it is fragile and can be easily faked with `Object.create()`.
+function isArray(ar) {
+  return Array.isArray(ar);
+}
+exports.isArray = isArray;
+
+function isBoolean(arg) {
+  return typeof arg === 'boolean';
+}
+exports.isBoolean = isBoolean;
+
+function isNull(arg) {
+  return arg === null;
+}
+exports.isNull = isNull;
+
+function isNullOrUndefined(arg) {
+  return arg == null;
+}
+exports.isNullOrUndefined = isNullOrUndefined;
+
+function isNumber(arg) {
+  return typeof arg === 'number';
+}
+exports.isNumber = isNumber;
+
+function isString(arg) {
+  return typeof arg === 'string';
+}
+exports.isString = isString;
+
+function isSymbol(arg) {
+  return typeof arg === 'symbol';
+}
+exports.isSymbol = isSymbol;
+
+function isUndefined(arg) {
+  return arg === void 0;
+}
+exports.isUndefined = isUndefined;
+
+function isRegExp(re) {
+  return isObject(re) && objectToString(re) === '[object RegExp]';
+}
+exports.isRegExp = isRegExp;
+
+function isObject(arg) {
+  return typeof arg === 'object' && arg !== null;
+}
+exports.isObject = isObject;
+
+function isDate(d) {
+  return isObject(d) && objectToString(d) === '[object Date]';
+}
+exports.isDate = isDate;
+
+function isError(e) {
+  return isObject(e) &&
+      (objectToString(e) === '[object Error]' || e instanceof Error);
+}
+exports.isError = isError;
+
+function isFunction(arg) {
+  return typeof arg === 'function';
+}
+exports.isFunction = isFunction;
+
+function isPrimitive(arg) {
+  return arg === null ||
+         typeof arg === 'boolean' ||
+         typeof arg === 'number' ||
+         typeof arg === 'string' ||
+         typeof arg === 'symbol' ||  // ES6 symbol
+         typeof arg === 'undefined';
+}
+exports.isPrimitive = isPrimitive;
+
+exports.isBuffer = __webpack_require__(243);
+
+function objectToString(o) {
+  return Object.prototype.toString.call(o);
+}
+
+
+function pad(n) {
+  return n < 10 ? '0' + n.toString(10) : n.toString(10);
+}
+
+
+var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',
+              'Oct', 'Nov', 'Dec'];
+
+// 26 Feb 16:19:34
+function timestamp() {
+  var d = new Date();
+  var time = [pad(d.getHours()),
+              pad(d.getMinutes()),
+              pad(d.getSeconds())].join(':');
+  return [d.getDate(), months[d.getMonth()], time].join(' ');
+}
+
+
+// log is just a thin wrapper to console.log that prepends a timestamp
+exports.log = function() {
+  console.log('%s - %s', timestamp(), exports.format.apply(exports, arguments));
+};
+
+
+/**
+ * Inherit the prototype methods from one constructor into another.
+ *
+ * The Function.prototype.inherits from lang.js rewritten as a standalone
+ * function (not on Function.prototype). NOTE: If this file is to be loaded
+ * during bootstrapping this function needs to be rewritten using some native
+ * functions as prototype setup using normal JavaScript does not work as
+ * expected during bootstrapping (see mirror.js in r114903).
+ *
+ * @param {function} ctor Constructor function which needs to inherit the
+ *     prototype.
+ * @param {function} superCtor Constructor function to inherit prototype from.
+ */
+exports.inherits = __webpack_require__(244);
+
+exports._extend = function(origin, add) {
+  // Don't do anything if add isn't an object
+  if (!add || !isObject(add)) return origin;
+
+  var keys = Object.keys(add);
+  var i = keys.length;
+  while (i--) {
+    origin[keys[i]] = add[keys[i]];
+  }
+  return origin;
+};
+
+function hasOwnProperty(obj, prop) {
+  return Object.prototype.hasOwnProperty.call(obj, prop);
+}
+
+var kCustomPromisifiedSymbol = typeof Symbol !== 'undefined' ? Symbol('util.promisify.custom') : undefined;
+
+exports.promisify = function promisify(original) {
+  if (typeof original !== 'function')
+    throw new TypeError('The "original" argument must be of type Function');
+
+  if (kCustomPromisifiedSymbol && original[kCustomPromisifiedSymbol]) {
+    var fn = original[kCustomPromisifiedSymbol];
+    if (typeof fn !== 'function') {
+      throw new TypeError('The "util.promisify.custom" argument must be of type Function');
+    }
+    Object.defineProperty(fn, kCustomPromisifiedSymbol, {
+      value: fn, enumerable: false, writable: false, configurable: true
+    });
+    return fn;
+  }
+
+  function fn() {
+    var promiseResolve, promiseReject;
+    var promise = new Promise(function (resolve, reject) {
+      promiseResolve = resolve;
+      promiseReject = reject;
+    });
+
+    var args = [];
+    for (var i = 0; i < arguments.length; i++) {
+      args.push(arguments[i]);
+    }
+    args.push(function (err, value) {
+      if (err) {
+        promiseReject(err);
+      } else {
+        promiseResolve(value);
+      }
+    });
+
+    try {
+      original.apply(this, args);
+    } catch (err) {
+      promiseReject(err);
+    }
+
+    return promise;
+  }
+
+  Object.setPrototypeOf(fn, Object.getPrototypeOf(original));
+
+  if (kCustomPromisifiedSymbol) Object.defineProperty(fn, kCustomPromisifiedSymbol, {
+    value: fn, enumerable: false, writable: false, configurable: true
+  });
+  return Object.defineProperties(
+    fn,
+    getOwnPropertyDescriptors(original)
+  );
+}
+
+exports.promisify.custom = kCustomPromisifiedSymbol
+
+function callbackifyOnRejected(reason, cb) {
+  // `!reason` guard inspired by bluebird (Ref: https://goo.gl/t5IS6M).
+  // Because `null` is a special error value in callbacks which means "no error
+  // occurred", we error-wrap so the callback consumer can distinguish between
+  // "the promise rejected with null" or "the promise fulfilled with undefined".
+  if (!reason) {
+    var newReason = new Error('Promise was rejected with a falsy value');
+    newReason.reason = reason;
+    reason = newReason;
+  }
+  return cb(reason);
+}
+
+function callbackify(original) {
+  if (typeof original !== 'function') {
+    throw new TypeError('The "original" argument must be of type Function');
+  }
+
+  // We DO NOT return the promise as it gives the user a false sense that
+  // the promise is actually somehow related to the callback's execution
+  // and that the callback throwing will reject the promise.
+  function callbackified() {
+    var args = [];
+    for (var i = 0; i < arguments.length; i++) {
+      args.push(arguments[i]);
+    }
+
+    var maybeCb = args.pop();
+    if (typeof maybeCb !== 'function') {
+      throw new TypeError('The last argument must be of type Function');
+    }
+    var self = this;
+    var cb = function() {
+      return maybeCb.apply(self, arguments);
+    };
+    // In true node style we process the callback on `nextTick` with all the
+    // implications (stack, `uncaughtException`, `async_hooks`)
+    original.apply(this, args)
+      .then(function(ret) { process.nextTick(cb, null, ret) },
+            function(rej) { process.nextTick(callbackifyOnRejected, rej, cb) });
+  }
+
+  Object.setPrototypeOf(callbackified, Object.getPrototypeOf(original));
+  Object.defineProperties(callbackified,
+                          getOwnPropertyDescriptors(original));
+  return callbackified;
+}
+exports.callbackify = callbackify;
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 58 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+function posix(path) {
+	return path.charAt(0) === '/';
+}
+
+function win32(path) {
+	// https://github.com/nodejs/node/blob/b3fcc245fb25539909ef1d5eaa01dbf92e168633/lib/path.js#L56
+	var splitDeviceRe = /^([a-zA-Z]:|[\\\/]{2}[^\\\/]+[\\\/]+[^\\\/]+)?([\\\/])?([\s\S]*?)$/;
+	var result = splitDeviceRe.exec(path);
+	var device = result[1] || '';
+	var isUnc = Boolean(device && device.charAt(1) !== ':');
+
+	// UNC paths are always absolute
+	return Boolean(result[2] || isUnc);
+}
+
+module.exports = process.platform === 'win32' ? win32 : posix;
+module.exports.posix = posix;
+module.exports.win32 = win32;
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -6703,12 +8924,12 @@ module.exports = getEventCharCode;
 var _prodInvariant = __webpack_require__(17),
     _assign = __webpack_require__(4);
 
-var ReactNoopUpdateQueue = __webpack_require__(54);
+var ReactNoopUpdateQueue = __webpack_require__(60);
 
-var canDefineProperty = __webpack_require__(25);
-var emptyObject = __webpack_require__(26);
+var canDefineProperty = __webpack_require__(27);
+var emptyObject = __webpack_require__(35);
 var invariant = __webpack_require__(1);
-var lowPriorityWarning = __webpack_require__(33);
+var lowPriorityWarning = __webpack_require__(36);
 
 /**
  * Base class helpers for the updating state of a component.
@@ -6833,17 +9054,15 @@ module.exports = {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 54 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2015-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2015-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -6934,17 +9153,15 @@ module.exports = ReactNoopUpdateQueue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 55 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2014-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -6959,17 +9176,15 @@ var REACT_ELEMENT_TYPE = typeof Symbol === 'function' && Symbol['for'] && Symbol
 module.exports = REACT_ELEMENT_TYPE;
 
 /***/ }),
-/* 56 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -7005,17 +9220,15 @@ function getIteratorFn(maybeIterable) {
 module.exports = getIteratorFn;
 
 /***/ }),
-/* 57 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2014-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -7032,12 +9245,12 @@ var ReactCurrentOwner = __webpack_require__(10);
 var ReactComponentTreeHook = __webpack_require__(7);
 var ReactElement = __webpack_require__(14);
 
-var checkReactTypeSpec = __webpack_require__(93);
+var checkReactTypeSpec = __webpack_require__(111);
 
-var canDefineProperty = __webpack_require__(25);
-var getIteratorFn = __webpack_require__(56);
+var canDefineProperty = __webpack_require__(27);
+var getIteratorFn = __webpack_require__(62);
 var warning = __webpack_require__(2);
-var lowPriorityWarning = __webpack_require__(33);
+var lowPriorityWarning = __webpack_require__(36);
 
 function getDeclarationErrorAddendum() {
   if (ReactCurrentOwner.current) {
@@ -7266,7 +9479,7 @@ module.exports = ReactElementValidator;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 58 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7283,7 +9496,7 @@ module.exports = ReactElementValidator;
 // Therefore we re-export development-only version with all the PropTypes checks here.
 // However if one is migrating to the `prop-types` npm library, they will go through the
 // `index.js` entry point, and it will branch depending on the environment.
-var factory = __webpack_require__(59);
+var factory = __webpack_require__(65);
 module.exports = function(isValidElement) {
   // It is still allowed in 15.5.
   var throwOnDirectAccess = false;
@@ -7292,7 +9505,7 @@ module.exports = function(isValidElement) {
 
 
 /***/ }),
-/* 59 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7305,13 +9518,33 @@ module.exports = function(isValidElement) {
 
 
 
-var emptyFunction = __webpack_require__(34);
-var invariant = __webpack_require__(35);
-var warning = __webpack_require__(60);
+var ReactIs = __webpack_require__(66);
 var assign = __webpack_require__(4);
 
-var ReactPropTypesSecret = __webpack_require__(36);
-var checkPropTypes = __webpack_require__(97);
+var ReactPropTypesSecret = __webpack_require__(37);
+var has = __webpack_require__(67);
+var checkPropTypes = __webpack_require__(117);
+
+var printWarning = function() {};
+
+if (process.env.NODE_ENV !== 'production') {
+  printWarning = function(text) {
+    var message = 'Warning: ' + text;
+    if (typeof console !== 'undefined') {
+      console.error(message);
+    }
+    try {
+      // --- Welcome to debugging React ---
+      // This error was thrown as a convenience so that you can use this stack
+      // to find the callsite that caused this warning to fire.
+      throw new Error(message);
+    } catch (x) {}
+  };
+}
+
+function emptyFunctionThatReturnsNull() {
+  return null;
+}
 
 module.exports = function(isValidElement, throwOnDirectAccess) {
   /* global Symbol */
@@ -7392,6 +9625,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
   // Keep this list in sync with production version in `./factoryWithThrowingShims.js`.
   var ReactPropTypes = {
     array: createPrimitiveTypeChecker('array'),
+    bigint: createPrimitiveTypeChecker('bigint'),
     bool: createPrimitiveTypeChecker('boolean'),
     func: createPrimitiveTypeChecker('function'),
     number: createPrimitiveTypeChecker('number'),
@@ -7402,6 +9636,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
     any: createAnyTypeChecker(),
     arrayOf: createArrayOfTypeChecker,
     element: createElementTypeChecker(),
+    elementType: createElementTypeTypeChecker(),
     instanceOf: createInstanceTypeChecker,
     node: createNodeChecker(),
     objectOf: createObjectOfTypeChecker,
@@ -7436,8 +9671,9 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
    * is prohibitively expensive if they are created too often, such as what
    * happens in oneOfType() for any type before the one that matched.
    */
-  function PropTypeError(message) {
+  function PropTypeError(message, data) {
     this.message = message;
+    this.data = data && typeof data === 'object' ? data: {};
     this.stack = '';
   }
   // Make `instanceof Error` still work for returned errors.
@@ -7455,12 +9691,13 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
       if (secret !== ReactPropTypesSecret) {
         if (throwOnDirectAccess) {
           // New behavior only for users of `prop-types` package
-          invariant(
-            false,
+          var err = new Error(
             'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
             'Use `PropTypes.checkPropTypes()` to call them. ' +
             'Read more at http://fb.me/use-check-prop-types'
           );
+          err.name = 'Invariant Violation';
+          throw err;
         } else if (process.env.NODE_ENV !== 'production' && typeof console !== 'undefined') {
           // Old behavior for people using React.PropTypes
           var cacheKey = componentName + ':' + propName;
@@ -7469,15 +9706,12 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
             // Avoid spamming the console because they are often not actionable except for lib authors
             manualPropTypeWarningCount < 3
           ) {
-            warning(
-              false,
+            printWarning(
               'You are manually calling a React.PropTypes validation ' +
-              'function for the `%s` prop on `%s`. This is deprecated ' +
+              'function for the `' + propFullName + '` prop on `' + componentName + '`. This is deprecated ' +
               'and will throw in the standalone `prop-types` package. ' +
               'You may be seeing this warning due to a third-party PropTypes ' +
-              'library. See https://fb.me/react-warning-dont-call-proptypes ' + 'for details.',
-              propFullName,
-              componentName
+              'library. See https://fb.me/react-warning-dont-call-proptypes ' + 'for details.'
             );
             manualPropTypeCallCache[cacheKey] = true;
             manualPropTypeWarningCount++;
@@ -7513,7 +9747,10 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
         // 'of type `object`'.
         var preciseType = getPreciseType(propValue);
 
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + preciseType + '` supplied to `' + componentName + '`, expected ') + ('`' + expectedType + '`.'));
+        return new PropTypeError(
+          'Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + preciseType + '` supplied to `' + componentName + '`, expected ') + ('`' + expectedType + '`.'),
+          {expectedType: expectedType}
+        );
       }
       return null;
     }
@@ -7521,7 +9758,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
   }
 
   function createAnyTypeChecker() {
-    return createChainableTypeChecker(emptyFunction.thatReturnsNull);
+    return createChainableTypeChecker(emptyFunctionThatReturnsNull);
   }
 
   function createArrayOfTypeChecker(typeChecker) {
@@ -7557,6 +9794,18 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
     return createChainableTypeChecker(validate);
   }
 
+  function createElementTypeTypeChecker() {
+    function validate(props, propName, componentName, location, propFullName) {
+      var propValue = props[propName];
+      if (!ReactIs.isValidElementType(propValue)) {
+        var propType = getPropType(propValue);
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected a single ReactElement type.'));
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
   function createInstanceTypeChecker(expectedClass) {
     function validate(props, propName, componentName, location, propFullName) {
       if (!(props[propName] instanceof expectedClass)) {
@@ -7571,8 +9820,17 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
   function createEnumTypeChecker(expectedValues) {
     if (!Array.isArray(expectedValues)) {
-      process.env.NODE_ENV !== 'production' ? warning(false, 'Invalid argument supplied to oneOf, expected an instance of array.') : void 0;
-      return emptyFunction.thatReturnsNull;
+      if (process.env.NODE_ENV !== 'production') {
+        if (arguments.length > 1) {
+          printWarning(
+            'Invalid arguments supplied to oneOf, expected an array, got ' + arguments.length + ' arguments. ' +
+            'A common mistake is to write oneOf(x, y, z) instead of oneOf([x, y, z]).'
+          );
+        } else {
+          printWarning('Invalid argument supplied to oneOf, expected an array.');
+        }
+      }
+      return emptyFunctionThatReturnsNull;
     }
 
     function validate(props, propName, componentName, location, propFullName) {
@@ -7583,8 +9841,14 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
         }
       }
 
-      var valuesString = JSON.stringify(expectedValues);
-      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of value `' + propValue + '` ' + ('supplied to `' + componentName + '`, expected one of ' + valuesString + '.'));
+      var valuesString = JSON.stringify(expectedValues, function replacer(key, value) {
+        var type = getPreciseType(value);
+        if (type === 'symbol') {
+          return String(value);
+        }
+        return value;
+      });
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of value `' + String(propValue) + '` ' + ('supplied to `' + componentName + '`, expected one of ' + valuesString + '.'));
     }
     return createChainableTypeChecker(validate);
   }
@@ -7600,7 +9864,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
         return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an object.'));
       }
       for (var key in propValue) {
-        if (propValue.hasOwnProperty(key)) {
+        if (has(propValue, key)) {
           var error = typeChecker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
           if (error instanceof Error) {
             return error;
@@ -7614,33 +9878,35 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
   function createUnionTypeChecker(arrayOfTypeCheckers) {
     if (!Array.isArray(arrayOfTypeCheckers)) {
-      process.env.NODE_ENV !== 'production' ? warning(false, 'Invalid argument supplied to oneOfType, expected an instance of array.') : void 0;
-      return emptyFunction.thatReturnsNull;
+      process.env.NODE_ENV !== 'production' ? printWarning('Invalid argument supplied to oneOfType, expected an instance of array.') : void 0;
+      return emptyFunctionThatReturnsNull;
     }
 
     for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
       var checker = arrayOfTypeCheckers[i];
       if (typeof checker !== 'function') {
-        warning(
-          false,
+        printWarning(
           'Invalid argument supplied to oneOfType. Expected an array of check functions, but ' +
-          'received %s at index %s.',
-          getPostfixForTypeWarning(checker),
-          i
+          'received ' + getPostfixForTypeWarning(checker) + ' at index ' + i + '.'
         );
-        return emptyFunction.thatReturnsNull;
+        return emptyFunctionThatReturnsNull;
       }
     }
 
     function validate(props, propName, componentName, location, propFullName) {
+      var expectedTypes = [];
       for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
         var checker = arrayOfTypeCheckers[i];
-        if (checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret) == null) {
+        var checkerResult = checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret);
+        if (checkerResult == null) {
           return null;
         }
+        if (checkerResult.data && has(checkerResult.data, 'expectedType')) {
+          expectedTypes.push(checkerResult.data.expectedType);
+        }
       }
-
-      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`.'));
+      var expectedTypesMessage = (expectedTypes.length > 0) ? ', expected one of type [' + expectedTypes.join(', ') + ']': '';
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`' + expectedTypesMessage + '.'));
     }
     return createChainableTypeChecker(validate);
   }
@@ -7655,6 +9921,13 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
     return createChainableTypeChecker(validate);
   }
 
+  function invalidValidatorError(componentName, location, propFullName, key, type) {
+    return new PropTypeError(
+      (componentName || 'React class') + ': ' + location + ' type `' + propFullName + '.' + key + '` is invalid; ' +
+      'it must be a function, usually from the `prop-types` package, but received `' + type + '`.'
+    );
+  }
+
   function createShapeTypeChecker(shapeTypes) {
     function validate(props, propName, componentName, location, propFullName) {
       var propValue = props[propName];
@@ -7664,8 +9937,8 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
       }
       for (var key in shapeTypes) {
         var checker = shapeTypes[key];
-        if (!checker) {
-          continue;
+        if (typeof checker !== 'function') {
+          return invalidValidatorError(componentName, location, propFullName, key, getPreciseType(checker));
         }
         var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
         if (error) {
@@ -7684,16 +9957,18 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
       if (propType !== 'object') {
         return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
       }
-      // We need to check all keys in case some are required but missing from
-      // props.
+      // We need to check all keys in case some are required but missing from props.
       var allKeys = assign({}, props[propName], shapeTypes);
       for (var key in allKeys) {
         var checker = shapeTypes[key];
+        if (has(shapeTypes, key) && typeof checker !== 'function') {
+          return invalidValidatorError(componentName, location, propFullName, key, getPreciseType(checker));
+        }
         if (!checker) {
           return new PropTypeError(
             'Invalid ' + location + ' `' + propFullName + '` key `' + key + '` supplied to `' + componentName + '`.' +
             '\nBad object: ' + JSON.stringify(props[propName], null, '  ') +
-            '\nValid keys: ' +  JSON.stringify(Object.keys(shapeTypes), null, '  ')
+            '\nValid keys: ' + JSON.stringify(Object.keys(shapeTypes), null, '  ')
           );
         }
         var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
@@ -7758,6 +10033,11 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
     // Native Symbol.
     if (propType === 'symbol') {
       return true;
+    }
+
+    // falsy value can't be a Symbol
+    if (!propValue) {
+      return false;
     }
 
     // 19.4.3.5 Symbol.prototype[@@toStringTag] === 'Symbol'
@@ -7834,6 +10114,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
   }
 
   ReactPropTypes.checkPropTypes = checkPropTypes;
+  ReactPropTypes.resetWarningCache = checkPropTypes.resetWarningCache;
   ReactPropTypes.PropTypes = ReactPropTypes;
 
   return ReactPropTypes;
@@ -7842,86 +10123,37 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 60 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright (c) 2014-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- */
+/* WEBPACK VAR INJECTION */(function(process) {
 
-
-
-var emptyFunction = __webpack_require__(34);
-
-/**
- * Similar to invariant but only logs a warning if the condition is not met.
- * This can be used to log issues in development environments in critical
- * paths. Removing the logging code for production environments will keep the
- * same logic and follow the same code paths.
- */
-
-var warning = emptyFunction;
-
-if (process.env.NODE_ENV !== 'production') {
-  var printWarning = function printWarning(format) {
-    for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-      args[_key - 1] = arguments[_key];
-    }
-
-    var argIndex = 0;
-    var message = 'Warning: ' + format.replace(/%s/g, function () {
-      return args[argIndex++];
-    });
-    if (typeof console !== 'undefined') {
-      console.error(message);
-    }
-    try {
-      // --- Welcome to debugging React ---
-      // This error was thrown as a convenience so that you can use this stack
-      // to find the callsite that caused this warning to fire.
-      throw new Error(message);
-    } catch (x) {}
-  };
-
-  warning = function warning(condition, format) {
-    if (format === undefined) {
-      throw new Error('`warning(condition, format, ...args)` requires a warning ' + 'message argument');
-    }
-
-    if (format.indexOf('Failed Composite propType: ') === 0) {
-      return; // Ignore CompositeComponent proptype check.
-    }
-
-    if (!condition) {
-      for (var _len2 = arguments.length, args = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
-        args[_key2 - 2] = arguments[_key2];
-      }
-
-      printWarning.apply(undefined, [format].concat(args));
-    }
-  };
+if (process.env.NODE_ENV === 'production') {
+  module.exports = __webpack_require__(115);
+} else {
+  module.exports = __webpack_require__(116);
 }
 
-module.exports = warning;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 61 */
+/* 67 */
+/***/ (function(module, exports) {
+
+module.exports = Function.call.bind(Object.prototype.hasOwnProperty);
+
+
+/***/ }),
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2015-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2015-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -7934,17 +10166,15 @@ var ReactDOMComponentFlags = {
 module.exports = ReactDOMComponentFlags;
 
 /***/ }),
-/* 62 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2014-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -7998,17 +10228,15 @@ module.exports = accumulateInto;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 63 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -8034,17 +10262,15 @@ function forEachAccumulated(arr, cb, scope) {
 module.exports = forEachAccumulated;
 
 /***/ }),
-/* 64 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -8072,17 +10298,15 @@ function getTextContentAccessor() {
 module.exports = getTextContentAccessor;
 
 /***/ }),
-/* 65 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -8197,17 +10421,15 @@ module.exports = PooledClass.addPoolingTo(CallbackQueue);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 66 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -8224,17 +10446,15 @@ var ReactFeatureFlags = {
 module.exports = ReactFeatureFlags;
 
 /***/ }),
-/* 67 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -8257,7 +10477,7 @@ function attachTracker(inst, tracker) {
 }
 
 function detachTracker(inst) {
-  delete inst._wrapperState.valueTracker;
+  inst._wrapperState.valueTracker = null;
 }
 
 function getValueFromNode(node) {
@@ -8352,17 +10572,15 @@ var inputValueTracking = {
 module.exports = inputValueTracking;
 
 /***/ }),
-/* 68 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -8408,17 +10626,15 @@ function isTextInputElement(elem) {
 module.exports = isTextInputElement;
 
 /***/ }),
-/* 69 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -8438,25 +10654,23 @@ var ViewportMetrics = {
 module.exports = ViewportMetrics;
 
 /***/ }),
-/* 70 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
 
 
 var ExecutionEnvironment = __webpack_require__(6);
-var escapeTextContentForBrowser = __webpack_require__(31);
-var setInnerHTML = __webpack_require__(30);
+var escapeTextContentForBrowser = __webpack_require__(32);
+var setInnerHTML = __webpack_require__(31);
 
 /**
  * Set the textContent property of a node, ensuring that whitespace is preserved
@@ -8495,17 +10709,15 @@ if (ExecutionEnvironment.canUseDOM) {
 module.exports = setTextContent;
 
 /***/ }),
-/* 71 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -8527,17 +10739,15 @@ function focusNode(node) {
 module.exports = focusNode;
 
 /***/ }),
-/* 72 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -8556,6 +10766,7 @@ var isUnitlessNumber = {
   boxFlexGroup: true,
   boxOrdinalGroup: true,
   columnCount: true,
+  columns: true,
   flex: true,
   flexGrow: true,
   flexPositive: true,
@@ -8686,17 +10897,15 @@ var CSSProperty = {
 module.exports = CSSProperty;
 
 /***/ }),
-/* 73 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -8706,7 +10915,7 @@ var DOMProperty = __webpack_require__(13);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactInstrumentation = __webpack_require__(8);
 
-var quoteAttributeValueForBrowser = __webpack_require__(136);
+var quoteAttributeValueForBrowser = __webpack_require__(156);
 var warning = __webpack_require__(2);
 
 var VALID_ATTRIBUTE_NAME_REGEX = new RegExp('^[' + DOMProperty.ATTRIBUTE_NAME_START_CHAR + '][' + DOMProperty.ATTRIBUTE_NAME_CHAR + ']*$');
@@ -8927,17 +11136,15 @@ module.exports = DOMPropertyOperations;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 74 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -8949,17 +11156,15 @@ var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 module.exports = ReactPropTypesSecret;
 
 /***/ }),
-/* 75 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -8967,7 +11172,7 @@ module.exports = ReactPropTypesSecret;
 
 var _assign = __webpack_require__(4);
 
-var LinkedValueUtils = __webpack_require__(45);
+var LinkedValueUtils = __webpack_require__(46);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(11);
 
@@ -9155,17 +11360,15 @@ module.exports = ReactDOMSelect;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 76 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -9174,11 +11377,11 @@ module.exports = ReactDOMSelect;
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
-var ReactCompositeComponent = __webpack_require__(144);
-var ReactEmptyComponent = __webpack_require__(78);
-var ReactHostComponent = __webpack_require__(79);
+var ReactCompositeComponent = __webpack_require__(164);
+var ReactEmptyComponent = __webpack_require__(85);
+var ReactHostComponent = __webpack_require__(86);
 
-var getNextDebugID = __webpack_require__(147);
+var getNextDebugID = __webpack_require__(167);
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
 
@@ -9290,17 +11493,15 @@ module.exports = instantiateReactComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 77 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -9336,17 +11537,15 @@ module.exports = ReactNodeTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 78 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2014-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -9371,17 +11570,15 @@ ReactEmptyComponent.injection = ReactEmptyComponentInjection;
 module.exports = ReactEmptyComponent;
 
 /***/ }),
-/* 79 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2014-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -9445,17 +11642,15 @@ module.exports = ReactHostComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 80 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -9464,11 +11659,11 @@ module.exports = ReactHostComponent;
 var _prodInvariant = __webpack_require__(3);
 
 var ReactCurrentOwner = __webpack_require__(10);
-var REACT_ELEMENT_TYPE = __webpack_require__(148);
+var REACT_ELEMENT_TYPE = __webpack_require__(168);
 
-var getIteratorFn = __webpack_require__(149);
+var getIteratorFn = __webpack_require__(169);
 var invariant = __webpack_require__(1);
-var KeyEscapeUtils = __webpack_require__(49);
+var KeyEscapeUtils = __webpack_require__(50);
 var warning = __webpack_require__(2);
 
 var SEPARATOR = '.';
@@ -9627,7 +11822,7 @@ module.exports = traverseAllChildren;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 81 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9635,11 +11830,9 @@ module.exports = traverseAllChildren;
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -9710,27 +11903,25 @@ module.exports = EventListener;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 82 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
 
 
-var ReactDOMSelection = __webpack_require__(161);
+var ReactDOMSelection = __webpack_require__(181);
 
-var containsNode = __webpack_require__(163);
-var focusNode = __webpack_require__(71);
-var getActiveElement = __webpack_require__(83);
+var containsNode = __webpack_require__(183);
+var focusNode = __webpack_require__(78);
+var getActiveElement = __webpack_require__(90);
 
 function isInDocument(node) {
   return containsNode(document.documentElement, node);
@@ -9838,7 +12029,7 @@ var ReactInputSelection = {
 module.exports = ReactInputSelection;
 
 /***/ }),
-/* 83 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9846,11 +12037,9 @@ module.exports = ReactInputSelection;
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -9882,17 +12071,15 @@ function getActiveElement(doc) /*?DOMElement*/{
 module.exports = getActiveElement;
 
 /***/ }),
-/* 84 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -9903,24 +12090,24 @@ var _prodInvariant = __webpack_require__(3);
 var DOMLazyTree = __webpack_require__(19);
 var DOMProperty = __webpack_require__(13);
 var React = __webpack_require__(16);
-var ReactBrowserEventEmitter = __webpack_require__(32);
+var ReactBrowserEventEmitter = __webpack_require__(33);
 var ReactCurrentOwner = __webpack_require__(10);
 var ReactDOMComponentTree = __webpack_require__(5);
-var ReactDOMContainerInfo = __webpack_require__(178);
-var ReactDOMFeatureFlags = __webpack_require__(179);
-var ReactFeatureFlags = __webpack_require__(66);
+var ReactDOMContainerInfo = __webpack_require__(198);
+var ReactDOMFeatureFlags = __webpack_require__(199);
+var ReactFeatureFlags = __webpack_require__(73);
 var ReactInstanceMap = __webpack_require__(23);
 var ReactInstrumentation = __webpack_require__(8);
-var ReactMarkupChecksum = __webpack_require__(180);
+var ReactMarkupChecksum = __webpack_require__(200);
 var ReactReconciler = __webpack_require__(18);
-var ReactUpdateQueue = __webpack_require__(50);
+var ReactUpdateQueue = __webpack_require__(51);
 var ReactUpdates = __webpack_require__(11);
 
-var emptyObject = __webpack_require__(26);
-var instantiateReactComponent = __webpack_require__(76);
+var emptyObject = __webpack_require__(35);
+var instantiateReactComponent = __webpack_require__(83);
 var invariant = __webpack_require__(1);
-var setInnerHTML = __webpack_require__(30);
-var shouldUpdateReactComponent = __webpack_require__(48);
+var setInnerHTML = __webpack_require__(31);
+var shouldUpdateReactComponent = __webpack_require__(49);
 var warning = __webpack_require__(2);
 
 var ATTR_NAME = DOMProperty.ID_ATTRIBUTE_NAME;
@@ -10426,23 +12613,21 @@ module.exports = ReactMount;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 85 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
 
 
-var ReactNodeTypes = __webpack_require__(77);
+var ReactNodeTypes = __webpack_require__(84);
 
 function getHostComponentFromComposite(inst) {
   var type;
@@ -10461,7 +12646,7 @@ function getHostComponentFromComposite(inst) {
 module.exports = getHostComponentFromComposite;
 
 /***/ }),
-/* 86 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {/**
@@ -10472,57 +12657,1898 @@ module.exports = getHostComponentFromComposite;
  */
 
 if (process.env.NODE_ENV !== 'production') {
-  var REACT_ELEMENT_TYPE = (typeof Symbol === 'function' &&
-    Symbol.for &&
-    Symbol.for('react.element')) ||
-    0xeac7;
-
-  var isValidElement = function(object) {
-    return typeof object === 'object' &&
-      object !== null &&
-      object.$$typeof === REACT_ELEMENT_TYPE;
-  };
+  var ReactIs = __webpack_require__(66);
 
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(59)(isValidElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(65)(ReactIs.isElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(189)();
+  module.exports = __webpack_require__(209)();
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 87 */
+/* 94 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(process) {// Approach:
+//
+// 1. Get the minimatch set
+// 2. For each pattern in the set, PROCESS(pattern, false)
+// 3. Store matches per-set, then uniq them
+//
+// PROCESS(pattern, inGlobStar)
+// Get the first [n] items from pattern that are all strings
+// Join these together.  This is PREFIX.
+//   If there is no more remaining, then stat(PREFIX) and
+//   add to matches if it succeeds.  END.
+//
+// If inGlobStar and PREFIX is symlink and points to dir
+//   set ENTRIES = []
+// else readdir(PREFIX) as ENTRIES
+//   If fail, END
+//
+// with ENTRIES
+//   If pattern[n] is GLOBSTAR
+//     // handle the case where the globstar match is empty
+//     // by pruning it out, and testing the resulting pattern
+//     PROCESS(pattern[0..n] + pattern[n+1 .. $], false)
+//     // handle other cases.
+//     for ENTRY in ENTRIES (not dotfiles)
+//       // attach globstar + tail onto the entry
+//       // Mark that this entry is a globstar match
+//       PROCESS(pattern[0..n] + ENTRY + pattern[n .. $], true)
+//
+//   else // not globstar
+//     for ENTRY in ENTRIES (not dotfiles, unless pattern[n] is dot)
+//       Test ENTRY against pattern[n]
+//       If fails, continue
+//       If passes, PROCESS(pattern[0..n] + item + pattern[n+1 .. $])
+//
+// Caveat:
+//   Cache all stats and readdirs results to minimize syscall.  Since all
+//   we ever care about is existence and directory-ness, we can just keep
+//   `true` for files, and [children,...] for directories, or `false` for
+//   things that don't exist.
+
+module.exports = glob
+
+var rp = __webpack_require__(95)
+var minimatch = __webpack_require__(54)
+var Minimatch = minimatch.Minimatch
+var inherits = __webpack_require__(223)
+var EE = __webpack_require__(224).EventEmitter
+var path = __webpack_require__(24)
+var assert = __webpack_require__(96)
+var isAbsolute = __webpack_require__(58)
+var globSync = __webpack_require__(245)
+var common = __webpack_require__(102)
+var setopts = common.setopts
+var ownProp = common.ownProp
+var inflight = __webpack_require__(246)
+var util = __webpack_require__(57)
+var childrenIgnored = common.childrenIgnored
+var isIgnored = common.isIgnored
+
+var once = __webpack_require__(104)
+
+function glob (pattern, options, cb) {
+  if (typeof options === 'function') cb = options, options = {}
+  if (!options) options = {}
+
+  if (options.sync) {
+    if (cb)
+      throw new TypeError('callback provided to sync glob')
+    return globSync(pattern, options)
+  }
+
+  return new Glob(pattern, options, cb)
+}
+
+glob.sync = globSync
+var GlobSync = glob.GlobSync = globSync.GlobSync
+
+// old api surface
+glob.glob = glob
+
+function extend (origin, add) {
+  if (add === null || typeof add !== 'object') {
+    return origin
+  }
+
+  var keys = Object.keys(add)
+  var i = keys.length
+  while (i--) {
+    origin[keys[i]] = add[keys[i]]
+  }
+  return origin
+}
+
+glob.hasMagic = function (pattern, options_) {
+  var options = extend({}, options_)
+  options.noprocess = true
+
+  var g = new Glob(pattern, options)
+  var set = g.minimatch.set
+
+  if (!pattern)
+    return false
+
+  if (set.length > 1)
+    return true
+
+  for (var j = 0; j < set[0].length; j++) {
+    if (typeof set[0][j] !== 'string')
+      return true
+  }
+
+  return false
+}
+
+glob.Glob = Glob
+inherits(Glob, EE)
+function Glob (pattern, options, cb) {
+  if (typeof options === 'function') {
+    cb = options
+    options = null
+  }
+
+  if (options && options.sync) {
+    if (cb)
+      throw new TypeError('callback provided to sync glob')
+    return new GlobSync(pattern, options)
+  }
+
+  if (!(this instanceof Glob))
+    return new Glob(pattern, options, cb)
+
+  setopts(this, pattern, options)
+  this._didRealPath = false
+
+  // process each pattern in the minimatch set
+  var n = this.minimatch.set.length
+
+  // The matches are stored as {<filename>: true,...} so that
+  // duplicates are automagically pruned.
+  // Later, we do an Object.keys() on these.
+  // Keep them as a list so we can fill in when nonull is set.
+  this.matches = new Array(n)
+
+  if (typeof cb === 'function') {
+    cb = once(cb)
+    this.on('error', cb)
+    this.on('end', function (matches) {
+      cb(null, matches)
+    })
+  }
+
+  var self = this
+  this._processing = 0
+
+  this._emitQueue = []
+  this._processQueue = []
+  this.paused = false
+
+  if (this.noprocess)
+    return this
+
+  if (n === 0)
+    return done()
+
+  var sync = true
+  for (var i = 0; i < n; i ++) {
+    this._process(this.minimatch.set[i], i, false, done)
+  }
+  sync = false
+
+  function done () {
+    --self._processing
+    if (self._processing <= 0) {
+      if (sync) {
+        process.nextTick(function () {
+          self._finish()
+        })
+      } else {
+        self._finish()
+      }
+    }
+  }
+}
+
+Glob.prototype._finish = function () {
+  assert(this instanceof Glob)
+  if (this.aborted)
+    return
+
+  if (this.realpath && !this._didRealpath)
+    return this._realpath()
+
+  common.finish(this)
+  this.emit('end', this.found)
+}
+
+Glob.prototype._realpath = function () {
+  if (this._didRealpath)
+    return
+
+  this._didRealpath = true
+
+  var n = this.matches.length
+  if (n === 0)
+    return this._finish()
+
+  var self = this
+  for (var i = 0; i < this.matches.length; i++)
+    this._realpathSet(i, next)
+
+  function next () {
+    if (--n === 0)
+      self._finish()
+  }
+}
+
+Glob.prototype._realpathSet = function (index, cb) {
+  var matchset = this.matches[index]
+  if (!matchset)
+    return cb()
+
+  var found = Object.keys(matchset)
+  var self = this
+  var n = found.length
+
+  if (n === 0)
+    return cb()
+
+  var set = this.matches[index] = Object.create(null)
+  found.forEach(function (p, i) {
+    // If there's a problem with the stat, then it means that
+    // one or more of the links in the realpath couldn't be
+    // resolved.  just return the abs value in that case.
+    p = self._makeAbs(p)
+    rp.realpath(p, self.realpathCache, function (er, real) {
+      if (!er)
+        set[real] = true
+      else if (er.syscall === 'stat')
+        set[p] = true
+      else
+        self.emit('error', er) // srsly wtf right here
+
+      if (--n === 0) {
+        self.matches[index] = set
+        cb()
+      }
+    })
+  })
+}
+
+Glob.prototype._mark = function (p) {
+  return common.mark(this, p)
+}
+
+Glob.prototype._makeAbs = function (f) {
+  return common.makeAbs(this, f)
+}
+
+Glob.prototype.abort = function () {
+  this.aborted = true
+  this.emit('abort')
+}
+
+Glob.prototype.pause = function () {
+  if (!this.paused) {
+    this.paused = true
+    this.emit('pause')
+  }
+}
+
+Glob.prototype.resume = function () {
+  if (this.paused) {
+    this.emit('resume')
+    this.paused = false
+    if (this._emitQueue.length) {
+      var eq = this._emitQueue.slice(0)
+      this._emitQueue.length = 0
+      for (var i = 0; i < eq.length; i ++) {
+        var e = eq[i]
+        this._emitMatch(e[0], e[1])
+      }
+    }
+    if (this._processQueue.length) {
+      var pq = this._processQueue.slice(0)
+      this._processQueue.length = 0
+      for (var i = 0; i < pq.length; i ++) {
+        var p = pq[i]
+        this._processing--
+        this._process(p[0], p[1], p[2], p[3])
+      }
+    }
+  }
+}
+
+Glob.prototype._process = function (pattern, index, inGlobStar, cb) {
+  assert(this instanceof Glob)
+  assert(typeof cb === 'function')
+
+  if (this.aborted)
+    return
+
+  this._processing++
+  if (this.paused) {
+    this._processQueue.push([pattern, index, inGlobStar, cb])
+    return
+  }
+
+  //console.error('PROCESS %d', this._processing, pattern)
+
+  // Get the first [n] parts of pattern that are all strings.
+  var n = 0
+  while (typeof pattern[n] === 'string') {
+    n ++
+  }
+  // now n is the index of the first one that is *not* a string.
+
+  // see if there's anything else
+  var prefix
+  switch (n) {
+    // if not, then this is rather simple
+    case pattern.length:
+      this._processSimple(pattern.join('/'), index, cb)
+      return
+
+    case 0:
+      // pattern *starts* with some non-trivial item.
+      // going to readdir(cwd), but not include the prefix in matches.
+      prefix = null
+      break
+
+    default:
+      // pattern has some string bits in the front.
+      // whatever it starts with, whether that's 'absolute' like /foo/bar,
+      // or 'relative' like '../baz'
+      prefix = pattern.slice(0, n).join('/')
+      break
+  }
+
+  var remain = pattern.slice(n)
+
+  // get the list of entries.
+  var read
+  if (prefix === null)
+    read = '.'
+  else if (isAbsolute(prefix) ||
+      isAbsolute(pattern.map(function (p) {
+        return typeof p === 'string' ? p : '[*]'
+      }).join('/'))) {
+    if (!prefix || !isAbsolute(prefix))
+      prefix = '/' + prefix
+    read = prefix
+  } else
+    read = prefix
+
+  var abs = this._makeAbs(read)
+
+  //if ignored, skip _processing
+  if (childrenIgnored(this, read))
+    return cb()
+
+  var isGlobStar = remain[0] === minimatch.GLOBSTAR
+  if (isGlobStar)
+    this._processGlobStar(prefix, read, abs, remain, index, inGlobStar, cb)
+  else
+    this._processReaddir(prefix, read, abs, remain, index, inGlobStar, cb)
+}
+
+Glob.prototype._processReaddir = function (prefix, read, abs, remain, index, inGlobStar, cb) {
+  var self = this
+  this._readdir(abs, inGlobStar, function (er, entries) {
+    return self._processReaddir2(prefix, read, abs, remain, index, inGlobStar, entries, cb)
+  })
+}
+
+Glob.prototype._processReaddir2 = function (prefix, read, abs, remain, index, inGlobStar, entries, cb) {
+
+  // if the abs isn't a dir, then nothing can match!
+  if (!entries)
+    return cb()
+
+  // It will only match dot entries if it starts with a dot, or if
+  // dot is set.  Stuff like @(.foo|.bar) isn't allowed.
+  var pn = remain[0]
+  var negate = !!this.minimatch.negate
+  var rawGlob = pn._glob
+  var dotOk = this.dot || rawGlob.charAt(0) === '.'
+
+  var matchedEntries = []
+  for (var i = 0; i < entries.length; i++) {
+    var e = entries[i]
+    if (e.charAt(0) !== '.' || dotOk) {
+      var m
+      if (negate && !prefix) {
+        m = !e.match(pn)
+      } else {
+        m = e.match(pn)
+      }
+      if (m)
+        matchedEntries.push(e)
+    }
+  }
+
+  //console.error('prd2', prefix, entries, remain[0]._glob, matchedEntries)
+
+  var len = matchedEntries.length
+  // If there are no matched entries, then nothing matches.
+  if (len === 0)
+    return cb()
+
+  // if this is the last remaining pattern bit, then no need for
+  // an additional stat *unless* the user has specified mark or
+  // stat explicitly.  We know they exist, since readdir returned
+  // them.
+
+  if (remain.length === 1 && !this.mark && !this.stat) {
+    if (!this.matches[index])
+      this.matches[index] = Object.create(null)
+
+    for (var i = 0; i < len; i ++) {
+      var e = matchedEntries[i]
+      if (prefix) {
+        if (prefix !== '/')
+          e = prefix + '/' + e
+        else
+          e = prefix + e
+      }
+
+      if (e.charAt(0) === '/' && !this.nomount) {
+        e = path.join(this.root, e)
+      }
+      this._emitMatch(index, e)
+    }
+    // This was the last one, and no stats were needed
+    return cb()
+  }
+
+  // now test all matched entries as stand-ins for that part
+  // of the pattern.
+  remain.shift()
+  for (var i = 0; i < len; i ++) {
+    var e = matchedEntries[i]
+    var newPattern
+    if (prefix) {
+      if (prefix !== '/')
+        e = prefix + '/' + e
+      else
+        e = prefix + e
+    }
+    this._process([e].concat(remain), index, inGlobStar, cb)
+  }
+  cb()
+}
+
+Glob.prototype._emitMatch = function (index, e) {
+  if (this.aborted)
+    return
+
+  if (isIgnored(this, e))
+    return
+
+  if (this.paused) {
+    this._emitQueue.push([index, e])
+    return
+  }
+
+  var abs = isAbsolute(e) ? e : this._makeAbs(e)
+
+  if (this.mark)
+    e = this._mark(e)
+
+  if (this.absolute)
+    e = abs
+
+  if (this.matches[index][e])
+    return
+
+  if (this.nodir) {
+    var c = this.cache[abs]
+    if (c === 'DIR' || Array.isArray(c))
+      return
+  }
+
+  this.matches[index][e] = true
+
+  var st = this.statCache[abs]
+  if (st)
+    this.emit('stat', e, st)
+
+  this.emit('match', e)
+}
+
+Glob.prototype._readdirInGlobStar = function (abs, cb) {
+  if (this.aborted)
+    return
+
+  // follow all symlinked directories forever
+  // just proceed as if this is a non-globstar situation
+  if (this.follow)
+    return this._readdir(abs, false, cb)
+
+  var lstatkey = 'lstat\0' + abs
+  var self = this
+  var lstatcb = inflight(lstatkey, lstatcb_)
+
+  if (lstatcb)
+    self.fs.lstat(abs, lstatcb)
+
+  function lstatcb_ (er, lstat) {
+    if (er && er.code === 'ENOENT')
+      return cb()
+
+    var isSym = lstat && lstat.isSymbolicLink()
+    self.symlinks[abs] = isSym
+
+    // If it's not a symlink or a dir, then it's definitely a regular file.
+    // don't bother doing a readdir in that case.
+    if (!isSym && lstat && !lstat.isDirectory()) {
+      self.cache[abs] = 'FILE'
+      cb()
+    } else
+      self._readdir(abs, false, cb)
+  }
+}
+
+Glob.prototype._readdir = function (abs, inGlobStar, cb) {
+  if (this.aborted)
+    return
+
+  cb = inflight('readdir\0'+abs+'\0'+inGlobStar, cb)
+  if (!cb)
+    return
+
+  //console.error('RD %j %j', +inGlobStar, abs)
+  if (inGlobStar && !ownProp(this.symlinks, abs))
+    return this._readdirInGlobStar(abs, cb)
+
+  if (ownProp(this.cache, abs)) {
+    var c = this.cache[abs]
+    if (!c || c === 'FILE')
+      return cb()
+
+    if (Array.isArray(c))
+      return cb(null, c)
+  }
+
+  var self = this
+  self.fs.readdir(abs, readdirCb(this, abs, cb))
+}
+
+function readdirCb (self, abs, cb) {
+  return function (er, entries) {
+    if (er)
+      self._readdirError(abs, er, cb)
+    else
+      self._readdirEntries(abs, entries, cb)
+  }
+}
+
+Glob.prototype._readdirEntries = function (abs, entries, cb) {
+  if (this.aborted)
+    return
+
+  // if we haven't asked to stat everything, then just
+  // assume that everything in there exists, so we can avoid
+  // having to stat it a second time.
+  if (!this.mark && !this.stat) {
+    for (var i = 0; i < entries.length; i ++) {
+      var e = entries[i]
+      if (abs === '/')
+        e = abs + e
+      else
+        e = abs + '/' + e
+      this.cache[e] = true
+    }
+  }
+
+  this.cache[abs] = entries
+  return cb(null, entries)
+}
+
+Glob.prototype._readdirError = function (f, er, cb) {
+  if (this.aborted)
+    return
+
+  // handle errors, and cache the information
+  switch (er.code) {
+    case 'ENOTSUP': // https://github.com/isaacs/node-glob/issues/205
+    case 'ENOTDIR': // totally normal. means it *does* exist.
+      var abs = this._makeAbs(f)
+      this.cache[abs] = 'FILE'
+      if (abs === this.cwdAbs) {
+        var error = new Error(er.code + ' invalid cwd ' + this.cwd)
+        error.path = this.cwd
+        error.code = er.code
+        this.emit('error', error)
+        this.abort()
+      }
+      break
+
+    case 'ENOENT': // not terribly unusual
+    case 'ELOOP':
+    case 'ENAMETOOLONG':
+    case 'UNKNOWN':
+      this.cache[this._makeAbs(f)] = false
+      break
+
+    default: // some unusual error.  Treat as failure.
+      this.cache[this._makeAbs(f)] = false
+      if (this.strict) {
+        this.emit('error', er)
+        // If the error is handled, then we abort
+        // if not, we threw out of here
+        this.abort()
+      }
+      if (!this.silent)
+        console.error('glob error', er)
+      break
+  }
+
+  return cb()
+}
+
+Glob.prototype._processGlobStar = function (prefix, read, abs, remain, index, inGlobStar, cb) {
+  var self = this
+  this._readdir(abs, inGlobStar, function (er, entries) {
+    self._processGlobStar2(prefix, read, abs, remain, index, inGlobStar, entries, cb)
+  })
+}
+
+
+Glob.prototype._processGlobStar2 = function (prefix, read, abs, remain, index, inGlobStar, entries, cb) {
+  //console.error('pgs2', prefix, remain[0], entries)
+
+  // no entries means not a dir, so it can never have matches
+  // foo.txt/** doesn't match foo.txt
+  if (!entries)
+    return cb()
+
+  // test without the globstar, and with every child both below
+  // and replacing the globstar.
+  var remainWithoutGlobStar = remain.slice(1)
+  var gspref = prefix ? [ prefix ] : []
+  var noGlobStar = gspref.concat(remainWithoutGlobStar)
+
+  // the noGlobStar pattern exits the inGlobStar state
+  this._process(noGlobStar, index, false, cb)
+
+  var isSym = this.symlinks[abs]
+  var len = entries.length
+
+  // If it's a symlink, and we're in a globstar, then stop
+  if (isSym && inGlobStar)
+    return cb()
+
+  for (var i = 0; i < len; i++) {
+    var e = entries[i]
+    if (e.charAt(0) === '.' && !this.dot)
+      continue
+
+    // these two cases enter the inGlobStar state
+    var instead = gspref.concat(entries[i], remainWithoutGlobStar)
+    this._process(instead, index, true, cb)
+
+    var below = gspref.concat(entries[i], remain)
+    this._process(below, index, true, cb)
+  }
+
+  cb()
+}
+
+Glob.prototype._processSimple = function (prefix, index, cb) {
+  // XXX review this.  Shouldn't it be doing the mounting etc
+  // before doing stat?  kinda weird?
+  var self = this
+  this._stat(prefix, function (er, exists) {
+    self._processSimple2(prefix, index, er, exists, cb)
+  })
+}
+Glob.prototype._processSimple2 = function (prefix, index, er, exists, cb) {
+
+  //console.error('ps2', prefix, exists)
+
+  if (!this.matches[index])
+    this.matches[index] = Object.create(null)
+
+  // If it doesn't exist, then just mark the lack of results
+  if (!exists)
+    return cb()
+
+  if (prefix && isAbsolute(prefix) && !this.nomount) {
+    var trail = /[\/\\]$/.test(prefix)
+    if (prefix.charAt(0) === '/') {
+      prefix = path.join(this.root, prefix)
+    } else {
+      prefix = path.resolve(this.root, prefix)
+      if (trail)
+        prefix += '/'
+    }
+  }
+
+  if (process.platform === 'win32')
+    prefix = prefix.replace(/\\/g, '/')
+
+  // Mark this as a match
+  this._emitMatch(index, prefix)
+  cb()
+}
+
+// Returns either 'DIR', 'FILE', or false
+Glob.prototype._stat = function (f, cb) {
+  var abs = this._makeAbs(f)
+  var needDir = f.slice(-1) === '/'
+
+  if (f.length > this.maxLength)
+    return cb()
+
+  if (!this.stat && ownProp(this.cache, abs)) {
+    var c = this.cache[abs]
+
+    if (Array.isArray(c))
+      c = 'DIR'
+
+    // It exists, but maybe not how we need it
+    if (!needDir || c === 'DIR')
+      return cb(null, c)
+
+    if (needDir && c === 'FILE')
+      return cb()
+
+    // otherwise we have to stat, because maybe c=true
+    // if we know it exists, but not what it is.
+  }
+
+  var exists
+  var stat = this.statCache[abs]
+  if (stat !== undefined) {
+    if (stat === false)
+      return cb(null, stat)
+    else {
+      var type = stat.isDirectory() ? 'DIR' : 'FILE'
+      if (needDir && type === 'FILE')
+        return cb()
+      else
+        return cb(null, type, stat)
+    }
+  }
+
+  var self = this
+  var statcb = inflight('stat\0' + abs, lstatcb_)
+  if (statcb)
+    self.fs.lstat(abs, statcb)
+
+  function lstatcb_ (er, lstat) {
+    if (lstat && lstat.isSymbolicLink()) {
+      // If it's a symlink, then treat it as the target, unless
+      // the target does not exist, then treat it as a file.
+      return self.fs.stat(abs, function (er, stat) {
+        if (er)
+          self._stat2(f, abs, null, lstat, cb)
+        else
+          self._stat2(f, abs, er, stat, cb)
+      })
+    } else {
+      self._stat2(f, abs, er, lstat, cb)
+    }
+  }
+}
+
+Glob.prototype._stat2 = function (f, abs, er, stat, cb) {
+  if (er && (er.code === 'ENOENT' || er.code === 'ENOTDIR')) {
+    this.statCache[abs] = false
+    return cb()
+  }
+
+  var needDir = f.slice(-1) === '/'
+  this.statCache[abs] = stat
+
+  if (abs.slice(-1) === '/' && stat && !stat.isDirectory())
+    return cb(null, false, stat)
+
+  var c = true
+  if (stat)
+    c = stat.isDirectory() ? 'DIR' : 'FILE'
+  this.cache[abs] = this.cache[abs] || c
+
+  if (needDir && c === 'FILE')
+    return cb()
+
+  return cb(null, c, stat)
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 95 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(process) {module.exports = realpath
+realpath.realpath = realpath
+realpath.sync = realpathSync
+realpath.realpathSync = realpathSync
+realpath.monkeypatch = monkeypatch
+realpath.unmonkeypatch = unmonkeypatch
+
+var fs = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"fs\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()))
+var origRealpath = fs.realpath
+var origRealpathSync = fs.realpathSync
+
+var version = process.version
+var ok = /^v[0-5]\./.test(version)
+var old = __webpack_require__(219)
+
+function newError (er) {
+  return er && er.syscall === 'realpath' && (
+    er.code === 'ELOOP' ||
+    er.code === 'ENOMEM' ||
+    er.code === 'ENAMETOOLONG'
+  )
+}
+
+function realpath (p, cache, cb) {
+  if (ok) {
+    return origRealpath(p, cache, cb)
+  }
+
+  if (typeof cache === 'function') {
+    cb = cache
+    cache = null
+  }
+  origRealpath(p, cache, function (er, result) {
+    if (newError(er)) {
+      old.realpath(p, cache, cb)
+    } else {
+      cb(er, result)
+    }
+  })
+}
+
+function realpathSync (p, cache) {
+  if (ok) {
+    return origRealpathSync(p, cache)
+  }
+
+  try {
+    return origRealpathSync(p, cache)
+  } catch (er) {
+    if (newError(er)) {
+      return old.realpathSync(p, cache)
+    } else {
+      throw er
+    }
+  }
+}
+
+function monkeypatch () {
+  fs.realpath = realpath
+  fs.realpathSync = realpathSync
+}
+
+function unmonkeypatch () {
+  fs.realpath = origRealpath
+  fs.realpathSync = origRealpathSync
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 96 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {
+
+var objectAssign = __webpack_require__(225)();
+
+// compare and isBuffer taken from https://github.com/feross/buffer/blob/680e9e5e488f22aac27599a57dc844a6315928dd/index.js
+// original notice:
+
+/*!
+ * The buffer module from node.js, for the browser.
+ *
+ * @author   Feross Aboukhadijeh <feross@feross.org> <http://feross.org>
+ * @license  MIT
+ */
+function compare(a, b) {
+  if (a === b) {
+    return 0;
+  }
+
+  var x = a.length;
+  var y = b.length;
+
+  for (var i = 0, len = Math.min(x, y); i < len; ++i) {
+    if (a[i] !== b[i]) {
+      x = a[i];
+      y = b[i];
+      break;
+    }
+  }
+
+  if (x < y) {
+    return -1;
+  }
+  if (y < x) {
+    return 1;
+  }
+  return 0;
+}
+function isBuffer(b) {
+  if (global.Buffer && typeof global.Buffer.isBuffer === 'function') {
+    return global.Buffer.isBuffer(b);
+  }
+  return !!(b != null && b._isBuffer);
+}
+
+// based on node assert, original notice:
+// NB: The URL to the CommonJS spec is kept just for tradition.
+//     node-assert has evolved a lot since then, both in API and behavior.
+
+// http://wiki.commonjs.org/wiki/Unit_Testing/1.0
+//
+// THIS IS NOT TESTED NOR LIKELY TO WORK OUTSIDE V8!
+//
+// Originally from narwhal.js (http://narwhaljs.org)
+// Copyright (c) 2009 Thomas Robinson <280north.com>
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the 'Software'), to
+// deal in the Software without restriction, including without limitation the
+// rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+// sell copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+// ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+// WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+var util = __webpack_require__(57);
+var hasOwn = Object.prototype.hasOwnProperty;
+var pSlice = Array.prototype.slice;
+var functionsHaveNames = (function () {
+  return function foo() {}.name === 'foo';
+}());
+function pToString (obj) {
+  return Object.prototype.toString.call(obj);
+}
+function isView(arrbuf) {
+  if (isBuffer(arrbuf)) {
+    return false;
+  }
+  if (typeof global.ArrayBuffer !== 'function') {
+    return false;
+  }
+  if (typeof ArrayBuffer.isView === 'function') {
+    return ArrayBuffer.isView(arrbuf);
+  }
+  if (!arrbuf) {
+    return false;
+  }
+  if (arrbuf instanceof DataView) {
+    return true;
+  }
+  if (arrbuf.buffer && arrbuf.buffer instanceof ArrayBuffer) {
+    return true;
+  }
+  return false;
+}
+// 1. The assert module provides functions that throw
+// AssertionError's when particular conditions are not met. The
+// assert module must conform to the following interface.
+
+var assert = module.exports = ok;
+
+// 2. The AssertionError is defined in assert.
+// new assert.AssertionError({ message: message,
+//                             actual: actual,
+//                             expected: expected })
+
+var regex = /\s*function\s+([^\(\s]*)\s*/;
+// based on https://github.com/ljharb/function.prototype.name/blob/adeeeec8bfcc6068b187d7d9fb3d5bb1d3a30899/implementation.js
+function getName(func) {
+  if (!util.isFunction(func)) {
+    return;
+  }
+  if (functionsHaveNames) {
+    return func.name;
+  }
+  var str = func.toString();
+  var match = str.match(regex);
+  return match && match[1];
+}
+assert.AssertionError = function AssertionError(options) {
+  this.name = 'AssertionError';
+  this.actual = options.actual;
+  this.expected = options.expected;
+  this.operator = options.operator;
+  if (options.message) {
+    this.message = options.message;
+    this.generatedMessage = false;
+  } else {
+    this.message = getMessage(this);
+    this.generatedMessage = true;
+  }
+  var stackStartFunction = options.stackStartFunction || fail;
+  if (Error.captureStackTrace) {
+    Error.captureStackTrace(this, stackStartFunction);
+  } else {
+    // non v8 browsers so we can have a stacktrace
+    var err = new Error();
+    if (err.stack) {
+      var out = err.stack;
+
+      // try to strip useless frames
+      var fn_name = getName(stackStartFunction);
+      var idx = out.indexOf('\n' + fn_name);
+      if (idx >= 0) {
+        // once we have located the function frame
+        // we need to strip out everything before it (and its line)
+        var next_line = out.indexOf('\n', idx + 1);
+        out = out.substring(next_line + 1);
+      }
+
+      this.stack = out;
+    }
+  }
+};
+
+// assert.AssertionError instanceof Error
+util.inherits(assert.AssertionError, Error);
+
+function truncate(s, n) {
+  if (typeof s === 'string') {
+    return s.length < n ? s : s.slice(0, n);
+  } else {
+    return s;
+  }
+}
+function inspect(something) {
+  if (functionsHaveNames || !util.isFunction(something)) {
+    return util.inspect(something);
+  }
+  var rawname = getName(something);
+  var name = rawname ? ': ' + rawname : '';
+  return '[Function' +  name + ']';
+}
+function getMessage(self) {
+  return truncate(inspect(self.actual), 128) + ' ' +
+         self.operator + ' ' +
+         truncate(inspect(self.expected), 128);
+}
+
+// At present only the three keys mentioned above are used and
+// understood by the spec. Implementations or sub modules can pass
+// other keys to the AssertionError's constructor - they will be
+// ignored.
+
+// 3. All of the following functions must throw an AssertionError
+// when a corresponding condition is not met, with a message that
+// may be undefined if not provided.  All assertion methods provide
+// both the actual and expected values to the assertion error for
+// display purposes.
+
+function fail(actual, expected, message, operator, stackStartFunction) {
+  throw new assert.AssertionError({
+    message: message,
+    actual: actual,
+    expected: expected,
+    operator: operator,
+    stackStartFunction: stackStartFunction
+  });
+}
+
+// EXTENSION! allows for well behaved errors defined elsewhere.
+assert.fail = fail;
+
+// 4. Pure assertion tests whether a value is truthy, as determined
+// by !!guard.
+// assert.ok(guard, message_opt);
+// This statement is equivalent to assert.equal(true, !!guard,
+// message_opt);. To test strictly for the value true, use
+// assert.strictEqual(true, guard, message_opt);.
+
+function ok(value, message) {
+  if (!value) fail(value, true, message, '==', assert.ok);
+}
+assert.ok = ok;
+
+// 5. The equality assertion tests shallow, coercive equality with
+// ==.
+// assert.equal(actual, expected, message_opt);
+
+assert.equal = function equal(actual, expected, message) {
+  if (actual != expected) fail(actual, expected, message, '==', assert.equal);
+};
+
+// 6. The non-equality assertion tests for whether two objects are not equal
+// with != assert.notEqual(actual, expected, message_opt);
+
+assert.notEqual = function notEqual(actual, expected, message) {
+  if (actual == expected) {
+    fail(actual, expected, message, '!=', assert.notEqual);
+  }
+};
+
+// 7. The equivalence assertion tests a deep equality relation.
+// assert.deepEqual(actual, expected, message_opt);
+
+assert.deepEqual = function deepEqual(actual, expected, message) {
+  if (!_deepEqual(actual, expected, false)) {
+    fail(actual, expected, message, 'deepEqual', assert.deepEqual);
+  }
+};
+
+assert.deepStrictEqual = function deepStrictEqual(actual, expected, message) {
+  if (!_deepEqual(actual, expected, true)) {
+    fail(actual, expected, message, 'deepStrictEqual', assert.deepStrictEqual);
+  }
+};
+
+function _deepEqual(actual, expected, strict, memos) {
+  // 7.1. All identical values are equivalent, as determined by ===.
+  if (actual === expected) {
+    return true;
+  } else if (isBuffer(actual) && isBuffer(expected)) {
+    return compare(actual, expected) === 0;
+
+  // 7.2. If the expected value is a Date object, the actual value is
+  // equivalent if it is also a Date object that refers to the same time.
+  } else if (util.isDate(actual) && util.isDate(expected)) {
+    return actual.getTime() === expected.getTime();
+
+  // 7.3 If the expected value is a RegExp object, the actual value is
+  // equivalent if it is also a RegExp object with the same source and
+  // properties (`global`, `multiline`, `lastIndex`, `ignoreCase`).
+  } else if (util.isRegExp(actual) && util.isRegExp(expected)) {
+    return actual.source === expected.source &&
+           actual.global === expected.global &&
+           actual.multiline === expected.multiline &&
+           actual.lastIndex === expected.lastIndex &&
+           actual.ignoreCase === expected.ignoreCase;
+
+  // 7.4. Other pairs that do not both pass typeof value == 'object',
+  // equivalence is determined by ==.
+  } else if ((actual === null || typeof actual !== 'object') &&
+             (expected === null || typeof expected !== 'object')) {
+    return strict ? actual === expected : actual == expected;
+
+  // If both values are instances of typed arrays, wrap their underlying
+  // ArrayBuffers in a Buffer each to increase performance
+  // This optimization requires the arrays to have the same type as checked by
+  // Object.prototype.toString (aka pToString). Never perform binary
+  // comparisons for Float*Arrays, though, since e.g. +0 === -0 but their
+  // bit patterns are not identical.
+  } else if (isView(actual) && isView(expected) &&
+             pToString(actual) === pToString(expected) &&
+             !(actual instanceof Float32Array ||
+               actual instanceof Float64Array)) {
+    return compare(new Uint8Array(actual.buffer),
+                   new Uint8Array(expected.buffer)) === 0;
+
+  // 7.5 For all other Object pairs, including Array objects, equivalence is
+  // determined by having the same number of owned properties (as verified
+  // with Object.prototype.hasOwnProperty.call), the same set of keys
+  // (although not necessarily the same order), equivalent values for every
+  // corresponding key, and an identical 'prototype' property. Note: this
+  // accounts for both named and indexed properties on Arrays.
+  } else if (isBuffer(actual) !== isBuffer(expected)) {
+    return false;
+  } else {
+    memos = memos || {actual: [], expected: []};
+
+    var actualIndex = memos.actual.indexOf(actual);
+    if (actualIndex !== -1) {
+      if (actualIndex === memos.expected.indexOf(expected)) {
+        return true;
+      }
+    }
+
+    memos.actual.push(actual);
+    memos.expected.push(expected);
+
+    return objEquiv(actual, expected, strict, memos);
+  }
+}
+
+function isArguments(object) {
+  return Object.prototype.toString.call(object) == '[object Arguments]';
+}
+
+function objEquiv(a, b, strict, actualVisitedObjects) {
+  if (a === null || a === undefined || b === null || b === undefined)
+    return false;
+  // if one is a primitive, the other must be same
+  if (util.isPrimitive(a) || util.isPrimitive(b))
+    return a === b;
+  if (strict && Object.getPrototypeOf(a) !== Object.getPrototypeOf(b))
+    return false;
+  var aIsArgs = isArguments(a);
+  var bIsArgs = isArguments(b);
+  if ((aIsArgs && !bIsArgs) || (!aIsArgs && bIsArgs))
+    return false;
+  if (aIsArgs) {
+    a = pSlice.call(a);
+    b = pSlice.call(b);
+    return _deepEqual(a, b, strict);
+  }
+  var ka = objectKeys(a);
+  var kb = objectKeys(b);
+  var key, i;
+  // having the same number of owned properties (keys incorporates
+  // hasOwnProperty)
+  if (ka.length !== kb.length)
+    return false;
+  //the same set of keys (although not necessarily the same order),
+  ka.sort();
+  kb.sort();
+  //~~~cheap key test
+  for (i = ka.length - 1; i >= 0; i--) {
+    if (ka[i] !== kb[i])
+      return false;
+  }
+  //equivalent values for every corresponding key, and
+  //~~~possibly expensive deep test
+  for (i = ka.length - 1; i >= 0; i--) {
+    key = ka[i];
+    if (!_deepEqual(a[key], b[key], strict, actualVisitedObjects))
+      return false;
+  }
+  return true;
+}
+
+// 8. The non-equivalence assertion tests for any deep inequality.
+// assert.notDeepEqual(actual, expected, message_opt);
+
+assert.notDeepEqual = function notDeepEqual(actual, expected, message) {
+  if (_deepEqual(actual, expected, false)) {
+    fail(actual, expected, message, 'notDeepEqual', assert.notDeepEqual);
+  }
+};
+
+assert.notDeepStrictEqual = notDeepStrictEqual;
+function notDeepStrictEqual(actual, expected, message) {
+  if (_deepEqual(actual, expected, true)) {
+    fail(actual, expected, message, 'notDeepStrictEqual', notDeepStrictEqual);
+  }
+}
+
+
+// 9. The strict equality assertion tests strict equality, as determined by ===.
+// assert.strictEqual(actual, expected, message_opt);
+
+assert.strictEqual = function strictEqual(actual, expected, message) {
+  if (actual !== expected) {
+    fail(actual, expected, message, '===', assert.strictEqual);
+  }
+};
+
+// 10. The strict non-equality assertion tests for strict inequality, as
+// determined by !==.  assert.notStrictEqual(actual, expected, message_opt);
+
+assert.notStrictEqual = function notStrictEqual(actual, expected, message) {
+  if (actual === expected) {
+    fail(actual, expected, message, '!==', assert.notStrictEqual);
+  }
+};
+
+function expectedException(actual, expected) {
+  if (!actual || !expected) {
+    return false;
+  }
+
+  if (Object.prototype.toString.call(expected) == '[object RegExp]') {
+    return expected.test(actual);
+  }
+
+  try {
+    if (actual instanceof expected) {
+      return true;
+    }
+  } catch (e) {
+    // Ignore.  The instanceof check doesn't work for arrow functions.
+  }
+
+  if (Error.isPrototypeOf(expected)) {
+    return false;
+  }
+
+  return expected.call({}, actual) === true;
+}
+
+function _tryBlock(block) {
+  var error;
+  try {
+    block();
+  } catch (e) {
+    error = e;
+  }
+  return error;
+}
+
+function _throws(shouldThrow, block, expected, message) {
+  var actual;
+
+  if (typeof block !== 'function') {
+    throw new TypeError('"block" argument must be a function');
+  }
+
+  if (typeof expected === 'string') {
+    message = expected;
+    expected = null;
+  }
+
+  actual = _tryBlock(block);
+
+  message = (expected && expected.name ? ' (' + expected.name + ').' : '.') +
+            (message ? ' ' + message : '.');
+
+  if (shouldThrow && !actual) {
+    fail(actual, expected, 'Missing expected exception' + message);
+  }
+
+  var userProvidedMessage = typeof message === 'string';
+  var isUnwantedException = !shouldThrow && util.isError(actual);
+  var isUnexpectedException = !shouldThrow && actual && !expected;
+
+  if ((isUnwantedException &&
+      userProvidedMessage &&
+      expectedException(actual, expected)) ||
+      isUnexpectedException) {
+    fail(actual, expected, 'Got unwanted exception' + message);
+  }
+
+  if ((shouldThrow && actual && expected &&
+      !expectedException(actual, expected)) || (!shouldThrow && actual)) {
+    throw actual;
+  }
+}
+
+// 11. Expected to throw an error:
+// assert.throws(block, Error_opt, message_opt);
+
+assert.throws = function(block, /*optional*/error, /*optional*/message) {
+  _throws(true, block, error, message);
+};
+
+// EXTENSION! This is annoying to write outside this module.
+assert.doesNotThrow = function(block, /*optional*/error, /*optional*/message) {
+  _throws(false, block, error, message);
+};
+
+assert.ifError = function(err) { if (err) throw err; };
+
+// Expose a strict only variant of assert
+function strict(value, message) {
+  if (!value) fail(value, true, message, '==', strict);
+}
+assert.strict = objectAssign(strict, assert, {
+  equal: assert.strictEqual,
+  deepEqual: assert.deepStrictEqual,
+  notEqual: assert.notStrictEqual,
+  notDeepEqual: assert.notDeepStrictEqual
+});
+assert.strict.strict = assert.strict;
+
+var objectKeys = Object.keys || function (obj) {
+  var keys = [];
+  for (var key in obj) {
+    if (hasOwn.call(obj, key)) keys.push(key);
+  }
+  return keys;
+};
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(97)))
+
+/***/ }),
+/* 97 */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1,eval)("this");
+} catch(e) {
+	// This works if the window reference is available
+	if(typeof window === "object")
+		g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _react = __webpack_require__(24);
+var toStr = Object.prototype.toString;
+
+module.exports = function isArguments(value) {
+	var str = toStr.call(value);
+	var isArgs = str === '[object Arguments]';
+	if (!isArgs) {
+		isArgs = str !== '[object Array]' &&
+			value !== null &&
+			typeof value === 'object' &&
+			typeof value.length === 'number' &&
+			value.length >= 0 &&
+			toStr.call(value.callee) === '[object Function]';
+	}
+	return isArgs;
+};
+
+
+/***/ }),
+/* 99 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/* eslint complexity: [2, 18], max-statements: [2, 33] */
+module.exports = function hasSymbols() {
+	if (typeof Symbol !== 'function' || typeof Object.getOwnPropertySymbols !== 'function') { return false; }
+	if (typeof Symbol.iterator === 'symbol') { return true; }
+
+	var obj = {};
+	var sym = Symbol('test');
+	var symObj = Object(sym);
+	if (typeof sym === 'string') { return false; }
+
+	if (Object.prototype.toString.call(sym) !== '[object Symbol]') { return false; }
+	if (Object.prototype.toString.call(symObj) !== '[object Symbol]') { return false; }
+
+	// temp disabled per https://github.com/ljharb/object.assign/issues/17
+	// if (sym instanceof Symbol) { return false; }
+	// temp disabled per https://github.com/WebReflection/get-own-property-symbols/issues/4
+	// if (!(symObj instanceof Symbol)) { return false; }
+
+	// if (typeof Symbol.prototype.toString !== 'function') { return false; }
+	// if (String(sym) !== Symbol.prototype.toString.call(sym)) { return false; }
+
+	var symVal = 42;
+	obj[sym] = symVal;
+	for (sym in obj) { return false; } // eslint-disable-line no-restricted-syntax, no-unreachable-loop
+	if (typeof Object.keys === 'function' && Object.keys(obj).length !== 0) { return false; }
+
+	if (typeof Object.getOwnPropertyNames === 'function' && Object.getOwnPropertyNames(obj).length !== 0) { return false; }
+
+	var syms = Object.getOwnPropertySymbols(obj);
+	if (syms.length !== 1 || syms[0] !== sym) { return false; }
+
+	if (!Object.prototype.propertyIsEnumerable.call(obj, sym)) { return false; }
+
+	if (typeof Object.getOwnPropertyDescriptor === 'function') {
+		var descriptor = Object.getOwnPropertyDescriptor(obj, sym);
+		if (descriptor.value !== symVal || descriptor.enumerable !== true) { return false; }
+	}
+
+	return true;
+};
+
+
+/***/ }),
+/* 100 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/** @type {import('./syntax')} */
+module.exports = SyntaxError;
+
+
+/***/ }),
+/* 101 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var GetIntrinsic = __webpack_require__(25);
+
+var $gOPD = GetIntrinsic('%Object.getOwnPropertyDescriptor%', true);
+
+if ($gOPD) {
+	try {
+		$gOPD([], 'length');
+	} catch (e) {
+		// IE 8 has a broken gOPD
+		$gOPD = null;
+	}
+}
+
+module.exports = $gOPD;
+
+
+/***/ }),
+/* 102 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(process) {exports.setopts = setopts
+exports.ownProp = ownProp
+exports.makeAbs = makeAbs
+exports.finish = finish
+exports.mark = mark
+exports.isIgnored = isIgnored
+exports.childrenIgnored = childrenIgnored
+
+function ownProp (obj, field) {
+  return Object.prototype.hasOwnProperty.call(obj, field)
+}
+
+var fs = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"fs\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()))
+var path = __webpack_require__(24)
+var minimatch = __webpack_require__(54)
+var isAbsolute = __webpack_require__(58)
+var Minimatch = minimatch.Minimatch
+
+function alphasort (a, b) {
+  return a.localeCompare(b, 'en')
+}
+
+function setupIgnores (self, options) {
+  self.ignore = options.ignore || []
+
+  if (!Array.isArray(self.ignore))
+    self.ignore = [self.ignore]
+
+  if (self.ignore.length) {
+    self.ignore = self.ignore.map(ignoreMap)
+  }
+}
+
+// ignore patterns are always in dot:true mode.
+function ignoreMap (pattern) {
+  var gmatcher = null
+  if (pattern.slice(-3) === '/**') {
+    var gpattern = pattern.replace(/(\/\*\*)+$/, '')
+    gmatcher = new Minimatch(gpattern, { dot: true })
+  }
+
+  return {
+    matcher: new Minimatch(pattern, { dot: true }),
+    gmatcher: gmatcher
+  }
+}
+
+function setopts (self, pattern, options) {
+  if (!options)
+    options = {}
+
+  // base-matching: just use globstar for that.
+  if (options.matchBase && -1 === pattern.indexOf("/")) {
+    if (options.noglobstar) {
+      throw new Error("base matching requires globstar")
+    }
+    pattern = "**/" + pattern
+  }
+
+  self.silent = !!options.silent
+  self.pattern = pattern
+  self.strict = options.strict !== false
+  self.realpath = !!options.realpath
+  self.realpathCache = options.realpathCache || Object.create(null)
+  self.follow = !!options.follow
+  self.dot = !!options.dot
+  self.mark = !!options.mark
+  self.nodir = !!options.nodir
+  if (self.nodir)
+    self.mark = true
+  self.sync = !!options.sync
+  self.nounique = !!options.nounique
+  self.nonull = !!options.nonull
+  self.nosort = !!options.nosort
+  self.nocase = !!options.nocase
+  self.stat = !!options.stat
+  self.noprocess = !!options.noprocess
+  self.absolute = !!options.absolute
+  self.fs = options.fs || fs
+
+  self.maxLength = options.maxLength || Infinity
+  self.cache = options.cache || Object.create(null)
+  self.statCache = options.statCache || Object.create(null)
+  self.symlinks = options.symlinks || Object.create(null)
+
+  setupIgnores(self, options)
+
+  self.changedCwd = false
+  var cwd = process.cwd()
+  if (!ownProp(options, "cwd"))
+    self.cwd = cwd
+  else {
+    self.cwd = path.resolve(options.cwd)
+    self.changedCwd = self.cwd !== cwd
+  }
+
+  self.root = options.root || path.resolve(self.cwd, "/")
+  self.root = path.resolve(self.root)
+  if (process.platform === "win32")
+    self.root = self.root.replace(/\\/g, "/")
+
+  // TODO: is an absolute `cwd` supposed to be resolved against `root`?
+  // e.g. { cwd: '/test', root: __dirname } === path.join(__dirname, '/test')
+  self.cwdAbs = isAbsolute(self.cwd) ? self.cwd : makeAbs(self, self.cwd)
+  if (process.platform === "win32")
+    self.cwdAbs = self.cwdAbs.replace(/\\/g, "/")
+  self.nomount = !!options.nomount
+
+  // disable comments and negation in Minimatch.
+  // Note that they are not supported in Glob itself anyway.
+  options.nonegate = true
+  options.nocomment = true
+  // always treat \ in patterns as escapes, not path separators
+  options.allowWindowsEscape = false
+
+  self.minimatch = new Minimatch(pattern, options)
+  self.options = self.minimatch.options
+}
+
+function finish (self) {
+  var nou = self.nounique
+  var all = nou ? [] : Object.create(null)
+
+  for (var i = 0, l = self.matches.length; i < l; i ++) {
+    var matches = self.matches[i]
+    if (!matches || Object.keys(matches).length === 0) {
+      if (self.nonull) {
+        // do like the shell, and spit out the literal glob
+        var literal = self.minimatch.globSet[i]
+        if (nou)
+          all.push(literal)
+        else
+          all[literal] = true
+      }
+    } else {
+      // had matches
+      var m = Object.keys(matches)
+      if (nou)
+        all.push.apply(all, m)
+      else
+        m.forEach(function (m) {
+          all[m] = true
+        })
+    }
+  }
+
+  if (!nou)
+    all = Object.keys(all)
+
+  if (!self.nosort)
+    all = all.sort(alphasort)
+
+  // at *some* point we statted all of these
+  if (self.mark) {
+    for (var i = 0; i < all.length; i++) {
+      all[i] = self._mark(all[i])
+    }
+    if (self.nodir) {
+      all = all.filter(function (e) {
+        var notDir = !(/\/$/.test(e))
+        var c = self.cache[e] || self.cache[makeAbs(self, e)]
+        if (notDir && c)
+          notDir = c !== 'DIR' && !Array.isArray(c)
+        return notDir
+      })
+    }
+  }
+
+  if (self.ignore.length)
+    all = all.filter(function(m) {
+      return !isIgnored(self, m)
+    })
+
+  self.found = all
+}
+
+function mark (self, p) {
+  var abs = makeAbs(self, p)
+  var c = self.cache[abs]
+  var m = p
+  if (c) {
+    var isDir = c === 'DIR' || Array.isArray(c)
+    var slash = p.slice(-1) === '/'
+
+    if (isDir && !slash)
+      m += '/'
+    else if (!isDir && slash)
+      m = m.slice(0, -1)
+
+    if (m !== p) {
+      var mabs = makeAbs(self, m)
+      self.statCache[mabs] = self.statCache[abs]
+      self.cache[mabs] = self.cache[abs]
+    }
+  }
+
+  return m
+}
+
+// lotta situps...
+function makeAbs (self, f) {
+  var abs = f
+  if (f.charAt(0) === '/') {
+    abs = path.join(self.root, f)
+  } else if (isAbsolute(f) || f === '') {
+    abs = f
+  } else if (self.changedCwd) {
+    abs = path.resolve(self.cwd, f)
+  } else {
+    abs = path.resolve(f)
+  }
+
+  if (process.platform === 'win32')
+    abs = abs.replace(/\\/g, '/')
+
+  return abs
+}
+
+
+// Return true, if pattern ends with globstar '**', for the accompanying parent directory.
+// Ex:- If node_modules/** is the pattern, add 'node_modules' to ignore list along with it's contents
+function isIgnored (self, path) {
+  if (!self.ignore.length)
+    return false
+
+  return self.ignore.some(function(item) {
+    return item.matcher.match(path) || !!(item.gmatcher && item.gmatcher.match(path))
+  })
+}
+
+function childrenIgnored (self, path) {
+  if (!self.ignore.length)
+    return false
+
+  return self.ignore.some(function(item) {
+    return !!(item.gmatcher && item.gmatcher.match(path))
+  })
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 103 */
+/***/ (function(module, exports) {
+
+// Returns a wrapper function that returns a wrapped callback
+// The wrapper function should do some stuff, and return a
+// presumably different callback function.
+// This makes sure that own properties are retained, so that
+// decorations and such are not lost along the way.
+module.exports = wrappy
+function wrappy (fn, cb) {
+  if (fn && cb) return wrappy(fn)(cb)
+
+  if (typeof fn !== 'function')
+    throw new TypeError('need wrapper function')
+
+  Object.keys(fn).forEach(function (k) {
+    wrapper[k] = fn[k]
+  })
+
+  return wrapper
+
+  function wrapper() {
+    var args = new Array(arguments.length)
+    for (var i = 0; i < args.length; i++) {
+      args[i] = arguments[i]
+    }
+    var ret = fn.apply(this, args)
+    var cb = args[args.length-1]
+    if (typeof ret === 'function' && ret !== cb) {
+      Object.keys(cb).forEach(function (k) {
+        ret[k] = cb[k]
+      })
+    }
+    return ret
+  }
+}
+
+
+/***/ }),
+/* 104 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var wrappy = __webpack_require__(103)
+module.exports = wrappy(once)
+module.exports.strict = wrappy(onceStrict)
+
+once.proto = once(function () {
+  Object.defineProperty(Function.prototype, 'once', {
+    value: function () {
+      return once(this)
+    },
+    configurable: true
+  })
+
+  Object.defineProperty(Function.prototype, 'onceStrict', {
+    value: function () {
+      return onceStrict(this)
+    },
+    configurable: true
+  })
+})
+
+function once (fn) {
+  var f = function () {
+    if (f.called) return f.value
+    f.called = true
+    return f.value = fn.apply(this, arguments)
+  }
+  f.called = false
+  return f
+}
+
+function onceStrict (fn) {
+  var f = function () {
+    if (f.called)
+      throw new Error(f.onceError)
+    f.called = true
+    return f.value = fn.apply(this, arguments)
+  }
+  var name = fn.name || 'Function wrapped with `once`'
+  f.onceError = name + " shouldn't be called more than once"
+  f.called = false
+  return f
+}
+
+
+/***/ }),
+/* 105 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _react = __webpack_require__(26);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(102);
+var _reactDom = __webpack_require__(122);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _App = __webpack_require__(188);
+var _App = __webpack_require__(208);
 
 var _App2 = _interopRequireDefault(_App);
 
-var _terrain2 = __webpack_require__(197);
+var _terrain2 = __webpack_require__(247);
 
 var _terrain3 = _interopRequireDefault(_terrain2);
 
-var _room_replay = __webpack_require__(198);
+var _room_replay = __webpack_require__(248);
 
 var _room_replay2 = _interopRequireDefault(_room_replay);
 
-var _lodash = __webpack_require__(199);
+var _lodash = __webpack_require__(249);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
@@ -10613,27 +14639,25 @@ if (window.nodeRequire !== undefined) {
 }
 
 /***/ }),
-/* 88 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
 
 
-var PooledClass = __webpack_require__(89);
+var PooledClass = __webpack_require__(107);
 var ReactElement = __webpack_require__(14);
 
 var emptyFunction = __webpack_require__(9);
-var traverseAllChildren = __webpack_require__(90);
+var traverseAllChildren = __webpack_require__(108);
 
 var twoArgumentPooler = PooledClass.twoArgumentPooler;
 var fourArgumentPooler = PooledClass.fourArgumentPooler;
@@ -10809,17 +14833,15 @@ var ReactChildren = {
 module.exports = ReactChildren;
 
 /***/ }),
-/* 89 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -10927,17 +14949,15 @@ module.exports = PooledClass;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 90 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -10946,11 +14966,11 @@ module.exports = PooledClass;
 var _prodInvariant = __webpack_require__(17);
 
 var ReactCurrentOwner = __webpack_require__(10);
-var REACT_ELEMENT_TYPE = __webpack_require__(55);
+var REACT_ELEMENT_TYPE = __webpack_require__(61);
 
-var getIteratorFn = __webpack_require__(56);
+var getIteratorFn = __webpack_require__(62);
 var invariant = __webpack_require__(1);
-var KeyEscapeUtils = __webpack_require__(91);
+var KeyEscapeUtils = __webpack_require__(109);
 var warning = __webpack_require__(2);
 
 var SEPARATOR = '.';
@@ -11109,17 +15129,15 @@ module.exports = traverseAllChildren;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 91 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -11173,17 +15191,15 @@ var KeyEscapeUtils = {
 module.exports = KeyEscapeUtils;
 
 /***/ }),
-/* 92 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -11198,7 +15214,7 @@ var ReactElement = __webpack_require__(14);
  */
 var createDOMFactory = ReactElement.createFactory;
 if (process.env.NODE_ENV !== 'production') {
-  var ReactElementValidator = __webpack_require__(57);
+  var ReactElementValidator = __webpack_require__(63);
   createDOMFactory = ReactElementValidator.createFactory;
 }
 
@@ -11348,17 +15364,15 @@ module.exports = ReactDOMFactories;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 93 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -11366,8 +15380,8 @@ module.exports = ReactDOMFactories;
 
 var _prodInvariant = __webpack_require__(17);
 
-var ReactPropTypeLocationNames = __webpack_require__(94);
-var ReactPropTypesSecret = __webpack_require__(95);
+var ReactPropTypeLocationNames = __webpack_require__(112);
+var ReactPropTypesSecret = __webpack_require__(113);
 
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
@@ -11441,17 +15455,15 @@ module.exports = checkReactTypeSpec;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 94 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -11472,17 +15484,15 @@ module.exports = ReactPropTypeLocationNames;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 95 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -11494,17 +15504,15 @@ var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 module.exports = ReactPropTypesSecret;
 
 /***/ }),
-/* 96 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -11513,12 +15521,223 @@ module.exports = ReactPropTypesSecret;
 var _require = __webpack_require__(14),
     isValidElement = _require.isValidElement;
 
-var factory = __webpack_require__(58);
+var factory = __webpack_require__(64);
 
 module.exports = factory(isValidElement);
 
 /***/ }),
-/* 97 */
+/* 115 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/** @license React v16.13.1
+ * react-is.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+var b="function"===typeof Symbol&&Symbol.for,c=b?Symbol.for("react.element"):60103,d=b?Symbol.for("react.portal"):60106,e=b?Symbol.for("react.fragment"):60107,f=b?Symbol.for("react.strict_mode"):60108,g=b?Symbol.for("react.profiler"):60114,h=b?Symbol.for("react.provider"):60109,k=b?Symbol.for("react.context"):60110,l=b?Symbol.for("react.async_mode"):60111,m=b?Symbol.for("react.concurrent_mode"):60111,n=b?Symbol.for("react.forward_ref"):60112,p=b?Symbol.for("react.suspense"):60113,q=b?
+Symbol.for("react.suspense_list"):60120,r=b?Symbol.for("react.memo"):60115,t=b?Symbol.for("react.lazy"):60116,v=b?Symbol.for("react.block"):60121,w=b?Symbol.for("react.fundamental"):60117,x=b?Symbol.for("react.responder"):60118,y=b?Symbol.for("react.scope"):60119;
+function z(a){if("object"===typeof a&&null!==a){var u=a.$$typeof;switch(u){case c:switch(a=a.type,a){case l:case m:case e:case g:case f:case p:return a;default:switch(a=a&&a.$$typeof,a){case k:case n:case t:case r:case h:return a;default:return u}}case d:return u}}}function A(a){return z(a)===m}exports.AsyncMode=l;exports.ConcurrentMode=m;exports.ContextConsumer=k;exports.ContextProvider=h;exports.Element=c;exports.ForwardRef=n;exports.Fragment=e;exports.Lazy=t;exports.Memo=r;exports.Portal=d;
+exports.Profiler=g;exports.StrictMode=f;exports.Suspense=p;exports.isAsyncMode=function(a){return A(a)||z(a)===l};exports.isConcurrentMode=A;exports.isContextConsumer=function(a){return z(a)===k};exports.isContextProvider=function(a){return z(a)===h};exports.isElement=function(a){return"object"===typeof a&&null!==a&&a.$$typeof===c};exports.isForwardRef=function(a){return z(a)===n};exports.isFragment=function(a){return z(a)===e};exports.isLazy=function(a){return z(a)===t};
+exports.isMemo=function(a){return z(a)===r};exports.isPortal=function(a){return z(a)===d};exports.isProfiler=function(a){return z(a)===g};exports.isStrictMode=function(a){return z(a)===f};exports.isSuspense=function(a){return z(a)===p};
+exports.isValidElementType=function(a){return"string"===typeof a||"function"===typeof a||a===e||a===m||a===g||a===f||a===p||a===q||"object"===typeof a&&null!==a&&(a.$$typeof===t||a.$$typeof===r||a.$$typeof===h||a.$$typeof===k||a.$$typeof===n||a.$$typeof===w||a.$$typeof===x||a.$$typeof===y||a.$$typeof===v)};exports.typeOf=z;
+
+
+/***/ }),
+/* 116 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {/** @license React v16.13.1
+ * react-is.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+
+
+if (process.env.NODE_ENV !== "production") {
+  (function() {
+'use strict';
+
+// The Symbol used to tag the ReactElement-like types. If there is no native Symbol
+// nor polyfill, then a plain number is used for performance.
+var hasSymbol = typeof Symbol === 'function' && Symbol.for;
+var REACT_ELEMENT_TYPE = hasSymbol ? Symbol.for('react.element') : 0xeac7;
+var REACT_PORTAL_TYPE = hasSymbol ? Symbol.for('react.portal') : 0xeaca;
+var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol.for('react.fragment') : 0xeacb;
+var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol.for('react.strict_mode') : 0xeacc;
+var REACT_PROFILER_TYPE = hasSymbol ? Symbol.for('react.profiler') : 0xead2;
+var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for('react.provider') : 0xeacd;
+var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for('react.context') : 0xeace; // TODO: We don't use AsyncMode or ConcurrentMode anymore. They were temporary
+// (unstable) APIs that have been removed. Can we remove the symbols?
+
+var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol.for('react.async_mode') : 0xeacf;
+var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol.for('react.concurrent_mode') : 0xeacf;
+var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for('react.forward_ref') : 0xead0;
+var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol.for('react.suspense') : 0xead1;
+var REACT_SUSPENSE_LIST_TYPE = hasSymbol ? Symbol.for('react.suspense_list') : 0xead8;
+var REACT_MEMO_TYPE = hasSymbol ? Symbol.for('react.memo') : 0xead3;
+var REACT_LAZY_TYPE = hasSymbol ? Symbol.for('react.lazy') : 0xead4;
+var REACT_BLOCK_TYPE = hasSymbol ? Symbol.for('react.block') : 0xead9;
+var REACT_FUNDAMENTAL_TYPE = hasSymbol ? Symbol.for('react.fundamental') : 0xead5;
+var REACT_RESPONDER_TYPE = hasSymbol ? Symbol.for('react.responder') : 0xead6;
+var REACT_SCOPE_TYPE = hasSymbol ? Symbol.for('react.scope') : 0xead7;
+
+function isValidElementType(type) {
+  return typeof type === 'string' || typeof type === 'function' || // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
+  type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || typeof type === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_RESPONDER_TYPE || type.$$typeof === REACT_SCOPE_TYPE || type.$$typeof === REACT_BLOCK_TYPE);
+}
+
+function typeOf(object) {
+  if (typeof object === 'object' && object !== null) {
+    var $$typeof = object.$$typeof;
+
+    switch ($$typeof) {
+      case REACT_ELEMENT_TYPE:
+        var type = object.type;
+
+        switch (type) {
+          case REACT_ASYNC_MODE_TYPE:
+          case REACT_CONCURRENT_MODE_TYPE:
+          case REACT_FRAGMENT_TYPE:
+          case REACT_PROFILER_TYPE:
+          case REACT_STRICT_MODE_TYPE:
+          case REACT_SUSPENSE_TYPE:
+            return type;
+
+          default:
+            var $$typeofType = type && type.$$typeof;
+
+            switch ($$typeofType) {
+              case REACT_CONTEXT_TYPE:
+              case REACT_FORWARD_REF_TYPE:
+              case REACT_LAZY_TYPE:
+              case REACT_MEMO_TYPE:
+              case REACT_PROVIDER_TYPE:
+                return $$typeofType;
+
+              default:
+                return $$typeof;
+            }
+
+        }
+
+      case REACT_PORTAL_TYPE:
+        return $$typeof;
+    }
+  }
+
+  return undefined;
+} // AsyncMode is deprecated along with isAsyncMode
+
+var AsyncMode = REACT_ASYNC_MODE_TYPE;
+var ConcurrentMode = REACT_CONCURRENT_MODE_TYPE;
+var ContextConsumer = REACT_CONTEXT_TYPE;
+var ContextProvider = REACT_PROVIDER_TYPE;
+var Element = REACT_ELEMENT_TYPE;
+var ForwardRef = REACT_FORWARD_REF_TYPE;
+var Fragment = REACT_FRAGMENT_TYPE;
+var Lazy = REACT_LAZY_TYPE;
+var Memo = REACT_MEMO_TYPE;
+var Portal = REACT_PORTAL_TYPE;
+var Profiler = REACT_PROFILER_TYPE;
+var StrictMode = REACT_STRICT_MODE_TYPE;
+var Suspense = REACT_SUSPENSE_TYPE;
+var hasWarnedAboutDeprecatedIsAsyncMode = false; // AsyncMode should be deprecated
+
+function isAsyncMode(object) {
+  {
+    if (!hasWarnedAboutDeprecatedIsAsyncMode) {
+      hasWarnedAboutDeprecatedIsAsyncMode = true; // Using console['warn'] to evade Babel and ESLint
+
+      console['warn']('The ReactIs.isAsyncMode() alias has been deprecated, ' + 'and will be removed in React 17+. Update your code to use ' + 'ReactIs.isConcurrentMode() instead. It has the exact same API.');
+    }
+  }
+
+  return isConcurrentMode(object) || typeOf(object) === REACT_ASYNC_MODE_TYPE;
+}
+function isConcurrentMode(object) {
+  return typeOf(object) === REACT_CONCURRENT_MODE_TYPE;
+}
+function isContextConsumer(object) {
+  return typeOf(object) === REACT_CONTEXT_TYPE;
+}
+function isContextProvider(object) {
+  return typeOf(object) === REACT_PROVIDER_TYPE;
+}
+function isElement(object) {
+  return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+}
+function isForwardRef(object) {
+  return typeOf(object) === REACT_FORWARD_REF_TYPE;
+}
+function isFragment(object) {
+  return typeOf(object) === REACT_FRAGMENT_TYPE;
+}
+function isLazy(object) {
+  return typeOf(object) === REACT_LAZY_TYPE;
+}
+function isMemo(object) {
+  return typeOf(object) === REACT_MEMO_TYPE;
+}
+function isPortal(object) {
+  return typeOf(object) === REACT_PORTAL_TYPE;
+}
+function isProfiler(object) {
+  return typeOf(object) === REACT_PROFILER_TYPE;
+}
+function isStrictMode(object) {
+  return typeOf(object) === REACT_STRICT_MODE_TYPE;
+}
+function isSuspense(object) {
+  return typeOf(object) === REACT_SUSPENSE_TYPE;
+}
+
+exports.AsyncMode = AsyncMode;
+exports.ConcurrentMode = ConcurrentMode;
+exports.ContextConsumer = ContextConsumer;
+exports.ContextProvider = ContextProvider;
+exports.Element = Element;
+exports.ForwardRef = ForwardRef;
+exports.Fragment = Fragment;
+exports.Lazy = Lazy;
+exports.Memo = Memo;
+exports.Portal = Portal;
+exports.Profiler = Profiler;
+exports.StrictMode = StrictMode;
+exports.Suspense = Suspense;
+exports.isAsyncMode = isAsyncMode;
+exports.isConcurrentMode = isConcurrentMode;
+exports.isContextConsumer = isContextConsumer;
+exports.isContextProvider = isContextProvider;
+exports.isElement = isElement;
+exports.isForwardRef = isForwardRef;
+exports.isFragment = isFragment;
+exports.isLazy = isLazy;
+exports.isMemo = isMemo;
+exports.isPortal = isPortal;
+exports.isProfiler = isProfiler;
+exports.isStrictMode = isStrictMode;
+exports.isSuspense = isSuspense;
+exports.isValidElementType = isValidElementType;
+exports.typeOf = typeOf;
+  })();
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11531,11 +15750,25 @@ module.exports = factory(isValidElement);
 
 
 
+var printWarning = function() {};
+
 if (process.env.NODE_ENV !== 'production') {
-  var invariant = __webpack_require__(35);
-  var warning = __webpack_require__(60);
-  var ReactPropTypesSecret = __webpack_require__(36);
+  var ReactPropTypesSecret = __webpack_require__(37);
   var loggedTypeFailures = {};
+  var has = __webpack_require__(67);
+
+  printWarning = function(text) {
+    var message = 'Warning: ' + text;
+    if (typeof console !== 'undefined') {
+      console.error(message);
+    }
+    try {
+      // --- Welcome to debugging React ---
+      // This error was thrown as a convenience so that you can use this stack
+      // to find the callsite that caused this warning to fire.
+      throw new Error(message);
+    } catch (x) { /**/ }
+  };
 }
 
 /**
@@ -11552,7 +15785,7 @@ if (process.env.NODE_ENV !== 'production') {
 function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
   if (process.env.NODE_ENV !== 'production') {
     for (var typeSpecName in typeSpecs) {
-      if (typeSpecs.hasOwnProperty(typeSpecName)) {
+      if (has(typeSpecs, typeSpecName)) {
         var error;
         // Prop type validation may throw. In case they do, we don't want to
         // fail the render phase where it didn't fail before. So we log it.
@@ -11560,12 +15793,29 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
         try {
           // This is intentionally an invariant that gets caught. It's the same
           // behavior as without this statement except with a better message.
-          invariant(typeof typeSpecs[typeSpecName] === 'function', '%s: %s type `%s` is invalid; it must be a function, usually from ' + 'the `prop-types` package, but received `%s`.', componentName || 'React class', location, typeSpecName, typeof typeSpecs[typeSpecName]);
+          if (typeof typeSpecs[typeSpecName] !== 'function') {
+            var err = Error(
+              (componentName || 'React class') + ': ' + location + ' type `' + typeSpecName + '` is invalid; ' +
+              'it must be a function, usually from the `prop-types` package, but received `' + typeof typeSpecs[typeSpecName] + '`.' +
+              'This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.'
+            );
+            err.name = 'Invariant Violation';
+            throw err;
+          }
           error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
         } catch (ex) {
           error = ex;
         }
-        warning(!error || error instanceof Error, '%s: type specification of %s `%s` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a %s. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).', componentName || 'React class', location, typeSpecName, typeof error);
+        if (error && !(error instanceof Error)) {
+          printWarning(
+            (componentName || 'React class') + ': type specification of ' +
+            location + ' `' + typeSpecName + '` is invalid; the type checker ' +
+            'function must return `null` or an `Error` but returned a ' + typeof error + '. ' +
+            'You may have forgotten to pass an argument to the type checker ' +
+            'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' +
+            'shape all require an argument).'
+          );
+        }
         if (error instanceof Error && !(error.message in loggedTypeFailures)) {
           // Only monitor this failure once because there tends to be a lot of the
           // same error.
@@ -11573,10 +15823,23 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
 
           var stack = getStack ? getStack() : '';
 
-          warning(false, 'Failed %s type: %s%s', location, error.message, stack != null ? stack : '');
+          printWarning(
+            'Failed ' + location + ' type: ' + error.message + (stack != null ? stack : '')
+          );
         }
       }
     }
+  }
+}
+
+/**
+ * Resets warning cache when testing.
+ *
+ * @private
+ */
+checkPropTypes.resetWarningCache = function() {
+  if (process.env.NODE_ENV !== 'production') {
+    loggedTypeFailures = {};
   }
 }
 
@@ -11585,64 +15848,59 @@ module.exports = checkPropTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 98 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
 
 
-module.exports = '15.6.1';
+module.exports = '15.7.0';
+
 
 /***/ }),
-/* 99 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
 
 
-var _require = __webpack_require__(53),
+var _require = __webpack_require__(59),
     Component = _require.Component;
 
 var _require2 = __webpack_require__(14),
     isValidElement = _require2.isValidElement;
 
-var ReactNoopUpdateQueue = __webpack_require__(54);
-var factory = __webpack_require__(100);
+var ReactNoopUpdateQueue = __webpack_require__(60);
+var factory = __webpack_require__(120);
 
 module.exports = factory(Component, isValidElement, ReactNoopUpdateQueue);
 
 /***/ }),
-/* 100 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -11650,12 +15908,88 @@ module.exports = factory(Component, isValidElement, ReactNoopUpdateQueue);
 
 var _assign = __webpack_require__(4);
 
-var emptyObject = __webpack_require__(26);
-var _invariant = __webpack_require__(1);
+// -- Inlined from fbjs --
+
+var emptyObject = {};
 
 if (process.env.NODE_ENV !== 'production') {
-  var warning = __webpack_require__(2);
+  Object.freeze(emptyObject);
 }
+
+var validateFormat = function validateFormat(format) {};
+
+if (process.env.NODE_ENV !== 'production') {
+  validateFormat = function validateFormat(format) {
+    if (format === undefined) {
+      throw new Error('invariant requires an error message argument');
+    }
+  };
+}
+
+function _invariant(condition, format, a, b, c, d, e, f) {
+  validateFormat(format);
+
+  if (!condition) {
+    var error;
+    if (format === undefined) {
+      error = new Error('Minified exception occurred; use the non-minified dev environment ' + 'for the full error message and additional helpful warnings.');
+    } else {
+      var args = [a, b, c, d, e, f];
+      var argIndex = 0;
+      error = new Error(format.replace(/%s/g, function () {
+        return args[argIndex++];
+      }));
+      error.name = 'Invariant Violation';
+    }
+
+    error.framesToPop = 1; // we don't care about invariant's own frame
+    throw error;
+  }
+}
+
+var warning = function(){};
+
+if (process.env.NODE_ENV !== 'production') {
+  var printWarning = function printWarning(format) {
+    for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+      args[_key - 1] = arguments[_key];
+    }
+
+    var argIndex = 0;
+    var message = 'Warning: ' + format.replace(/%s/g, function () {
+      return args[argIndex++];
+    });
+    if (typeof console !== 'undefined') {
+      console.error(message);
+    }
+    try {
+      // --- Welcome to debugging React ---
+      // This error was thrown as a convenience so that you can use this stack
+      // to find the callsite that caused this warning to fire.
+      throw new Error(message);
+    } catch (x) {}
+  };
+
+  warning = function warning(condition, format) {
+    if (format === undefined) {
+      throw new Error('`warning(condition, format, ...args)` requires a warning ' + 'message argument');
+    }
+
+    if (format.indexOf('Failed Composite propType: ') === 0) {
+      return; // Ignore CompositeComponent proptype check.
+    }
+
+    if (!condition) {
+      for (var _len2 = arguments.length, args = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
+        args[_key2 - 2] = arguments[_key2];
+      }
+
+      printWarning.apply(undefined, [format].concat(args));
+    }
+  };
+}
+
+// /-- Inlined from fbjs --
 
 var MIXINS_KEY = 'mixins';
 
@@ -11910,6 +16244,27 @@ function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
      */
     componentWillUnmount: 'DEFINE_MANY',
 
+    /**
+     * Replacement for (deprecated) `componentWillMount`.
+     *
+     * @optional
+     */
+    UNSAFE_componentWillMount: 'DEFINE_MANY',
+
+    /**
+     * Replacement for (deprecated) `componentWillReceiveProps`.
+     *
+     * @optional
+     */
+    UNSAFE_componentWillReceiveProps: 'DEFINE_MANY',
+
+    /**
+     * Replacement for (deprecated) `componentWillUpdate`.
+     *
+     * @optional
+     */
+    UNSAFE_componentWillUpdate: 'DEFINE_MANY',
+
     // ==== Advanced methods ====
 
     /**
@@ -11923,6 +16278,23 @@ function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
      * @overridable
      */
     updateComponent: 'OVERRIDE_BASE'
+  };
+
+  /**
+   * Similar to ReactClassInterface but for static methods.
+   */
+  var ReactClassStaticInterface = {
+    /**
+     * This method is invoked after a component is instantiated and when it
+     * receives new props. Return an object to update state in response to
+     * prop changes. Return null to indicate no change to state.
+     *
+     * If an object is returned, its keys will be merged into the existing state.
+     *
+     * @return {object || null}
+     * @optional
+     */
+    getDerivedStateFromProps: 'DEFINE_MANY_MERGED'
   };
 
   /**
@@ -12159,6 +16531,7 @@ function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
     if (!statics) {
       return;
     }
+
     for (var name in statics) {
       var property = statics[name];
       if (!statics.hasOwnProperty(name)) {
@@ -12175,14 +16548,25 @@ function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
         name
       );
 
-      var isInherited = name in Constructor;
-      _invariant(
-        !isInherited,
-        'ReactClass: You are attempting to define ' +
-          '`%s` on your component more than once. This conflict may be ' +
-          'due to a mixin.',
-        name
-      );
+      var isAlreadyDefined = name in Constructor;
+      if (isAlreadyDefined) {
+        var specPolicy = ReactClassStaticInterface.hasOwnProperty(name)
+          ? ReactClassStaticInterface[name]
+          : null;
+
+        _invariant(
+          specPolicy === 'DEFINE_MANY_MERGED',
+          'ReactClass: You are attempting to define ' +
+            '`%s` on your component more than once. This conflict may be ' +
+            'due to a mixin.',
+          name
+        );
+
+        Constructor[name] = createMergedResultFunction(Constructor[name], property);
+
+        return;
+      }
+
       Constructor[name] = property;
     }
   }
@@ -12492,6 +16876,12 @@ function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
           'componentWillRecieveProps(). Did you mean componentWillReceiveProps()?',
         spec.displayName || 'A component'
       );
+      warning(
+        !Constructor.prototype.UNSAFE_componentWillRecieveProps,
+        '%s has a method called UNSAFE_componentWillRecieveProps(). ' +
+          'Did you mean UNSAFE_componentWillReceiveProps()?',
+        spec.displayName || 'A component'
+      );
     }
 
     // Reduce time spent doing lookups by setting these on the prototype.
@@ -12512,17 +16902,15 @@ module.exports = factory;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 101 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -12556,27 +16944,25 @@ module.exports = onlyChild;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 102 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-module.exports = __webpack_require__(103);
+module.exports = __webpack_require__(123);
 
 
 /***/ }),
-/* 103 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -12585,15 +16971,15 @@ module.exports = __webpack_require__(103);
 
 
 var ReactDOMComponentTree = __webpack_require__(5);
-var ReactDefaultInjection = __webpack_require__(104);
-var ReactMount = __webpack_require__(84);
+var ReactDefaultInjection = __webpack_require__(124);
+var ReactMount = __webpack_require__(91);
 var ReactReconciler = __webpack_require__(18);
 var ReactUpdates = __webpack_require__(11);
-var ReactVersion = __webpack_require__(182);
+var ReactVersion = __webpack_require__(202);
 
-var findDOMNode = __webpack_require__(183);
-var getHostComponentFromComposite = __webpack_require__(85);
-var renderSubtreeIntoContainer = __webpack_require__(184);
+var findDOMNode = __webpack_require__(203);
+var getHostComponentFromComposite = __webpack_require__(92);
+var renderSubtreeIntoContainer = __webpack_require__(204);
 var warning = __webpack_require__(2);
 
 ReactDefaultInjection.inject();
@@ -12670,9 +17056,9 @@ if (process.env.NODE_ENV !== 'production') {
 
 if (process.env.NODE_ENV !== 'production') {
   var ReactInstrumentation = __webpack_require__(8);
-  var ReactDOMUnknownPropertyHook = __webpack_require__(185);
-  var ReactDOMNullInputValuePropHook = __webpack_require__(186);
-  var ReactDOMInvalidARIAHook = __webpack_require__(187);
+  var ReactDOMUnknownPropertyHook = __webpack_require__(205);
+  var ReactDOMNullInputValuePropHook = __webpack_require__(206);
+  var ReactDOMInvalidARIAHook = __webpack_require__(207);
 
   ReactInstrumentation.debugTool.addHook(ReactDOMUnknownPropertyHook);
   ReactInstrumentation.debugTool.addHook(ReactDOMNullInputValuePropHook);
@@ -12683,41 +17069,39 @@ module.exports = ReactDOM;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 104 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
 
 
-var ARIADOMPropertyConfig = __webpack_require__(105);
-var BeforeInputEventPlugin = __webpack_require__(106);
-var ChangeEventPlugin = __webpack_require__(110);
-var DefaultEventPluginOrder = __webpack_require__(118);
-var EnterLeaveEventPlugin = __webpack_require__(119);
-var HTMLDOMPropertyConfig = __webpack_require__(120);
-var ReactComponentBrowserEnvironment = __webpack_require__(121);
-var ReactDOMComponent = __webpack_require__(127);
+var ARIADOMPropertyConfig = __webpack_require__(125);
+var BeforeInputEventPlugin = __webpack_require__(126);
+var ChangeEventPlugin = __webpack_require__(130);
+var DefaultEventPluginOrder = __webpack_require__(138);
+var EnterLeaveEventPlugin = __webpack_require__(139);
+var HTMLDOMPropertyConfig = __webpack_require__(140);
+var ReactComponentBrowserEnvironment = __webpack_require__(141);
+var ReactDOMComponent = __webpack_require__(147);
 var ReactDOMComponentTree = __webpack_require__(5);
-var ReactDOMEmptyComponent = __webpack_require__(153);
-var ReactDOMTreeTraversal = __webpack_require__(154);
-var ReactDOMTextComponent = __webpack_require__(155);
-var ReactDefaultBatchingStrategy = __webpack_require__(156);
-var ReactEventListener = __webpack_require__(157);
-var ReactInjection = __webpack_require__(159);
-var ReactReconcileTransaction = __webpack_require__(160);
-var SVGDOMPropertyConfig = __webpack_require__(166);
-var SelectEventPlugin = __webpack_require__(167);
-var SimpleEventPlugin = __webpack_require__(168);
+var ReactDOMEmptyComponent = __webpack_require__(173);
+var ReactDOMTreeTraversal = __webpack_require__(174);
+var ReactDOMTextComponent = __webpack_require__(175);
+var ReactDefaultBatchingStrategy = __webpack_require__(176);
+var ReactEventListener = __webpack_require__(177);
+var ReactInjection = __webpack_require__(179);
+var ReactReconcileTransaction = __webpack_require__(180);
+var SVGDOMPropertyConfig = __webpack_require__(186);
+var SelectEventPlugin = __webpack_require__(187);
+var SimpleEventPlugin = __webpack_require__(188);
 
 var alreadyInjected = false;
 
@@ -12774,17 +17158,15 @@ module.exports = {
 };
 
 /***/ }),
-/* 105 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -12853,17 +17235,15 @@ var ARIADOMPropertyConfig = {
 module.exports = ARIADOMPropertyConfig;
 
 /***/ }),
-/* 106 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -12871,9 +17251,9 @@ module.exports = ARIADOMPropertyConfig;
 
 var EventPropagators = __webpack_require__(20);
 var ExecutionEnvironment = __webpack_require__(6);
-var FallbackCompositionState = __webpack_require__(107);
-var SyntheticCompositionEvent = __webpack_require__(108);
-var SyntheticInputEvent = __webpack_require__(109);
+var FallbackCompositionState = __webpack_require__(127);
+var SyntheticCompositionEvent = __webpack_require__(128);
+var SyntheticInputEvent = __webpack_require__(129);
 
 var END_KEYCODES = [9, 13, 27, 32]; // Tab, Return, Esc, Space
 var START_KEYCODE = 229;
@@ -13242,17 +17622,15 @@ var BeforeInputEventPlugin = {
 module.exports = BeforeInputEventPlugin;
 
 /***/ }),
-/* 107 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -13262,7 +17640,7 @@ var _assign = __webpack_require__(4);
 
 var PooledClass = __webpack_require__(15);
 
-var getTextContentAccessor = __webpack_require__(64);
+var getTextContentAccessor = __webpack_require__(71);
 
 /**
  * This helper class stores information about text content of a target node,
@@ -13342,17 +17720,15 @@ PooledClass.addPoolingTo(FallbackCompositionState);
 module.exports = FallbackCompositionState;
 
 /***/ }),
-/* 108 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -13383,17 +17759,15 @@ SyntheticEvent.augmentClass(SyntheticCompositionEvent, CompositionEventInterface
 module.exports = SyntheticCompositionEvent;
 
 /***/ }),
-/* 109 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -13425,17 +17799,15 @@ SyntheticEvent.augmentClass(SyntheticInputEvent, InputEventInterface);
 module.exports = SyntheticInputEvent;
 
 /***/ }),
-/* 110 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -13448,10 +17820,10 @@ var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(11);
 var SyntheticEvent = __webpack_require__(12);
 
-var inputValueTracking = __webpack_require__(67);
-var getEventTarget = __webpack_require__(39);
-var isEventSupported = __webpack_require__(40);
-var isTextInputElement = __webpack_require__(68);
+var inputValueTracking = __webpack_require__(74);
+var getEventTarget = __webpack_require__(40);
+var isEventSupported = __webpack_require__(41);
+var isTextInputElement = __webpack_require__(75);
 
 var eventTypes = {
   change: {
@@ -13560,7 +17932,7 @@ if (ExecutionEnvironment.canUseDOM) {
   // IE9 claims to support the input event but fails to trigger it when
   // deleting text, so we ignore its input events.
 
-  isInputEventSupported = isEventSupported('input') && (!('documentMode' in document) || document.documentMode > 9);
+  isInputEventSupported = isEventSupported('input') && (!document.documentMode || document.documentMode > 9);
 }
 
 /**
@@ -13742,24 +18114,22 @@ var ChangeEventPlugin = {
 module.exports = ChangeEventPlugin;
 
 /***/ }),
-/* 111 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
 
 
 
-var ReactOwner = __webpack_require__(112);
+var ReactOwner = __webpack_require__(132);
 
 var ReactRef = {};
 
@@ -13836,17 +18206,15 @@ ReactRef.detachRefs = function (instance, element) {
 module.exports = ReactRef;
 
 /***/ }),
-/* 112 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -13935,29 +18303,27 @@ module.exports = ReactOwner;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 113 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2016-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2016-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
 
 
 
-var ReactInvalidSetStateWarningHook = __webpack_require__(114);
-var ReactHostOperationHistoryHook = __webpack_require__(115);
+var ReactInvalidSetStateWarningHook = __webpack_require__(134);
+var ReactHostOperationHistoryHook = __webpack_require__(135);
 var ReactComponentTreeHook = __webpack_require__(7);
 var ExecutionEnvironment = __webpack_require__(6);
 
-var performanceNow = __webpack_require__(116);
+var performanceNow = __webpack_require__(136);
 var warning = __webpack_require__(2);
 
 var hooks = [];
@@ -14302,17 +18668,15 @@ module.exports = ReactDebugTool;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 114 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2016-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2016-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -14345,17 +18709,15 @@ module.exports = ReactInvalidSetStateWarningHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 115 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2016-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2016-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -14384,7 +18746,7 @@ var ReactHostOperationHistoryHook = {
 module.exports = ReactHostOperationHistoryHook;
 
 /***/ }),
-/* 116 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14392,16 +18754,14 @@ module.exports = ReactHostOperationHistoryHook;
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
 
-var performance = __webpack_require__(117);
+var performance = __webpack_require__(137);
 
 var performanceNow;
 
@@ -14423,17 +18783,15 @@ if (performance.now) {
 module.exports = performanceNow;
 
 /***/ }),
-/* 117 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -14451,17 +18809,15 @@ if (ExecutionEnvironment.canUseDOM) {
 module.exports = performance || {};
 
 /***/ }),
-/* 118 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -14482,17 +18838,15 @@ var DefaultEventPluginOrder = ['ResponderEventPlugin', 'SimpleEventPlugin', 'Tap
 module.exports = DefaultEventPluginOrder;
 
 /***/ }),
-/* 119 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -14500,7 +18854,7 @@ module.exports = DefaultEventPluginOrder;
 
 var EventPropagators = __webpack_require__(20);
 var ReactDOMComponentTree = __webpack_require__(5);
-var SyntheticMouseEvent = __webpack_require__(29);
+var SyntheticMouseEvent = __webpack_require__(30);
 
 var eventTypes = {
   mouseEnter: {
@@ -14585,17 +18939,15 @@ var EnterLeaveEventPlugin = {
 module.exports = EnterLeaveEventPlugin;
 
 /***/ }),
-/* 120 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -14644,6 +18996,7 @@ var HTMLDOMPropertyConfig = {
     contentEditable: 0,
     contextMenu: 0,
     controls: HAS_BOOLEAN_VALUE,
+    controlsList: 0,
     coords: 0,
     crossOrigin: 0,
     data: 0, // For `<object />` acts as `src`.
@@ -14826,24 +19179,22 @@ var HTMLDOMPropertyConfig = {
 module.exports = HTMLDOMPropertyConfig;
 
 /***/ }),
-/* 121 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
 
 
-var DOMChildrenOperations = __webpack_require__(42);
-var ReactDOMIDOperations = __webpack_require__(126);
+var DOMChildrenOperations = __webpack_require__(43);
+var ReactDOMIDOperations = __webpack_require__(146);
 
 /**
  * Abstracts away all functionality of the reconciler that requires knowledge of
@@ -14859,17 +19210,15 @@ var ReactComponentBrowserEnvironment = {
 module.exports = ReactComponentBrowserEnvironment;
 
 /***/ }),
-/* 122 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -14880,7 +19229,7 @@ var _prodInvariant = __webpack_require__(3);
 var DOMLazyTree = __webpack_require__(19);
 var ExecutionEnvironment = __webpack_require__(6);
 
-var createNodesFromMarkup = __webpack_require__(123);
+var createNodesFromMarkup = __webpack_require__(143);
 var emptyFunction = __webpack_require__(9);
 var invariant = __webpack_require__(1);
 
@@ -14911,7 +19260,7 @@ module.exports = Danger;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 123 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14919,11 +19268,9 @@ module.exports = Danger;
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -14932,8 +19279,8 @@ module.exports = Danger;
 
 var ExecutionEnvironment = __webpack_require__(6);
 
-var createArrayFromMixed = __webpack_require__(124);
-var getMarkupWrap = __webpack_require__(125);
+var createArrayFromMixed = __webpack_require__(144);
+var getMarkupWrap = __webpack_require__(145);
 var invariant = __webpack_require__(1);
 
 /**
@@ -15001,7 +19348,7 @@ module.exports = createNodesFromMarkup;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 124 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15009,11 +19356,9 @@ module.exports = createNodesFromMarkup;
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -15134,7 +19479,7 @@ module.exports = createArrayFromMixed;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 125 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15142,11 +19487,9 @@ module.exports = createArrayFromMixed;
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -15235,23 +19578,21 @@ module.exports = getMarkupWrap;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 126 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
 
 
-var DOMChildrenOperations = __webpack_require__(42);
+var DOMChildrenOperations = __webpack_require__(43);
 var ReactDOMComponentTree = __webpack_require__(5);
 
 /**
@@ -15273,17 +19614,15 @@ var ReactDOMIDOperations = {
 module.exports = ReactDOMIDOperations;
 
 /***/ }),
-/* 127 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -15294,32 +19633,32 @@ module.exports = ReactDOMIDOperations;
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
-var AutoFocusUtils = __webpack_require__(128);
-var CSSPropertyOperations = __webpack_require__(129);
+var AutoFocusUtils = __webpack_require__(148);
+var CSSPropertyOperations = __webpack_require__(149);
 var DOMLazyTree = __webpack_require__(19);
-var DOMNamespaces = __webpack_require__(43);
+var DOMNamespaces = __webpack_require__(44);
 var DOMProperty = __webpack_require__(13);
-var DOMPropertyOperations = __webpack_require__(73);
+var DOMPropertyOperations = __webpack_require__(80);
 var EventPluginHub = __webpack_require__(21);
-var EventPluginRegistry = __webpack_require__(27);
-var ReactBrowserEventEmitter = __webpack_require__(32);
-var ReactDOMComponentFlags = __webpack_require__(61);
+var EventPluginRegistry = __webpack_require__(28);
+var ReactBrowserEventEmitter = __webpack_require__(33);
+var ReactDOMComponentFlags = __webpack_require__(68);
 var ReactDOMComponentTree = __webpack_require__(5);
-var ReactDOMInput = __webpack_require__(139);
-var ReactDOMOption = __webpack_require__(140);
-var ReactDOMSelect = __webpack_require__(75);
-var ReactDOMTextarea = __webpack_require__(141);
+var ReactDOMInput = __webpack_require__(159);
+var ReactDOMOption = __webpack_require__(160);
+var ReactDOMSelect = __webpack_require__(82);
+var ReactDOMTextarea = __webpack_require__(161);
 var ReactInstrumentation = __webpack_require__(8);
-var ReactMultiChild = __webpack_require__(142);
-var ReactServerRenderingTransaction = __webpack_require__(151);
+var ReactMultiChild = __webpack_require__(162);
+var ReactServerRenderingTransaction = __webpack_require__(171);
 
 var emptyFunction = __webpack_require__(9);
-var escapeTextContentForBrowser = __webpack_require__(31);
+var escapeTextContentForBrowser = __webpack_require__(32);
 var invariant = __webpack_require__(1);
-var isEventSupported = __webpack_require__(40);
-var shallowEqual = __webpack_require__(47);
-var inputValueTracking = __webpack_require__(67);
-var validateDOMNesting = __webpack_require__(51);
+var isEventSupported = __webpack_require__(41);
+var shallowEqual = __webpack_require__(48);
+var inputValueTracking = __webpack_require__(74);
+var validateDOMNesting = __webpack_require__(52);
 var warning = __webpack_require__(2);
 
 var Flags = ReactDOMComponentFlags;
@@ -16044,6 +20383,10 @@ ReactDOMComponent.Mixin = {
         // happen after `_updateDOMProperties`. Otherwise HTML5 input validations
         // raise warnings and prevent the new value from being assigned.
         ReactDOMInput.updateWrapper(this);
+
+        // We also check that we haven't missed a value update, such as a
+        // Radio group shifting the checked value to another named radio input.
+        inputValueTracking.updateValueIfChanged(this);
         break;
       case 'textarea':
         ReactDOMTextarea.updateWrapper(this);
@@ -16289,17 +20632,15 @@ module.exports = ReactDOMComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 128 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -16307,7 +20648,7 @@ module.exports = ReactDOMComponent;
 
 var ReactDOMComponentTree = __webpack_require__(5);
 
-var focusNode = __webpack_require__(71);
+var focusNode = __webpack_require__(78);
 
 var AutoFocusUtils = {
   focusDOMComponent: function () {
@@ -16318,30 +20659,28 @@ var AutoFocusUtils = {
 module.exports = AutoFocusUtils;
 
 /***/ }),
-/* 129 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
 
 
-var CSSProperty = __webpack_require__(72);
+var CSSProperty = __webpack_require__(79);
 var ExecutionEnvironment = __webpack_require__(6);
 var ReactInstrumentation = __webpack_require__(8);
 
-var camelizeStyleName = __webpack_require__(130);
-var dangerousStyleValue = __webpack_require__(132);
-var hyphenateStyleName = __webpack_require__(133);
-var memoizeStringOnly = __webpack_require__(135);
+var camelizeStyleName = __webpack_require__(150);
+var dangerousStyleValue = __webpack_require__(152);
+var hyphenateStyleName = __webpack_require__(153);
+var memoizeStringOnly = __webpack_require__(155);
 var warning = __webpack_require__(2);
 
 var processStyleName = memoizeStringOnly(function (styleName) {
@@ -16539,24 +20878,22 @@ module.exports = CSSPropertyOperations;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 130 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
 
 
 
-var camelize = __webpack_require__(131);
+var camelize = __webpack_require__(151);
 
 var msPattern = /^-ms-/;
 
@@ -16584,7 +20921,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ }),
-/* 131 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16592,11 +20929,9 @@ module.exports = camelizeStyleName;
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -16621,23 +20956,21 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 132 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
 
 
-var CSSProperty = __webpack_require__(72);
+var CSSProperty = __webpack_require__(79);
 var warning = __webpack_require__(2);
 
 var isUnitlessNumber = CSSProperty.isUnitlessNumber;
@@ -16706,24 +21039,22 @@ module.exports = dangerousStyleValue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 133 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
 
 
 
-var hyphenate = __webpack_require__(134);
+var hyphenate = __webpack_require__(154);
 
 var msPattern = /^ms-/;
 
@@ -16750,7 +21081,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ }),
-/* 134 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16758,11 +21089,9 @@ module.exports = hyphenateStyleName;
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -16788,17 +21117,15 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ }),
-/* 135 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  * @typechecks static-only
@@ -16823,23 +21150,21 @@ function memoizeStringOnly(callback) {
 module.exports = memoizeStringOnly;
 
 /***/ }),
-/* 136 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
 
 
-var escapeTextContentForBrowser = __webpack_require__(31);
+var escapeTextContentForBrowser = __webpack_require__(32);
 
 /**
  * Escapes attribute value to prevent scripting attacks.
@@ -16854,17 +21179,15 @@ function quoteAttributeValueForBrowser(value) {
 module.exports = quoteAttributeValueForBrowser;
 
 /***/ }),
-/* 137 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -16891,17 +21214,15 @@ var ReactEventEmitterMixin = {
 module.exports = ReactEventEmitterMixin;
 
 /***/ }),
-/* 138 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -16997,17 +21318,15 @@ function getVendorPrefixedEventName(eventName) {
 module.exports = getVendorPrefixedEventName;
 
 /***/ }),
-/* 139 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -17016,8 +21335,8 @@ module.exports = getVendorPrefixedEventName;
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
-var DOMPropertyOperations = __webpack_require__(73);
-var LinkedValueUtils = __webpack_require__(45);
+var DOMPropertyOperations = __webpack_require__(80);
+var LinkedValueUtils = __webpack_require__(46);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(11);
 
@@ -17290,17 +21609,15 @@ module.exports = ReactDOMInput;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 140 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -17310,7 +21627,7 @@ var _assign = __webpack_require__(4);
 
 var React = __webpack_require__(16);
 var ReactDOMComponentTree = __webpack_require__(5);
-var ReactDOMSelect = __webpack_require__(75);
+var ReactDOMSelect = __webpack_require__(82);
 
 var warning = __webpack_require__(2);
 var didWarnInvalidOptionChildren = false;
@@ -17418,17 +21735,15 @@ module.exports = ReactDOMOption;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 141 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -17437,7 +21752,7 @@ module.exports = ReactDOMOption;
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
-var LinkedValueUtils = __webpack_require__(45);
+var LinkedValueUtils = __webpack_require__(46);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(11);
 
@@ -17584,17 +21899,15 @@ module.exports = ReactDOMTextarea;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 142 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -17602,16 +21915,16 @@ module.exports = ReactDOMTextarea;
 
 var _prodInvariant = __webpack_require__(3);
 
-var ReactComponentEnvironment = __webpack_require__(46);
+var ReactComponentEnvironment = __webpack_require__(47);
 var ReactInstanceMap = __webpack_require__(23);
 var ReactInstrumentation = __webpack_require__(8);
 
 var ReactCurrentOwner = __webpack_require__(10);
 var ReactReconciler = __webpack_require__(18);
-var ReactChildReconciler = __webpack_require__(143);
+var ReactChildReconciler = __webpack_require__(163);
 
 var emptyFunction = __webpack_require__(9);
-var flattenChildren = __webpack_require__(150);
+var flattenChildren = __webpack_require__(170);
 var invariant = __webpack_require__(1);
 
 /**
@@ -18036,17 +22349,15 @@ module.exports = ReactMultiChild;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 143 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2014-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -18054,10 +22365,10 @@ module.exports = ReactMultiChild;
 
 var ReactReconciler = __webpack_require__(18);
 
-var instantiateReactComponent = __webpack_require__(76);
-var KeyEscapeUtils = __webpack_require__(49);
-var shouldUpdateReactComponent = __webpack_require__(48);
-var traverseAllChildren = __webpack_require__(80);
+var instantiateReactComponent = __webpack_require__(83);
+var KeyEscapeUtils = __webpack_require__(50);
+var shouldUpdateReactComponent = __webpack_require__(49);
+var traverseAllChildren = __webpack_require__(87);
 var warning = __webpack_require__(2);
 
 var ReactComponentTreeHook;
@@ -18195,17 +22506,15 @@ module.exports = ReactChildReconciler;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 144 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -18215,22 +22524,22 @@ var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
 var React = __webpack_require__(16);
-var ReactComponentEnvironment = __webpack_require__(46);
+var ReactComponentEnvironment = __webpack_require__(47);
 var ReactCurrentOwner = __webpack_require__(10);
-var ReactErrorUtils = __webpack_require__(38);
+var ReactErrorUtils = __webpack_require__(39);
 var ReactInstanceMap = __webpack_require__(23);
 var ReactInstrumentation = __webpack_require__(8);
-var ReactNodeTypes = __webpack_require__(77);
+var ReactNodeTypes = __webpack_require__(84);
 var ReactReconciler = __webpack_require__(18);
 
 if (process.env.NODE_ENV !== 'production') {
-  var checkReactTypeSpec = __webpack_require__(145);
+  var checkReactTypeSpec = __webpack_require__(165);
 }
 
-var emptyObject = __webpack_require__(26);
+var emptyObject = __webpack_require__(35);
 var invariant = __webpack_require__(1);
-var shallowEqual = __webpack_require__(47);
-var shouldUpdateReactComponent = __webpack_require__(48);
+var shallowEqual = __webpack_require__(48);
+var shouldUpdateReactComponent = __webpack_require__(49);
 var warning = __webpack_require__(2);
 
 var CompositeTypes = {
@@ -18474,7 +22783,7 @@ var ReactCompositeComponent = {
   },
 
   _constructComponent: function (doConstruct, publicProps, publicContext, updateQueue) {
-    if (process.env.NODE_ENV !== 'production') {
+    if (process.env.NODE_ENV !== 'production' && !doConstruct) {
       ReactCurrentOwner.current = this;
       try {
         return this._constructComponentWithoutOwner(doConstruct, publicProps, publicContext, updateQueue);
@@ -19101,17 +23410,15 @@ module.exports = ReactCompositeComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 145 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -19119,8 +23426,8 @@ module.exports = ReactCompositeComponent;
 
 var _prodInvariant = __webpack_require__(3);
 
-var ReactPropTypeLocationNames = __webpack_require__(146);
-var ReactPropTypesSecret = __webpack_require__(74);
+var ReactPropTypeLocationNames = __webpack_require__(166);
+var ReactPropTypesSecret = __webpack_require__(81);
 
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
@@ -19194,17 +23501,15 @@ module.exports = checkReactTypeSpec;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 146 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -19225,17 +23530,15 @@ module.exports = ReactPropTypeLocationNames;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 147 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -19251,17 +23554,15 @@ function getNextDebugID() {
 module.exports = getNextDebugID;
 
 /***/ }),
-/* 148 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2014-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -19276,17 +23577,15 @@ var REACT_ELEMENT_TYPE = typeof Symbol === 'function' && Symbol['for'] && Symbol
 module.exports = REACT_ELEMENT_TYPE;
 
 /***/ }),
-/* 149 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -19322,25 +23621,23 @@ function getIteratorFn(maybeIterable) {
 module.exports = getIteratorFn;
 
 /***/ }),
-/* 150 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
 
 
 
-var KeyEscapeUtils = __webpack_require__(49);
-var traverseAllChildren = __webpack_require__(80);
+var KeyEscapeUtils = __webpack_require__(50);
+var traverseAllChildren = __webpack_require__(87);
 var warning = __webpack_require__(2);
 
 var ReactComponentTreeHook;
@@ -19404,17 +23701,15 @@ module.exports = flattenChildren;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 151 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2014-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -19423,9 +23718,9 @@ module.exports = flattenChildren;
 var _assign = __webpack_require__(4);
 
 var PooledClass = __webpack_require__(15);
-var Transaction = __webpack_require__(28);
+var Transaction = __webpack_require__(29);
 var ReactInstrumentation = __webpack_require__(8);
-var ReactServerUpdateQueue = __webpack_require__(152);
+var ReactServerUpdateQueue = __webpack_require__(172);
 
 /**
  * Executed within the scope of the `Transaction` instance. Consider these as
@@ -19500,17 +23795,15 @@ module.exports = ReactServerRenderingTransaction;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 152 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2015-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2015-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -19519,7 +23812,7 @@ module.exports = ReactServerRenderingTransaction;
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var ReactUpdateQueue = __webpack_require__(50);
+var ReactUpdateQueue = __webpack_require__(51);
 
 var warning = __webpack_require__(2);
 
@@ -19645,17 +23938,15 @@ module.exports = ReactServerUpdateQueue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 153 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2014-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -19710,17 +24001,15 @@ _assign(ReactDOMEmptyComponent.prototype, {
 module.exports = ReactDOMEmptyComponent;
 
 /***/ }),
-/* 154 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2015-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2015-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -19852,17 +24141,15 @@ module.exports = {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 155 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -19871,13 +24158,13 @@ module.exports = {
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
-var DOMChildrenOperations = __webpack_require__(42);
+var DOMChildrenOperations = __webpack_require__(43);
 var DOMLazyTree = __webpack_require__(19);
 var ReactDOMComponentTree = __webpack_require__(5);
 
-var escapeTextContentForBrowser = __webpack_require__(31);
+var escapeTextContentForBrowser = __webpack_require__(32);
 var invariant = __webpack_require__(1);
-var validateDOMNesting = __webpack_require__(51);
+var validateDOMNesting = __webpack_require__(52);
 
 /**
  * Text nodes violate a couple assumptions that React makes about components:
@@ -20020,17 +24307,15 @@ module.exports = ReactDOMTextComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 156 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -20039,7 +24324,7 @@ module.exports = ReactDOMTextComponent;
 var _assign = __webpack_require__(4);
 
 var ReactUpdates = __webpack_require__(11);
-var Transaction = __webpack_require__(28);
+var Transaction = __webpack_require__(29);
 
 var emptyFunction = __webpack_require__(9);
 
@@ -20093,17 +24378,15 @@ var ReactDefaultBatchingStrategy = {
 module.exports = ReactDefaultBatchingStrategy;
 
 /***/ }),
-/* 157 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -20111,14 +24394,14 @@ module.exports = ReactDefaultBatchingStrategy;
 
 var _assign = __webpack_require__(4);
 
-var EventListener = __webpack_require__(81);
+var EventListener = __webpack_require__(88);
 var ExecutionEnvironment = __webpack_require__(6);
 var PooledClass = __webpack_require__(15);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(11);
 
-var getEventTarget = __webpack_require__(39);
-var getUnboundedScrollPosition = __webpack_require__(158);
+var getEventTarget = __webpack_require__(40);
+var getUnboundedScrollPosition = __webpack_require__(178);
 
 /**
  * Find the deepest React component completely containing the root of the
@@ -20253,17 +24536,15 @@ var ReactEventListener = {
 module.exports = ReactEventListener;
 
 /***/ }),
-/* 158 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -20297,17 +24578,15 @@ function getUnboundedScrollPosition(scrollable) {
 module.exports = getUnboundedScrollPosition;
 
 /***/ }),
-/* 159 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -20315,11 +24594,11 @@ module.exports = getUnboundedScrollPosition;
 
 var DOMProperty = __webpack_require__(13);
 var EventPluginHub = __webpack_require__(21);
-var EventPluginUtils = __webpack_require__(37);
-var ReactComponentEnvironment = __webpack_require__(46);
-var ReactEmptyComponent = __webpack_require__(78);
-var ReactBrowserEventEmitter = __webpack_require__(32);
-var ReactHostComponent = __webpack_require__(79);
+var EventPluginUtils = __webpack_require__(38);
+var ReactComponentEnvironment = __webpack_require__(47);
+var ReactEmptyComponent = __webpack_require__(85);
+var ReactBrowserEventEmitter = __webpack_require__(33);
+var ReactHostComponent = __webpack_require__(86);
 var ReactUpdates = __webpack_require__(11);
 
 var ReactInjection = {
@@ -20336,17 +24615,15 @@ var ReactInjection = {
 module.exports = ReactInjection;
 
 /***/ }),
-/* 160 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -20354,13 +24631,13 @@ module.exports = ReactInjection;
 
 var _assign = __webpack_require__(4);
 
-var CallbackQueue = __webpack_require__(65);
+var CallbackQueue = __webpack_require__(72);
 var PooledClass = __webpack_require__(15);
-var ReactBrowserEventEmitter = __webpack_require__(32);
-var ReactInputSelection = __webpack_require__(82);
+var ReactBrowserEventEmitter = __webpack_require__(33);
+var ReactInputSelection = __webpack_require__(89);
 var ReactInstrumentation = __webpack_require__(8);
-var Transaction = __webpack_require__(28);
-var ReactUpdateQueue = __webpack_require__(50);
+var Transaction = __webpack_require__(29);
+var ReactUpdateQueue = __webpack_require__(51);
 
 /**
  * Ensures that, when possible, the selection range (currently selected text
@@ -20520,17 +24797,15 @@ module.exports = ReactReconcileTransaction;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 161 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -20538,8 +24813,8 @@ module.exports = ReactReconcileTransaction;
 
 var ExecutionEnvironment = __webpack_require__(6);
 
-var getNodeForCharacterOffset = __webpack_require__(162);
-var getTextContentAccessor = __webpack_require__(64);
+var getNodeForCharacterOffset = __webpack_require__(182);
+var getTextContentAccessor = __webpack_require__(71);
 
 /**
  * While `isCollapsed` is available on the Selection object and `collapsed`
@@ -20737,17 +25012,15 @@ var ReactDOMSelection = {
 module.exports = ReactDOMSelection;
 
 /***/ }),
-/* 162 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -20816,7 +25089,7 @@ function getNodeForCharacterOffset(root, offset) {
 module.exports = getNodeForCharacterOffset;
 
 /***/ }),
-/* 163 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20824,16 +25097,14 @@ module.exports = getNodeForCharacterOffset;
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
 
-var isTextNode = __webpack_require__(164);
+var isTextNode = __webpack_require__(184);
 
 /*eslint-disable no-bitwise */
 
@@ -20861,7 +25132,7 @@ function containsNode(outerNode, innerNode) {
 module.exports = containsNode;
 
 /***/ }),
-/* 164 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20869,16 +25140,14 @@ module.exports = containsNode;
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
 
-var isNode = __webpack_require__(165);
+var isNode = __webpack_require__(185);
 
 /**
  * @param {*} object The object to check.
@@ -20891,7 +25160,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 165 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20899,11 +25168,9 @@ module.exports = isTextNode;
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -20921,17 +25188,15 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 166 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -21228,17 +25493,15 @@ Object.keys(ATTRS).forEach(function (key) {
 module.exports = SVGDOMPropertyConfig;
 
 /***/ }),
-/* 167 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -21247,12 +25510,12 @@ module.exports = SVGDOMPropertyConfig;
 var EventPropagators = __webpack_require__(20);
 var ExecutionEnvironment = __webpack_require__(6);
 var ReactDOMComponentTree = __webpack_require__(5);
-var ReactInputSelection = __webpack_require__(82);
+var ReactInputSelection = __webpack_require__(89);
 var SyntheticEvent = __webpack_require__(12);
 
-var getActiveElement = __webpack_require__(83);
-var isTextInputElement = __webpack_require__(68);
-var shallowEqual = __webpack_require__(47);
+var getActiveElement = __webpack_require__(90);
+var isTextInputElement = __webpack_require__(75);
+var shallowEqual = __webpack_require__(48);
 
 var skipSelectionChangeEvent = ExecutionEnvironment.canUseDOM && 'documentMode' in document && document.documentMode <= 11;
 
@@ -21421,17 +25684,15 @@ var SelectEventPlugin = {
 module.exports = SelectEventPlugin;
 
 /***/ }),
-/* 168 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -21440,23 +25701,23 @@ module.exports = SelectEventPlugin;
 
 var _prodInvariant = __webpack_require__(3);
 
-var EventListener = __webpack_require__(81);
+var EventListener = __webpack_require__(88);
 var EventPropagators = __webpack_require__(20);
 var ReactDOMComponentTree = __webpack_require__(5);
-var SyntheticAnimationEvent = __webpack_require__(169);
-var SyntheticClipboardEvent = __webpack_require__(170);
+var SyntheticAnimationEvent = __webpack_require__(189);
+var SyntheticClipboardEvent = __webpack_require__(190);
 var SyntheticEvent = __webpack_require__(12);
-var SyntheticFocusEvent = __webpack_require__(171);
-var SyntheticKeyboardEvent = __webpack_require__(172);
-var SyntheticMouseEvent = __webpack_require__(29);
-var SyntheticDragEvent = __webpack_require__(174);
-var SyntheticTouchEvent = __webpack_require__(175);
-var SyntheticTransitionEvent = __webpack_require__(176);
+var SyntheticFocusEvent = __webpack_require__(191);
+var SyntheticKeyboardEvent = __webpack_require__(192);
+var SyntheticMouseEvent = __webpack_require__(30);
+var SyntheticDragEvent = __webpack_require__(194);
+var SyntheticTouchEvent = __webpack_require__(195);
+var SyntheticTransitionEvent = __webpack_require__(196);
 var SyntheticUIEvent = __webpack_require__(22);
-var SyntheticWheelEvent = __webpack_require__(177);
+var SyntheticWheelEvent = __webpack_require__(197);
 
 var emptyFunction = __webpack_require__(9);
-var getEventCharCode = __webpack_require__(52);
+var getEventCharCode = __webpack_require__(53);
 var invariant = __webpack_require__(1);
 
 /**
@@ -21653,17 +25914,15 @@ module.exports = SimpleEventPlugin;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 169 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -21697,17 +25956,15 @@ SyntheticEvent.augmentClass(SyntheticAnimationEvent, AnimationEventInterface);
 module.exports = SyntheticAnimationEvent;
 
 /***/ }),
-/* 170 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -21740,17 +25997,15 @@ SyntheticEvent.augmentClass(SyntheticClipboardEvent, ClipboardEventInterface);
 module.exports = SyntheticClipboardEvent;
 
 /***/ }),
-/* 171 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -21781,17 +26036,15 @@ SyntheticUIEvent.augmentClass(SyntheticFocusEvent, FocusEventInterface);
 module.exports = SyntheticFocusEvent;
 
 /***/ }),
-/* 172 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -21799,9 +26052,9 @@ module.exports = SyntheticFocusEvent;
 
 var SyntheticUIEvent = __webpack_require__(22);
 
-var getEventCharCode = __webpack_require__(52);
-var getEventKey = __webpack_require__(173);
-var getEventModifierState = __webpack_require__(41);
+var getEventCharCode = __webpack_require__(53);
+var getEventKey = __webpack_require__(193);
+var getEventModifierState = __webpack_require__(42);
 
 /**
  * @interface KeyboardEvent
@@ -21870,23 +26123,21 @@ SyntheticUIEvent.augmentClass(SyntheticKeyboardEvent, KeyboardEventInterface);
 module.exports = SyntheticKeyboardEvent;
 
 /***/ }),
-/* 173 */
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
 
 
-var getEventCharCode = __webpack_require__(52);
+var getEventCharCode = __webpack_require__(53);
 
 /**
  * Normalization of deprecated HTML5 `key` values
@@ -21987,23 +26238,21 @@ function getEventKey(nativeEvent) {
 module.exports = getEventKey;
 
 /***/ }),
-/* 174 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
 
 
-var SyntheticMouseEvent = __webpack_require__(29);
+var SyntheticMouseEvent = __webpack_require__(30);
 
 /**
  * @interface DragEvent
@@ -22028,17 +26277,15 @@ SyntheticMouseEvent.augmentClass(SyntheticDragEvent, DragEventInterface);
 module.exports = SyntheticDragEvent;
 
 /***/ }),
-/* 175 */
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -22046,7 +26293,7 @@ module.exports = SyntheticDragEvent;
 
 var SyntheticUIEvent = __webpack_require__(22);
 
-var getEventModifierState = __webpack_require__(41);
+var getEventModifierState = __webpack_require__(42);
 
 /**
  * @interface TouchEvent
@@ -22078,17 +26325,15 @@ SyntheticUIEvent.augmentClass(SyntheticTouchEvent, TouchEventInterface);
 module.exports = SyntheticTouchEvent;
 
 /***/ }),
-/* 176 */
+/* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -22122,23 +26367,21 @@ SyntheticEvent.augmentClass(SyntheticTransitionEvent, TransitionEventInterface);
 module.exports = SyntheticTransitionEvent;
 
 /***/ }),
-/* 177 */
+/* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
 
 
-var SyntheticMouseEvent = __webpack_require__(29);
+var SyntheticMouseEvent = __webpack_require__(30);
 
 /**
  * @interface WheelEvent
@@ -22178,23 +26421,21 @@ SyntheticMouseEvent.augmentClass(SyntheticWheelEvent, WheelEventInterface);
 module.exports = SyntheticWheelEvent;
 
 /***/ }),
-/* 178 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
 
 
-var validateDOMNesting = __webpack_require__(51);
+var validateDOMNesting = __webpack_require__(52);
 
 var DOC_NODE_TYPE = 9;
 
@@ -22217,17 +26458,15 @@ module.exports = ReactDOMContainerInfo;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 179 */
+/* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -22241,23 +26480,21 @@ var ReactDOMFeatureFlags = {
 module.exports = ReactDOMFeatureFlags;
 
 /***/ }),
-/* 180 */
+/* 200 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
 
 
-var adler32 = __webpack_require__(181);
+var adler32 = __webpack_require__(201);
 
 var TAG_END = /\/?>/;
 var COMMENT_START = /^<\!\-\-/;
@@ -22296,17 +26533,15 @@ var ReactMarkupChecksum = {
 module.exports = ReactMarkupChecksum;
 
 /***/ }),
-/* 181 */
+/* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -22345,36 +26580,32 @@ function adler32(data) {
 module.exports = adler32;
 
 /***/ }),
-/* 182 */
+/* 202 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
 
 
-module.exports = '15.6.1';
+module.exports = '15.6.2';
 
 /***/ }),
-/* 183 */
+/* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -22386,7 +26617,7 @@ var ReactCurrentOwner = __webpack_require__(10);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactInstanceMap = __webpack_require__(23);
 
-var getHostComponentFromComposite = __webpack_require__(85);
+var getHostComponentFromComposite = __webpack_require__(92);
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
 
@@ -22430,45 +26661,41 @@ module.exports = findDOMNode;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 184 */
+/* 204 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
 
 
-var ReactMount = __webpack_require__(84);
+var ReactMount = __webpack_require__(91);
 
 module.exports = ReactMount.renderSubtreeIntoContainer;
 
 /***/ }),
-/* 185 */
+/* 205 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
 
 
 var DOMProperty = __webpack_require__(13);
-var EventPluginRegistry = __webpack_require__(27);
+var EventPluginRegistry = __webpack_require__(28);
 var ReactComponentTreeHook = __webpack_require__(7);
 
 var warning = __webpack_require__(2);
@@ -22569,17 +26796,15 @@ module.exports = ReactDOMUnknownPropertyHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 186 */
+/* 206 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -22618,17 +26843,15 @@ module.exports = ReactDOMNullInputValuePropHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 187 */
+/* 207 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -22717,7 +26940,7 @@ module.exports = ReactDOMInvalidARIAHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 188 */
+/* 208 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22727,17 +26950,21 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _react = __webpack_require__(24);
+var _react = __webpack_require__(26);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(86);
+var _propTypes = __webpack_require__(93);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _CanvasWrapper = __webpack_require__(190);
+var _CanvasWrapper = __webpack_require__(210);
 
 var _CanvasWrapper2 = _interopRequireDefault(_CanvasWrapper);
+
+var _listReactFiles = __webpack_require__(217);
+
+var _listReactFiles2 = _interopRequireDefault(_listReactFiles);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -22746,8 +26973,27 @@ var App = function App(_ref) {
         terrain = _ref.terrain;
     return _react2.default.createElement(
         'div',
-        { className: 'App' },
-        _react2.default.createElement(_CanvasWrapper2.default, { samples: samples, terrain: terrain })
+        null,
+        _react2.default.createElement(
+            'div',
+            { className: 'App' },
+            _react2.default.createElement(_CanvasWrapper2.default, { samples: samples, terrain: terrain }),
+            _react2.default.createElement(
+                'button',
+                null,
+                'asd'
+            )
+        ),
+        _react2.default.createElement(Selector, null)
+    );
+};
+
+var Selector = function Selector() {
+
+    return _react2.default.createElement(
+        'div',
+        { style: { position: "fixed", bottom: "10%", backgroundColor: "white" } },
+        'asd'
     );
 };
 
@@ -22759,7 +27005,7 @@ App.propTypes = {
 exports.default = App;
 
 /***/ }),
-/* 189 */
+/* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22772,9 +27018,11 @@ exports.default = App;
 
 
 
-var emptyFunction = __webpack_require__(34);
-var invariant = __webpack_require__(35);
-var ReactPropTypesSecret = __webpack_require__(36);
+var ReactPropTypesSecret = __webpack_require__(37);
+
+function emptyFunction() {}
+function emptyFunctionWithReset() {}
+emptyFunctionWithReset.resetWarningCache = emptyFunction;
 
 module.exports = function() {
   function shim(props, propName, componentName, location, propFullName, secret) {
@@ -22782,12 +27030,13 @@ module.exports = function() {
       // It is still safe when called from React.
       return;
     }
-    invariant(
-      false,
+    var err = new Error(
       'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
       'Use PropTypes.checkPropTypes() to call them. ' +
       'Read more at http://fb.me/use-check-prop-types'
     );
+    err.name = 'Invariant Violation';
+    throw err;
   };
   shim.isRequired = shim;
   function getShim() {
@@ -22797,6 +27046,7 @@ module.exports = function() {
   // Keep this list in sync with production version in `./factoryWithTypeCheckers.js`.
   var ReactPropTypes = {
     array: shim,
+    bigint: shim,
     bool: shim,
     func: shim,
     number: shim,
@@ -22807,16 +27057,19 @@ module.exports = function() {
     any: shim,
     arrayOf: getShim,
     element: shim,
+    elementType: shim,
     instanceOf: getShim,
     node: shim,
     objectOf: getShim,
     oneOf: getShim,
     oneOfType: getShim,
     shape: getShim,
-    exact: getShim
+    exact: getShim,
+
+    checkPropTypes: emptyFunctionWithReset,
+    resetWarningCache: emptyFunction
   };
 
-  ReactPropTypes.checkPropTypes = emptyFunction;
   ReactPropTypes.PropTypes = ReactPropTypes;
 
   return ReactPropTypes;
@@ -22824,7 +27077,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 190 */
+/* 210 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22836,15 +27089,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(24);
+var _react = __webpack_require__(26);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(86);
+var _propTypes = __webpack_require__(93);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _Canvas = __webpack_require__(191);
+var _Canvas = __webpack_require__(211);
 
 var _Canvas2 = _interopRequireDefault(_Canvas);
 
@@ -22974,7 +27227,7 @@ CanvasWrapper.propTypes = {
 exports.default = CanvasWrapper;
 
 /***/ }),
-/* 191 */
+/* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22986,21 +27239,21 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(24);
+var _react = __webpack_require__(26);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _renderer = __webpack_require__(192);
+var _renderer = __webpack_require__(212);
 
 var _renderer2 = _interopRequireDefault(_renderer);
 
-var _resourceMap = __webpack_require__(193);
+var _resourceMap = __webpack_require__(213);
 
-var _worldConfigs = __webpack_require__(194);
+var _worldConfigs = __webpack_require__(214);
 
 var _worldConfigs2 = _interopRequireDefault(_worldConfigs);
 
-var _decorations = __webpack_require__(196);
+var _decorations = __webpack_require__(216);
 
 var _decorations2 = _interopRequireDefault(_decorations);
 
@@ -23011,6 +27264,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+// import GameRenderer from '../../../engine/dist/renderer';
 // import GameRenderer from '../../../engine/src';
 
 
@@ -23207,7 +27461,7 @@ Canvas.defaultProps = {
 exports.default = Canvas;
 
 /***/ }),
-/* 192 */
+/* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
 !function(t,e){ true?module.exports=e():"function"==typeof define&&define.amd?define("renderer",[],e):"object"==typeof exports?exports.renderer=e():t.renderer=e()}(window,function(){return function(t){var e={};function r(n){if(e[n])return e[n].exports;var i=e[n]={i:n,l:!1,exports:{}};return t[n].call(i.exports,i,i.exports,r),i.l=!0,i.exports}return r.m=t,r.c=e,r.d=function(t,e,n){r.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:n})},r.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},r.t=function(t,e){if(1&e&&(t=r(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var n=Object.create(null);if(r.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var i in t)r.d(n,i,function(e){return t[e]}.bind(null,i));return n},r.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return r.d(e,"a",e),e},r.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},r.p="",r(r.s=198)}([function(t,e,r){"use strict";(function(t){e.__esModule=!0,e.loader=e.prepare=e.particles=e.mesh=e.loaders=e.interaction=e.filters=e.extras=e.extract=e.accessibility=void 0;var n=r(94);Object.keys(n).forEach(function(t){"default"!==t&&"__esModule"!==t&&Object.defineProperty(e,t,{enumerable:!0,get:function(){return n[t]}})});var i=r(3);Object.keys(i).forEach(function(t){"default"!==t&&"__esModule"!==t&&Object.defineProperty(e,t,{enumerable:!0,get:function(){return i[t]}})});var o=function(t){return t&&t.__esModule?t:{default:t}}(r(155)),a=_(r(156)),s=_(r(158)),u=_(r(73)),l=_(r(168)),c=_(r(175)),h=_(r(177)),f=_(r(181)),d=_(r(186)),p=_(r(191));function _(t){if(t&&t.__esModule)return t;var e={};if(null!=t)for(var r in t)Object.prototype.hasOwnProperty.call(t,r)&&(e[r]=t[r]);return e.default=t,e}i.utils.mixins.performMixins();var v=h.shared||null;e.accessibility=a,e.extract=s,e.extras=u,e.filters=l,e.interaction=c,e.loaders=h,e.mesh=f,e.particles=d,e.prepare=p,e.loader=v,"function"==typeof o.default&&(0,o.default)(e),t.PIXI=e}).call(this,r(19))},function(t,e){Object.assign(e,{OK:0,ERR_NOT_OWNER:-1,ERR_NO_PATH:-2,ERR_NAME_EXISTS:-3,ERR_BUSY:-4,ERR_NOT_FOUND:-5,ERR_NOT_ENOUGH_ENERGY:-6,ERR_NOT_ENOUGH_RESOURCES:-6,ERR_INVALID_TARGET:-7,ERR_FULL:-8,ERR_NOT_IN_RANGE:-9,ERR_INVALID_ARGS:-10,ERR_TIRED:-11,ERR_NO_BODYPART:-12,ERR_NOT_ENOUGH_EXTENSIONS:-6,ERR_RCL_NOT_ENOUGH:-14,ERR_GCL_NOT_ENOUGH:-15,FIND_EXIT_TOP:1,FIND_EXIT_RIGHT:3,FIND_EXIT_BOTTOM:5,FIND_EXIT_LEFT:7,FIND_EXIT:10,FIND_CREEPS:101,FIND_MY_CREEPS:102,FIND_HOSTILE_CREEPS:103,FIND_SOURCES_ACTIVE:104,FIND_SOURCES:105,FIND_DROPPED_RESOURCES:106,FIND_STRUCTURES:107,FIND_MY_STRUCTURES:108,FIND_HOSTILE_STRUCTURES:109,FIND_FLAGS:110,FIND_CONSTRUCTION_SITES:111,FIND_MY_SPAWNS:112,FIND_HOSTILE_SPAWNS:113,FIND_MY_CONSTRUCTION_SITES:114,FIND_HOSTILE_CONSTRUCTION_SITES:115,FIND_MINERALS:116,FIND_NUKES:117,FIND_TOMBSTONES:118,FIND_POWER_CREEPS:119,FIND_MY_POWER_CREEPS:120,FIND_HOSTILE_POWER_CREEPS:121,FIND_DEPOSITS:122,FIND_RUINS:123,TOP:1,TOP_RIGHT:2,RIGHT:3,BOTTOM_RIGHT:4,BOTTOM:5,BOTTOM_LEFT:6,LEFT:7,TOP_LEFT:8,COLOR_RED:1,COLOR_PURPLE:2,COLOR_BLUE:3,COLOR_CYAN:4,COLOR_GREEN:5,COLOR_YELLOW:6,COLOR_ORANGE:7,COLOR_BROWN:8,COLOR_GREY:9,COLOR_WHITE:10,LOOK_CREEPS:"creep",LOOK_ENERGY:"energy",LOOK_RESOURCES:"resource",LOOK_SOURCES:"source",LOOK_MINERALS:"mineral",LOOK_DEPOSITS:"deposit",LOOK_STRUCTURES:"structure",LOOK_FLAGS:"flag",LOOK_CONSTRUCTION_SITES:"constructionSite",LOOK_NUKES:"nuke",LOOK_TERRAIN:"terrain",LOOK_TOMBSTONES:"tombstone",LOOK_POWER_CREEPS:"powerCreep",LOOK_RUINS:"ruin",OBSTACLE_OBJECT_TYPES:["spawn","creep","powerCreep","source","mineral","deposit","controller","constructedWall","extension","link","storage","tower","observer","powerSpawn","powerBank","lab","terminal","nuker","factory","invaderCore"],MOVE:"move",WORK:"work",CARRY:"carry",ATTACK:"attack",RANGED_ATTACK:"ranged_attack",TOUGH:"tough",HEAL:"heal",CLAIM:"claim",BODYPART_COST:{move:50,work:100,attack:80,carry:50,heal:250,ranged_attack:150,tough:10,claim:600},WORLD_WIDTH:202,WORLD_HEIGHT:202,CREEP_LIFE_TIME:1500,CREEP_CLAIM_LIFE_TIME:600,CREEP_CORPSE_RATE:.2,CREEP_PART_MAX_ENERGY:125,CARRY_CAPACITY:50,HARVEST_POWER:2,HARVEST_MINERAL_POWER:1,HARVEST_DEPOSIT_POWER:1,REPAIR_POWER:100,DISMANTLE_POWER:50,BUILD_POWER:5,ATTACK_POWER:30,UPGRADE_CONTROLLER_POWER:1,RANGED_ATTACK_POWER:10,HEAL_POWER:12,RANGED_HEAL_POWER:4,REPAIR_COST:.01,DISMANTLE_COST:.005,RAMPART_DECAY_AMOUNT:300,RAMPART_DECAY_TIME:100,RAMPART_HITS:1,RAMPART_HITS_MAX:{2:3e5,3:1e6,4:3e6,5:1e7,6:3e7,7:1e8,8:3e8},ENERGY_REGEN_TIME:300,ENERGY_DECAY:1e3,SPAWN_HITS:5e3,SPAWN_ENERGY_START:300,SPAWN_ENERGY_CAPACITY:300,CREEP_SPAWN_TIME:3,SPAWN_RENEW_RATIO:1.2,SOURCE_ENERGY_CAPACITY:3e3,SOURCE_ENERGY_NEUTRAL_CAPACITY:1500,SOURCE_ENERGY_KEEPER_CAPACITY:4e3,WALL_HITS:1,WALL_HITS_MAX:3e8,EXTENSION_HITS:1e3,EXTENSION_ENERGY_CAPACITY:{0:50,1:50,2:50,3:50,4:50,5:50,6:50,7:100,8:200},ROAD_HITS:5e3,ROAD_WEAROUT:1,ROAD_WEAROUT_POWER_CREEP:100,ROAD_DECAY_AMOUNT:100,ROAD_DECAY_TIME:1e3,LINK_HITS:1e3,LINK_HITS_MAX:1e3,LINK_CAPACITY:800,LINK_COOLDOWN:1,LINK_LOSS_RATIO:.03,STORAGE_CAPACITY:1e6,STORAGE_HITS:1e4,STRUCTURE_SPAWN:"spawn",STRUCTURE_EXTENSION:"extension",STRUCTURE_ROAD:"road",STRUCTURE_WALL:"constructedWall",STRUCTURE_RAMPART:"rampart",STRUCTURE_KEEPER_LAIR:"keeperLair",STRUCTURE_PORTAL:"portal",STRUCTURE_CONTROLLER:"controller",STRUCTURE_LINK:"link",STRUCTURE_STORAGE:"storage",STRUCTURE_TOWER:"tower",STRUCTURE_OBSERVER:"observer",STRUCTURE_POWER_BANK:"powerBank",STRUCTURE_POWER_SPAWN:"powerSpawn",STRUCTURE_EXTRACTOR:"extractor",STRUCTURE_LAB:"lab",STRUCTURE_TERMINAL:"terminal",STRUCTURE_CONTAINER:"container",STRUCTURE_NUKER:"nuker",STRUCTURE_FACTORY:"factory",STRUCTURE_INVADER_CORE:"invaderCore",CONSTRUCTION_COST:{spawn:15e3,extension:3e3,road:300,constructedWall:1,rampart:1,link:5e3,storage:3e4,tower:5e3,observer:8e3,powerSpawn:1e5,extractor:5e3,lab:5e4,terminal:1e5,container:5e3,nuker:1e5,factory:1e5},CONSTRUCTION_COST_ROAD_SWAMP_RATIO:5,CONSTRUCTION_COST_ROAD_WALL_RATIO:150,CONTROLLER_LEVELS:{1:200,2:45e3,3:135e3,4:405e3,5:1215e3,6:3645e3,7:10935e3},CONTROLLER_STRUCTURES:{spawn:{0:0,1:1,2:1,3:1,4:1,5:1,6:1,7:2,8:3},extension:{0:0,1:0,2:5,3:10,4:20,5:30,6:40,7:50,8:60},link:{1:0,2:0,3:0,4:0,5:2,6:3,7:4,8:6},road:{0:2500,1:2500,2:2500,3:2500,4:2500,5:2500,6:2500,7:2500,8:2500},constructedWall:{1:0,2:2500,3:2500,4:2500,5:2500,6:2500,7:2500,8:2500},rampart:{1:0,2:2500,3:2500,4:2500,5:2500,6:2500,7:2500,8:2500},storage:{1:0,2:0,3:0,4:1,5:1,6:1,7:1,8:1},tower:{1:0,2:0,3:1,4:1,5:2,6:2,7:3,8:6},observer:{1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:1},powerSpawn:{1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:1},extractor:{1:0,2:0,3:0,4:0,5:0,6:1,7:1,8:1},terminal:{1:0,2:0,3:0,4:0,5:0,6:1,7:1,8:1},lab:{1:0,2:0,3:0,4:0,5:0,6:3,7:6,8:10},container:{0:5,1:5,2:5,3:5,4:5,5:5,6:5,7:5,8:5},nuker:{1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:1},factory:{1:0,2:0,3:0,4:0,5:0,6:0,7:1,8:1}},CONTROLLER_DOWNGRADE:{1:2e4,2:1e4,3:2e4,4:4e4,5:8e4,6:12e4,7:15e4,8:2e5},CONTROLLER_DOWNGRADE_RESTORE:100,CONTROLLER_DOWNGRADE_SAFEMODE_THRESHOLD:5e3,CONTROLLER_CLAIM_DOWNGRADE:300,CONTROLLER_RESERVE:1,CONTROLLER_RESERVE_MAX:5e3,CONTROLLER_MAX_UPGRADE_PER_TICK:15,CONTROLLER_ATTACK_BLOCKED_UPGRADE:1e3,CONTROLLER_NUKE_BLOCKED_UPGRADE:200,SAFE_MODE_DURATION:2e4,SAFE_MODE_COOLDOWN:5e4,SAFE_MODE_COST:1e3,TOWER_HITS:3e3,TOWER_CAPACITY:1e3,TOWER_ENERGY_COST:10,TOWER_POWER_ATTACK:600,TOWER_POWER_HEAL:400,TOWER_POWER_REPAIR:800,TOWER_OPTIMAL_RANGE:5,TOWER_FALLOFF_RANGE:20,TOWER_FALLOFF:.75,OBSERVER_HITS:500,OBSERVER_RANGE:10,POWER_BANK_HITS:2e6,POWER_BANK_CAPACITY_MAX:5e3,POWER_BANK_CAPACITY_MIN:500,POWER_BANK_CAPACITY_CRIT:.3,POWER_BANK_DECAY:5e3,POWER_BANK_HIT_BACK:.5,POWER_SPAWN_HITS:5e3,POWER_SPAWN_ENERGY_CAPACITY:5e3,POWER_SPAWN_POWER_CAPACITY:100,POWER_SPAWN_ENERGY_RATIO:50,EXTRACTOR_HITS:500,EXTRACTOR_COOLDOWN:5,LAB_HITS:500,LAB_MINERAL_CAPACITY:3e3,LAB_ENERGY_CAPACITY:2e3,LAB_BOOST_ENERGY:20,LAB_BOOST_MINERAL:30,LAB_COOLDOWN:10,LAB_REACTION_AMOUNT:5,LAB_UNBOOST_ENERGY:0,LAB_UNBOOST_MINERAL:15,GCL_POW:2.4,GCL_MULTIPLY:1e6,GCL_NOVICE:3,MODE_SIMULATION:null,MODE_WORLD:null,TERRAIN_MASK_WALL:1,TERRAIN_MASK_SWAMP:2,TERRAIN_MASK_LAVA:4,MAX_CONSTRUCTION_SITES:100,MAX_CREEP_SIZE:50,MINERAL_REGEN_TIME:5e4,MINERAL_MIN_AMOUNT:{H:35e3,O:35e3,L:35e3,K:35e3,Z:35e3,U:35e3,X:35e3},MINERAL_RANDOM_FACTOR:2,MINERAL_DENSITY:{1:15e3,2:35e3,3:7e4,4:1e5},MINERAL_DENSITY_PROBABILITY:{1:.1,2:.5,3:.9,4:1},MINERAL_DENSITY_CHANGE:.05,DENSITY_LOW:1,DENSITY_MODERATE:2,DENSITY_HIGH:3,DENSITY_ULTRA:4,DEPOSIT_EXHAUST_MULTIPLY:.001,DEPOSIT_EXHAUST_POW:1.2,DEPOSIT_DECAY_TIME:5e4,TERMINAL_CAPACITY:3e5,TERMINAL_HITS:3e3,TERMINAL_SEND_COST:.1,TERMINAL_MIN_SEND:100,TERMINAL_COOLDOWN:10,CONTAINER_HITS:25e4,CONTAINER_CAPACITY:2e3,CONTAINER_DECAY:5e3,CONTAINER_DECAY_TIME:100,CONTAINER_DECAY_TIME_OWNED:500,NUKER_HITS:1e3,NUKER_COOLDOWN:1e5,NUKER_ENERGY_CAPACITY:3e5,NUKER_GHODIUM_CAPACITY:5e3,NUKE_LAND_TIME:5e4,NUKE_RANGE:10,NUKE_DAMAGE:{0:1e7,2:5e6},FACTORY_HITS:1e3,FACTORY_CAPACITY:5e4,TOMBSTONE_DECAY_PER_PART:5,TOMBSTONE_DECAY_POWER_CREEP:500,RUIN_DECAY:500,RUIN_DECAY_STRUCTURES:{powerBank:10},PORTAL_DECAY:3e4,ORDER_SELL:"sell",ORDER_BUY:"buy",MARKET_FEE:.05,MARKET_MAX_ORDERS:300,MARKET_ORDER_LIFE_TIME:2592e6,FLAGS_LIMIT:1e4,SUBSCRIPTION_TOKEN:"token",CPU_UNLOCK:"cpuUnlock",PIXEL:"pixel",ACCESS_KEY:"accessKey",PIXEL_CPU_COST:1e4,RESOURCE_ENERGY:"energy",RESOURCE_POWER:"power",RESOURCE_HYDROGEN:"H",RESOURCE_OXYGEN:"O",RESOURCE_UTRIUM:"U",RESOURCE_LEMERGIUM:"L",RESOURCE_KEANIUM:"K",RESOURCE_ZYNTHIUM:"Z",RESOURCE_CATALYST:"X",RESOURCE_GHODIUM:"G",RESOURCE_SILICON:"silicon",RESOURCE_METAL:"metal",RESOURCE_BIOMASS:"biomass",RESOURCE_MIST:"mist",RESOURCE_HYDROXIDE:"OH",RESOURCE_ZYNTHIUM_KEANITE:"ZK",RESOURCE_UTRIUM_LEMERGITE:"UL",RESOURCE_UTRIUM_HYDRIDE:"UH",RESOURCE_UTRIUM_OXIDE:"UO",RESOURCE_KEANIUM_HYDRIDE:"KH",RESOURCE_KEANIUM_OXIDE:"KO",RESOURCE_LEMERGIUM_HYDRIDE:"LH",RESOURCE_LEMERGIUM_OXIDE:"LO",RESOURCE_ZYNTHIUM_HYDRIDE:"ZH",RESOURCE_ZYNTHIUM_OXIDE:"ZO",RESOURCE_GHODIUM_HYDRIDE:"GH",RESOURCE_GHODIUM_OXIDE:"GO",RESOURCE_UTRIUM_ACID:"UH2O",RESOURCE_UTRIUM_ALKALIDE:"UHO2",RESOURCE_KEANIUM_ACID:"KH2O",RESOURCE_KEANIUM_ALKALIDE:"KHO2",RESOURCE_LEMERGIUM_ACID:"LH2O",RESOURCE_LEMERGIUM_ALKALIDE:"LHO2",RESOURCE_ZYNTHIUM_ACID:"ZH2O",RESOURCE_ZYNTHIUM_ALKALIDE:"ZHO2",RESOURCE_GHODIUM_ACID:"GH2O",RESOURCE_GHODIUM_ALKALIDE:"GHO2",RESOURCE_CATALYZED_UTRIUM_ACID:"XUH2O",RESOURCE_CATALYZED_UTRIUM_ALKALIDE:"XUHO2",RESOURCE_CATALYZED_KEANIUM_ACID:"XKH2O",RESOURCE_CATALYZED_KEANIUM_ALKALIDE:"XKHO2",RESOURCE_CATALYZED_LEMERGIUM_ACID:"XLH2O",RESOURCE_CATALYZED_LEMERGIUM_ALKALIDE:"XLHO2",RESOURCE_CATALYZED_ZYNTHIUM_ACID:"XZH2O",RESOURCE_CATALYZED_ZYNTHIUM_ALKALIDE:"XZHO2",RESOURCE_CATALYZED_GHODIUM_ACID:"XGH2O",RESOURCE_CATALYZED_GHODIUM_ALKALIDE:"XGHO2",RESOURCE_OPS:"ops",RESOURCE_UTRIUM_BAR:"utrium_bar",RESOURCE_LEMERGIUM_BAR:"lemergium_bar",RESOURCE_ZYNTHIUM_BAR:"zynthium_bar",RESOURCE_KEANIUM_BAR:"keanium_bar",RESOURCE_GHODIUM_MELT:"ghodium_melt",RESOURCE_OXIDANT:"oxidant",RESOURCE_REDUCTANT:"reductant",RESOURCE_PURIFIER:"purifier",RESOURCE_BATTERY:"battery",RESOURCE_COMPOSITE:"composite",RESOURCE_CRYSTAL:"crystal",RESOURCE_LIQUID:"liquid",RESOURCE_WIRE:"wire",RESOURCE_SWITCH:"switch",RESOURCE_TRANSISTOR:"transistor",RESOURCE_MICROCHIP:"microchip",RESOURCE_CIRCUIT:"circuit",RESOURCE_DEVICE:"device",RESOURCE_CELL:"cell",RESOURCE_PHLEGM:"phlegm",RESOURCE_TISSUE:"tissue",RESOURCE_MUSCLE:"muscle",RESOURCE_ORGANOID:"organoid",RESOURCE_ORGANISM:"organism",RESOURCE_ALLOY:"alloy",RESOURCE_TUBE:"tube",RESOURCE_FIXTURES:"fixtures",RESOURCE_FRAME:"frame",RESOURCE_HYDRAULICS:"hydraulics",RESOURCE_MACHINE:"machine",RESOURCE_CONDENSATE:"condensate",RESOURCE_CONCENTRATE:"concentrate",RESOURCE_EXTRACT:"extract",RESOURCE_SPIRIT:"spirit",RESOURCE_EMANATION:"emanation",RESOURCE_ESSENCE:"essence",REACTIONS:{H:{O:"OH",L:"LH",K:"KH",U:"UH",Z:"ZH",G:"GH"},O:{H:"OH",L:"LO",K:"KO",U:"UO",Z:"ZO",G:"GO"},Z:{K:"ZK",H:"ZH",O:"ZO"},L:{U:"UL",H:"LH",O:"LO"},K:{Z:"ZK",H:"KH",O:"KO"},G:{H:"GH",O:"GO"},U:{L:"UL",H:"UH",O:"UO"},OH:{UH:"UH2O",UO:"UHO2",ZH:"ZH2O",ZO:"ZHO2",KH:"KH2O",KO:"KHO2",LH:"LH2O",LO:"LHO2",GH:"GH2O",GO:"GHO2"},X:{UH2O:"XUH2O",UHO2:"XUHO2",LH2O:"XLH2O",LHO2:"XLHO2",KH2O:"XKH2O",KHO2:"XKHO2",ZH2O:"XZH2O",ZHO2:"XZHO2",GH2O:"XGH2O",GHO2:"XGHO2"},ZK:{UL:"G"},UL:{ZK:"G"},LH:{OH:"LH2O"},ZH:{OH:"ZH2O"},GH:{OH:"GH2O"},KH:{OH:"KH2O"},UH:{OH:"UH2O"},LO:{OH:"LHO2"},ZO:{OH:"ZHO2"},KO:{OH:"KHO2"},UO:{OH:"UHO2"},GO:{OH:"GHO2"},LH2O:{X:"XLH2O"},KH2O:{X:"XKH2O"},ZH2O:{X:"XZH2O"},UH2O:{X:"XUH2O"},GH2O:{X:"XGH2O"},LHO2:{X:"XLHO2"},UHO2:{X:"XUHO2"},KHO2:{X:"XKHO2"},ZHO2:{X:"XZHO2"},GHO2:{X:"XGHO2"}},BOOSTS:{work:{UO:{harvest:3},UHO2:{harvest:5},XUHO2:{harvest:7},LH:{build:1.5,repair:1.5},LH2O:{build:1.8,repair:1.8},XLH2O:{build:2,repair:2},ZH:{dismantle:2},ZH2O:{dismantle:3},XZH2O:{dismantle:4},GH:{upgradeController:1.5},GH2O:{upgradeController:1.8},XGH2O:{upgradeController:2}},attack:{UH:{attack:2},UH2O:{attack:3},XUH2O:{attack:4}},ranged_attack:{KO:{rangedAttack:2,rangedMassAttack:2},KHO2:{rangedAttack:3,rangedMassAttack:3},XKHO2:{rangedAttack:4,rangedMassAttack:4}},heal:{LO:{heal:2,rangedHeal:2},LHO2:{heal:3,rangedHeal:3},XLHO2:{heal:4,rangedHeal:4}},carry:{KH:{capacity:2},KH2O:{capacity:3},XKH2O:{capacity:4}},move:{ZO:{fatigue:2},ZHO2:{fatigue:3},XZHO2:{fatigue:4}},tough:{GO:{damage:.7},GHO2:{damage:.5},XGHO2:{damage:.3}}},REACTION_TIME:{OH:20,ZK:5,UL:5,G:5,UH:10,UH2O:5,XUH2O:60,UO:10,UHO2:5,XUHO2:60,KH:10,KH2O:5,XKH2O:60,KO:10,KHO2:5,XKHO2:60,LH:15,LH2O:10,XLH2O:65,LO:10,LHO2:5,XLHO2:60,ZH:20,ZH2O:40,XZH2O:160,ZO:10,ZHO2:5,XZHO2:60,GH:10,GH2O:15,XGH2O:80,GO:10,GHO2:30,XGHO2:150},PORTAL_UNSTABLE:864e6,PORTAL_MIN_TIMEOUT:10368e5,PORTAL_MAX_TIMEOUT:19008e5,POWER_BANK_RESPAWN_TIME:5e4,INVADERS_ENERGY_GOAL:1e5,SYSTEM_USERNAME:"Screeps",SIGN_NOVICE_AREA:"A new Novice or Respawn Area is being planned somewhere in this sector. Please make sure all important rooms are reserved.",SIGN_RESPAWN_AREA:"A new Novice or Respawn Area is being planned somewhere in this sector. Please make sure all important rooms are reserved.",SIGN_PLANNED_AREA:"A new Novice or Respawn Area is being planned somewhere in this sector. Please make sure all important rooms are reserved.",EVENT_ATTACK:1,EVENT_OBJECT_DESTROYED:2,EVENT_ATTACK_CONTROLLER:3,EVENT_BUILD:4,EVENT_HARVEST:5,EVENT_HEAL:6,EVENT_REPAIR:7,EVENT_RESERVE_CONTROLLER:8,EVENT_UPGRADE_CONTROLLER:9,EVENT_EXIT:10,EVENT_POWER:11,EVENT_TRANSFER:12,EVENT_ATTACK_TYPE_MELEE:1,EVENT_ATTACK_TYPE_RANGED:2,EVENT_ATTACK_TYPE_RANGED_MASS:3,EVENT_ATTACK_TYPE_DISMANTLE:4,EVENT_ATTACK_TYPE_HIT_BACK:5,EVENT_ATTACK_TYPE_NUKE:6,EVENT_HEAL_TYPE_MELEE:1,EVENT_HEAL_TYPE_RANGED:2,POWER_LEVEL_MULTIPLY:1e3,POWER_LEVEL_POW:2,POWER_CREEP_SPAWN_COOLDOWN:288e5,POWER_CREEP_DELETE_COOLDOWN:864e5,POWER_CREEP_MAX_LEVEL:25,POWER_CREEP_LIFE_TIME:5e3,POWER_CLASS:{OPERATOR:"operator"},PWR_GENERATE_OPS:1,PWR_OPERATE_SPAWN:2,PWR_OPERATE_TOWER:3,PWR_OPERATE_STORAGE:4,PWR_OPERATE_LAB:5,PWR_OPERATE_EXTENSION:6,PWR_OPERATE_OBSERVER:7,PWR_OPERATE_TERMINAL:8,PWR_DISRUPT_SPAWN:9,PWR_DISRUPT_TOWER:10,PWR_DISRUPT_SOURCE:11,PWR_SHIELD:12,PWR_REGEN_SOURCE:13,PWR_REGEN_MINERAL:14,PWR_DISRUPT_TERMINAL:15,PWR_OPERATE_POWER:16,PWR_FORTIFY:17,PWR_OPERATE_CONTROLLER:18,PWR_OPERATE_FACTORY:19,EFFECT_INVULNERABILITY:1001,EFFECT_COLLAPSE_TIMER:1002,INVADER_CORE_HITS:1e5,INVADER_CORE_CREEP_SPAWN_TIME:{0:0,1:0,2:6,3:3,4:2,5:1},INVADER_CORE_EXPAND_TIME:{1:4e3,2:3500,3:3e3,4:2500,5:2e3},INVADER_CORE_CONTROLLER_POWER:2,INVADER_CORE_CONTROLLER_DOWNGRADE:5e3,STRONGHOLD_RAMPART_HITS:{0:0,1:1e5,2:2e5,3:5e5,4:1e6,5:2e6},STRONGHOLD_DECAY_TICKS:75e3}),Object.assign(e,{POWER_INFO:{[e.PWR_GENERATE_OPS]:{className:e.POWER_CLASS.OPERATOR,level:[0,2,7,14,22],cooldown:50,effect:[1,2,4,6,8]},[e.PWR_OPERATE_SPAWN]:{className:e.POWER_CLASS.OPERATOR,level:[0,2,7,14,22],cooldown:300,duration:1e3,range:3,ops:100,effect:[.9,.7,.5,.35,.2]},[e.PWR_OPERATE_TOWER]:{className:e.POWER_CLASS.OPERATOR,level:[0,2,7,14,22],cooldown:10,duration:100,range:3,ops:10,effect:[1.1,1.2,1.3,1.4,1.5]},[e.PWR_OPERATE_STORAGE]:{className:e.POWER_CLASS.OPERATOR,level:[0,2,7,14,22],cooldown:800,duration:1e3,range:3,ops:100,effect:[5e5,1e6,2e6,4e6,7e6]},[e.PWR_OPERATE_LAB]:{className:e.POWER_CLASS.OPERATOR,level:[0,2,7,14,22],cooldown:50,duration:1e3,range:3,ops:10,effect:[2,4,6,8,10]},[e.PWR_OPERATE_EXTENSION]:{className:e.POWER_CLASS.OPERATOR,level:[0,2,7,14,22],cooldown:50,range:3,ops:2,effect:[.2,.4,.6,.8,1]},[e.PWR_OPERATE_OBSERVER]:{className:e.POWER_CLASS.OPERATOR,level:[0,2,7,14,22],cooldown:400,duration:[200,400,600,800,1e3],range:3,ops:10},[e.PWR_OPERATE_TERMINAL]:{className:e.POWER_CLASS.OPERATOR,level:[0,2,7,14,22],cooldown:500,duration:1e3,range:3,ops:100,effect:[.9,.8,.7,.6,.5]},[e.PWR_DISRUPT_SPAWN]:{className:e.POWER_CLASS.OPERATOR,level:[0,2,7,14,22],cooldown:5,range:20,ops:10,duration:[1,2,3,4,5]},[e.PWR_DISRUPT_TOWER]:{className:e.POWER_CLASS.OPERATOR,level:[0,2,7,14,22],cooldown:0,duration:5,range:50,ops:10,effect:[.9,.8,.7,.6,.5]},[e.PWR_DISRUPT_SOURCE]:{className:e.POWER_CLASS.OPERATOR,level:[0,2,7,14,22],cooldown:100,range:3,ops:100,duration:[100,200,300,400,500]},[e.PWR_SHIELD]:{className:e.POWER_CLASS.OPERATOR,level:[0,2,7,14,22],effect:[5e3,1e4,15e3,2e4,25e3],duration:50,cooldown:20,energy:100},[e.PWR_REGEN_SOURCE]:{className:e.POWER_CLASS.OPERATOR,level:[10,11,12,14,22],cooldown:100,duration:300,range:3,effect:[50,100,150,200,250],period:15},[e.PWR_REGEN_MINERAL]:{className:e.POWER_CLASS.OPERATOR,level:[10,11,12,14,22],cooldown:100,duration:100,range:3,effect:[2,4,6,8,10],period:10},[e.PWR_DISRUPT_TERMINAL]:{className:e.POWER_CLASS.OPERATOR,level:[20,21,22,23,24],cooldown:8,duration:10,range:50,ops:[50,40,30,20,10]},[e.PWR_FORTIFY]:{className:e.POWER_CLASS.OPERATOR,level:[0,2,7,14,22],cooldown:5,range:3,ops:5,duration:[1,2,3,4,5]},[e.PWR_OPERATE_POWER]:{className:e.POWER_CLASS.OPERATOR,level:[10,11,12,14,22],cooldown:800,range:3,duration:1e3,ops:200,effect:[1,2,3,4,5]},[e.PWR_OPERATE_CONTROLLER]:{className:e.POWER_CLASS.OPERATOR,level:[20,21,22,23,24],cooldown:800,range:3,duration:1e3,ops:200,effect:[10,20,30,40,50]},[e.PWR_OPERATE_FACTORY]:{className:e.POWER_CLASS.OPERATOR,level:[0,2,7,14,22],cooldown:800,range:3,duration:1e3,ops:100}},BODYPARTS_ALL:[e.MOVE,e.WORK,e.CARRY,e.ATTACK,e.RANGED_ATTACK,e.TOUGH,e.HEAL,e.CLAIM],RESOURCES_ALL:[e.RESOURCE_ENERGY,e.RESOURCE_POWER,e.RESOURCE_HYDROGEN,e.RESOURCE_OXYGEN,e.RESOURCE_UTRIUM,e.RESOURCE_KEANIUM,e.RESOURCE_LEMERGIUM,e.RESOURCE_ZYNTHIUM,e.RESOURCE_CATALYST,e.RESOURCE_GHODIUM,e.RESOURCE_HYDROXIDE,e.RESOURCE_ZYNTHIUM_KEANITE,e.RESOURCE_UTRIUM_LEMERGITE,e.RESOURCE_UTRIUM_HYDRIDE,e.RESOURCE_UTRIUM_OXIDE,e.RESOURCE_KEANIUM_HYDRIDE,e.RESOURCE_KEANIUM_OXIDE,e.RESOURCE_LEMERGIUM_HYDRIDE,e.RESOURCE_LEMERGIUM_OXIDE,e.RESOURCE_ZYNTHIUM_HYDRIDE,e.RESOURCE_ZYNTHIUM_OXIDE,e.RESOURCE_GHODIUM_HYDRIDE,e.RESOURCE_GHODIUM_OXIDE,e.RESOURCE_UTRIUM_ACID,e.RESOURCE_UTRIUM_ALKALIDE,e.RESOURCE_KEANIUM_ACID,e.RESOURCE_KEANIUM_ALKALIDE,e.RESOURCE_LEMERGIUM_ACID,e.RESOURCE_LEMERGIUM_ALKALIDE,e.RESOURCE_ZYNTHIUM_ACID,e.RESOURCE_ZYNTHIUM_ALKALIDE,e.RESOURCE_GHODIUM_ACID,e.RESOURCE_GHODIUM_ALKALIDE,e.RESOURCE_CATALYZED_UTRIUM_ACID,e.RESOURCE_CATALYZED_UTRIUM_ALKALIDE,e.RESOURCE_CATALYZED_KEANIUM_ACID,e.RESOURCE_CATALYZED_KEANIUM_ALKALIDE,e.RESOURCE_CATALYZED_LEMERGIUM_ACID,e.RESOURCE_CATALYZED_LEMERGIUM_ALKALIDE,e.RESOURCE_CATALYZED_ZYNTHIUM_ACID,e.RESOURCE_CATALYZED_ZYNTHIUM_ALKALIDE,e.RESOURCE_CATALYZED_GHODIUM_ACID,e.RESOURCE_CATALYZED_GHODIUM_ALKALIDE,e.RESOURCE_OPS,e.RESOURCE_SILICON,e.RESOURCE_METAL,e.RESOURCE_BIOMASS,e.RESOURCE_MIST,e.RESOURCE_UTRIUM_BAR,e.RESOURCE_LEMERGIUM_BAR,e.RESOURCE_ZYNTHIUM_BAR,e.RESOURCE_KEANIUM_BAR,e.RESOURCE_GHODIUM_MELT,e.RESOURCE_OXIDANT,e.RESOURCE_REDUCTANT,e.RESOURCE_PURIFIER,e.RESOURCE_BATTERY,e.RESOURCE_COMPOSITE,e.RESOURCE_CRYSTAL,e.RESOURCE_LIQUID,e.RESOURCE_WIRE,e.RESOURCE_SWITCH,e.RESOURCE_TRANSISTOR,e.RESOURCE_MICROCHIP,e.RESOURCE_CIRCUIT,e.RESOURCE_DEVICE,e.RESOURCE_CELL,e.RESOURCE_PHLEGM,e.RESOURCE_TISSUE,e.RESOURCE_MUSCLE,e.RESOURCE_ORGANOID,e.RESOURCE_ORGANISM,e.RESOURCE_ALLOY,e.RESOURCE_TUBE,e.RESOURCE_FIXTURES,e.RESOURCE_FRAME,e.RESOURCE_HYDRAULICS,e.RESOURCE_MACHINE,e.RESOURCE_CONDENSATE,e.RESOURCE_CONCENTRATE,e.RESOURCE_EXTRACT,e.RESOURCE_SPIRIT,e.RESOURCE_EMANATION,e.RESOURCE_ESSENCE],COLORS_ALL:[e.COLOR_RED,e.COLOR_PURPLE,e.COLOR_BLUE,e.COLOR_CYAN,e.COLOR_GREEN,e.COLOR_YELLOW,e.COLOR_ORANGE,e.COLOR_BROWN,e.COLOR_GREY,e.COLOR_WHITE],INTERSHARD_RESOURCES:[e.SUBSCRIPTION_TOKEN,e.CPU_UNLOCK,e.PIXEL,e.ACCESS_KEY],COMMODITIES:{[e.RESOURCE_UTRIUM_BAR]:{amount:100,cooldown:20,components:{[e.RESOURCE_UTRIUM]:500,[e.RESOURCE_ENERGY]:200}},[e.RESOURCE_UTRIUM]:{amount:500,cooldown:20,components:{[e.RESOURCE_UTRIUM_BAR]:100,[e.RESOURCE_ENERGY]:200}},[e.RESOURCE_LEMERGIUM_BAR]:{amount:100,cooldown:20,components:{[e.RESOURCE_LEMERGIUM]:500,[e.RESOURCE_ENERGY]:200}},[e.RESOURCE_LEMERGIUM]:{amount:500,cooldown:20,components:{[e.RESOURCE_LEMERGIUM_BAR]:100,[e.RESOURCE_ENERGY]:200}},[e.RESOURCE_ZYNTHIUM_BAR]:{amount:100,cooldown:20,components:{[e.RESOURCE_ZYNTHIUM]:500,[e.RESOURCE_ENERGY]:200}},[e.RESOURCE_ZYNTHIUM]:{amount:500,cooldown:20,components:{[e.RESOURCE_ZYNTHIUM_BAR]:100,[e.RESOURCE_ENERGY]:200}},[e.RESOURCE_KEANIUM_BAR]:{amount:100,cooldown:20,components:{[e.RESOURCE_KEANIUM]:500,[e.RESOURCE_ENERGY]:200}},[e.RESOURCE_KEANIUM]:{amount:500,cooldown:20,components:{[e.RESOURCE_KEANIUM_BAR]:100,[e.RESOURCE_ENERGY]:200}},[e.RESOURCE_GHODIUM_MELT]:{amount:100,cooldown:20,components:{[e.RESOURCE_GHODIUM]:500,[e.RESOURCE_ENERGY]:200}},[e.RESOURCE_GHODIUM]:{amount:500,cooldown:20,components:{[e.RESOURCE_GHODIUM_MELT]:100,[e.RESOURCE_ENERGY]:200}},[e.RESOURCE_OXIDANT]:{amount:100,cooldown:20,components:{[e.RESOURCE_OXYGEN]:500,[e.RESOURCE_ENERGY]:200}},[e.RESOURCE_OXYGEN]:{amount:500,cooldown:20,components:{[e.RESOURCE_OXIDANT]:100,[e.RESOURCE_ENERGY]:200}},[e.RESOURCE_REDUCTANT]:{amount:100,cooldown:20,components:{[e.RESOURCE_HYDROGEN]:500,[e.RESOURCE_ENERGY]:200}},[e.RESOURCE_HYDROGEN]:{amount:500,cooldown:20,components:{[e.RESOURCE_REDUCTANT]:100,[e.RESOURCE_ENERGY]:200}},[e.RESOURCE_PURIFIER]:{amount:100,cooldown:20,components:{[e.RESOURCE_CATALYST]:500,[e.RESOURCE_ENERGY]:200}},[e.RESOURCE_CATALYST]:{amount:500,cooldown:20,components:{[e.RESOURCE_PURIFIER]:100,[e.RESOURCE_ENERGY]:200}},[e.RESOURCE_BATTERY]:{amount:50,cooldown:10,components:{[e.RESOURCE_ENERGY]:600}},[e.RESOURCE_ENERGY]:{amount:500,cooldown:10,components:{[e.RESOURCE_BATTERY]:50}},[e.RESOURCE_COMPOSITE]:{level:1,amount:20,cooldown:50,components:{[e.RESOURCE_UTRIUM_BAR]:20,[e.RESOURCE_ZYNTHIUM_BAR]:20,[e.RESOURCE_ENERGY]:20}},[e.RESOURCE_CRYSTAL]:{level:2,amount:6,cooldown:21,components:{[e.RESOURCE_LEMERGIUM_BAR]:6,[e.RESOURCE_KEANIUM_BAR]:6,[e.RESOURCE_PURIFIER]:6,[e.RESOURCE_ENERGY]:45}},[e.RESOURCE_LIQUID]:{level:3,amount:12,cooldown:60,components:{[e.RESOURCE_OXIDANT]:12,[e.RESOURCE_REDUCTANT]:12,[e.RESOURCE_GHODIUM_MELT]:12,[e.RESOURCE_ENERGY]:90}},[e.RESOURCE_WIRE]:{amount:20,cooldown:8,components:{[e.RESOURCE_UTRIUM_BAR]:20,[e.RESOURCE_SILICON]:100,[e.RESOURCE_ENERGY]:40}},[e.RESOURCE_SWITCH]:{level:1,amount:5,cooldown:70,components:{[e.RESOURCE_WIRE]:40,[e.RESOURCE_OXIDANT]:95,[e.RESOURCE_UTRIUM_BAR]:35,[e.RESOURCE_ENERGY]:20}},[e.RESOURCE_TRANSISTOR]:{level:2,amount:1,cooldown:59,components:{[e.RESOURCE_SWITCH]:4,[e.RESOURCE_WIRE]:15,[e.RESOURCE_REDUCTANT]:85,[e.RESOURCE_ENERGY]:8}},[e.RESOURCE_MICROCHIP]:{level:3,amount:1,cooldown:250,components:{[e.RESOURCE_TRANSISTOR]:2,[e.RESOURCE_COMPOSITE]:50,[e.RESOURCE_WIRE]:117,[e.RESOURCE_PURIFIER]:25,[e.RESOURCE_ENERGY]:16}},[e.RESOURCE_CIRCUIT]:{level:4,amount:1,cooldown:800,components:{[e.RESOURCE_MICROCHIP]:1,[e.RESOURCE_TRANSISTOR]:5,[e.RESOURCE_SWITCH]:4,[e.RESOURCE_OXIDANT]:115,[e.RESOURCE_ENERGY]:32}},[e.RESOURCE_DEVICE]:{level:5,amount:1,cooldown:600,components:{[e.RESOURCE_CIRCUIT]:1,[e.RESOURCE_MICROCHIP]:3,[e.RESOURCE_CRYSTAL]:110,[e.RESOURCE_GHODIUM_MELT]:150,[e.RESOURCE_ENERGY]:64}},[e.RESOURCE_CELL]:{amount:20,cooldown:8,components:{[e.RESOURCE_LEMERGIUM_BAR]:20,[e.RESOURCE_BIOMASS]:100,[e.RESOURCE_ENERGY]:40}},[e.RESOURCE_PHLEGM]:{level:1,amount:2,cooldown:35,components:{[e.RESOURCE_CELL]:20,[e.RESOURCE_OXIDANT]:36,[e.RESOURCE_LEMERGIUM_BAR]:16,[e.RESOURCE_ENERGY]:8}},[e.RESOURCE_TISSUE]:{level:2,amount:2,cooldown:164,components:{[e.RESOURCE_PHLEGM]:10,[e.RESOURCE_CELL]:10,[e.RESOURCE_REDUCTANT]:110,[e.RESOURCE_ENERGY]:16}},[e.RESOURCE_MUSCLE]:{level:3,amount:1,cooldown:250,components:{[e.RESOURCE_TISSUE]:3,[e.RESOURCE_PHLEGM]:3,[e.RESOURCE_ZYNTHIUM_BAR]:50,[e.RESOURCE_REDUCTANT]:50,[e.RESOURCE_ENERGY]:16}},[e.RESOURCE_ORGANOID]:{level:4,amount:1,cooldown:800,components:{[e.RESOURCE_MUSCLE]:1,[e.RESOURCE_TISSUE]:5,[e.RESOURCE_PURIFIER]:208,[e.RESOURCE_OXIDANT]:256,[e.RESOURCE_ENERGY]:32}},[e.RESOURCE_ORGANISM]:{level:5,amount:1,cooldown:600,components:{[e.RESOURCE_ORGANOID]:1,[e.RESOURCE_LIQUID]:150,[e.RESOURCE_TISSUE]:6,[e.RESOURCE_CELL]:310,[e.RESOURCE_ENERGY]:64}},[e.RESOURCE_ALLOY]:{amount:20,cooldown:8,components:{[e.RESOURCE_ZYNTHIUM_BAR]:20,[e.RESOURCE_METAL]:100,[e.RESOURCE_ENERGY]:40}},[e.RESOURCE_TUBE]:{level:1,amount:2,cooldown:45,components:{[e.RESOURCE_ALLOY]:40,[e.RESOURCE_ZYNTHIUM_BAR]:16,[e.RESOURCE_ENERGY]:8}},[e.RESOURCE_FIXTURES]:{level:2,amount:1,cooldown:115,components:{[e.RESOURCE_COMPOSITE]:20,[e.RESOURCE_ALLOY]:41,[e.RESOURCE_OXIDANT]:161,[e.RESOURCE_ENERGY]:8}},[e.RESOURCE_FRAME]:{level:3,amount:1,cooldown:125,components:{[e.RESOURCE_FIXTURES]:2,[e.RESOURCE_TUBE]:4,[e.RESOURCE_REDUCTANT]:330,[e.RESOURCE_ZYNTHIUM_BAR]:31,[e.RESOURCE_ENERGY]:16}},[e.RESOURCE_HYDRAULICS]:{level:4,amount:1,cooldown:800,components:{[e.RESOURCE_LIQUID]:150,[e.RESOURCE_FIXTURES]:3,[e.RESOURCE_TUBE]:15,[e.RESOURCE_PURIFIER]:208,[e.RESOURCE_ENERGY]:32}},[e.RESOURCE_MACHINE]:{level:5,amount:1,cooldown:600,components:{[e.RESOURCE_HYDRAULICS]:1,[e.RESOURCE_FRAME]:2,[e.RESOURCE_FIXTURES]:3,[e.RESOURCE_TUBE]:12,[e.RESOURCE_ENERGY]:64}},[e.RESOURCE_CONDENSATE]:{amount:20,cooldown:8,components:{[e.RESOURCE_KEANIUM_BAR]:20,[e.RESOURCE_MIST]:100,[e.RESOURCE_ENERGY]:40}},[e.RESOURCE_CONCENTRATE]:{level:1,amount:3,cooldown:41,components:{[e.RESOURCE_CONDENSATE]:30,[e.RESOURCE_KEANIUM_BAR]:15,[e.RESOURCE_REDUCTANT]:54,[e.RESOURCE_ENERGY]:12}},[e.RESOURCE_EXTRACT]:{level:2,amount:2,cooldown:128,components:{[e.RESOURCE_CONCENTRATE]:10,[e.RESOURCE_CONDENSATE]:30,[e.RESOURCE_OXIDANT]:60,[e.RESOURCE_ENERGY]:16}},[e.RESOURCE_SPIRIT]:{level:3,amount:1,cooldown:200,components:{[e.RESOURCE_EXTRACT]:2,[e.RESOURCE_CONCENTRATE]:6,[e.RESOURCE_REDUCTANT]:90,[e.RESOURCE_PURIFIER]:20,[e.RESOURCE_ENERGY]:16}},[e.RESOURCE_EMANATION]:{level:4,amount:1,cooldown:800,components:{[e.RESOURCE_SPIRIT]:2,[e.RESOURCE_EXTRACT]:2,[e.RESOURCE_CONCENTRATE]:3,[e.RESOURCE_KEANIUM_BAR]:112,[e.RESOURCE_ENERGY]:32}},[e.RESOURCE_ESSENCE]:{level:5,amount:1,cooldown:600,components:{[e.RESOURCE_EMANATION]:1,[e.RESOURCE_SPIRIT]:3,[e.RESOURCE_CRYSTAL]:110,[e.RESOURCE_GHODIUM_MELT]:150,[e.RESOURCE_ENERGY]:64}}}})},function(t,e,r){"use strict";e.__esModule=!0;e.VERSION="4.8.1",e.PI_2=2*Math.PI,e.RAD_TO_DEG=180/Math.PI,e.DEG_TO_RAD=Math.PI/180,e.RENDERER_TYPE={UNKNOWN:0,WEBGL:1,CANVAS:2},e.BLEND_MODES={NORMAL:0,ADD:1,MULTIPLY:2,SCREEN:3,OVERLAY:4,DARKEN:5,LIGHTEN:6,COLOR_DODGE:7,COLOR_BURN:8,HARD_LIGHT:9,SOFT_LIGHT:10,DIFFERENCE:11,EXCLUSION:12,HUE:13,SATURATION:14,COLOR:15,LUMINOSITY:16,NORMAL_NPM:17,ADD_NPM:18,SCREEN_NPM:19},e.DRAW_MODES={POINTS:0,LINES:1,LINE_LOOP:2,LINE_STRIP:3,TRIANGLES:4,TRIANGLE_STRIP:5,TRIANGLE_FAN:6},e.SCALE_MODES={LINEAR:0,NEAREST:1},e.WRAP_MODES={CLAMP:0,REPEAT:1,MIRRORED_REPEAT:2},e.GC_MODES={AUTO:0,MANUAL:1},e.URL_FILE_EXTENSION=/\.(\w{3,4})(?:$|\?|#)/i,e.DATA_URI=/^\s*data:(?:([\w-]+)\/([\w+.-]+))?(?:;charset=([\w-]+))?(?:;(base64))?,(.*)/i,e.SVG_SIZE=/<svg[^>]*(?:\s(width|height)=('|")(\d*(?:\.\d+)?)(?:px)?('|"))[^>]*(?:\s(width|height)=('|")(\d*(?:\.\d+)?)(?:px)?('|"))[^>]*>/i,e.SHAPES={POLY:0,RECT:1,CIRC:2,ELIP:3,RREC:4},e.PRECISION={LOW:"lowp",MEDIUM:"mediump",HIGH:"highp"},e.TRANSFORM_MODE={STATIC:0,DYNAMIC:1},e.TEXT_GRADIENT={LINEAR_VERTICAL:0,LINEAR_HORIZONTAL:1},e.UPDATE_PRIORITY={INTERACTION:50,HIGH:25,NORMAL:0,LOW:-25,UTILITY:-50}},function(t,e,r){"use strict";e.__esModule=!0,e.autoDetectRenderer=e.Application=e.Filter=e.SpriteMaskFilter=e.Quad=e.RenderTarget=e.ObjectRenderer=e.WebGLManager=e.Shader=e.CanvasRenderTarget=e.TextureUvs=e.VideoBaseTexture=e.BaseRenderTexture=e.RenderTexture=e.BaseTexture=e.TextureMatrix=e.Texture=e.Spritesheet=e.CanvasGraphicsRenderer=e.GraphicsRenderer=e.GraphicsData=e.Graphics=e.TextMetrics=e.TextStyle=e.Text=e.SpriteRenderer=e.CanvasTinter=e.CanvasSpriteRenderer=e.Sprite=e.TransformBase=e.TransformStatic=e.Transform=e.Container=e.DisplayObject=e.Bounds=e.glCore=e.WebGLRenderer=e.CanvasRenderer=e.ticker=e.utils=e.settings=void 0;var n=r(2);Object.keys(n).forEach(function(t){"default"!==t&&"__esModule"!==t&&Object.defineProperty(e,t,{enumerable:!0,get:function(){return n[t]}})});var i=r(6);Object.keys(i).forEach(function(t){"default"!==t&&"__esModule"!==t&&Object.defineProperty(e,t,{enumerable:!0,get:function(){return i[t]}})});var o=r(7);Object.defineProperty(e,"glCore",{enumerable:!0,get:function(){return V(o).default}});var a=r(28);Object.defineProperty(e,"Bounds",{enumerable:!0,get:function(){return V(a).default}});var s=r(51);Object.defineProperty(e,"DisplayObject",{enumerable:!0,get:function(){return V(s).default}});var u=r(13);Object.defineProperty(e,"Container",{enumerable:!0,get:function(){return V(u).default}});var l=r(53);Object.defineProperty(e,"Transform",{enumerable:!0,get:function(){return V(l).default}});var c=r(52);Object.defineProperty(e,"TransformStatic",{enumerable:!0,get:function(){return V(c).default}});var h=r(30);Object.defineProperty(e,"TransformBase",{enumerable:!0,get:function(){return V(h).default}});var f=r(32);Object.defineProperty(e,"Sprite",{enumerable:!0,get:function(){return V(f).default}});var d=r(123);Object.defineProperty(e,"CanvasSpriteRenderer",{enumerable:!0,get:function(){return V(d).default}});var p=r(36);Object.defineProperty(e,"CanvasTinter",{enumerable:!0,get:function(){return V(p).default}});var _=r(126);Object.defineProperty(e,"SpriteRenderer",{enumerable:!0,get:function(){return V(_).default}});var v=r(142);Object.defineProperty(e,"Text",{enumerable:!0,get:function(){return V(v).default}});var g=r(67);Object.defineProperty(e,"TextStyle",{enumerable:!0,get:function(){return V(g).default}});var y=r(68);Object.defineProperty(e,"TextMetrics",{enumerable:!0,get:function(){return V(y).default}});var m=r(144);Object.defineProperty(e,"Graphics",{enumerable:!0,get:function(){return V(m).default}});var E=r(69);Object.defineProperty(e,"GraphicsData",{enumerable:!0,get:function(){return V(E).default}});var x=r(146);Object.defineProperty(e,"GraphicsRenderer",{enumerable:!0,get:function(){return V(x).default}});var b=r(153);Object.defineProperty(e,"CanvasGraphicsRenderer",{enumerable:!0,get:function(){return V(b).default}});var T=r(154);Object.defineProperty(e,"Spritesheet",{enumerable:!0,get:function(){return V(T).default}});var R=r(10);Object.defineProperty(e,"Texture",{enumerable:!0,get:function(){return V(R).default}});var O=r(65);Object.defineProperty(e,"TextureMatrix",{enumerable:!0,get:function(){return V(O).default}});var S=r(12);Object.defineProperty(e,"BaseTexture",{enumerable:!0,get:function(){return V(S).default}});var w=r(35);Object.defineProperty(e,"RenderTexture",{enumerable:!0,get:function(){return V(w).default}});var C=r(60);Object.defineProperty(e,"BaseRenderTexture",{enumerable:!0,get:function(){return V(C).default}});var A=r(57);Object.defineProperty(e,"VideoBaseTexture",{enumerable:!0,get:function(){return V(A).default}});var I=r(58);Object.defineProperty(e,"TextureUvs",{enumerable:!0,get:function(){return V(I).default}});var P=r(61);Object.defineProperty(e,"CanvasRenderTarget",{enumerable:!0,get:function(){return V(P).default}});var M=r(16);Object.defineProperty(e,"Shader",{enumerable:!0,get:function(){return V(M).default}});var D=r(15);Object.defineProperty(e,"WebGLManager",{enumerable:!0,get:function(){return V(D).default}});var L=r(20);Object.defineProperty(e,"ObjectRenderer",{enumerable:!0,get:function(){return V(L).default}});var U=r(22);Object.defineProperty(e,"RenderTarget",{enumerable:!0,get:function(){return V(U).default}});var N=r(66);Object.defineProperty(e,"Quad",{enumerable:!0,get:function(){return V(N).default}});var F=r(63);Object.defineProperty(e,"SpriteMaskFilter",{enumerable:!0,get:function(){return V(F).default}});var j=r(64);Object.defineProperty(e,"Filter",{enumerable:!0,get:function(){return V(j).default}});var k=r(70);Object.defineProperty(e,"Application",{enumerable:!0,get:function(){return V(k).default}});var B=r(71);Object.defineProperty(e,"autoDetectRenderer",{enumerable:!0,get:function(){return B.autoDetectRenderer}});var H=z(r(4)),X=z(r(34)),W=V(r(5)),G=V(r(14)),Y=V(r(21));function z(t){if(t&&t.__esModule)return t;var e={};if(null!=t)for(var r in t)Object.prototype.hasOwnProperty.call(t,r)&&(e[r]=t[r]);return e.default=t,e}function V(t){return t&&t.__esModule?t:{default:t}}e.settings=W.default,e.utils=H,e.ticker=X,e.CanvasRenderer=G.default,e.WebGLRenderer=Y.default},function(t,e,r){"use strict";e.__esModule=!0,e.premultiplyBlendMode=e.BaseTextureCache=e.TextureCache=e.earcut=e.mixins=e.pluginTarget=e.EventEmitter=e.removeItems=e.isMobile=void 0,e.uid=function(){return++p},e.hex2rgb=function(t,e){return(e=e||[])[0]=(t>>16&255)/255,e[1]=(t>>8&255)/255,e[2]=(255&t)/255,e},e.hex2string=function(t){return t=t.toString(16),"#"+(t="000000".substr(0,6-t.length)+t)},e.rgb2hex=function(t){return(255*t[0]<<16)+(255*t[1]<<8)+(255*t[2]|0)},e.getResolutionOfUrl=function(t,e){var r=i.default.RETINA_PREFIX.exec(t);if(r)return parseFloat(r[1]);return void 0!==e?e:1},e.decomposeDataUri=function(t){var e=n.DATA_URI.exec(t);if(e)return{mediaType:e[1]?e[1].toLowerCase():void 0,subType:e[2]?e[2].toLowerCase():void 0,charset:e[3]?e[3].toLowerCase():void 0,encoding:e[4]?e[4].toLowerCase():void 0,data:e[5]};return},e.getUrlFileExtension=function(t){var e=n.URL_FILE_EXTENSION.exec(t);if(e)return e[1].toLowerCase();return},e.getSvgSize=function(t){var e=n.SVG_SIZE.exec(t),r={};e&&(r[e[1]]=Math.round(parseFloat(e[3])),r[e[5]]=Math.round(parseFloat(e[7])));return r},e.skipHello=function(){_=!0},e.sayHello=function(t){if(_)return;if(navigator.userAgent.toLowerCase().indexOf("chrome")>-1){var e=["\n %c %c %c PixiJS "+n.VERSION+" - ✰ "+t+" ✰  %c  %c  http://www.pixijs.com/  %c %c ♥%c♥%c♥ \n\n","background: #ff66a5; padding:5px 0;","background: #ff66a5; padding:5px 0;","color: #ff66a5; background: #030307; padding:5px 0;","background: #ff66a5; padding:5px 0;","background: #ffc3dc; padding:5px 0;","background: #ff66a5; padding:5px 0;","color: #ff2424; background: #fff; padding:5px 0;","color: #ff2424; background: #fff; padding:5px 0;","color: #ff2424; background: #fff; padding:5px 0;"];window.console.log.apply(console,e)}else window.console&&window.console.log("PixiJS "+n.VERSION+" - "+t+" - http://www.pixijs.com/");_=!0},e.isWebGLSupported=function(){var t={stencil:!0,failIfMajorPerformanceCaveat:!0};try{if(!window.WebGLRenderingContext)return!1;var e=document.createElement("canvas"),r=e.getContext("webgl",t)||e.getContext("experimental-webgl",t),n=!(!r||!r.getContextAttributes().stencil);if(r){var i=r.getExtension("WEBGL_lose_context");i&&i.loseContext()}return r=null,n}catch(t){return!1}},e.sign=function(t){return 0===t?0:t<0?-1:1},e.destroyTextureCache=function(){var t=void 0;for(t in v)v[t].destroy();for(t in g)g[t].destroy()},e.clearTextureCache=function(){var t=void 0;for(t in v)delete v[t];for(t in g)delete g[t]},e.correctBlendMode=function(t,e){return y[e?1:0][t]},e.premultiplyTint=function(t,e){if(1===e)return(255*e<<24)+t;if(0===e)return 0;var r=t>>16&255,n=t>>8&255,i=255&t;return(255*e<<24)+((r=r*e+.5|0)<<16)+((n=n*e+.5|0)<<8)+(i=i*e+.5|0)},e.premultiplyRgba=function(t,e,r,n){r=r||new Float32Array(4),n||void 0===n?(r[0]=t[0]*e,r[1]=t[1]*e,r[2]=t[2]*e):(r[0]=t[0],r[1]=t[1],r[2]=t[2]);return r[3]=e,r},e.premultiplyTintToRgba=function(t,e,r,n){(r=r||new Float32Array(4))[0]=(t>>16&255)/255,r[1]=(t>>8&255)/255,r[2]=(255&t)/255,(n||void 0===n)&&(r[0]*=e,r[1]*=e,r[2]*=e);return r[3]=e,r};var n=r(2),i=d(r(5)),o=d(r(11)),a=d(r(112)),s=f(r(113)),u=f(r(29)),l=d(r(114)),c=d(r(115)),h=d(r(31));function f(t){if(t&&t.__esModule)return t;var e={};if(null!=t)for(var r in t)Object.prototype.hasOwnProperty.call(t,r)&&(e[r]=t[r]);return e.default=t,e}function d(t){return t&&t.__esModule?t:{default:t}}var p=0,_=!1;e.isMobile=u,e.removeItems=l.default,e.EventEmitter=o.default,e.pluginTarget=a.default,e.mixins=s,e.earcut=h.default;var v=e.TextureCache=Object.create(null),g=e.BaseTextureCache=Object.create(null);var y=e.premultiplyBlendMode=(0,c.default)()},function(t,e,r){"use strict";e.__esModule=!0;var n=o(r(110)),i=o(r(111));function o(t){return t&&t.__esModule?t:{default:t}}e.default={TARGET_FPMS:.06,MIPMAP_TEXTURES:!0,RESOLUTION:1,FILTER_RESOLUTION:1,SPRITE_MAX_TEXTURES:(0,n.default)(32),SPRITE_BATCH_SIZE:4096,RETINA_PREFIX:/@([0-9\.]+)x/,RENDER_OPTIONS:{view:null,antialias:!1,forceFXAA:!1,autoResize:!1,transparent:!1,backgroundColor:0,clearBeforeRender:!0,preserveDrawingBuffer:!1,roundPixels:!1,width:800,height:600,legacy:!1},TRANSFORM_MODE:0,GC_MODE:0,GC_MAX_IDLE:3600,GC_MAX_CHECK_COUNT:600,WRAP_MODE:0,SCALE_MODE:0,PRECISION_VERTEX:"highp",PRECISION_FRAGMENT:"mediump",CAN_UPLOAD_SAME_BUFFER:(0,i.default)(),MESH_CANVAS_PADDING:0}},function(t,e,r){"use strict";e.__esModule=!0;var n=r(24);Object.defineProperty(e,"Point",{enumerable:!0,get:function(){return f(n).default}});var i=r(40);Object.defineProperty(e,"ObservablePoint",{enumerable:!0,get:function(){return f(i).default}});var o=r(25);Object.defineProperty(e,"Matrix",{enumerable:!0,get:function(){return f(o).default}});var a=r(41);Object.defineProperty(e,"GroupD8",{enumerable:!0,get:function(){return f(a).default}});var s=r(100);Object.defineProperty(e,"Circle",{enumerable:!0,get:function(){return f(s).default}});var u=r(101);Object.defineProperty(e,"Ellipse",{enumerable:!0,get:function(){return f(u).default}});var l=r(102);Object.defineProperty(e,"Polygon",{enumerable:!0,get:function(){return f(l).default}});var c=r(26);Object.defineProperty(e,"Rectangle",{enumerable:!0,get:function(){return f(c).default}});var h=r(103);function f(t){return t&&t.__esModule?t:{default:t}}Object.defineProperty(e,"RoundedRectangle",{enumerable:!0,get:function(){return f(h).default}})},function(t,e,r){var n={createContext:r(104),setVertexAttribArrays:r(42),GLBuffer:r(105),GLFramebuffer:r(106),GLShader:r(107),GLTexture:r(43),VertexArrayObject:r(108),shader:r(109)};void 0!==t&&t.exports&&(t.exports=n),"undefined"!=typeof window&&(window.PIXI=window.PIXI||{},window.PIXI.glCore=n)},function(t,e,r){(function(t,n){var i;
@@ -23400,7 +27654,7 @@ var le="attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nunifor
 //# sourceMappingURL=renderer.js.map
 
 /***/ }),
-/* 193 */
+/* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23543,7 +27797,7 @@ exports.resourceMap = resourceMap;
 exports.rescaleResources = rescaleResources;
 
 /***/ }),
-/* 194 */
+/* 214 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23553,7 +27807,9 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-__webpack_require__(195);
+__webpack_require__(215);
+
+// import '../../../metadata/dist/renderer-metadata';
 
 exports.default = {
     ATTACK_PENETRATION: 10,
@@ -23586,14 +27842,14 @@ exports.default = {
     */
 
 /***/ }),
-/* 195 */
+/* 215 */
 /***/ (function(module, exports) {
 
 window.RENDERER_METADATA=function(e){var a={};function t(o){if(a[o])return a[o].exports;var r=a[o]={i:o,l:!1,exports:{}};return e[o].call(r.exports,r,r.exports,t),r.l=!0,r.exports}return t.m=e,t.c=a,t.d=function(e,a,o){t.o(e,a)||Object.defineProperty(e,a,{enumerable:!0,get:o})},t.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},t.t=function(e,a){if(1&a&&(e=t(e)),8&a)return e;if(4&a&&"object"==typeof e&&e&&e.__esModule)return e;var o=Object.create(null);if(t.r(o),Object.defineProperty(o,"default",{enumerable:!0,value:e}),2&a&&"string"!=typeof e)for(var r in e)t.d(o,r,function(a){return e[a]}.bind(null,r));return o},t.n=function(e){var a=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(a,"a",a),a},t.o=function(e,a){return Object.prototype.hasOwnProperty.call(e,a)},t.p="",t(t.s=1)}([function(e,a){Object.assign(a,{OK:0,ERR_NOT_OWNER:-1,ERR_NO_PATH:-2,ERR_NAME_EXISTS:-3,ERR_BUSY:-4,ERR_NOT_FOUND:-5,ERR_NOT_ENOUGH_ENERGY:-6,ERR_NOT_ENOUGH_RESOURCES:-6,ERR_INVALID_TARGET:-7,ERR_FULL:-8,ERR_NOT_IN_RANGE:-9,ERR_INVALID_ARGS:-10,ERR_TIRED:-11,ERR_NO_BODYPART:-12,ERR_NOT_ENOUGH_EXTENSIONS:-6,ERR_RCL_NOT_ENOUGH:-14,ERR_GCL_NOT_ENOUGH:-15,FIND_EXIT_TOP:1,FIND_EXIT_RIGHT:3,FIND_EXIT_BOTTOM:5,FIND_EXIT_LEFT:7,FIND_EXIT:10,FIND_CREEPS:101,FIND_MY_CREEPS:102,FIND_HOSTILE_CREEPS:103,FIND_SOURCES_ACTIVE:104,FIND_SOURCES:105,FIND_DROPPED_RESOURCES:106,FIND_STRUCTURES:107,FIND_MY_STRUCTURES:108,FIND_HOSTILE_STRUCTURES:109,FIND_FLAGS:110,FIND_CONSTRUCTION_SITES:111,FIND_MY_SPAWNS:112,FIND_HOSTILE_SPAWNS:113,FIND_MY_CONSTRUCTION_SITES:114,FIND_HOSTILE_CONSTRUCTION_SITES:115,FIND_MINERALS:116,FIND_NUKES:117,FIND_TOMBSTONES:118,FIND_POWER_CREEPS:119,FIND_MY_POWER_CREEPS:120,FIND_HOSTILE_POWER_CREEPS:121,FIND_DEPOSITS:122,FIND_RUINS:123,TOP:1,TOP_RIGHT:2,RIGHT:3,BOTTOM_RIGHT:4,BOTTOM:5,BOTTOM_LEFT:6,LEFT:7,TOP_LEFT:8,COLOR_RED:1,COLOR_PURPLE:2,COLOR_BLUE:3,COLOR_CYAN:4,COLOR_GREEN:5,COLOR_YELLOW:6,COLOR_ORANGE:7,COLOR_BROWN:8,COLOR_GREY:9,COLOR_WHITE:10,LOOK_CREEPS:"creep",LOOK_ENERGY:"energy",LOOK_RESOURCES:"resource",LOOK_SOURCES:"source",LOOK_MINERALS:"mineral",LOOK_DEPOSITS:"deposit",LOOK_STRUCTURES:"structure",LOOK_FLAGS:"flag",LOOK_CONSTRUCTION_SITES:"constructionSite",LOOK_NUKES:"nuke",LOOK_TERRAIN:"terrain",LOOK_TOMBSTONES:"tombstone",LOOK_POWER_CREEPS:"powerCreep",LOOK_RUINS:"ruin",OBSTACLE_OBJECT_TYPES:["spawn","creep","powerCreep","source","mineral","deposit","controller","constructedWall","extension","link","storage","tower","observer","powerSpawn","powerBank","lab","terminal","nuker","factory","invaderCore"],MOVE:"move",WORK:"work",CARRY:"carry",ATTACK:"attack",RANGED_ATTACK:"ranged_attack",TOUGH:"tough",HEAL:"heal",CLAIM:"claim",BODYPART_COST:{move:50,work:100,attack:80,carry:50,heal:250,ranged_attack:150,tough:10,claim:600},WORLD_WIDTH:202,WORLD_HEIGHT:202,CREEP_LIFE_TIME:1500,CREEP_CLAIM_LIFE_TIME:600,CREEP_CORPSE_RATE:.2,CREEP_PART_MAX_ENERGY:125,CARRY_CAPACITY:50,HARVEST_POWER:2,HARVEST_MINERAL_POWER:1,HARVEST_DEPOSIT_POWER:1,REPAIR_POWER:100,DISMANTLE_POWER:50,BUILD_POWER:5,ATTACK_POWER:30,UPGRADE_CONTROLLER_POWER:1,RANGED_ATTACK_POWER:10,HEAL_POWER:12,RANGED_HEAL_POWER:4,REPAIR_COST:.01,DISMANTLE_COST:.005,RAMPART_DECAY_AMOUNT:300,RAMPART_DECAY_TIME:100,RAMPART_HITS:1,RAMPART_HITS_MAX:{2:3e5,3:1e6,4:3e6,5:1e7,6:3e7,7:1e8,8:3e8},ENERGY_REGEN_TIME:300,ENERGY_DECAY:1e3,SPAWN_HITS:5e3,SPAWN_ENERGY_START:300,SPAWN_ENERGY_CAPACITY:300,CREEP_SPAWN_TIME:3,SPAWN_RENEW_RATIO:1.2,SOURCE_ENERGY_CAPACITY:3e3,SOURCE_ENERGY_NEUTRAL_CAPACITY:1500,SOURCE_ENERGY_KEEPER_CAPACITY:4e3,WALL_HITS:1,WALL_HITS_MAX:3e8,EXTENSION_HITS:1e3,EXTENSION_ENERGY_CAPACITY:{0:50,1:50,2:50,3:50,4:50,5:50,6:50,7:100,8:200},ROAD_HITS:5e3,ROAD_WEAROUT:1,ROAD_WEAROUT_POWER_CREEP:100,ROAD_DECAY_AMOUNT:100,ROAD_DECAY_TIME:1e3,LINK_HITS:1e3,LINK_HITS_MAX:1e3,LINK_CAPACITY:800,LINK_COOLDOWN:1,LINK_LOSS_RATIO:.03,STORAGE_CAPACITY:1e6,STORAGE_HITS:1e4,STRUCTURE_SPAWN:"spawn",STRUCTURE_EXTENSION:"extension",STRUCTURE_ROAD:"road",STRUCTURE_WALL:"constructedWall",STRUCTURE_RAMPART:"rampart",STRUCTURE_KEEPER_LAIR:"keeperLair",STRUCTURE_PORTAL:"portal",STRUCTURE_CONTROLLER:"controller",STRUCTURE_LINK:"link",STRUCTURE_STORAGE:"storage",STRUCTURE_TOWER:"tower",STRUCTURE_OBSERVER:"observer",STRUCTURE_POWER_BANK:"powerBank",STRUCTURE_POWER_SPAWN:"powerSpawn",STRUCTURE_EXTRACTOR:"extractor",STRUCTURE_LAB:"lab",STRUCTURE_TERMINAL:"terminal",STRUCTURE_CONTAINER:"container",STRUCTURE_NUKER:"nuker",STRUCTURE_FACTORY:"factory",STRUCTURE_INVADER_CORE:"invaderCore",CONSTRUCTION_COST:{spawn:15e3,extension:3e3,road:300,constructedWall:1,rampart:1,link:5e3,storage:3e4,tower:5e3,observer:8e3,powerSpawn:1e5,extractor:5e3,lab:5e4,terminal:1e5,container:5e3,nuker:1e5,factory:1e5},CONSTRUCTION_COST_ROAD_SWAMP_RATIO:5,CONSTRUCTION_COST_ROAD_WALL_RATIO:150,CONTROLLER_LEVELS:{1:200,2:45e3,3:135e3,4:405e3,5:1215e3,6:3645e3,7:10935e3},CONTROLLER_STRUCTURES:{spawn:{0:0,1:1,2:1,3:1,4:1,5:1,6:1,7:2,8:3},extension:{0:0,1:0,2:5,3:10,4:20,5:30,6:40,7:50,8:60},link:{1:0,2:0,3:0,4:0,5:2,6:3,7:4,8:6},road:{0:2500,1:2500,2:2500,3:2500,4:2500,5:2500,6:2500,7:2500,8:2500},constructedWall:{1:0,2:2500,3:2500,4:2500,5:2500,6:2500,7:2500,8:2500},rampart:{1:0,2:2500,3:2500,4:2500,5:2500,6:2500,7:2500,8:2500},storage:{1:0,2:0,3:0,4:1,5:1,6:1,7:1,8:1},tower:{1:0,2:0,3:1,4:1,5:2,6:2,7:3,8:6},observer:{1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:1},powerSpawn:{1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:1},extractor:{1:0,2:0,3:0,4:0,5:0,6:1,7:1,8:1},terminal:{1:0,2:0,3:0,4:0,5:0,6:1,7:1,8:1},lab:{1:0,2:0,3:0,4:0,5:0,6:3,7:6,8:10},container:{0:5,1:5,2:5,3:5,4:5,5:5,6:5,7:5,8:5},nuker:{1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:1},factory:{1:0,2:0,3:0,4:0,5:0,6:0,7:1,8:1}},CONTROLLER_DOWNGRADE:{1:2e4,2:1e4,3:2e4,4:4e4,5:8e4,6:12e4,7:15e4,8:2e5},CONTROLLER_DOWNGRADE_RESTORE:100,CONTROLLER_DOWNGRADE_SAFEMODE_THRESHOLD:5e3,CONTROLLER_CLAIM_DOWNGRADE:300,CONTROLLER_RESERVE:1,CONTROLLER_RESERVE_MAX:5e3,CONTROLLER_MAX_UPGRADE_PER_TICK:15,CONTROLLER_ATTACK_BLOCKED_UPGRADE:1e3,CONTROLLER_NUKE_BLOCKED_UPGRADE:200,SAFE_MODE_DURATION:2e4,SAFE_MODE_COOLDOWN:5e4,SAFE_MODE_COST:1e3,TOWER_HITS:3e3,TOWER_CAPACITY:1e3,TOWER_ENERGY_COST:10,TOWER_POWER_ATTACK:600,TOWER_POWER_HEAL:400,TOWER_POWER_REPAIR:800,TOWER_OPTIMAL_RANGE:5,TOWER_FALLOFF_RANGE:20,TOWER_FALLOFF:.75,OBSERVER_HITS:500,OBSERVER_RANGE:10,POWER_BANK_HITS:2e6,POWER_BANK_CAPACITY_MAX:5e3,POWER_BANK_CAPACITY_MIN:500,POWER_BANK_CAPACITY_CRIT:.3,POWER_BANK_DECAY:5e3,POWER_BANK_HIT_BACK:.5,POWER_SPAWN_HITS:5e3,POWER_SPAWN_ENERGY_CAPACITY:5e3,POWER_SPAWN_POWER_CAPACITY:100,POWER_SPAWN_ENERGY_RATIO:50,EXTRACTOR_HITS:500,EXTRACTOR_COOLDOWN:5,LAB_HITS:500,LAB_MINERAL_CAPACITY:3e3,LAB_ENERGY_CAPACITY:2e3,LAB_BOOST_ENERGY:20,LAB_BOOST_MINERAL:30,LAB_COOLDOWN:10,LAB_REACTION_AMOUNT:5,LAB_UNBOOST_ENERGY:0,LAB_UNBOOST_MINERAL:15,GCL_POW:2.4,GCL_MULTIPLY:1e6,GCL_NOVICE:3,MODE_SIMULATION:null,MODE_WORLD:null,TERRAIN_MASK_WALL:1,TERRAIN_MASK_SWAMP:2,TERRAIN_MASK_LAVA:4,MAX_CONSTRUCTION_SITES:100,MAX_CREEP_SIZE:50,MINERAL_REGEN_TIME:5e4,MINERAL_MIN_AMOUNT:{H:35e3,O:35e3,L:35e3,K:35e3,Z:35e3,U:35e3,X:35e3},MINERAL_RANDOM_FACTOR:2,MINERAL_DENSITY:{1:15e3,2:35e3,3:7e4,4:1e5},MINERAL_DENSITY_PROBABILITY:{1:.1,2:.5,3:.9,4:1},MINERAL_DENSITY_CHANGE:.05,DENSITY_LOW:1,DENSITY_MODERATE:2,DENSITY_HIGH:3,DENSITY_ULTRA:4,DEPOSIT_EXHAUST_MULTIPLY:.001,DEPOSIT_EXHAUST_POW:1.2,DEPOSIT_DECAY_TIME:5e4,TERMINAL_CAPACITY:3e5,TERMINAL_HITS:3e3,TERMINAL_SEND_COST:.1,TERMINAL_MIN_SEND:100,TERMINAL_COOLDOWN:10,CONTAINER_HITS:25e4,CONTAINER_CAPACITY:2e3,CONTAINER_DECAY:5e3,CONTAINER_DECAY_TIME:100,CONTAINER_DECAY_TIME_OWNED:500,NUKER_HITS:1e3,NUKER_COOLDOWN:1e5,NUKER_ENERGY_CAPACITY:3e5,NUKER_GHODIUM_CAPACITY:5e3,NUKE_LAND_TIME:5e4,NUKE_RANGE:10,NUKE_DAMAGE:{0:1e7,2:5e6},FACTORY_HITS:1e3,FACTORY_CAPACITY:5e4,TOMBSTONE_DECAY_PER_PART:5,TOMBSTONE_DECAY_POWER_CREEP:500,RUIN_DECAY:500,RUIN_DECAY_STRUCTURES:{powerBank:10},PORTAL_DECAY:3e4,ORDER_SELL:"sell",ORDER_BUY:"buy",MARKET_FEE:.05,MARKET_MAX_ORDERS:300,MARKET_ORDER_LIFE_TIME:2592e6,FLAGS_LIMIT:1e4,SUBSCRIPTION_TOKEN:"token",CPU_UNLOCK:"cpuUnlock",PIXEL:"pixel",ACCESS_KEY:"accessKey",PIXEL_CPU_COST:1e4,RESOURCE_ENERGY:"energy",RESOURCE_POWER:"power",RESOURCE_HYDROGEN:"H",RESOURCE_OXYGEN:"O",RESOURCE_UTRIUM:"U",RESOURCE_LEMERGIUM:"L",RESOURCE_KEANIUM:"K",RESOURCE_ZYNTHIUM:"Z",RESOURCE_CATALYST:"X",RESOURCE_GHODIUM:"G",RESOURCE_SILICON:"silicon",RESOURCE_METAL:"metal",RESOURCE_BIOMASS:"biomass",RESOURCE_MIST:"mist",RESOURCE_HYDROXIDE:"OH",RESOURCE_ZYNTHIUM_KEANITE:"ZK",RESOURCE_UTRIUM_LEMERGITE:"UL",RESOURCE_UTRIUM_HYDRIDE:"UH",RESOURCE_UTRIUM_OXIDE:"UO",RESOURCE_KEANIUM_HYDRIDE:"KH",RESOURCE_KEANIUM_OXIDE:"KO",RESOURCE_LEMERGIUM_HYDRIDE:"LH",RESOURCE_LEMERGIUM_OXIDE:"LO",RESOURCE_ZYNTHIUM_HYDRIDE:"ZH",RESOURCE_ZYNTHIUM_OXIDE:"ZO",RESOURCE_GHODIUM_HYDRIDE:"GH",RESOURCE_GHODIUM_OXIDE:"GO",RESOURCE_UTRIUM_ACID:"UH2O",RESOURCE_UTRIUM_ALKALIDE:"UHO2",RESOURCE_KEANIUM_ACID:"KH2O",RESOURCE_KEANIUM_ALKALIDE:"KHO2",RESOURCE_LEMERGIUM_ACID:"LH2O",RESOURCE_LEMERGIUM_ALKALIDE:"LHO2",RESOURCE_ZYNTHIUM_ACID:"ZH2O",RESOURCE_ZYNTHIUM_ALKALIDE:"ZHO2",RESOURCE_GHODIUM_ACID:"GH2O",RESOURCE_GHODIUM_ALKALIDE:"GHO2",RESOURCE_CATALYZED_UTRIUM_ACID:"XUH2O",RESOURCE_CATALYZED_UTRIUM_ALKALIDE:"XUHO2",RESOURCE_CATALYZED_KEANIUM_ACID:"XKH2O",RESOURCE_CATALYZED_KEANIUM_ALKALIDE:"XKHO2",RESOURCE_CATALYZED_LEMERGIUM_ACID:"XLH2O",RESOURCE_CATALYZED_LEMERGIUM_ALKALIDE:"XLHO2",RESOURCE_CATALYZED_ZYNTHIUM_ACID:"XZH2O",RESOURCE_CATALYZED_ZYNTHIUM_ALKALIDE:"XZHO2",RESOURCE_CATALYZED_GHODIUM_ACID:"XGH2O",RESOURCE_CATALYZED_GHODIUM_ALKALIDE:"XGHO2",RESOURCE_OPS:"ops",RESOURCE_UTRIUM_BAR:"utrium_bar",RESOURCE_LEMERGIUM_BAR:"lemergium_bar",RESOURCE_ZYNTHIUM_BAR:"zynthium_bar",RESOURCE_KEANIUM_BAR:"keanium_bar",RESOURCE_GHODIUM_MELT:"ghodium_melt",RESOURCE_OXIDANT:"oxidant",RESOURCE_REDUCTANT:"reductant",RESOURCE_PURIFIER:"purifier",RESOURCE_BATTERY:"battery",RESOURCE_COMPOSITE:"composite",RESOURCE_CRYSTAL:"crystal",RESOURCE_LIQUID:"liquid",RESOURCE_WIRE:"wire",RESOURCE_SWITCH:"switch",RESOURCE_TRANSISTOR:"transistor",RESOURCE_MICROCHIP:"microchip",RESOURCE_CIRCUIT:"circuit",RESOURCE_DEVICE:"device",RESOURCE_CELL:"cell",RESOURCE_PHLEGM:"phlegm",RESOURCE_TISSUE:"tissue",RESOURCE_MUSCLE:"muscle",RESOURCE_ORGANOID:"organoid",RESOURCE_ORGANISM:"organism",RESOURCE_ALLOY:"alloy",RESOURCE_TUBE:"tube",RESOURCE_FIXTURES:"fixtures",RESOURCE_FRAME:"frame",RESOURCE_HYDRAULICS:"hydraulics",RESOURCE_MACHINE:"machine",RESOURCE_CONDENSATE:"condensate",RESOURCE_CONCENTRATE:"concentrate",RESOURCE_EXTRACT:"extract",RESOURCE_SPIRIT:"spirit",RESOURCE_EMANATION:"emanation",RESOURCE_ESSENCE:"essence",REACTIONS:{H:{O:"OH",L:"LH",K:"KH",U:"UH",Z:"ZH",G:"GH"},O:{H:"OH",L:"LO",K:"KO",U:"UO",Z:"ZO",G:"GO"},Z:{K:"ZK",H:"ZH",O:"ZO"},L:{U:"UL",H:"LH",O:"LO"},K:{Z:"ZK",H:"KH",O:"KO"},G:{H:"GH",O:"GO"},U:{L:"UL",H:"UH",O:"UO"},OH:{UH:"UH2O",UO:"UHO2",ZH:"ZH2O",ZO:"ZHO2",KH:"KH2O",KO:"KHO2",LH:"LH2O",LO:"LHO2",GH:"GH2O",GO:"GHO2"},X:{UH2O:"XUH2O",UHO2:"XUHO2",LH2O:"XLH2O",LHO2:"XLHO2",KH2O:"XKH2O",KHO2:"XKHO2",ZH2O:"XZH2O",ZHO2:"XZHO2",GH2O:"XGH2O",GHO2:"XGHO2"},ZK:{UL:"G"},UL:{ZK:"G"},LH:{OH:"LH2O"},ZH:{OH:"ZH2O"},GH:{OH:"GH2O"},KH:{OH:"KH2O"},UH:{OH:"UH2O"},LO:{OH:"LHO2"},ZO:{OH:"ZHO2"},KO:{OH:"KHO2"},UO:{OH:"UHO2"},GO:{OH:"GHO2"},LH2O:{X:"XLH2O"},KH2O:{X:"XKH2O"},ZH2O:{X:"XZH2O"},UH2O:{X:"XUH2O"},GH2O:{X:"XGH2O"},LHO2:{X:"XLHO2"},UHO2:{X:"XUHO2"},KHO2:{X:"XKHO2"},ZHO2:{X:"XZHO2"},GHO2:{X:"XGHO2"}},BOOSTS:{work:{UO:{harvest:3},UHO2:{harvest:5},XUHO2:{harvest:7},LH:{build:1.5,repair:1.5},LH2O:{build:1.8,repair:1.8},XLH2O:{build:2,repair:2},ZH:{dismantle:2},ZH2O:{dismantle:3},XZH2O:{dismantle:4},GH:{upgradeController:1.5},GH2O:{upgradeController:1.8},XGH2O:{upgradeController:2}},attack:{UH:{attack:2},UH2O:{attack:3},XUH2O:{attack:4}},ranged_attack:{KO:{rangedAttack:2,rangedMassAttack:2},KHO2:{rangedAttack:3,rangedMassAttack:3},XKHO2:{rangedAttack:4,rangedMassAttack:4}},heal:{LO:{heal:2,rangedHeal:2},LHO2:{heal:3,rangedHeal:3},XLHO2:{heal:4,rangedHeal:4}},carry:{KH:{capacity:2},KH2O:{capacity:3},XKH2O:{capacity:4}},move:{ZO:{fatigue:2},ZHO2:{fatigue:3},XZHO2:{fatigue:4}},tough:{GO:{damage:.7},GHO2:{damage:.5},XGHO2:{damage:.3}}},REACTION_TIME:{OH:20,ZK:5,UL:5,G:5,UH:10,UH2O:5,XUH2O:60,UO:10,UHO2:5,XUHO2:60,KH:10,KH2O:5,XKH2O:60,KO:10,KHO2:5,XKHO2:60,LH:15,LH2O:10,XLH2O:65,LO:10,LHO2:5,XLHO2:60,ZH:20,ZH2O:40,XZH2O:160,ZO:10,ZHO2:5,XZHO2:60,GH:10,GH2O:15,XGH2O:80,GO:10,GHO2:30,XGHO2:150},PORTAL_UNSTABLE:864e6,PORTAL_MIN_TIMEOUT:10368e5,PORTAL_MAX_TIMEOUT:19008e5,POWER_BANK_RESPAWN_TIME:5e4,INVADERS_ENERGY_GOAL:1e5,SYSTEM_USERNAME:"Screeps",SIGN_NOVICE_AREA:"A new Novice or Respawn Area is being planned somewhere in this sector. Please make sure all important rooms are reserved.",SIGN_RESPAWN_AREA:"A new Novice or Respawn Area is being planned somewhere in this sector. Please make sure all important rooms are reserved.",SIGN_PLANNED_AREA:"A new Novice or Respawn Area is being planned somewhere in this sector. Please make sure all important rooms are reserved.",EVENT_ATTACK:1,EVENT_OBJECT_DESTROYED:2,EVENT_ATTACK_CONTROLLER:3,EVENT_BUILD:4,EVENT_HARVEST:5,EVENT_HEAL:6,EVENT_REPAIR:7,EVENT_RESERVE_CONTROLLER:8,EVENT_UPGRADE_CONTROLLER:9,EVENT_EXIT:10,EVENT_POWER:11,EVENT_TRANSFER:12,EVENT_ATTACK_TYPE_MELEE:1,EVENT_ATTACK_TYPE_RANGED:2,EVENT_ATTACK_TYPE_RANGED_MASS:3,EVENT_ATTACK_TYPE_DISMANTLE:4,EVENT_ATTACK_TYPE_HIT_BACK:5,EVENT_ATTACK_TYPE_NUKE:6,EVENT_HEAL_TYPE_MELEE:1,EVENT_HEAL_TYPE_RANGED:2,POWER_LEVEL_MULTIPLY:1e3,POWER_LEVEL_POW:2,POWER_CREEP_SPAWN_COOLDOWN:288e5,POWER_CREEP_DELETE_COOLDOWN:864e5,POWER_CREEP_MAX_LEVEL:25,POWER_CREEP_LIFE_TIME:5e3,POWER_CLASS:{OPERATOR:"operator"},PWR_GENERATE_OPS:1,PWR_OPERATE_SPAWN:2,PWR_OPERATE_TOWER:3,PWR_OPERATE_STORAGE:4,PWR_OPERATE_LAB:5,PWR_OPERATE_EXTENSION:6,PWR_OPERATE_OBSERVER:7,PWR_OPERATE_TERMINAL:8,PWR_DISRUPT_SPAWN:9,PWR_DISRUPT_TOWER:10,PWR_DISRUPT_SOURCE:11,PWR_SHIELD:12,PWR_REGEN_SOURCE:13,PWR_REGEN_MINERAL:14,PWR_DISRUPT_TERMINAL:15,PWR_OPERATE_POWER:16,PWR_FORTIFY:17,PWR_OPERATE_CONTROLLER:18,PWR_OPERATE_FACTORY:19,EFFECT_INVULNERABILITY:1001,EFFECT_COLLAPSE_TIMER:1002,INVADER_CORE_HITS:1e5,INVADER_CORE_CREEP_SPAWN_TIME:{0:0,1:0,2:6,3:3,4:2,5:1},INVADER_CORE_EXPAND_TIME:{1:4e3,2:3500,3:3e3,4:2500,5:2e3},INVADER_CORE_CONTROLLER_POWER:2,INVADER_CORE_CONTROLLER_DOWNGRADE:5e3,STRONGHOLD_RAMPART_HITS:{0:0,1:1e5,2:2e5,3:5e5,4:1e6,5:2e6},STRONGHOLD_DECAY_TICKS:75e3}),Object.assign(a,{POWER_INFO:{[a.PWR_GENERATE_OPS]:{className:a.POWER_CLASS.OPERATOR,level:[0,2,7,14,22],cooldown:50,effect:[1,2,4,6,8]},[a.PWR_OPERATE_SPAWN]:{className:a.POWER_CLASS.OPERATOR,level:[0,2,7,14,22],cooldown:300,duration:1e3,range:3,ops:100,effect:[.9,.7,.5,.35,.2]},[a.PWR_OPERATE_TOWER]:{className:a.POWER_CLASS.OPERATOR,level:[0,2,7,14,22],cooldown:10,duration:100,range:3,ops:10,effect:[1.1,1.2,1.3,1.4,1.5]},[a.PWR_OPERATE_STORAGE]:{className:a.POWER_CLASS.OPERATOR,level:[0,2,7,14,22],cooldown:800,duration:1e3,range:3,ops:100,effect:[5e5,1e6,2e6,4e6,7e6]},[a.PWR_OPERATE_LAB]:{className:a.POWER_CLASS.OPERATOR,level:[0,2,7,14,22],cooldown:50,duration:1e3,range:3,ops:10,effect:[2,4,6,8,10]},[a.PWR_OPERATE_EXTENSION]:{className:a.POWER_CLASS.OPERATOR,level:[0,2,7,14,22],cooldown:50,range:3,ops:2,effect:[.2,.4,.6,.8,1]},[a.PWR_OPERATE_OBSERVER]:{className:a.POWER_CLASS.OPERATOR,level:[0,2,7,14,22],cooldown:400,duration:[200,400,600,800,1e3],range:3,ops:10},[a.PWR_OPERATE_TERMINAL]:{className:a.POWER_CLASS.OPERATOR,level:[0,2,7,14,22],cooldown:500,duration:1e3,range:3,ops:100,effect:[.9,.8,.7,.6,.5]},[a.PWR_DISRUPT_SPAWN]:{className:a.POWER_CLASS.OPERATOR,level:[0,2,7,14,22],cooldown:5,range:20,ops:10,duration:[1,2,3,4,5]},[a.PWR_DISRUPT_TOWER]:{className:a.POWER_CLASS.OPERATOR,level:[0,2,7,14,22],cooldown:0,duration:5,range:50,ops:10,effect:[.9,.8,.7,.6,.5]},[a.PWR_DISRUPT_SOURCE]:{className:a.POWER_CLASS.OPERATOR,level:[0,2,7,14,22],cooldown:100,range:3,ops:100,duration:[100,200,300,400,500]},[a.PWR_SHIELD]:{className:a.POWER_CLASS.OPERATOR,level:[0,2,7,14,22],effect:[5e3,1e4,15e3,2e4,25e3],duration:50,cooldown:20,energy:100},[a.PWR_REGEN_SOURCE]:{className:a.POWER_CLASS.OPERATOR,level:[10,11,12,14,22],cooldown:100,duration:300,range:3,effect:[50,100,150,200,250],period:15},[a.PWR_REGEN_MINERAL]:{className:a.POWER_CLASS.OPERATOR,level:[10,11,12,14,22],cooldown:100,duration:100,range:3,effect:[2,4,6,8,10],period:10},[a.PWR_DISRUPT_TERMINAL]:{className:a.POWER_CLASS.OPERATOR,level:[20,21,22,23,24],cooldown:8,duration:10,range:50,ops:[50,40,30,20,10]},[a.PWR_FORTIFY]:{className:a.POWER_CLASS.OPERATOR,level:[0,2,7,14,22],cooldown:5,range:3,ops:5,duration:[1,2,3,4,5]},[a.PWR_OPERATE_POWER]:{className:a.POWER_CLASS.OPERATOR,level:[10,11,12,14,22],cooldown:800,range:3,duration:1e3,ops:200,effect:[1,2,3,4,5]},[a.PWR_OPERATE_CONTROLLER]:{className:a.POWER_CLASS.OPERATOR,level:[20,21,22,23,24],cooldown:800,range:3,duration:1e3,ops:200,effect:[10,20,30,40,50]},[a.PWR_OPERATE_FACTORY]:{className:a.POWER_CLASS.OPERATOR,level:[0,2,7,14,22],cooldown:800,range:3,duration:1e3,ops:100}},BODYPARTS_ALL:[a.MOVE,a.WORK,a.CARRY,a.ATTACK,a.RANGED_ATTACK,a.TOUGH,a.HEAL,a.CLAIM],RESOURCES_ALL:[a.RESOURCE_ENERGY,a.RESOURCE_POWER,a.RESOURCE_HYDROGEN,a.RESOURCE_OXYGEN,a.RESOURCE_UTRIUM,a.RESOURCE_KEANIUM,a.RESOURCE_LEMERGIUM,a.RESOURCE_ZYNTHIUM,a.RESOURCE_CATALYST,a.RESOURCE_GHODIUM,a.RESOURCE_HYDROXIDE,a.RESOURCE_ZYNTHIUM_KEANITE,a.RESOURCE_UTRIUM_LEMERGITE,a.RESOURCE_UTRIUM_HYDRIDE,a.RESOURCE_UTRIUM_OXIDE,a.RESOURCE_KEANIUM_HYDRIDE,a.RESOURCE_KEANIUM_OXIDE,a.RESOURCE_LEMERGIUM_HYDRIDE,a.RESOURCE_LEMERGIUM_OXIDE,a.RESOURCE_ZYNTHIUM_HYDRIDE,a.RESOURCE_ZYNTHIUM_OXIDE,a.RESOURCE_GHODIUM_HYDRIDE,a.RESOURCE_GHODIUM_OXIDE,a.RESOURCE_UTRIUM_ACID,a.RESOURCE_UTRIUM_ALKALIDE,a.RESOURCE_KEANIUM_ACID,a.RESOURCE_KEANIUM_ALKALIDE,a.RESOURCE_LEMERGIUM_ACID,a.RESOURCE_LEMERGIUM_ALKALIDE,a.RESOURCE_ZYNTHIUM_ACID,a.RESOURCE_ZYNTHIUM_ALKALIDE,a.RESOURCE_GHODIUM_ACID,a.RESOURCE_GHODIUM_ALKALIDE,a.RESOURCE_CATALYZED_UTRIUM_ACID,a.RESOURCE_CATALYZED_UTRIUM_ALKALIDE,a.RESOURCE_CATALYZED_KEANIUM_ACID,a.RESOURCE_CATALYZED_KEANIUM_ALKALIDE,a.RESOURCE_CATALYZED_LEMERGIUM_ACID,a.RESOURCE_CATALYZED_LEMERGIUM_ALKALIDE,a.RESOURCE_CATALYZED_ZYNTHIUM_ACID,a.RESOURCE_CATALYZED_ZYNTHIUM_ALKALIDE,a.RESOURCE_CATALYZED_GHODIUM_ACID,a.RESOURCE_CATALYZED_GHODIUM_ALKALIDE,a.RESOURCE_OPS,a.RESOURCE_SILICON,a.RESOURCE_METAL,a.RESOURCE_BIOMASS,a.RESOURCE_MIST,a.RESOURCE_UTRIUM_BAR,a.RESOURCE_LEMERGIUM_BAR,a.RESOURCE_ZYNTHIUM_BAR,a.RESOURCE_KEANIUM_BAR,a.RESOURCE_GHODIUM_MELT,a.RESOURCE_OXIDANT,a.RESOURCE_REDUCTANT,a.RESOURCE_PURIFIER,a.RESOURCE_BATTERY,a.RESOURCE_COMPOSITE,a.RESOURCE_CRYSTAL,a.RESOURCE_LIQUID,a.RESOURCE_WIRE,a.RESOURCE_SWITCH,a.RESOURCE_TRANSISTOR,a.RESOURCE_MICROCHIP,a.RESOURCE_CIRCUIT,a.RESOURCE_DEVICE,a.RESOURCE_CELL,a.RESOURCE_PHLEGM,a.RESOURCE_TISSUE,a.RESOURCE_MUSCLE,a.RESOURCE_ORGANOID,a.RESOURCE_ORGANISM,a.RESOURCE_ALLOY,a.RESOURCE_TUBE,a.RESOURCE_FIXTURES,a.RESOURCE_FRAME,a.RESOURCE_HYDRAULICS,a.RESOURCE_MACHINE,a.RESOURCE_CONDENSATE,a.RESOURCE_CONCENTRATE,a.RESOURCE_EXTRACT,a.RESOURCE_SPIRIT,a.RESOURCE_EMANATION,a.RESOURCE_ESSENCE],COLORS_ALL:[a.COLOR_RED,a.COLOR_PURPLE,a.COLOR_BLUE,a.COLOR_CYAN,a.COLOR_GREEN,a.COLOR_YELLOW,a.COLOR_ORANGE,a.COLOR_BROWN,a.COLOR_GREY,a.COLOR_WHITE],INTERSHARD_RESOURCES:[a.SUBSCRIPTION_TOKEN,a.CPU_UNLOCK,a.PIXEL,a.ACCESS_KEY],COMMODITIES:{[a.RESOURCE_UTRIUM_BAR]:{amount:100,cooldown:20,components:{[a.RESOURCE_UTRIUM]:500,[a.RESOURCE_ENERGY]:200}},[a.RESOURCE_UTRIUM]:{amount:500,cooldown:20,components:{[a.RESOURCE_UTRIUM_BAR]:100,[a.RESOURCE_ENERGY]:200}},[a.RESOURCE_LEMERGIUM_BAR]:{amount:100,cooldown:20,components:{[a.RESOURCE_LEMERGIUM]:500,[a.RESOURCE_ENERGY]:200}},[a.RESOURCE_LEMERGIUM]:{amount:500,cooldown:20,components:{[a.RESOURCE_LEMERGIUM_BAR]:100,[a.RESOURCE_ENERGY]:200}},[a.RESOURCE_ZYNTHIUM_BAR]:{amount:100,cooldown:20,components:{[a.RESOURCE_ZYNTHIUM]:500,[a.RESOURCE_ENERGY]:200}},[a.RESOURCE_ZYNTHIUM]:{amount:500,cooldown:20,components:{[a.RESOURCE_ZYNTHIUM_BAR]:100,[a.RESOURCE_ENERGY]:200}},[a.RESOURCE_KEANIUM_BAR]:{amount:100,cooldown:20,components:{[a.RESOURCE_KEANIUM]:500,[a.RESOURCE_ENERGY]:200}},[a.RESOURCE_KEANIUM]:{amount:500,cooldown:20,components:{[a.RESOURCE_KEANIUM_BAR]:100,[a.RESOURCE_ENERGY]:200}},[a.RESOURCE_GHODIUM_MELT]:{amount:100,cooldown:20,components:{[a.RESOURCE_GHODIUM]:500,[a.RESOURCE_ENERGY]:200}},[a.RESOURCE_GHODIUM]:{amount:500,cooldown:20,components:{[a.RESOURCE_GHODIUM_MELT]:100,[a.RESOURCE_ENERGY]:200}},[a.RESOURCE_OXIDANT]:{amount:100,cooldown:20,components:{[a.RESOURCE_OXYGEN]:500,[a.RESOURCE_ENERGY]:200}},[a.RESOURCE_OXYGEN]:{amount:500,cooldown:20,components:{[a.RESOURCE_OXIDANT]:100,[a.RESOURCE_ENERGY]:200}},[a.RESOURCE_REDUCTANT]:{amount:100,cooldown:20,components:{[a.RESOURCE_HYDROGEN]:500,[a.RESOURCE_ENERGY]:200}},[a.RESOURCE_HYDROGEN]:{amount:500,cooldown:20,components:{[a.RESOURCE_REDUCTANT]:100,[a.RESOURCE_ENERGY]:200}},[a.RESOURCE_PURIFIER]:{amount:100,cooldown:20,components:{[a.RESOURCE_CATALYST]:500,[a.RESOURCE_ENERGY]:200}},[a.RESOURCE_CATALYST]:{amount:500,cooldown:20,components:{[a.RESOURCE_PURIFIER]:100,[a.RESOURCE_ENERGY]:200}},[a.RESOURCE_BATTERY]:{amount:50,cooldown:10,components:{[a.RESOURCE_ENERGY]:600}},[a.RESOURCE_ENERGY]:{amount:500,cooldown:10,components:{[a.RESOURCE_BATTERY]:50}},[a.RESOURCE_COMPOSITE]:{level:1,amount:20,cooldown:50,components:{[a.RESOURCE_UTRIUM_BAR]:20,[a.RESOURCE_ZYNTHIUM_BAR]:20,[a.RESOURCE_ENERGY]:20}},[a.RESOURCE_CRYSTAL]:{level:2,amount:6,cooldown:21,components:{[a.RESOURCE_LEMERGIUM_BAR]:6,[a.RESOURCE_KEANIUM_BAR]:6,[a.RESOURCE_PURIFIER]:6,[a.RESOURCE_ENERGY]:45}},[a.RESOURCE_LIQUID]:{level:3,amount:12,cooldown:60,components:{[a.RESOURCE_OXIDANT]:12,[a.RESOURCE_REDUCTANT]:12,[a.RESOURCE_GHODIUM_MELT]:12,[a.RESOURCE_ENERGY]:90}},[a.RESOURCE_WIRE]:{amount:20,cooldown:8,components:{[a.RESOURCE_UTRIUM_BAR]:20,[a.RESOURCE_SILICON]:100,[a.RESOURCE_ENERGY]:40}},[a.RESOURCE_SWITCH]:{level:1,amount:5,cooldown:70,components:{[a.RESOURCE_WIRE]:40,[a.RESOURCE_OXIDANT]:95,[a.RESOURCE_UTRIUM_BAR]:35,[a.RESOURCE_ENERGY]:20}},[a.RESOURCE_TRANSISTOR]:{level:2,amount:1,cooldown:59,components:{[a.RESOURCE_SWITCH]:4,[a.RESOURCE_WIRE]:15,[a.RESOURCE_REDUCTANT]:85,[a.RESOURCE_ENERGY]:8}},[a.RESOURCE_MICROCHIP]:{level:3,amount:1,cooldown:250,components:{[a.RESOURCE_TRANSISTOR]:2,[a.RESOURCE_COMPOSITE]:50,[a.RESOURCE_WIRE]:117,[a.RESOURCE_PURIFIER]:25,[a.RESOURCE_ENERGY]:16}},[a.RESOURCE_CIRCUIT]:{level:4,amount:1,cooldown:800,components:{[a.RESOURCE_MICROCHIP]:1,[a.RESOURCE_TRANSISTOR]:5,[a.RESOURCE_SWITCH]:4,[a.RESOURCE_OXIDANT]:115,[a.RESOURCE_ENERGY]:32}},[a.RESOURCE_DEVICE]:{level:5,amount:1,cooldown:600,components:{[a.RESOURCE_CIRCUIT]:1,[a.RESOURCE_MICROCHIP]:3,[a.RESOURCE_CRYSTAL]:110,[a.RESOURCE_GHODIUM_MELT]:150,[a.RESOURCE_ENERGY]:64}},[a.RESOURCE_CELL]:{amount:20,cooldown:8,components:{[a.RESOURCE_LEMERGIUM_BAR]:20,[a.RESOURCE_BIOMASS]:100,[a.RESOURCE_ENERGY]:40}},[a.RESOURCE_PHLEGM]:{level:1,amount:2,cooldown:35,components:{[a.RESOURCE_CELL]:20,[a.RESOURCE_OXIDANT]:36,[a.RESOURCE_LEMERGIUM_BAR]:16,[a.RESOURCE_ENERGY]:8}},[a.RESOURCE_TISSUE]:{level:2,amount:2,cooldown:164,components:{[a.RESOURCE_PHLEGM]:10,[a.RESOURCE_CELL]:10,[a.RESOURCE_REDUCTANT]:110,[a.RESOURCE_ENERGY]:16}},[a.RESOURCE_MUSCLE]:{level:3,amount:1,cooldown:250,components:{[a.RESOURCE_TISSUE]:3,[a.RESOURCE_PHLEGM]:3,[a.RESOURCE_ZYNTHIUM_BAR]:50,[a.RESOURCE_REDUCTANT]:50,[a.RESOURCE_ENERGY]:16}},[a.RESOURCE_ORGANOID]:{level:4,amount:1,cooldown:800,components:{[a.RESOURCE_MUSCLE]:1,[a.RESOURCE_TISSUE]:5,[a.RESOURCE_PURIFIER]:208,[a.RESOURCE_OXIDANT]:256,[a.RESOURCE_ENERGY]:32}},[a.RESOURCE_ORGANISM]:{level:5,amount:1,cooldown:600,components:{[a.RESOURCE_ORGANOID]:1,[a.RESOURCE_LIQUID]:150,[a.RESOURCE_TISSUE]:6,[a.RESOURCE_CELL]:310,[a.RESOURCE_ENERGY]:64}},[a.RESOURCE_ALLOY]:{amount:20,cooldown:8,components:{[a.RESOURCE_ZYNTHIUM_BAR]:20,[a.RESOURCE_METAL]:100,[a.RESOURCE_ENERGY]:40}},[a.RESOURCE_TUBE]:{level:1,amount:2,cooldown:45,components:{[a.RESOURCE_ALLOY]:40,[a.RESOURCE_ZYNTHIUM_BAR]:16,[a.RESOURCE_ENERGY]:8}},[a.RESOURCE_FIXTURES]:{level:2,amount:1,cooldown:115,components:{[a.RESOURCE_COMPOSITE]:20,[a.RESOURCE_ALLOY]:41,[a.RESOURCE_OXIDANT]:161,[a.RESOURCE_ENERGY]:8}},[a.RESOURCE_FRAME]:{level:3,amount:1,cooldown:125,components:{[a.RESOURCE_FIXTURES]:2,[a.RESOURCE_TUBE]:4,[a.RESOURCE_REDUCTANT]:330,[a.RESOURCE_ZYNTHIUM_BAR]:31,[a.RESOURCE_ENERGY]:16}},[a.RESOURCE_HYDRAULICS]:{level:4,amount:1,cooldown:800,components:{[a.RESOURCE_LIQUID]:150,[a.RESOURCE_FIXTURES]:3,[a.RESOURCE_TUBE]:15,[a.RESOURCE_PURIFIER]:208,[a.RESOURCE_ENERGY]:32}},[a.RESOURCE_MACHINE]:{level:5,amount:1,cooldown:600,components:{[a.RESOURCE_HYDRAULICS]:1,[a.RESOURCE_FRAME]:2,[a.RESOURCE_FIXTURES]:3,[a.RESOURCE_TUBE]:12,[a.RESOURCE_ENERGY]:64}},[a.RESOURCE_CONDENSATE]:{amount:20,cooldown:8,components:{[a.RESOURCE_KEANIUM_BAR]:20,[a.RESOURCE_MIST]:100,[a.RESOURCE_ENERGY]:40}},[a.RESOURCE_CONCENTRATE]:{level:1,amount:3,cooldown:41,components:{[a.RESOURCE_CONDENSATE]:30,[a.RESOURCE_KEANIUM_BAR]:15,[a.RESOURCE_REDUCTANT]:54,[a.RESOURCE_ENERGY]:12}},[a.RESOURCE_EXTRACT]:{level:2,amount:2,cooldown:128,components:{[a.RESOURCE_CONCENTRATE]:10,[a.RESOURCE_CONDENSATE]:30,[a.RESOURCE_OXIDANT]:60,[a.RESOURCE_ENERGY]:16}},[a.RESOURCE_SPIRIT]:{level:3,amount:1,cooldown:200,components:{[a.RESOURCE_EXTRACT]:2,[a.RESOURCE_CONCENTRATE]:6,[a.RESOURCE_REDUCTANT]:90,[a.RESOURCE_PURIFIER]:20,[a.RESOURCE_ENERGY]:16}},[a.RESOURCE_EMANATION]:{level:4,amount:1,cooldown:800,components:{[a.RESOURCE_SPIRIT]:2,[a.RESOURCE_EXTRACT]:2,[a.RESOURCE_CONCENTRATE]:3,[a.RESOURCE_KEANIUM_BAR]:112,[a.RESOURCE_ENERGY]:32}},[a.RESOURCE_ESSENCE]:{level:5,amount:1,cooldown:600,components:{[a.RESOURCE_EMANATION]:1,[a.RESOURCE_SPIRIT]:3,[a.RESOURCE_CRYSTAL]:110,[a.RESOURCE_GHODIUM_MELT]:150,[a.RESOURCE_ENERGY]:64}}}})},function(e,a,t){"use strict";t.r(a);var o=(e,a,t,o)=>({action:"Sequence",params:[[{action:"AlphaTo",params:[e,0]},{action:"Repeat",params:[{action:"Sequence",params:[[{action:"AlphaTo",params:[a,t]},{action:"AlphaTo",params:[e,o]}]]}]}]]}),r=(e,a)=>({type:"text",once:!0,layer:"effects",when:t=>{const{calcs:{isOwner:o},stateExtra:{gameData:{showEnemyNames:r,showMyNames:s}}}=t;return(o&&s[e]||!o&&r[e])&&(!a||a(t))},payload:{text:{$calc:"displayName"},style:{align:"center",fill:{$calc:"playerColorHex"},fontFamily:"Roboto, sans-serif",fontSize:55,stroke:"#111",strokeThickness:15},anchor:{x:.5,y:1.7}}}),s=(e,a,t,o)=>({action:"Spawn",params:[[{action:"Repeat",params:[{action:"Sequence",params:[[{action:"ScaleTo",params:[{$rel:"scale.x",koef:1.2},{$rel:"scale.y",koef:1.2},1]},{action:"ScaleTo",params:[{$rel:"scale.x"},{$rel:"scale.y"},1]}]]}]},{action:"Repeat",params:[{action:"Sequence",params:[[{action:"AlphaTo",params:[e,.1]},{action:"AlphaTo",params:[a,.2]},{action:"DelayTime",params:[{$random:2}]},{action:"AlphaTo",params:[t,.2]},{action:"AlphaTo",params:[o,2.8]}]]}]}]]}),n=t(0),i=t.n(n);var c={data:{x:{$state:"x",koef:100},y:{$state:"y",koef:100}},calculations:[{id:"isOwner",props:["user"],func:({state:{user:e},stateExtra:{gameData:{player:a}}})=>void 0===e?void 0:a==e},{id:"playerColor",props:["user"],func:({calcs:{isOwner:e}})=>void 0===e?12303291:e?9419667:16742263},{id:"playerColorHex",props:["user"],func:({calcs:{isOwner:e}})=>e?"#8fbb93":"#FF7777"},{id:"playerColorIntense",props:["user"],func:({calcs:{isOwner:e}})=>65280},{id:"viewBox",func:({world:{options:{VIEW_BOX:e}}})=>e},{id:"hasEffect",func:({state:{effects:e},stateExtra:{gameTime:a}})=>e&&Object.values(e).some(e=>!!i.a.POWER_INFO[e.power]&&e.endTime>a)},{id:"decorations",func:({world:{decorations:e=[]}})=>e}],processors:[{type:"objectDecoration",props:["decorations"]},{type:"draw",once:!0,when:({state:{_isDisabled:e}})=>!!e,layer:"effects",payload:{drawings:[{method:"beginFill",params:[16711680]},{method:"drawRect",params:[-50,-50,100,100]},{method:"endFill"}],blendMode:1},actions:[o(0,.5,.3,1.5)]},{type:"sprite",layer:"effects",id:"flare",props:["hasEffect"],payload:{texture:"flare3",width:300,height:300,alpha:0,blendMode:1,tint:16711680},when:({calcs:{hasEffect:e}})=>e,actions:[{action:"Repeat",params:[{action:"Sequence",params:[[{action:"AlphaTo",params:[.4,.2]},{action:"AlphaTo",params:[0,1]},{action:"DelayTime",params:[2]}]]}]},{action:"Repeat",params:[{action:"RotateBy",params:[2*Math.PI,1]}]}]}]},l={texture:"constructedWall",processors:[{type:"sprite",once:!0,payload:{width:100,height:100,blendMode:1}},{type:"draw",once:!0,when:({state:{hits:e,hitsMax:a}})=>1===e&&a>1,layer:"effects",payload:{drawings:[{method:"beginFill",params:[16711680]},{method:"drawRect",params:[-50,-50,100,100]},{method:"endFill"}],blendMode:1},actions:[o(0,.2,.3,1.5)]}],zIndex:0},E={texture:"constructionSite",processors:[{id:"siteProgress",type:"siteProgress",layer:"effects",props:["progress","progressTotal"],payload:{color:{$calc:"playerColor"},radius:20,lineWidth:10,progress:{$state:"progress"},progressTotal:{$state:"progressTotal"}},actions:[o(.8,.3,1,1)]}],disappearProcessor:{type:"disappear"},zIndex:18},R=()=>({id:"resourcesTotal",func:({state:e})=>_.reduce(e.store,(e,a)=>a+e,0)}),p={texture:"rectangle",calculations:[R(),{id:"energyBackgroundHeight",func:({state:{storeCapacity:e},calcs:{resourcesTotal:a}})=>50*a/(e||a)},{id:"energyHeight",func:({state:{store:e={},storeCapacity:a},calcs:{resourcesTotal:t}})=>50*(e.energy||0)/(a||t)},{id:"powerHeight",func:({state:{store:e={},storeCapacity:a},calcs:{resourcesTotal:t}})=>50*((e.power||0)+(e.energy||0))/(a||t)}],processors:[{type:"sprite",id:"border",once:!0,payload:{width:60,height:70,tint:1579032}},{id:"internalBorder",type:"sprite",once:!0,payload:{width:40,height:50,tint:89478485}},{type:"sprite",id:"otherResourcesBar",props:["store","energyBackgroundHeight","resourcesTotal"],shouldRun:({state:{store:e={}},calcs:{resourcesTotal:a}})=>e.energy||0+e.power||0<a,payload:{pivot:{y:{$calc:"energyBackgroundHeight"}},y:25,width:40,height:{$calc:"energyBackgroundHeight"},tint:16777215}},{type:"sprite",id:"powerBar",props:["store","resourcesTotal"],shouldRun:({state:{store:e={}}})=>e.power>0,payload:{pivot:{y:{$calc:"powerHeight"}},y:25,width:40,height:{$calc:"powerHeight"},tint:15998771}},{type:"sprite",id:"energyBar",props:["store","resourcesTotal"],shouldRun:({state:{store:e={}}})=>e.energy>0,payload:{pivot:{y:{$calc:"energyHeight"}},y:25,width:40,height:{$calc:"energyHeight"},tint:16770413}},{type:"sprite",once:!0,layer:"lighting",props:["resourcesTotal"],shouldRun:({calcs:{resourcesTotal:e}})=>e>0,payload:{texture:"glow",width:100,height:100,alpha:1}}],zIndex:4},d={texture:"controller",calculations:[{id:"level1Visible",props:["level"],func:({state:{level:e}})=>e>=1},{id:"level2Visible",props:["level"],func:({state:{level:e}})=>e>=2},{id:"level3Visible",props:["level"],func:({state:{level:e}})=>e>=3},{id:"level4Visible",props:["level"],func:({state:{level:e}})=>e>=4},{id:"level5Visible",props:["level"],func:({state:{level:e}})=>e>=5},{id:"level6Visible",props:["level"],func:({state:{level:e}})=>e>=6},{id:"level7Visible",props:["level"],func:({state:{level:e}})=>e>=7},{id:"level8Visible",props:["level"],func:({state:{level:e}})=>e>=8},{id:"downgradeOpacity",func:({state:{level:e,downgradeTime:a},stateExtra:{gameTime:t}})=>{const{CONTROLLER_DOWNGRADE:o}=i.a;return a&&e&&t?(o[e]-(a-t))/o[e]:0}},{id:"progressTotal",func:({state:{level:e}})=>{const{CONTROLLER_LEVELS:a}=i.a;return a[e]}}],processors:[{type:"circle",once:!0,payload:{alpha:.05,color:3407667,radius:110},shouldRun:({state:{reservation:e},stateExtra:{gameData:{player:a}}})=>e&&e.user===a,actions:[o(.05,.4,1,1)]},{type:"circle",once:!0,payload:{alpha:.05,color:16724787,radius:110},shouldRun:({state:{upgradeBlocked:e,reservation:a},stateExtra:{gameTime:t,gameData:{player:o}}})=>e&&e>t||a&&a.user!==o,actions:[o(.05,.4,1,1)]},{type:"circle",once:!0,payload:{alpha:.05,color:16724787,radius:110},shouldRun:({state:{upgradeBlocked:e,reservation:a},stateExtra:{gameTime:t,gameData:{player:o}}})=>e&&e>t||a&&a.user!==o,actions:[o(.05,.4,1,1)]},{id:"safeMode1",type:"circle",once:!0,payload:{alpha:.05,color:16765312,radius:110},shouldRun:({state:{safeMode:e},stateExtra:{gameTime:a}})=>e&&e>a,actions:[o(.05,.4,1,1)]},{type:"circle",once:!0,payload:{alpha:.05,color:16777215,radius:92}},{type:"sprite",layer:"effects",once:!0,payload:{texture:"glow",alpha:.1,tint:16765312,width:1,height:1,blendMode:1},shouldRun:({state:{safeMode:e},stateExtra:{gameTime:a}})=>e&&e>a,actions:[{action:"Repeat",params:[{action:"Sequence",params:[[{action:"Spawn",params:[[{action:"ScaleTo",params:[50,50,1.5]},{action:"AlphaTo",params:[0,1.5]}]]},{action:"Spawn",params:[[{action:"ScaleTo",params:[0,0,0]},{action:"AlphaTo",params:[.05,0]}]]},{action:"DelayTime",params:[6]}]]}]}]},{type:"sprite",layer:"effects",props:["isPowerEnabled"],payload:{texture:"flare1",alpha:.4,tint:16711680,width:1,height:1,blendMode:1},when:({state:{isPowerEnabled:e}})=>!!e,actions:[{action:"Repeat",params:[{action:"Sequence",params:[[{action:"Spawn",params:[[{action:"ScaleTo",params:[20,20,1]},{action:"AlphaTo",params:[0,1]}]]},{action:"Spawn",params:[[{action:"ScaleTo",params:[0,0,0]},{action:"AlphaTo",params:[.4,0]}]]},{action:"DelayTime",params:[5]}]]}]}]},{type:"sprite",once:!0,payload:{tint:0,width:200,height:200}},{type:"sprite",props:["level1Visible"],payload:{texture:"controller-level",width:100,height:100,anchor:{y:1},visible:{$calc:"level1Visible"}}},{type:"sprite",props:["level2Visible"],payload:{texture:"controller-level",width:100,height:100,anchor:{y:1},rotation:2*Math.PI/8,visible:{$calc:"level2Visible"}}},{type:"sprite",props:["level3Visible"],payload:{texture:"controller-level",width:100,height:100,anchor:{y:1},rotation:2*Math.PI/8*2,visible:{$calc:"level3Visible"}}},{type:"sprite",props:["level4Visible"],payload:{texture:"controller-level",width:100,height:100,anchor:{y:1},rotation:2*Math.PI/8*3,visible:{$calc:"level4Visible"}}},{type:"sprite",props:["level5Visible"],payload:{texture:"controller-level",width:100,height:100,anchor:{y:1},rotation:2*Math.PI/8*4,visible:{$calc:"level5Visible"}}},{type:"sprite",props:["level6Visible"],payload:{texture:"controller-level",width:100,height:100,anchor:{y:1},rotation:2*Math.PI/8*5,visible:{$calc:"level6Visible"}}},{type:"sprite",props:["level7Visible"],payload:{texture:"controller-level",width:100,height:100,anchor:{y:1},rotation:2*Math.PI/8*6,visible:{$calc:"level7Visible"}}},{type:"sprite",props:["level8Visible"],payload:{texture:"controller-level",width:100,height:100,anchor:{y:1},rotation:2*Math.PI/8*7,visible:{$calc:"level8Visible"}}},{type:"userBadge",props:["user","level"]},{id:"siteProgress",type:"siteProgress",props:["progress","progressTotal","level"],payload:{color:16777215,radius:37,lineWidth:0,progress:{$state:"progress"},progressTotal:{$calc:"progressTotal"}},when:({state:{progress:e}})=>e>0,actions:[o(.8,.3,1,1)]},{type:"circle",props:["level"],payload:{radius:40,strokeColor:526344,strokeWidth:10}},{id:"downgrade",type:"sprite",once:!0,layer:"effects",payload:{alpha:0,width:200,height:200,tint:16724787}},{type:"runAction",payload:{id:"downgrade"},actions:[{action:"Sequence",params:[[{action:"AlphaTo",params:[{$calc:"downgradeOpacity"},{$processorParam:"tickDuration",koef:.2}]},{action:"AlphaTo",params:[0,{$processorParam:"tickDuration",koef:.8}]}]]}]},{type:"sprite",once:!0,layer:"lighting",props:["user"],payload:{texture:"glow",width:1200,height:1200,alpha:.5}},{type:"sprite",once:!0,layer:"lighting",props:["user"],shouldRun:({state:{user:e}})=>!!e,payload:{texture:"glow",width:500,height:500,alpha:1}}],zIndex:4};const O=(e,a,t,o)=>{let r=Math.atan2(o-a,t-e)+Math.PI/2;return r>Math.PI?r-=2*Math.PI:r<-Math.PI&&(r+=2*Math.PI),r};var T={calculateAngle:O,convertGameXYToWorld:({x:e,y:a},{CELL_SIZE:t})=>({x:t*e,y:t*a}),scaleGameToWorld:(e,{CELL_SIZE:a})=>a*e};const C=({state:{user:e}})=>"3"===e||"2"===e,S=(...e)=>!C(...e);var h={texture:"creep",calculations:[{id:"displayName",func:({calcs:{isOwner:e},state:{name:a,user:t},stateExtra:{users:o}})=>e?a:o[t].username},{id:"rotation",props:["x","y"],func:({prevState:{x:e,y:a}={},state:{x:t,y:o}})=>{const{calculateAngle:r}=T;return void 0!==e&&void 0!==a?r(e,a,t,o):0}},R(),{id:"resourcesTotalRadius",func:({state:{storeCapacity:e},calcs:{resourcesTotal:a}})=>20*Math.min(1,a/e)},{id:"energyRadius",func:({state:{store:e,storeCapacity:a}})=>20*Math.min(1,(e.energy||0)/a)},{id:"powerRadius",func:({state:{store:e,storeCapacity:a}})=>20*Math.min(1,((e.energy||0)+(e.power||0))/a)},{id:"safeMode",func:({stateExtra:e,state:{user:a},stateExtra:{controller:t,gameTime:o,objects:r}})=>(void 0===t&&(t=r.find(e=>"controller"===e.type)||null,e.controller=t),t&&t.safeMode>o&&t.user!==a?.5:1)}],processors:[{type:"container",once:"true",payload:{id:"mainContainer"}},{type:"container",once:"true",payload:{id:"decorationContainer",parentId:"mainContainer"}},{type:"creepDecoration",props:["spawning","decorations"],when:({state:{spawning:e}})=>!e,payload:{parentId:"decorationContainer"}},{type:"circle",once:!0,payload:{parentId:"mainContainer",color:2105376,radius:50},when:S},{type:"creepBuildBody",props:["body"],payload:{parentId:"mainContainer"},when:S},{type:"circle",once:!0,payload:{parentId:"mainContainer",color:0,radius:32},when:S},{type:"userBadge",once:!0,payload:{parentId:"mainContainer",radius:26,color:2236962},when:S},{type:"circle",props:["store","resourcesTotal"],when:({state:{store:e={},user:a},calcs:{resourcesTotal:t}})=>"3"!==a&&"2"!==a&&t>0&&(e.energy||0+e.power||0<t),payload:{parentId:"mainContainer",radius:{$calc:"resourcesTotalRadius"},color:16777215}},{type:"circle",props:["store"],when:({state:{store:e={},user:a}})=>"3"!==a&&"2"!==a&&e.power>0,payload:{parentId:"mainContainer",radius:{$calc:"powerRadius"},color:15998771}},{type:"circle",props:["store"],when:({state:{store:e={},user:a}})=>"3"!==a&&"2"!==a&&e.energy>0,payload:{parentId:"mainContainer",radius:{$calc:"energyRadius"},color:16770413}},{type:"sprite",once:!0,payload:{parentId:"mainContainer",texture:"creep-npc",width:100,height:100},when:C},{type:"creepActions",payload:{parentId:"mainContainer"},props:"*"},{type:"sprite",once:!0,layer:"lighting",when:e=>{const{state:{spawning:a}}=e;return!a&&S(e)},payload:{parentId:"mainContainer",texture:"creep-mask",width:100,height:100,alpha:1}},{type:"sprite",layer:"lighting",once:!0,when:C,payload:{parentId:"mainContainer",texture:"glow",width:100,height:100,alpha:.5}},{type:"sprite",layer:"lighting",once:!0,shouldRun:({state:{spawning:e}})=>!e,payload:{parentId:"mainContainer",texture:"glow",width:400,height:400,alpha:.2}},r("creeps",({state:{spawning:e}})=>!e),{type:"say",layer:"effects",when:({state:{actionLog:{say:e}={}},stateExtra:{gameData:{showCreepSpeech:a}},calcs:{isOwner:t}})=>!!a&&!!e&&(e.isPublic||t),payload:{say:{$state:"actionLog.say"}}},{id:"rangedMassAttack",type:"circle",layer:"effects",once:!0,payload:{alpha:0,color:6127794,radius:300,blendMode:1}},{type:"runAction",payload:{id:"rangedMassAttack"},when:({state:{actionLog:{rangedMassAttack:e}={}}})=>!!e,actions:[{action:"Sequence",params:[[{action:"Spawn",params:[[{action:"ScaleTo",params:[0,0,0]},{action:"AlphaTo",params:[.4,0]}]]},{action:"Spawn",params:[[{action:"Ease",params:[{action:"ScaleTo",params:[1,1,{$processorParam:"tickDuration",koef:.6}]}]},{action:"Ease",params:[{action:"AlphaTo",params:[0,{$processorParam:"tickDuration",koef:.6}]}]}]]}]]}]}],actions:[{id:"moveTo",props:["x","y"],actions:[{action:"Ease",params:[{action:"MoveTo",params:[{$state:"x",koef:100},{$state:"y",koef:100},{$processorParam:"tickDuration"}]},"EASE_IN_OUT_QUAD"]}]},{id:"rotateTo",props:["rotation"],targetId:"mainContainer",actions:[{action:"RotateTo",params:[{$calc:"rotation"},{$processorParam:"tickDuration",koef:.2}]}]},{id:"safeModeAlpha",props:["safeMode"],targetId:"mainContainer",actions:[{action:"AlphaTo",params:[{$calc:"safeMode"},0]}]}],disappearProcessor:{type:"disappear"},zIndex:6};const y={biomass:8695826,metal:9793372,mist:14314485,silicon:5023717};var u={calculations:[{id:"deposit",props:["depositType"],func:({state:{depositType:e}})=>`deposit-${e}`},{id:"deposit-fill",props:["depositType"],func:({state:{depositType:e}})=>`deposit-${e}-fill`},{id:"color",props:["depositType"],func:({state:{depositType:e}})=>y[e]},{id:"harvested",props:["harvested"],func:({state:{depositType:e,harvested:a=0}})=>Math.max(0,.6-a/1e5)}],processors:[{type:"container",once:"true",payload:{id:"container"}},{type:"runAction",once:!0,when:({state:{cooldownTime:e},stateExtra:{gameTime:a}})=>e&&e>=a,payload:{id:"container"},actions:[{action:"Repeat",params:[{action:"Sequence",params:[[{action:"Ease",params:[{action:"ScaleTo",params:[.7,.7,1]}]},{action:"Ease",params:[{action:"ScaleTo",params:[1,1,.3]}]}]]}]}]},{type:"sprite",payload:{parentId:"container",texture:{$calc:"deposit-fill"},width:160,height:160,alpha:{$calc:"harvested"},tint:{$calc:"color"}}},{type:"sprite",payload:{parentId:"container",texture:{$calc:"deposit"},width:160,height:160,tint:{$calc:"color"}}},{type:"sprite",once:!0,layer:"lighting",payload:{parentId:"container",texture:{$calc:"deposit"},width:160,height:160,alpha:1}},{type:"sprite",once:!0,layer:"lighting",payload:{texture:"glow",width:700,height:700,alpha:1,tint:{$calc:"color"}},actions:[s(.7,.4,1,.4)]}],zIndex:1};const A=68,U=80,m=100;var g={calculations:[{id:"size",props:["storeCapacityResource"],func:({state:{storeCapacityResource:e}})=>e&&e.energy>=200?m:e&&e.energy>=100?U:A},{id:"resourceScale",props:["store","storeCapacityResource"],func:({state:{store:e,storeCapacityResource:a}})=>a?Math.min(1,(e.energy||0)/a.energy):0}],processors:[{type:"sprite",once:!0,when:({state:{storeCapacityResource:e}})=>!e||e.energy<100,payload:{texture:"extension-border50",tint:{$calc:"playerColor"},width:100,height:100}},{type:"sprite",once:!0,when:({state:{storeCapacityResource:e}})=>e&&100===e.energy,payload:{texture:"extension-border100",tint:{$calc:"playerColor"},width:100,height:100}},{type:"sprite",once:!0,when:({state:{storeCapacityResource:e}})=>e&&200===e.energy,payload:{texture:"extension-border200",tint:{$calc:"playerColor"},width:100,height:100}},{type:"sprite",props:["storeCapacityResource"],payload:{texture:"extension",width:{$calc:"size"},height:{$calc:"size"}}},{id:"resourceCircle",props:["storeCapacityResource"],type:"circle",payload:{radius:{$calc:"size",koef:.32},color:16770413,scale:{x:{$calc:"resourceScale"},y:{$calc:"resourceScale"}}}},{type:"runAction",props:["resourceScale"],payload:{id:"resourceCircle"},actions:[{action:"ScaleTo",params:[{$calc:"resourceScale"},{$calc:"resourceScale"},{$processorParam:"tickDuration"}]}]},{type:"sprite",once:!0,layer:"lighting",shouldRun:({state:{store:e}})=>e&&e.energy>0,payload:{texture:"glow",width:100,height:100,alpha:1}},{type:"sprite",once:!0,layer:"lighting",shouldRun:({state:{store:e,storeCapacityResource:a}})=>(e.energy||0)>0&&a&&50===a.energy,payload:{texture:"glow",width:200,height:200,alpha:.7}},{type:"sprite",once:!0,layer:"lighting",shouldRun:({state:{store:e,storeCapacityResource:a}})=>(e.energy||0)>0&&a&&100===a.energy,payload:{texture:"glow",width:220,height:220,alpha:.7}},{type:"sprite",once:!0,layer:"lighting",shouldRun:({state:{store:e,storeCapacityResource:a}})=>(e.energy||0)>0&&a&&200===a.energy,payload:{texture:"glow",width:250,height:250,alpha:.7}}],zIndex:7},I={processors:[{id:"main",type:"sprite",once:"true",payload:{texture:"extractor",width:200,tint:{$calc:"playerColor"}}},{type:"runAction",once:!0,when:({state:{cooldown:e}})=>e>0,until:({state:{cooldown:e}})=>!e||e<=0,payload:{id:"main"},actions:[{action:"Repeat",params:[{action:"RotateBy",params:[2*Math.PI,4]}]}]}],zIndex:0};const N=({state:{cooldownTime:e},stateExtra:{gameTime:a}})=>e&&e>=a,L=({state:{level:e}})=>e>0,w=(...e)=>L(...e)&&!(({state:{effects:e},stateExtra:{gameTime:a}})=>e&&Object.values(e).some(({power:e,endTime:t})=>e===n.PWR_OPERATE_FACTORY&&t>=a))(...e);var P={texture:"rectangle",calculations:[R(),{id:"energyBackgroundHeight",func:({state:{storeCapacity:e},calcs:{resourcesTotal:a}})=>50*a/(e||a)},{id:"energyHeight",func:({state:{store:e={},storeCapacity:a},calcs:{resourcesTotal:t}})=>50*(e.energy||0)/(a||t)},{id:"powerHeight",func:({state:{store:e={},storeCapacity:a},calcs:{resourcesTotal:t}})=>50*(e.power||0+e.energy||0)/(a||t)},{id:"factory-lvl",props:["level"],func:({state:{level:e=0}})=>`factory-lvl${e}`}],processors:[{type:"sprite",once:"true",payload:{texture:"factory-border",width:200,height:200,tint:{$calc:"playerColor"}}},{type:"sprite",once:!0,payload:{texture:"factory",width:200,height:200}},{id:"factory-highlight",type:"sprite",once:!0,payload:{texture:"factory-highlight",width:200,height:200,alpha:.4}},{type:"runAction",when:N,payload:{id:"factory-highlight"},actions:[{action:"Sequence",params:[[{action:"AlphaTo",params:[1,{$processorParam:"tickDuration",koef:.2}]},{action:"AlphaTo",params:[0,{$processorParam:"tickDuration",koef:.8}]}]]}]},{type:"runAction",when:(...e)=>!N(...e),payload:{id:"factory-highlight"},actions:[{action:"AlphaTo",params:[.4,0]}]},{type:"sprite",once:!0,payload:{texture:"factory-lvl0",width:200,height:200}},{id:"level",type:"sprite",when:L,once:!0,payload:{texture:{$calc:"factory-lvl"},width:200,height:200}},{type:"runAction",when:w,once:!0,payload:{id:"level"},actions:[o(0,1,.2,.8)]},{type:"runAction",when:(...e)=>!w(...e),payload:{id:"level"},actions:[{action:"AlphaTo",params:[1,0]}]},{id:"internalBorder",type:"sprite",once:!0,payload:{width:50,height:50,tint:5592405}},{type:"sprite",id:"otherResourcesBar",props:["store","energyBackgroundHeight","resourcesTotal"],shouldRun:({state:{store:e={}},calcs:{resourcesTotal:a}})=>e.energy||0+e.power||0<a,payload:{pivot:{y:{$calc:"energyBackgroundHeight"}},y:25,width:50,height:{$calc:"energyBackgroundHeight"},tint:16777215}},{id:"powerBar",type:"sprite",props:["store","resourcesTotal"],shouldRun:({state:{store:e={}}})=>e.power>0,payload:{pivot:{y:{$calc:"powerHeight"}},y:25,width:50,height:{$calc:"powerHeight"},tint:15998771}},{id:"energyBar",type:"sprite",props:["store","resourcesTotal"],shouldRun:({state:{store:e={}}})=>e.energy>0,payload:{pivot:{y:{$calc:"energyHeight"}},y:25,width:50,height:{$calc:"energyHeight"},tint:16441214}},{type:"sprite",once:!0,layer:"lighting",shouldRun:({calcs:{resourcesTotal:e}})=>e>0,payload:{texture:"glow",width:200,height:200,alpha:1}},{type:"sprite",layer:"lighting",once:!0,payload:{texture:"glow",width:800,height:800,alpha:.5}}],zIndex:7};const M={1:16007990,2:10233776,3:2201331,4:48340,5:5025616,6:16771899,7:16750592,8:7951688,9:10395294,10:16777215};var D={calculations:[{id:"flagColor",func:({state:{color:e}})=>M[e]},{id:"flagSecondaryColor",func:({state:{secondaryColor:e}})=>M[e]}],processors:[{type:"sprite",props:["color"],layer:"effects",payload:{texture:"flag",width:200,height:200,tint:{$calc:"flagColor"}}},{type:"sprite",props:["secondaryColor"],layer:"effects",payload:{texture:"flag-secondary",width:200,height:200,tint:{$calc:"flagSecondaryColor"}},when:({state:{secondaryColor:e}})=>!!e},{type:"text",props:["color"],layer:"effects",shouldRun:({stateExtra:{gameData:{showFlagsNames:e}}})=>!!e,payload:{text:{$state:"name"},style:{align:"center",fill:{$calc:"flagColor"},fontFamily:"Roboto, sans-serif",fontSize:60,stroke:"#111",strokeThickness:10},anchor:{x:.5,y:-.5}}}],actions:[{id:"moveTo",props:["x","y"],actions:[{action:"MoveTo",params:[{$state:"x",koef:100},{$state:"y",koef:100},0]}]}]};const H={texture:"lab-mineral",tint:7829367,anchor:{y:1},scale:{x:.6875,y:.6875},y:25},f=16770413,x=32,G=67,Y=10;var W={calculations:[R(),{id:"mineralPathScale",props:["store","storeCapacity","storeCapacityResource"],func:({state:{store:e,storeCapacity:a,storeCapacityResource:t},calcs:{resourcesTotal:o}})=>{const{scale:{x:r}}=H,s=_(e).keys().filter(a=>"energy"!=a&&e[a]).first();if(!s)return 0;const n=t[s]||a-_.sum(t);return n?r*(e[s]||0)/n:0}},{id:"energyWidth",props:["store","storeCapacityResource"],func:({state:{store:e,storeCapacityResource:a}})=>a&&a.energy?G*(e.energy||0)/a.energy:0}],processors:[{type:"sprite",once:"true",payload:{texture:"lab",width:200,tint:{$calc:"playerColor"}}},{type:"sprite",once:"true",id:"lab-highlight",payload:{texture:"lab-highlight",width:200,alpha:0}},{type:"runAction",when:({state:{cooldownTime:e},stateExtra:{gameTime:a}})=>e&&e>a,payload:{id:"lab-highlight"},actions:[{action:"Sequence",params:[[{action:"AlphaTo",params:[.5,{$processorParam:"tickDuration",koef:.2}]},{action:"AlphaTo",params:[0,{$processorParam:"tickDuration",koef:.8}]}]]}]},{type:"sprite",once:"true",payload:H},{type:"sprite",props:["mineralPathScale"],payload:Object.assign({},H,{scale:{x:{$calc:"mineralPathScale"},y:{$calc:"mineralPathScale"}},tint:16777215})},{type:"draw",props:["energyWidth"],payload:{id:"energyRectangle",drawings:[{method:"beginFill",params:[f]},{method:"drawRect",params:[{$calc:"energyWidth",koef:-.5},x,{$calc:"energyWidth"},Y]},{method:"endFill"}]}},{type:"creepActions",props:"*"},{type:"sprite",layer:"lighting",once:!0,shouldRun:({state:{store:e},calcs:{resourcesTotal:a}})=>a-(e.energy||0)>0,payload:{texture:"glow",width:150,height:150,alpha:1}},{id:"light",type:"sprite",once:!0,layer:"lighting",props:["store"],shouldRun:({state:{store:e},calcs:{resourcesTotal:a}})=>a-(e.energy||0)>0,payload:{texture:"glow",width:500,height:500,alpha:.3}},{id:"reactionLight",type:"sprite",layer:"effects",once:!0,payload:{texture:"glow",width:150,height:150,alpha:0,blendMode:1}},{type:"runAction",shouldRun:({state:e})=>e.actionLog&&e.actionLog.runReaction,payload:{id:"reactionLight"},actions:[{action:"Sequence",params:[[{action:"DelayTime",params:[{$processorParam:"tickDuration",koef:.3}]},{action:"AlphaTo",params:[1,{$processorParam:"tickDuration",koef:.15}]},{action:"AlphaTo",params:[0,{$processorParam:"tickDuration",koef:.55}]}]]}]},{type:"runAction",shouldRun:({state:e})=>e.actionLog&&e.actionLog.reverseReaction,payload:{id:"reactionLight"},actions:[{action:"Sequence",params:[[{action:"AlphaTo",params:[1,{$processorParam:"tickDuration",koef:.15}]},{action:"AlphaTo",params:[0,{$processorParam:"tickDuration",koef:.55}]},{action:"DelayTime",params:[{$processorParam:"tickDuration",koef:.3}]}]]}]}],zIndex:15},$={calculations:[{id:"energyScale",props:["store","storeCapacityResource"],func:({state:{store:e,storeCapacityResource:a}})=>a?Math.min(1,(e.energy||0)/a.energy):0}],processors:[{type:"sprite",once:"true",payload:{texture:"link-border",width:100,height:100,tint:{$calc:"playerColor"}}},{type:"sprite",once:"true",payload:{texture:"link",width:100,height:100}},{type:"container",once:"true",payload:{id:"energyContainer"}},{type:"sprite",once:"true",payload:{id:"energy",parentId:"energyContainer",texture:"link-energy",width:50,height:50}},{type:"runAction",props:["energyScale"],payload:{id:"energyContainer"},actions:[{action:"ScaleTo",params:[{$calc:"energyScale"},{$calc:"energyScale"},{$processorParam:"tickDuration"}]}]},{type:"creepActions",props:"*"},{type:"sprite",once:!0,layer:"lighting",shouldRun:({state:{store:e}})=>e.energy>0,payload:{texture:"glow",width:100,height:100,alpha:1}},{id:"light",once:!0,type:"sprite",layer:"lighting",shouldRun:({state:{store:e}})=>e.energy>0,payload:{texture:"glow",width:400,height:400,alpha:.5}}],zIndex:9};const v={L:{foreground:9041061,background:4153671},U:{foreground:8967927,background:1794431},K:{foreground:9662719,background:3349120},Z:{foreground:15913611,background:5852467},X:{foreground:16743034,background:5187110},O:{foreground:13421772,background:5066061},H:{foreground:13421772,background:5066061}};var k={calculations:[{id:"foregroundColor",once:!0,func:({state:{mineralType:e}})=>v[e].foreground},{id:"backgroundColor",once:!0,func:({state:{mineralType:e}})=>v[e].background}],processors:[{type:"draw",once:!0,payload:{drawings:[{method:"lineStyle",params:[10,{$calc:"foregroundColor"},1]},{method:"beginFill",params:[{$calc:"backgroundColor"}]},{method:"drawCircle",params:[0,0,54]},{method:"endFill"}]}},{type:"text",once:!0,payload:{text:{$state:"mineralType"},style:{align:"center",fill:{$calc:"foregroundColor"},fontFamily:"Roboto, serif",fontSize:82,fontWeight:"bold"},anchor:{x:.5,y:.5}}},{type:"sprite",once:!0,layer:"lighting",payload:{texture:"glow",width:200,height:200,alpha:1}},{type:"sprite",once:!0,layer:"lighting",payload:{texture:"glow",width:700,height:700,alpha:.7,tint:{$calc:"foregroundColor"}},actions:[s(.7,.4,1,.4)]}],zIndex:2};const b={action:"Repeat",params:[{action:"Sequence",params:[[{action:"Ease",params:[{action:"ScaleTo",params:[.6,.6,1]},"EASE_IN_OUT_QUAD"]},{action:"Ease",params:[{action:"ScaleTo",params:[1,1,1]},"EASE_IN_OUT_QUAD"]}]]}]},K=({state:{landTime:e},stateExtra:{gameTime:a}})=>e<=a,B=(...e)=>!K(...e);var X={calculations:[{id:"landTimeSpeed",func:({state:{landTime:e},stateExtra:{gameTime:a}})=>e<=a?Number.MAX_VALUE:Math.max(.4,100*Math.round((e-a)/100)/5e4*8)},{id:"offsetToZeroX",func:({state:{x:e},world:{options:{CELL_SIZE:a}}})=>-(e+.5)*a},{id:"offsetToZeroY",func:({state:{y:e},world:{options:{CELL_SIZE:a}}})=>-(e+.5)*a}],processors:[{type:"sprite",layer:"effects",once:!0,payload:{texture:"nuke",alpha:.7},when:B,actions:[b]},{type:"sprite",layer:"effects",once:!0,payload:{texture:"nuke",blur:2,blendMode:3},when:B,actions:[b]},{type:"circle",layer:"effects",once:!0,payload:{color:16720418,radius:110,blendMode:1,alpha:.5},when:B,actions:[b]},{type:"circle",layer:"effects",props:["landTimeSpeed"],payload:{color:16711680,radius:600,alpha:0,blendMode:1,blur:30},when:B,actions:[{action:"Repeat",params:[{action:"Sequence",params:[[{action:"Spawn",params:[[{action:"ScaleTo",params:[0,0,{$calc:"landTimeSpeed"}]},{action:"AlphaTo",params:[.4,{$calc:"landTimeSpeed"}]},{action:"FilterTo",params:[0,"blur",.5,{$calc:"landTimeSpeed",koef:.5}]}]]},{action:"Spawn",params:[[{action:"ScaleTo",params:[1,1,0]},{action:"AlphaTo",params:[0,0]},{action:"FilterTo",params:[0,"blur",30,0]}]]}]]}]}]},{type:"sprite",once:!0,layer:"lighting",when:B,payload:{texture:"glow",tint:16729156,width:700,height:700}},{type:"sprite",layer:"effects",once:!0,payload:{texture:"glow",alpha:1,tint:16720418,width:1,height:1,blendMode:1},when:K,actions:[{action:"Spawn",params:[[{action:"Ease",params:[{action:"ScaleTo",params:[20,20,{$processorParam:"tickDuration"}]}]},{action:"AlphaTo",params:[0,{$processorParam:"tickDuration"}]}]]}]},{type:"draw",once:!0,layer:"effects",when:K,payload:{x:{$calc:"offsetToZeroX"},y:{$calc:"offsetToZeroY"},blendMode:1,alpha:.7,drawings:[{method:"beginFill",params:[16711680]},{method:"drawRect",params:[0,0,{$calc:"viewBox"},{$calc:"viewBox"}]},{method:"endFill"}]},actions:[{action:"Ease",params:[{action:"AlphaTo",params:[0,{$processorParam:"tickDuration"}]}]}]}]};const F={color:16770413,x:0,y:10,width:86,height:118},Z=80;var V={calculations:[{id:"energyTrianglePoints",props:["store","storeCapacityResource"],func:({state:{store:e,storeCapacityResource:a}})=>{const{x:t,y:o}=F;let{width:r,height:s}=F;const n=(e.energy||0)/a.energy;return[t-(r*=n)/2,o,t,o-(s*=n),t+r/2,o]}},{id:"gWidth",func:({state:{store:e,storeCapacityResource:a}})=>a&&a.G?Z*(e.G||0)/a.G:0}],processors:[{type:"sprite",once:"true",payload:{texture:"nuker-border",width:300,height:300,y:-40,tint:{$calc:"playerColor"}}},{type:"sprite",once:"true",payload:{texture:"nuker",width:300,height:300,y:-40}},{type:"draw",props:["energyTrianglePoints"],payload:{id:"energyTriangle",drawings:[{method:"beginFill",params:[F.color]},{method:"drawPolygon",params:[{$calc:"energyTrianglePoints"}]},{method:"endFill"}]}},{type:"draw",props:["gWidth"],payload:{id:"gRectangle",drawings:[{method:"beginFill",params:[16777215]},{method:"drawRect",params:[{$calc:"gWidth",koef:-.5},35,{$calc:"gWidth"},15]},{method:"endFill"}]}},{type:"sprite",once:!0,layer:"lighting",payload:{texture:"glow",width:100,height:100}},{type:"sprite",once:!0,layer:"lighting",payload:{texture:"glow",width:800,height:800,alpha:.5}}],zIndex:7};var z={processors:[{type:"draw",once:!0,payload:{id:"border",drawings:[{method:"lineStyle",params:[5,{$calc:"playerColor"},1]},{method:"beginFill",params:[1118481]},{method:"drawEllipse",params:[0,0,45,40]},{method:"endFill"}]}},{type:"draw",once:!0,payload:{id:"eye",drawings:[{method:"lineStyle",params:[0,0,1]},{method:"beginFill",params:[{$calc:"playerColor"}]},{method:"drawEllipse",params:[0,0,20,20]},{method:"endFill"}]},actions:[{action:"Repeat",params:[{action:"Sequence",params:[[{action:"MoveTo",params:[20,0,.25]},{action:"DelayTime",params:[.25]},{action:"MoveTo",params:[0,15,.25]},{action:"DelayTime",params:[.25]},{action:"MoveTo",params:[-20,0,.25]},{action:"DelayTime",params:[.25]},{action:"MoveTo",params:[0,-15,.25]},{action:"DelayTime",params:[.25]}]]}]}]},{type:"sprite",once:!0,layer:"lighting",payload:{texture:"glow",width:800,height:800,alpha:.5}}],zIndex:10};var q={calculations:[{id:"radius",props:["store"],func:({state:{store:e}})=>{const{POWER_BANK_CAPACITY_MAX:a}=i.a;return Math.sqrt(e.power/a*3e3/Math.PI)}}],processors:[{type:"sprite",once:"true",payload:{texture:"powerBank",width:200,height:200}},{type:"draw",once:!0,payload:{id:"static",drawings:[{method:"lineStyle",params:[10,9240589,1]},{method:"beginFill",params:[15998771]},{method:"drawCircle",params:[0,0,{$calc:"radius"}]},{method:"endFill"}]},actions:[{action:"Repeat",params:[{action:"Spawn",params:[[{action:"Sequence",params:[[{action:"ScaleTo",params:[{$rel:"scale.x",koef:.6},{$rel:"scale.y",koef:.6},{$processorParam:"tickDuration",koef:.66}]},{action:"ScaleTo",params:[{$rel:"scale.x"},{$rel:"scale.y"},{$processorParam:"tickDuration",koef:.34}]}]]},{action:"Sequence",params:[[{action:"TintTo",params:[13832226,{$processorParam:"tickDuration",koef:.33}]},{action:"TintTo",params:[9240589,{$processorParam:"tickDuration",koef:.33}]},{action:"TintTo",params:[15998771,{$processorParam:"tickDuration",koef:.34}]}]]}]]}]}]},{type:"sprite",once:!0,layer:"lighting",payload:{texture:"glow",width:800,height:800,tint:16744576}}],zIndex:11};const j={commander:{pivotY:30,size:65},executor:{pivotY:30,size:45},operator:{pivotY:15,size:63}};var Q={calculations:[{id:"displayName",func:({calcs:{isOwner:e},state:{name:a,user:t},stateExtra:{users:o}})=>e?a:o[t].username},{id:"rotation",props:["x","y"],func:({prevState:{x:e,y:a}={},state:{x:t,y:o}})=>void 0!==e&&void 0!==a?O(e,a,t,o):0},{id:"texture",props:["level"],func:({state:{level:e,className:a}})=>`${a}-lvl${Math.min(4,Math.ceil(e/6))}`},{id:"texture-light",func:({state:{className:e}})=>`${e}-lvl4`},{id:"badgePivotY",props:["className"],func:({state:{className:e}})=>j[e].pivotY},{id:"badgeSize",props:["className"],func:({state:{className:e}})=>j[e].size},{id:"safeMode",func:({stateExtra:e,state:{user:a},stateExtra:{controller:t,gameTime:o,objects:r}})=>(void 0===t&&(t=r.find(e=>"controller"===e.type)||null,e.controller=t),t&&t.safeMode>o&&t.user!==a?.5:1)}],processors:[{type:"container",once:"true",payload:{id:"mainContainer"}},{type:"sprite",props:["texture"],payload:{id:"sprite",parentId:"mainContainer",texture:{$calc:"texture"},width:180,height:180,zIndex:0,tint:13385022}},{type:"userBadge",props:["texture"],payload:{parentId:"mainContainer",radius:26,color:2236962,width:{$calc:"badgeSize"},height:{$calc:"badgeSize"},pivot:{y:{$calc:"badgePivotY"}}}},{type:"creepActions",payload:{parentId:"mainContainer"},props:"*"},{type:"powerInfluence",payload:{parentId:"mainContainer"},props:"*"},r("creeps"),{type:"say",layer:"effects",when:({state:{actionLog:{say:e}={}},stateExtra:{gameData:{showCreepSpeech:a}},calcs:{isOwner:t}})=>!!a&&!!e&&(e.isPublic||t),payload:{say:{$state:"actionLog.say"}}},{type:"sprite",layer:"lighting",once:!0,payload:{parentId:"mainContainer",texture:{$calc:"texture"},width:180,height:180,alpha:1}},{type:"sprite",layer:"lighting",once:!0,payload:{parentId:"mainContainer",texture:"glow",width:400,height:400,alpha:1,tint:16733525}},{type:"sprite",layer:"effects",once:!0,when:({state:{actionLog:{spawned:e}={}}})=>!!e,payload:{texture:"flare2",width:400,height:400,alpha:1,blendMode:1,tint:16716049},actions:[{action:"Sequence",params:[[{action:"Spawn",params:[[{action:"AlphaTo",params:[0,{$processorParam:"tickDuration",koef:.5}]},{action:"RotateBy",params:[Math.PI/8,{$processorParam:"tickDuration",koef:.5}]}]]}]]}]}],actions:[{id:"moveTo",props:["x","y"],actions:[{action:"Ease",params:[{action:"MoveTo",params:[{$state:"x",koef:100},{$state:"y",koef:100},{$processorParam:"tickDuration"}]},"EASE_IN_OUT_QUAD"]}]},{id:"rotateTo",props:["rotation"],targetId:"mainContainer",actions:[{action:"RotateTo",params:[{$calc:"rotation"},{$processorParam:"tickDuration",koef:.2}]}]},{id:"safeModeAlpha",props:["safeMode"],targetId:"mainContainer",actions:[{action:"AlphaTo",params:[{$calc:"safeMode"},0]}]}],disappearProcessor:{type:"disappear"},zIndex:13};const J=2236962,ee=75,ae=13421772,te=7,oe=2236962,re=68,se=15998771,ne=10,ie=1579032,ce=59,le=5592405,Ee=38,Re={color:15998771,radius:50,startAngle:-Math.PI/2,strokeWidth:10};var pe={calculations:[{id:"powerAngle",props:["store","storeCapacityResource"],func:({state:{store:e,storeCapacityResource:a}})=>Re.startAngle+(a&&a.power?2*Math.PI*(e.power||0)/a.power:0)},{id:"resourceScale",props:["store","storeCapacity"],func:({state:{store:e,storeCapacityResource:a}})=>a&&a.energy?Math.min(1,(e.energy||0)/a.energy):0}],processors:[{type:"draw",once:!0,payload:{id:"static",drawings:[{method:"lineStyle",params:[te,ae,1]},{method:"beginFill",params:[J]},{method:"drawCircle",params:[0,0,ee]},{method:"endFill"},{method:"lineStyle",params:[ne,se,1]},{method:"beginFill",params:[oe]},{method:"drawCircle",params:[0,0,re]},{method:"endFill"},{method:"lineStyle",params:[0,0,1]},{method:"beginFill",params:[ie]},{method:"drawCircle",params:[0,0,ce]},{method:"endFill"}]}},{type:"userBadge",once:!0,payload:{parentId:"static",color:le,radius:Ee}},{type:"draw",props:["powerAngle"],payload:{id:"arc",parentId:"static",drawings:[{method:"lineStyle",params:[Re.strokeWidth,Re.color,1]},{method:"arc",params:[0,0,Re.radius,Re.startAngle,{$calc:"powerAngle"}]}]}},{type:"runAction",props:["resourceScale"],payload:{id:"resourceCircle"},actions:[{action:"ScaleTo",params:[{$calc:"resourceScale"},{$calc:"resourceScale"},{$processorParam:"tickDuration"}]}]},{id:"resourceCircle",once:!0,type:"circle",payload:{parentId:"static",radius:Ee,color:16770413,scale:{x:{$calc:"resourceScale"},y:{$calc:"resourceScale"}}}},{type:"sprite",layer:"lighting",once:!0,payload:{texture:"glow",width:150,height:150,alpha:1}},{id:"glow",type:"sprite",once:!0,layer:"lighting",payload:{texture:"glow",alpha:.5,scale:{x:1,y:1}}},{type:"runAction",props:["store"],payload:{id:"glow"},actions:[{action:"Sequence",params:[[{action:"Spawn",params:[[{action:"TintTo",params:[16724787,{$processorParam:"tickDuration",koef:.2}]},{action:"AlphaTo",params:[1,{$processorParam:"tickDuration",koef:.2}]},{action:"ScaleTo",params:[2,2,{$processorParam:"tickDuration",koef:.2}]}]]},{action:"Spawn",params:[[{action:"TintTo",params:[16777215,{$processorParam:"tickDuration",koef:.8}]},{action:"AlphaTo",params:[.5,{$processorParam:"tickDuration",koef:.8}]},{action:"ScaleTo",params:[1,1,{$processorParam:"tickDuration",koef:.8}]}]]}]]}]}],actions:[{id:"resourceScale",targetId:"resourceCircle",props:["resourceScale"],actions:[{action:"ScaleTo",params:[{$calc:"resourceScale"},{$calc:"resourceScale"},{$processorParam:"tickDuration"}]}]}],zIndex:12};const de=4,Oe=15,_e=40,Te=5853222,Ce=2,Se=16770413,he=60,ye=[16777215,16764269,16768644];var ue={calculations:[{id:"energySize",props:["energy","energyCapacity"],func:({state:{energy:e,energyCapacity:a}})=>he*e/a}],processors:[{type:"draw",once:!0,payload:{id:"static",tint:Te,drawings:[{method:"lineStyle",params:[15,16777215,1]},{method:"beginFill",params:[1118481]},{method:"drawRoundedRect",params:[-_e/2,-_e/2,_e,_e,Oe]},{method:"endFill"}]},actions:[{action:"Repeat",params:[{action:"Sequence",params:[[{action:"TintTo",params:[920580,de/2]},{action:"TintTo",params:[Te,de/2]}]]}]}]},{type:"draw",props:["energySize"],payload:{id:"energy",tint:Se,drawings:[{method:"beginFill",params:[16777215]},{method:"drawRoundedRect",params:[{$calc:"energySize",koef:-.5},{$calc:"energySize",koef:-.5},{$calc:"energySize"},{$calc:"energySize"},Oe]},{method:"endFill"}]},actions:[{action:"Repeat",params:[{action:"Sequence",params:[[{action:"TintTo",params:[ye[0],Ce/4]},{action:"TintTo",params:[ye[1],Ce/4]},{action:"TintTo",params:[ye[2],Ce/4]},{action:"TintTo",params:[Se,Ce/4]}]]}]}]},{type:"sprite",once:!0,layer:"lighting",payload:{texture:"glow",width:800,height:800,tint:16777040,alpha:.5},actions:[s(.6,.4,.8,.4)]},{type:"sprite",layer:"lighting",once:!0,shouldRun:({state:{energy:e}})=>e>0,payload:{texture:"glow",width:150,height:150,tint:16777215}}],zIndex:2};const Ae=13421772,Ue=70,me=1579032,ge=59,Ie=5592405,Ne=38,Le={color:13421772,radius:50,startAngle:-Math.PI/2,strokeWidth:10};var we={calculations:[{id:"spawningAngle",func:({state:{name:e,spawning:a},stateExtra:{gameTime:t}})=>{const{spawnTime:o=t+.01,needTime:r=0}=a||{},s=o-t;return Le.startAngle+(r?2*Math.PI*(r-s)/r:0)}},{id:"resourceScale",props:["store","storeCapacityResource"],func:({state:{store:e,storeCapacityResource:a}})=>a&&a.energy?(e.energy||0)/a.energy:0},{id:"displayName",func:({calcs:{isOwner:e},state:{name:a,user:t},stateExtra:{users:o}})=>e?a:o[t].username}],processors:[{type:"circle",once:!0,payload:{id:"static",radius:Ue,color:Ae}},{type:"circle",once:!0,payload:{id:"black",parentId:"static",radius:ge,color:me}},{type:"userBadge",once:!0,payload:{parentId:"black",color:Ie,radius:Ne}},{type:"runAction",props:["spawning"],once:!0,shouldRun:({state:{spawning:e}})=>!!e,payload:{id:"static"},actions:[{action:"Repeat",params:[{action:"Sequence",params:[[{action:"Ease",params:[{action:"ScaleTo",params:[1.25,1.25,.5]}]},{action:"Ease",params:[{action:"ScaleTo",params:[1,1,2]},"EASE_IN_QUAD"]}]]}]}]},{type:"draw",props:["spawningAngle"],payload:{id:"arc",parentId:"static",drawings:[{method:"lineStyle",params:[Le.strokeWidth,Le.color,1]},{method:"arc",params:[0,0,Le.radius,Le.startAngle,{$calc:"spawningAngle"}]}]}},{id:"resourceCircle",once:!0,type:"circle",payload:{parentId:"static",radius:Ne,color:16770413,scale:{x:{$calc:"resourceScale"},y:{$calc:"resourceScale"}}}},{type:"sprite",layer:"lighting",props:["store"],shouldRun:({state:{store:e}})=>e.energy>0,payload:{texture:"glow",width:100,height:100,alpha:1}},{id:"light",type:"sprite",layer:"lighting",once:!0,payload:{texture:"glow",width:600,height:600,alpha:.5}},{type:"runAction",props:["spawning"],shouldRun:({state:{spawning:e}})=>!!e,once:!0,payload:{id:"light"},actions:[{action:"Repeat",params:[{action:"Sequence",params:[[{action:"Ease",params:[{action:"AlphaTo",params:[1,.5]}]},{action:"Ease",params:[{action:"AlphaTo",params:[.5,2]},"EASE_IN_QUAD"]}]]}]}]},r("spawns")],actions:[{id:"resourceScale",targetId:"resourceCircle",props:["resourceScale"],actions:[{action:"ScaleTo",params:[{$calc:"resourceScale"},{$calc:"resourceScale"},{$processorParam:"tickDuration"}]}]}],zIndex:8};var Pe={texture:"storage",calculations:[R(),{id:"energyBackgroundHeight",func:({calcs:{resourcesTotal:e},state:{storeCapacity:a}})=>140*e/Math.max(a||i.a.STORAGE_CAPACITY,e)},{id:"energyHeight",func:({calcs:{resourcesTotal:e},state:{store:a,storeCapacity:t}})=>140*a.energy/Math.max(t||i.a.STORAGE_CAPACITY,e)},{id:"powerHeight",func:({calcs:{resourcesTotal:e},state:{store:a,storeCapacity:t}})=>140*((a.power||0)+(a.energy||0))/Math.max(t||i.a.STORAGE_CAPACITY,e)}],processors:[{id:"border",type:"sprite",once:!0,payload:{texture:"storage-border",width:200,height:200,tint:{$calc:"playerColor"}}},{type:"sprite",once:!0,payload:{texture:"storage",width:200,height:200}},{id:"otherResourcesBar",type:"sprite",props:["store","energyBackgroundHeight","resourcesTotal"],shouldRun:({state:{store:e},calcs:{resourcesTotal:a}})=>e.energy+(e.power||0)<a,payload:{texture:"rectangle",pivot:{y:{$calc:"energyBackgroundHeight"}},y:70,width:110,height:{$calc:"energyBackgroundHeight"},tint:16777215}},{id:"powerBar",type:"sprite",props:["store","resourcesTotal"],shouldRun:({state:{store:e}})=>e.power>0,payload:{texture:"rectangle",pivot:{y:{$calc:"powerHeight"}},y:70,width:110,height:{$calc:"powerHeight"},tint:15998771}},{type:"sprite",id:"energyBar",props:["store","resourcesTotal"],shouldRun:({state:{store:e}})=>e.energy>0,payload:{texture:"rectangle",pivot:{y:{$calc:"energyHeight"}},y:70,width:110,height:{$calc:"energyHeight"},tint:16770413}},{type:"sprite",once:!0,layer:"lighting",shouldRun:({calcs:{resourcesTotal:e}})=>e>0,payload:{texture:"glow",width:200,height:200,alpha:1}},{type:"sprite",once:!0,layer:"lighting",payload:{texture:"glow",width:800,height:800,alpha:.5}}],zIndex:7};const Me=({state:{cooldownTime:e},stateExtra:{gameTime:a}})=>e&&e>=a;var De={calculations:[R(),{id:"restResourceSize",props:["store","storeCapacity","resourcesTotal"],func:({state:{store:e={},storeCapacity:a},calcs:{resourcesTotal:t}})=>{if(t<=(e.energy||0)+(e.power||0))return 0;const o=76*t/(a||i.a.TERMINAL_CAPACITY);return Math.min(o,76)}},{id:"powerResourceSize",props:["store","storeCapacity"],func:({state:{store:e={},storeCapacity:a}})=>{const t=76*((e.energy||0)+(e.power||0))/(a||i.a.TERMINAL_CAPACITY);return Math.min(t,76)}},{id:"energyResourceHeight",props:["store","storeCapacity"],func:({state:{store:e={},storeCapacity:a}})=>{const t=76*(e.energy||0)/(a||i.a.TERMINAL_CAPACITY);return Math.min(t,76)}},{id:"arrowsAlpha",props:["cooldownTime"],func:(...e)=>Me(...e)?.1:1}],processors:[{type:"sprite",once:!0,payload:{texture:"terminal-border",width:200,height:200,tint:{$calc:"playerColor"}}},{type:"sprite",once:!0,payload:{texture:"terminal",width:200,height:200}},{type:"sprite",once:!0,when:Me,payload:{texture:"terminal-arrows",width:200,height:200,alpha:.1}},{type:"sprite",once:!0,when:(...e)=>!Me(...e),payload:{texture:"terminal-arrows",width:200,height:200}},{type:"sprite",when:Me,payload:{texture:"terminal-highlight",width:200,height:200,tint:16777215,alpha:0,blendMode:1},actions:[{action:"Sequence",params:[[{action:"AlphaTo",params:[1,{$processorParam:"tickDuration",koef:.2}]},{action:"AlphaTo",params:[0,{$processorParam:"tickDuration",koef:.8}]}]]}]},{type:"draw",payload:{drawings:[{method:"beginFill",params:[16777215]},{method:"drawRect",params:[{$calc:"restResourceSize",koef:-.5},{$calc:"restResourceSize",koef:-.5},{$calc:"restResourceSize"},{$calc:"restResourceSize"}]},{method:"endFill"},{method:"beginFill",params:[15998771]},{method:"drawRect",params:[{$calc:"powerResourceSize",koef:-.5},{$calc:"powerResourceSize",koef:-.5},{$calc:"powerResourceSize"},{$calc:"powerResourceSize"}]},{method:"endFill"},{method:"beginFill",params:[16770413]},{method:"drawRect",params:[{$calc:"energyResourceHeight",koef:-.5},{$calc:"energyResourceHeight",koef:-.5},{$calc:"energyResourceHeight"},{$calc:"energyResourceHeight"}]},{method:"endFill"}]}},{type:"sprite",layer:"lighting",once:!0,shouldRun:({calcs:{resourcesTotal:e}})=>e>0,payload:{texture:"glow",width:200,height:200,alpha:1}},{type:"sprite",once:!0,layer:"lighting",payload:{texture:"glow",width:800,height:800,alpha:.5}}],zIndex:16},He={calculations:[R(),{id:"resourceColor",func:({calcs:{resourcesTotal:e,playerColor:a}})=>e>0?a:0},{id:"decayAlpha",func:({state:{decayTime:e,deathTime:a},stateExtra:{gameTime:t}})=>1-(t-a)/(e-a)}],processors:[{type:"sprite",id:"tombstone-border",once:!0,payload:{texture:"tombstone-border",width:100,height:100,blendMode:1,alpha:{$calc:"decayAlpha"}}},{type:"sprite",props:["resourceColor"],payload:{texture:"tombstone-resource",tint:{$calc:"resourceColor"},alpha:.8,width:100,height:100}},{type:"sprite",layer:"lighting",once:!0,payload:{texture:"tombstone-resource",width:100,height:100}}],actions:[{targetId:"tombstone-border",actions:[{action:"AlphaTo",params:[{$calc:"decayAlpha"},0]}]}],zIndex:5};const fe=({state:{user:e}})=>"3"===e||"2"===e,xe=(...e)=>!fe(...e);var Ge={calculations:[{id:"shotAnim",func:({state:{actionLog:e}})=>e.attack||e.heal||e.repair},{id:"rotation",func:({state:{x:e,y:a},calcs:{shotAnim:t}})=>{const{calculateAngle:o}=T;return t?o(t.x,t.y,e,a):0}},{id:"energyBarHeight",props:["store","storeCapacityResource"],func:({state:{store:e,storeCapacityResource:a}})=>{const t=a&&a.energy?66.7*e.energy/a.energy:0;return Math.min(t,66.7)}},{id:"energyBarBorderRadius",props:["store","storeCapacity"],func:({calcs:{energyBarHeight:e}})=>Math.min(12,e/2)}],processors:[{type:"sprite",once:"true",payload:{texture:"tower-base",tint:{$calc:"playerColor"},width:200,height:200}},{type:"sprite",once:"true",when:xe,payload:{id:"towerRotatable",texture:"tower-rotatable",pivot:{y:32},width:115,height:115},actions:[{action:"RotateTo",params:[{$random:2*Math.PI},0]}]},{type:"sprite",once:"true",when:fe,payload:{id:"towerRotatable",texture:"tower-rotatable-npc",pivot:{y:32},width:115,height:115},actions:[{action:"RotateTo",params:[{$random:2*Math.PI},0]}]},{type:"creepActions",props:"*",layer:"effects"},{type:"runAction",payload:{id:"towerRotatable"},when:({calcs:{shotAnim:e}})=>!!e,actions:[{action:"RotateTo",params:[{$calc:"rotation"},.3]}]},{type:"runAction",once:!0,payload:{id:"towerRotatable"},when:({calcs:{shotAnim:e}})=>!e,actions:[{action:"Repeat",params:[{action:"RotateBy",params:[Math.PI,10]}]}]},{type:"draw",when:xe,payload:{parentId:"towerRotatable",drawings:[{method:"beginFill",params:[16770413]},{method:"drawRoundedRect",params:[-45,0,90,{$calc:"energyBarHeight"},{$calc:"energyBarBorderRadius"}]},{method:"endFill"}]}},{type:"sprite",once:!0,layer:"lighting",shouldRun:({state:{store:e}})=>e.energy>0,payload:{texture:"glow",width:100,height:100,alpha:1}},{id:"light",once:!0,type:"sprite",layer:"lighting",payload:{texture:"glow",width:600,height:600,alpha:.5}},{type:"runAction",shouldRun:({state:{actionLog:{repair:e,heal:a,attack:t}={}}})=>e||a||t,payload:{id:"light"},actions:[{action:"Sequence",params:[[{action:"AlphaTo",params:[1,{$processorParam:"tickDuration",koef:.1}]},{action:"AlphaTo",params:[.5,{$processorParam:"tickDuration",koef:.3}]}]]}]},{id:"flare",once:!0,type:"sprite",layer:"effects",payload:{texture:"flare1",width:400,height:400,alpha:0,blendMode:1}},{type:"runAction",when:({calcs:{shotAnim:e}})=>!!e,payload:{id:"flare"},actions:[{action:"Sequence",params:[[{action:"AlphaTo",params:[.2,{$processorParam:"tickDuration",koef:.1}]},{action:"AlphaTo",params:[0,{$processorParam:"tickDuration",koef:.3}]}]]}]}],zIndex:13};const Ye={color:13421772,radius:40,startAngle:-Math.PI/2,strokeWidth:10};var We={calculations:[{id:"spawningAngle",func:({state:{spawning:e},stateExtra:{gameTime:a}})=>{const{spawnTime:t=a+.01,needTime:o=0}=e||{},r=t-a;return Ye.startAngle+(o?2*Math.PI*(o-r)/o:0)}},{id:"ttl",func:({state:{decayTime:e},stateExtra:{gameTime:a}})=>100*Math.floor((e-a)/100)}],processors:[{type:"sprite",once:"true",payload:{texture:"invaderCore",width:200,height:200}},{type:"siteProgress",payload:{color:16715065,radius:23,lineWidth:0,progress:{$calc:"ttl"},progressTotal:i.a.STRONGHOLD_DECAY_TICKS}},{type:"draw",props:["spawningAngle"],payload:{id:"arc",drawings:[{method:"lineStyle",params:[Ye.strokeWidth,Ye.color,1]},{method:"arc",params:[0,0,Ye.radius,Ye.startAngle,{$calc:"spawningAngle"}]}]}},{type:"creepActions",props:"*"},{type:"sprite",once:!0,layer:"lighting",payload:{texture:"glow",width:100,height:100,alpha:1}},{type:"sprite",once:!0,layer:"lighting",payload:{texture:"glow",width:800,height:800,tint:16744576}}],zIndex:17},$e={calculations:[R(),{id:"resourceColor",func:({calcs:{resourcesTotal:e,playerColor:a}})=>e>0?a:0},{id:"decayAlpha",func:({state:{decayTime:e,destroyTime:a},stateExtra:{gameTime:t}})=>1-(t-a)/(e-a)}],processors:[{type:"sprite",id:"ruin",once:!0,payload:{texture:"ruin",width:100,height:100,blendMode:1,alpha:{$calc:"decayAlpha"}}},{type:"sprite",props:["resourceColor"],payload:{texture:"tombstone-resource",tint:{$calc:"resourceColor"},alpha:.8,width:100,height:100}},{type:"sprite",layer:"lighting",once:!0,payload:{texture:"tombstone-resource",width:100,height:100}}],actions:[{targetId:"ruin",actions:[{action:"AlphaTo",params:[{$calc:"decayAlpha"},0]}]}],zIndex:5};const{VoidFilter:ve}=PIXI.filters,{TilingSprite:ke}=PIXI.extras,{Graphics:be,BLEND_MODES:Ke}=PIXI;a.default={preprocessors:["setBadgeUrls","terrain"],layers:[{id:"terrain",afterCreate:async(e,{app:a,resourceManager:t,world:{options:{VIEW_BOX:o,CELL_SIZE:r,lighting:s="normal"}}})=>{function n(n,i,c,l,E){const{texture:R}=t.getCachedResource(n),p=new ke(R,i?o:r,c?o:r);p.x=-r/2+(l?o-r:0),p.y=-r/2+(E?o-r:0),p.tileScale.x=r/R.width,p.tileScale.y=r/R.height,a.renderer instanceof PIXI.WebGLRenderer?("disabled"===s&&(p.tint=10526880),"low"===s&&(p.tint=12632256)):p.tint=10526880,p.blendMode=Ke.ADD,p.alpha=.5,p.zIndex=1,e.addChild(p)}n("exit-left",!1,!0,!1,!1),n("exit-bottom",!0,!1,!1,!0),n("exit-top",!0,!1,!1,!1),n("exit-right",!1,!0,!0,!1)}},{id:"wallGraffiti"},{id:"objects",isDefault:!0},{id:"lighting",afterCreate:async(e,{app:a,world:{options:{CELL_SIZE:t,HALF_CELL_SIZE:o=t/2,VIEW_BOX:r,lighting:s="normal"}}})=>{if("disabled"!==s&&a.renderer instanceof PIXI.WebGLRenderer){e.filters=[new ve],e.filters[0].blendMode=PIXI.BLEND_MODES.MULTIPLY;const a=new PIXI.Graphics;a.beginFill(8421504,1),a.drawRect(-o,-o,r,r),a.endFill(),e.addChild(a),"low"===s&&(e.alpha=.5),e.on("display",e=>{e._overrideBlendMode||(e.blendMode=PIXI.BLEND_MODES.SCREEN)})}else e.on("display",e=>{e.visible=!1})}},{id:"effects"}],objects:{_all:c,constructedWall:l,constructionSite:E,container:p,controller:d,creep:h,deposit:u,energy:{processors:[{type:"resourceCircle"},{type:"resourceCircle",layer:"lighting",payload:{tint:16777215}}],zIndex:1},extension:g,extractor:I,factory:P,flag:D,keeperLair:{processors:[{type:"circle",once:!0,payload:{radius:60,color:0}},{type:"circle",once:!0,actions:[{action:"Repeat",params:[{action:"Sequence",params:[[{action:"Spawn",params:[[{action:"ScaleTo",params:[0,0,0]},{action:"FadeIn",params:[0]}]]},{action:"ScaleTo",params:[{$rel:"scale.x"},{$rel:"scale.y"},1]},{action:"FadeOut",params:[1]}]]}]}],payload:{radius:50,color:7864839}},{type:"circle",once:!0,actions:[{action:"Repeat",params:[{action:"Sequence",params:[[{action:"ScaleTo",params:[0,0,0]},{action:"ScaleTo",params:[{$rel:"scale.x",koef:.3},{$rel:"scale.y",koef:.3},1]},{action:"ScaleTo",params:[{$rel:"scale.x"},{$rel:"scale.y"},1]}]]}]}],payload:{radius:50,color:0}},{type:"sprite",layer:"lighting",payload:{texture:"glow",width:800,height:800,alpha:.5,tint:16711680}},{type:"sprite",layer:"lighting",once:!0,payload:{texture:"glow",width:150,height:150}}],zIndex:3},lab:W,link:$,mineral:k,nuke:X,nuker:V,observer:z,portal:{processors:[{type:"circle",once:!0,payload:{radius:45,color:1118515,alpha:.5}},{type:"circle",once:!0,actions:[{action:"Repeat",params:[{action:"Sequence",params:[[{action:"Spawn",params:[[{action:"ScaleTo",params:[0,0,0]},{action:"AlphaTo",params:[.5,0]}]]},{action:"ScaleTo",params:[{$rel:"scale.x"},{$rel:"scale.y"},1]},{action:"FadeOut",params:[1]}]]}]}],payload:{radius:40,color:6406381,alpha:.5}},{type:"circle",once:!0,actions:[{action:"Repeat",params:[{action:"Sequence",params:[[{action:"Spawn",params:[[{action:"ScaleTo",params:[0,0,0]},{action:"AlphaTo",params:[.5,0]}]]},{action:"ScaleTo",params:[{$rel:"scale.x",koef:.3},{$rel:"scale.y",koef:.3},1]},{action:"Spawn",params:[[{action:"ScaleTo",params:[{$rel:"scale.x"},{$rel:"scale.y"},1]},{action:"FadeOut",params:[1]}]]}]]}]}],payload:{radius:40,color:1118515,alpha:.5}},{type:"sprite",layer:"lighting",once:!0,payload:{texture:"glow",width:700,height:700,tint:10066431,alpha:.7},actions:[{action:"Spawn",params:[[{action:"Repeat",params:[{action:"Sequence",params:[[{action:"ScaleTo",params:[{$rel:"scale.x",koef:1.2},{$rel:"scale.y",koef:1.2},2]},{action:"ScaleTo",params:[{$rel:"scale.x"},{$rel:"scale.y"},2]}]]}]},{action:"Repeat",params:[{action:"Sequence",params:[[{action:"AlphaTo",params:[.1,3.5]},{action:"AlphaTo",params:[.7,3.5]}]]}]}]]}]},{type:"sprite",layer:"lighting",once:!0,payload:{texture:"glow",width:150,height:150,tint:7829503}}],zIndex:3},powerBank:q,powerCreep:Q,powerSpawn:pe,road:{processors:[{type:"road",layer:"objects"}],disappearProcessor:{type:"disappear"},zIndex:-1},source:ue,spawn:we,storage:Pe,terminal:De,tombstone:He,tower:Ge,rampart:{calculations:[{id:"rampartColor",once:!0,func:({state:{user:e},stateExtra:{gameData:{player:a}}})=>e===a?4521796:16729156}],processors:[{type:"sprite",layer:"effects",props:["isPublic"],payload:{texture:"rampart",width:100,height:100,alpha:.5,tint:{$calc:"rampartColor"}},shouldRun:({state:{isPublic:e}})=>!!e}],zIndex:0},invaderCore:We,ruin:$e}}}]).default;
 //# sourceMappingURL=renderer-metadata.js.map
 
 /***/ }),
-/* 196 */
+/* 216 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23764,9668 +28020,7479 @@ exports.default = [{
 }];
 
 /***/ }),
-/* 197 */
+/* 217 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(218)
+
+
+/***/ }),
+/* 218 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _glob = __webpack_require__(94);
+
+var _glob2 = _interopRequireDefault(_glob);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const globs = {
+  camelCaseFile: '[A-Z]*.{js,ts}',
+  camelCaseDir: '[A-Z]*/{index,[A-Z]*}.{js,ts}',
+  jsxFile: '*.{jsx,tsx}'
+};
+
+/**
+ * List react component files inside a directory
+ */
+
+const listReactFiles = cwd => {
+  const patterns = Object.keys(globs).map(key => globs[key]);
+  const pattern = `**/{${patterns.join(',')}}`;
+  const ignore = ['**/node_modules/**', '**/{__tests__,test,tests}/**', '**/*.{test,spec}.*'];
+
+  return new Promise((resolve, reject) => {
+    (0, _glob2.default)(pattern, { cwd, ignore }, (err, files) => {
+      // istanbul ignore next
+      if (err) {
+        reject(err);
+      }
+      resolve(files);
+    });
+  });
+};
+
+exports.default = listReactFiles;
+
+/***/ }),
+/* 219 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(process) {// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+var pathModule = __webpack_require__(24);
+var isWindows = process.platform === 'win32';
+var fs = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"fs\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+// JavaScript implementation of realpath, ported from node pre-v6
+
+var DEBUG = process.env.NODE_DEBUG && /fs/.test(process.env.NODE_DEBUG);
+
+function rethrow() {
+  // Only enable in debug mode. A backtrace uses ~1000 bytes of heap space and
+  // is fairly slow to generate.
+  var callback;
+  if (DEBUG) {
+    var backtrace = new Error;
+    callback = debugCallback;
+  } else
+    callback = missingCallback;
+
+  return callback;
+
+  function debugCallback(err) {
+    if (err) {
+      backtrace.message = err.message;
+      err = backtrace;
+      missingCallback(err);
+    }
+  }
+
+  function missingCallback(err) {
+    if (err) {
+      if (process.throwDeprecation)
+        throw err;  // Forgot a callback but don't know where? Use NODE_DEBUG=fs
+      else if (!process.noDeprecation) {
+        var msg = 'fs: missing callback ' + (err.stack || err.message);
+        if (process.traceDeprecation)
+          console.trace(msg);
+        else
+          console.error(msg);
+      }
+    }
+  }
+}
+
+function maybeCallback(cb) {
+  return typeof cb === 'function' ? cb : rethrow();
+}
+
+var normalize = pathModule.normalize;
+
+// Regexp that finds the next partion of a (partial) path
+// result is [base_with_slash, base], e.g. ['somedir/', 'somedir']
+if (isWindows) {
+  var nextPartRe = /(.*?)(?:[\/\\]+|$)/g;
+} else {
+  var nextPartRe = /(.*?)(?:[\/]+|$)/g;
+}
+
+// Regex to find the device root, including trailing slash. E.g. 'c:\\'.
+if (isWindows) {
+  var splitRootRe = /^(?:[a-zA-Z]:|[\\\/]{2}[^\\\/]+[\\\/][^\\\/]+)?[\\\/]*/;
+} else {
+  var splitRootRe = /^[\/]*/;
+}
+
+exports.realpathSync = function realpathSync(p, cache) {
+  // make p is absolute
+  p = pathModule.resolve(p);
+
+  if (cache && Object.prototype.hasOwnProperty.call(cache, p)) {
+    return cache[p];
+  }
+
+  var original = p,
+      seenLinks = {},
+      knownHard = {};
+
+  // current character position in p
+  var pos;
+  // the partial path so far, including a trailing slash if any
+  var current;
+  // the partial path without a trailing slash (except when pointing at a root)
+  var base;
+  // the partial path scanned in the previous round, with slash
+  var previous;
+
+  start();
+
+  function start() {
+    // Skip over roots
+    var m = splitRootRe.exec(p);
+    pos = m[0].length;
+    current = m[0];
+    base = m[0];
+    previous = '';
+
+    // On windows, check that the root exists. On unix there is no need.
+    if (isWindows && !knownHard[base]) {
+      fs.lstatSync(base);
+      knownHard[base] = true;
+    }
+  }
+
+  // walk down the path, swapping out linked pathparts for their real
+  // values
+  // NB: p.length changes.
+  while (pos < p.length) {
+    // find the next part
+    nextPartRe.lastIndex = pos;
+    var result = nextPartRe.exec(p);
+    previous = current;
+    current += result[0];
+    base = previous + result[1];
+    pos = nextPartRe.lastIndex;
+
+    // continue if not a symlink
+    if (knownHard[base] || (cache && cache[base] === base)) {
+      continue;
+    }
+
+    var resolvedLink;
+    if (cache && Object.prototype.hasOwnProperty.call(cache, base)) {
+      // some known symbolic link.  no need to stat again.
+      resolvedLink = cache[base];
+    } else {
+      var stat = fs.lstatSync(base);
+      if (!stat.isSymbolicLink()) {
+        knownHard[base] = true;
+        if (cache) cache[base] = base;
+        continue;
+      }
+
+      // read the link if it wasn't read before
+      // dev/ino always return 0 on windows, so skip the check.
+      var linkTarget = null;
+      if (!isWindows) {
+        var id = stat.dev.toString(32) + ':' + stat.ino.toString(32);
+        if (seenLinks.hasOwnProperty(id)) {
+          linkTarget = seenLinks[id];
+        }
+      }
+      if (linkTarget === null) {
+        fs.statSync(base);
+        linkTarget = fs.readlinkSync(base);
+      }
+      resolvedLink = pathModule.resolve(previous, linkTarget);
+      // track this, if given a cache.
+      if (cache) cache[base] = resolvedLink;
+      if (!isWindows) seenLinks[id] = linkTarget;
+    }
+
+    // resolve the link, then start over
+    p = pathModule.resolve(resolvedLink, p.slice(pos));
+    start();
+  }
+
+  if (cache) cache[original] = p;
+
+  return p;
+};
+
+
+exports.realpath = function realpath(p, cache, cb) {
+  if (typeof cb !== 'function') {
+    cb = maybeCallback(cache);
+    cache = null;
+  }
+
+  // make p is absolute
+  p = pathModule.resolve(p);
+
+  if (cache && Object.prototype.hasOwnProperty.call(cache, p)) {
+    return process.nextTick(cb.bind(null, null, cache[p]));
+  }
+
+  var original = p,
+      seenLinks = {},
+      knownHard = {};
+
+  // current character position in p
+  var pos;
+  // the partial path so far, including a trailing slash if any
+  var current;
+  // the partial path without a trailing slash (except when pointing at a root)
+  var base;
+  // the partial path scanned in the previous round, with slash
+  var previous;
+
+  start();
+
+  function start() {
+    // Skip over roots
+    var m = splitRootRe.exec(p);
+    pos = m[0].length;
+    current = m[0];
+    base = m[0];
+    previous = '';
+
+    // On windows, check that the root exists. On unix there is no need.
+    if (isWindows && !knownHard[base]) {
+      fs.lstat(base, function(err) {
+        if (err) return cb(err);
+        knownHard[base] = true;
+        LOOP();
+      });
+    } else {
+      process.nextTick(LOOP);
+    }
+  }
+
+  // walk down the path, swapping out linked pathparts for their real
+  // values
+  function LOOP() {
+    // stop if scanned past end of path
+    if (pos >= p.length) {
+      if (cache) cache[original] = p;
+      return cb(null, p);
+    }
+
+    // find the next part
+    nextPartRe.lastIndex = pos;
+    var result = nextPartRe.exec(p);
+    previous = current;
+    current += result[0];
+    base = previous + result[1];
+    pos = nextPartRe.lastIndex;
+
+    // continue if not a symlink
+    if (knownHard[base] || (cache && cache[base] === base)) {
+      return process.nextTick(LOOP);
+    }
+
+    if (cache && Object.prototype.hasOwnProperty.call(cache, base)) {
+      // known symbolic link.  no need to stat again.
+      return gotResolvedLink(cache[base]);
+    }
+
+    return fs.lstat(base, gotStat);
+  }
+
+  function gotStat(err, stat) {
+    if (err) return cb(err);
+
+    // if not a symlink, skip to the next path part
+    if (!stat.isSymbolicLink()) {
+      knownHard[base] = true;
+      if (cache) cache[base] = base;
+      return process.nextTick(LOOP);
+    }
+
+    // stat & read the link if not read before
+    // call gotTarget as soon as the link target is known
+    // dev/ino always return 0 on windows, so skip the check.
+    if (!isWindows) {
+      var id = stat.dev.toString(32) + ':' + stat.ino.toString(32);
+      if (seenLinks.hasOwnProperty(id)) {
+        return gotTarget(null, seenLinks[id], base);
+      }
+    }
+    fs.stat(base, function(err) {
+      if (err) return cb(err);
+
+      fs.readlink(base, function(err, target) {
+        if (!isWindows) seenLinks[id] = target;
+        gotTarget(err, target);
+      });
+    });
+  }
+
+  function gotTarget(err, target, base) {
+    if (err) return cb(err);
+
+    var resolvedLink = pathModule.resolve(previous, target);
+    if (cache) cache[base] = resolvedLink;
+    gotResolvedLink(resolvedLink);
+  }
+
+  function gotResolvedLink(resolvedLink) {
+    // resolve the link, then start over
+    p = pathModule.resolve(resolvedLink, p.slice(pos));
+    start();
+  }
+};
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 220 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var concatMap = __webpack_require__(221);
+var balanced = __webpack_require__(222);
+
+module.exports = expandTop;
+
+var escSlash = '\0SLASH'+Math.random()+'\0';
+var escOpen = '\0OPEN'+Math.random()+'\0';
+var escClose = '\0CLOSE'+Math.random()+'\0';
+var escComma = '\0COMMA'+Math.random()+'\0';
+var escPeriod = '\0PERIOD'+Math.random()+'\0';
+
+function numeric(str) {
+  return parseInt(str, 10) == str
+    ? parseInt(str, 10)
+    : str.charCodeAt(0);
+}
+
+function escapeBraces(str) {
+  return str.split('\\\\').join(escSlash)
+            .split('\\{').join(escOpen)
+            .split('\\}').join(escClose)
+            .split('\\,').join(escComma)
+            .split('\\.').join(escPeriod);
+}
+
+function unescapeBraces(str) {
+  return str.split(escSlash).join('\\')
+            .split(escOpen).join('{')
+            .split(escClose).join('}')
+            .split(escComma).join(',')
+            .split(escPeriod).join('.');
+}
+
+
+// Basically just str.split(","), but handling cases
+// where we have nested braced sections, which should be
+// treated as individual members, like {a,{b,c},d}
+function parseCommaParts(str) {
+  if (!str)
+    return [''];
+
+  var parts = [];
+  var m = balanced('{', '}', str);
+
+  if (!m)
+    return str.split(',');
+
+  var pre = m.pre;
+  var body = m.body;
+  var post = m.post;
+  var p = pre.split(',');
+
+  p[p.length-1] += '{' + body + '}';
+  var postParts = parseCommaParts(post);
+  if (post.length) {
+    p[p.length-1] += postParts.shift();
+    p.push.apply(p, postParts);
+  }
+
+  parts.push.apply(parts, p);
+
+  return parts;
+}
+
+function expandTop(str) {
+  if (!str)
+    return [];
+
+  // I don't know why Bash 4.3 does this, but it does.
+  // Anything starting with {} will have the first two bytes preserved
+  // but *only* at the top level, so {},a}b will not expand to anything,
+  // but a{},b}c will be expanded to [a}c,abc].
+  // One could argue that this is a bug in Bash, but since the goal of
+  // this module is to match Bash's rules, we escape a leading {}
+  if (str.substr(0, 2) === '{}') {
+    str = '\\{\\}' + str.substr(2);
+  }
+
+  return expand(escapeBraces(str), true).map(unescapeBraces);
+}
+
+function identity(e) {
+  return e;
+}
+
+function embrace(str) {
+  return '{' + str + '}';
+}
+function isPadded(el) {
+  return /^-?0\d/.test(el);
+}
+
+function lte(i, y) {
+  return i <= y;
+}
+function gte(i, y) {
+  return i >= y;
+}
+
+function expand(str, isTop) {
+  var expansions = [];
+
+  var m = balanced('{', '}', str);
+  if (!m || /\$$/.test(m.pre)) return [str];
+
+  var isNumericSequence = /^-?\d+\.\.-?\d+(?:\.\.-?\d+)?$/.test(m.body);
+  var isAlphaSequence = /^[a-zA-Z]\.\.[a-zA-Z](?:\.\.-?\d+)?$/.test(m.body);
+  var isSequence = isNumericSequence || isAlphaSequence;
+  var isOptions = m.body.indexOf(',') >= 0;
+  if (!isSequence && !isOptions) {
+    // {a},b}
+    if (m.post.match(/,.*\}/)) {
+      str = m.pre + '{' + m.body + escClose + m.post;
+      return expand(str);
+    }
+    return [str];
+  }
+
+  var n;
+  if (isSequence) {
+    n = m.body.split(/\.\./);
+  } else {
+    n = parseCommaParts(m.body);
+    if (n.length === 1) {
+      // x{{a,b}}y ==> x{a}y x{b}y
+      n = expand(n[0], false).map(embrace);
+      if (n.length === 1) {
+        var post = m.post.length
+          ? expand(m.post, false)
+          : [''];
+        return post.map(function(p) {
+          return m.pre + n[0] + p;
+        });
+      }
+    }
+  }
+
+  // at this point, n is the parts, and we know it's not a comma set
+  // with a single entry.
+
+  // no need to expand pre, since it is guaranteed to be free of brace-sets
+  var pre = m.pre;
+  var post = m.post.length
+    ? expand(m.post, false)
+    : [''];
+
+  var N;
+
+  if (isSequence) {
+    var x = numeric(n[0]);
+    var y = numeric(n[1]);
+    var width = Math.max(n[0].length, n[1].length)
+    var incr = n.length == 3
+      ? Math.abs(numeric(n[2]))
+      : 1;
+    var test = lte;
+    var reverse = y < x;
+    if (reverse) {
+      incr *= -1;
+      test = gte;
+    }
+    var pad = n.some(isPadded);
+
+    N = [];
+
+    for (var i = x; test(i, y); i += incr) {
+      var c;
+      if (isAlphaSequence) {
+        c = String.fromCharCode(i);
+        if (c === '\\')
+          c = '';
+      } else {
+        c = String(i);
+        if (pad) {
+          var need = width - c.length;
+          if (need > 0) {
+            var z = new Array(need + 1).join('0');
+            if (i < 0)
+              c = '-' + z + c.slice(1);
+            else
+              c = z + c;
+          }
+        }
+      }
+      N.push(c);
+    }
+  } else {
+    N = concatMap(n, function(el) { return expand(el, false) });
+  }
+
+  for (var j = 0; j < N.length; j++) {
+    for (var k = 0; k < post.length; k++) {
+      var expansion = pre + N[j] + post[k];
+      if (!isTop || isSequence || expansion)
+        expansions.push(expansion);
+    }
+  }
+
+  return expansions;
+}
+
+
+
+/***/ }),
+/* 221 */
+/***/ (function(module, exports) {
+
+module.exports = function (xs, fn) {
+    var res = [];
+    for (var i = 0; i < xs.length; i++) {
+        var x = fn(xs[i], i);
+        if (isArray(x)) res.push.apply(res, x);
+        else res.push(x);
+    }
+    return res;
+};
+
+var isArray = Array.isArray || function (xs) {
+    return Object.prototype.toString.call(xs) === '[object Array]';
+};
+
+
+/***/ }),
+/* 222 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+module.exports = balanced;
+function balanced(a, b, str) {
+  if (a instanceof RegExp) a = maybeMatch(a, str);
+  if (b instanceof RegExp) b = maybeMatch(b, str);
+
+  var r = range(a, b, str);
+
+  return r && {
+    start: r[0],
+    end: r[1],
+    pre: str.slice(0, r[0]),
+    body: str.slice(r[0] + a.length, r[1]),
+    post: str.slice(r[1] + b.length)
+  };
+}
+
+function maybeMatch(reg, str) {
+  var m = str.match(reg);
+  return m ? m[0] : null;
+}
+
+balanced.range = range;
+function range(a, b, str) {
+  var begs, beg, left, right, result;
+  var ai = str.indexOf(a);
+  var bi = str.indexOf(b, ai + 1);
+  var i = ai;
+
+  if (ai >= 0 && bi > 0) {
+    if(a===b) {
+      return [ai, bi];
+    }
+    begs = [];
+    left = str.length;
+
+    while (i >= 0 && !result) {
+      if (i == ai) {
+        begs.push(i);
+        ai = str.indexOf(a, i + 1);
+      } else if (begs.length == 1) {
+        result = [ begs.pop(), bi ];
+      } else {
+        beg = begs.pop();
+        if (beg < left) {
+          left = beg;
+          right = bi;
+        }
+
+        bi = str.indexOf(b, i + 1);
+      }
+
+      i = ai < bi && ai >= 0 ? ai : bi;
+    }
+
+    if (begs.length) {
+      result = [ left, right ];
+    }
+  }
+
+  return result;
+}
+
+
+/***/ }),
+/* 223 */
+/***/ (function(module, exports) {
+
+if (typeof Object.create === 'function') {
+  // implementation from standard node.js 'util' module
+  module.exports = function inherits(ctor, superCtor) {
+    if (superCtor) {
+      ctor.super_ = superCtor
+      ctor.prototype = Object.create(superCtor.prototype, {
+        constructor: {
+          value: ctor,
+          enumerable: false,
+          writable: true,
+          configurable: true
+        }
+      })
+    }
+  };
+} else {
+  // old school shim for old browsers
+  module.exports = function inherits(ctor, superCtor) {
+    if (superCtor) {
+      ctor.super_ = superCtor
+      var TempCtor = function () {}
+      TempCtor.prototype = superCtor.prototype
+      ctor.prototype = new TempCtor()
+      ctor.prototype.constructor = ctor
+    }
+  }
+}
+
+
+/***/ }),
+/* 224 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+
+var R = typeof Reflect === 'object' ? Reflect : null
+var ReflectApply = R && typeof R.apply === 'function'
+  ? R.apply
+  : function ReflectApply(target, receiver, args) {
+    return Function.prototype.apply.call(target, receiver, args);
+  }
+
+var ReflectOwnKeys
+if (R && typeof R.ownKeys === 'function') {
+  ReflectOwnKeys = R.ownKeys
+} else if (Object.getOwnPropertySymbols) {
+  ReflectOwnKeys = function ReflectOwnKeys(target) {
+    return Object.getOwnPropertyNames(target)
+      .concat(Object.getOwnPropertySymbols(target));
+  };
+} else {
+  ReflectOwnKeys = function ReflectOwnKeys(target) {
+    return Object.getOwnPropertyNames(target);
+  };
+}
+
+function ProcessEmitWarning(warning) {
+  if (console && console.warn) console.warn(warning);
+}
+
+var NumberIsNaN = Number.isNaN || function NumberIsNaN(value) {
+  return value !== value;
+}
+
+function EventEmitter() {
+  EventEmitter.init.call(this);
+}
+module.exports = EventEmitter;
+module.exports.once = once;
+
+// Backwards-compat with node 0.10.x
+EventEmitter.EventEmitter = EventEmitter;
+
+EventEmitter.prototype._events = undefined;
+EventEmitter.prototype._eventsCount = 0;
+EventEmitter.prototype._maxListeners = undefined;
+
+// By default EventEmitters will print a warning if more than 10 listeners are
+// added to it. This is a useful default which helps finding memory leaks.
+var defaultMaxListeners = 10;
+
+function checkListener(listener) {
+  if (typeof listener !== 'function') {
+    throw new TypeError('The "listener" argument must be of type Function. Received type ' + typeof listener);
+  }
+}
+
+Object.defineProperty(EventEmitter, 'defaultMaxListeners', {
+  enumerable: true,
+  get: function() {
+    return defaultMaxListeners;
+  },
+  set: function(arg) {
+    if (typeof arg !== 'number' || arg < 0 || NumberIsNaN(arg)) {
+      throw new RangeError('The value of "defaultMaxListeners" is out of range. It must be a non-negative number. Received ' + arg + '.');
+    }
+    defaultMaxListeners = arg;
+  }
+});
+
+EventEmitter.init = function() {
+
+  if (this._events === undefined ||
+      this._events === Object.getPrototypeOf(this)._events) {
+    this._events = Object.create(null);
+    this._eventsCount = 0;
+  }
+
+  this._maxListeners = this._maxListeners || undefined;
+};
+
+// Obviously not all Emitters should be limited to 10. This function allows
+// that to be increased. Set to zero for unlimited.
+EventEmitter.prototype.setMaxListeners = function setMaxListeners(n) {
+  if (typeof n !== 'number' || n < 0 || NumberIsNaN(n)) {
+    throw new RangeError('The value of "n" is out of range. It must be a non-negative number. Received ' + n + '.');
+  }
+  this._maxListeners = n;
+  return this;
+};
+
+function _getMaxListeners(that) {
+  if (that._maxListeners === undefined)
+    return EventEmitter.defaultMaxListeners;
+  return that._maxListeners;
+}
+
+EventEmitter.prototype.getMaxListeners = function getMaxListeners() {
+  return _getMaxListeners(this);
+};
+
+EventEmitter.prototype.emit = function emit(type) {
+  var args = [];
+  for (var i = 1; i < arguments.length; i++) args.push(arguments[i]);
+  var doError = (type === 'error');
+
+  var events = this._events;
+  if (events !== undefined)
+    doError = (doError && events.error === undefined);
+  else if (!doError)
+    return false;
+
+  // If there is no 'error' event listener then throw.
+  if (doError) {
+    var er;
+    if (args.length > 0)
+      er = args[0];
+    if (er instanceof Error) {
+      // Note: The comments on the `throw` lines are intentional, they show
+      // up in Node's output if this results in an unhandled exception.
+      throw er; // Unhandled 'error' event
+    }
+    // At least give some kind of context to the user
+    var err = new Error('Unhandled error.' + (er ? ' (' + er.message + ')' : ''));
+    err.context = er;
+    throw err; // Unhandled 'error' event
+  }
+
+  var handler = events[type];
+
+  if (handler === undefined)
+    return false;
+
+  if (typeof handler === 'function') {
+    ReflectApply(handler, this, args);
+  } else {
+    var len = handler.length;
+    var listeners = arrayClone(handler, len);
+    for (var i = 0; i < len; ++i)
+      ReflectApply(listeners[i], this, args);
+  }
+
+  return true;
+};
+
+function _addListener(target, type, listener, prepend) {
+  var m;
+  var events;
+  var existing;
+
+  checkListener(listener);
+
+  events = target._events;
+  if (events === undefined) {
+    events = target._events = Object.create(null);
+    target._eventsCount = 0;
+  } else {
+    // To avoid recursion in the case that type === "newListener"! Before
+    // adding it to the listeners, first emit "newListener".
+    if (events.newListener !== undefined) {
+      target.emit('newListener', type,
+                  listener.listener ? listener.listener : listener);
+
+      // Re-assign `events` because a newListener handler could have caused the
+      // this._events to be assigned to a new object
+      events = target._events;
+    }
+    existing = events[type];
+  }
+
+  if (existing === undefined) {
+    // Optimize the case of one listener. Don't need the extra array object.
+    existing = events[type] = listener;
+    ++target._eventsCount;
+  } else {
+    if (typeof existing === 'function') {
+      // Adding the second element, need to change to array.
+      existing = events[type] =
+        prepend ? [listener, existing] : [existing, listener];
+      // If we've already got an array, just append.
+    } else if (prepend) {
+      existing.unshift(listener);
+    } else {
+      existing.push(listener);
+    }
+
+    // Check for listener leak
+    m = _getMaxListeners(target);
+    if (m > 0 && existing.length > m && !existing.warned) {
+      existing.warned = true;
+      // No error code for this since it is a Warning
+      // eslint-disable-next-line no-restricted-syntax
+      var w = new Error('Possible EventEmitter memory leak detected. ' +
+                          existing.length + ' ' + String(type) + ' listeners ' +
+                          'added. Use emitter.setMaxListeners() to ' +
+                          'increase limit');
+      w.name = 'MaxListenersExceededWarning';
+      w.emitter = target;
+      w.type = type;
+      w.count = existing.length;
+      ProcessEmitWarning(w);
+    }
+  }
+
+  return target;
+}
+
+EventEmitter.prototype.addListener = function addListener(type, listener) {
+  return _addListener(this, type, listener, false);
+};
+
+EventEmitter.prototype.on = EventEmitter.prototype.addListener;
+
+EventEmitter.prototype.prependListener =
+    function prependListener(type, listener) {
+      return _addListener(this, type, listener, true);
+    };
+
+function onceWrapper() {
+  if (!this.fired) {
+    this.target.removeListener(this.type, this.wrapFn);
+    this.fired = true;
+    if (arguments.length === 0)
+      return this.listener.call(this.target);
+    return this.listener.apply(this.target, arguments);
+  }
+}
+
+function _onceWrap(target, type, listener) {
+  var state = { fired: false, wrapFn: undefined, target: target, type: type, listener: listener };
+  var wrapped = onceWrapper.bind(state);
+  wrapped.listener = listener;
+  state.wrapFn = wrapped;
+  return wrapped;
+}
+
+EventEmitter.prototype.once = function once(type, listener) {
+  checkListener(listener);
+  this.on(type, _onceWrap(this, type, listener));
+  return this;
+};
+
+EventEmitter.prototype.prependOnceListener =
+    function prependOnceListener(type, listener) {
+      checkListener(listener);
+      this.prependListener(type, _onceWrap(this, type, listener));
+      return this;
+    };
+
+// Emits a 'removeListener' event if and only if the listener was removed.
+EventEmitter.prototype.removeListener =
+    function removeListener(type, listener) {
+      var list, events, position, i, originalListener;
+
+      checkListener(listener);
+
+      events = this._events;
+      if (events === undefined)
+        return this;
+
+      list = events[type];
+      if (list === undefined)
+        return this;
+
+      if (list === listener || list.listener === listener) {
+        if (--this._eventsCount === 0)
+          this._events = Object.create(null);
+        else {
+          delete events[type];
+          if (events.removeListener)
+            this.emit('removeListener', type, list.listener || listener);
+        }
+      } else if (typeof list !== 'function') {
+        position = -1;
+
+        for (i = list.length - 1; i >= 0; i--) {
+          if (list[i] === listener || list[i].listener === listener) {
+            originalListener = list[i].listener;
+            position = i;
+            break;
+          }
+        }
+
+        if (position < 0)
+          return this;
+
+        if (position === 0)
+          list.shift();
+        else {
+          spliceOne(list, position);
+        }
+
+        if (list.length === 1)
+          events[type] = list[0];
+
+        if (events.removeListener !== undefined)
+          this.emit('removeListener', type, originalListener || listener);
+      }
+
+      return this;
+    };
+
+EventEmitter.prototype.off = EventEmitter.prototype.removeListener;
+
+EventEmitter.prototype.removeAllListeners =
+    function removeAllListeners(type) {
+      var listeners, events, i;
+
+      events = this._events;
+      if (events === undefined)
+        return this;
+
+      // not listening for removeListener, no need to emit
+      if (events.removeListener === undefined) {
+        if (arguments.length === 0) {
+          this._events = Object.create(null);
+          this._eventsCount = 0;
+        } else if (events[type] !== undefined) {
+          if (--this._eventsCount === 0)
+            this._events = Object.create(null);
+          else
+            delete events[type];
+        }
+        return this;
+      }
+
+      // emit removeListener for all listeners on all events
+      if (arguments.length === 0) {
+        var keys = Object.keys(events);
+        var key;
+        for (i = 0; i < keys.length; ++i) {
+          key = keys[i];
+          if (key === 'removeListener') continue;
+          this.removeAllListeners(key);
+        }
+        this.removeAllListeners('removeListener');
+        this._events = Object.create(null);
+        this._eventsCount = 0;
+        return this;
+      }
+
+      listeners = events[type];
+
+      if (typeof listeners === 'function') {
+        this.removeListener(type, listeners);
+      } else if (listeners !== undefined) {
+        // LIFO order
+        for (i = listeners.length - 1; i >= 0; i--) {
+          this.removeListener(type, listeners[i]);
+        }
+      }
+
+      return this;
+    };
+
+function _listeners(target, type, unwrap) {
+  var events = target._events;
+
+  if (events === undefined)
+    return [];
+
+  var evlistener = events[type];
+  if (evlistener === undefined)
+    return [];
+
+  if (typeof evlistener === 'function')
+    return unwrap ? [evlistener.listener || evlistener] : [evlistener];
+
+  return unwrap ?
+    unwrapListeners(evlistener) : arrayClone(evlistener, evlistener.length);
+}
+
+EventEmitter.prototype.listeners = function listeners(type) {
+  return _listeners(this, type, true);
+};
+
+EventEmitter.prototype.rawListeners = function rawListeners(type) {
+  return _listeners(this, type, false);
+};
+
+EventEmitter.listenerCount = function(emitter, type) {
+  if (typeof emitter.listenerCount === 'function') {
+    return emitter.listenerCount(type);
+  } else {
+    return listenerCount.call(emitter, type);
+  }
+};
+
+EventEmitter.prototype.listenerCount = listenerCount;
+function listenerCount(type) {
+  var events = this._events;
+
+  if (events !== undefined) {
+    var evlistener = events[type];
+
+    if (typeof evlistener === 'function') {
+      return 1;
+    } else if (evlistener !== undefined) {
+      return evlistener.length;
+    }
+  }
+
+  return 0;
+}
+
+EventEmitter.prototype.eventNames = function eventNames() {
+  return this._eventsCount > 0 ? ReflectOwnKeys(this._events) : [];
+};
+
+function arrayClone(arr, n) {
+  var copy = new Array(n);
+  for (var i = 0; i < n; ++i)
+    copy[i] = arr[i];
+  return copy;
+}
+
+function spliceOne(list, index) {
+  for (; index + 1 < list.length; index++)
+    list[index] = list[index + 1];
+  list.pop();
+}
+
+function unwrapListeners(arr) {
+  var ret = new Array(arr.length);
+  for (var i = 0; i < ret.length; ++i) {
+    ret[i] = arr[i].listener || arr[i];
+  }
+  return ret;
+}
+
+function once(emitter, name) {
+  return new Promise(function (resolve, reject) {
+    function errorListener(err) {
+      emitter.removeListener(name, resolver);
+      reject(err);
+    }
+
+    function resolver() {
+      if (typeof emitter.removeListener === 'function') {
+        emitter.removeListener('error', errorListener);
+      }
+      resolve([].slice.call(arguments));
+    };
+
+    eventTargetAgnosticAddListener(emitter, name, resolver, { once: true });
+    if (name !== 'error') {
+      addErrorHandlerIfEventEmitter(emitter, errorListener, { once: true });
+    }
+  });
+}
+
+function addErrorHandlerIfEventEmitter(emitter, handler, flags) {
+  if (typeof emitter.on === 'function') {
+    eventTargetAgnosticAddListener(emitter, 'error', handler, flags);
+  }
+}
+
+function eventTargetAgnosticAddListener(emitter, name, listener, flags) {
+  if (typeof emitter.on === 'function') {
+    if (flags.once) {
+      emitter.once(name, listener);
+    } else {
+      emitter.on(name, listener);
+    }
+  } else if (typeof emitter.addEventListener === 'function') {
+    // EventTarget does not have `error` event semantics like Node
+    // EventEmitters, we do not listen for `error` events here.
+    emitter.addEventListener(name, function wrapListener(arg) {
+      // IE does not have builtin `{ once: true }` support so we
+      // have to do it manually.
+      if (flags.once) {
+        emitter.removeEventListener(name, wrapListener);
+      }
+      listener(arg);
+    });
+  } else {
+    throw new TypeError('The "emitter" argument must be of type EventEmitter. Received type ' + typeof emitter);
+  }
+}
+
+
+/***/ }),
+/* 225 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var implementation = __webpack_require__(226);
+
+var lacksProperEnumerationOrder = function () {
+	if (!Object.assign) {
+		return false;
+	}
+	/*
+	 * v8, specifically in node 4.x, has a bug with incorrect property enumeration order
+	 * note: this does not detect the bug unless there's 20 characters
+	 */
+	var str = 'abcdefghijklmnopqrst';
+	var letters = str.split('');
+	var map = {};
+	for (var i = 0; i < letters.length; ++i) {
+		map[letters[i]] = letters[i];
+	}
+	var obj = Object.assign({}, map);
+	var actual = '';
+	for (var k in obj) {
+		actual += k;
+	}
+	return str !== actual;
+};
+
+var assignHasPendingExceptions = function () {
+	if (!Object.assign || !Object.preventExtensions) {
+		return false;
+	}
+	/*
+	 * Firefox 37 still has "pending exception" logic in its Object.assign implementation,
+	 * which is 72% slower than our shim, and Firefox 40's native implementation.
+	 */
+	var thrower = Object.preventExtensions({ 1: 2 });
+	try {
+		Object.assign(thrower, 'xy');
+	} catch (e) {
+		return thrower[1] === 'y';
+	}
+	return false;
+};
+
+module.exports = function getPolyfill() {
+	if (!Object.assign) {
+		return implementation;
+	}
+	if (lacksProperEnumerationOrder()) {
+		return implementation;
+	}
+	if (assignHasPendingExceptions()) {
+		return implementation;
+	}
+	return Object.assign;
+};
+
+
+/***/ }),
+/* 226 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// modified from https://github.com/es-shims/es6-shim
+var objectKeys = __webpack_require__(227);
+var hasSymbols = __webpack_require__(99)();
+var callBound = __webpack_require__(229);
+var toObject = Object;
+var $push = callBound('Array.prototype.push');
+var $propIsEnumerable = callBound('Object.prototype.propertyIsEnumerable');
+var originalGetSymbols = hasSymbols ? Object.getOwnPropertySymbols : null;
+
+// eslint-disable-next-line no-unused-vars
+module.exports = function assign(target, source1) {
+	if (target == null) { throw new TypeError('target must be an object'); }
+	var to = toObject(target); // step 1
+	if (arguments.length === 1) {
+		return to; // step 2
+	}
+	for (var s = 1; s < arguments.length; ++s) {
+		var from = toObject(arguments[s]); // step 3.a.i
+
+		// step 3.a.ii:
+		var keys = objectKeys(from);
+		var getSymbols = hasSymbols && (Object.getOwnPropertySymbols || originalGetSymbols);
+		if (getSymbols) {
+			var syms = getSymbols(from);
+			for (var j = 0; j < syms.length; ++j) {
+				var key = syms[j];
+				if ($propIsEnumerable(from, key)) {
+					$push(keys, key);
+				}
+			}
+		}
+
+		// step 3.a.iii:
+		for (var i = 0; i < keys.length; ++i) {
+			var nextKey = keys[i];
+			if ($propIsEnumerable(from, nextKey)) { // step 3.a.iii.2
+				var propValue = from[nextKey]; // step 3.a.iii.2.a
+				to[nextKey] = propValue; // step 3.a.iii.2.b
+			}
+		}
+	}
+
+	return to; // step 4
+};
+
+
+/***/ }),
+/* 227 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var slice = Array.prototype.slice;
+var isArgs = __webpack_require__(98);
+
+var origKeys = Object.keys;
+var keysShim = origKeys ? function keys(o) { return origKeys(o); } : __webpack_require__(228);
+
+var originalKeys = Object.keys;
+
+keysShim.shim = function shimObjectKeys() {
+	if (Object.keys) {
+		var keysWorksWithArguments = (function () {
+			// Safari 5.0 bug
+			var args = Object.keys(arguments);
+			return args && args.length === arguments.length;
+		}(1, 2));
+		if (!keysWorksWithArguments) {
+			Object.keys = function keys(object) { // eslint-disable-line func-name-matching
+				if (isArgs(object)) {
+					return originalKeys(slice.call(object));
+				}
+				return originalKeys(object);
+			};
+		}
+	} else {
+		Object.keys = keysShim;
+	}
+	return Object.keys || keysShim;
+};
+
+module.exports = keysShim;
+
+
+/***/ }),
+/* 228 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var keysShim;
+if (!Object.keys) {
+	// modified from https://github.com/es-shims/es5-shim
+	var has = Object.prototype.hasOwnProperty;
+	var toStr = Object.prototype.toString;
+	var isArgs = __webpack_require__(98); // eslint-disable-line global-require
+	var isEnumerable = Object.prototype.propertyIsEnumerable;
+	var hasDontEnumBug = !isEnumerable.call({ toString: null }, 'toString');
+	var hasProtoEnumBug = isEnumerable.call(function () {}, 'prototype');
+	var dontEnums = [
+		'toString',
+		'toLocaleString',
+		'valueOf',
+		'hasOwnProperty',
+		'isPrototypeOf',
+		'propertyIsEnumerable',
+		'constructor'
+	];
+	var equalsConstructorPrototype = function (o) {
+		var ctor = o.constructor;
+		return ctor && ctor.prototype === o;
+	};
+	var excludedKeys = {
+		$applicationCache: true,
+		$console: true,
+		$external: true,
+		$frame: true,
+		$frameElement: true,
+		$frames: true,
+		$innerHeight: true,
+		$innerWidth: true,
+		$onmozfullscreenchange: true,
+		$onmozfullscreenerror: true,
+		$outerHeight: true,
+		$outerWidth: true,
+		$pageXOffset: true,
+		$pageYOffset: true,
+		$parent: true,
+		$scrollLeft: true,
+		$scrollTop: true,
+		$scrollX: true,
+		$scrollY: true,
+		$self: true,
+		$webkitIndexedDB: true,
+		$webkitStorageInfo: true,
+		$window: true
+	};
+	var hasAutomationEqualityBug = (function () {
+		/* global window */
+		if (typeof window === 'undefined') { return false; }
+		for (var k in window) {
+			try {
+				if (!excludedKeys['$' + k] && has.call(window, k) && window[k] !== null && typeof window[k] === 'object') {
+					try {
+						equalsConstructorPrototype(window[k]);
+					} catch (e) {
+						return true;
+					}
+				}
+			} catch (e) {
+				return true;
+			}
+		}
+		return false;
+	}());
+	var equalsConstructorPrototypeIfNotBuggy = function (o) {
+		/* global window */
+		if (typeof window === 'undefined' || !hasAutomationEqualityBug) {
+			return equalsConstructorPrototype(o);
+		}
+		try {
+			return equalsConstructorPrototype(o);
+		} catch (e) {
+			return false;
+		}
+	};
+
+	keysShim = function keys(object) {
+		var isObject = object !== null && typeof object === 'object';
+		var isFunction = toStr.call(object) === '[object Function]';
+		var isArguments = isArgs(object);
+		var isString = isObject && toStr.call(object) === '[object String]';
+		var theKeys = [];
+
+		if (!isObject && !isFunction && !isArguments) {
+			throw new TypeError('Object.keys called on a non-object');
+		}
+
+		var skipProto = hasProtoEnumBug && isFunction;
+		if (isString && object.length > 0 && !has.call(object, 0)) {
+			for (var i = 0; i < object.length; ++i) {
+				theKeys.push(String(i));
+			}
+		}
+
+		if (isArguments && object.length > 0) {
+			for (var j = 0; j < object.length; ++j) {
+				theKeys.push(String(j));
+			}
+		} else {
+			for (var name in object) {
+				if (!(skipProto && name === 'prototype') && has.call(object, name)) {
+					theKeys.push(String(name));
+				}
+			}
+		}
+
+		if (hasDontEnumBug) {
+			var skipConstructor = equalsConstructorPrototypeIfNotBuggy(object);
+
+			for (var k = 0; k < dontEnums.length; ++k) {
+				if (!(skipConstructor && dontEnums[k] === 'constructor') && has.call(object, dontEnums[k])) {
+					theKeys.push(dontEnums[k]);
+				}
+			}
+		}
+		return theKeys;
+	};
+}
+module.exports = keysShim;
+
+
+/***/ }),
+/* 229 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var GetIntrinsic = __webpack_require__(25);
+
+var callBind = __webpack_require__(239);
+
+var $indexOf = callBind(GetIntrinsic('String.prototype.indexOf'));
+
+module.exports = function callBoundIntrinsic(name, allowMissing) {
+	var intrinsic = GetIntrinsic(name, !!allowMissing);
+	if (typeof intrinsic === 'function' && $indexOf(name, '.prototype.') > -1) {
+		return callBind(intrinsic);
+	}
+	return intrinsic;
+};
+
+
+/***/ }),
+/* 230 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/** @type {import('.')} */
+module.exports = Error;
+
+
+/***/ }),
+/* 231 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/** @type {import('./eval')} */
+module.exports = EvalError;
+
+
+/***/ }),
+/* 232 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/** @type {import('./range')} */
+module.exports = RangeError;
+
+
+/***/ }),
+/* 233 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/** @type {import('./ref')} */
+module.exports = ReferenceError;
+
+
+/***/ }),
+/* 234 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/** @type {import('./uri')} */
+module.exports = URIError;
+
+
+/***/ }),
+/* 235 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var origSymbol = typeof Symbol !== 'undefined' && Symbol;
+var hasSymbolSham = __webpack_require__(99);
+
+module.exports = function hasNativeSymbols() {
+	if (typeof origSymbol !== 'function') { return false; }
+	if (typeof Symbol !== 'function') { return false; }
+	if (typeof origSymbol('foo') !== 'symbol') { return false; }
+	if (typeof Symbol('bar') !== 'symbol') { return false; }
+
+	return hasSymbolSham();
+};
+
+
+/***/ }),
+/* 236 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var test = {
+	__proto__: null,
+	foo: {}
+};
+
+var $Object = Object;
+
+/** @type {import('.')} */
+module.exports = function hasProto() {
+	// @ts-expect-error: TS errors on an inherited property for some reason
+	return { __proto__: test }.foo === test.foo
+		&& !(test instanceof $Object);
+};
+
+
+/***/ }),
+/* 237 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/* eslint no-invalid-this: 1 */
+
+var ERROR_MESSAGE = 'Function.prototype.bind called on incompatible ';
+var toStr = Object.prototype.toString;
+var max = Math.max;
+var funcType = '[object Function]';
+
+var concatty = function concatty(a, b) {
+    var arr = [];
+
+    for (var i = 0; i < a.length; i += 1) {
+        arr[i] = a[i];
+    }
+    for (var j = 0; j < b.length; j += 1) {
+        arr[j + a.length] = b[j];
+    }
+
+    return arr;
+};
+
+var slicy = function slicy(arrLike, offset) {
+    var arr = [];
+    for (var i = offset || 0, j = 0; i < arrLike.length; i += 1, j += 1) {
+        arr[j] = arrLike[i];
+    }
+    return arr;
+};
+
+var joiny = function (arr, joiner) {
+    var str = '';
+    for (var i = 0; i < arr.length; i += 1) {
+        str += arr[i];
+        if (i + 1 < arr.length) {
+            str += joiner;
+        }
+    }
+    return str;
+};
+
+module.exports = function bind(that) {
+    var target = this;
+    if (typeof target !== 'function' || toStr.apply(target) !== funcType) {
+        throw new TypeError(ERROR_MESSAGE + target);
+    }
+    var args = slicy(arguments, 1);
+
+    var bound;
+    var binder = function () {
+        if (this instanceof bound) {
+            var result = target.apply(
+                this,
+                concatty(args, arguments)
+            );
+            if (Object(result) === result) {
+                return result;
+            }
+            return this;
+        }
+        return target.apply(
+            that,
+            concatty(args, arguments)
+        );
+
+    };
+
+    var boundLength = max(0, target.length - args.length);
+    var boundArgs = [];
+    for (var i = 0; i < boundLength; i++) {
+        boundArgs[i] = '$' + i;
+    }
+
+    bound = Function('binder', 'return function (' + joiny(boundArgs, ',') + '){ return binder.apply(this,arguments); }')(binder);
+
+    if (target.prototype) {
+        var Empty = function Empty() {};
+        Empty.prototype = target.prototype;
+        bound.prototype = new Empty();
+        Empty.prototype = null;
+    }
+
+    return bound;
+};
+
+
+/***/ }),
+/* 238 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var call = Function.prototype.call;
+var $hasOwn = Object.prototype.hasOwnProperty;
+var bind = __webpack_require__(55);
+
+/** @type {import('.')} */
+module.exports = bind.call(call, $hasOwn);
+
+
+/***/ }),
+/* 239 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var bind = __webpack_require__(55);
+var GetIntrinsic = __webpack_require__(25);
+var setFunctionLength = __webpack_require__(240);
+
+var $TypeError = __webpack_require__(34);
+var $apply = GetIntrinsic('%Function.prototype.apply%');
+var $call = GetIntrinsic('%Function.prototype.call%');
+var $reflectApply = GetIntrinsic('%Reflect.apply%', true) || bind.call($call, $apply);
+
+var $defineProperty = __webpack_require__(56);
+var $max = GetIntrinsic('%Math.max%');
+
+module.exports = function callBind(originalFunction) {
+	if (typeof originalFunction !== 'function') {
+		throw new $TypeError('a function is required');
+	}
+	var func = $reflectApply(bind, $call, arguments);
+	return setFunctionLength(
+		func,
+		1 + $max(0, originalFunction.length - (arguments.length - 1)),
+		true
+	);
+};
+
+var applyBind = function applyBind() {
+	return $reflectApply(bind, $apply, arguments);
+};
+
+if ($defineProperty) {
+	$defineProperty(module.exports, 'apply', { value: applyBind });
+} else {
+	module.exports.apply = applyBind;
+}
+
+
+/***/ }),
+/* 240 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var GetIntrinsic = __webpack_require__(25);
+var define = __webpack_require__(241);
+var hasDescriptors = __webpack_require__(242)();
+var gOPD = __webpack_require__(101);
+
+var $TypeError = __webpack_require__(34);
+var $floor = GetIntrinsic('%Math.floor%');
+
+/** @type {import('.')} */
+module.exports = function setFunctionLength(fn, length) {
+	if (typeof fn !== 'function') {
+		throw new $TypeError('`fn` is not a function');
+	}
+	if (typeof length !== 'number' || length < 0 || length > 0xFFFFFFFF || $floor(length) !== length) {
+		throw new $TypeError('`length` must be a positive 32-bit integer');
+	}
+
+	var loose = arguments.length > 2 && !!arguments[2];
+
+	var functionLengthIsConfigurable = true;
+	var functionLengthIsWritable = true;
+	if ('length' in fn && gOPD) {
+		var desc = gOPD(fn, 'length');
+		if (desc && !desc.configurable) {
+			functionLengthIsConfigurable = false;
+		}
+		if (desc && !desc.writable) {
+			functionLengthIsWritable = false;
+		}
+	}
+
+	if (functionLengthIsConfigurable || functionLengthIsWritable || !loose) {
+		if (hasDescriptors) {
+			define(/** @type {Parameters<define>[0]} */ (fn), 'length', length, true, true);
+		} else {
+			define(/** @type {Parameters<define>[0]} */ (fn), 'length', length);
+		}
+	}
+	return fn;
+};
+
+
+/***/ }),
+/* 241 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var $defineProperty = __webpack_require__(56);
+
+var $SyntaxError = __webpack_require__(100);
+var $TypeError = __webpack_require__(34);
+
+var gopd = __webpack_require__(101);
+
+/** @type {import('.')} */
+module.exports = function defineDataProperty(
+	obj,
+	property,
+	value
+) {
+	if (!obj || (typeof obj !== 'object' && typeof obj !== 'function')) {
+		throw new $TypeError('`obj` must be an object or a function`');
+	}
+	if (typeof property !== 'string' && typeof property !== 'symbol') {
+		throw new $TypeError('`property` must be a string or a symbol`');
+	}
+	if (arguments.length > 3 && typeof arguments[3] !== 'boolean' && arguments[3] !== null) {
+		throw new $TypeError('`nonEnumerable`, if provided, must be a boolean or null');
+	}
+	if (arguments.length > 4 && typeof arguments[4] !== 'boolean' && arguments[4] !== null) {
+		throw new $TypeError('`nonWritable`, if provided, must be a boolean or null');
+	}
+	if (arguments.length > 5 && typeof arguments[5] !== 'boolean' && arguments[5] !== null) {
+		throw new $TypeError('`nonConfigurable`, if provided, must be a boolean or null');
+	}
+	if (arguments.length > 6 && typeof arguments[6] !== 'boolean') {
+		throw new $TypeError('`loose`, if provided, must be a boolean');
+	}
+
+	var nonEnumerable = arguments.length > 3 ? arguments[3] : null;
+	var nonWritable = arguments.length > 4 ? arguments[4] : null;
+	var nonConfigurable = arguments.length > 5 ? arguments[5] : null;
+	var loose = arguments.length > 6 ? arguments[6] : false;
+
+	/* @type {false | TypedPropertyDescriptor<unknown>} */
+	var desc = !!gopd && gopd(obj, property);
+
+	if ($defineProperty) {
+		$defineProperty(obj, property, {
+			configurable: nonConfigurable === null && desc ? desc.configurable : !nonConfigurable,
+			enumerable: nonEnumerable === null && desc ? desc.enumerable : !nonEnumerable,
+			value: value,
+			writable: nonWritable === null && desc ? desc.writable : !nonWritable
+		});
+	} else if (loose || (!nonEnumerable && !nonWritable && !nonConfigurable)) {
+		// must fall back to [[Set]], and was not explicitly asked to make non-enumerable, non-writable, or non-configurable
+		obj[property] = value; // eslint-disable-line no-param-reassign
+	} else {
+		throw new $SyntaxError('This environment does not support defining a property as non-configurable, non-writable, or non-enumerable.');
+	}
+};
+
+
+/***/ }),
+/* 242 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var $defineProperty = __webpack_require__(56);
+
+var hasPropertyDescriptors = function hasPropertyDescriptors() {
+	return !!$defineProperty;
+};
+
+hasPropertyDescriptors.hasArrayLengthDefineBug = function hasArrayLengthDefineBug() {
+	// node v0.6 has a bug where array lengths can be Set but not Defined
+	if (!$defineProperty) {
+		return null;
+	}
+	try {
+		return $defineProperty([], 'length', { value: 1 }).length !== 1;
+	} catch (e) {
+		// In Firefox 4-22, defining length on an array throws an exception.
+		return true;
+	}
+};
+
+module.exports = hasPropertyDescriptors;
+
+
+/***/ }),
+/* 243 */
+/***/ (function(module, exports) {
+
+module.exports = function isBuffer(arg) {
+  return arg && typeof arg === 'object'
+    && typeof arg.copy === 'function'
+    && typeof arg.fill === 'function'
+    && typeof arg.readUInt8 === 'function';
+}
+
+/***/ }),
+/* 244 */
+/***/ (function(module, exports) {
+
+if (typeof Object.create === 'function') {
+  // implementation from standard node.js 'util' module
+  module.exports = function inherits(ctor, superCtor) {
+    ctor.super_ = superCtor
+    ctor.prototype = Object.create(superCtor.prototype, {
+      constructor: {
+        value: ctor,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+  };
+} else {
+  // old school shim for old browsers
+  module.exports = function inherits(ctor, superCtor) {
+    ctor.super_ = superCtor
+    var TempCtor = function () {}
+    TempCtor.prototype = superCtor.prototype
+    ctor.prototype = new TempCtor()
+    ctor.prototype.constructor = ctor
+  }
+}
+
+
+/***/ }),
+/* 245 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(process) {module.exports = globSync
+globSync.GlobSync = GlobSync
+
+var rp = __webpack_require__(95)
+var minimatch = __webpack_require__(54)
+var Minimatch = minimatch.Minimatch
+var Glob = __webpack_require__(94).Glob
+var util = __webpack_require__(57)
+var path = __webpack_require__(24)
+var assert = __webpack_require__(96)
+var isAbsolute = __webpack_require__(58)
+var common = __webpack_require__(102)
+var setopts = common.setopts
+var ownProp = common.ownProp
+var childrenIgnored = common.childrenIgnored
+var isIgnored = common.isIgnored
+
+function globSync (pattern, options) {
+  if (typeof options === 'function' || arguments.length === 3)
+    throw new TypeError('callback provided to sync glob\n'+
+                        'See: https://github.com/isaacs/node-glob/issues/167')
+
+  return new GlobSync(pattern, options).found
+}
+
+function GlobSync (pattern, options) {
+  if (!pattern)
+    throw new Error('must provide pattern')
+
+  if (typeof options === 'function' || arguments.length === 3)
+    throw new TypeError('callback provided to sync glob\n'+
+                        'See: https://github.com/isaacs/node-glob/issues/167')
+
+  if (!(this instanceof GlobSync))
+    return new GlobSync(pattern, options)
+
+  setopts(this, pattern, options)
+
+  if (this.noprocess)
+    return this
+
+  var n = this.minimatch.set.length
+  this.matches = new Array(n)
+  for (var i = 0; i < n; i ++) {
+    this._process(this.minimatch.set[i], i, false)
+  }
+  this._finish()
+}
+
+GlobSync.prototype._finish = function () {
+  assert.ok(this instanceof GlobSync)
+  if (this.realpath) {
+    var self = this
+    this.matches.forEach(function (matchset, index) {
+      var set = self.matches[index] = Object.create(null)
+      for (var p in matchset) {
+        try {
+          p = self._makeAbs(p)
+          var real = rp.realpathSync(p, self.realpathCache)
+          set[real] = true
+        } catch (er) {
+          if (er.syscall === 'stat')
+            set[self._makeAbs(p)] = true
+          else
+            throw er
+        }
+      }
+    })
+  }
+  common.finish(this)
+}
+
+
+GlobSync.prototype._process = function (pattern, index, inGlobStar) {
+  assert.ok(this instanceof GlobSync)
+
+  // Get the first [n] parts of pattern that are all strings.
+  var n = 0
+  while (typeof pattern[n] === 'string') {
+    n ++
+  }
+  // now n is the index of the first one that is *not* a string.
+
+  // See if there's anything else
+  var prefix
+  switch (n) {
+    // if not, then this is rather simple
+    case pattern.length:
+      this._processSimple(pattern.join('/'), index)
+      return
+
+    case 0:
+      // pattern *starts* with some non-trivial item.
+      // going to readdir(cwd), but not include the prefix in matches.
+      prefix = null
+      break
+
+    default:
+      // pattern has some string bits in the front.
+      // whatever it starts with, whether that's 'absolute' like /foo/bar,
+      // or 'relative' like '../baz'
+      prefix = pattern.slice(0, n).join('/')
+      break
+  }
+
+  var remain = pattern.slice(n)
+
+  // get the list of entries.
+  var read
+  if (prefix === null)
+    read = '.'
+  else if (isAbsolute(prefix) ||
+      isAbsolute(pattern.map(function (p) {
+        return typeof p === 'string' ? p : '[*]'
+      }).join('/'))) {
+    if (!prefix || !isAbsolute(prefix))
+      prefix = '/' + prefix
+    read = prefix
+  } else
+    read = prefix
+
+  var abs = this._makeAbs(read)
+
+  //if ignored, skip processing
+  if (childrenIgnored(this, read))
+    return
+
+  var isGlobStar = remain[0] === minimatch.GLOBSTAR
+  if (isGlobStar)
+    this._processGlobStar(prefix, read, abs, remain, index, inGlobStar)
+  else
+    this._processReaddir(prefix, read, abs, remain, index, inGlobStar)
+}
+
+
+GlobSync.prototype._processReaddir = function (prefix, read, abs, remain, index, inGlobStar) {
+  var entries = this._readdir(abs, inGlobStar)
+
+  // if the abs isn't a dir, then nothing can match!
+  if (!entries)
+    return
+
+  // It will only match dot entries if it starts with a dot, or if
+  // dot is set.  Stuff like @(.foo|.bar) isn't allowed.
+  var pn = remain[0]
+  var negate = !!this.minimatch.negate
+  var rawGlob = pn._glob
+  var dotOk = this.dot || rawGlob.charAt(0) === '.'
+
+  var matchedEntries = []
+  for (var i = 0; i < entries.length; i++) {
+    var e = entries[i]
+    if (e.charAt(0) !== '.' || dotOk) {
+      var m
+      if (negate && !prefix) {
+        m = !e.match(pn)
+      } else {
+        m = e.match(pn)
+      }
+      if (m)
+        matchedEntries.push(e)
+    }
+  }
+
+  var len = matchedEntries.length
+  // If there are no matched entries, then nothing matches.
+  if (len === 0)
+    return
+
+  // if this is the last remaining pattern bit, then no need for
+  // an additional stat *unless* the user has specified mark or
+  // stat explicitly.  We know they exist, since readdir returned
+  // them.
+
+  if (remain.length === 1 && !this.mark && !this.stat) {
+    if (!this.matches[index])
+      this.matches[index] = Object.create(null)
+
+    for (var i = 0; i < len; i ++) {
+      var e = matchedEntries[i]
+      if (prefix) {
+        if (prefix.slice(-1) !== '/')
+          e = prefix + '/' + e
+        else
+          e = prefix + e
+      }
+
+      if (e.charAt(0) === '/' && !this.nomount) {
+        e = path.join(this.root, e)
+      }
+      this._emitMatch(index, e)
+    }
+    // This was the last one, and no stats were needed
+    return
+  }
+
+  // now test all matched entries as stand-ins for that part
+  // of the pattern.
+  remain.shift()
+  for (var i = 0; i < len; i ++) {
+    var e = matchedEntries[i]
+    var newPattern
+    if (prefix)
+      newPattern = [prefix, e]
+    else
+      newPattern = [e]
+    this._process(newPattern.concat(remain), index, inGlobStar)
+  }
+}
+
+
+GlobSync.prototype._emitMatch = function (index, e) {
+  if (isIgnored(this, e))
+    return
+
+  var abs = this._makeAbs(e)
+
+  if (this.mark)
+    e = this._mark(e)
+
+  if (this.absolute) {
+    e = abs
+  }
+
+  if (this.matches[index][e])
+    return
+
+  if (this.nodir) {
+    var c = this.cache[abs]
+    if (c === 'DIR' || Array.isArray(c))
+      return
+  }
+
+  this.matches[index][e] = true
+
+  if (this.stat)
+    this._stat(e)
+}
+
+
+GlobSync.prototype._readdirInGlobStar = function (abs) {
+  // follow all symlinked directories forever
+  // just proceed as if this is a non-globstar situation
+  if (this.follow)
+    return this._readdir(abs, false)
+
+  var entries
+  var lstat
+  var stat
+  try {
+    lstat = this.fs.lstatSync(abs)
+  } catch (er) {
+    if (er.code === 'ENOENT') {
+      // lstat failed, doesn't exist
+      return null
+    }
+  }
+
+  var isSym = lstat && lstat.isSymbolicLink()
+  this.symlinks[abs] = isSym
+
+  // If it's not a symlink or a dir, then it's definitely a regular file.
+  // don't bother doing a readdir in that case.
+  if (!isSym && lstat && !lstat.isDirectory())
+    this.cache[abs] = 'FILE'
+  else
+    entries = this._readdir(abs, false)
+
+  return entries
+}
+
+GlobSync.prototype._readdir = function (abs, inGlobStar) {
+  var entries
+
+  if (inGlobStar && !ownProp(this.symlinks, abs))
+    return this._readdirInGlobStar(abs)
+
+  if (ownProp(this.cache, abs)) {
+    var c = this.cache[abs]
+    if (!c || c === 'FILE')
+      return null
+
+    if (Array.isArray(c))
+      return c
+  }
+
+  try {
+    return this._readdirEntries(abs, this.fs.readdirSync(abs))
+  } catch (er) {
+    this._readdirError(abs, er)
+    return null
+  }
+}
+
+GlobSync.prototype._readdirEntries = function (abs, entries) {
+  // if we haven't asked to stat everything, then just
+  // assume that everything in there exists, so we can avoid
+  // having to stat it a second time.
+  if (!this.mark && !this.stat) {
+    for (var i = 0; i < entries.length; i ++) {
+      var e = entries[i]
+      if (abs === '/')
+        e = abs + e
+      else
+        e = abs + '/' + e
+      this.cache[e] = true
+    }
+  }
+
+  this.cache[abs] = entries
+
+  // mark and cache dir-ness
+  return entries
+}
+
+GlobSync.prototype._readdirError = function (f, er) {
+  // handle errors, and cache the information
+  switch (er.code) {
+    case 'ENOTSUP': // https://github.com/isaacs/node-glob/issues/205
+    case 'ENOTDIR': // totally normal. means it *does* exist.
+      var abs = this._makeAbs(f)
+      this.cache[abs] = 'FILE'
+      if (abs === this.cwdAbs) {
+        var error = new Error(er.code + ' invalid cwd ' + this.cwd)
+        error.path = this.cwd
+        error.code = er.code
+        throw error
+      }
+      break
+
+    case 'ENOENT': // not terribly unusual
+    case 'ELOOP':
+    case 'ENAMETOOLONG':
+    case 'UNKNOWN':
+      this.cache[this._makeAbs(f)] = false
+      break
+
+    default: // some unusual error.  Treat as failure.
+      this.cache[this._makeAbs(f)] = false
+      if (this.strict)
+        throw er
+      if (!this.silent)
+        console.error('glob error', er)
+      break
+  }
+}
+
+GlobSync.prototype._processGlobStar = function (prefix, read, abs, remain, index, inGlobStar) {
+
+  var entries = this._readdir(abs, inGlobStar)
+
+  // no entries means not a dir, so it can never have matches
+  // foo.txt/** doesn't match foo.txt
+  if (!entries)
+    return
+
+  // test without the globstar, and with every child both below
+  // and replacing the globstar.
+  var remainWithoutGlobStar = remain.slice(1)
+  var gspref = prefix ? [ prefix ] : []
+  var noGlobStar = gspref.concat(remainWithoutGlobStar)
+
+  // the noGlobStar pattern exits the inGlobStar state
+  this._process(noGlobStar, index, false)
+
+  var len = entries.length
+  var isSym = this.symlinks[abs]
+
+  // If it's a symlink, and we're in a globstar, then stop
+  if (isSym && inGlobStar)
+    return
+
+  for (var i = 0; i < len; i++) {
+    var e = entries[i]
+    if (e.charAt(0) === '.' && !this.dot)
+      continue
+
+    // these two cases enter the inGlobStar state
+    var instead = gspref.concat(entries[i], remainWithoutGlobStar)
+    this._process(instead, index, true)
+
+    var below = gspref.concat(entries[i], remain)
+    this._process(below, index, true)
+  }
+}
+
+GlobSync.prototype._processSimple = function (prefix, index) {
+  // XXX review this.  Shouldn't it be doing the mounting etc
+  // before doing stat?  kinda weird?
+  var exists = this._stat(prefix)
+
+  if (!this.matches[index])
+    this.matches[index] = Object.create(null)
+
+  // If it doesn't exist, then just mark the lack of results
+  if (!exists)
+    return
+
+  if (prefix && isAbsolute(prefix) && !this.nomount) {
+    var trail = /[\/\\]$/.test(prefix)
+    if (prefix.charAt(0) === '/') {
+      prefix = path.join(this.root, prefix)
+    } else {
+      prefix = path.resolve(this.root, prefix)
+      if (trail)
+        prefix += '/'
+    }
+  }
+
+  if (process.platform === 'win32')
+    prefix = prefix.replace(/\\/g, '/')
+
+  // Mark this as a match
+  this._emitMatch(index, prefix)
+}
+
+// Returns either 'DIR', 'FILE', or false
+GlobSync.prototype._stat = function (f) {
+  var abs = this._makeAbs(f)
+  var needDir = f.slice(-1) === '/'
+
+  if (f.length > this.maxLength)
+    return false
+
+  if (!this.stat && ownProp(this.cache, abs)) {
+    var c = this.cache[abs]
+
+    if (Array.isArray(c))
+      c = 'DIR'
+
+    // It exists, but maybe not how we need it
+    if (!needDir || c === 'DIR')
+      return c
+
+    if (needDir && c === 'FILE')
+      return false
+
+    // otherwise we have to stat, because maybe c=true
+    // if we know it exists, but not what it is.
+  }
+
+  var exists
+  var stat = this.statCache[abs]
+  if (!stat) {
+    var lstat
+    try {
+      lstat = this.fs.lstatSync(abs)
+    } catch (er) {
+      if (er && (er.code === 'ENOENT' || er.code === 'ENOTDIR')) {
+        this.statCache[abs] = false
+        return false
+      }
+    }
+
+    if (lstat && lstat.isSymbolicLink()) {
+      try {
+        stat = this.fs.statSync(abs)
+      } catch (er) {
+        stat = lstat
+      }
+    } else {
+      stat = lstat
+    }
+  }
+
+  this.statCache[abs] = stat
+
+  var c = true
+  if (stat)
+    c = stat.isDirectory() ? 'DIR' : 'FILE'
+
+  this.cache[abs] = this.cache[abs] || c
+
+  if (needDir && c === 'FILE')
+    return false
+
+  return c
+}
+
+GlobSync.prototype._mark = function (p) {
+  return common.mark(this, p)
+}
+
+GlobSync.prototype._makeAbs = function (f) {
+  return common.makeAbs(this, f)
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 246 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(process) {var wrappy = __webpack_require__(103)
+var reqs = Object.create(null)
+var once = __webpack_require__(104)
+
+module.exports = wrappy(inflight)
+
+function inflight (key, cb) {
+  if (reqs[key]) {
+    reqs[key].push(cb)
+    return null
+  } else {
+    reqs[key] = [cb]
+    return makeres(key)
+  }
+}
+
+function makeres (key) {
+  return once(function RES () {
+    var cbs = reqs[key]
+    var len = cbs.length
+    var args = slice(arguments)
+
+    // XXX It's somewhat ambiguous whether a new callback added in this
+    // pass should be queued for later execution if something in the
+    // list of callbacks throws, or if it should just be discarded.
+    // However, it's such an edge case that it hardly matters, and either
+    // choice is likely as surprising as the other.
+    // As it happens, we do go ahead and schedule it for later execution.
+    try {
+      for (var i = 0; i < len; i++) {
+        cbs[i].apply(null, args)
+      }
+    } finally {
+      if (cbs.length > len) {
+        // added more in the interim.
+        // de-zalgo, just in case, but don't call again.
+        cbs.splice(0, len)
+        process.nextTick(function () {
+          RES.apply(null, args)
+        })
+      } else {
+        delete reqs[key]
+      }
+    }
+  })
+}
+
+function slice (args) {
+  var length = args.length
+  var array = []
+
+  for (var i = 0; i < length; i++) array[i] = args[i]
+  return array
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 247 */
 /***/ (function(module, exports) {
 
 module.exports = [
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
 		"x": 0,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 4
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 5
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 6
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 7
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 8
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 9
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 10
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 11
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 12
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 13
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 14
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 15
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 16
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 17
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 18
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 19
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 20
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 21
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 22
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 23
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 24
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 25
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 26
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 27
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 28
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 29
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 30
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 31
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 32
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 33
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 34
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 35
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 36
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 37
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 38
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 39
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 40
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 41
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 42
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 43
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 44
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 45
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 0,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 1,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 4
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 5
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 6
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 7
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 8
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 9
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 10
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 11
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 12
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 13
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 14
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 15
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 16
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 17
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 18
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 19
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 20
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 21
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 22
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 23
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 24
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 25
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 26
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 27
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 28
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 29
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 30
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 31
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 32
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 33
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 34
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 35
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 36
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 37
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 38
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 39
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 40
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 41
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 42
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 43
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 44
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 45
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 1,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 2,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 4
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 5
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 6
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 7
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 8
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 9
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 10
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 11
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 12
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 13
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 14
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 15
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 16
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 17
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 32
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 33
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 34
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 35
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 36
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 37
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 38
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 39
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 40
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 41
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 42
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 43
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 44
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 45
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 2,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 3,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 4
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 5
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 6
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 7
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 8
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 9
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 10
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 11
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 12
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 13
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 14
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 15
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 34
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 35
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 36
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 37
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 38
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 39
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 40
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 41
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 42
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 43
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 44
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 45
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 3,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 4,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 4,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 4,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 4,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 4,
+		"y": 4
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 4,
+		"y": 5
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 4,
+		"y": 6
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 4,
+		"y": 7
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 4,
+		"y": 8
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 4,
+		"y": 9
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 4,
+		"y": 10
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 4,
+		"y": 11
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 4,
+		"y": 12
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 4,
+		"y": 13
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 4,
+		"y": 36
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 4,
+		"y": 37
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 4,
+		"y": 38
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 4,
+		"y": 39
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 4,
+		"y": 40
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 4,
+		"y": 41
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 4,
+		"y": 42
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 4,
+		"y": 43
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 4,
+		"y": 44
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 4,
+		"y": 45
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 4,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 4,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 4,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 4,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 5,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 5,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 5,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 5,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 5,
+		"y": 4
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 5,
+		"y": 5
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 5,
+		"y": 6
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 5,
+		"y": 7
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 5,
+		"y": 8
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 5,
+		"y": 9
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 5,
+		"y": 10
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 5,
+		"y": 11
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 5,
+		"y": 38
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 5,
+		"y": 39
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 5,
+		"y": 40
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 5,
+		"y": 41
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 5,
+		"y": 42
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 5,
+		"y": 43
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 5,
+		"y": 44
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 5,
+		"y": 45
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 5,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 5,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 5,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 5,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 6,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 6,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 6,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 6,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 6,
+		"y": 4
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 6,
+		"y": 5
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 6,
+		"y": 6
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 6,
+		"y": 7
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 6,
+		"y": 8
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 6,
+		"y": 9
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 6,
+		"y": 40
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 6,
+		"y": 41
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 6,
+		"y": 42
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 6,
+		"y": 43
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 6,
+		"y": 44
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 6,
+		"y": 45
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 6,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 6,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 6,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 6,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 7,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 7,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 7,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 7,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 7,
+		"y": 4
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 7,
+		"y": 5
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 7,
+		"y": 6
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 7,
+		"y": 7
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 7,
+		"y": 42
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 7,
+		"y": 43
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 7,
+		"y": 44
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 7,
+		"y": 45
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 7,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 7,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 7,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 7,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 8,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 8,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 8,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 8,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 8,
+		"y": 4
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 8,
+		"y": 5
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 8,
+		"y": 6
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 8,
+		"y": 7
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 8,
+		"y": 42
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 8,
+		"y": 43
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 8,
+		"y": 44
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 8,
+		"y": 45
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 8,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 8,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 8,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 8,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 9,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 9,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 9,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 9,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 9,
+		"y": 4
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 9,
+		"y": 5
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 9,
+		"y": 6
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 9,
+		"y": 43
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 9,
+		"y": 44
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 9,
+		"y": 45
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 9,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 9,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 9,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 9,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 10,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 10,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 10,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 10,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 10,
+		"y": 4
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 10,
+		"y": 5
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 10,
+		"y": 6
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 10,
+		"y": 24
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 10,
+		"y": 25
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 10,
+		"y": 26
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 10,
+		"y": 43
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 10,
+		"y": 44
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 10,
+		"y": 45
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 10,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 10,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 10,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 10,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 11,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 11,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 11,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 11,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 11,
+		"y": 4
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 11,
+		"y": 5
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 11,
+		"y": 24
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 11,
+		"y": 25
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 11,
+		"y": 26
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 11,
+		"y": 27
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 11,
+		"y": 43
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 11,
+		"y": 44
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 11,
+		"y": 45
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 11,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 11,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 11,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 11,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 12,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 12,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 12,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 12,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 12,
+		"y": 4
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 12,
+		"y": 5
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 12,
+		"y": 25
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 12,
+		"y": 26
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 12,
+		"y": 27
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 12,
+		"y": 44
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 12,
+		"y": 45
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 12,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 12,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 12,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 12,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 13,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 13,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 13,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 13,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 13,
+		"y": 4
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 13,
+		"y": 44
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 13,
+		"y": 45
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 13,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 13,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 13,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 13,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 14,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 14,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 14,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 14,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 14,
+		"y": 4
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 14,
+		"y": 45
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 14,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 14,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 14,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 14,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 15,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 15,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 15,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 15,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 15,
+		"y": 45
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 15,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 15,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 15,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 15,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 16,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 16,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 16,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 16,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 16,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 16,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 16,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 16,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 17,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 17,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 17,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 17,
+		"y": 16
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 17,
+		"y": 17
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 17,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 17,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 17,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 17,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 18,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 18,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 18,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 18,
+		"y": 16
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 18,
+		"y": 17
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 18,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 18,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 18,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 18,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 19,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 19,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 19,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 19,
+		"y": 42
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 19,
+		"y": 43
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 19,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 19,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 19,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 19,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 20,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 20,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 20,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 20,
+		"y": 41
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 20,
+		"y": 42
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 20,
+		"y": 43
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 20,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 20,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 20,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 20,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 21,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 21,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 21,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 21,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 21,
+		"y": 42
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 21,
+		"y": 43
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 21,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 21,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 21,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 21,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 22,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 22,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 22,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 22,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 22,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 22,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 22,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 22,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 23,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 23,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 23,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 23,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 23,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 23,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 23,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 23,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 24,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 24,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 24,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 24,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 24,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 24,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 24,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 24,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 25,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 25,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 25,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 25,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 25,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 25,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 25,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 25,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 26,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 26,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 26,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 26,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 26,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 26,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 26,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 26,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 27,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 27,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 27,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 27,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 27,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 27,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 27,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 27,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 28,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 28,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 28,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 28,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 28,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 28,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 28,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 28,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 29,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 29,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 29,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 29,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 29,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 29,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 29,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 29,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 30,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 30,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 30,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 30,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 30,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 30,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 30,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 30,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 31,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 31,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 31,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 31,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 31,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 31,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 31,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 31,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 32,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 32,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 32,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 32,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 32,
+		"y": 29
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 32,
+		"y": 30
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 32,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 32,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 32,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 32,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 33,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 33,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 33,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 33,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 33,
+		"y": 29
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 33,
+		"y": 30
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 33,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 33,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 33,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 33,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 34,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 34,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 34,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 34,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 34,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 34,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 34,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 34,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 35,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 35,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 35,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 35,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 35,
+		"y": 24
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 35,
+		"y": 25
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 35,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 35,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 35,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 35,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 36,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 36,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 36,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 36,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 36,
+		"y": 4
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 36,
+		"y": 24
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 36,
+		"y": 25
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 36,
+		"y": 26
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 36,
+		"y": 45
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 36,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 36,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 36,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 36,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 37,
-		"y": 0,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
-		"x": 38,
-		"y": 0,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 39,
-		"y": 0,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 40,
-		"y": 0,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 41,
-		"y": 0,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 42,
-		"y": 0,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 0,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 0,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 0,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 0,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 0,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 0,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 0,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 0,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 1,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 2,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 3,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 4,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 5,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 6,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 7,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 8,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 9,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 10,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 11,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 12,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 13,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 14,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 17,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 18,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 27,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 28,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 30,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 1,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 1,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 34,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 35,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 36,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
 		"x": 37,
-		"y": 1,
-		"type": "wall"
+		"y": 1
 	},
 	{
-		"room": "E54S13",
-		"x": 38,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 39,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 40,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 41,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 42,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 1,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 0,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 1,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 2,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 3,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 4,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 5,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 6,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 7,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 8,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 9,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 10,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 11,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 12,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 13,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 14,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 17,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 18,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 27,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 28,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 2,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 2,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 34,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 34,
-		"y": 2,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 35,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 36,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
 		"x": 37,
-		"y": 2,
-		"type": "wall"
+		"y": 2
 	},
 	{
-		"room": "E54S13",
-		"x": 38,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 39,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 40,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 41,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 42,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 2,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 0,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 1,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 2,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 3,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 4,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 5,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 6,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 7,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 8,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 9,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 10,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 11,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 12,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 13,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 14,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 17,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 18,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 27,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 3,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 35,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 36,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
 		"x": 37,
-		"y": 3,
-		"type": "wall"
+		"y": 3
 	},
 	{
-		"room": "E54S13",
-		"x": 38,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 39,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 40,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 41,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 42,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 3,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 0,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 1,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 2,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 3,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 6,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 7,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 8,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 9,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 10,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 11,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 12,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 13,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 14,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 17,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 18,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 27,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 28,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
 		"x": 37,
-		"y": 4,
-		"type": "wall"
+		"y": 4
 	},
 	{
-		"room": "E54S13",
-		"x": 38,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 39,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 40,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 41,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 42,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 4,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 5,
-		"y": 5,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 6,
-		"y": 5,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 7,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 7,
-		"y": 5,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 8,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 9,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 10,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 11,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 12,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 13,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 14,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 17,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 18,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 27,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 28,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 38,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 39,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 40,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 41,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 42,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 5,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 5,
-		"y": 6,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 6,
-		"y": 6,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 7,
-		"y": 6,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 8,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 8,
-		"y": 6,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 9,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 10,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 11,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 12,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 13,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 14,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 17,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 18,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 27,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 28,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 38,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 38,
-		"y": 6,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 39,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 39,
-		"y": 6,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 40,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 41,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 42,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 6,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 6,
-		"y": 7,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 7,
-		"y": 7,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 9,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 10,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 11,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 12,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 13,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 14,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 17,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 18,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 27,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 28,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 38,
-		"y": 7,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 39,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 39,
-		"y": 7,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 40,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 41,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 42,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 7,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 3,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 4,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 10,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 11,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 12,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 13,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 14,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 17,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 18,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 27,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 28,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 40,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 41,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 42,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 8,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 3,
-		"y": 9,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 4,
-		"y": 9,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 9,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 9,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 17,
-		"y": 9,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 18,
-		"y": 9,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 9,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 9,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 9,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 9,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 9,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 9,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 9,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 9,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 27,
-		"y": 9,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 28,
-		"y": 9,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 34,
-		"y": 9,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 35,
-		"y": 9,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 36,
-		"y": 9,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 41,
-		"y": 9,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 42,
-		"y": 9,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 9,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 9,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 9,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 9,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 9,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 9,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 9,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 17,
-		"y": 10,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 18,
-		"y": 10,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 10,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 10,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 10,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 10,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 10,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 10,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 10,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 10,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 27,
-		"y": 10,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 28,
-		"y": 10,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 10,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 10,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 10,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 34,
-		"y": 10,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 35,
-		"y": 10,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 36,
-		"y": 10,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
 		"x": 37,
-		"y": 10,
-		"type": "wall"
+		"y": 25
 	},
 	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 10,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 10,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 10,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 10,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 28,
-		"y": 11,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 11,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 30,
-		"y": 11,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 11,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 11,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 11,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 34,
-		"y": 11,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 35,
-		"y": 11,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 36,
-		"y": 11,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
 		"x": 37,
-		"y": 11,
-		"type": "wall"
+		"y": 26
 	},
 	{
-		"room": "E54S13",
-		"x": 39,
-		"y": 11,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 11,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 11,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 11,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 11,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 2,
-		"y": 12,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 3,
-		"y": 12,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 28,
-		"y": 12,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 12,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 30,
-		"y": 12,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 12,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 12,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 12,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 34,
-		"y": 12,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 35,
-		"y": 12,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 36,
-		"y": 12,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
 		"x": 37,
-		"y": 12,
-		"type": "wall"
+		"y": 45
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 37,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 37,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 37,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 37,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 38,
-		"y": 12,
-		"type": "swamp"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
-		"x": 39,
-		"y": 12,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 40,
-		"y": 12,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 12,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 12,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 12,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 2,
-		"y": 13,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 3,
-		"y": 13,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 18,
-		"y": 13,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 13,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 13,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 13,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 13,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 13,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 13,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 13,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 13,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 27,
-		"y": 13,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 28,
-		"y": 13,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 13,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 30,
-		"y": 13,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 13,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 13,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 13,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 34,
-		"y": 13,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 35,
-		"y": 13,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 36,
-		"y": 13,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 37,
-		"y": 13,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 39,
-		"y": 13,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 40,
-		"y": 13,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 13,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 13,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 13,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 6,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 7,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 8,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 9,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 10,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 11,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 17,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 18,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 27,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 28,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 30,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 34,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 35,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 36,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 37,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 14,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 5,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 6,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 7,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 8,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 9,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 10,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 11,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 12,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 13,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 14,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 17,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 18,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 27,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 28,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 30,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 34,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 35,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 36,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 37,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 15,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 4,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 5,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 6,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 7,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 8,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 9,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 10,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 11,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 12,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 13,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 14,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 17,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 18,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 27,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 28,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 30,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 34,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 35,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 36,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 16,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 4,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 5,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 6,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 7,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 8,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 9,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 10,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 11,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 12,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 13,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 14,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 17,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 18,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 27,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 28,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 30,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 34,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 35,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 17,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 4,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 5,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 6,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 7,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 8,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 9,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 10,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 11,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 12,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 13,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 14,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 17,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 18,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 27,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 28,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 30,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 34,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
 		"x": 38,
-		"y": 18,
-		"type": "swamp"
+		"y": 1
 	},
 	{
-		"room": "E54S13",
-		"x": 39,
-		"y": 18,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 18,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 5,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 6,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 7,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 8,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 9,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 10,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 11,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 12,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 13,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 14,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 17,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 18,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 27,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 28,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 30,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 34,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
 		"x": 38,
-		"y": 19,
-		"type": "swamp"
+		"y": 2
 	},
 	{
-		"room": "E54S13",
-		"x": 39,
-		"y": 19,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 19,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 19,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 6,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 7,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 8,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 9,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 10,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 11,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 12,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 13,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 14,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 17,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 18,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 27,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 28,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 30,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 42,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 20,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 20,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 7,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 8,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 9,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 10,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 11,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 12,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 13,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 14,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 17,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 18,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 27,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 28,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 30,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 34,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 41,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 42,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 42,
-		"y": 21,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 21,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 4,
-		"y": 22,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 5,
-		"y": 22,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 8,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 9,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 10,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 11,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 12,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 13,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 14,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 17,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 18,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 22,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 22,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 22,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 27,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 28,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 30,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 34,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 40,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 41,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 42,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 22,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 3,
-		"y": 23,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 4,
-		"y": 23,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 5,
-		"y": 23,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 6,
-		"y": 23,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 9,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 10,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 11,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 11,
-		"y": 23,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 12,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 12,
-		"y": 23,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 13,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 13,
-		"y": 23,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 14,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 14,
-		"y": 23,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 23,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 23,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 17,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 18,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 23,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 23,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 27,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 28,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 30,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 34,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 35,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 40,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 41,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 42,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 23,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 3,
-		"y": 24,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 4,
-		"y": 24,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 5,
-		"y": 24,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 6,
-		"y": 24,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 11,
-		"y": 24,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 12,
-		"y": 24,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 13,
-		"y": 24,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 14,
-		"y": 24,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 24,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 24,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 24,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 24,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 24,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 24,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 27,
-		"y": 24,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 28,
-		"y": 24,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 24,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 30,
-		"y": 24,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 24,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 24,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 24,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 34,
-		"y": 24,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 35,
-		"y": 24,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 37,
-		"y": 24,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
 		"x": 38,
-		"y": 24,
-		"type": "swamp"
+		"y": 3
 	},
 	{
-		"room": "E54S13",
-		"x": 39,
-		"y": 24,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 40,
-		"y": 24,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 41,
-		"y": 24,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 42,
-		"y": 24,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 24,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 24,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 24,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 24,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 24,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 24,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 24,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 3,
-		"y": 25,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 4,
-		"y": 25,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 5,
-		"y": 25,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 11,
-		"y": 25,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 12,
-		"y": 25,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 13,
-		"y": 25,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 14,
-		"y": 25,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 25,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 25,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 25,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 25,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 25,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 25,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 25,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 25,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 25,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 25,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 27,
-		"y": 25,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 28,
-		"y": 25,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 25,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 30,
-		"y": 25,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 37,
-		"y": 25,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
 		"x": 38,
-		"y": 25,
-		"type": "swamp"
+		"y": 4
 	},
 	{
-		"room": "E54S13",
-		"x": 39,
-		"y": 25,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 41,
-		"y": 25,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 42,
-		"y": 25,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 25,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 25,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 25,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 25,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 25,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 25,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 25,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 12,
-		"y": 26,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 13,
-		"y": 26,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 14,
-		"y": 26,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 26,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 26,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 17,
-		"y": 26,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 18,
-		"y": 26,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 26,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 26,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 26,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 26,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 26,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 26,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 26,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 26,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 27,
-		"y": 26,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 28,
-		"y": 26,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 42,
-		"y": 26,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 26,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 26,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 26,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 26,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 26,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 26,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 26,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 13,
-		"y": 27,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 13,
-		"y": 27,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 14,
-		"y": 27,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 14,
-		"y": 27,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 27,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 27,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 27,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 27,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 17,
-		"y": 27,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 18,
-		"y": 27,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 27,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 27,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 27,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 27,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 27,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 27,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 27,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 27,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 27,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 27,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 27,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 34,
-		"y": 27,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 35,
-		"y": 27,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 36,
-		"y": 27,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 27,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 27,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 27,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 27,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 27,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 27,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 27,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 12,
-		"y": 28,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 13,
-		"y": 28,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 14,
-		"y": 28,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 28,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 28,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 17,
-		"y": 28,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 18,
-		"y": 28,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 28,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 28,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 28,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 28,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 28,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 28,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 28,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 30,
-		"y": 28,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 28,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 28,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 28,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 34,
-		"y": 28,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 35,
-		"y": 28,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 36,
-		"y": 28,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 28,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 28,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 28,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 28,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 28,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 28,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 28,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 28,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 7,
-		"y": 29,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 8,
-		"y": 29,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 12,
-		"y": 29,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 13,
-		"y": 29,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 14,
-		"y": 29,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 29,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 29,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 17,
-		"y": 29,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 18,
-		"y": 29,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 29,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 29,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 29,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 29,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 29,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 29,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 29,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 30,
-		"y": 29,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 29,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 29,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 29,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 34,
-		"y": 29,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 35,
-		"y": 29,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 36,
-		"y": 29,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 29,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 29,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 29,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 29,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 29,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 29,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 29,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 29,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 29,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 7,
-		"y": 30,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 8,
-		"y": 30,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 12,
-		"y": 30,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 13,
-		"y": 30,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 14,
-		"y": 30,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 30,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 30,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 17,
-		"y": 30,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 18,
-		"y": 30,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 30,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 30,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 30,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 30,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 30,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 28,
-		"y": 30,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 30,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 30,
-		"y": 30,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 30,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 30,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 30,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 34,
-		"y": 30,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 35,
-		"y": 30,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 36,
-		"y": 30,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 42,
-		"y": 30,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 30,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 30,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 30,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 30,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 30,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 30,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 30,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 30,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 30,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 0,
-		"y": 31,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 1,
-		"y": 31,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 2,
-		"y": 31,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 7,
-		"y": 31,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 8,
-		"y": 31,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 13,
-		"y": 31,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 14,
-		"y": 31,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 31,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 31,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 17,
-		"y": 31,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 18,
-		"y": 31,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 31,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 31,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 31,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 27,
-		"y": 31,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 28,
-		"y": 31,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 31,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 30,
-		"y": 31,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 31,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 31,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 31,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 34,
-		"y": 31,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 35,
-		"y": 31,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 41,
-		"y": 31,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 42,
-		"y": 31,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 31,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 31,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 31,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 31,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 31,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 31,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 31,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 31,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 0,
-		"y": 32,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 1,
-		"y": 32,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 2,
-		"y": 32,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 3,
-		"y": 32,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 32,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 32,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 32,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 27,
-		"y": 32,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 28,
-		"y": 32,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 32,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 30,
-		"y": 32,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 32,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 32,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 32,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 32,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 32,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 32,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 34,
-		"y": 32,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 41,
-		"y": 32,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 42,
-		"y": 32,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 32,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 32,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 32,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 32,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 32,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 32,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 32,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 32,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 0,
-		"y": 33,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 1,
-		"y": 33,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 2,
-		"y": 33,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 3,
-		"y": 33,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 4,
-		"y": 33,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 10,
-		"y": 33,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 11,
-		"y": 33,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 11,
-		"y": 33,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 12,
-		"y": 33,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 33,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 33,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 33,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 33,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 33,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 30,
-		"y": 33,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 33,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 33,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 33,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 42,
-		"y": 33,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 33,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 33,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 33,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 33,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 33,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 33,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 0,
-		"y": 34,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 1,
-		"y": 34,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 2,
-		"y": 34,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 3,
-		"y": 34,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 4,
-		"y": 34,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 5,
-		"y": 34,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 9,
-		"y": 34,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 10,
-		"y": 34,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 10,
-		"y": 34,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 11,
-		"y": 34,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 11,
-		"y": 34,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 12,
-		"y": 34,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 12,
-		"y": 34,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 34,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 34,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 34,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 34,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 34,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 34,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 34,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 34,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 34,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 30,
-		"y": 34,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 34,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 34,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 34,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 34,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 34,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 0,
-		"y": 35,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 1,
-		"y": 35,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 2,
-		"y": 35,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 3,
-		"y": 35,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 4,
-		"y": 35,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 5,
-		"y": 35,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 6,
-		"y": 35,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 9,
-		"y": 35,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 10,
-		"y": 35,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 11,
-		"y": 35,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 11,
-		"y": 35,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 12,
-		"y": 35,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 12,
-		"y": 35,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 35,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 35,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 35,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 35,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 35,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 35,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 35,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 35,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 35,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 35,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 30,
-		"y": 35,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 35,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 35,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 35,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 35,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 0,
-		"y": 36,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 1,
-		"y": 36,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 2,
-		"y": 36,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 3,
-		"y": 36,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 4,
-		"y": 36,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 5,
-		"y": 36,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 6,
-		"y": 36,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 7,
-		"y": 36,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 10,
-		"y": 36,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 11,
-		"y": 36,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 12,
-		"y": 36,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 36,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 36,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 36,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 36,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 36,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 36,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 36,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 36,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 30,
-		"y": 36,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 36,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 36,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 36,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 36,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 0,
-		"y": 37,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 1,
-		"y": 37,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 2,
-		"y": 37,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 3,
-		"y": 37,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 4,
-		"y": 37,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 5,
-		"y": 37,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 6,
-		"y": 37,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 7,
-		"y": 37,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 8,
-		"y": 37,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 37,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 37,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 37,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 37,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 37,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 37,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 37,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 37,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 30,
-		"y": 37,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 37,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 37,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 37,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 37,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 0,
-		"y": 38,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 1,
-		"y": 38,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 2,
-		"y": 38,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 3,
-		"y": 38,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 4,
-		"y": 38,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 5,
-		"y": 38,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 6,
-		"y": 38,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 7,
-		"y": 38,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 8,
-		"y": 38,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 9,
-		"y": 38,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 38,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 38,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 38,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 38,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 38,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 38,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 38,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 38,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 30,
-		"y": 38,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 38,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 38,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 38,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 38,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 38,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 34,
-		"y": 38,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 38,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 38,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 38,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 38,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 0,
-		"y": 39,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 1,
-		"y": 39,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 2,
-		"y": 39,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 3,
-		"y": 39,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 4,
-		"y": 39,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 5,
-		"y": 39,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 6,
-		"y": 39,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 7,
-		"y": 39,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 8,
-		"y": 39,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 9,
-		"y": 39,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 10,
-		"y": 39,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 39,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 39,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 39,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 39,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 39,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 39,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 39,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 39,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 39,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 30,
-		"y": 39,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 39,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 39,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 39,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 39,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 39,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 34,
-		"y": 39,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 39,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 39,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 39,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 39,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 39,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 39,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 0,
-		"y": 40,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 1,
-		"y": 40,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 2,
-		"y": 40,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 3,
-		"y": 40,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 4,
-		"y": 40,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 5,
-		"y": 40,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 6,
-		"y": 40,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 7,
-		"y": 40,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 8,
-		"y": 40,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 9,
-		"y": 40,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 10,
-		"y": 40,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 11,
-		"y": 40,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 40,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 40,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 40,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 40,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 40,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 40,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 40,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 40,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 29,
-		"y": 40,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 30,
-		"y": 40,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 40,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 40,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 40,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 40,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 40,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 40,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 40,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 40,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 40,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 0,
-		"y": 41,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 1,
-		"y": 41,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 2,
-		"y": 41,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 3,
-		"y": 41,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 4,
-		"y": 41,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 5,
-		"y": 41,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 6,
-		"y": 41,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 7,
-		"y": 41,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 8,
-		"y": 41,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 9,
-		"y": 41,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 9,
-		"y": 41,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 10,
-		"y": 41,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 11,
-		"y": 41,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 18,
-		"y": 41,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 41,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 41,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 41,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 41,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 41,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 41,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 41,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 41,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 30,
-		"y": 41,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 31,
-		"y": 41,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 32,
-		"y": 41,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 41,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 41,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 41,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 0,
-		"y": 42,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 1,
-		"y": 42,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 2,
-		"y": 42,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 3,
-		"y": 42,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 4,
-		"y": 42,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 5,
-		"y": 42,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 6,
-		"y": 42,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 7,
-		"y": 42,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 8,
-		"y": 42,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 8,
-		"y": 42,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 9,
-		"y": 42,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 9,
-		"y": 42,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 18,
-		"y": 42,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 42,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 42,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 42,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 42,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 42,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 42,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 42,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 42,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 42,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 42,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 42,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 42,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 0,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 1,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 2,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 3,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 4,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 5,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 6,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 7,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 8,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 18,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 26,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 35,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 36,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 37,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
 		"x": 38,
-		"y": 43,
-		"type": "wall"
+		"y": 5
 	},
 	{
-		"room": "E54S13",
-		"x": 39,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 40,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 41,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 42,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 43,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 0,
-		"y": 44,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 1,
-		"y": 44,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 2,
-		"y": 44,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 3,
-		"y": 44,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 4,
-		"y": 44,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 5,
-		"y": 44,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 6,
-		"y": 44,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 7,
-		"y": 44,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 44,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 44,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 44,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 44,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 44,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 25,
-		"y": 44,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 34,
-		"y": 44,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 35,
-		"y": 44,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 36,
-		"y": 44,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 37,
-		"y": 44,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
 		"x": 38,
-		"y": 44,
-		"type": "wall"
+		"y": 7
 	},
 	{
-		"room": "E54S13",
-		"x": 39,
-		"y": 44,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 40,
-		"y": 44,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 41,
-		"y": 44,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 42,
-		"y": 44,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 44,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 44,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 44,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 44,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 44,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 44,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 44,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 0,
-		"y": 45,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 1,
-		"y": 45,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 2,
-		"y": 45,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 3,
-		"y": 45,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 4,
-		"y": 45,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 5,
-		"y": 45,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 6,
-		"y": 45,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 14,
-		"y": 45,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 45,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 45,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 22,
-		"y": 45,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 23,
-		"y": 45,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 24,
-		"y": 45,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 45,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 34,
-		"y": 45,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 35,
-		"y": 45,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 36,
-		"y": 45,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 37,
-		"y": 45,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
 		"x": 38,
-		"y": 45,
-		"type": "wall"
+		"y": 8
 	},
 	{
-		"room": "E54S13",
-		"x": 39,
-		"y": 45,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 40,
-		"y": 45,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 41,
-		"y": 45,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 42,
-		"y": 45,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 45,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 45,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 45,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 45,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 45,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 45,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 45,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 0,
-		"y": 46,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 1,
-		"y": 46,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 2,
-		"y": 46,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 3,
-		"y": 46,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 4,
-		"y": 46,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 5,
-		"y": 46,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 14,
-		"y": 46,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 46,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 16,
-		"y": 46,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 46,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 33,
-		"y": 46,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 34,
-		"y": 46,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 35,
-		"y": 46,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 36,
-		"y": 46,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 37,
-		"y": 46,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
 		"x": 38,
-		"y": 46,
-		"type": "wall"
+		"y": 44
 	},
 	{
-		"room": "E54S13",
-		"x": 39,
-		"y": 46,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 40,
-		"y": 46,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 41,
-		"y": 46,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 42,
-		"y": 46,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 46,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 46,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 46,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 46,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 46,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 46,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 46,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 0,
-		"y": 47,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 1,
-		"y": 47,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 2,
-		"y": 47,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 3,
-		"y": 47,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 4,
-		"y": 47,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 15,
-		"y": 47,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 47,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 47,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 47,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 34,
-		"y": 47,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 35,
-		"y": 47,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 36,
-		"y": 47,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 37,
-		"y": 47,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
 		"x": 38,
-		"y": 47,
-		"type": "wall"
+		"y": 45
 	},
 	{
-		"room": "E54S13",
-		"x": 39,
-		"y": 47,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 40,
-		"y": 47,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 41,
-		"y": 47,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 42,
-		"y": 47,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 47,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 47,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 47,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 47,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 47,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 47,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 47,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 0,
-		"y": 48,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 1,
-		"y": 48,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 2,
-		"y": 48,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 19,
-		"y": 48,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 20,
-		"y": 48,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 21,
-		"y": 48,
-		"type": "swamp"
-	},
-	{
-		"room": "E54S13",
-		"x": 35,
-		"y": 48,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 36,
-		"y": 48,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 37,
-		"y": 48,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
 		"x": 38,
-		"y": 48,
-		"type": "wall"
+		"y": 46
 	},
 	{
-		"room": "E54S13",
-		"x": 39,
-		"y": 48,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 40,
-		"y": 48,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 41,
-		"y": 48,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 42,
-		"y": 48,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 43,
-		"y": 48,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 44,
-		"y": 48,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 45,
-		"y": 48,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 46,
-		"y": 48,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 47,
-		"y": 48,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 48,
-		"y": 48,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 49,
-		"y": 48,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 0,
-		"y": 49,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 1,
-		"y": 49,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 2,
-		"y": 49,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 35,
-		"y": 49,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 36,
-		"y": 49,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
-		"x": 37,
-		"y": 49,
-		"type": "wall"
-	},
-	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
 		"x": 38,
-		"y": 49,
-		"type": "wall"
+		"y": 47
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 38,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 38,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 39,
-		"y": 49,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 39,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 39,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 39,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 39,
+		"y": 4
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 39,
+		"y": 5
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 39,
+		"y": 6
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 39,
+		"y": 7
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 39,
+		"y": 8
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 39,
+		"y": 44
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 39,
+		"y": 45
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 39,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 39,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 39,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 39,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 40,
-		"y": 49,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 40,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 40,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 40,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 40,
+		"y": 4
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 40,
+		"y": 5
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 40,
+		"y": 6
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 40,
+		"y": 43
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 40,
+		"y": 44
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 40,
+		"y": 45
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 40,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 40,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 40,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 40,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 41,
-		"y": 49,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 41,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 41,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 41,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 41,
+		"y": 4
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 41,
+		"y": 5
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 41,
+		"y": 6
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 41,
+		"y": 43
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 41,
+		"y": 44
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 41,
+		"y": 45
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 41,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 41,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 41,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 41,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 42,
-		"y": 49,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 42,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 42,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 42,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 42,
+		"y": 4
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 42,
+		"y": 5
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 42,
+		"y": 6
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 42,
+		"y": 7
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 42,
+		"y": 42
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 42,
+		"y": 43
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 42,
+		"y": 44
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 42,
+		"y": 45
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 42,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 42,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 42,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 42,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 43,
-		"y": 49,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 43,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 43,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 43,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 43,
+		"y": 4
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 43,
+		"y": 5
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 43,
+		"y": 6
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 43,
+		"y": 7
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 43,
+		"y": 40
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 43,
+		"y": 41
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 43,
+		"y": 42
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 43,
+		"y": 43
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 43,
+		"y": 44
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 43,
+		"y": 45
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 43,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 43,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 43,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 43,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 44,
-		"y": 49,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 44,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 44,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 44,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 44,
+		"y": 4
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 44,
+		"y": 5
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 44,
+		"y": 6
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 44,
+		"y": 7
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 44,
+		"y": 8
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 44,
+		"y": 38
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 44,
+		"y": 39
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 44,
+		"y": 40
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 44,
+		"y": 41
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 44,
+		"y": 42
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 44,
+		"y": 43
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 44,
+		"y": 44
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 44,
+		"y": 45
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 44,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 44,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 44,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 44,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 45,
-		"y": 49,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 45,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 45,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 45,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 45,
+		"y": 4
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 45,
+		"y": 5
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 45,
+		"y": 6
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 45,
+		"y": 7
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 45,
+		"y": 8
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 45,
+		"y": 9
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 45,
+		"y": 36
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 45,
+		"y": 37
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 45,
+		"y": 38
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 45,
+		"y": 39
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 45,
+		"y": 40
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 45,
+		"y": 41
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 45,
+		"y": 42
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 45,
+		"y": 43
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 45,
+		"y": 44
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 45,
+		"y": 45
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 45,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 45,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 45,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 45,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 46,
-		"y": 49,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 46,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 46,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 46,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 46,
+		"y": 4
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 46,
+		"y": 5
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 46,
+		"y": 6
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 46,
+		"y": 7
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 46,
+		"y": 8
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 46,
+		"y": 9
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 46,
+		"y": 10
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 46,
+		"y": 34
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 46,
+		"y": 35
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 46,
+		"y": 36
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 46,
+		"y": 37
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 46,
+		"y": 38
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 46,
+		"y": 39
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 46,
+		"y": 40
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 46,
+		"y": 41
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 46,
+		"y": 42
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 46,
+		"y": 43
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 46,
+		"y": 44
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 46,
+		"y": 45
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 46,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 46,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 46,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 46,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 47,
-		"y": 49,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 47,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 47,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 47,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 47,
+		"y": 4
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 47,
+		"y": 5
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 47,
+		"y": 6
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 47,
+		"y": 7
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 47,
+		"y": 8
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 47,
+		"y": 9
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 47,
+		"y": 10
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 47,
+		"y": 11
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 47,
+		"y": 32
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 47,
+		"y": 33
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 47,
+		"y": 34
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 47,
+		"y": 35
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 47,
+		"y": 36
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 47,
+		"y": 37
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 47,
+		"y": 38
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 47,
+		"y": 39
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 47,
+		"y": 40
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 47,
+		"y": 41
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 47,
+		"y": 42
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 47,
+		"y": 43
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 47,
+		"y": 44
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 47,
+		"y": 45
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 47,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 47,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 47,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 47,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 48,
-		"y": 49,
-		"type": "wall"
+		"y": 0
 	},
 	{
-		"room": "E54S13",
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 4
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 5
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 6
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 7
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 8
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 9
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 10
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 11
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 12
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 26
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 27
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 28
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 29
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 30
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 31
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 32
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 33
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 34
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 35
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 36
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 37
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 38
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 39
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 40
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 41
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 42
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 43
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 44
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 45
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 48,
+		"y": 49
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
 		"x": 49,
-		"y": 49,
-		"type": "wall"
+		"y": 0
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 1
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 2
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 3
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 4
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 5
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 6
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 7
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 8
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 9
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 10
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 11
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 12
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 13
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 26
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 27
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 28
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 29
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 30
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 31
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 32
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 33
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 34
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 35
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 36
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 37
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 38
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 39
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 40
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 41
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 42
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 43
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 44
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 45
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 46
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 47
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 48
+	},
+	{
+		"room": "E11S53",
+		"type": "wall",
+		"x": 49,
+		"y": 49
 	}
 ];
 
 /***/ }),
-/* 198 */
+/* 248 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -48599,13 +50666,13 @@ module.exports = {
 };
 
 /***/ }),
-/* 199 */
+/* 249 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
  * @license
  * Lodash <https://lodash.com/>
- * Copyright JS Foundation and other contributors <https://js.foundation/>
+ * Copyright OpenJS Foundation and other contributors <https://openjsf.org/>
  * Released under MIT license <https://lodash.com/license>
  * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
  * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -48616,14 +50683,15 @@ module.exports = {
   var undefined;
 
   /** Used as the semantic version number. */
-  var VERSION = '4.17.4';
+  var VERSION = '4.17.21';
 
   /** Used as the size to enable large array optimizations. */
   var LARGE_ARRAY_SIZE = 200;
 
   /** Error message constants. */
   var CORE_ERROR_TEXT = 'Unsupported core-js use. Try https://npms.io/search?q=ponyfill.',
-      FUNC_ERROR_TEXT = 'Expected a function';
+      FUNC_ERROR_TEXT = 'Expected a function',
+      INVALID_TEMPL_VAR_ERROR_TEXT = 'Invalid `variable` option passed into `_.template`';
 
   /** Used to stand-in for `undefined` hash values. */
   var HASH_UNDEFINED = '__lodash_hash_undefined__';
@@ -48747,7 +50815,6 @@ module.exports = {
   /** Used to match property names within property paths. */
   var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
       reIsPlainProp = /^\w*$/,
-      reLeadingDot = /^\./,
       rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
 
   /**
@@ -48757,10 +50824,11 @@ module.exports = {
   var reRegExpChar = /[\\^$.*+?()[\]{}|]/g,
       reHasRegExpChar = RegExp(reRegExpChar.source);
 
-  /** Used to match leading and trailing whitespace. */
-  var reTrim = /^\s+|\s+$/g,
-      reTrimStart = /^\s+/,
-      reTrimEnd = /\s+$/;
+  /** Used to match leading whitespace. */
+  var reTrimStart = /^\s+/;
+
+  /** Used to match a single whitespace character. */
+  var reWhitespace = /\s/;
 
   /** Used to match wrap detail comments. */
   var reWrapComment = /\{(?:\n\/\* \[wrapped with .+\] \*\/)?\n?/,
@@ -48769,6 +50837,18 @@ module.exports = {
 
   /** Used to match words composed of alphanumeric characters. */
   var reAsciiWord = /[^\x00-\x2f\x3a-\x40\x5b-\x60\x7b-\x7f]+/g;
+
+  /**
+   * Used to validate the `validate` option in `_.template` variable.
+   *
+   * Forbids characters which could potentially change the meaning of the function argument definition:
+   * - "()," (modification of function parameters)
+   * - "=" (default value)
+   * - "[]{}" (destructuring of function parameters)
+   * - "/" (beginning of a comment)
+   * - whitespace
+   */
+  var reForbiddenIdentifierChars = /[()=,{}\[\]\/\s]/;
 
   /** Used to match backslashes in property paths. */
   var reEscapeChar = /\\(\\)?/g;
@@ -48847,8 +50927,8 @@ module.exports = {
       reOptMod = rsModifier + '?',
       rsOptVar = '[' + rsVarRange + ']?',
       rsOptJoin = '(?:' + rsZWJ + '(?:' + [rsNonAstral, rsRegional, rsSurrPair].join('|') + ')' + rsOptVar + reOptMod + ')*',
-      rsOrdLower = '\\d*(?:(?:1st|2nd|3rd|(?![123])\\dth)\\b)',
-      rsOrdUpper = '\\d*(?:(?:1ST|2ND|3RD|(?![123])\\dTH)\\b)',
+      rsOrdLower = '\\d*(?:1st|2nd|3rd|(?![123])\\dth)(?=\\b|[A-Z_])',
+      rsOrdUpper = '\\d*(?:1ST|2ND|3RD|(?![123])\\dTH)(?=\\b|[a-z_])',
       rsSeq = rsOptVar + reOptMod + rsOptJoin,
       rsEmoji = '(?:' + [rsDingbat, rsRegional, rsSurrPair].join('|') + ')' + rsSeq,
       rsSymbol = '(?:' + [rsNonAstral + rsCombo + '?', rsCombo, rsRegional, rsSurrPair, rsAstral].join('|') + ')';
@@ -48881,7 +50961,7 @@ module.exports = {
   var reHasUnicode = RegExp('[' + rsZWJ + rsAstralRange  + rsComboRange + rsVarRange + ']');
 
   /** Used to detect strings that need a more robust regexp to match words. */
-  var reHasUnicodeWord = /[a-z][A-Z]|[A-Z]{2,}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/;
+  var reHasUnicodeWord = /[a-z][A-Z]|[A-Z]{2}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/;
 
   /** Used to assign default `context` object properties. */
   var contextProps = [
@@ -49041,6 +51121,14 @@ module.exports = {
   /** Used to access faster Node.js helpers. */
   var nodeUtil = (function() {
     try {
+      // Use `util.types` for Node.js 10+.
+      var types = freeModule && freeModule.require && freeModule.require('util').types;
+
+      if (types) {
+        return types;
+      }
+
+      // Legacy `process.binding('util')` for Node.js < 10.
       return freeProcess && freeProcess.binding && freeProcess.binding('util');
     } catch (e) {}
   }());
@@ -49054,34 +51142,6 @@ module.exports = {
       nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
 
   /*--------------------------------------------------------------------------*/
-
-  /**
-   * Adds the key-value `pair` to `map`.
-   *
-   * @private
-   * @param {Object} map The map to modify.
-   * @param {Array} pair The key-value pair to add.
-   * @returns {Object} Returns `map`.
-   */
-  function addMapEntry(map, pair) {
-    // Don't return `map.set` because it's not chainable in IE 11.
-    map.set(pair[0], pair[1]);
-    return map;
-  }
-
-  /**
-   * Adds `value` to `set`.
-   *
-   * @private
-   * @param {Object} set The set to modify.
-   * @param {*} value The value to add.
-   * @returns {Object} Returns `set`.
-   */
-  function addSetEntry(set, value) {
-    // Don't return `set.add` because it's not chainable in IE 11.
-    set.add(value);
-    return set;
-  }
 
   /**
    * A faster alternative to `Function#apply`, this function invokes `func`
@@ -49619,6 +51679,19 @@ module.exports = {
   }
 
   /**
+   * The base implementation of `_.trim`.
+   *
+   * @private
+   * @param {string} string The string to trim.
+   * @returns {string} Returns the trimmed string.
+   */
+  function baseTrim(string) {
+    return string
+      ? string.slice(0, trimmedEndIndex(string) + 1).replace(reTrimStart, '')
+      : string;
+  }
+
+  /**
    * The base implementation of `_.unary` without support for storing metadata.
    *
    * @private
@@ -49949,6 +52022,21 @@ module.exports = {
     return hasUnicode(string)
       ? unicodeToArray(string)
       : asciiToArray(string);
+  }
+
+  /**
+   * Used by `_.trim` and `_.trimEnd` to get the index of the last non-whitespace
+   * character of `string`.
+   *
+   * @private
+   * @param {string} string The string to inspect.
+   * @returns {number} Returns the index of the last non-whitespace character.
+   */
+  function trimmedEndIndex(string) {
+    var index = string.length;
+
+    while (index-- && reWhitespace.test(string.charAt(index))) {}
+    return index;
   }
 
   /**
@@ -51281,7 +53369,7 @@ module.exports = {
           if (!cloneableTags[tag]) {
             return object ? value : {};
           }
-          result = initCloneByTag(value, tag, baseClone, isDeep);
+          result = initCloneByTag(value, tag, isDeep);
         }
       }
       // Check for circular references and return its corresponding clone.
@@ -51291,6 +53379,16 @@ module.exports = {
         return stacked;
       }
       stack.set(value, result);
+
+      if (isSet(value)) {
+        value.forEach(function(subValue) {
+          result.add(baseClone(subValue, bitmask, customizer, subValue, value, stack));
+        });
+      } else if (isMap(value)) {
+        value.forEach(function(subValue, key) {
+          result.set(key, baseClone(subValue, bitmask, customizer, key, value, stack));
+        });
+      }
 
       var keysFunc = isFull
         ? (isFlat ? getAllKeysIn : getAllKeys)
@@ -52213,13 +54311,13 @@ module.exports = {
         return;
       }
       baseFor(source, function(srcValue, key) {
+        stack || (stack = new Stack);
         if (isObject(srcValue)) {
-          stack || (stack = new Stack);
           baseMergeDeep(object, source, key, srcIndex, baseMerge, customizer, stack);
         }
         else {
           var newValue = customizer
-            ? customizer(object[key], srcValue, (key + ''), object, source, stack)
+            ? customizer(safeGet(object, key), srcValue, (key + ''), object, source, stack)
             : undefined;
 
           if (newValue === undefined) {
@@ -52246,8 +54344,8 @@ module.exports = {
      *  counterparts.
      */
     function baseMergeDeep(object, source, key, srcIndex, mergeFunc, customizer, stack) {
-      var objValue = object[key],
-          srcValue = source[key],
+      var objValue = safeGet(object, key),
+          srcValue = safeGet(source, key),
           stacked = stack.get(srcValue);
 
       if (stacked) {
@@ -52290,7 +54388,7 @@ module.exports = {
           if (isArguments(objValue)) {
             newValue = toPlainObject(objValue);
           }
-          else if (!isObject(objValue) || (srcIndex && isFunction(objValue))) {
+          else if (!isObject(objValue) || isFunction(objValue)) {
             newValue = initCloneObject(srcValue);
           }
         }
@@ -52334,8 +54432,21 @@ module.exports = {
      * @returns {Array} Returns the new sorted array.
      */
     function baseOrderBy(collection, iteratees, orders) {
+      if (iteratees.length) {
+        iteratees = arrayMap(iteratees, function(iteratee) {
+          if (isArray(iteratee)) {
+            return function(value) {
+              return baseGet(value, iteratee.length === 1 ? iteratee[0] : iteratee);
+            }
+          }
+          return iteratee;
+        });
+      } else {
+        iteratees = [identity];
+      }
+
       var index = -1;
-      iteratees = arrayMap(iteratees.length ? iteratees : [identity], baseUnary(getIteratee()));
+      iteratees = arrayMap(iteratees, baseUnary(getIteratee()));
 
       var result = baseMap(collection, function(value, key, collection) {
         var criteria = arrayMap(iteratees, function(iteratee) {
@@ -52592,6 +54703,10 @@ module.exports = {
         var key = toKey(path[index]),
             newValue = value;
 
+        if (key === '__proto__' || key === 'constructor' || key === 'prototype') {
+          return object;
+        }
+
         if (index != lastIndex) {
           var objValue = nested[key];
           newValue = customizer ? customizer(objValue, key, nested) : undefined;
@@ -52744,11 +54859,14 @@ module.exports = {
      *  into `array`.
      */
     function baseSortedIndexBy(array, value, iteratee, retHighest) {
-      value = iteratee(value);
-
       var low = 0,
-          high = array == null ? 0 : array.length,
-          valIsNaN = value !== value,
+          high = array == null ? 0 : array.length;
+      if (high === 0) {
+        return 0;
+      }
+
+      value = iteratee(value);
+      var valIsNaN = value !== value,
           valIsNull = value === null,
           valIsSymbol = isSymbol(value),
           valIsUndefined = value === undefined;
@@ -53156,20 +55274,6 @@ module.exports = {
     }
 
     /**
-     * Creates a clone of `map`.
-     *
-     * @private
-     * @param {Object} map The map to clone.
-     * @param {Function} cloneFunc The function to clone values.
-     * @param {boolean} [isDeep] Specify a deep clone.
-     * @returns {Object} Returns the cloned map.
-     */
-    function cloneMap(map, isDeep, cloneFunc) {
-      var array = isDeep ? cloneFunc(mapToArray(map), CLONE_DEEP_FLAG) : mapToArray(map);
-      return arrayReduce(array, addMapEntry, new map.constructor);
-    }
-
-    /**
      * Creates a clone of `regexp`.
      *
      * @private
@@ -53180,20 +55284,6 @@ module.exports = {
       var result = new regexp.constructor(regexp.source, reFlags.exec(regexp));
       result.lastIndex = regexp.lastIndex;
       return result;
-    }
-
-    /**
-     * Creates a clone of `set`.
-     *
-     * @private
-     * @param {Object} set The set to clone.
-     * @param {Function} cloneFunc The function to clone values.
-     * @param {boolean} [isDeep] Specify a deep clone.
-     * @returns {Object} Returns the cloned set.
-     */
-    function cloneSet(set, isDeep, cloneFunc) {
-      var array = isDeep ? cloneFunc(setToArray(set), CLONE_DEEP_FLAG) : setToArray(set);
-      return arrayReduce(array, addSetEntry, new set.constructor);
     }
 
     /**
@@ -54059,7 +56149,7 @@ module.exports = {
       return function(number, precision) {
         number = toNumber(number);
         precision = precision == null ? 0 : nativeMin(toInteger(precision), 292);
-        if (precision) {
+        if (precision && nativeIsFinite(number)) {
           // Shift with exponential notation to avoid floating-point issues.
           // See [MDN](https://mdn.io/round#Examples) for more details.
           var pair = (toString(number) + 'e').split('e'),
@@ -54261,10 +56351,11 @@ module.exports = {
       if (arrLength != othLength && !(isPartial && othLength > arrLength)) {
         return false;
       }
-      // Assume cyclic values are equal.
-      var stacked = stack.get(array);
-      if (stacked && stack.get(other)) {
-        return stacked == other;
+      // Check that cyclic values are equal.
+      var arrStacked = stack.get(array);
+      var othStacked = stack.get(other);
+      if (arrStacked && othStacked) {
+        return arrStacked == other && othStacked == array;
       }
       var index = -1,
           result = true,
@@ -54426,10 +56517,11 @@ module.exports = {
           return false;
         }
       }
-      // Assume cyclic values are equal.
-      var stacked = stack.get(object);
-      if (stacked && stack.get(other)) {
-        return stacked == other;
+      // Check that cyclic values are equal.
+      var objStacked = stack.get(object);
+      var othStacked = stack.get(other);
+      if (objStacked && othStacked) {
+        return objStacked == other && othStacked == object;
       }
       var result = true;
       stack.set(object, other);
@@ -54790,7 +56882,7 @@ module.exports = {
      */
     function initCloneArray(array) {
       var length = array.length,
-          result = array.constructor(length);
+          result = new array.constructor(length);
 
       // Add properties assigned by `RegExp#exec`.
       if (length && typeof array[0] == 'string' && hasOwnProperty.call(array, 'index')) {
@@ -54817,16 +56909,15 @@ module.exports = {
      * Initializes an object clone based on its `toStringTag`.
      *
      * **Note:** This function only supports cloning values with tags of
-     * `Boolean`, `Date`, `Error`, `Number`, `RegExp`, or `String`.
+     * `Boolean`, `Date`, `Error`, `Map`, `Number`, `RegExp`, `Set`, or `String`.
      *
      * @private
      * @param {Object} object The object to clone.
      * @param {string} tag The `toStringTag` of the object to clone.
-     * @param {Function} cloneFunc The function to clone values.
      * @param {boolean} [isDeep] Specify a deep clone.
      * @returns {Object} Returns the initialized clone.
      */
-    function initCloneByTag(object, tag, cloneFunc, isDeep) {
+    function initCloneByTag(object, tag, isDeep) {
       var Ctor = object.constructor;
       switch (tag) {
         case arrayBufferTag:
@@ -54845,7 +56936,7 @@ module.exports = {
           return cloneTypedArray(object, isDeep);
 
         case mapTag:
-          return cloneMap(object, isDeep, cloneFunc);
+          return new Ctor;
 
         case numberTag:
         case stringTag:
@@ -54855,7 +56946,7 @@ module.exports = {
           return cloneRegExp(object);
 
         case setTag:
-          return cloneSet(object, isDeep, cloneFunc);
+          return new Ctor;
 
         case symbolTag:
           return cloneSymbol(object);
@@ -54902,10 +56993,13 @@ module.exports = {
      * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
      */
     function isIndex(value, length) {
+      var type = typeof value;
       length = length == null ? MAX_SAFE_INTEGER : length;
+
       return !!length &&
-        (typeof value == 'number' || reIsUint.test(value)) &&
-        (value > -1 && value % 1 == 0 && value < length);
+        (type == 'number' ||
+          (type != 'symbol' && reIsUint.test(value))) &&
+            (value > -1 && value % 1 == 0 && value < length);
     }
 
     /**
@@ -55240,6 +57334,26 @@ module.exports = {
     }
 
     /**
+     * Gets the value at `key`, unless `key` is "__proto__" or "constructor".
+     *
+     * @private
+     * @param {Object} object The object to query.
+     * @param {string} key The key of the property to get.
+     * @returns {*} Returns the property value.
+     */
+    function safeGet(object, key) {
+      if (key === 'constructor' && typeof object[key] === 'function') {
+        return;
+      }
+
+      if (key == '__proto__') {
+        return;
+      }
+
+      return object[key];
+    }
+
+    /**
      * Sets metadata for `func`.
      *
      * **Note:** If this function becomes hot, i.e. is invoked a lot in a short
@@ -55355,11 +57469,11 @@ module.exports = {
      */
     var stringToPath = memoizeCapped(function(string) {
       var result = [];
-      if (reLeadingDot.test(string)) {
+      if (string.charCodeAt(0) === 46 /* . */) {
         result.push('');
       }
-      string.replace(rePropName, function(match, number, quote, string) {
-        result.push(quote ? string.replace(reEscapeChar, '$1') : (number || match));
+      string.replace(rePropName, function(match, number, quote, subString) {
+        result.push(quote ? subString.replace(reEscapeChar, '$1') : (number || match));
       });
       return result;
     });
@@ -57788,6 +59902,10 @@ module.exports = {
      * // The `_.property` iteratee shorthand.
      * _.filter(users, 'active');
      * // => objects for ['barney']
+     *
+     * // Combining several predicates using `_.overEvery` or `_.overSome`.
+     * _.filter(users, _.overSome([{ 'age': 36 }, ['age', 40]]));
+     * // => objects for ['fred', 'barney']
      */
     function filter(collection, predicate) {
       var func = isArray(collection) ? arrayFilter : baseFilter;
@@ -58537,15 +60655,15 @@ module.exports = {
      * var users = [
      *   { 'user': 'fred',   'age': 48 },
      *   { 'user': 'barney', 'age': 36 },
-     *   { 'user': 'fred',   'age': 40 },
+     *   { 'user': 'fred',   'age': 30 },
      *   { 'user': 'barney', 'age': 34 }
      * ];
      *
      * _.sortBy(users, [function(o) { return o.user; }]);
-     * // => objects for [['barney', 36], ['barney', 34], ['fred', 48], ['fred', 40]]
+     * // => objects for [['barney', 36], ['barney', 34], ['fred', 48], ['fred', 30]]
      *
      * _.sortBy(users, ['user', 'age']);
-     * // => objects for [['barney', 34], ['barney', 36], ['fred', 40], ['fred', 48]]
+     * // => objects for [['barney', 34], ['barney', 36], ['fred', 30], ['fred', 48]]
      */
     var sortBy = baseRest(function(collection, iteratees) {
       if (collection == null) {
@@ -58967,9 +61085,11 @@ module.exports = {
       function remainingWait(time) {
         var timeSinceLastCall = time - lastCallTime,
             timeSinceLastInvoke = time - lastInvokeTime,
-            result = wait - timeSinceLastCall;
+            timeWaiting = wait - timeSinceLastCall;
 
-        return maxing ? nativeMin(result, maxWait - timeSinceLastInvoke) : result;
+        return maxing
+          ? nativeMin(timeWaiting, maxWait - timeSinceLastInvoke)
+          : timeWaiting;
       }
 
       function shouldInvoke(time) {
@@ -59030,6 +61150,7 @@ module.exports = {
           }
           if (maxing) {
             // Handle invocations in a tight loop.
+            clearTimeout(timerId);
             timerId = setTimeout(timerExpired, wait);
             return invokeFunc(lastCallTime);
           }
@@ -61086,7 +63207,7 @@ module.exports = {
       if (typeof value != 'string') {
         return value === 0 ? value : +value;
       }
-      value = value.replace(reTrim, '');
+      value = baseTrim(value);
       var isBinary = reIsBinary.test(value);
       return (isBinary || reIsOctal.test(value))
         ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
@@ -61401,9 +63522,35 @@ module.exports = {
      * _.defaults({ 'a': 1 }, { 'b': 2 }, { 'a': 3 });
      * // => { 'a': 1, 'b': 2 }
      */
-    var defaults = baseRest(function(args) {
-      args.push(undefined, customDefaultsAssignIn);
-      return apply(assignInWith, undefined, args);
+    var defaults = baseRest(function(object, sources) {
+      object = Object(object);
+
+      var index = -1;
+      var length = sources.length;
+      var guard = length > 2 ? sources[2] : undefined;
+
+      if (guard && isIterateeCall(sources[0], sources[1], guard)) {
+        length = 1;
+      }
+
+      while (++index < length) {
+        var source = sources[index];
+        var props = keysIn(source);
+        var propsIndex = -1;
+        var propsLength = props.length;
+
+        while (++propsIndex < propsLength) {
+          var key = props[propsIndex];
+          var value = object[key];
+
+          if (value === undefined ||
+              (eq(value, objectProto[key]) && !hasOwnProperty.call(object, key))) {
+            object[key] = source[key];
+          }
+        }
+      }
+
+      return object;
     });
 
     /**
@@ -61800,6 +63947,11 @@ module.exports = {
      * // => { '1': 'c', '2': 'b' }
      */
     var invert = createInverter(function(result, value, key) {
+      if (value != null &&
+          typeof value.toString != 'function') {
+        value = nativeObjectToString.call(value);
+      }
+
       result[value] = key;
     }, constant(identity));
 
@@ -61830,6 +63982,11 @@ module.exports = {
      * // => { 'group1': ['a', 'c'], 'group2': ['b'] }
      */
     var invertBy = createInverter(function(result, value, key) {
+      if (value != null &&
+          typeof value.toString != 'function') {
+        value = nativeObjectToString.call(value);
+      }
+
       if (hasOwnProperty.call(result, value)) {
         result[value].push(key);
       } else {
@@ -63380,9 +65537,12 @@ module.exports = {
       , 'g');
 
       // Use a sourceURL for easier debugging.
+      // The sourceURL gets injected into the source that's eval-ed, so be careful
+      // to normalize all kinds of whitespace, so e.g. newlines (and unicode versions of it) can't sneak in
+      // and escape the comment, thus injecting code that gets evaled.
       var sourceURL = '//# sourceURL=' +
-        ('sourceURL' in options
-          ? options.sourceURL
+        (hasOwnProperty.call(options, 'sourceURL')
+          ? (options.sourceURL + '').replace(/\s/g, ' ')
           : ('lodash.templateSources[' + (++templateCounter) + ']')
         ) + '\n';
 
@@ -63415,10 +65575,16 @@ module.exports = {
 
       // If `variable` is not specified wrap a with-statement around the generated
       // code to add the data object to the top of the scope chain.
-      var variable = options.variable;
+      var variable = hasOwnProperty.call(options, 'variable') && options.variable;
       if (!variable) {
         source = 'with (obj) {\n' + source + '\n}\n';
       }
+      // Throw an error if a forbidden character was found in `variable`, to prevent
+      // potential command injection attacks.
+      else if (reForbiddenIdentifierChars.test(variable)) {
+        throw new Error(INVALID_TEMPL_VAR_ERROR_TEXT);
+      }
+
       // Cleanup code by stripping empty strings.
       source = (isEvaluating ? source.replace(reEmptyStringLeading, '') : source)
         .replace(reEmptyStringMiddle, '$1')
@@ -63532,7 +65698,7 @@ module.exports = {
     function trim(string, chars, guard) {
       string = toString(string);
       if (string && (guard || chars === undefined)) {
-        return string.replace(reTrim, '');
+        return baseTrim(string);
       }
       if (!string || !(chars = baseToString(chars))) {
         return string;
@@ -63567,7 +65733,7 @@ module.exports = {
     function trimEnd(string, chars, guard) {
       string = toString(string);
       if (string && (guard || chars === undefined)) {
-        return string.replace(reTrimEnd, '');
+        return string.slice(0, trimmedEndIndex(string) + 1);
       }
       if (!string || !(chars = baseToString(chars))) {
         return string;
@@ -64121,6 +66287,9 @@ module.exports = {
      * values against any array or object value, respectively. See `_.isEqual`
      * for a list of supported value comparisons.
      *
+     * **Note:** Multiple values can be checked by combining several matchers
+     * using `_.overSome`
+     *
      * @static
      * @memberOf _
      * @since 3.0.0
@@ -64136,6 +66305,10 @@ module.exports = {
      *
      * _.filter(objects, _.matches({ 'a': 4, 'c': 6 }));
      * // => [{ 'a': 4, 'b': 5, 'c': 6 }]
+     *
+     * // Checking for several possible values
+     * _.filter(objects, _.overSome([_.matches({ 'a': 1 }), _.matches({ 'a': 4 })]));
+     * // => [{ 'a': 1, 'b': 2, 'c': 3 }, { 'a': 4, 'b': 5, 'c': 6 }]
      */
     function matches(source) {
       return baseMatches(baseClone(source, CLONE_DEEP_FLAG));
@@ -64149,6 +66322,9 @@ module.exports = {
      * **Note:** Partial comparisons will match empty array and empty object
      * `srcValue` values against any array or object value, respectively. See
      * `_.isEqual` for a list of supported value comparisons.
+     *
+     * **Note:** Multiple values can be checked by combining several matchers
+     * using `_.overSome`
      *
      * @static
      * @memberOf _
@@ -64166,6 +66342,10 @@ module.exports = {
      *
      * _.find(objects, _.matchesProperty('a', 4));
      * // => { 'a': 4, 'b': 5, 'c': 6 }
+     *
+     * // Checking for several possible values
+     * _.filter(objects, _.overSome([_.matchesProperty('a', 1), _.matchesProperty('a', 4)]));
+     * // => [{ 'a': 1, 'b': 2, 'c': 3 }, { 'a': 4, 'b': 5, 'c': 6 }]
      */
     function matchesProperty(path, srcValue) {
       return baseMatchesProperty(path, baseClone(srcValue, CLONE_DEEP_FLAG));
@@ -64389,6 +66569,10 @@ module.exports = {
      * Creates a function that checks if **all** of the `predicates` return
      * truthy when invoked with the arguments it receives.
      *
+     * Following shorthands are possible for providing predicates.
+     * Pass an `Object` and it will be used as an parameter for `_.matches` to create the predicate.
+     * Pass an `Array` of parameters for `_.matchesProperty` and the predicate will be created using them.
+     *
      * @static
      * @memberOf _
      * @since 4.0.0
@@ -64415,6 +66599,10 @@ module.exports = {
      * Creates a function that checks if **any** of the `predicates` return
      * truthy when invoked with the arguments it receives.
      *
+     * Following shorthands are possible for providing predicates.
+     * Pass an `Object` and it will be used as an parameter for `_.matches` to create the predicate.
+     * Pass an `Array` of parameters for `_.matchesProperty` and the predicate will be created using them.
+     *
      * @static
      * @memberOf _
      * @since 4.0.0
@@ -64434,6 +66622,9 @@ module.exports = {
      *
      * func(NaN);
      * // => false
+     *
+     * var matchesFunc = _.overSome([{ 'a': 1 }, { 'a': 2 }])
+     * var matchesPropertyFunc = _.overSome([['a', 1], ['a', 2]])
      */
     var overSome = createOver(arraySome);
 
@@ -65620,10 +67811,11 @@ module.exports = {
     baseForOwn(LazyWrapper.prototype, function(func, methodName) {
       var lodashFunc = lodash[methodName];
       if (lodashFunc) {
-        var key = (lodashFunc.name + ''),
-            names = realNames[key] || (realNames[key] = []);
-
-        names.push({ 'name': methodName, 'func': lodashFunc });
+        var key = lodashFunc.name + '';
+        if (!hasOwnProperty.call(realNames, key)) {
+          realNames[key] = [];
+        }
+        realNames[key].push({ 'name': methodName, 'func': lodashFunc });
       }
     });
 
@@ -65688,37 +67880,10 @@ module.exports = {
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(200), __webpack_require__(201)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(97), __webpack_require__(250)(module)))
 
 /***/ }),
-/* 200 */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || Function("return this")() || (1,eval)("this");
-} catch(e) {
-	// This works if the window reference is available
-	if(typeof window === "object")
-		g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-/* 201 */
+/* 250 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {

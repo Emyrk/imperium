@@ -23,7 +23,7 @@ const map = {
     '.doc': 'application/msword',
 };
 
-const searchPaths = ['./public', './public/images'];
+const searchPaths = ['./public', './images', '.src/generated'];
 
 const fsExistPromise = fileName => new Promise((resolve, reject) => {
     try {
