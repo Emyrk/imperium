@@ -15,7 +15,7 @@ export interface RoomOpts {
 interface RoomConstants {
   controllerPos: Coord;
   sources: Coord[];
-  minerals: { pos: Coord; type: ResourceConstant }[];
+  minerals: { pos: Coord; mineralType: ResourceConstant }[];
 }
 
 interface RenderData {
@@ -27,6 +27,20 @@ interface RenderData {
 interface Sample {
   objects: SampleStructure[];
   gameTime: number;
+  users: {
+    [name: string]: {
+      _id: string;
+      username: string;
+      badge?: {
+        type: number;
+        color1: string;
+        color2: string;
+        color3: string;
+        param: number;
+        flip: boolean;
+      };
+    };
+  };
 }
 
 interface RenderTerrain {
@@ -46,6 +60,9 @@ interface SampleStructure {
   hitsMax: number;
   x: number;
   y: number;
+
+  // Extra fields for the structure.
+  [name: string]: any;
 }
 
 export class Rooms {
@@ -56,7 +73,7 @@ export class Rooms {
       {
         controllerPos: { x: 37, y: 26 },
         sources: [{ x: 39, y: 8 }],
-        minerals: [{ pos: { x: 10, y: 43 }, type: RESOURCE_LEMERGIUM }]
+        minerals: [{ pos: { x: 10, y: 43 }, mineralType: RESOURCE_LEMERGIUM }]
       },
       mockFields,
       opts
@@ -73,7 +90,7 @@ export class Rooms {
           { x: 13, y: 29 },
           { x: 28, y: 19 }
         ],
-        minerals: [{ pos: { x: 7, y: 12 }, type: RESOURCE_CATALYST }]
+        minerals: [{ pos: { x: 7, y: 12 }, mineralType: RESOURCE_CATALYST }]
       },
       mockFields,
       opts
@@ -90,7 +107,7 @@ export class Rooms {
           { x: 7, y: 16 },
           { x: 3, y: 30 }
         ],
-        minerals: [{ pos: { x: 28, y: 30 }, type: RESOURCE_LEMERGIUM }]
+        minerals: [{ pos: { x: 28, y: 30 }, mineralType: RESOURCE_LEMERGIUM }]
       },
       mockFields,
       opts
@@ -120,7 +137,7 @@ export class Rooms {
       minerals: roomData.minerals.map(min =>
         MockMineral({
           pos: new FakeRoomPosition(min.pos.x, min.pos.y, name),
-          type: min.type
+          mineralType: min.mineralType
         })
       ),
 
@@ -175,9 +192,29 @@ export class Rooms {
   }
 
   public static RenderFiles(room: Room, plans: BuildingPlans): RenderData {
+    const user = "TestUser";
+    const userID = "5a71934f7037f829c0ba0e11";
     const sample = {
       objects: [],
-      gameTime: 1
+      gameTime: 1,
+      users: {
+        Invader: {
+          _id: "0",
+          username: "Invader"
+        },
+        "5a71934f7037f829c0ba0e11": {
+          _id: userID,
+          username: user,
+          badge: {
+            type: 2,
+            color1: "#000000",
+            color2: "#028300",
+            color3: "#8b5c00",
+            param: 0,
+            flip: false
+          }
+        }
+      }
     } as Sample;
 
     const renderTerrain: RenderTerrain[] = [];
@@ -212,19 +249,159 @@ export class Rooms {
     for (const [type, buildingPlans] of Object.entries(plans.buildings)) {
       for (const plan of buildingPlans) {
         const id = GenerateID();
-        sample.objects.push({
+        const obj = {
           // This should not matter
           hits: 100,
           hitsMax: 100,
+          nextDecayTime: 100,
+          _isDisabled: false,
           _id: id,
           room: room.name,
           type: type,
           x: plan.pos.x,
-          y: plan.pos.y
-        });
+          y: plan.pos.y,
+          notifyWhenAttacked: false,
+          user: userID
+        } as SampleStructure;
+
+        switch (obj.type) {
+          case STRUCTURE_FACTORY:
+            obj.storeCapacity = 2000;
+            obj.store = {
+              energy: 500
+            };
+          case STRUCTURE_LINK:
+            obj.cooldown = 0;
+            obj.actionLog = {
+              transferEnergy: null
+            };
+            obj.store = { energy: 200 };
+            obj.storeCapacityResource = {
+              energy: 800
+            };
+            break;
+          case STRUCTURE_EXTENSION:
+            obj.store = { energy: 50 };
+            obj.storeCapacityResource = {
+              energy: 50
+            };
+            break;
+
+          case STRUCTURE_SPAWN:
+            obj.store = {
+              energy: 3000,
+              power: 65
+            };
+            obj.storeCapacityResource = {
+              energy: 5000,
+              power: 100
+            };
+            obj.off = false;
+            obj.spawning = null;
+            break;
+          case STRUCTURE_POWER_SPAWN:
+            obj.store = {
+              energy: 50
+            };
+            obj.storeCapacityResource = {
+              energy: 300
+            };
+            break;
+          case STRUCTURE_STORAGE:
+            obj.store = { energy: 400000 };
+            obj.storeCapacity = 1000000;
+            break;
+          case STRUCTURE_NUKER:
+            obj.cooldownTime = 100;
+            obj.store = { energy: 5000, G: 5000 };
+            obj.storeCapacityResource = {
+              energy: 300000,
+              G: 5000
+            };
+            break;
+
+          case STRUCTURE_TOWER:
+            obj.actionLog = {
+              attack: null,
+              heal: null,
+              repair: null
+            };
+            obj.store = { energy: 100 };
+            obj.storeCapacityResource = {
+              energy: 1000
+            };
+        }
+
+        sample.objects.push(obj);
       }
     }
 
+    // Now push the sources/controllers/minerals
+    if ("sources" in room) {
+      room.sources.forEach(source => {
+        sample.objects.push({
+          _id: GenerateID(),
+          type: "source",
+          room: room.name,
+          x: source.pos.x,
+          y: source.pos.y,
+          energy: 1500,
+          energyCapacity: 3000,
+          hits: 100,
+          hitsMax: 100,
+          ticksToRegeneration: 300,
+          nextRegenerationTime: 500
+        });
+      });
+    }
+
+    if ("minerals" in room) {
+      room.minerals.forEach(mineral => {
+        sample.objects.push({
+          _id: GenerateID(),
+          type: "mineral",
+          room: room.name,
+          x: mineral.pos.x,
+          y: mineral.pos.y,
+          hits: 100,
+          hitsMax: 100,
+          nextRegenerationTime: 300,
+          mineralType: mineral.mineralType,
+          mineralAmount: 30580,
+          density: 3
+        });
+      });
+    }
+
+    if (room.controller) {
+      sample.objects.push({
+        _id: GenerateID(),
+        type: "controller",
+        room: room.name,
+        x: room.controller.pos.x,
+        y: room.controller.pos.y,
+        energy: 1500,
+        energyCapacity: 3000,
+        hits: 100,
+        hitsMax: 100,
+        level: 8,
+        progressTotal: 0,
+        progress: 0,
+        downgradeTime: 18700000,
+        user: userID,
+        sign: null
+      });
+    }
+
+    // Sort so everything is consistent.
+    sample.objects.sort((a, b) => {
+      if (a.type === b.type) {
+        const av = a.y * 100 + a.x;
+        const bv = b.y * 100 + b.x;
+        return av < bv ? -1 : 1;
+      }
+      return a.type < b.type ? -1 : 1;
+    });
     return {
       terrain: renderTerrain,
       Samples: [sample]

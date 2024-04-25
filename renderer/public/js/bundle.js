@@ -23040,10 +23040,6 @@ var _worldConfigs = __webpack_require__(196);
 
 var _worldConfigs2 = _interopRequireDefault(_worldConfigs);
 
-var _decorations = __webpack_require__(198);
-
-var _decorations2 = _interopRequireDefault(_decorations);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23054,6 +23050,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 // import GameRenderer from '../../../engine/dist/renderer';
 // import GameRenderer from '../../../engine/src';
 
+
+// import decorations from '../config/decorations';
 
 var TICK_DURATION = 2.5;
 
@@ -23107,13 +23105,13 @@ var Canvas = function (_Component) {
                 terrain = _props.terrain,
                 onGameLoop = _props.onGameLoop;
 
-
-            _decorations2.default.forEach(function (decorationItem) {
-                if (decorationItem.decoration.type === 'metadata') {
-                    Object.assign(_resourceMap.resourceMap, decorationItem.decoration.resources);
-                    _worldConfigs2.default.metadata.objects[decorationItem.decoration.objectType] = decorationItem.decoration.metadata;
-                }
-            });
+            // decorations.forEach(decorationItem => {
+            //     if (decorationItem.decoration.type === 'metadata') {
+            //         Object.assign(resourceMap, decorationItem.decoration.resources);
+            //         worldConfigs.metadata.objects[decorationItem.decoration.objectType] =
+            //             decorationItem.decoration.metadata;
+            //     }
+            // });
 
             console.log('compileExpression at ' + startTime);
             _renderer2.default.compileMetadata(_worldConfigs2.default.metadata);
@@ -23158,7 +23156,7 @@ var Canvas = function (_Component) {
             };
             setTimeout(sampleFn, 0);
 
-            this.gameApp.setDecorations(_decorations2.default);
+            this.gameApp.setDecorations(decorations);
         }
 
         /**
@@ -23636,177 +23634,7 @@ window.RENDERER_METADATA=function(e){var a={};function t(o){if(a[o])return a[o].
 //# sourceMappingURL=renderer-metadata.js.map
 
 /***/ }),
-/* 198 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = [{
-    x: 20.5,
-    y: 12,
-    width: 14,
-    height: 14,
-    flip: true,
-    rotation: 10 * Math.PI / 180,
-    color1: '#8888ff',
-    color2: '#aa55aa',
-    color3: '#ff9999',
-    brightness: 1.0,
-    hasRing: false,
-    alpha: 0.9,
-    animation: 'neon',
-    lighting: true,
-    decoration: {
-        type: 'wallGraffiti',
-        graphics: [{
-            url: 'decorations/test1.svg',
-            color: 'color1'
-        }, {
-            url: 'decorations/test2.svg',
-            color: 'color2',
-            visible: 'hasRing'
-        }, {
-            url: 'decorations/test3.svg',
-            color: 'color3',
-            visible: 'hasRing'
-        }]
-    }
-},
-/* {
-    x: 0,
-    y: 35,
-    width: 10,
-    height: 30,
-    tileScale: 1.5,
-    flip: true,
-    color1: '#999999',
-    hasRing: true,
-    decoration: {
-        type: 'wallGraffiti',
-        tiling: true,
-        graphics: [
-            {
-                url: 'decorations/test_tile.png',
-                color: 'color1'
-            }
-        ]
-    }
-},*/
-{
-    foregroundColor: '#3333ff',
-    foregroundAlpha: 1.0,
-    foregroundBrightness: 1.0,
-    backgroundColor: '#0000ff',
-    backgroundBrightness: 0.4,
-    strokeColor: '#3333ff',
-    strokeBrightness: 0.5,
-    strokeLighting: 0.4,
-    strokeWidth: 30,
-    decoration: {
-        type: 'wallLandscape',
-        foregroundUrl: 'decorations/landscape.png'
-    }
-}, {
-    floorBackgroundColor: '#7777dd',
-    floorBackgroundBrightness: 0.7,
-    floorForegroundColor: '#9999ff',
-    floorForegroundAlpha: 0.2,
-    floorForegroundBrightness: 1.0,
-    swampColor: '#0000ff',
-    swampStrokeColor: '#0000cc',
-    swampStrokeWidth: 50,
-    roadsColor: '#ccccff',
-    roadsBrightness: 0.8,
-    decoration: {
-        type: 'floorLandscape',
-        floorForegroundUrl: 'decorations/landscape2.png',
-        tileScale: 3
-    }
-}, {
-    user: '58901b93730b9dab5857f7a6',
-    nameFilter: 'EnergyHauler',
-    exclude: false,
-    firstColor: '#A4FF99',
-    firstAlpha: 1.0,
-    secondColor: '#FFFFFF',
-    secondAlpha: 0.5,
-    brightness: 0.3,
-    lighting: true,
-    animation: 'fast',
-    position: 'below',
-    width: 184,
-    height: 184,
-    syncRotate: true,
-    flip: false,
-    decoration: {
-        type: 'creep',
-        graphics: [{
-            url: 'decorations/creep_effect1.svg',
-            color: 'firstColor',
-            alpha: 'firstAlpha'
-        }, {
-            url: 'decorations/creep_effect2.svg',
-            color: 'secondColor',
-            alpha: 'secondAlpha'
-        }]
-    }
-},
-// {
-//     decoration: {
-//         type: 'metadata',
-//         objectType: 'controller',
-//         resources: {
-//             'controller-decoration': 'decorations/controller.png'
-//         },
-//         metadata: {
-//             processors: [
-//                 {
-//                     type: 'sprite',
-//                     once: true,
-//                     payload: {
-//                         texture: 'controller-decoration',
-//                         width: 200,
-//                         height: 200,
-//                     },
-//                     actions: [
-//                         {
-//                             action: 'Repeat',
-//                             params: [
-//                                 {
-//                                     action: 'RotateBy',
-//                                     params: [
-//                                         Math.PI,
-//                                         10,
-//                                     ],
-//                                 },
-//                             ],
-//                         },
-//                     ],
-//                 },
-//             ],
-//             zIndex: 4,
-//         }
-//     }
-// },
-{
-    user: '54bff72ab32a10f73a57d017',
-    width: 350,
-    height: 350,
-    animation: 'fast',
-    decoration: {
-        type: 'object',
-        objectType: 'controller',
-        graphics: [{
-            url: 'https://s3.amazonaws.com/static.screeps.com/season1/controller_season1.svg'
-        }]
-    }
-}];
-
-/***/ }),
+/* 198 */,
 /* 199 */
 /***/ (function(module, exports) {
 
@@ -90585,952 +90413,1338 @@ module.exports = [
 	{
 		"objects": [
 			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "6ac784f4a270a4a3661417c9",
+				"_id": "352c60ce706f59351b0882f9",
+				"type": "controller",
 				"room": "E11S53",
-				"type": "road",
-				"x": 38,
-				"y": 9
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "6930833da08b1a9583fe27d3",
-				"room": "E11S53",
-				"type": "road",
 				"x": 37,
-				"y": 10
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "c1bf6521efcbb85e84dc5743",
-				"room": "E11S53",
-				"type": "road",
-				"x": 36,
-				"y": 11
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "9e66f0fbbe95ec8d72b9fdfa",
-				"room": "E11S53",
-				"type": "road",
-				"x": 35,
-				"y": 12
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "d83070c5a5371bbfe4f1dac7",
-				"room": "E11S53",
-				"type": "road",
-				"x": 34,
-				"y": 13
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "7f59ab2466504eecb2a0733d",
-				"room": "E11S53",
-				"type": "road",
-				"x": 34,
-				"y": 14
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "0a620b2a0a0ee8eda6fdf9fe",
-				"room": "E11S53",
-				"type": "road",
-				"x": 34,
-				"y": 15
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "a41354388a22373848afc946",
-				"room": "E11S53",
-				"type": "road",
-				"x": 34,
-				"y": 16
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "ea06ff09199d2dc772bff1da",
-				"room": "E11S53",
-				"type": "road",
-				"x": 34,
-				"y": 17
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "578929171ce390dd14bb6756",
-				"room": "E11S53",
-				"type": "road",
-				"x": 34,
-				"y": 18
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "4f921e427e33763fd62530f7",
-				"room": "E11S53",
-				"type": "road",
-				"x": 34,
-				"y": 19
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "25a9a5a563c09653c718cc7b",
-				"room": "E11S53",
-				"type": "road",
-				"x": 34,
-				"y": 20
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "d3bd5319ddfbaff77cbc37fc",
-				"room": "E11S53",
-				"type": "road",
-				"x": 34,
-				"y": 21
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "69800032795b6ecb89bea693",
-				"room": "E11S53",
-				"type": "road",
-				"x": 34,
-				"y": 22
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "933fb6e16ab3165b05a8d08f",
-				"room": "E11S53",
-				"type": "road",
-				"x": 34,
-				"y": 23
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "01e093f2065a434cbde8742e",
-				"room": "E11S53",
-				"type": "road",
-				"x": 38,
-				"y": 9
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "95a9bc8d96eaef9ab07e15cd",
-				"room": "E11S53",
-				"type": "road",
-				"x": 37,
-				"y": 10
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "cdb73628ea491f072b3343ed",
-				"room": "E11S53",
-				"type": "road",
-				"x": 36,
-				"y": 11
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "b080317174e34e95168c06f0",
-				"room": "E11S53",
-				"type": "road",
-				"x": 35,
-				"y": 12
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "2e3d447436081f0a2c3cebf2",
-				"room": "E11S53",
-				"type": "road",
-				"x": 34,
-				"y": 13
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "a3435ce0b48b23645b5d7be6",
-				"room": "E11S53",
-				"type": "road",
-				"x": 33,
-				"y": 14
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "7416db94d76b3a861ccc8486",
-				"room": "E11S53",
-				"type": "road",
-				"x": 32,
-				"y": 15
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "fec8fb124a3f3ced0779bd4e",
-				"room": "E11S53",
-				"type": "road",
-				"x": 31,
-				"y": 16
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "ba336145231a55cc9a0ebb01",
-				"room": "E11S53",
-				"type": "road",
-				"x": 30,
-				"y": 17
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "1517e97f04782c071ee19de3",
-				"room": "E11S53",
-				"type": "road",
-				"x": 29,
-				"y": 18
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "0d85d2fbd2a80d8a5bbf35f2",
-				"room": "E11S53",
-				"type": "road",
-				"x": 28,
-				"y": 19
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "4570903e4cc5de607ac922d4",
-				"room": "E11S53",
-				"type": "road",
-				"x": 27,
-				"y": 20
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "953e8fbb96c72bfa24008ad0",
-				"room": "E11S53",
-				"type": "road",
-				"x": 26,
-				"y": 21
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "9650005bad9e0fb15e9f5ccc",
-				"room": "E11S53",
-				"type": "road",
-				"x": 25,
-				"y": 22
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "00b69a822d5115cded4a33c9",
-				"room": "E11S53",
-				"type": "road",
-				"x": 24,
-				"y": 23
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "26b2148cb312eb94bb66cac6",
-				"room": "E11S53",
-				"type": "road",
-				"x": 23,
-				"y": 24
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "3e047d6eb194e559301ab38e",
-				"room": "E11S53",
-				"type": "road",
-				"x": 22,
-				"y": 25
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "8a2a4e21f7770a38f43628af",
-				"room": "E11S53",
-				"type": "road",
-				"x": 21,
-				"y": 26
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "11efd520b595584c6c5c522a",
-				"room": "E11S53",
-				"type": "road",
-				"x": 20,
-				"y": 27
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "0e44f40b357ef2414408ec8f",
-				"room": "E11S53",
-				"type": "road",
-				"x": 19,
-				"y": 28
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "c63774bc93f90bea63acbb0f",
-				"room": "E11S53",
-				"type": "road",
-				"x": 18,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "6c41f80b81569a4edc5c27a3",
-				"room": "E11S53",
-				"type": "road",
-				"x": 17,
-				"y": 30
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "0f6e3149cae77a770754deef",
-				"room": "E11S53",
-				"type": "road",
-				"x": 16,
-				"y": 31
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "5efd16c3fb2ef052a91f84c1",
-				"room": "E11S53",
-				"type": "road",
-				"x": 15,
-				"y": 32
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "84ee08376defdcb1ccaa14b6",
-				"room": "E11S53",
-				"type": "road",
-				"x": 14,
-				"y": 33
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "93eb1c9bcc51b31c4cf8a9c7",
-				"room": "E11S53",
-				"type": "road",
-				"x": 13,
-				"y": 34
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "a4b5a8151380c44408228a74",
-				"room": "E11S53",
-				"type": "road",
-				"x": 12,
-				"y": 35
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "8f522b487610ec0e6eaafc41",
-				"room": "E11S53",
-				"type": "road",
-				"x": 11,
-				"y": 36
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "ee1c7d06af58e1657de54c16",
-				"room": "E11S53",
-				"type": "road",
-				"x": 10,
-				"y": 37
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "8875b0bcd37333042b384fa6",
-				"room": "E11S53",
-				"type": "road",
-				"x": 9,
-				"y": 38
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "b335340f342cabe841213210",
-				"room": "E11S53",
-				"type": "road",
-				"x": 9,
-				"y": 39
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "afeb6afcebb3abc9d868ec9a",
-				"room": "E11S53",
-				"type": "road",
-				"x": 9,
-				"y": 40
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "2b480510d73ac968e28ee609",
-				"room": "E11S53",
-				"type": "road",
-				"x": 9,
-				"y": 41
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "1685ec920147b0da6734811f",
-				"room": "E11S53",
-				"type": "road",
-				"x": 9,
-				"y": 42
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "7818dad2374ead62b53116eb",
-				"room": "E11S53",
-				"type": "road",
-				"x": 40,
-				"y": 9
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "c7ed6d4b9785d4027d3ea501",
-				"room": "E11S53",
-				"type": "road",
-				"x": 41,
-				"y": 10
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "75586aea4f8c914f2bbc5260",
-				"room": "E11S53",
-				"type": "road",
-				"x": 42,
-				"y": 11
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "97ab8bf44cbc369309a45d46",
-				"room": "E11S53",
-				"type": "road",
-				"x": 43,
-				"y": 12
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "134ff56f584751656a0acbd2",
-				"room": "E11S53",
-				"type": "road",
-				"x": 44,
-				"y": 13
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "c91fc313ac7ffa7f51db8247",
-				"room": "E11S53",
-				"type": "road",
-				"x": 45,
-				"y": 14
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "16cbed75b6c91fd0f1b21f14",
-				"room": "E11S53",
-				"type": "road",
-				"x": 46,
-				"y": 15
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "defef7e683f2c14f3777cb03",
-				"room": "E11S53",
-				"type": "road",
-				"x": 47,
-				"y": 16
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "dd74a4d95f61dc1a79c5f6ea",
-				"room": "E11S53",
-				"type": "road",
-				"x": 47,
-				"y": 17
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "b7496d03d189b99c7a2763ae",
-				"room": "E11S53",
-				"type": "road",
-				"x": 47,
-				"y": 18
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "0b3f2af491018c4bfc13f549",
-				"room": "E11S53",
-				"type": "road",
-				"x": 47,
-				"y": 19
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "b6846ad885cd20e3849b732d",
-				"room": "E11S53",
-				"type": "road",
-				"x": 47,
-				"y": 20
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "5af4e051eaf0164eb0c1bd8a",
-				"room": "E11S53",
-				"type": "road",
-				"x": 47,
-				"y": 21
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "ae6ba980673ab5a79a87dd98",
-				"room": "E11S53",
-				"type": "road",
-				"x": 47,
-				"y": 22
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "dd1cd597fcdfbfd3f0c8f3fa",
-				"room": "E11S53",
-				"type": "road",
-				"x": 47,
-				"y": 23
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "e8467247aee856928c2f633a",
-				"room": "E11S53",
-				"type": "road",
-				"x": 47,
-				"y": 24
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "edaa9c9cb0668989e6a058e3",
-				"room": "E11S53",
-				"type": "road",
-				"x": 34,
-				"y": 19
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "739cf299d03c944daea91d31",
-				"room": "E11S53",
-				"type": "road",
-				"x": 35,
-				"y": 19
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "89bc23573f8470903ccc6a66",
-				"room": "E11S53",
-				"type": "road",
-				"x": 36,
-				"y": 19
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "06d3a388e45d7b7b4aace860",
-				"room": "E11S53",
-				"type": "road",
-				"x": 37,
-				"y": 19
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "121ff75b414001fe80b410d4",
-				"room": "E11S53",
-				"type": "road",
-				"x": 38,
-				"y": 19
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "5a3044552a51d8c01d28b277",
-				"room": "E11S53",
-				"type": "road",
-				"x": 39,
-				"y": 19
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "155a53b2611eaf109d322da4",
-				"room": "E11S53",
-				"type": "road",
-				"x": 40,
-				"y": 19
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "c9eee4acbd79d3f10599829d",
-				"room": "E11S53",
-				"type": "road",
-				"x": 41,
-				"y": 19
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "9e7f80b26482e3433a39683e",
-				"room": "E11S53",
-				"type": "road",
-				"x": 42,
-				"y": 19
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "ac27360cda2f744dd04370a2",
-				"room": "E11S53",
-				"type": "road",
-				"x": 42,
-				"y": 20
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "7ee969b9388de9608244d8d1",
-				"room": "E11S53",
-				"type": "road",
-				"x": 42,
-				"y": 21
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "59f0838df505ca9f5bea8582",
-				"room": "E11S53",
-				"type": "road",
-				"x": 42,
-				"y": 22
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "f4fa1d75f4f0c78e0bd29443",
-				"room": "E11S53",
-				"type": "road",
-				"x": 42,
-				"y": 23
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "b678408c0c371d91584b4337",
-				"room": "E11S53",
-				"type": "road",
-				"x": 42,
-				"y": 24
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "c43e55d556f47fe0aee27ff2",
-				"room": "E11S53",
-				"type": "road",
-				"x": 42,
-				"y": 25
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "8a2d841907eb6f98a82a2267",
-				"room": "E11S53",
-				"type": "road",
-				"x": 42,
-				"y": 26
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "94d46bfd0010976b37ab0ce9",
-				"room": "E11S53",
-				"type": "road",
-				"x": 42,
-				"y": 27
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "c70e4fcec16ca704817a0231",
-				"room": "E11S53",
-				"type": "road",
-				"x": 41,
-				"y": 27
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "f18b8040fc89b489514fed54",
-				"room": "E11S53",
-				"type": "road",
-				"x": 40,
-				"y": 27
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "3eb9ca19e981c0b3f0608416",
-				"room": "E11S53",
-				"type": "road",
-				"x": 39,
-				"y": 27
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "534c46b19eab6f02858a3b2c",
-				"room": "E11S53",
-				"type": "road",
-				"x": 38,
-				"y": 27
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "36cf31a15bbefa5feac3636a",
-				"room": "E11S53",
-				"type": "road",
-				"x": 37,
-				"y": 27
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "403e68e685b97f47aeebee5e",
-				"room": "E11S53",
-				"type": "road",
-				"x": 36,
-				"y": 27
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "6dc5a664dfeca909a331d3b2",
-				"room": "E11S53",
-				"type": "road",
-				"x": 35,
-				"y": 27
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "61168f00f2da59562f289383",
-				"room": "E11S53",
-				"type": "road",
-				"x": 34,
-				"y": 27
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "7c0252e036b4365be5bb5a56",
-				"room": "E11S53",
-				"type": "road",
-				"x": 34,
-				"y": 26
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "37e486c2ca75fcd069cc7afc",
-				"room": "E11S53",
-				"type": "road",
-				"x": 34,
-				"y": 25
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "3feb9007f0749e46de1a1834",
-				"room": "E11S53",
-				"type": "road",
-				"x": 34,
-				"y": 24
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "0d6e63ff16ba5137076fb2b7",
-				"room": "E11S53",
-				"type": "road",
-				"x": 34,
-				"y": 23
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "2a3354ea8a06415ae7e5fe2c",
-				"room": "E11S53",
-				"type": "road",
-				"x": 34,
-				"y": 22
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "3a8328a9afd5baa6d2096aea",
-				"room": "E11S53",
-				"type": "road",
-				"x": 34,
-				"y": 21
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "5696483b0c868322e7d09131",
-				"room": "E11S53",
-				"type": "road",
-				"x": 34,
-				"y": 20
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "762d3ce3c3c518f15411cfb8",
-				"room": "E11S53",
-				"type": "spawn",
-				"x": 38,
-				"y": 22
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "0be26e1f071edd685512320c",
-				"room": "E11S53",
-				"type": "storage",
-				"x": 37,
-				"y": 22
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "f6ac2995ede2d27f6c870655",
-				"room": "E11S53",
-				"type": "link",
-				"x": 37,
-				"y": 23
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "0e67e4a4e5b2d469690974c2",
-				"room": "E11S53",
-				"type": "terminal",
-				"x": 37,
-				"y": 24
-			},
-			{
+				"y": 26,
+				"energy": 1500,
+				"energyCapacity": 3000,
 				"hits": 100,
 				"hitsMax": 100,
-				"_id": "8712edb7abe366421e3d3f93",
-				"room": "E11S53",
-				"type": "nuker",
-				"x": 38,
-				"y": 24
+				"level": 8,
+				"progressTotal": 0,
+				"progress": 0,
+				"downgradeTime": 18700000,
+				"user": "5a71934f7037f829c0ba0e11",
+				"sign": null
 			},
 			{
 				"hits": 100,
 				"hitsMax": 100,
-				"_id": "ae867a5910b2efd73d8bd037",
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "680c9a9fe45a630e3ecefd0b",
 				"room": "E11S53",
 				"type": "factory",
 				"x": 39,
-				"y": 22
+				"y": 22,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11",
+				"storeCapacity": 2000,
+				"store": {
+					"energy": 200
+				},
+				"cooldown": 0,
+				"actionLog": {
+					"transferEnergy": null
+				},
+				"storeCapacityResource": {
+					"energy": 800
+				}
 			},
 			{
 				"hits": 100,
 				"hitsMax": 100,
-				"_id": "3d82e124355a0e3fd80001e7",
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "a609a15c8ff0b1e6c0ccd62e",
 				"room": "E11S53",
-				"type": "tower",
-				"x": 39,
-				"y": 23
+				"type": "link",
+				"x": 37,
+				"y": 23,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11",
+				"cooldown": 0,
+				"actionLog": {
+					"transferEnergy": null
+				},
+				"store": {
+					"energy": 200
+				},
+				"storeCapacityResource": {
+					"energy": 800
+				}
+			},
+			{
+				"_id": "beccd265016defb6bfe5bd48",
+				"type": "mineral",
+				"room": "E11S53",
+				"x": 10,
+				"y": 43,
+				"hits": 100,
+				"hitsMax": 100,
+				"nextRegenerationTime": 300,
+				"mineralType": "L",
+				"mineralAmount": 30580,
+				"density": 3
 			},
 			{
 				"hits": 100,
 				"hitsMax": 100,
-				"_id": "cae9c8758ac65f558712e7c1",
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "b7d3a2749c29d06511b27181",
+				"room": "E11S53",
+				"type": "nuker",
+				"x": 38,
+				"y": 24,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11",
+				"cooldownTime": 100,
+				"store": {
+					"energy": 5000,
+					"G": 5000
+				},
+				"storeCapacityResource": {
+					"energy": 300000,
+					"G": 5000
+				}
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "bffb8f8dfa49a414e4808695",
 				"room": "E11S53",
 				"type": "powerSpawn",
 				"x": 39,
-				"y": 24
+				"y": 24,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11",
+				"store": {
+					"energy": 50
+				},
+				"storeCapacityResource": {
+					"energy": 300
+				}
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "677adc8a8b946db5bd298d34",
+				"room": "E11S53",
+				"type": "road",
+				"x": 38,
+				"y": 9,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "343565d8522412207ac581f6",
+				"room": "E11S53",
+				"type": "road",
+				"x": 38,
+				"y": 9,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "c1b44f9d44f4a456be1bc472",
+				"room": "E11S53",
+				"type": "road",
+				"x": 40,
+				"y": 9,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "2882076ffa210440f57f9b14",
+				"room": "E11S53",
+				"type": "road",
+				"x": 37,
+				"y": 10,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "3dff028157b775714d85a18d",
+				"room": "E11S53",
+				"type": "road",
+				"x": 37,
+				"y": 10,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "be030ca25d4879be8e7034fc",
+				"room": "E11S53",
+				"type": "road",
+				"x": 41,
+				"y": 10,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "175f517ce36cd2989320adaf",
+				"room": "E11S53",
+				"type": "road",
+				"x": 36,
+				"y": 11,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "749166fa035e1010eb818ea6",
+				"room": "E11S53",
+				"type": "road",
+				"x": 36,
+				"y": 11,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "70d64e4295114fb94d07fb5f",
+				"room": "E11S53",
+				"type": "road",
+				"x": 42,
+				"y": 11,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "4820d6240b10db7f5f1c63f9",
+				"room": "E11S53",
+				"type": "road",
+				"x": 35,
+				"y": 12,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d3c98e142647aef0fde4acff",
+				"room": "E11S53",
+				"type": "road",
+				"x": 35,
+				"y": 12,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "32b85111c10533d2d4c509ca",
+				"room": "E11S53",
+				"type": "road",
+				"x": 43,
+				"y": 12,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "5e153809d612f6694e9d01e9",
+				"room": "E11S53",
+				"type": "road",
+				"x": 34,
+				"y": 13,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "6d5d96884d96069112b7bff5",
+				"room": "E11S53",
+				"type": "road",
+				"x": 34,
+				"y": 13,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "4c8c740187f7a433b7c8ea46",
+				"room": "E11S53",
+				"type": "road",
+				"x": 44,
+				"y": 13,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "48a8e832724642eebe1d9fd1",
+				"room": "E11S53",
+				"type": "road",
+				"x": 33,
+				"y": 14,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "3b793100a44287f64ffe8adb",
+				"room": "E11S53",
+				"type": "road",
+				"x": 34,
+				"y": 14,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "5a09699f0d8ca4e2a7c46d64",
+				"room": "E11S53",
+				"type": "road",
+				"x": 45,
+				"y": 14,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "6d17f656b0eab26d9bb7c116",
+				"room": "E11S53",
+				"type": "road",
+				"x": 32,
+				"y": 15,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "c8906a8de1f2648d741e1b2d",
+				"room": "E11S53",
+				"type": "road",
+				"x": 34,
+				"y": 15,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "749f4b92981f7f1efc8e0443",
+				"room": "E11S53",
+				"type": "road",
+				"x": 46,
+				"y": 15,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "006edd06b801c9ccd6050377",
+				"room": "E11S53",
+				"type": "road",
+				"x": 31,
+				"y": 16,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "f876bad1a76932f4e9331394",
+				"room": "E11S53",
+				"type": "road",
+				"x": 34,
+				"y": 16,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "c725fdf7693abab2fac0c117",
+				"room": "E11S53",
+				"type": "road",
+				"x": 47,
+				"y": 16,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "72196d809c722cad5f131454",
+				"room": "E11S53",
+				"type": "road",
+				"x": 30,
+				"y": 17,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "a31768211b5f13d758a763d2",
+				"room": "E11S53",
+				"type": "road",
+				"x": 34,
+				"y": 17,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "932ff58420766f6dd5bb07c4",
+				"room": "E11S53",
+				"type": "road",
+				"x": 47,
+				"y": 17,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "4bea0ff32fdc7dd1d73734c2",
+				"room": "E11S53",
+				"type": "road",
+				"x": 29,
+				"y": 18,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "c0a47875e5757367ea35c015",
+				"room": "E11S53",
+				"type": "road",
+				"x": 34,
+				"y": 18,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "cbff909ec271be33feaa2958",
+				"room": "E11S53",
+				"type": "road",
+				"x": 47,
+				"y": 18,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "275fc34ccd694f4da423d53a",
+				"room": "E11S53",
+				"type": "road",
+				"x": 28,
+				"y": 19,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "b9f6303deffecac4128a70df",
+				"room": "E11S53",
+				"type": "road",
+				"x": 34,
+				"y": 19,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "99de0d1cf94afac359a1aa02",
+				"room": "E11S53",
+				"type": "road",
+				"x": 47,
+				"y": 19,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "ab768109ad0fccfee59e402b",
+				"room": "E11S53",
+				"type": "road",
+				"x": 27,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "0842573a8c78f408b3608332",
+				"room": "E11S53",
+				"type": "road",
+				"x": 34,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "6f0f9e96764993038e8216f8",
+				"room": "E11S53",
+				"type": "road",
+				"x": 35,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "19a520201c78053b7a7e63d0",
+				"room": "E11S53",
+				"type": "road",
+				"x": 36,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "f4a231e391b920cffccf6fc7",
+				"room": "E11S53",
+				"type": "road",
+				"x": 37,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "48a0c568ecdc02b10d87a472",
+				"room": "E11S53",
+				"type": "road",
+				"x": 38,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "cbe3f6f9de50df5a33120fb8",
+				"room": "E11S53",
+				"type": "road",
+				"x": 39,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "70cf0b8201d4afb4f1b34a90",
+				"room": "E11S53",
+				"type": "road",
+				"x": 40,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "4744a9907a7389dbf3d58bd5",
+				"room": "E11S53",
+				"type": "road",
+				"x": 41,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "4bb95b72b338c87e1aa1200d",
+				"room": "E11S53",
+				"type": "road",
+				"x": 47,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "1e6c738b4af0c317c62c4296",
+				"room": "E11S53",
+				"type": "road",
+				"x": 26,
+				"y": 21,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d1093c7178712498518ab979",
+				"room": "E11S53",
+				"type": "road",
+				"x": 34,
+				"y": 21,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "f2b808579240abd8dbe7c546",
+				"room": "E11S53",
+				"type": "road",
+				"x": 35,
+				"y": 21,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "6f3110915ce464de3b24e3fc",
+				"room": "E11S53",
+				"type": "road",
+				"x": 41,
+				"y": 21,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "644837bee1e6efaf49e04806",
+				"room": "E11S53",
+				"type": "road",
+				"x": 47,
+				"y": 21,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "1d6fb3323df3ff4587bb5484",
+				"room": "E11S53",
+				"type": "road",
+				"x": 25,
+				"y": 22,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "11648c40313e73ee2a8f6efc",
+				"room": "E11S53",
+				"type": "road",
+				"x": 34,
+				"y": 22,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "f721042dcd5df1f0249bdaea",
+				"room": "E11S53",
+				"type": "road",
+				"x": 35,
+				"y": 22,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "eb9621a15e5c17c4c0500472",
+				"room": "E11S53",
+				"type": "road",
+				"x": 41,
+				"y": 22,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "b421be54e4e8f4d492e72080",
+				"room": "E11S53",
+				"type": "road",
+				"x": 47,
+				"y": 22,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "7c6943aa93ce71f3e39641d3",
+				"room": "E11S53",
+				"type": "road",
+				"x": 24,
+				"y": 23,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "1524053d6d14b6032ea30df2",
+				"room": "E11S53",
+				"type": "road",
+				"x": 34,
+				"y": 23,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "485d8f4f13a20dda67f11b1f",
+				"room": "E11S53",
+				"type": "road",
+				"x": 35,
+				"y": 23,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "03a159c730a64a7f32aea1a3",
+				"room": "E11S53",
+				"type": "road",
+				"x": 41,
+				"y": 23,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d33a8a29612119ce679c632a",
+				"room": "E11S53",
+				"type": "road",
+				"x": 47,
+				"y": 23,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "735d4ead88e12f42f1daf66b",
+				"room": "E11S53",
+				"type": "road",
+				"x": 23,
+				"y": 24,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "ef45026b8e52b1d832a72d75",
+				"room": "E11S53",
+				"type": "road",
+				"x": 41,
+				"y": 24,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "e44ab7bfc32a1a15eb90507c",
+				"room": "E11S53",
+				"type": "road",
+				"x": 47,
+				"y": 24,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "bcb1fcd2adc6d7bcc21dbb02",
+				"room": "E11S53",
+				"type": "road",
+				"x": 22,
+				"y": 25,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "6aad497c5b366062d9198199",
+				"room": "E11S53",
+				"type": "road",
+				"x": 41,
+				"y": 25,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "10a08a77ffbb657bef1b4e5c",
+				"room": "E11S53",
+				"type": "road",
+				"x": 21,
+				"y": 26,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "90fc02a88d89377c282f626b",
+				"room": "E11S53",
+				"type": "road",
+				"x": 35,
+				"y": 26,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "c28d7a6231f4e26198bc5b08",
+				"room": "E11S53",
+				"type": "road",
+				"x": 38,
+				"y": 26,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "c64b9c4b661711f13333574b",
+				"room": "E11S53",
+				"type": "road",
+				"x": 39,
+				"y": 26,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "4d4ad5f31117d82fed72f22b",
+				"room": "E11S53",
+				"type": "road",
+				"x": 40,
+				"y": 26,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "edb5bd9f773f04e7ca0b5dfa",
+				"room": "E11S53",
+				"type": "road",
+				"x": 41,
+				"y": 26,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "4bd0f6f600d08e896122c307",
+				"room": "E11S53",
+				"type": "road",
+				"x": 20,
+				"y": 27,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "ebe60ce329349c7781a6f436",
+				"room": "E11S53",
+				"type": "road",
+				"x": 19,
+				"y": 28,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "5782531b60ef8cb2d85a510f",
+				"room": "E11S53",
+				"type": "road",
+				"x": 18,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "ae5b83a2462be0a284e6ba90",
+				"room": "E11S53",
+				"type": "road",
+				"x": 17,
+				"y": 30,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "18cd7cb1017e87ec360ab035",
+				"room": "E11S53",
+				"type": "road",
+				"x": 16,
+				"y": 31,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "3dbceb12fd6e82061ca53908",
+				"room": "E11S53",
+				"type": "road",
+				"x": 15,
+				"y": 32,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "5b7782686522d7a95f25666c",
+				"room": "E11S53",
+				"type": "road",
+				"x": 14,
+				"y": 33,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "735f4223afb204e8bf2333f9",
+				"room": "E11S53",
+				"type": "road",
+				"x": 13,
+				"y": 34,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "36cf8230c7b4e1178225212b",
+				"room": "E11S53",
+				"type": "road",
+				"x": 12,
+				"y": 35,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "76702f35d7b5b3e435b0ed73",
+				"room": "E11S53",
+				"type": "road",
+				"x": 11,
+				"y": 36,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "72a702c33911302b62ba960d",
+				"room": "E11S53",
+				"type": "road",
+				"x": 10,
+				"y": 37,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "343293c0834c3abfa836d781",
+				"room": "E11S53",
+				"type": "road",
+				"x": 9,
+				"y": 38,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "24845e9084749ca41113b2f1",
+				"room": "E11S53",
+				"type": "road",
+				"x": 9,
+				"y": 39,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "c94f26e7809cb4532334790f",
+				"room": "E11S53",
+				"type": "road",
+				"x": 9,
+				"y": 40,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "ab36f1523ed7b7c1d304213a",
+				"room": "E11S53",
+				"type": "road",
+				"x": 9,
+				"y": 41,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "1d786a6f5a75c0c2af5b66bb",
+				"room": "E11S53",
+				"type": "road",
+				"x": 9,
+				"y": 42,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"_id": "6e634c0f959546be7d70df52",
+				"type": "source",
+				"room": "E11S53",
+				"x": 39,
+				"y": 8,
+				"energy": 1500,
+				"energyCapacity": 3000,
+				"hits": 100,
+				"hitsMax": 100,
+				"ticksToRegeneration": 300,
+				"nextRegenerationTime": 500
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "0795624090c9ca3fb1fa91af",
+				"room": "E11S53",
+				"type": "spawn",
+				"x": 38,
+				"y": 22,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11",
+				"store": {
+					"energy": 3000,
+					"power": 65
+				},
+				"storeCapacityResource": {
+					"energy": 5000,
+					"power": 100
+				},
+				"off": false,
+				"spawning": null
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "5f697be26cdc9042de91bffd",
+				"room": "E11S53",
+				"type": "storage",
+				"x": 37,
+				"y": 22,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11",
+				"store": {
+					"energy": 400000
+				},
+				"storeCapacity": 1000000
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "7dbfa5e86bfa5a78912f006a",
+				"room": "E11S53",
+				"type": "terminal",
+				"x": 37,
+				"y": 24,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "54a2e89f9b40b7781b48dc19",
+				"room": "E11S53",
+				"type": "tower",
+				"x": 39,
+				"y": 23,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11",
+				"actionLog": {
+					"attack": null,
+					"heal": null,
+					"repair": null
+				},
+				"store": {
+					"energy": 100
+				},
+				"storeCapacityResource": {
+					"energy": 1000
+				}
 			}
 		],
-		"gameTime": 1
+		"gameTime": 1,
+		"users": {
+			"Invader": {
+				"_id": "0",
+				"username": "Invader"
+			},
+			"5a71934f7037f829c0ba0e11": {
+				"_id": "5a71934f7037f829c0ba0e11",
+				"username": "TestUser",
+				"badge": {
+					"type": 2,
+					"color1": "#000000",
+					"color2": "#028300",
+					"color3": "#8b5c00",
+					"param": 0,
+					"flip": false
+				}
+			}
+		}
 	}
 ];
 
@@ -91542,1123 +91756,1741 @@ module.exports = [
 	{
 		"objects": [
 			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "15c2f0bd0706c935bef1baeb",
+				"_id": "cffb81c7db8d3e02dd9ac3fe",
+				"type": "controller",
 				"room": "E12S53",
-				"type": "road",
-				"x": 12,
-				"y": 28
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "2b4d3901ec62a82d7d16eb7e",
-				"room": "E12S53",
-				"type": "road",
-				"x": 11,
-				"y": 27
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "47fdbf51911d4b6107867d3a",
-				"room": "E12S53",
-				"type": "road",
-				"x": 10,
-				"y": 26
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "dec98afcdd207e7863c1948d",
-				"room": "E12S53",
-				"type": "road",
-				"x": 9,
-				"y": 25
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "f8b97a9deae8174092a39329",
-				"room": "E12S53",
-				"type": "road",
-				"x": 8,
-				"y": 24
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "a0dbfbc6b22df54c193e07db",
-				"room": "E12S53",
-				"type": "road",
-				"x": 7,
-				"y": 24
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "59bffe5ae53e725f5035b895",
-				"room": "E12S53",
-				"type": "road",
-				"x": 6,
-				"y": 24
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "4c5cb10e8a30fc33bb4f9084",
-				"room": "E12S53",
-				"type": "road",
-				"x": 5,
-				"y": 24
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "7857c12096e32cf775e06102",
-				"room": "E12S53",
-				"type": "road",
-				"x": 4,
-				"y": 24
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "e67990c3744c99b65f00e9a8",
-				"room": "E12S53",
-				"type": "road",
-				"x": 3,
-				"y": 24
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "8eae21aa78f30cdedfb5ff21",
-				"room": "E12S53",
-				"type": "road",
-				"x": 2,
-				"y": 24
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "5bd67b7b9da2d0f9df375d5e",
-				"room": "E12S53",
-				"type": "road",
-				"x": 1,
-				"y": 24
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "db0fead2c69dfc0c5c79913d",
-				"room": "E12S53",
-				"type": "road",
-				"x": 12,
-				"y": 28
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "8cee5f70c27949765510fb17",
-				"room": "E12S53",
-				"type": "road",
-				"x": 12,
-				"y": 27
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "e89d058b65f6d1e87298089d",
-				"room": "E12S53",
-				"type": "road",
-				"x": 13,
-				"y": 26
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "fcf407381c70a035b03dd108",
-				"room": "E12S53",
-				"type": "road",
-				"x": 14,
-				"y": 25
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "ecc9c4a02f25b174aff3af03",
-				"room": "E12S53",
-				"type": "road",
-				"x": 15,
-				"y": 24
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "4554214da511cca5212b2192",
-				"room": "E12S53",
-				"type": "road",
-				"x": 29,
-				"y": 20
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "fb4a6da5ec287d229107f872",
-				"room": "E12S53",
-				"type": "road",
-				"x": 29,
-				"y": 21
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "f5bef62a58fbc0e0fb3ce08e",
-				"room": "E12S53",
-				"type": "road",
-				"x": 29,
-				"y": 22
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "e76353433f6fcf5af2d159b5",
-				"room": "E12S53",
-				"type": "road",
-				"x": 29,
-				"y": 23
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "00b8320ab1e6a66006429a74",
-				"room": "E12S53",
-				"type": "road",
 				"x": 28,
-				"y": 24
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "43e94c8af08a7584777fb386",
-				"room": "E12S53",
-				"type": "road",
-				"x": 27,
-				"y": 25
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "8c31152f2aba904e41db3e1c",
-				"room": "E12S53",
-				"type": "road",
-				"x": 26,
-				"y": 26
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "43c2ede8b4a66f0eff8cbead",
-				"room": "E12S53",
-				"type": "road",
-				"x": 26,
-				"y": 27
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "65579e2ff0b97fc32dc92813",
-				"room": "E12S53",
-				"type": "road",
-				"x": 27,
-				"y": 28
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "cd3866436a02536ff5a81b2b",
-				"room": "E12S53",
-				"type": "road",
-				"x": 27,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "5ca17cac58ade17a986d406f",
-				"room": "E12S53",
-				"type": "road",
-				"x": 27,
-				"y": 30
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "5cb349cff63838a14310a772",
-				"room": "E12S53",
-				"type": "road",
-				"x": 27,
-				"y": 31
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "58c8672102af51d56374f9ac",
-				"room": "E12S53",
-				"type": "road",
-				"x": 27,
-				"y": 32
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "26ad590cba2377432b2fc8af",
-				"room": "E12S53",
-				"type": "road",
-				"x": 26,
-				"y": 33
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "e2dd67d42873ef0aed356f0b",
-				"room": "E12S53",
-				"type": "road",
-				"x": 26,
-				"y": 34
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "16085645ad6fddcaaa18a7f0",
-				"room": "E12S53",
-				"type": "road",
-				"x": 26,
-				"y": 35
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "b36a174708432db882f83719",
-				"room": "E12S53",
-				"type": "road",
-				"x": 26,
-				"y": 36
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "e202aaa6c7bb897a77fd70bb",
-				"room": "E12S53",
-				"type": "road",
-				"x": 26,
-				"y": 37
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "9f216706d782becd8f860887",
-				"room": "E12S53",
-				"type": "road",
-				"x": 27,
-				"y": 38
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "d5413c03abb1eee746322a61",
-				"room": "E12S53",
-				"type": "road",
-				"x": 28,
-				"y": 39
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "ee7e95c2901e41bee9ea841b",
-				"room": "E12S53",
-				"type": "road",
-				"x": 28,
-				"y": 40
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "db387c3d6d2fe9a158c2d364",
-				"room": "E12S53",
-				"type": "road",
-				"x": 29,
-				"y": 41
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "7081e057b6aa67b93c74fb13",
-				"room": "E12S53",
-				"type": "road",
-				"x": 29,
-				"y": 42
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "2b00780ec396ff0feaa1fcb5",
-				"room": "E12S53",
-				"type": "road",
-				"x": 29,
-				"y": 43
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "f3a0886bf5cf408d472fee62",
-				"room": "E12S53",
-				"type": "road",
-				"x": 28,
-				"y": 44
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "37302413152dbce7589d18ad",
-				"room": "E12S53",
-				"type": "road",
-				"x": 27,
-				"y": 45
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "6890c5d592ef790ebe3dce7e",
-				"room": "E12S53",
-				"type": "road",
-				"x": 26,
-				"y": 46
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "4fdb19cbb8a6fdd350d1ad3a",
-				"room": "E12S53",
-				"type": "road",
-				"x": 28,
-				"y": 44
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "17a1a91a93e4a982c1bb02c5",
-				"room": "E12S53",
-				"type": "road",
-				"x": 27,
-				"y": 45
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "f365444e2d153a8d550da294",
-				"room": "E12S53",
-				"type": "road",
-				"x": 26,
-				"y": 46
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "d919ed5a654c1155ea537ec3",
-				"room": "E12S53",
-				"type": "road",
-				"x": 25,
-				"y": 47
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "bd025089725709be74bb456c",
-				"room": "E12S53",
-				"type": "road",
-				"x": 24,
-				"y": 48
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "8080e01139005339fb9e13a4",
-				"room": "E12S53",
-				"type": "road",
-				"x": 6,
-				"y": 13
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "1e5056e890f815a7dcbc1559",
-				"room": "E12S53",
-				"type": "road",
-				"x": 5,
-				"y": 14
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "16fe2a63b87f555a8061e6b3",
-				"room": "E12S53",
-				"type": "road",
-				"x": 4,
-				"y": 15
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "5c9750ce4e6e1ba073cf9e4b",
-				"room": "E12S53",
-				"type": "road",
-				"x": 3,
-				"y": 15
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "13f4a765984da6b5d6065896",
-				"room": "E12S53",
-				"type": "road",
-				"x": 2,
-				"y": 15
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "c275a364e4c49cc6b76c90d7",
-				"room": "E12S53",
-				"type": "road",
-				"x": 1,
-				"y": 16
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "b31abbcd0fd632cedeb2e032",
-				"room": "E12S53",
-				"type": "road",
-				"x": 1,
-				"y": 17
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "2b6e15d138afdb621b10a160",
-				"room": "E12S53",
-				"type": "road",
-				"x": 1,
-				"y": 18
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "b0b1d9127224de9a85f6ffcc",
-				"room": "E12S53",
-				"type": "road",
-				"x": 1,
-				"y": 19
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "4b50eed277e3863b33e5a451",
-				"room": "E12S53",
-				"type": "road",
-				"x": 1,
-				"y": 20
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "a23b1e8642a7398aa3b94e55",
-				"room": "E12S53",
-				"type": "road",
-				"x": 1,
-				"y": 21
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "6445418a55be7d7148275ed4",
-				"room": "E12S53",
-				"type": "road",
-				"x": 1,
-				"y": 22
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "acc0a6d3a10d131509c7adbe",
-				"room": "E12S53",
-				"type": "road",
-				"x": 1,
-				"y": 23
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "037c976b8675eebabbd82824",
-				"room": "E12S53",
-				"type": "road",
-				"x": 1,
-				"y": 24
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "5100fb576eed789ab071b33d",
-				"room": "E12S53",
-				"type": "road",
-				"x": 6,
-				"y": 13
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "9129d352f651a318ed2d47a5",
-				"room": "E12S53",
-				"type": "road",
-				"x": 7,
-				"y": 14
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "0aad5b3553fac1e15c21800f",
-				"room": "E12S53",
-				"type": "road",
-				"x": 8,
-				"y": 15
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "7cd2998ab2f3fd8468026bbf",
-				"room": "E12S53",
-				"type": "road",
-				"x": 9,
-				"y": 15
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "f113d49614d297c4feab1b37",
-				"room": "E12S53",
-				"type": "road",
-				"x": 10,
-				"y": 15
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "d43beede211011b99b414dc7",
-				"room": "E12S53",
-				"type": "road",
-				"x": 11,
-				"y": 15
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "bdbe989a857619eb8faa6bed",
-				"room": "E12S53",
-				"type": "road",
-				"x": 12,
-				"y": 15
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "accba4163e497dbd7468c4d2",
-				"room": "E12S53",
-				"type": "road",
-				"x": 13,
-				"y": 15
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "43c840e349bb47d797fae324",
-				"room": "E12S53",
-				"type": "road",
-				"x": 14,
-				"y": 16
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "e697d2ebcacce7ecd2f36fee",
-				"room": "E12S53",
-				"type": "road",
-				"x": 15,
-				"y": 17
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "35fce0a4c24d141c5b2d02c9",
-				"room": "E12S53",
-				"type": "road",
-				"x": 16,
-				"y": 18
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "1d4812928e1e2aa874436a3b",
-				"room": "E12S53",
-				"type": "road",
-				"x": 17,
-				"y": 19
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "885955da1484e14ce523c761",
-				"room": "E12S53",
-				"type": "road",
-				"x": 18,
-				"y": 20
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "96b5c125c23bc334f63761d1",
-				"room": "E12S53",
-				"type": "road",
-				"x": 19,
-				"y": 21
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "2cdfb558a395c5bc3c399433",
-				"room": "E12S53",
-				"type": "road",
-				"x": 19,
-				"y": 22
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "b79bcecd82315671077567d6",
-				"room": "E12S53",
-				"type": "road",
-				"x": 20,
-				"y": 23
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "ceadbe611db8bbdb004f7d5c",
-				"room": "E12S53",
-				"type": "road",
-				"x": 21,
-				"y": 24
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "fbcd9dbb867dd3d78b685860",
-				"room": "E12S53",
-				"type": "road",
-				"x": 22,
-				"y": 25
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "38cd55db25c1ab3189a9d661",
-				"room": "E12S53",
-				"type": "road",
-				"x": 23,
-				"y": 26
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "5c480040d39b7473e6b43680",
-				"room": "E12S53",
-				"type": "road",
-				"x": 24,
-				"y": 27
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "b5dbd5a27f54864c94c4ef43",
-				"room": "E12S53",
-				"type": "road",
-				"x": 25,
-				"y": 27
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "c84cf6bcb86a2c23aee63e61",
-				"room": "E12S53",
-				"type": "road",
-				"x": 26,
-				"y": 27
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "805963c784e4c9000f6ca3db",
-				"room": "E12S53",
-				"type": "road",
-				"x": 27,
-				"y": 28
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "b1caad7f39bbb664491161ed",
-				"room": "E12S53",
-				"type": "road",
-				"x": 27,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "8bfd7a7dd5cbfe18cda09ebd",
-				"room": "E12S53",
-				"type": "road",
-				"x": 27,
-				"y": 30
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "73eca6fc60ec9eaf38b9bfa8",
-				"room": "E12S53",
-				"type": "road",
-				"x": 27,
-				"y": 31
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "e13a8b89ddcb245274a16f8e",
-				"room": "E12S53",
-				"type": "road",
-				"x": 27,
-				"y": 32
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "8fcf0ac00737ad685546432f",
-				"room": "E12S53",
-				"type": "road",
-				"x": 26,
-				"y": 33
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "827b185cd04e74f78f25b89a",
-				"room": "E12S53",
-				"type": "road",
-				"x": 26,
-				"y": 34
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "163a218ed0f7401eaad11ffe",
-				"room": "E12S53",
-				"type": "road",
-				"x": 26,
-				"y": 35
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "b0e5e0da11057197a39a4ad4",
-				"room": "E12S53",
-				"type": "road",
-				"x": 26,
-				"y": 36
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "5ada8b81487af6742e2d3abe",
-				"room": "E12S53",
-				"type": "road",
-				"x": 26,
-				"y": 37
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "630bd491ea43900593948990",
-				"room": "E12S53",
-				"type": "road",
-				"x": 27,
-				"y": 38
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "0e57664005e5426ab1862297",
-				"room": "E12S53",
-				"type": "road",
-				"x": 28,
-				"y": 39
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "58cf90368a9cbb58fc30c8a5",
-				"room": "E12S53",
-				"type": "road",
-				"x": 28,
-				"y": 40
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "ee76c10b1095f979fbe34f67",
-				"room": "E12S53",
-				"type": "road",
-				"x": 29,
-				"y": 41
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "c6d88b96e5473430f841a324",
-				"room": "E12S53",
-				"type": "road",
-				"x": 29,
-				"y": 42
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "6abb435d40c1256517cb6067",
-				"room": "E12S53",
-				"type": "road",
-				"x": 29,
-				"y": 43
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "a17e35b9c81b32431adbeebd",
-				"room": "E12S53",
-				"type": "road",
-				"x": 28,
-				"y": 44
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "492951cefe18f015397884f6",
-				"room": "E12S53",
-				"type": "road",
-				"x": 27,
-				"y": 45
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "714ec4980e66f140e11cab24",
-				"room": "E12S53",
-				"type": "road",
-				"x": 26,
-				"y": 46
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "9b27690996dc49c17fdc60fc",
-				"room": "E12S53",
-				"type": "road",
-				"x": 27,
-				"y": 38
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "a3d3779151a8dc4201f5e15e",
-				"room": "E12S53",
-				"type": "road",
-				"x": 28,
-				"y": 38
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "1487974faf69a0e29c8afc6b",
-				"room": "E12S53",
-				"type": "road",
-				"x": 29,
-				"y": 38
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "07736c211ba0bdf893e338cf",
-				"room": "E12S53",
-				"type": "road",
-				"x": 35,
-				"y": 39
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "e6829820f231505621989ec7",
-				"room": "E12S53",
-				"type": "road",
-				"x": 35,
-				"y": 40
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "346d298a5f62cde122b0e47e",
-				"room": "E12S53",
-				"type": "road",
-				"x": 35,
-				"y": 41
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "36bf7037aeda4e11eb3b488f",
-				"room": "E12S53",
-				"type": "road",
-				"x": 35,
-				"y": 42
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "dab26347ba308941c28135b1",
-				"room": "E12S53",
-				"type": "road",
-				"x": 35,
-				"y": 43
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "10f92c8ddb0d790192ba31c5",
-				"room": "E12S53",
-				"type": "road",
-				"x": 35,
-				"y": 44
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "892ee48763dd4e68b80465f6",
-				"room": "E12S53",
-				"type": "road",
-				"x": 28,
-				"y": 46
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "6badd029d75ed8629e6a637f",
-				"room": "E12S53",
-				"type": "road",
-				"x": 27,
-				"y": 46
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "d660568e1dfc2e56023b2ba8",
-				"room": "E12S53",
-				"type": "road",
-				"x": 27,
-				"y": 45
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "453ca491d48e4be92b8984b9",
-				"room": "E12S53",
-				"type": "spawn",
-				"x": 30,
-				"y": 42
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "7a41c2ab4fa177a5e6410088",
-				"room": "E12S53",
-				"type": "storage",
-				"x": 32,
-				"y": 42
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "a21d698029e2940054430834",
-				"room": "E12S53",
-				"type": "link",
-				"x": 30,
-				"y": 41
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "86ef16ab76c161ab96505ef2",
-				"room": "E12S53",
-				"type": "terminal",
-				"x": 30,
-				"y": 43
-			},
-			{
+				"y": 43,
+				"energy": 1500,
+				"energyCapacity": 3000,
 				"hits": 100,
 				"hitsMax": 100,
-				"_id": "931da05cde6aed2446bfaffb",
-				"room": "E12S53",
-				"type": "nuker",
-				"x": 31,
-				"y": 41
+				"level": 8,
+				"progressTotal": 0,
+				"progress": 0,
+				"downgradeTime": 18700000,
+				"user": "5a71934f7037f829c0ba0e11",
+				"sign": null
 			},
 			{
 				"hits": 100,
 				"hitsMax": 100,
-				"_id": "80782e253f18e02330e52578",
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "99beeb562f3b241f5eae36ac",
 				"room": "E12S53",
 				"type": "factory",
 				"x": 31,
-				"y": 43
+				"y": 43,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11",
+				"storeCapacity": 2000,
+				"store": {
+					"energy": 200
+				},
+				"cooldown": 0,
+				"actionLog": {
+					"transferEnergy": null
+				},
+				"storeCapacityResource": {
+					"energy": 800
+				}
 			},
 			{
 				"hits": 100,
 				"hitsMax": 100,
-				"_id": "1d0d481f424864b68fc3bbd0",
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "8823aba40e15ae43aa26caee",
 				"room": "E12S53",
-				"type": "tower",
-				"x": 32,
-				"y": 41
+				"type": "link",
+				"x": 30,
+				"y": 41,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11",
+				"cooldown": 0,
+				"actionLog": {
+					"transferEnergy": null
+				},
+				"store": {
+					"energy": 200
+				},
+				"storeCapacityResource": {
+					"energy": 800
+				}
+			},
+			{
+				"_id": "82f4cbb0298eb5db1df77f89",
+				"type": "mineral",
+				"room": "E12S53",
+				"x": 7,
+				"y": 12,
+				"hits": 100,
+				"hitsMax": 100,
+				"nextRegenerationTime": 300,
+				"mineralType": "X",
+				"mineralAmount": 30580,
+				"density": 3
 			},
 			{
 				"hits": 100,
 				"hitsMax": 100,
-				"_id": "ac067c1dec320049b86e42f7",
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "c67b7257397824d662a72236",
+				"room": "E12S53",
+				"type": "nuker",
+				"x": 31,
+				"y": 41,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11",
+				"cooldownTime": 100,
+				"store": {
+					"energy": 5000,
+					"G": 5000
+				},
+				"storeCapacityResource": {
+					"energy": 300000,
+					"G": 5000
+				}
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "01b15161d1182166048e1f39",
 				"room": "E12S53",
 				"type": "powerSpawn",
 				"x": 32,
-				"y": 43
+				"y": 43,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11",
+				"store": {
+					"energy": 50
+				},
+				"storeCapacityResource": {
+					"energy": 300
+				}
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "56b47bc9f8b592274ac78c74",
+				"room": "E12S53",
+				"type": "road",
+				"x": 6,
+				"y": 13,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "098342b8aa6f0391efcaf7a5",
+				"room": "E12S53",
+				"type": "road",
+				"x": 6,
+				"y": 13,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "e7d44e06560e6d6692932dfd",
+				"room": "E12S53",
+				"type": "road",
+				"x": 5,
+				"y": 14,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "1200d85c404cc1ad18f155a7",
+				"room": "E12S53",
+				"type": "road",
+				"x": 7,
+				"y": 14,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "a2500a977b2fc906e38fed62",
+				"room": "E12S53",
+				"type": "road",
+				"x": 2,
+				"y": 15,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "bfc5c9d556ac857642cfd7cf",
+				"room": "E12S53",
+				"type": "road",
+				"x": 3,
+				"y": 15,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "f1e9eaf0962c501bb1d22305",
+				"room": "E12S53",
+				"type": "road",
+				"x": 4,
+				"y": 15,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "3f1686fdbb3231f47859cc88",
+				"room": "E12S53",
+				"type": "road",
+				"x": 8,
+				"y": 15,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "b9534966fbe25cff46be2f7f",
+				"room": "E12S53",
+				"type": "road",
+				"x": 9,
+				"y": 15,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "1b3a104d80af9c0fef22d5be",
+				"room": "E12S53",
+				"type": "road",
+				"x": 10,
+				"y": 15,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "0cad314ac32720e08fef8593",
+				"room": "E12S53",
+				"type": "road",
+				"x": 11,
+				"y": 15,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "8b7f07f2f7c90b8cde68017c",
+				"room": "E12S53",
+				"type": "road",
+				"x": 12,
+				"y": 15,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "3985b3ad9a973443db5aafef",
+				"room": "E12S53",
+				"type": "road",
+				"x": 13,
+				"y": 15,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "ba2fe2fddf1c163a28d851af",
+				"room": "E12S53",
+				"type": "road",
+				"x": 1,
+				"y": 16,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "20b2f4949e5982be8d14c2e2",
+				"room": "E12S53",
+				"type": "road",
+				"x": 14,
+				"y": 16,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "0f5eeaff755290295ba805a2",
+				"room": "E12S53",
+				"type": "road",
+				"x": 1,
+				"y": 17,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "2bcb58368677c02f3995e387",
+				"room": "E12S53",
+				"type": "road",
+				"x": 15,
+				"y": 17,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "8648b678271de69a44e6552d",
+				"room": "E12S53",
+				"type": "road",
+				"x": 1,
+				"y": 18,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "70bf13b05549aebe06789b5e",
+				"room": "E12S53",
+				"type": "road",
+				"x": 16,
+				"y": 18,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "c5370f8c5371fb23d3fc1076",
+				"room": "E12S53",
+				"type": "road",
+				"x": 1,
+				"y": 19,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "ae9ba42a920de81672898fb1",
+				"room": "E12S53",
+				"type": "road",
+				"x": 17,
+				"y": 19,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "49ebd9ea6214b1c426a8ff71",
+				"room": "E12S53",
+				"type": "road",
+				"x": 1,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "9a875fe25126c637fcc96982",
+				"room": "E12S53",
+				"type": "road",
+				"x": 18,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "85558307a138f8beff2f59f8",
+				"room": "E12S53",
+				"type": "road",
+				"x": 29,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "3f0f4df6363f5d510b44e8c4",
+				"room": "E12S53",
+				"type": "road",
+				"x": 1,
+				"y": 21,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "dbc44200660b24a225e863d0",
+				"room": "E12S53",
+				"type": "road",
+				"x": 19,
+				"y": 21,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "336c0466e5343b7935e0fc78",
+				"room": "E12S53",
+				"type": "road",
+				"x": 29,
+				"y": 21,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "bc6bc9a6e0b89316d3d1a52b",
+				"room": "E12S53",
+				"type": "road",
+				"x": 1,
+				"y": 22,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "9e71d53d0e1f3ced09103b17",
+				"room": "E12S53",
+				"type": "road",
+				"x": 19,
+				"y": 22,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "cb0a377187f9f10e2b1def77",
+				"room": "E12S53",
+				"type": "road",
+				"x": 29,
+				"y": 22,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "81f3ef8ad1cf246de9e878c8",
+				"room": "E12S53",
+				"type": "road",
+				"x": 1,
+				"y": 23,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "c5ad3f05cc78b9e80e5f064c",
+				"room": "E12S53",
+				"type": "road",
+				"x": 20,
+				"y": 23,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "44bce4a4c89b0f3e3ef3741d",
+				"room": "E12S53",
+				"type": "road",
+				"x": 29,
+				"y": 23,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "0dded868c0072af236d5cfe9",
+				"room": "E12S53",
+				"type": "road",
+				"x": 1,
+				"y": 24,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "1dd682313f5a45de55c13a25",
+				"room": "E12S53",
+				"type": "road",
+				"x": 1,
+				"y": 24,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "10946d520094dd9d8f307e5a",
+				"room": "E12S53",
+				"type": "road",
+				"x": 2,
+				"y": 24,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "421b01b7bc63dd3feabdfd9a",
+				"room": "E12S53",
+				"type": "road",
+				"x": 3,
+				"y": 24,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "fa34258a1316b1cd12cf68b2",
+				"room": "E12S53",
+				"type": "road",
+				"x": 4,
+				"y": 24,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "8d447931d5f12b2ca33821cd",
+				"room": "E12S53",
+				"type": "road",
+				"x": 5,
+				"y": 24,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "ac41ed5a9813de4d8007c650",
+				"room": "E12S53",
+				"type": "road",
+				"x": 6,
+				"y": 24,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "3a30635ffbdf913ea580aa25",
+				"room": "E12S53",
+				"type": "road",
+				"x": 7,
+				"y": 24,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "a63f5b1a640fe0dec5a3e076",
+				"room": "E12S53",
+				"type": "road",
+				"x": 8,
+				"y": 24,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "1dd663b8e0a2aa7053a09c45",
+				"room": "E12S53",
+				"type": "road",
+				"x": 15,
+				"y": 24,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "f877c2ce071a168c079ee725",
+				"room": "E12S53",
+				"type": "road",
+				"x": 21,
+				"y": 24,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "cfb09896323a7fed0649aed4",
+				"room": "E12S53",
+				"type": "road",
+				"x": 28,
+				"y": 24,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "297c6b592fb59613ff81c05c",
+				"room": "E12S53",
+				"type": "road",
+				"x": 9,
+				"y": 25,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "3567cb0281c04ae518382360",
+				"room": "E12S53",
+				"type": "road",
+				"x": 14,
+				"y": 25,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "a51951be12e8f4e41d3a8dfa",
+				"room": "E12S53",
+				"type": "road",
+				"x": 22,
+				"y": 25,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "f89dd1282af8c8af5ee5a871",
+				"room": "E12S53",
+				"type": "road",
+				"x": 27,
+				"y": 25,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "60d5ce1b607511e36a556fd3",
+				"room": "E12S53",
+				"type": "road",
+				"x": 10,
+				"y": 26,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "7db96da8df5b9d20135a3830",
+				"room": "E12S53",
+				"type": "road",
+				"x": 13,
+				"y": 26,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "a3f9fdf1eedfc957b2f5ef62",
+				"room": "E12S53",
+				"type": "road",
+				"x": 23,
+				"y": 26,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "3b61e6e01289bcd646907593",
+				"room": "E12S53",
+				"type": "road",
+				"x": 26,
+				"y": 26,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "6babce96b80c2b4ff886726b",
+				"room": "E12S53",
+				"type": "road",
+				"x": 11,
+				"y": 27,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "5a1122fbab2c22f427ade751",
+				"room": "E12S53",
+				"type": "road",
+				"x": 12,
+				"y": 27,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "882d4e00927a16ed1629940e",
+				"room": "E12S53",
+				"type": "road",
+				"x": 24,
+				"y": 27,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "31e74e5a92e9a0e56a9652f0",
+				"room": "E12S53",
+				"type": "road",
+				"x": 25,
+				"y": 27,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d0d929206c144059435b84e0",
+				"room": "E12S53",
+				"type": "road",
+				"x": 26,
+				"y": 27,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d3cfb563e3dd307131310944",
+				"room": "E12S53",
+				"type": "road",
+				"x": 26,
+				"y": 27,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "405061df677dcc7f6b58c528",
+				"room": "E12S53",
+				"type": "road",
+				"x": 12,
+				"y": 28,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "536c951095774344c06b4e39",
+				"room": "E12S53",
+				"type": "road",
+				"x": 12,
+				"y": 28,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "71a8b93c3ecbe6c082801d6f",
+				"room": "E12S53",
+				"type": "road",
+				"x": 27,
+				"y": 28,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "67ebc9881da4ed73ea7226e4",
+				"room": "E12S53",
+				"type": "road",
+				"x": 27,
+				"y": 28,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "ae09bdce018b7b292693a399",
+				"room": "E12S53",
+				"type": "road",
+				"x": 27,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "921a6a1113dda8f28dd13256",
+				"room": "E12S53",
+				"type": "road",
+				"x": 27,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "3c084e531cf5769d6bf05f4f",
+				"room": "E12S53",
+				"type": "road",
+				"x": 27,
+				"y": 30,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "b5a6f7ee4ddec99228ddd6b5",
+				"room": "E12S53",
+				"type": "road",
+				"x": 27,
+				"y": 30,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "cb472e7a856c0b8a2a979707",
+				"room": "E12S53",
+				"type": "road",
+				"x": 27,
+				"y": 31,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "b04d2bb26a51298f1302974e",
+				"room": "E12S53",
+				"type": "road",
+				"x": 27,
+				"y": 31,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "a6d0cf04028302e7c7346ddf",
+				"room": "E12S53",
+				"type": "road",
+				"x": 27,
+				"y": 32,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "147a14817fcd820b74530b1d",
+				"room": "E12S53",
+				"type": "road",
+				"x": 27,
+				"y": 32,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "db910fdbaa6c8c0565036e9c",
+				"room": "E12S53",
+				"type": "road",
+				"x": 26,
+				"y": 33,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "c7bdf5c4da574449b9935af9",
+				"room": "E12S53",
+				"type": "road",
+				"x": 26,
+				"y": 33,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "313be9997a3673775f5b7186",
+				"room": "E12S53",
+				"type": "road",
+				"x": 26,
+				"y": 34,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "5c44024d70857f169683b0d3",
+				"room": "E12S53",
+				"type": "road",
+				"x": 26,
+				"y": 34,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d7c1edce323f76fa173f102f",
+				"room": "E12S53",
+				"type": "road",
+				"x": 26,
+				"y": 35,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "7c93559e86655d36395cfd6d",
+				"room": "E12S53",
+				"type": "road",
+				"x": 26,
+				"y": 35,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "ce6715c1b7700118371063ef",
+				"room": "E12S53",
+				"type": "road",
+				"x": 26,
+				"y": 36,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "5d151e3984dc18225fcd6e45",
+				"room": "E12S53",
+				"type": "road",
+				"x": 26,
+				"y": 36,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "81c12e69fa1fca16d936a335",
+				"room": "E12S53",
+				"type": "road",
+				"x": 26,
+				"y": 37,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "c694859c11e69f2bff4531ac",
+				"room": "E12S53",
+				"type": "road",
+				"x": 26,
+				"y": 37,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "31d5253a559d959ccf5b4f48",
+				"room": "E12S53",
+				"type": "road",
+				"x": 27,
+				"y": 38,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "43d3166ae420cd1622392ffb",
+				"room": "E12S53",
+				"type": "road",
+				"x": 27,
+				"y": 38,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "42b71ad263658629f6ebf8ea",
+				"room": "E12S53",
+				"type": "road",
+				"x": 28,
+				"y": 39,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "ff6f5d5f51ec309da7605c0c",
+				"room": "E12S53",
+				"type": "road",
+				"x": 28,
+				"y": 39,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "45badd2be1fcd73e7fa6fa2f",
+				"room": "E12S53",
+				"type": "road",
+				"x": 28,
+				"y": 39,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "fd2d25e0f7c1fe5cac402f39",
+				"room": "E12S53",
+				"type": "road",
+				"x": 29,
+				"y": 39,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "1cfab714710906c209cf4bd4",
+				"room": "E12S53",
+				"type": "road",
+				"x": 28,
+				"y": 40,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "0497813d5e60edb16a1808e8",
+				"room": "E12S53",
+				"type": "road",
+				"x": 28,
+				"y": 40,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "5c3cdc23ddcdd0c1899a244a",
+				"room": "E12S53",
+				"type": "road",
+				"x": 28,
+				"y": 40,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "5dc23b0c4ed35f2d1a3f94c2",
+				"room": "E12S53",
+				"type": "road",
+				"x": 34,
+				"y": 40,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "b0e4685a67e84b2579f26581",
+				"room": "E12S53",
+				"type": "road",
+				"x": 29,
+				"y": 41,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d5b1ef1ec6711af45c9c7cfa",
+				"room": "E12S53",
+				"type": "road",
+				"x": 29,
+				"y": 41,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "b5dfe3621e7dfb6e20bdb31d",
+				"room": "E12S53",
+				"type": "road",
+				"x": 34,
+				"y": 41,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "c2973073d091394ae92c8226",
+				"room": "E12S53",
+				"type": "road",
+				"x": 29,
+				"y": 42,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "1e3a9e2298296d3f34ef2eae",
+				"room": "E12S53",
+				"type": "road",
+				"x": 29,
+				"y": 42,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "ad2c28f54f2f1ae59780639d",
+				"room": "E12S53",
+				"type": "road",
+				"x": 34,
+				"y": 42,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "77bb5954674a10d848baf851",
+				"room": "E12S53",
+				"type": "road",
+				"x": 29,
+				"y": 43,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "c49027b48ff1fea14c233f9b",
+				"room": "E12S53",
+				"type": "road",
+				"x": 29,
+				"y": 43,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "9815aea2e1b6b41b9d857911",
+				"room": "E12S53",
+				"type": "road",
+				"x": 34,
+				"y": 43,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "b55abb2207e5e44a5ff26df0",
+				"room": "E12S53",
+				"type": "road",
+				"x": 28,
+				"y": 44,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "fb0c7baa3d5c1d209e500d3c",
+				"room": "E12S53",
+				"type": "road",
+				"x": 28,
+				"y": 44,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "b2541f37421651a844a0e672",
+				"room": "E12S53",
+				"type": "road",
+				"x": 28,
+				"y": 44,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "53bb6ea560824b331454ef99",
+				"room": "E12S53",
+				"type": "road",
+				"x": 28,
+				"y": 44,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "888d6e60915bd8cf7da7a40f",
+				"room": "E12S53",
+				"type": "road",
+				"x": 34,
+				"y": 44,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "199c141ee934cb04a929673f",
+				"room": "E12S53",
+				"type": "road",
+				"x": 27,
+				"y": 45,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "88b9d95391455e3cf777ccaa",
+				"room": "E12S53",
+				"type": "road",
+				"x": 27,
+				"y": 45,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "c568c2b879ccfd8f09a6b975",
+				"room": "E12S53",
+				"type": "road",
+				"x": 27,
+				"y": 45,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "faa146ab18311af408f3c874",
+				"room": "E12S53",
+				"type": "road",
+				"x": 28,
+				"y": 45,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d200c08e0bb4cb4fd052105c",
+				"room": "E12S53",
+				"type": "road",
+				"x": 29,
+				"y": 45,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "bc77629310385537f6b0b804",
+				"room": "E12S53",
+				"type": "road",
+				"x": 26,
+				"y": 46,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "ed1e9b8f4539724a9fe9ee63",
+				"room": "E12S53",
+				"type": "road",
+				"x": 26,
+				"y": 46,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "9b95012221eb8e7d2e4ec0ec",
+				"room": "E12S53",
+				"type": "road",
+				"x": 26,
+				"y": 46,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "20604c6ff1f44664180718a7",
+				"room": "E12S53",
+				"type": "road",
+				"x": 25,
+				"y": 47,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "caad2b8bf072d405f45be995",
+				"room": "E12S53",
+				"type": "road",
+				"x": 24,
+				"y": 48,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"_id": "636febb66d788f2fb4e34cdb",
+				"type": "source",
+				"room": "E12S53",
+				"x": 28,
+				"y": 19,
+				"energy": 1500,
+				"energyCapacity": 3000,
+				"hits": 100,
+				"hitsMax": 100,
+				"ticksToRegeneration": 300,
+				"nextRegenerationTime": 500
+			},
+			{
+				"_id": "d29da43d2be0547e66a123dc",
+				"type": "source",
+				"room": "E12S53",
+				"x": 13,
+				"y": 29,
+				"energy": 1500,
+				"energyCapacity": 3000,
+				"hits": 100,
+				"hitsMax": 100,
+				"ticksToRegeneration": 300,
+				"nextRegenerationTime": 500
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "ad32ab91402b8aa759d2f817",
+				"room": "E12S53",
+				"type": "spawn",
+				"x": 30,
+				"y": 42,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11",
+				"store": {
+					"energy": 3000,
+					"power": 65
+				},
+				"storeCapacityResource": {
+					"energy": 5000,
+					"power": 100
+				},
+				"off": false,
+				"spawning": null
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "fc5d8d818371ca2096fa3f3c",
+				"room": "E12S53",
+				"type": "storage",
+				"x": 32,
+				"y": 42,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11",
+				"store": {
+					"energy": 400000
+				},
+				"storeCapacity": 1000000
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "2e1c0f4adad367d548caa2b0",
+				"room": "E12S53",
+				"type": "terminal",
+				"x": 30,
+				"y": 43,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "078f8c7ca05a19c43bf6ab50",
+				"room": "E12S53",
+				"type": "tower",
+				"x": 32,
+				"y": 41,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11",
+				"actionLog": {
+					"attack": null,
+					"heal": null,
+					"repair": null
+				},
+				"store": {
+					"energy": 100
+				},
+				"storeCapacityResource": {
+					"energy": 1000
+				}
 			}
 		],
-		"gameTime": 1
+		"gameTime": 1,
+		"users": {
+			"Invader": {
+				"_id": "0",
+				"username": "Invader"
+			},
+			"5a71934f7037f829c0ba0e11": {
+				"_id": "5a71934f7037f829c0ba0e11",
+				"username": "TestUser",
+				"badge": {
+					"type": 2,
+					"color1": "#000000",
+					"color2": "#028300",
+					"color3": "#8b5c00",
+					"param": 0,
+					"flip": false
+				}
+			}
+		}
 	}
 ];
 
@@ -92670,1717 +93502,2586 @@ module.exports = [
 	{
 		"objects": [
 			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "dcfc5a10371ac9f9b3013e45",
+				"_id": "546b088604f016ce894dde8f",
+				"type": "controller",
 				"room": "E16S59",
-				"type": "road",
-				"x": 6,
-				"y": 17
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "5e7e3d1c820af5ad1296ab8f",
-				"room": "E16S59",
-				"type": "road",
-				"x": 5,
-				"y": 18
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "60117204d4fb0d103fc2af78",
-				"room": "E16S59",
-				"type": "road",
-				"x": 4,
-				"y": 19
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "3b801f49b64d6c16a9e4c424",
-				"room": "E16S59",
-				"type": "road",
-				"x": 3,
-				"y": 20
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "7e4f4e9fb773b496a1e630db",
-				"room": "E16S59",
-				"type": "road",
-				"x": 3,
-				"y": 21
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "c02a7215b7ab16949111e74e",
-				"room": "E16S59",
-				"type": "road",
-				"x": 4,
-				"y": 22
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "057754379cafbb5ada275040",
-				"room": "E16S59",
-				"type": "road",
-				"x": 4,
-				"y": 23
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "ca24654ebdc729a8dcbd88d9",
-				"room": "E16S59",
-				"type": "road",
-				"x": 4,
-				"y": 24
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "96e9f509e1e58818ccbd59f5",
-				"room": "E16S59",
-				"type": "road",
-				"x": 4,
-				"y": 25
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "e7584bd640207eb242e8f3e5",
-				"room": "E16S59",
-				"type": "road",
-				"x": 4,
-				"y": 26
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "bd68abce2942b2e9570f801c",
-				"room": "E16S59",
-				"type": "road",
-				"x": 4,
-				"y": 27
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "ad315504756ee2f54b4cfc2e",
-				"room": "E16S59",
-				"type": "road",
-				"x": 4,
-				"y": 28
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "ac72362283aff0ec507039c0",
-				"room": "E16S59",
-				"type": "road",
-				"x": 4,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "f443052b80c6e55c81967e66",
-				"room": "E16S59",
-				"type": "road",
-				"x": 4,
-				"y": 30
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "cbd8f2f6fcabae32b7a8706c",
-				"room": "E16S59",
-				"type": "road",
-				"x": 3,
-				"y": 31
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "697def93318b1c7e3626eacc",
-				"room": "E16S59",
-				"type": "road",
-				"x": 7,
-				"y": 17
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "88a779dc76355952a21cc54b",
-				"room": "E16S59",
-				"type": "road",
-				"x": 7,
-				"y": 18
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "c130b40e4cb2b61c8d9d3a45",
-				"room": "E16S59",
-				"type": "road",
-				"x": 8,
-				"y": 19
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "e81021a7f1997a9830ac30a7",
-				"room": "E16S59",
-				"type": "road",
-				"x": 7,
-				"y": 20
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "ca8f0378e22c997d78b64b09",
-				"room": "E16S59",
-				"type": "road",
-				"x": 7,
-				"y": 21
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "ca2eedc77364b72371dc6758",
-				"room": "E16S59",
-				"type": "road",
-				"x": 7,
-				"y": 22
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "b6db144d57e42ad73fdaafa6",
-				"room": "E16S59",
-				"type": "road",
-				"x": 7,
-				"y": 23
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "dc5ba4e87d93d00e61edc9cc",
-				"room": "E16S59",
-				"type": "road",
-				"x": 7,
-				"y": 24
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "c4ef78f7e57a4f4012f8f6bb",
-				"room": "E16S59",
-				"type": "road",
-				"x": 7,
-				"y": 25
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "326c94be20e26fbd3f634274",
-				"room": "E16S59",
-				"type": "road",
-				"x": 7,
-				"y": 26
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "680bd8e43b5a1d1768e655ba",
-				"room": "E16S59",
-				"type": "road",
-				"x": 7,
-				"y": 27
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "a62a959243db1306470e4542",
-				"room": "E16S59",
-				"type": "road",
-				"x": 8,
-				"y": 28
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "be9b383ef3d97e05e01a24c0",
-				"room": "E16S59",
-				"type": "road",
-				"x": 9,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "5aa47f6fa31e36177a2cf993",
-				"room": "E16S59",
-				"type": "road",
-				"x": 10,
-				"y": 30
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "205a4afa1f737738178fc2a3",
-				"room": "E16S59",
-				"type": "road",
-				"x": 11,
-				"y": 31
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "c6fe4a44e58b0f3f76f30259",
-				"room": "E16S59",
-				"type": "road",
-				"x": 12,
-				"y": 32
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "f35eb02f942579bdce5a1581",
-				"room": "E16S59",
-				"type": "road",
-				"x": 13,
-				"y": 33
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "8c5a915be237e3e4fe4b8d23",
-				"room": "E16S59",
-				"type": "road",
-				"x": 14,
-				"y": 34
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "981e4c9afa99ff85ef57a963",
-				"room": "E16S59",
-				"type": "road",
-				"x": 15,
-				"y": 34
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "953a9ad2c1359fc4ce1dd822",
-				"room": "E16S59",
-				"type": "road",
-				"x": 16,
-				"y": 33
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "98cc230143bc9b30de62e6d0",
-				"room": "E16S59",
-				"type": "road",
-				"x": 17,
-				"y": 34
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "a819be38bd283768a8290ac5",
-				"room": "E16S59",
-				"type": "road",
-				"x": 18,
-				"y": 35
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "b433624f8803739951b6d2af",
-				"room": "E16S59",
-				"type": "road",
-				"x": 19,
-				"y": 36
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "61a2395e41e041c23f82b680",
-				"room": "E16S59",
-				"type": "road",
-				"x": 20,
-				"y": 37
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "39f39ccda5b2426a3c1f71a7",
-				"room": "E16S59",
-				"type": "road",
-				"x": 21,
-				"y": 38
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "2e6ef9a1a56e65fe76a62a31",
-				"room": "E16S59",
-				"type": "road",
-				"x": 22,
-				"y": 39
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "971790a90f3df57a48198698",
-				"room": "E16S59",
-				"type": "road",
-				"x": 23,
-				"y": 39
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "eb69e4a4a6a510ba484788c9",
-				"room": "E16S59",
-				"type": "road",
-				"x": 6,
-				"y": 17
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "1636aa5819bb8ef7265e052f",
-				"room": "E16S59",
-				"type": "road",
-				"x": 5,
-				"y": 18
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "69e8ff4b7d8d7d0055942e35",
-				"room": "E16S59",
-				"type": "road",
-				"x": 4,
-				"y": 19
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "801772aebb19c01be09c228d",
-				"room": "E16S59",
-				"type": "road",
-				"x": 3,
-				"y": 20
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "790998fbcbfaefaec3cd0013",
-				"room": "E16S59",
-				"type": "road",
-				"x": 2,
-				"y": 21
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "a6e58a6e0d8bcf7e265f271c",
-				"room": "E16S59",
-				"type": "road",
-				"x": 2,
-				"y": 22
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "c589c0b02c9f20349450d318",
-				"room": "E16S59",
-				"type": "road",
-				"x": 2,
-				"y": 23
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "f7deb29547a4190083208406",
-				"room": "E16S59",
-				"type": "road",
-				"x": 2,
-				"y": 24
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "7992bea8cd6d988babe7091f",
-				"room": "E16S59",
-				"type": "road",
-				"x": 2,
-				"y": 25
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "ee9895491e4438280f6f62a9",
-				"room": "E16S59",
-				"type": "road",
-				"x": 2,
-				"y": 26
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "0eaf044e18c5c0019bded07a",
-				"room": "E16S59",
-				"type": "road",
-				"x": 2,
-				"y": 27
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "f02a13c58d87fa9dacac80aa",
-				"room": "E16S59",
-				"type": "road",
-				"x": 2,
-				"y": 28
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "5d620296c5e8143bd8a78822",
-				"room": "E16S59",
-				"type": "road",
-				"x": 2,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "b5d044b78312ab7016a72973",
-				"room": "E16S59",
-				"type": "road",
-				"x": 2,
-				"y": 30
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "693642bdb05234d1b77f9187",
-				"room": "E16S59",
-				"type": "road",
-				"x": 3,
-				"y": 31
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "5bedfd9921c211505a711d5f",
-				"room": "E16S59",
-				"type": "road",
-				"x": 2,
-				"y": 32
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "59b6abf9e3c3745697e7d3d3",
-				"room": "E16S59",
-				"type": "road",
-				"x": 2,
-				"y": 33
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "afd81e7a4e7877729a76ffb9",
-				"room": "E16S59",
-				"type": "road",
-				"x": 2,
-				"y": 34
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "81b652d07472fa4352942e09",
-				"room": "E16S59",
-				"type": "road",
-				"x": 2,
-				"y": 35
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "92da777d5a05d5120866f758",
-				"room": "E16S59",
-				"type": "road",
-				"x": 2,
-				"y": 36
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "91df38ee11829f1d8692e8b9",
-				"room": "E16S59",
-				"type": "road",
-				"x": 2,
-				"y": 37
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "2c90e62d51369617c0ddf36e",
-				"room": "E16S59",
-				"type": "road",
-				"x": 7,
-				"y": 17
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "ea1f24a27896ba857eab9348",
-				"room": "E16S59",
-				"type": "road",
-				"x": 7,
-				"y": 18
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "f17d59833de98ad585bb6dac",
-				"room": "E16S59",
-				"type": "road",
-				"x": 8,
-				"y": 19
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "0bf77ac2ccdc2cfe7949275e",
-				"room": "E16S59",
-				"type": "road",
-				"x": 9,
-				"y": 20
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "ec8c68bce682e45894720ac0",
-				"room": "E16S59",
-				"type": "road",
-				"x": 10,
-				"y": 21
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "89674bd701011ce442bf6af9",
-				"room": "E16S59",
-				"type": "road",
-				"x": 11,
-				"y": 22
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "4335f8992af7097345e40100",
-				"room": "E16S59",
-				"type": "road",
-				"x": 12,
-				"y": 23
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "7de72dcb8e3b592c5f9a25a7",
-				"room": "E16S59",
-				"type": "road",
-				"x": 13,
-				"y": 24
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "98800209ddd04098d41a5073",
-				"room": "E16S59",
-				"type": "road",
-				"x": 14,
-				"y": 25
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "68cc296ea4b50049c446b1f3",
-				"room": "E16S59",
-				"type": "road",
-				"x": 15,
-				"y": 26
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "55e8e6bc30748ed39d36cfe2",
-				"room": "E16S59",
-				"type": "road",
-				"x": 16,
-				"y": 27
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "dcef33e88afc9c7c16005e3c",
-				"room": "E16S59",
-				"type": "road",
-				"x": 17,
-				"y": 28
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "9e8532e24d785613cb09a705",
-				"room": "E16S59",
-				"type": "road",
-				"x": 18,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "ab691170810903ab861bb3e1",
-				"room": "E16S59",
-				"type": "road",
-				"x": 19,
-				"y": 30
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "5bc4517a1108fc89d9a2f635",
-				"room": "E16S59",
-				"type": "road",
-				"x": 19,
-				"y": 31
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "71023f33e7142553d4198b92",
-				"room": "E16S59",
-				"type": "road",
-				"x": 20,
-				"y": 32
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "2f033cd878710a986e08baee",
-				"room": "E16S59",
-				"type": "road",
-				"x": 21,
-				"y": 33
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "7484d389c3b287a4fa6b3c1e",
-				"room": "E16S59",
-				"type": "road",
-				"x": 22,
-				"y": 34
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "0a53e655343f3019858bfbbc",
-				"room": "E16S59",
-				"type": "road",
-				"x": 23,
-				"y": 34
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "4a544960a01c824abf5f4933",
-				"room": "E16S59",
-				"type": "road",
-				"x": 24,
-				"y": 33
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "6f849ac88733412bc80dc7c6",
-				"room": "E16S59",
-				"type": "road",
-				"x": 25,
-				"y": 32
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "4d79c6a231a06adbc2021697",
-				"room": "E16S59",
-				"type": "road",
 				"x": 26,
-				"y": 33
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "3c2cb0192dc60da5bed52037",
-				"room": "E16S59",
-				"type": "road",
-				"x": 27,
-				"y": 34
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "872d9eb3e1d2118649d12b17",
-				"room": "E16S59",
-				"type": "road",
-				"x": 28,
-				"y": 35
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "940838a159e65224a0d86a4b",
-				"room": "E16S59",
-				"type": "road",
-				"x": 29,
-				"y": 36
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "eaede4ddf9a9fd5e630e3eb3",
-				"room": "E16S59",
-				"type": "road",
-				"x": 30,
-				"y": 37
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "3f0506868717c05e7d5a26eb",
-				"room": "E16S59",
-				"type": "road",
-				"x": 31,
-				"y": 38
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "2c2688e524b7e083681f9d54",
-				"room": "E16S59",
-				"type": "road",
-				"x": 32,
-				"y": 39
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "df26cb3b6ec6413fd10efb66",
-				"room": "E16S59",
-				"type": "road",
-				"x": 33,
-				"y": 40
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "fd312b4d85f742756027867a",
-				"room": "E16S59",
-				"type": "road",
-				"x": 34,
-				"y": 41
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "4a366184e6d416189d4cea81",
-				"room": "E16S59",
-				"type": "road",
-				"x": 35,
-				"y": 42
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "3becc4e7d8375ad5c14e7b77",
-				"room": "E16S59",
-				"type": "road",
-				"x": 36,
-				"y": 43
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "02b910d27e7d69ae8fee5298",
-				"room": "E16S59",
-				"type": "road",
-				"x": 37,
-				"y": 44
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "52ad1c97af6a392ad0c24f71",
-				"room": "E16S59",
-				"type": "road",
-				"x": 38,
-				"y": 45
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "ead59594e349c6a0cfb73d1c",
-				"room": "E16S59",
-				"type": "road",
-				"x": 39,
-				"y": 46
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "952302a9ed7e1f1706408860",
-				"room": "E16S59",
-				"type": "road",
-				"x": 40,
-				"y": 47
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "b501e5076796dd5a11786079",
-				"room": "E16S59",
-				"type": "road",
-				"x": 4,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "22802c382aae147c1a393aee",
-				"room": "E16S59",
-				"type": "road",
-				"x": 5,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "0ec6f6bd9af9bb70726f6886",
-				"room": "E16S59",
-				"type": "road",
-				"x": 6,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "88fd6adfde905848be8ff0d9",
-				"room": "E16S59",
-				"type": "road",
-				"x": 7,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "df7070ac5ed0362fb138ed4e",
-				"room": "E16S59",
-				"type": "road",
-				"x": 8,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "4b25db5f42c4a799bd6801be",
-				"room": "E16S59",
-				"type": "road",
-				"x": 9,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "c2e77575a985917c9196ef83",
-				"room": "E16S59",
-				"type": "road",
-				"x": 10,
-				"y": 30
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "04ba40bea827fa9425d87160",
-				"room": "E16S59",
-				"type": "road",
-				"x": 11,
-				"y": 30
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "e11f69f5cfa8396a13cfba01",
-				"room": "E16S59",
-				"type": "road",
-				"x": 12,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "4d7bf424c64281251a90aa39",
-				"room": "E16S59",
-				"type": "road",
-				"x": 13,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "02277afb1f7d9e8b67a9bc9a",
-				"room": "E16S59",
-				"type": "road",
-				"x": 14,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "773cbc6b59a4e2bd47562824",
-				"room": "E16S59",
-				"type": "road",
-				"x": 15,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "126dcee7f2f98a23f141956b",
-				"room": "E16S59",
-				"type": "road",
-				"x": 16,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "b2b2f11d006efc899a313e4c",
-				"room": "E16S59",
-				"type": "road",
-				"x": 17,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "e2f24e41f5bdf6fc4d8166ef",
-				"room": "E16S59",
-				"type": "road",
-				"x": 18,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "22ffffef9f85e8dd74371ba4",
-				"room": "E16S59",
-				"type": "road",
-				"x": 19,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "4bd7a7522f8087279685d3e9",
-				"room": "E16S59",
-				"type": "road",
-				"x": 20,
-				"y": 28
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "8509b0406dbb8a21e02118d0",
-				"room": "E16S59",
-				"type": "road",
-				"x": 21,
-				"y": 28
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "ec4bb2efffd167084812cc9c",
-				"room": "E16S59",
-				"type": "road",
-				"x": 22,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "036cf45b0f5d97db79d521cf",
-				"room": "E16S59",
-				"type": "road",
-				"x": 23,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "b6b3557e9d908e13a83ecb2b",
-				"room": "E16S59",
-				"type": "road",
-				"x": 24,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "075801c969ba6abe69c7bd98",
-				"room": "E16S59",
-				"type": "road",
-				"x": 25,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "752fd524f4b3e9b5acee9fde",
-				"room": "E16S59",
-				"type": "road",
-				"x": 26,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "b1530f168b5f34b57e318724",
-				"room": "E16S59",
-				"type": "road",
-				"x": 27,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "9b44fa4161e900b0255cf817",
-				"room": "E16S59",
-				"type": "road",
-				"x": 4,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "f2d6a1831158a6684ab47d47",
-				"room": "E16S59",
-				"type": "road",
-				"x": 5,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "e8bbbb9bbdaea1b34ee4fcf7",
-				"room": "E16S59",
-				"type": "road",
-				"x": 6,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "0b8ac744173e0bfc5589cc8a",
-				"room": "E16S59",
-				"type": "road",
-				"x": 7,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "4e5825d8698e8d55ceac5d9e",
-				"room": "E16S59",
-				"type": "road",
-				"x": 8,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "d5f4db005d38c025bc7fc33d",
-				"room": "E16S59",
-				"type": "road",
-				"x": 9,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "1b897213ab89ce01c331e595",
-				"room": "E16S59",
-				"type": "road",
-				"x": 10,
-				"y": 30
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "9f8b2a9e7a8a0fe515a08f3a",
-				"room": "E16S59",
-				"type": "road",
-				"x": 11,
-				"y": 30
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "5c70c0bf8ac74cc80d9512e6",
-				"room": "E16S59",
-				"type": "road",
-				"x": 12,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "6d2233afd3750c7373a8e786",
-				"room": "E16S59",
-				"type": "road",
-				"x": 13,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "7a9c3b7dbb34258fa3690745",
-				"room": "E16S59",
-				"type": "road",
-				"x": 14,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "aea1efb61ef02ea1935e47fa",
-				"room": "E16S59",
-				"type": "road",
-				"x": 15,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "344ebb1f514ccfc554d0aba4",
-				"room": "E16S59",
-				"type": "road",
-				"x": 16,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "42b9392ee4773448259669f7",
-				"room": "E16S59",
-				"type": "road",
-				"x": 17,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "6e0964982f5db1838031d18d",
-				"room": "E16S59",
-				"type": "road",
-				"x": 18,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "13b181196b4ac63ed22a8eed",
-				"room": "E16S59",
-				"type": "road",
-				"x": 19,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "7c93cd27022241c3cce2916b",
-				"room": "E16S59",
-				"type": "road",
-				"x": 20,
-				"y": 28
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "c3ddc711af1a7580b137cc51",
-				"room": "E16S59",
-				"type": "road",
-				"x": 21,
-				"y": 28
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "6332910f2ba7b7491667854e",
-				"room": "E16S59",
-				"type": "road",
-				"x": 22,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "9f97b349363462436ded76a8",
-				"room": "E16S59",
-				"type": "road",
-				"x": 23,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "0c7b7505694280789962cf4b",
-				"room": "E16S59",
-				"type": "road",
-				"x": 24,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "7cddb795b0adf5654a335f1b",
-				"room": "E16S59",
-				"type": "road",
-				"x": 25,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "bcb2f8477cb445a26a0c7805",
-				"room": "E16S59",
-				"type": "road",
-				"x": 26,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "b3dc9127cbfcaa96de6e6deb",
-				"room": "E16S59",
-				"type": "road",
-				"x": 27,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "7c0644caed346166a2a43ef5",
-				"room": "E16S59",
-				"type": "road",
-				"x": 28,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "610e31d215353ae27c59e583",
-				"room": "E16S59",
-				"type": "road",
-				"x": 29,
-				"y": 28
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "19e473ab492007be0f1b66c7",
-				"room": "E16S59",
-				"type": "road",
-				"x": 30,
-				"y": 28
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "3414608309edf522d4e8a5cc",
-				"room": "E16S59",
-				"type": "road",
-				"x": 31,
-				"y": 28
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "baccf8154c730cef127c599f",
-				"room": "E16S59",
-				"type": "road",
-				"x": 32,
-				"y": 28
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "7289c27f8b96074abcec03a6",
-				"room": "E16S59",
-				"type": "road",
-				"x": 33,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "31ad50d6e2b8ca8b5180d3e8",
-				"room": "E16S59",
-				"type": "road",
-				"x": 34,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "31b58caa81cb502b9ec3eb5f",
-				"room": "E16S59",
-				"type": "road",
-				"x": 35,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "f94eb3e44269ea83dbb3ac28",
-				"room": "E16S59",
-				"type": "road",
-				"x": 36,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "98b217004c5d5c386ddd4361",
-				"room": "E16S59",
-				"type": "road",
-				"x": 37,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "417756f5bfb204f296e869b8",
-				"room": "E16S59",
-				"type": "road",
-				"x": 38,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "f1f8537014d08b44311343d3",
-				"room": "E16S59",
-				"type": "road",
-				"x": 39,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "a00b77b1436e0a09781aade9",
-				"room": "E16S59",
-				"type": "road",
-				"x": 40,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "0de9837346061e66a3a80f2c",
-				"room": "E16S59",
-				"type": "road",
-				"x": 41,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "bb8a155b66eb32d788c6af69",
-				"room": "E16S59",
-				"type": "road",
-				"x": 42,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "c3bf15846065fcfdc47df565",
-				"room": "E16S59",
-				"type": "road",
-				"x": 43,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "b0ec45b76b19eb26c074e8c1",
-				"room": "E16S59",
-				"type": "road",
-				"x": 44,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "290e1b98b6b607746b5862f7",
-				"room": "E16S59",
-				"type": "road",
-				"x": 45,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "969b4809e40786acafd0e93a",
-				"room": "E16S59",
-				"type": "road",
-				"x": 46,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "6f64e2cd85f5f0a41ce57084",
-				"room": "E16S59",
-				"type": "road",
-				"x": 47,
-				"y": 29
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "65134733de184376485cefb0",
-				"room": "E16S59",
-				"type": "road",
-				"x": 21,
-				"y": 39
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "827246c39538461921cb7c18",
-				"room": "E16S59",
-				"type": "road",
-				"x": 22,
-				"y": 39
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "526e82fb45e770022b8a3408",
-				"room": "E16S59",
-				"type": "road",
-				"x": 23,
-				"y": 39
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "8991c1e781e9efd3585f5df5",
-				"room": "E16S59",
-				"type": "road",
-				"x": 29,
-				"y": 45
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "3e21f69c1e5af6b5d8592ced",
-				"room": "E16S59",
-				"type": "road",
-				"x": 29,
-				"y": 46
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "f0072c4be64a37bacc68ea92",
-				"room": "E16S59",
-				"type": "road",
-				"x": 29,
-				"y": 47
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "895bec644e651e50cdf45bc9",
-				"room": "E16S59",
-				"type": "road",
-				"x": 28,
-				"y": 47
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "b991c50a4cf990935c17d81e",
-				"room": "E16S59",
-				"type": "road",
-				"x": 27,
-				"y": 47
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "3d02219abc3be1765518129a",
-				"room": "E16S59",
-				"type": "road",
-				"x": 26,
-				"y": 47
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "3983f7f5b1ad2ac38907e8f4",
-				"room": "E16S59",
-				"type": "road",
-				"x": 25,
-				"y": 47
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "81d5667ecb3e9095e3443718",
-				"room": "E16S59",
-				"type": "road",
-				"x": 24,
-				"y": 47
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "2fd2cafe848ecfe5024a1192",
-				"room": "E16S59",
-				"type": "road",
-				"x": 23,
-				"y": 47
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "a8b8c8590dca396d58c569cb",
-				"room": "E16S59",
-				"type": "road",
-				"x": 22,
-				"y": 47
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "87052ede94b6a09b82045764",
-				"room": "E16S59",
-				"type": "road",
-				"x": 21,
-				"y": 41
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "951e0f9b56ce80a6bc8217ab",
-				"room": "E16S59",
-				"type": "road",
-				"x": 21,
-				"y": 40
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "ad3c2161480b303fe2ca8f32",
-				"room": "E16S59",
-				"type": "spawn",
-				"x": 25,
-				"y": 42
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "7393daabf9d5ff27d7fd1b44",
-				"room": "E16S59",
-				"type": "storage",
-				"x": 24,
-				"y": 42
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "91bcd2990f59016f29947544",
-				"room": "E16S59",
-				"type": "link",
-				"x": 24,
-				"y": 43
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"_id": "7d1432069835f7bcb35262aa",
-				"room": "E16S59",
-				"type": "terminal",
-				"x": 24,
-				"y": 44
-			},
-			{
+				"y": 40,
+				"energy": 1500,
+				"energyCapacity": 3000,
 				"hits": 100,
 				"hitsMax": 100,
-				"_id": "517980ba96def10a948052b7",
-				"room": "E16S59",
-				"type": "nuker",
-				"x": 25,
-				"y": 44
+				"level": 8,
+				"progressTotal": 0,
+				"progress": 0,
+				"downgradeTime": 18700000,
+				"user": "5a71934f7037f829c0ba0e11",
+				"sign": null
 			},
 			{
 				"hits": 100,
 				"hitsMax": 100,
-				"_id": "75c1997622eabd9d2663edcc",
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "f36c51ef6f268fb0fc682b8d",
 				"room": "E16S59",
 				"type": "factory",
 				"x": 26,
-				"y": 42
+				"y": 42,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11",
+				"storeCapacity": 2000,
+				"store": {
+					"energy": 200
+				},
+				"cooldown": 0,
+				"actionLog": {
+					"transferEnergy": null
+				},
+				"storeCapacityResource": {
+					"energy": 800
+				}
 			},
 			{
 				"hits": 100,
 				"hitsMax": 100,
-				"_id": "b60e81e6ba0601f9651efea9",
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d4705fa3ad520943d90a3fae",
 				"room": "E16S59",
-				"type": "tower",
-				"x": 26,
-				"y": 43
+				"type": "link",
+				"x": 24,
+				"y": 43,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11",
+				"cooldown": 0,
+				"actionLog": {
+					"transferEnergy": null
+				},
+				"store": {
+					"energy": 200
+				},
+				"storeCapacityResource": {
+					"energy": 800
+				}
+			},
+			{
+				"_id": "e75a7191068a58a15b5ea78a",
+				"type": "mineral",
+				"room": "E16S59",
+				"x": 28,
+				"y": 30,
+				"hits": 100,
+				"hitsMax": 100,
+				"nextRegenerationTime": 300,
+				"mineralType": "L",
+				"mineralAmount": 30580,
+				"density": 3
 			},
 			{
 				"hits": 100,
 				"hitsMax": 100,
-				"_id": "92bc81d39071e47b4f475496",
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "fd592d3a7858afabccf3af2a",
+				"room": "E16S59",
+				"type": "nuker",
+				"x": 25,
+				"y": 44,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11",
+				"cooldownTime": 100,
+				"store": {
+					"energy": 5000,
+					"G": 5000
+				},
+				"storeCapacityResource": {
+					"energy": 300000,
+					"G": 5000
+				}
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d3402e12f105af7ec82f0b47",
 				"room": "E16S59",
 				"type": "powerSpawn",
 				"x": 26,
-				"y": 44
+				"y": 44,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11",
+				"store": {
+					"energy": 50
+				},
+				"storeCapacityResource": {
+					"energy": 300
+				}
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "408bddad14340a18e6465462",
+				"room": "E16S59",
+				"type": "road",
+				"x": 6,
+				"y": 17,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "e55de271e80751e6ce696747",
+				"room": "E16S59",
+				"type": "road",
+				"x": 6,
+				"y": 17,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d04ba8b25d33d4c07163380f",
+				"room": "E16S59",
+				"type": "road",
+				"x": 7,
+				"y": 17,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "bd577b174b2e44fb56403fd5",
+				"room": "E16S59",
+				"type": "road",
+				"x": 7,
+				"y": 17,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "b6e103795b0f302f3e2d81fe",
+				"room": "E16S59",
+				"type": "road",
+				"x": 5,
+				"y": 18,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "30aa37ececae569b45cb86e6",
+				"room": "E16S59",
+				"type": "road",
+				"x": 5,
+				"y": 18,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "59914150a3d53c5c00b3d201",
+				"room": "E16S59",
+				"type": "road",
+				"x": 7,
+				"y": 18,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "486fe0ebe7ee84a776bc0ecc",
+				"room": "E16S59",
+				"type": "road",
+				"x": 7,
+				"y": 18,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "361bb5cca0db3c2b39bca0ef",
+				"room": "E16S59",
+				"type": "road",
+				"x": 4,
+				"y": 19,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "88fd9510668596068cbc3095",
+				"room": "E16S59",
+				"type": "road",
+				"x": 4,
+				"y": 19,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "a43b1516e4473f21b8f56b90",
+				"room": "E16S59",
+				"type": "road",
+				"x": 8,
+				"y": 19,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "4608508d33cba84f2708864e",
+				"room": "E16S59",
+				"type": "road",
+				"x": 8,
+				"y": 19,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "66d1a3ba431e2f75dd02701e",
+				"room": "E16S59",
+				"type": "road",
+				"x": 3,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "3fc34b3e1cc2812911e9f285",
+				"room": "E16S59",
+				"type": "road",
+				"x": 3,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d5047f59723fdb3510efdc50",
+				"room": "E16S59",
+				"type": "road",
+				"x": 7,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "2fb4388082121fef58dc8fb7",
+				"room": "E16S59",
+				"type": "road",
+				"x": 9,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "9bdb96e20b61e894c8d8bd7b",
+				"room": "E16S59",
+				"type": "road",
+				"x": 2,
+				"y": 21,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "ccca5ec494e283ebc8bae919",
+				"room": "E16S59",
+				"type": "road",
+				"x": 3,
+				"y": 21,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "eccde8a993a3580c5f51c68c",
+				"room": "E16S59",
+				"type": "road",
+				"x": 7,
+				"y": 21,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "cd376b371a253fafeecf12ec",
+				"room": "E16S59",
+				"type": "road",
+				"x": 10,
+				"y": 21,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "79aaa45443e428d9f9df5fe2",
+				"room": "E16S59",
+				"type": "road",
+				"x": 2,
+				"y": 22,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "60fa6ef494b68bff29cdeb79",
+				"room": "E16S59",
+				"type": "road",
+				"x": 4,
+				"y": 22,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "fb48f34b9e8f70cd10fcd5ef",
+				"room": "E16S59",
+				"type": "road",
+				"x": 7,
+				"y": 22,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "a1db5be57d84af34c93c302f",
+				"room": "E16S59",
+				"type": "road",
+				"x": 11,
+				"y": 22,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d8fdfd24a69ddf9e918d2352",
+				"room": "E16S59",
+				"type": "road",
+				"x": 2,
+				"y": 23,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "4a5bd4fb0ef89570fe216526",
+				"room": "E16S59",
+				"type": "road",
+				"x": 4,
+				"y": 23,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "eefd7c8dfd69a031cec6d325",
+				"room": "E16S59",
+				"type": "road",
+				"x": 7,
+				"y": 23,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "7677a40bfca0540167a55cf4",
+				"room": "E16S59",
+				"type": "road",
+				"x": 12,
+				"y": 23,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "6a16351e20d21aac561d19b6",
+				"room": "E16S59",
+				"type": "road",
+				"x": 2,
+				"y": 24,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "16183405da9a6cead3a35e6f",
+				"room": "E16S59",
+				"type": "road",
+				"x": 4,
+				"y": 24,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "5f3607fac5670ea5978f61b6",
+				"room": "E16S59",
+				"type": "road",
+				"x": 7,
+				"y": 24,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d639bdd149b7ae40b2b5d1be",
+				"room": "E16S59",
+				"type": "road",
+				"x": 13,
+				"y": 24,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "e3f85fd8d1d3ee3151ec075b",
+				"room": "E16S59",
+				"type": "road",
+				"x": 2,
+				"y": 25,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "1003d497132f394af9f6316d",
+				"room": "E16S59",
+				"type": "road",
+				"x": 4,
+				"y": 25,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d4176e4c7ce08a90192e5b26",
+				"room": "E16S59",
+				"type": "road",
+				"x": 7,
+				"y": 25,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "3f482f264dc8cf490e4680ed",
+				"room": "E16S59",
+				"type": "road",
+				"x": 14,
+				"y": 25,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "634532987f968914e3aa8e54",
+				"room": "E16S59",
+				"type": "road",
+				"x": 2,
+				"y": 26,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "90bd706d1294a7c9441bd60a",
+				"room": "E16S59",
+				"type": "road",
+				"x": 4,
+				"y": 26,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "3896ad90c8c8c451bc255531",
+				"room": "E16S59",
+				"type": "road",
+				"x": 7,
+				"y": 26,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "e3c68cbe7c67656c1b09e114",
+				"room": "E16S59",
+				"type": "road",
+				"x": 15,
+				"y": 26,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "86019d82e9c597147c20c5b3",
+				"room": "E16S59",
+				"type": "road",
+				"x": 2,
+				"y": 27,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "17188f1e78d4880827309501",
+				"room": "E16S59",
+				"type": "road",
+				"x": 4,
+				"y": 27,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "095d33fe509bfb41fd04b61e",
+				"room": "E16S59",
+				"type": "road",
+				"x": 7,
+				"y": 27,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d64c91d2f2dcee3101cdd0b8",
+				"room": "E16S59",
+				"type": "road",
+				"x": 16,
+				"y": 27,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "f50c0e758e62f5368dfc39d3",
+				"room": "E16S59",
+				"type": "road",
+				"x": 2,
+				"y": 28,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "92fef1cab830f333b8469679",
+				"room": "E16S59",
+				"type": "road",
+				"x": 4,
+				"y": 28,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "db06348f6e1dfb4105ebf621",
+				"room": "E16S59",
+				"type": "road",
+				"x": 8,
+				"y": 28,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "3caf9c53d7bb7b2db2f7a921",
+				"room": "E16S59",
+				"type": "road",
+				"x": 17,
+				"y": 28,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "c9043aac85693d3a6902774d",
+				"room": "E16S59",
+				"type": "road",
+				"x": 20,
+				"y": 28,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "ff9f3a4b8ff911312fa733a7",
+				"room": "E16S59",
+				"type": "road",
+				"x": 20,
+				"y": 28,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "7a3ed9582cc225c2f12a82ce",
+				"room": "E16S59",
+				"type": "road",
+				"x": 21,
+				"y": 28,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "907861f669026d4892eb6596",
+				"room": "E16S59",
+				"type": "road",
+				"x": 21,
+				"y": 28,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "5d89c17ace5c62f5f408026b",
+				"room": "E16S59",
+				"type": "road",
+				"x": 29,
+				"y": 28,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "a29714baaa47a2358d9bb123",
+				"room": "E16S59",
+				"type": "road",
+				"x": 30,
+				"y": 28,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "f23db63b779dc38dff42c583",
+				"room": "E16S59",
+				"type": "road",
+				"x": 31,
+				"y": 28,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "565bab6453f61a8ee58b65f7",
+				"room": "E16S59",
+				"type": "road",
+				"x": 32,
+				"y": 28,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "4ee44bf980e7a5f0a4fd3bda",
+				"room": "E16S59",
+				"type": "road",
+				"x": 2,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "8857205fe56b205f73ed7b44",
+				"room": "E16S59",
+				"type": "road",
+				"x": 4,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "eb4ff89989fbfcde4c42ed22",
+				"room": "E16S59",
+				"type": "road",
+				"x": 4,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "8043b6d6558819103cace550",
+				"room": "E16S59",
+				"type": "road",
+				"x": 4,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "459f1c0b6d6fb7e265578223",
+				"room": "E16S59",
+				"type": "road",
+				"x": 5,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "c131c5b052ccd04400fdb8fe",
+				"room": "E16S59",
+				"type": "road",
+				"x": 5,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "f7e9ad5f540f4596926bc15d",
+				"room": "E16S59",
+				"type": "road",
+				"x": 6,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "b76e2c9773ed82a8dcc8f5e6",
+				"room": "E16S59",
+				"type": "road",
+				"x": 6,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "3259f7485add050cb8003e72",
+				"room": "E16S59",
+				"type": "road",
+				"x": 7,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "4473b21e7b617de10804a7d2",
+				"room": "E16S59",
+				"type": "road",
+				"x": 7,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "aeacbc9c2a1b1730322bda80",
+				"room": "E16S59",
+				"type": "road",
+				"x": 8,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "af68e780e2f6178355f4ccab",
+				"room": "E16S59",
+				"type": "road",
+				"x": 8,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "50085d4b04e99536246808b7",
+				"room": "E16S59",
+				"type": "road",
+				"x": 9,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "c331dcc4ed46318578b22831",
+				"room": "E16S59",
+				"type": "road",
+				"x": 9,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "1cba3da690d1138cab1eff99",
+				"room": "E16S59",
+				"type": "road",
+				"x": 9,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "8f4f3ec127d656fd860fbb82",
+				"room": "E16S59",
+				"type": "road",
+				"x": 12,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "6b84a49ce48e70acfbdffcba",
+				"room": "E16S59",
+				"type": "road",
+				"x": 12,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "16202ffb0428f238ebd0a224",
+				"room": "E16S59",
+				"type": "road",
+				"x": 13,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "8b96802415cc14418cbc8e62",
+				"room": "E16S59",
+				"type": "road",
+				"x": 13,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "dc25bf3bfbb45d63683e416e",
+				"room": "E16S59",
+				"type": "road",
+				"x": 14,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "cf58b386f0c0b7d16235bd55",
+				"room": "E16S59",
+				"type": "road",
+				"x": 14,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "ad407b1bbef58f226ba2ca7d",
+				"room": "E16S59",
+				"type": "road",
+				"x": 15,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "b2a460d498bc6811d4c5464d",
+				"room": "E16S59",
+				"type": "road",
+				"x": 15,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "03bd79c535187dee68aa715b",
+				"room": "E16S59",
+				"type": "road",
+				"x": 16,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "1fe55c27cbe6aac6c868da02",
+				"room": "E16S59",
+				"type": "road",
+				"x": 16,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "7e793dff50745d0529ae980e",
+				"room": "E16S59",
+				"type": "road",
+				"x": 17,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "c37b75bb986f25077418067d",
+				"room": "E16S59",
+				"type": "road",
+				"x": 17,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "e48122d73a86d55bb3cd6c4e",
+				"room": "E16S59",
+				"type": "road",
+				"x": 18,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "a5d1ddc60bf3f6e33f8e9d67",
+				"room": "E16S59",
+				"type": "road",
+				"x": 18,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "2691b3c2815f91393177bd63",
+				"room": "E16S59",
+				"type": "road",
+				"x": 18,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "07de701534a2f8a63119d629",
+				"room": "E16S59",
+				"type": "road",
+				"x": 19,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "ffa3b63ab682c201ddfc222b",
+				"room": "E16S59",
+				"type": "road",
+				"x": 19,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "b1e3b88c18b47cfba162032d",
+				"room": "E16S59",
+				"type": "road",
+				"x": 22,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "40d2c97ad0bdd88e63a05db7",
+				"room": "E16S59",
+				"type": "road",
+				"x": 22,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "2e3080288ffe6419704d44d0",
+				"room": "E16S59",
+				"type": "road",
+				"x": 23,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "992c63934c1bd416789a946d",
+				"room": "E16S59",
+				"type": "road",
+				"x": 23,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "cd35fcbc87a810a72e9412d7",
+				"room": "E16S59",
+				"type": "road",
+				"x": 24,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "f407c179960f83aaba1f2a42",
+				"room": "E16S59",
+				"type": "road",
+				"x": 24,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "b2b49beec708172600ce8ea6",
+				"room": "E16S59",
+				"type": "road",
+				"x": 25,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "035dec36fae9752112748fc6",
+				"room": "E16S59",
+				"type": "road",
+				"x": 25,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "0e284127436e2ec0863862db",
+				"room": "E16S59",
+				"type": "road",
+				"x": 26,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "386965a42fec8b8f3b8d4c7f",
+				"room": "E16S59",
+				"type": "road",
+				"x": 26,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "22433d6515e1d8e8d98ff5f9",
+				"room": "E16S59",
+				"type": "road",
+				"x": 27,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "08fd02e8218c342ef801b997",
+				"room": "E16S59",
+				"type": "road",
+				"x": 27,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "48733d73e64bdfabf7c617eb",
+				"room": "E16S59",
+				"type": "road",
+				"x": 28,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "6b9319fd3696375342aaeef1",
+				"room": "E16S59",
+				"type": "road",
+				"x": 33,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "93ecf8e1e27d8745a1a2fe94",
+				"room": "E16S59",
+				"type": "road",
+				"x": 34,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "04b23290e16f745cc5c0f952",
+				"room": "E16S59",
+				"type": "road",
+				"x": 35,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "c24d8f6e25cdf1b2d1901941",
+				"room": "E16S59",
+				"type": "road",
+				"x": 36,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "62e28dbffc5efc1d0e57fed5",
+				"room": "E16S59",
+				"type": "road",
+				"x": 37,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "f60b440ca24e8bcad55cac43",
+				"room": "E16S59",
+				"type": "road",
+				"x": 38,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "ddcbc2c9be0c36e1beab6999",
+				"room": "E16S59",
+				"type": "road",
+				"x": 39,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "8b94a1e5f9ab3b54ae5800d8",
+				"room": "E16S59",
+				"type": "road",
+				"x": 40,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "20faf0ca2a8aa876bdb9a9c1",
+				"room": "E16S59",
+				"type": "road",
+				"x": 41,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "714bebfa18f7b87d5c789d87",
+				"room": "E16S59",
+				"type": "road",
+				"x": 42,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "35f227728f1fc3c44a22d712",
+				"room": "E16S59",
+				"type": "road",
+				"x": 43,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "8b01971eb6f2e3ed66956ef1",
+				"room": "E16S59",
+				"type": "road",
+				"x": 44,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "35f53b48d39e2239cdad5ea8",
+				"room": "E16S59",
+				"type": "road",
+				"x": 45,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "11ec526624b14dfb6822b061",
+				"room": "E16S59",
+				"type": "road",
+				"x": 46,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "fff322063861f1bdd9f07ce0",
+				"room": "E16S59",
+				"type": "road",
+				"x": 47,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "ca17b3bf43d6e7abdadca0e2",
+				"room": "E16S59",
+				"type": "road",
+				"x": 2,
+				"y": 30,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "0a5bb36523afbdd77fa30722",
+				"room": "E16S59",
+				"type": "road",
+				"x": 4,
+				"y": 30,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "96bc5f59b186e54fc2fb3cc1",
+				"room": "E16S59",
+				"type": "road",
+				"x": 10,
+				"y": 30,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "5d7ec4b5aac02e81f277c154",
+				"room": "E16S59",
+				"type": "road",
+				"x": 10,
+				"y": 30,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "352b15d7ac319515129b406e",
+				"room": "E16S59",
+				"type": "road",
+				"x": 10,
+				"y": 30,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "4294610fb3defd5c6f6307e7",
+				"room": "E16S59",
+				"type": "road",
+				"x": 11,
+				"y": 30,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d6ba33748a63e58dc0813b54",
+				"room": "E16S59",
+				"type": "road",
+				"x": 11,
+				"y": 30,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "a6453f7ee6303ba8f4511cc4",
+				"room": "E16S59",
+				"type": "road",
+				"x": 19,
+				"y": 30,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "b6a176fae3ca3d4f9179096d",
+				"room": "E16S59",
+				"type": "road",
+				"x": 3,
+				"y": 31,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "aee858c7a90515a6a7876606",
+				"room": "E16S59",
+				"type": "road",
+				"x": 3,
+				"y": 31,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "11ce6d1b27a165a21e0ddcc0",
+				"room": "E16S59",
+				"type": "road",
+				"x": 11,
+				"y": 31,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "4e5fe97177b5f1d7b1577851",
+				"room": "E16S59",
+				"type": "road",
+				"x": 19,
+				"y": 31,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "e6f7f3e62668b215376a0152",
+				"room": "E16S59",
+				"type": "road",
+				"x": 2,
+				"y": 32,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "e923dbe78fbe54a4c88fe26e",
+				"room": "E16S59",
+				"type": "road",
+				"x": 12,
+				"y": 32,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "324e70026116467de527237b",
+				"room": "E16S59",
+				"type": "road",
+				"x": 20,
+				"y": 32,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "a7b5bf241918a36212d418c5",
+				"room": "E16S59",
+				"type": "road",
+				"x": 25,
+				"y": 32,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "8eb094a9dd9b60592ad8146b",
+				"room": "E16S59",
+				"type": "road",
+				"x": 2,
+				"y": 33,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "2a36bee1ab106d8ce03b83a4",
+				"room": "E16S59",
+				"type": "road",
+				"x": 13,
+				"y": 33,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "5bc621c9a9dcd692e660aaf4",
+				"room": "E16S59",
+				"type": "road",
+				"x": 16,
+				"y": 33,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "663e6503df81f77829323540",
+				"room": "E16S59",
+				"type": "road",
+				"x": 21,
+				"y": 33,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "2a114bca9b0efb6bb424556e",
+				"room": "E16S59",
+				"type": "road",
+				"x": 24,
+				"y": 33,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "7bcdec6530438530315be874",
+				"room": "E16S59",
+				"type": "road",
+				"x": 26,
+				"y": 33,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d86dec318ef22354824a251e",
+				"room": "E16S59",
+				"type": "road",
+				"x": 2,
+				"y": 34,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "686ab629b320d4745496483d",
+				"room": "E16S59",
+				"type": "road",
+				"x": 14,
+				"y": 34,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "f21f36e83e2d92333664e00f",
+				"room": "E16S59",
+				"type": "road",
+				"x": 15,
+				"y": 34,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "10970405003b6d543fc1b2ed",
+				"room": "E16S59",
+				"type": "road",
+				"x": 17,
+				"y": 34,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "fc7fad0de71bc3efb425cae9",
+				"room": "E16S59",
+				"type": "road",
+				"x": 22,
+				"y": 34,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "596bd3fadcf205daaf09daff",
+				"room": "E16S59",
+				"type": "road",
+				"x": 23,
+				"y": 34,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "b267c6291e1fe52ac028959c",
+				"room": "E16S59",
+				"type": "road",
+				"x": 27,
+				"y": 34,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "305c9fe6ba7557bebfdd87c0",
+				"room": "E16S59",
+				"type": "road",
+				"x": 2,
+				"y": 35,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "6c42626576aaf3b721221a91",
+				"room": "E16S59",
+				"type": "road",
+				"x": 18,
+				"y": 35,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "7583daabf0efad4995ddcb60",
+				"room": "E16S59",
+				"type": "road",
+				"x": 28,
+				"y": 35,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "161597b6badddc556bf3af6d",
+				"room": "E16S59",
+				"type": "road",
+				"x": 2,
+				"y": 36,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "41f36648c61d2445c6fbd965",
+				"room": "E16S59",
+				"type": "road",
+				"x": 19,
+				"y": 36,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "f9c68176e23749911ec9bed3",
+				"room": "E16S59",
+				"type": "road",
+				"x": 29,
+				"y": 36,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "cf357ace8778c075cb3fbb93",
+				"room": "E16S59",
+				"type": "road",
+				"x": 2,
+				"y": 37,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "c2050b92210f3564b13236b4",
+				"room": "E16S59",
+				"type": "road",
+				"x": 20,
+				"y": 37,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "22b14ec92918a6b81e48eba3",
+				"room": "E16S59",
+				"type": "road",
+				"x": 30,
+				"y": 37,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "2e758b4b6607f0e296168e04",
+				"room": "E16S59",
+				"type": "road",
+				"x": 21,
+				"y": 38,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "f8d250e9a91e8953b4dab3f1",
+				"room": "E16S59",
+				"type": "road",
+				"x": 31,
+				"y": 38,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "c3d0d9702b6db3961e65ec77",
+				"room": "E16S59",
+				"type": "road",
+				"x": 22,
+				"y": 39,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "9d3fe36e8fac4462a2fb5446",
+				"room": "E16S59",
+				"type": "road",
+				"x": 23,
+				"y": 39,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "7cccc4c763ce9cb63412294e",
+				"room": "E16S59",
+				"type": "road",
+				"x": 32,
+				"y": 39,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d728964a504c5bc94dd47fa9",
+				"room": "E16S59",
+				"type": "road",
+				"x": 22,
+				"y": 40,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "87dfd8b029070e282f720c8f",
+				"room": "E16S59",
+				"type": "road",
+				"x": 23,
+				"y": 40,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "2f7127c168c798865c7458b1",
+				"room": "E16S59",
+				"type": "road",
+				"x": 24,
+				"y": 40,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "f6454303039cb312c3781e86",
+				"room": "E16S59",
+				"type": "road",
+				"x": 33,
+				"y": 40,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d120cf52a02ab19eecd9bf73",
+				"room": "E16S59",
+				"type": "road",
+				"x": 22,
+				"y": 41,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "ac246181021b552eb29f9e81",
+				"room": "E16S59",
+				"type": "road",
+				"x": 34,
+				"y": 41,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "20de0711ea5d651fad70764b",
+				"room": "E16S59",
+				"type": "road",
+				"x": 22,
+				"y": 42,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "768da161d97b447267f71787",
+				"room": "E16S59",
+				"type": "road",
+				"x": 35,
+				"y": 42,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "41a7e0cdac686817bf204fab",
+				"room": "E16S59",
+				"type": "road",
+				"x": 36,
+				"y": 43,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "f488ac192d25c1e2531ee9e9",
+				"room": "E16S59",
+				"type": "road",
+				"x": 28,
+				"y": 44,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "f9a43d98c5541b531fd01f12",
+				"room": "E16S59",
+				"type": "road",
+				"x": 37,
+				"y": 44,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "e108082a4f2e0e4323d55043",
+				"room": "E16S59",
+				"type": "road",
+				"x": 28,
+				"y": 45,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "a306071c45acfd28638abf20",
+				"room": "E16S59",
+				"type": "road",
+				"x": 38,
+				"y": 45,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d83cb4f77a8d2e9386e57107",
+				"room": "E16S59",
+				"type": "road",
+				"x": 23,
+				"y": 46,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "4b9b4034893bf711e6c82eca",
+				"room": "E16S59",
+				"type": "road",
+				"x": 24,
+				"y": 46,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "de79789cbe1acaec9c963d44",
+				"room": "E16S59",
+				"type": "road",
+				"x": 25,
+				"y": 46,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d900df7aebf529d122b238b8",
+				"room": "E16S59",
+				"type": "road",
+				"x": 26,
+				"y": 46,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "0b33a4747aee6cf858a2c2ce",
+				"room": "E16S59",
+				"type": "road",
+				"x": 27,
+				"y": 46,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "4ea4833a621e5e021cbf3233",
+				"room": "E16S59",
+				"type": "road",
+				"x": 28,
+				"y": 46,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "b0721821de5f97d8328c8e4e",
+				"room": "E16S59",
+				"type": "road",
+				"x": 39,
+				"y": 46,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "0f20d63ebde04823121b4cb3",
+				"room": "E16S59",
+				"type": "road",
+				"x": 40,
+				"y": 47,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"_id": "79de11e8cd8dc1fe17953130",
+				"type": "source",
+				"room": "E16S59",
+				"x": 7,
+				"y": 16,
+				"energy": 1500,
+				"energyCapacity": 3000,
+				"hits": 100,
+				"hitsMax": 100,
+				"ticksToRegeneration": 300,
+				"nextRegenerationTime": 500
+			},
+			{
+				"_id": "b6717b657fa0359b4ebf1645",
+				"type": "source",
+				"room": "E16S59",
+				"x": 3,
+				"y": 30,
+				"energy": 1500,
+				"energyCapacity": 3000,
+				"hits": 100,
+				"hitsMax": 100,
+				"ticksToRegeneration": 300,
+				"nextRegenerationTime": 500
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "e4f4ed67769d0ee5acaa0c7a",
+				"room": "E16S59",
+				"type": "spawn",
+				"x": 25,
+				"y": 42,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11",
+				"store": {
+					"energy": 3000,
+					"power": 65
+				},
+				"storeCapacityResource": {
+					"energy": 5000,
+					"power": 100
+				},
+				"off": false,
+				"spawning": null
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "79f890143dc1af74179989bd",
+				"room": "E16S59",
+				"type": "storage",
+				"x": 24,
+				"y": 42,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11",
+				"store": {
+					"energy": 400000
+				},
+				"storeCapacity": 1000000
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "c6cbef65d19221b3ea9a0c62",
+				"room": "E16S59",
+				"type": "terminal",
+				"x": 24,
+				"y": 44,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "06f4b70ce01dfdc7b0ba665c",
+				"room": "E16S59",
+				"type": "tower",
+				"x": 26,
+				"y": 43,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11",
+				"actionLog": {
+					"attack": null,
+					"heal": null,
+					"repair": null
+				},
+				"store": {
+					"energy": 100
+				},
+				"storeCapacityResource": {
+					"energy": 1000
+				}
 			}
 		],
-		"gameTime": 1
+		"gameTime": 1,
+		"users": {
+			"Invader": {
+				"_id": "0",
+				"username": "Invader"
+			},
+			"5a71934f7037f829c0ba0e11": {
+				"_id": "5a71934f7037f829c0ba0e11",
+				"username": "TestUser",
+				"badge": {
+					"type": 2,
+					"color1": "#000000",
+					"color2": "#028300",
+					"color3": "#8b5c00",
+					"param": 0,
+					"flip": false
+				}
+			}
+		}
 	}
 ];
 

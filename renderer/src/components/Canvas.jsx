@@ -5,7 +5,7 @@ import GameRenderer from '@screeps/renderer';
 // import GameRenderer from '../../../engine/src';
 import { resourceMap, rescaleResources } from '../config/resourceMap';
 import worldConfigs from '../config/worldConfigs';
-import decorations from '../config/decorations';
+// import decorations from '../config/decorations';
 
 const TICK_DURATION = 2.5;
 
@@ -39,13 +39,13 @@ export default class Canvas extends Component {
         const startTime = new Date();
         const { samples, terrain, onGameLoop } = this.props;
 
-        decorations.forEach(decorationItem => {
-            if (decorationItem.decoration.type === 'metadata') {
-                Object.assign(resourceMap, decorationItem.decoration.resources);
-                worldConfigs.metadata.objects[decorationItem.decoration.objectType] =
-                    decorationItem.decoration.metadata;
-            }
-        });
+        // decorations.forEach(decorationItem => {
+        //     if (decorationItem.decoration.type === 'metadata') {
+        //         Object.assign(resourceMap, decorationItem.decoration.resources);
+        //         worldConfigs.metadata.objects[decorationItem.decoration.objectType] =
+        //             decorationItem.decoration.metadata;
+        //     }
+        // });
 
         console.log(`compileExpression at ${startTime}`);
         GameRenderer.compileMetadata(worldConfigs.metadata);

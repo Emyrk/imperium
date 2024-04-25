@@ -55,7 +55,7 @@ export function planRoom(room: Room): VillagePlans | Error {
   plans.buildings[STRUCTURE_TOWER] = [{ pos: dense.freeTiles[4], rcl: 3 }];
   plans.buildings[STRUCTURE_POWER_SPAWN] = [{ pos: dense.freeTiles[5], rcl: 8, power: true }];
   // Add a ring around the core structures.
-  candidateRing(dense.center, 4).forEach(coord => {
+  candidateRing(dense.center, 3).forEach(coord => {
     if (terrain.get(coord.x, coord.y) === TERRAIN_MASK_WALL) {
       return;
     }
