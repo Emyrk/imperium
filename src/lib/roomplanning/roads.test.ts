@@ -15,8 +15,8 @@ describe("Roads", () => {
     const room = Rooms.E12S53();
 
     const plans = planRoads(room, roomPOIs(room));
-    console.log(Rooms.visualize(room, Rooms.pathCallback(plans.roads)));
-    // expect(JSON.stringify(plans.roads)).toMatchSnapshot();
+    // console.log(Rooms.visualize(room, Rooms.pathCallback(plans.roads)));
+    expect(JSON.stringify(plans.roads)).toMatchSnapshot();
   });
 
   it("E16S59", () => {

@@ -9,6 +9,10 @@ export default defineConfig({
     // ...
     root: "src",
     globals: true,
+    env: {
+      // Try to load the nix one, then the default, then noop
+      LD_LIBRARY_PATH: process.env.NIX_LD_LIBRARY_PATH || process.env.LD_LIBRARY_PATH || ""
+    },
 
     setupFiles: ["../test/setups/setup_game.ts"],
     environmentMatchGlobs: [
