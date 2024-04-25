@@ -1,7 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { Rooms } from "../../../test/fakes/Rooms";
 import { planRoom } from "./Planner";
-import { Render } from "../../test-utils/render/render";
 
 var SegfaultHandler = require("segfault-handler");
 SegfaultHandler.registerHandler("crash.log");
@@ -11,10 +10,6 @@ describe("Rooms", () => {
     const room = Rooms.E11S53();
 
     const plans = planRoom(room);
-    console.log(process.env.LD_LIBRARY_PATH);
-    try {
-      Render();
-    } catch (e) {}
     // console.log(Rooms.visualize(room, Rooms.pathCallback(plans.roads)));
   });
 

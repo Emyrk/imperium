@@ -31,11 +31,9 @@
   },
   "homepage": "https://github.com/screepers/screeps-typescript-starter#readme",
   "devDependencies": {
-    "@pixi/node": "^7.3.0",
     "@rollup/plugin-commonjs": "^20.0.0",
     "@rollup/plugin-node-resolve": "^13.0.4",
     "@rollup/plugin-replace": "^5.0.5",
-    "@screeps/renderer": "^1.5.19",
     "@types/jest": "^27.0.1",
     "@types/lodash": "3.10.2",
     "@types/node": "^10.5.5",
@@ -53,10 +51,10 @@
     "rollup-plugin-screeps": "^1.0.1",
     "rollup-plugin-typescript2": "^0.31.0",
     "screeps-jest": "^2.0.2",
-    "segfault-handler": "^1.3.0",
     "ts-jest": "^27.1.5",
     "ts-node": "^7.0.1",
     "tslib": "^2.6.2",
+    "tsx": "^4.7.3",
     "typescript": "^4.2.3",
     "vitest": "^1.5.0"
   },
