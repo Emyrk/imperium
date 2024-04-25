@@ -90,14 +90,16 @@ export class ProgramOutpost extends CivisProgram<ProgramOutpostData> {
       return;
     }
 
-    return {
-      center: blueprint.center,
-      spawn: blueprint.spawnCoord,
-      storage: blueprint.storageCoord,
-      tower: blueprint.freeTiles[0],
-      link: blueprint.freeTiles[1],
-      terminal: blueprint.freeTiles[2]
-    };
+    return;
+
+    // return {
+    //   center: blueprint.center,
+    //   spawn: blueprint.spawnCoord,
+    //   storage: blueprint.storageCoord,
+    //   tower: blueprint.freeTiles[0],
+    //   link: blueprint.freeTiles[1],
+    //   terminal: blueprint.freeTiles[2]
+    // };
   }
 
   selfTerminate(): ProcessCode {

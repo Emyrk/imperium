@@ -1,9 +1,10 @@
 import { AStarFinder, Grid } from "pathfinding";
-import { CostMatrix } from "./CostMatrix";
+import { CostMatrix as FakeCostMatrix } from "./CostMatrix";
 import { RoomPosition as FakeRoomPosition } from "./RoomPosition";
+import { FakeRoomTerrain } from "./RoomTerrain";
 
 export class PathFinder {
-  public static CostMatrix = new CostMatrix();
+  public static CostMatrix = FakeCostMatrix;
 
   // Search is a super naive implementation of pathfinding.
   // It just goes in a straight line to the goal's x position, then the y.
@@ -15,8 +16,17 @@ export class PathFinder {
       | Array<RoomPosition | { pos: RoomPosition; range: number }>,
     opts?: PathFinderOpts
   ): PathFinderPath {
-    const cm = new CostMatrix();
+    let cm = new FakeCostMatrix();
+    if (opts?.roomCallback) {
+      const newCm = opts.roomCallback(origin.roomName);
+      if (newCm instanceof Object && "get" in newCm) {
+        // @ts-ignore
+        cm = newCm;
+      }
+    }
+
     let heuristicWeight = Math.min(9, Math.max(1, opts?.heuristicWeight || 1.2));
+    let terrain: RoomTerrain = new FakeRoomTerrain("");
     if (Game.rooms) {
       const plains = Math.min(254, Math.max(1, opts?.plainCost || 1));
       const swamps = Math.min(254, Math.max(1, opts?.swampCost || 5));
@@ -24,83 +34,92 @@ export class PathFinder {
       // Now we need the CostMatrix for the room if we can find it.
       const room = Game.rooms[origin.roomName];
       if (room && room.getTerrain) {
-        const terrain = room.getTerrain();
-        for (let x = 0; x < 50; x++) {
-          for (let y = 0; y < 50; y++) {
-            const terrainType = terrain.get(x, y);
-            switch (terrainType) {
-              case 0:
-                cm.set(x, y, plains);
-                break;
-              case TERRAIN_MASK_SWAMP:
-                cm.set(x, y, swamps);
-                break;
-              case TERRAIN_MASK_WALL:
-                cm.set(x, y, Infinity);
-                break;
-            }
-          }
-        }
-
-        // TODO: Add structures to the CostMatrix.
+        terrain = room.getTerrain();
       }
     }
 
-    goal = Array.isArray(goal) ? goal[0] : goal;
-    const goalPos = "pos" in goal ? goal.pos : goal;
+    goal = Array.isArray(goal) ? goal : [goal];
+    const paths = goal.map(goal => {
+      const goalPos = "pos" in goal ? goal.pos : goal;
+      const goalRange = "range" in goal ? goal.range : 0;
 
-    const finder = new AStarFinder({
-      diagonalMovement: 1,
-      weight: heuristicWeight
+      // Oof, we have to test "EVERY" square in the range.
+      if (goalRange > 0) {
+        const paths = [];
+        for (let x = goalPos.x - goalRange; x <= goalPos.x + goalRange; x++) {
+          for (let y = goalPos.y - goalRange; y <= goalPos.y + goalRange; y++) {
+            const goalPath = searchPath({ x: origin.x, y: origin.y }, { x: x, y: y }, cm, terrain, heuristicWeight);
+            paths.push(goalPath);
+          }
+        }
+        return bestPath(paths, cm, terrain);
+      }
+      return searchPath({ x: origin.x, y: origin.y }, { x: goalPos.x, y: goalPos.y }, cm, terrain, heuristicWeight);
     });
-    const path = finder.findPath(origin.x, origin.y, goalPos.x, goalPos.y, cmToGrid(cm));
+
+    const best = bestPath(paths, cm, terrain);
+
     return {
       // @ts-ignore
-      path: path.map(([x, y]) => new FakeRoomPosition(x, y, origin.roomName)),
-      ops: path.length,
-      cost: path.reduce((acc, [x, y]) => acc + cm.get(x, y), 0),
+      path: best.map(([x, y]) => new FakeRoomPosition(x, y, origin.roomName)),
+      ops: 0,
+      cost: best.reduce((acc, [x, y]) => acc + cm.get(x, y), 0),
       incomplete: false
     };
-
-    // Super simple path finding
-    // let path = [];
-    // while (origin.x != goalPos.x) {
-    //   if (origin.x > goalPos.x) {
-    //     origin.x--;
-    //   } else {
-    //     origin.x++;
-    //   }
-    //   path.push(new RoomPosition(origin.x, origin.y, origin.roomName));
-    // }
-
-    // while (origin.y != goalPos.y) {
-    //   if (origin.y > goalPos.y) {
-    //     origin.y--;
-    //   } else {
-    //     origin.y++;
-    //   }
-    //   path.push(new RoomPosition(origin.x, origin.y, origin.roomName));
-    // }
-
-    // return {
-    //   // @ts-ignore
-    //   path: path,
-    //   ops: path.length,
-    //   cost: 0,
-    //   incomplete: false
-    // };
   }
 }
 
-function cmToGrid(cm: CostMatrix): Grid {
+function searchPath(
+  origin: Coord,
+  goal: Coord,
+  cm: CostMatrix,
+  terrain: RoomTerrain,
+  heuristicWeight: number
+): number[][] {
+  const grid = cmToGrid(cm, terrain);
+  const finder = new AStarFinder({
+    diagonalMovement: 1,
+    weight: heuristicWeight
+  });
+  return finder.findPath(origin.x, origin.y, goal.x, goal.y, grid);
+}
+
+function bestPath(paths: number[][][], cm: FakeCostMatrix, terrain: RoomTerrain): number[][] {
+  const best = paths.reduce<{ cost: number; path: number[][] }>(
+    (acc, path) => {
+      if (path.length === 0) {
+        return acc;
+      }
+
+      const cost = path.reduce((acc, [x, y]) => {
+        let cost = cm.get(x, y);
+        return acc + (cost === 0 ? terrain.get(x, y) : cost);
+      }, 0);
+      if (cost < acc.cost) {
+        return { cost, path };
+      }
+      return acc;
+    },
+    { cost: Infinity, path: [] }
+  );
+  return best.path;
+}
+
+function cmToGrid(cm: CostMatrix, terrain: RoomTerrain): Grid {
   const grid = new Grid(50, 50);
   for (let x = 0; x < 50; x++) {
     for (let y = 0; y < 50; y++) {
+      let cost = cm.get(x, y);
+      if (cost === 0) {
+        cost = terrain.get(x, y);
+      }
+
       // @ts-ignore
-      grid.setWeightAt(x, y, cm.get(x, y));
-      grid.setWalkableAt(x, y, cm.get(x, y) < 255);
+      grid.setWeightAt(x, y, cost);
+      grid.setWalkableAt(x, y, cost < 255);
     }
   }
+
   return grid;
 }
 

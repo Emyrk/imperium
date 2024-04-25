@@ -14,16 +14,21 @@ export interface ValidDenseLayout {
 
 // layoutDense finds a 3x3 open area near the controller. The center can
 // upgrade the controller.
-export function layoutDense(room: Room): ValidDenseLayout | undefined {
+export function layoutDense(room: Room, terrain: RoomTerrain = room.getTerrain()): ValidDenseLayout | Error {
   const squares = layoutCenter(room);
   if (!squares) {
     // TODO: try again somewhere else?
-    return undefined;
+    return new Error("No center found");
   }
+
+  if (!squares.center) {
+    throw new Error("Center is undefined");
+  }
+
   const center = squares.center;
 
   if (room.sources.length === 0) {
-    return undefined;
+    return new Error("No sources found");
   }
 
   const source = room.sources[0];
@@ -49,6 +54,9 @@ export function layoutDense(room: Room): ValidDenseLayout | undefined {
   );
 
   let trail = path.path;
+  if (trail.length === 0) {
+    return new Error("No path found from center to sources");
+  }
   if (path.path[0].x === center.x && path.path[0].y === center.y) {
     trail = path.path.slice(1);
   }
@@ -62,7 +70,7 @@ export function layoutDense(room: Room): ValidDenseLayout | undefined {
     return coordDistance(coord, spawnOut) === 1;
   });
   if (!storageCoord) {
-    return undefined;
+    return new Error("No storage coord found");
   }
 
   return {
@@ -80,7 +88,7 @@ interface layoutRing {
 }
 
 // Will find an open 3x3 area that can still upgrade the controller.
-export function layoutCenter(room: Room): layoutRing | undefined {
+export function layoutCenter(room: Room, terrain: RoomTerrain = room.getTerrain()): layoutRing | undefined {
   // Minimal layout for a village is to surround the controller with:
   //  - Spawn
   //  - Tower
@@ -94,7 +102,6 @@ export function layoutCenter(room: Room): layoutRing | undefined {
   // Check the ring around the controller.
   // Start at the top left.
   let candidates = candidateRing({ x: controller.pos.x, y: controller.pos.y }, 3);
-  const terrain = room.getTerrain();
 
   let ring = [];
   let index = 0;

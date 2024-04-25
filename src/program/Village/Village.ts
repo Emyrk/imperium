@@ -3,7 +3,7 @@ import { Process, ProcessCode } from "kernel/Process";
 import { log } from "lib/log/log";
 import { profile } from "lib/profiler/decorator";
 import { GlobalCollector } from "main";
-import { BuildingPlans, ProgramBlueprint } from "program/Blueprint/Blueprint";
+import { ProgramBlueprint } from "program/Blueprint/Blueprint";
 import { layoutDensePlans } from "program/Blueprint/layouts";
 import { ProgramHeapRoomLogistics } from "program/HeapRoomLogistics/HeapRoomLogistics";
 import { PriorityMode } from "program/HeapRoomLogistics/LogisticNeeds/priorities";
@@ -11,6 +11,7 @@ import { ProgramSpawnControl } from "program/SpawnControl/SpawnControl";
 import { ProgramStaticHarvest } from "program/StaticHarvest/StaticHarvest";
 import { ProgramTowerDefense } from "program/TowerDefense/TowerDefense";
 import { RoomVillage } from "./interface";
+import { BuildingPlans } from "lib/roomplanning/Planner";
 
 export interface ProgramVillageData extends ProcessData {
   spawnPid?: number;
@@ -24,6 +25,7 @@ export interface ProgramVillageData extends ProcessData {
 
   // Important buildings.
   primaryLinkPos?: Coord;
+  mayorPos?: Coord;
 }
 
 @profile
@@ -176,6 +178,7 @@ export class ProgramVillage extends Process<ProgramVillageData> implements RoomV
         this.data.primaryBuildings = plans;
         // primary link is where we will send energy to.
         this.data.primaryLinkPos = plans.buildings[STRUCTURE_LINK][0].pos;
+        this.data.mayorPos = plans.center;
       }
     }
 

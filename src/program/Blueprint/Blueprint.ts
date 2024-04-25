@@ -1,17 +1,8 @@
 import { exists } from "fs";
 import { Process, ProcessCode } from "kernel/Process";
 import { log } from "lib/log/log";
+import { BlueprintPlan, BuildingPlans } from "lib/roomplanning/Planner";
 import { equalCoords } from "lib/utils/distance";
-
-export interface BuildingPlans {
-  buildings: { [key in STRUCTURE_CONTAINER as string]: BlueprintPlan[] };
-}
-
-export interface BlueprintPlan {
-  pos: Coord;
-  rcl?: number;
-  power?: boolean;
-}
 
 export interface BlueprintData extends ProcessData {
   buildings: { [key in STRUCTURE_CONTAINER as string]: BlueprintPlan[] };

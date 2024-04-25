@@ -24,7 +24,41 @@ export class Rooms {
       {
         controllerPos: { x: 37, y: 26 },
         sources: [{ x: 39, y: 8 }],
-        minerals: [{ pos: { x: 10, y: 23 }, type: RESOURCE_LEMERGIUM }]
+        minerals: [{ pos: { x: 10, y: 43 }, type: RESOURCE_LEMERGIUM }]
+      },
+      mockFields,
+      opts
+    );
+  }
+
+  public static E12S53(mockFields: { [name: string]: any } = {}, opts: RoomOpts = { level: 0, power: false }): Room {
+    return Rooms.room(
+      "E12S53",
+      RoomTerrains.E12S53(),
+      {
+        controllerPos: { x: 28, y: 43 },
+        sources: [
+          { x: 13, y: 29 },
+          { x: 28, y: 19 }
+        ],
+        minerals: [{ pos: { x: 7, y: 12 }, type: RESOURCE_CATALYST }]
+      },
+      mockFields,
+      opts
+    );
+  }
+
+  public static E16S59(mockFields: { [name: string]: any } = {}, opts: RoomOpts = { level: 0, power: false }): Room {
+    return Rooms.room(
+      "E16S59",
+      RoomTerrains.E16S59(),
+      {
+        controllerPos: { x: 26, y: 40 },
+        sources: [
+          { x: 7, y: 16 },
+          { x: 3, y: 30 }
+        ],
+        minerals: [{ pos: { x: 28, y: 30 }, type: RESOURCE_LEMERGIUM }]
       },
       mockFields,
       opts
@@ -82,12 +116,14 @@ export class Rooms {
   }
 
   public static pathCallback(
-    path: PathFinderPath,
+    path: PathFinderPath | Coord[],
     callback?: (x: number, y: number) => string | undefined
   ): (x: number, y: number) => string | undefined {
     if (!callback) {
       callback = (x: number, y: number) => undefined;
     }
+
+    const positions = "path" in path ? path.path : path;
 
     return (x: number, y: number) => {
       const override = callback(x, y);
@@ -95,7 +131,7 @@ export class Rooms {
         return override;
       }
 
-      return path.path.some(pos => pos.x === x && pos.y === y) ? "X" : undefined;
+      return positions.some(pos => pos.x === x && pos.y === y) ? "X" : undefined;
     };
   }
 }

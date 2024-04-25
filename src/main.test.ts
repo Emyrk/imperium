@@ -1,5 +1,5 @@
 import { log } from "lib/log/log";
-import { expect, test } from "vitest";
+import { describe, expect, it, test } from "vitest";
 import { Rooms } from "../test/fakes/Rooms";
 import { callback } from "lodash";
 
@@ -10,18 +10,29 @@ test("Test Environment is set up correctly", () => {
   log.info("Test Environment is set up correctly");
 });
 
-test("Pathfinder Works", () => {
+describe("Pathfinder Works", () => {
   const room = Rooms.E11S53();
   const terrain = room.getTerrain();
-  const path = PathFinder.search(new RoomPosition(9, 26, room.name), new RoomPosition(38, 25, room.name));
 
-  expect(path).toBeDefined();
+  it("left -> right", () => {
+    const path = PathFinder.search(new RoomPosition(9, 26, room.name), new RoomPosition(38, 25, room.name));
+    expectPath(path, room);
+    expect(JSON.stringify(path.path)).toMatchSnapshot();
+  });
+
+  it("controller to source", () => {
+    const path = PathFinder.search(new RoomPosition(38, 23, room.name), new RoomPosition(40, 8, room.name));
+    expectPath(path, room);
+    expect(JSON.stringify(path.path)).toMatchSnapshot();
+  });
+});
+
+function expectPath(path: PathFinderPath, room: Room) {
+  const terrain = room.getTerrain();
+  expect(path.path.length).toBeGreaterThan(0);
   path.path.forEach(pos => {
     expect(pos.roomName).toBe(room.name);
     const terrainType = terrain.get(pos.x, pos.y);
     expect(terrainType).not.toBe(TERRAIN_MASK_WALL);
   });
-
-  expect(JSON.stringify(path.path)).toMatchSnapshot();
-  // console.log(Rooms.visualize(room, Rooms.pathCallback(path)));
-});
+}
