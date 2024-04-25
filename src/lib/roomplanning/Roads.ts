@@ -180,11 +180,12 @@ export function planRoads(room: Room, pois: POI[]): RoadDesign {
               return {
                 set: (x: number, y: number, value: number) => {},
                 get: (x: number, y: number): number => {
+                  const terr = terrain.get(x, y);
                   // You cannot build on edges
-                  if (x === 0 || x === 49 || y === 0 || y === 49) {
+                  if (terr === 0 && (x === 0 || x === 49 || y === 0 || y === 49)) {
                     return 255;
                   }
-                  return terrain.get(x, y);
+                  return terr;
                 }
               };
             }
