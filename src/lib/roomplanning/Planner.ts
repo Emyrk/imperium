@@ -6,7 +6,7 @@ export interface VillagePlans extends BuildingPlans {
 }
 
 export interface BuildingPlans {
-  buildings: { [key in STRUCTURE_CONTAINER as string]: BlueprintPlan[] };
+  buildings: { [key in StructureConstant as string]: BlueprintPlan[] };
 }
 
 export interface BlueprintPlan {

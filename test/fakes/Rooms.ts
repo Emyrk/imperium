@@ -4,7 +4,9 @@ import { MockController } from "test-utils/mocks/controller";
 import { RoomPosition as FakeRoomPosition } from "./RoomPosition";
 import { MockSource } from "test-utils/mocks/source";
 import { MockMineral } from "test-utils/mocks/mineral";
-
+import { BuildingPlans } from "lib/roomplanning/Planner";
+import { expect } from "vitest";
+import { GenerateID } from "test-utils/helpers";
 export interface RoomOpts {
   level: number;
   power: false;
@@ -14,6 +16,36 @@ interface RoomConstants {
   controllerPos: Coord;
   sources: Coord[];
   minerals: { pos: Coord; type: ResourceConstant }[];
+}
+
+interface RenderData {
+  terrain: RenderTerrain[];
+  Samples: Sample[];
+}
+
+// Sample is just 1 tick of the game.
+interface Sample {
+  objects: SampleStructure[];
+  gameTime: number;
+}
+
+interface RenderTerrain {
+  room: string;
+  x: number;
+  y: number;
+  type: string;
+}
+
+interface SampleStructure {
+  _id: string;
+  type: string;
+  room: string;
+  // Optional?
+  name?: string;
+  hits: number;
+  hitsMax: number;
+  x: number;
+  y: number;
 }
 
 export class Rooms {
@@ -132,6 +164,70 @@ export class Rooms {
       }
 
       return positions.some(pos => pos.x === x && pos.y === y) ? "X" : undefined;
+    };
+  }
+
+  // Saves to the generated directory for the renderer.
+  public static Save(name: string, data: RenderData) {
+    const directory = __dirname + "/../../renderer/generated";
+    expect(JSON.stringify(data.terrain, null, 2)).toMatchFileSnapshot(`${directory}/${name}/terrain.json`);
+    expect(JSON.stringify(data.Samples, null, 2)).toMatchFileSnapshot(`${directory}/${name}/room.json`);
+  }
+
+  public static RenderFiles(room: Room, plans: BuildingPlans): RenderData {
+    const sample = {
+      objects: [],
+      gameTime: 1
+    } as Sample;
+
+    const renderTerrain: RenderTerrain[] = [];
+
+    const terrain = room.getTerrain();
+    for (let x = 0; x < 50; x++) {
+      for (let y = 0; y < 50; y++) {
+        let type = "";
+        switch (terrain.get(x, y)) {
+          case 0:
+            continue;
+          case TERRAIN_MASK_WALL:
+            type = "wall";
+            break;
+          case TERRAIN_MASK_WALL:
+            type = "swamp";
+            break;
+          default:
+            continue;
+        }
+
+        renderTerrain.push({
+          room: room.name,
+          type: type,
+          x: x,
+          y: y
+        });
+      }
+    }
+
+    // For each building type, add the type to the sample.
+    for (const [type, buildingPlans] of Object.entries(plans.buildings)) {
+      for (const plan of buildingPlans) {
+        const id = GenerateID();
+        sample.objects.push({
+          // This should not matter
+          hits: 100,
+          hitsMax: 100,
+          _id: id,
+          room: room.name,
+          type: type,
+          x: plan.pos.x,
+          y: plan.pos.y
+        });
+      }
+    }
+
+    return {
+      terrain: renderTerrain,
+      Samples: [sample]
     };
   }
 }

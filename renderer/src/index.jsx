@@ -42,16 +42,27 @@ function applyDiff(objects, diff) {
     }
 }
 
-function select() {
-    
-}
+function start() {
+    const tests = [
+        "E11S53", "E12S53", "E16S59"
+    ]
 
-var useTerrain = terrain
-function start(_samples) {
-    if(_samples.ticks) {
+    let name = localStorage.getItem("testname") || tests[0]
+    // This is jank, but clear storage if it does not exist.
+    try {
+        require(`../generated/${name}/terrain.json`)
+    } catch(e) {
+        localStorage.removeItem("testname")
+        name = tests[0]
+    }
+    let terrain = require(`../generated/${name}/terrain.json`)
+    let samples = require(`../generated/${name}/room.json`)
+
+
+    if(samples.ticks) {
         let newSamples = [], objects = [], users = {};
-        for(var i in _samples.ticks) {
-            applyDiff(objects, _samples.ticks[i]);
+        for(var i in samples.ticks) {
+            applyDiff(objects, samples.ticks[i]);
             objects.forEach(object => {
                 if(object.user && !users[object.user]) {
                     users[object.user] = {
@@ -69,25 +80,19 @@ function start(_samples) {
                 objects: _.cloneDeep(objects)
             });
         }
-        _samples = newSamples;
+        samples = newSamples;
     }
 
-    const tests = [
-        "test"
-    ]
 
-    console.log("react render")
     const select = function(name) {
-        console.log("Reload")
-        useTerrain = require(`../generated/${name}/terrain.json`)
-        // console.log(terrain)
-        // start(terrain, samples)
-        // window.location.reload()
+        // Just reload the window, it's easier.
+        localStorage.setItem("testname", name)
+        window.location.reload()
     }
 
     ReactDOM.render(
         <div>
-            <App samples={_samples} terrain={useTerrain} />
+            <App samples={samples} terrain={terrain} />
             <div style={{position:"fixed", bottom:"10%", backgroundColor:"white"}}>
                 Rooms <span>  </span>
                 {tests.map((name) => {

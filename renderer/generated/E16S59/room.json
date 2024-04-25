@@ -1,0 +1,1717 @@
+[
+  {
+    "objects": [
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "2641ac5e656d0d6a92aff016",
+        "room": "E16S59",
+        "type": "road",
+        "x": 6,
+        "y": 17
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "69d183036d769a622b46283a",
+        "room": "E16S59",
+        "type": "road",
+        "x": 5,
+        "y": 18
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "8e3efb959bb022f4d3afc493",
+        "room": "E16S59",
+        "type": "road",
+        "x": 4,
+        "y": 19
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "dadc154263571e421df9942e",
+        "room": "E16S59",
+        "type": "road",
+        "x": 3,
+        "y": 20
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "3469b9213298304974d64bb1",
+        "room": "E16S59",
+        "type": "road",
+        "x": 3,
+        "y": 21
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "3e856a5e430ced09f232c573",
+        "room": "E16S59",
+        "type": "road",
+        "x": 4,
+        "y": 22
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "f48a9a43cda101b7d415c00e",
+        "room": "E16S59",
+        "type": "road",
+        "x": 4,
+        "y": 23
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "db29cc8c3fed26533e55eeef",
+        "room": "E16S59",
+        "type": "road",
+        "x": 4,
+        "y": 24
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "5eaa480373d404a4a2c86690",
+        "room": "E16S59",
+        "type": "road",
+        "x": 4,
+        "y": 25
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "2be52ef1b2a35b158c4770a7",
+        "room": "E16S59",
+        "type": "road",
+        "x": 4,
+        "y": 26
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "c689a0589f4d205383aee3cc",
+        "room": "E16S59",
+        "type": "road",
+        "x": 4,
+        "y": 27
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "021ffd367cda9a96c1bb7444",
+        "room": "E16S59",
+        "type": "road",
+        "x": 4,
+        "y": 28
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "03b354ee8d7312c3b2d9b816",
+        "room": "E16S59",
+        "type": "road",
+        "x": 4,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "636b6a1204e38f1cf18dbd45",
+        "room": "E16S59",
+        "type": "road",
+        "x": 4,
+        "y": 30
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "f8a3fed57c27cce2139084d2",
+        "room": "E16S59",
+        "type": "road",
+        "x": 3,
+        "y": 31
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "2e0634b6aabf4bb39b56c225",
+        "room": "E16S59",
+        "type": "road",
+        "x": 7,
+        "y": 17
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "a96035d87667a46772268a2b",
+        "room": "E16S59",
+        "type": "road",
+        "x": 7,
+        "y": 18
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "48bd2b5ae4f2020aeb0e5a5d",
+        "room": "E16S59",
+        "type": "road",
+        "x": 8,
+        "y": 19
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "7164fd0cd8dea9a85e8bce64",
+        "room": "E16S59",
+        "type": "road",
+        "x": 7,
+        "y": 20
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "bffde00a3596a9cf6980c6c7",
+        "room": "E16S59",
+        "type": "road",
+        "x": 7,
+        "y": 21
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "2050406125c55eb133726bab",
+        "room": "E16S59",
+        "type": "road",
+        "x": 7,
+        "y": 22
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "92a59a9014e051f3b4e19ae4",
+        "room": "E16S59",
+        "type": "road",
+        "x": 7,
+        "y": 23
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "95e2e6b7e6d06a5e963cc320",
+        "room": "E16S59",
+        "type": "road",
+        "x": 7,
+        "y": 24
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "c615add058c4200c8d7da32e",
+        "room": "E16S59",
+        "type": "road",
+        "x": 7,
+        "y": 25
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "92b7cf4e011b8d47a2809b72",
+        "room": "E16S59",
+        "type": "road",
+        "x": 7,
+        "y": 26
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "88e09617ef50c153b3e6fc7d",
+        "room": "E16S59",
+        "type": "road",
+        "x": 7,
+        "y": 27
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "49fda0259cbdda40762fc21a",
+        "room": "E16S59",
+        "type": "road",
+        "x": 8,
+        "y": 28
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "9e27b7446c9e6e612d2d2aee",
+        "room": "E16S59",
+        "type": "road",
+        "x": 9,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "8778c530ea8d82205e99b4fa",
+        "room": "E16S59",
+        "type": "road",
+        "x": 10,
+        "y": 30
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "89d29ccde5bead7c4b0c878f",
+        "room": "E16S59",
+        "type": "road",
+        "x": 11,
+        "y": 31
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "83e0a8ccaea2f16bd36ca29c",
+        "room": "E16S59",
+        "type": "road",
+        "x": 12,
+        "y": 32
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "0c0ed807971aa560a0e8f0a0",
+        "room": "E16S59",
+        "type": "road",
+        "x": 13,
+        "y": 33
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "b5050b3e143b4da8ab112a5d",
+        "room": "E16S59",
+        "type": "road",
+        "x": 14,
+        "y": 34
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "9dd27a610ac4e460198d2a51",
+        "room": "E16S59",
+        "type": "road",
+        "x": 15,
+        "y": 34
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "a9327f49e5e968cb5b70e2bc",
+        "room": "E16S59",
+        "type": "road",
+        "x": 16,
+        "y": 33
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "24fc6788982773bca1ea2a8d",
+        "room": "E16S59",
+        "type": "road",
+        "x": 17,
+        "y": 34
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "522edeea66b0f3933d85afc0",
+        "room": "E16S59",
+        "type": "road",
+        "x": 18,
+        "y": 35
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "d4203170c57314dad2024dff",
+        "room": "E16S59",
+        "type": "road",
+        "x": 19,
+        "y": 36
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "280de5867a2fa27aa472b630",
+        "room": "E16S59",
+        "type": "road",
+        "x": 20,
+        "y": 37
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "5b9ad69798518b57b8a699a4",
+        "room": "E16S59",
+        "type": "road",
+        "x": 21,
+        "y": 38
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "bd44656668676fc60a1b6619",
+        "room": "E16S59",
+        "type": "road",
+        "x": 22,
+        "y": 39
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "b78df897fe474a3c78f0f92c",
+        "room": "E16S59",
+        "type": "road",
+        "x": 23,
+        "y": 39
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "9effa8a84277b978eda74ac6",
+        "room": "E16S59",
+        "type": "road",
+        "x": 6,
+        "y": 17
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "40983b312266c915645ea113",
+        "room": "E16S59",
+        "type": "road",
+        "x": 5,
+        "y": 18
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "3c288236e1613767d23d5446",
+        "room": "E16S59",
+        "type": "road",
+        "x": 4,
+        "y": 19
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "eb2253296381ef045df04b73",
+        "room": "E16S59",
+        "type": "road",
+        "x": 3,
+        "y": 20
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "d82a838a85d9e4a42e3ad996",
+        "room": "E16S59",
+        "type": "road",
+        "x": 2,
+        "y": 21
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "7424cf8319a9b50577c20f75",
+        "room": "E16S59",
+        "type": "road",
+        "x": 2,
+        "y": 22
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "782301c598f9549bd9ca55bb",
+        "room": "E16S59",
+        "type": "road",
+        "x": 2,
+        "y": 23
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "e7310be0b0bf9bbb39d23eec",
+        "room": "E16S59",
+        "type": "road",
+        "x": 2,
+        "y": 24
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "665d2fabd6c8051546ecdda1",
+        "room": "E16S59",
+        "type": "road",
+        "x": 2,
+        "y": 25
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "e3b0ac6a76b1280e7081f28e",
+        "room": "E16S59",
+        "type": "road",
+        "x": 2,
+        "y": 26
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "b6a321aa3501f5510d8887b3",
+        "room": "E16S59",
+        "type": "road",
+        "x": 2,
+        "y": 27
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "82a3ec83e857966bf23f7370",
+        "room": "E16S59",
+        "type": "road",
+        "x": 2,
+        "y": 28
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "b1bf40b385f008235bed34ac",
+        "room": "E16S59",
+        "type": "road",
+        "x": 2,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "91a676e3484ae19e6658e386",
+        "room": "E16S59",
+        "type": "road",
+        "x": 2,
+        "y": 30
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "ba10dc23780965636108b434",
+        "room": "E16S59",
+        "type": "road",
+        "x": 3,
+        "y": 31
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "fc93234a579016ed7e367b2d",
+        "room": "E16S59",
+        "type": "road",
+        "x": 2,
+        "y": 32
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "4480e28d6471d9c858f30270",
+        "room": "E16S59",
+        "type": "road",
+        "x": 2,
+        "y": 33
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "e4f4acc2a34dc1dcede6c993",
+        "room": "E16S59",
+        "type": "road",
+        "x": 2,
+        "y": 34
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "a29fd90428279561b56b61cc",
+        "room": "E16S59",
+        "type": "road",
+        "x": 2,
+        "y": 35
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "c1369e304bf66558c05e6015",
+        "room": "E16S59",
+        "type": "road",
+        "x": 2,
+        "y": 36
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "0e8004a86731eefb5b6fe701",
+        "room": "E16S59",
+        "type": "road",
+        "x": 2,
+        "y": 37
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "c80f7dea36826d65eb8ed1f1",
+        "room": "E16S59",
+        "type": "road",
+        "x": 7,
+        "y": 17
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "a7cbeebe652bc104559c1969",
+        "room": "E16S59",
+        "type": "road",
+        "x": 7,
+        "y": 18
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "2cb8cdf5f44e87a8d434f584",
+        "room": "E16S59",
+        "type": "road",
+        "x": 8,
+        "y": 19
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "020f14f34f2e3b9acfe136c5",
+        "room": "E16S59",
+        "type": "road",
+        "x": 9,
+        "y": 20
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "2e74facd98e4bc6c37d24469",
+        "room": "E16S59",
+        "type": "road",
+        "x": 10,
+        "y": 21
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "5eaab2cd498973f96ddf786e",
+        "room": "E16S59",
+        "type": "road",
+        "x": 11,
+        "y": 22
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "381db60557da19894eaf15dd",
+        "room": "E16S59",
+        "type": "road",
+        "x": 12,
+        "y": 23
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "e8bdcad42ffdc32532f16775",
+        "room": "E16S59",
+        "type": "road",
+        "x": 13,
+        "y": 24
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "588af84142bce8267f6b91be",
+        "room": "E16S59",
+        "type": "road",
+        "x": 14,
+        "y": 25
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "14efd3eb4af16774a905e37d",
+        "room": "E16S59",
+        "type": "road",
+        "x": 15,
+        "y": 26
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "baedd004d64e11e1b03d2740",
+        "room": "E16S59",
+        "type": "road",
+        "x": 16,
+        "y": 27
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "2d686f2a0f6a752c1b72b6e7",
+        "room": "E16S59",
+        "type": "road",
+        "x": 17,
+        "y": 28
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "f81dec52bcaba44974f7592b",
+        "room": "E16S59",
+        "type": "road",
+        "x": 18,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "5cc21c6fb44bb8cf41bfa296",
+        "room": "E16S59",
+        "type": "road",
+        "x": 19,
+        "y": 30
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "9e1c236d3cf944d74bd9c35b",
+        "room": "E16S59",
+        "type": "road",
+        "x": 19,
+        "y": 31
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "db93c54690f75d616ec1ff45",
+        "room": "E16S59",
+        "type": "road",
+        "x": 20,
+        "y": 32
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "e5f07844ea0c18e0d1d65abc",
+        "room": "E16S59",
+        "type": "road",
+        "x": 21,
+        "y": 33
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "8ba53ceeb6c9bfa2ba82a1d4",
+        "room": "E16S59",
+        "type": "road",
+        "x": 22,
+        "y": 34
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "aefa22a6687394124d1c1807",
+        "room": "E16S59",
+        "type": "road",
+        "x": 23,
+        "y": 34
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "fd7958a63bb80c10cca902e0",
+        "room": "E16S59",
+        "type": "road",
+        "x": 24,
+        "y": 33
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "0549725d7c0bdb42a8597761",
+        "room": "E16S59",
+        "type": "road",
+        "x": 25,
+        "y": 32
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "61b129f377e70bb607b50348",
+        "room": "E16S59",
+        "type": "road",
+        "x": 26,
+        "y": 33
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "e4bf9ab8f1f9a88e38b55a08",
+        "room": "E16S59",
+        "type": "road",
+        "x": 27,
+        "y": 34
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "91b4cbf80c95a0b94df1b118",
+        "room": "E16S59",
+        "type": "road",
+        "x": 28,
+        "y": 35
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "b908405c8dd1c534bd7c061b",
+        "room": "E16S59",
+        "type": "road",
+        "x": 29,
+        "y": 36
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "2e095deb02db26fb68fc17c4",
+        "room": "E16S59",
+        "type": "road",
+        "x": 30,
+        "y": 37
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "71e10d6f22c924bf6b8216c8",
+        "room": "E16S59",
+        "type": "road",
+        "x": 31,
+        "y": 38
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "19e17d2981d9f61e13a2913f",
+        "room": "E16S59",
+        "type": "road",
+        "x": 32,
+        "y": 39
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "0b641ef3d1fe7c359a51454a",
+        "room": "E16S59",
+        "type": "road",
+        "x": 33,
+        "y": 40
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "f0735483b3dd0a3a09a86dec",
+        "room": "E16S59",
+        "type": "road",
+        "x": 34,
+        "y": 41
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "f557b6965599ed7d59eb5335",
+        "room": "E16S59",
+        "type": "road",
+        "x": 35,
+        "y": 42
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "efb46fbdbabb754369f2ec0e",
+        "room": "E16S59",
+        "type": "road",
+        "x": 36,
+        "y": 43
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "4af0468164f47cf53472870e",
+        "room": "E16S59",
+        "type": "road",
+        "x": 37,
+        "y": 44
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "e33c4c330efc7998e3e762d7",
+        "room": "E16S59",
+        "type": "road",
+        "x": 38,
+        "y": 45
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "40b2017aabac623e84be3f34",
+        "room": "E16S59",
+        "type": "road",
+        "x": 39,
+        "y": 46
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "9554dfb06452a8f3a802abd0",
+        "room": "E16S59",
+        "type": "road",
+        "x": 40,
+        "y": 47
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "5e5e94b34431d584368e1d1b",
+        "room": "E16S59",
+        "type": "road",
+        "x": 4,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "569db1dee34132715991d4fa",
+        "room": "E16S59",
+        "type": "road",
+        "x": 5,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "b1a79c3d7b5fa82e609ccad4",
+        "room": "E16S59",
+        "type": "road",
+        "x": 6,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "9533fbd05427f8dd448a7991",
+        "room": "E16S59",
+        "type": "road",
+        "x": 7,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "984265bb34d28bdccbe3b82c",
+        "room": "E16S59",
+        "type": "road",
+        "x": 8,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "44faad80933e32ac279b6b2d",
+        "room": "E16S59",
+        "type": "road",
+        "x": 9,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "0afe0af850d0872a9dfdb043",
+        "room": "E16S59",
+        "type": "road",
+        "x": 10,
+        "y": 30
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "34c13bc6d954ef0974672a4e",
+        "room": "E16S59",
+        "type": "road",
+        "x": 11,
+        "y": 30
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "e9fc23c78d511efdf86f76bd",
+        "room": "E16S59",
+        "type": "road",
+        "x": 12,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "48d34a26f04cb398f3d7ef5d",
+        "room": "E16S59",
+        "type": "road",
+        "x": 13,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "08eb2ede26d8f99f07cc41db",
+        "room": "E16S59",
+        "type": "road",
+        "x": 14,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "354e55c92501c2c237a7bd28",
+        "room": "E16S59",
+        "type": "road",
+        "x": 15,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "8fd958d543b3ec68327e2b03",
+        "room": "E16S59",
+        "type": "road",
+        "x": 16,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "5771f79591ffe37baf39b717",
+        "room": "E16S59",
+        "type": "road",
+        "x": 17,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "5e547aa3ef88bb198e093d0a",
+        "room": "E16S59",
+        "type": "road",
+        "x": 18,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "5777962350c00a234b8aaef6",
+        "room": "E16S59",
+        "type": "road",
+        "x": 19,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "a5c9ad6ed66022f2261086e3",
+        "room": "E16S59",
+        "type": "road",
+        "x": 20,
+        "y": 28
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "c88c3d2c97fe9c6372bb3c94",
+        "room": "E16S59",
+        "type": "road",
+        "x": 21,
+        "y": 28
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "396f43afe1ceaf6543fd3d0f",
+        "room": "E16S59",
+        "type": "road",
+        "x": 22,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "ab8ca1ace4487e7b9935ce45",
+        "room": "E16S59",
+        "type": "road",
+        "x": 23,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "e2716f2e38f21405d3d1149d",
+        "room": "E16S59",
+        "type": "road",
+        "x": 24,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "d35a4e1f335dc0c807b93080",
+        "room": "E16S59",
+        "type": "road",
+        "x": 25,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "eee75acb352c7df5af127725",
+        "room": "E16S59",
+        "type": "road",
+        "x": 26,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "07e35f9e358b4ea62ce5e107",
+        "room": "E16S59",
+        "type": "road",
+        "x": 27,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "0f3f8f116b1f26e7ae7df836",
+        "room": "E16S59",
+        "type": "road",
+        "x": 4,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "5525d1933271d6027e961acc",
+        "room": "E16S59",
+        "type": "road",
+        "x": 5,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "58a14ee73ec91ac92bf23c03",
+        "room": "E16S59",
+        "type": "road",
+        "x": 6,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "ba9f9dfce66d9bf8d1b8609c",
+        "room": "E16S59",
+        "type": "road",
+        "x": 7,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "22ee6ca62dff51a919d30dd7",
+        "room": "E16S59",
+        "type": "road",
+        "x": 8,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "8be2e78dce39c63f1dd97e61",
+        "room": "E16S59",
+        "type": "road",
+        "x": 9,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "7eb1860d1c711c1c9fb84644",
+        "room": "E16S59",
+        "type": "road",
+        "x": 10,
+        "y": 30
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "71a6c70813033cf0dddf0347",
+        "room": "E16S59",
+        "type": "road",
+        "x": 11,
+        "y": 30
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "63c2cb7c20f084eb4c8e06e5",
+        "room": "E16S59",
+        "type": "road",
+        "x": 12,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "d57d4536d5e21bef2280cf0c",
+        "room": "E16S59",
+        "type": "road",
+        "x": 13,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "4ebdec47cb1e1236493f76d3",
+        "room": "E16S59",
+        "type": "road",
+        "x": 14,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "89c61b33334284e9a0cbf4f5",
+        "room": "E16S59",
+        "type": "road",
+        "x": 15,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "5aa237112b7f4079948d7d05",
+        "room": "E16S59",
+        "type": "road",
+        "x": 16,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "b3e459df47e67beee6c77e80",
+        "room": "E16S59",
+        "type": "road",
+        "x": 17,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "51b34aa15e73415bab7f61fb",
+        "room": "E16S59",
+        "type": "road",
+        "x": 18,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "b921921e7ae2eaf14657faee",
+        "room": "E16S59",
+        "type": "road",
+        "x": 19,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "225bddfb4564f7c6a0abd9d1",
+        "room": "E16S59",
+        "type": "road",
+        "x": 20,
+        "y": 28
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "f022f915ac638cdc3ee9eaa6",
+        "room": "E16S59",
+        "type": "road",
+        "x": 21,
+        "y": 28
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "dea315e2d700c9e1c86ee79d",
+        "room": "E16S59",
+        "type": "road",
+        "x": 22,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "1908017b2d8cdc3f484ac3e0",
+        "room": "E16S59",
+        "type": "road",
+        "x": 23,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "5eff391026831a55fab6b8c0",
+        "room": "E16S59",
+        "type": "road",
+        "x": 24,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "ecc7b778c374563b24d094d9",
+        "room": "E16S59",
+        "type": "road",
+        "x": 25,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "c89c20c4357d99201a13bf2e",
+        "room": "E16S59",
+        "type": "road",
+        "x": 26,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "75281459a27bcb9d31043cbf",
+        "room": "E16S59",
+        "type": "road",
+        "x": 27,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "9cef6f92d12eb22747dfd136",
+        "room": "E16S59",
+        "type": "road",
+        "x": 28,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "f2e7be9598881666c31bc0a9",
+        "room": "E16S59",
+        "type": "road",
+        "x": 29,
+        "y": 28
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "ba92fe29c396d5d0fa075dae",
+        "room": "E16S59",
+        "type": "road",
+        "x": 30,
+        "y": 28
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "3bf000cffaa3961a92b50527",
+        "room": "E16S59",
+        "type": "road",
+        "x": 31,
+        "y": 28
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "af7b63592ba6bfdbd5e412b0",
+        "room": "E16S59",
+        "type": "road",
+        "x": 32,
+        "y": 28
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "1172336239d46f23bbc54f56",
+        "room": "E16S59",
+        "type": "road",
+        "x": 33,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "a92311dd135869ebc7b9e326",
+        "room": "E16S59",
+        "type": "road",
+        "x": 34,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "94ed4131864eccdebeae94aa",
+        "room": "E16S59",
+        "type": "road",
+        "x": 35,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "cf109796ea9019c167b92c87",
+        "room": "E16S59",
+        "type": "road",
+        "x": 36,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "3ecf6ee3acc92233d00e5c80",
+        "room": "E16S59",
+        "type": "road",
+        "x": 37,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "81b085232b1813a71fb8d468",
+        "room": "E16S59",
+        "type": "road",
+        "x": 38,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "33d729af0aa56659de08a59e",
+        "room": "E16S59",
+        "type": "road",
+        "x": 39,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "ed235d95dd43d51ccfecd4b4",
+        "room": "E16S59",
+        "type": "road",
+        "x": 40,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "da9a092b79292e20871ef0b0",
+        "room": "E16S59",
+        "type": "road",
+        "x": 41,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "fef097dc7c82b93d389a91a4",
+        "room": "E16S59",
+        "type": "road",
+        "x": 42,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "383270292af003f8fc1eeaa7",
+        "room": "E16S59",
+        "type": "road",
+        "x": 43,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "1b22287221813e5d444856eb",
+        "room": "E16S59",
+        "type": "road",
+        "x": 44,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "b29a47cbfe29272b5aab3e79",
+        "room": "E16S59",
+        "type": "road",
+        "x": 45,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "2de31001d2ce77b83ed6e02a",
+        "room": "E16S59",
+        "type": "road",
+        "x": 46,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "fb9c48e6db53590b25193df9",
+        "room": "E16S59",
+        "type": "road",
+        "x": 47,
+        "y": 29
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "201e603537da7973c36d349a",
+        "room": "E16S59",
+        "type": "road",
+        "x": 21,
+        "y": 39
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "9bdc1469453ba51a9a95dddf",
+        "room": "E16S59",
+        "type": "road",
+        "x": 22,
+        "y": 39
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "2984261c5548407e27257372",
+        "room": "E16S59",
+        "type": "road",
+        "x": 23,
+        "y": 39
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "ce58f634fff7602ac5de10e3",
+        "room": "E16S59",
+        "type": "road",
+        "x": 29,
+        "y": 45
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "88120a1eafab99ce82154fea",
+        "room": "E16S59",
+        "type": "road",
+        "x": 29,
+        "y": 46
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "6cba5b572e260c06f060307a",
+        "room": "E16S59",
+        "type": "road",
+        "x": 29,
+        "y": 47
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "3ce5d71da3e9d74a3a6e6ec7",
+        "room": "E16S59",
+        "type": "road",
+        "x": 28,
+        "y": 47
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "1dd619bf0e88677b64b6cc60",
+        "room": "E16S59",
+        "type": "road",
+        "x": 27,
+        "y": 47
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "b8bf0236cb53dc50ca5c3333",
+        "room": "E16S59",
+        "type": "road",
+        "x": 26,
+        "y": 47
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "1dfbdc556fe8f604767a61c4",
+        "room": "E16S59",
+        "type": "road",
+        "x": 25,
+        "y": 47
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "66e37de9d033e02e21864acf",
+        "room": "E16S59",
+        "type": "road",
+        "x": 24,
+        "y": 47
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "2a7b26e3b453f181cbf145e5",
+        "room": "E16S59",
+        "type": "road",
+        "x": 23,
+        "y": 47
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "99c56ee76f039081bc48f569",
+        "room": "E16S59",
+        "type": "road",
+        "x": 22,
+        "y": 47
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "877dc35f7d96b398c0d9bf23",
+        "room": "E16S59",
+        "type": "road",
+        "x": 21,
+        "y": 41
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "abf815d2408b352415a7339f",
+        "room": "E16S59",
+        "type": "road",
+        "x": 21,
+        "y": 40
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "da4e9536e1921b8165e41757",
+        "room": "E16S59",
+        "type": "spawn",
+        "x": 25,
+        "y": 42
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "a485388693cadfc2597cd106",
+        "room": "E16S59",
+        "type": "storage",
+        "x": 24,
+        "y": 42
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "c43a970441d88acb714d1655",
+        "room": "E16S59",
+        "type": "link",
+        "x": 24,
+        "y": 43
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "2eaa27fec467e9f68d2241e6",
+        "room": "E16S59",
+        "type": "terminal",
+        "x": 24,
+        "y": 44
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "628dc35de420e0e7c1f3d1e6",
+        "room": "E16S59",
+        "type": "nuker",
+        "x": 25,
+        "y": 44
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "3f78f89c45ea6e4d305afd92",
+        "room": "E16S59",
+        "type": "factory",
+        "x": 26,
+        "y": 42
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "2b9c626e37f363cb932b36ad",
+        "room": "E16S59",
+        "type": "tower",
+        "x": 26,
+        "y": 43
+      },
+      {
+        "hits": 100,
+        "hitsMax": 100,
+        "_id": "11780351bb4b00de86e28a90",
+        "room": "E16S59",
+        "type": "powerSpawn",
+        "x": 26,
+        "y": 44
+      }
+    ],
+    "gameTime": 1
+  }
+]
