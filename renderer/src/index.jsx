@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import terrain from './generated/test/terrain.json';
+import terrain from './samples/terrain1.json';
 import samples from './samples/room_replay.json';
 import _ from 'lodash';
 
@@ -42,8 +42,12 @@ function applyDiff(objects, diff) {
     }
 }
 
-function start(_terrain, _samples) {
+function select() {
+    
+}
 
+var useTerrain = terrain
+function start(_samples) {
     if(_samples.ticks) {
         let newSamples = [], objects = [], users = {};
         for(var i in _samples.ticks) {
@@ -68,9 +72,29 @@ function start(_terrain, _samples) {
         _samples = newSamples;
     }
 
+    const tests = [
+        "test"
+    ]
+
+    console.log("react render")
+    const select = function(name) {
+        console.log("Reload")
+        useTerrain = require(`../generated/${name}/terrain.json`)
+        // console.log(terrain)
+        // start(terrain, samples)
+        // window.location.reload()
+    }
 
     ReactDOM.render(
-        <App samples={_samples} terrain={_terrain} />,
+        <div>
+            <App samples={_samples} terrain={useTerrain} />
+            <div style={{position:"fixed", bottom:"10%", backgroundColor:"white"}}>
+                Rooms <span>  </span>
+                {tests.map((name) => {
+                    return <button key={name} onClick={() => select(name)}>{name}</button>
+                })}
+            </div>
+        </div>,
         document.getElementById('root'),
     );
 }
@@ -84,5 +108,5 @@ if (window.nodeRequire !== undefined) {
     ipcRenderer.send('ready');
 } else {
     // Web build: loading from hardcoded data
-    start(terrain, samples);
+    start(samples);
 }
