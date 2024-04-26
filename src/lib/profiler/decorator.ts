@@ -186,6 +186,9 @@ export class Banan {
 
   public jsonReplacer(key: string, value: any): any {
     if (typeof value === "number") {
+      if (value === 0) {
+        return 0;
+      }
       return value.toFixed(5);
     }
     return value;
