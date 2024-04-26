@@ -1,5 +1,9 @@
+import { metrics } from "lib/stats/prometheus";
+import { exponentialMovingAverage } from "lib/utils/number";
+
 /** Whether to enable Banan or not. Turn off when not profiling. */
 export let BANAN_ENABLED = true;
+export let threshold = 0.005;
 
 /** Options for configuring the profiler. */
 export interface BananOpts {
@@ -207,14 +211,24 @@ export class Banan {
     return value;
   }
 
+  // TODO: Make this a bit better.
+  private static metrics = metrics.group("banan");
+  private static averageSizeMetric = this.metrics.gauge("profile_json_avg_size");
+  private static maxSizeMetric = this.metrics.gauge("profile_json_max_size");
+  private static averageSize?: number;
+  private static maxSize: number = 0;
   /**
    * Write the current profiling history to memory.
    */
   public saveToMemory(key: string): void {
     const data = JSON.stringify(this.history, this.jsonReplacer);
 
+    Banan.averageSize = exponentialMovingAverage(data.length, Banan.averageSize, 100);
+    Banan.maxSize = Math.max(Banan.maxSize, data.length);
+    Banan.averageSizeMetric.set(Banan.averageSize);
+    Banan.maxSizeMetric.set(Banan.maxSize);
+
     if (data.length > 102400) {
-      console.log(`No, this is too big, size is ${data.length}`);
       return;
     }
     RawMemory.segments[78] = data;
@@ -340,6 +354,12 @@ export class Banan {
     if (frame.k !== key) {
       throw new Error("Banan stack mismatch");
     }
+
+    // TODO: This might be controversial, but it really trims some fat.
+    if (stopCpu - frame.s < threshold) {
+      return;
+    }
+
     const parent = this.stack[this.stack.length - 1] || this.tickRootNode;
     parent.c.push({
       k: key,

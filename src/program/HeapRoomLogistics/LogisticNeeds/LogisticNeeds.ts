@@ -42,7 +42,7 @@ export interface LogisticsNeeded {
 }
 
 // TODO: announceNeeded really blows this up.
-// @profile
+@profile
 export class LogisticNeeds {
   private needs: { [key: string]: LogisticsNeeded } = {};
   private room: Room;

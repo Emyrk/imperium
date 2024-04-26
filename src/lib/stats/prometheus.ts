@@ -9,8 +9,6 @@
 //   }
 // }
 
-import { profile } from "lib/profiler/decorator";
-
 export type Labels = Record<string, string>;
 
 export interface Gauge {
@@ -30,7 +28,7 @@ export function sample(): boolean {
   return Game.time % METRICS_SAMPLE_RATE === 0;
 }
 
-@profile
+// Do not profile this. The recursion breaks everything.
 class Metrics {
   private _metrics: { [key: string]: any } = {};
   private clear?: () => void;
