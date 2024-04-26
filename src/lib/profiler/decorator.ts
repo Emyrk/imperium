@@ -1,5 +1,5 @@
 /** Whether to enable Banan or not. Turn off when not profiling. */
-export const BANAN_ENABLED = true;
+export let BANAN_ENABLED = true;
 
 /** Options for configuring the profiler. */
 export interface BananOpts {
@@ -55,6 +55,10 @@ export class Banan {
   /** Reset the state of the profiler */
   public static reset(): Banan {
     return (this._instance = new this());
+  }
+
+  public resetHistory(): void {
+    this.history.fill(undefined);
   }
 
   /** The current tick number */
@@ -210,7 +214,7 @@ export class Banan {
     const data = JSON.stringify(this.history, this.jsonReplacer);
 
     if (data.length > 102400) {
-      console.log("No, this is too big");
+      console.log(`No, this is too big, size is ${data.length}`);
       return;
     }
     RawMemory.segments[78] = data;
