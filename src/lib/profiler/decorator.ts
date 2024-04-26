@@ -184,11 +184,19 @@ export class Banan {
     return total / count;
   }
 
+  public jsonReplacer(key: string, value: any): any {
+    if (typeof value === "number") {
+      return value.toFixed(5);
+    }
+    return value;
+  }
+
   /**
    * Write the current profiling history to memory.
    */
   public saveToMemory(key: string): void {
-    const data = JSON.stringify(this.history);
+    const data = JSON.stringify(this.history, this.jsonReplacer);
+
     if (data.length > 102400) {
       console.log("No, this is too big");
       return;
