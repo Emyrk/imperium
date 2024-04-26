@@ -41,7 +41,8 @@ export interface LogisticsNeeded {
   pending: LogisticsNeedPromise[];
 }
 
-@profile
+// TODO: announceNeeded really blows this up.
+// @profile
 export class LogisticNeeds {
   private needs: { [key: string]: LogisticsNeeded } = {};
   private room: Room;
