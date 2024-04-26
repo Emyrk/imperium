@@ -248,7 +248,8 @@ export class Rooms {
     // For each building type, add the type to the sample.
     for (const [type, buildingPlans] of Object.entries(plans.buildings)) {
       for (const plan of buildingPlans) {
-        const id = GenerateID();
+        // const id = "GenerateID()";
+        const id = "should-be-static";
         const obj = {
           // This should not matter
           hits: 100,
@@ -340,7 +341,7 @@ export class Rooms {
     if ("sources" in room) {
       room.sources.forEach(source => {
         sample.objects.push({
-          _id: GenerateID(),
+          _id: "should-be-static",
           type: "source",
           room: room.name,
           x: source.pos.x,
@@ -358,7 +359,7 @@ export class Rooms {
     if ("minerals" in room) {
       room.minerals.forEach(mineral => {
         sample.objects.push({
-          _id: GenerateID(),
+          _id: "should-be-static",
           type: "mineral",
           room: room.name,
           x: mineral.pos.x,
@@ -375,7 +376,7 @@ export class Rooms {
 
     if (room.controller) {
       sample.objects.push({
-        _id: GenerateID(),
+        _id: "should-be-static",
         type: "controller",
         room: room.name,
         x: room.controller.pos.x,

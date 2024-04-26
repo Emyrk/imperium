@@ -16,7 +16,7 @@ export interface ProfilingNode {
   // u -> cpu
   u: number;
   // c -> children
-  c: ProfilingNode[];
+  c?: ProfilingNode[];
   marks?: ProfilingMark[];
   um?: number; // unix milli
 }
@@ -194,7 +194,11 @@ export class Banan {
         // This trims the extra decimal 0s
         return 0;
       }
-      return value.toFixed(5);
+      if (value % 1 > 0) {
+        // Trim decimal numbers
+        return Math.trunc(value * 100000) / 100000;
+      }
+      return value;
     }
     return value;
   }
@@ -298,9 +302,13 @@ export class Banan {
     const banan = this;
     Reflect.set(obj, key, function (this: any, ...args: any[]) {
       if (banan.isRecording()) {
-        banan.pushStack(memKey);
+        let useKey = memKey;
+        if (this.constructor && this.constructor.name !== className && this.constructor.name != "Function") {
+          useKey = `${this.constructor.name}:${memKey}`;
+        }
+        banan.pushStack(useKey);
         const result = originalFunction.apply(this, args);
-        banan.popStack(memKey);
+        banan.popStack(useKey);
         return result;
       }
       return originalFunction.apply(this, args);
@@ -333,7 +341,7 @@ export class Banan {
       k: key,
       s: frame.s,
       u: stopCpu - frame.s,
-      c: frame.c
+      c: frame.c.length > 0 ? frame.c : undefined
     });
   }
 }

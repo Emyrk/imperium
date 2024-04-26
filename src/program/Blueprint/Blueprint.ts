@@ -103,6 +103,9 @@ export class ProgramBlueprint extends Process<BlueprintData> {
   public visual(): void {
     for (const [type, plans] of Object.entries(this.data.buildings)) {
       for (const plan of plans) {
+        if (!plan.pos) {
+          continue;
+        }
         const pos = new RoomPosition(plan.pos.x, plan.pos.y, this.room.name);
         this.room.visual.structure(pos.x, pos.y, type);
       }

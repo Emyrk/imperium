@@ -1,10 +1,10 @@
 import { Civis, CivisRunCode } from "civis/Civis";
 import { log } from "lib/log/log";
-import { profile } from "lib/profiler/decorator";
 import { RecordTiming, Timing } from "./timing";
 import { metrics } from "lib/stats/prometheus";
 import { IntentMetricCollector } from "./intents";
 import ErrorMapper from "lib/filemap/ErrorMapper";
+import { profile } from "lib/profiler/decorator";
 
 const MAX_PID_NUMBER = 99999;
 export enum ProcessCode {
@@ -450,3 +450,23 @@ export abstract class Process<DataType extends ProcessData> {
     });
   }
 }
+
+@profile
+export class ProgramExample extends Process<ProcessData> {
+  public static type = "example";
+  public static new() {
+    return Process.newProgram<ProcessData>(ProgramExample.type, `example`, {
+      roomName: "none"
+    });
+  }
+
+  public execute(): ProcessCode {
+    return ProcessCode.SUCCESS;
+  }
+
+  public selfTerminate(): ProcessCode {
+    return ProcessCode.SUCCESS;
+  }
+}
+
+Process.register(ProgramExample.type, ProgramExample);

@@ -1,5 +1,10 @@
+export class CPU {
+  getUsed(): number {
+    return 0;
+  }
+}
 export class Game {
-  cpu: any;
+  cpu: CPU = new CPU();
   testing_roomObjects: { [roomName: string]: Structure[] } = {};
   testing_byID: { [id: string]: RoomObject } = {};
   creeps: { [name: string]: Creep } = {};
