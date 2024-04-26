@@ -214,7 +214,7 @@ export class Banan {
   // TODO: Make this a bit better.
   private static metrics = metrics.group("banan");
   private static averageSizeMetric = this.metrics.gauge("profile_json_avg_size");
-  private static maxSizeMetric = this.metrics.gauge("profile_json_max_size");
+  private static maxSizeMetric = this.metrics.gauge("profiservere_json_max_size");
   private static averageSize?: number;
   private static maxSize: number = 0;
   /**
@@ -222,6 +222,7 @@ export class Banan {
    */
   public saveToMemory(key: string): void {
     const data = JSON.stringify(this.history, this.jsonReplacer);
+    console.log(`<span id="profile-report" data="${data}">Profiling Report</span>`);
 
     Banan.averageSize = exponentialMovingAverage(data.length, Banan.averageSize, 100);
     Banan.maxSize = Math.max(Banan.maxSize, data.length);
@@ -231,7 +232,7 @@ export class Banan {
     if (data.length > 102400) {
       return;
     }
-    RawMemory.segments[78] = data;
+    // RawMemory.segments[78] = data;
     // console.log("saved");
     // (Memory as any)[key] = this.history;
   }

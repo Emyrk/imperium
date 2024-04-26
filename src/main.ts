@@ -67,6 +67,7 @@ function unwrappedLoop(): void {
   // to prometheus.
   if (Game.time % 25 === 0) {
     reportMetrics(77, metrics);
+    log.info("Reported metrics to segment 77");
   }
 }
 
