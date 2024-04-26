@@ -9,10 +9,14 @@ export interface BananOpts {
 
 /** A node in the profiling tree. */
 export interface ProfilingNode {
-  key: string;
-  start: number;
-  cpu: number;
-  children: ProfilingNode[];
+  // k -> key
+  k: string;
+  // s -> start
+  s: number;
+  // u -> cpu
+  u: number;
+  // c -> children
+  c: ProfilingNode[];
   marks?: ProfilingMark[];
   um?: number; // unix milli
 }
@@ -23,9 +27,9 @@ export interface ProfilingNode {
  * to ProfilingNodes when the stack frame is popped.
  * */
 interface StackFrame {
-  key: string;
-  start: number;
-  children: ProfilingNode[];
+  k: string;
+  s: number;
+  c: ProfilingNode[];
 }
 
 /**
@@ -94,10 +98,10 @@ export class Banan {
     this.stack = [];
     this.marks = [];
     this.tickRootNode = {
-      key: "Tick " + this.tick,
-      start: 0,
-      cpu: 0,
-      children: [],
+      k: "Tick " + this.tick,
+      s: 0,
+      u: 0,
+      c: [],
       um: new Date().getTime()
     };
   }
@@ -108,7 +112,7 @@ export class Banan {
   public endTick(): void {
     if (!BANAN_ENABLED) return;
     this.tick = undefined;
-    this.tickRootNode!.cpu = Game.cpu.getUsed();
+    this.tickRootNode!.u = Game.cpu.getUsed();
     this.tickRootNode!.marks = this.marks;
     this.history[this.getHistoryPtr()] = this.tickRootNode;
 
@@ -152,7 +156,7 @@ export class Banan {
    */
   public getPrevTickCpuUsed(): number | undefined {
     if (!BANAN_ENABLED) return undefined;
-    return this.getPrevTickDump()?.cpu;
+    return this.getPrevTickDump()?.u;
   }
 
   /**
@@ -162,7 +166,7 @@ export class Banan {
     if (!BANAN_ENABLED) return;
     const currentDump = this.getCurrentTickDump();
     if (currentDump) {
-      console.log("🍌 Current tick CPU usage:", currentDump.cpu);
+      console.log("🍌 Current tick CPU usage:", currentDump.u);
     } else {
       console.log("🍌 No current tick!");
     }
@@ -177,7 +181,7 @@ export class Banan {
     const total = this.history.reduce((acc, node) => {
       if (node) {
         count++;
-        return acc + node.cpu;
+        return acc + node.u;
       }
       return acc;
     }, 0);
@@ -187,6 +191,7 @@ export class Banan {
   public jsonReplacer(key: string, value: any): any {
     if (typeof value === "number") {
       if (value === 0) {
+        // This trims the extra decimal 0s
         return 0;
       }
       return value.toFixed(5);
@@ -306,7 +311,7 @@ export class Banan {
    * Push a function call on to the stack when it begins.
    */
   private pushStack(key: string): void {
-    this.stack.push({ key, start: Game.cpu.getUsed(), children: [] });
+    this.stack.push({ k: key, s: Game.cpu.getUsed(), c: [] });
   }
 
   /**
@@ -320,15 +325,15 @@ export class Banan {
       throw new Error("Banan stack empty");
     }
 
-    if (frame.key !== key) {
+    if (frame.k !== key) {
       throw new Error("Banan stack mismatch");
     }
     const parent = this.stack[this.stack.length - 1] || this.tickRootNode;
-    parent.children.push({
-      key,
-      start: frame.start,
-      cpu: stopCpu - frame.start,
-      children: frame.children
+    parent.c.push({
+      k: key,
+      s: frame.s,
+      u: stopCpu - frame.s,
+      c: frame.c
     });
   }
 }
