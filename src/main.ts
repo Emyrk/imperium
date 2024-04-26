@@ -21,11 +21,12 @@ import { Process } from "kernel/Process";
 import { Top } from "kernel/Top";
 import { metrics, reportMetrics } from "lib/stats/prometheus";
 import { BaseCollector } from "lib/stats/collectors";
-import { enable, wrap } from "lib/profiler/screeps-profiler";
+
 import { RoomCostMatrix } from "room/RoomCostMatrix";
 import { Mem } from "lib/memory/Memory";
 import { ProgramEmpire } from "program/Empire/Empire";
 import "program/Outpost/Outpost";
+import { enable, wrap } from "lib/profiler/screeps-profiler";
 
 export var GlobalCollector = new BaseCollector();
 function onGlobalReset(): void {
