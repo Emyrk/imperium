@@ -7,6 +7,8 @@ import { MockMineral } from "test-utils/mocks/mineral";
 import { BuildingPlans } from "lib/roomplanning/Planner";
 import { expect } from "vitest";
 import { GenerateID } from "test-utils/helpers";
+import { Md5 } from "ts-md5";
+
 export interface RoomOpts {
   level: number;
   power: false;
@@ -248,8 +250,9 @@ export class Rooms {
     // For each building type, add the type to the sample.
     for (const [type, buildingPlans] of Object.entries(plans.buildings)) {
       for (const plan of buildingPlans) {
-        // const id = "GenerateID()";
-        const id = "should-be-static";
+        // A deterministic ID of length 24. This has to be consistent for snapshots
+        const id = Md5.hashStr(`${room.name}-${type}-${plan.pos.x}-${plan.pos.y}`).slice(0, 24);
+
         const obj = {
           // This should not matter
           hits: 100,
