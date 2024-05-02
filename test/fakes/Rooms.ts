@@ -15,7 +15,7 @@ export interface RoomOpts {
 }
 
 interface RoomConstants {
-  controllerPos: Coord;
+  controllerPos?: Coord;
   sources: Coord[];
   minerals: { pos: Coord; mineralType: ResourceConstant }[];
 }
@@ -69,14 +69,12 @@ interface SampleStructure {
 
 export class Rooms {
   public static E11S53(mockFields: { [name: string]: any } = {}, opts: RoomOpts = { level: 0, power: false }): Room {
+    const roomName = "E11S53";
+    const shard = "shard3";
     return Rooms.room(
-      "E11S53",
-      RoomTerrains.E11S53(),
-      {
-        controllerPos: { x: 37, y: 26 },
-        sources: [{ x: 39, y: 8 }],
-        minerals: [{ pos: { x: 10, y: 43 }, mineralType: RESOURCE_LEMERGIUM }]
-      },
+      roomName,
+      RoomTerrains.TerrainFrom(shard, roomName),
+      Rooms.StaticObjects(shard, roomName),
       mockFields,
       opts
     );
@@ -116,6 +114,33 @@ export class Rooms {
     );
   }
 
+  public static StaticObjects(shard: string, room: string): RoomConstants {
+    const objectData = require(`./roomdata/${shard}-${room}/objects.json`);
+    let controller = objectData.objects
+      // @ts-ignore
+      .find(o => o.type === "controller");
+
+    return {
+      sources: objectData.objects
+        // @ts-ignore
+        .filter(o => o.type === "source")
+        // @ts-ignore
+        .map(o => {
+          return { x: o.x, y: o.y };
+        }) as Coord[],
+
+      minerals: objectData.objects
+        // @ts-ignore
+        .filter(o => o.type === "mineral")
+        // @ts-ignore
+        .map(o => {
+          return { pos: { x: o.x, y: o.y }, mineralType: o.mineralType };
+        }) as { pos: Coord; mineralType: ResourceConstant }[],
+
+      controllerPos: controller ? { x: controller.x, y: controller.y } : undefined
+    };
+  }
+
   private static room(
     name: string,
     terrain: RoomTerrain,
@@ -124,11 +149,11 @@ export class Rooms {
     opts: RoomOpts
   ): Room {
     return MockRoom(name, {
-      controller: MockController({
+      controller: roomData.controllerPos ? MockController({
         isPowerEnabled: opts.power,
         level: opts.level,
         pos: new FakeRoomPosition(roomData.controllerPos.x, roomData.controllerPos.y, name)
-      }),
+      }) : undefined,
 
       sources: roomData.sources.map(coord =>
         MockSource({
