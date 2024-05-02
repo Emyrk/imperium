@@ -151,12 +151,12 @@ export class Rooms {
   // TODO: Use renderer to get some really nice visuals.
   public static visualize(room: Room, callback?: (x: number, y: number) => string | undefined): string {
     const terrain = room.getTerrain();
-    if (!callback) {
+    if (callback === undefined) {
       callback = (x: number, y: number) => undefined;
     }
 
     return RoomTerrains.visualize(terrain, (x: number, y: number): string | undefined => {
-      const override = callback(x, y);
+      const override = callback!(x, y);
       if (override) {
         return override;
       }
@@ -177,7 +177,7 @@ export class Rooms {
     const positions = "path" in path ? path.path : path;
 
     return (x: number, y: number) => {
-      const override = callback(x, y);
+      const override = callback!(x, y);
       if (override) {
         return override;
       }
