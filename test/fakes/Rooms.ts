@@ -80,34 +80,24 @@ export class Rooms {
   }
 
   public static E12S53(mockFields: { [name: string]: any } = {}, opts: RoomOpts = { level: 0, power: false }): Room {
+    const roomName = "E12S53";
+    const shard = "shard3";
     return Rooms.room(
-      "E12S53",
-      RoomTerrains.E12S53(),
-      {
-        controllerPos: { x: 28, y: 43 },
-        sources: [
-          { x: 13, y: 29 },
-          { x: 28, y: 19 }
-        ],
-        minerals: [{ pos: { x: 7, y: 12 }, mineralType: RESOURCE_CATALYST }]
-      },
+      roomName,
+      RoomTerrains.TerrainFrom(shard, roomName),
+      Rooms.StaticObjects(shard, roomName),
       mockFields,
       opts
     );
   }
 
   public static E16S59(mockFields: { [name: string]: any } = {}, opts: RoomOpts = { level: 0, power: false }): Room {
+    const roomName = "E16S59";
+    const shard = "shard3";
     return Rooms.room(
-      "E16S59",
-      RoomTerrains.E16S59(),
-      {
-        controllerPos: { x: 26, y: 40 },
-        sources: [
-          { x: 7, y: 16 },
-          { x: 3, y: 30 }
-        ],
-        minerals: [{ pos: { x: 28, y: 30 }, mineralType: RESOURCE_LEMERGIUM }]
-      },
+      roomName,
+      RoomTerrains.TerrainFrom(shard, roomName),
+      Rooms.StaticObjects(shard, roomName),
       mockFields,
       opts
     );
@@ -148,11 +138,13 @@ export class Rooms {
     opts: RoomOpts
   ): Room {
     return MockRoom(name, {
-      controller: roomData.controllerPos ? MockController({
-        isPowerEnabled: opts.power,
-        level: opts.level,
-        pos: new FakeRoomPosition(roomData.controllerPos.x, roomData.controllerPos.y, name)
-      }) : undefined,
+      controller: roomData.controllerPos
+        ? MockController({
+            isPowerEnabled: opts.power,
+            level: opts.level,
+            pos: new FakeRoomPosition(roomData.controllerPos.x, roomData.controllerPos.y, name)
+          })
+        : undefined,
 
       sources: roomData.sources.map(coord =>
         MockSource({
