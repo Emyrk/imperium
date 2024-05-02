@@ -2,7 +2,7 @@
   {
     "objects": [
       {
-        "_id": "should-be-static",
+        "_id": "4b6c1b807db505eea378d2a1",
         "type": "controller",
         "room": "E16S59",
         "x": 26,
@@ -66,7 +66,7 @@
         }
       },
       {
-        "_id": "should-be-static",
+        "_id": "aa389633122f7c20bb7bd2a1",
         "type": "mineral",
         "room": "E16S59",
         "x": 28,
@@ -2460,7 +2460,7 @@
         "user": "5a71934f7037f829c0ba0e11"
       },
       {
-        "_id": "should-be-static",
+        "_id": "761e78b74595aadc105b28e2",
         "type": "source",
         "room": "E16S59",
         "x": 7,
@@ -2473,7 +2473,7 @@
         "nextRegenerationTime": 500
       },
       {
-        "_id": "should-be-static",
+        "_id": "dddb041e2a9d754d5e9c29e1",
         "type": "source",
         "room": "E16S59",
         "x": 3,

@@ -6,8 +6,7 @@ import { MockSource } from "test-utils/mocks/source";
 import { MockMineral } from "test-utils/mocks/mineral";
 import { BuildingPlans } from "lib/roomplanning/Planner";
 import { expect } from "vitest";
-import { GenerateID } from "test-utils/helpers";
-import { Md5 } from "ts-md5";
+import { GenerateDeterministicID } from "test-utils/helpers";
 
 export interface RoomOpts {
   level: number;
@@ -276,7 +275,7 @@ export class Rooms {
     for (const [type, buildingPlans] of Object.entries(plans.buildings)) {
       for (const plan of buildingPlans) {
         // A deterministic ID of length 24. This has to be consistent for snapshots
-        const id = Md5.hashStr(`${room.name}-${type}-${plan.pos.x}-${plan.pos.y}`).slice(0, 24);
+        const id = GenerateDeterministicID(`${room.name}-${type}-${plan.pos.x}-${plan.pos.y}`);
 
         const obj = {
           // This should not matter
@@ -369,7 +368,7 @@ export class Rooms {
     if ("sources" in room) {
       room.sources.forEach(source => {
         sample.objects.push({
-          _id: "should-be-static",
+          _id: GenerateDeterministicID(`${room.name}-"source"-${source.pos.x}-${source.pos.y}`),
           type: "source",
           room: room.name,
           x: source.pos.x,
@@ -387,7 +386,7 @@ export class Rooms {
     if ("minerals" in room) {
       room.minerals.forEach(mineral => {
         sample.objects.push({
-          _id: "should-be-static",
+          _id: GenerateDeterministicID(`${room.name}-"mineral"-${mineral.pos.x}-${mineral.pos.y}`),
           type: "mineral",
           room: room.name,
           x: mineral.pos.x,
@@ -404,7 +403,7 @@ export class Rooms {
 
     if (room.controller) {
       sample.objects.push({
-        _id: "should-be-static",
+        _id: GenerateDeterministicID(`${room.name}-"controller"-${room.controller.pos.x}-${room.controller.pos.y}`),
         type: "controller",
         room: room.name,
         x: room.controller.pos.x,

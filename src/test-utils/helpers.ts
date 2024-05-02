@@ -1,3 +1,6 @@
+import { Md5 } from "ts-md5";
+
+
 // The FakeGame stores all objects in a flat map. If you save the object
 // then you will be able to retrieve it with getObjectById or deref.
 export function saveObject<D extends _HasId>(obj: D): void {
@@ -14,6 +17,10 @@ export function saveStructure<D extends Structure>(obj: D): void {
     Game.testing_roomObjects[obj.pos.roomName] = [];
   }
   Game.testing_roomObjects[obj.pos.roomName].push(obj);
+}
+
+export function GenerateDeterministicID(input: string): string{
+  return Md5.hashStr(input).slice(0, 24);
 }
 
 export function GenerateID(): string {

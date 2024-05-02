@@ -2,7 +2,7 @@
   {
     "objects": [
       {
-        "_id": "should-be-static",
+        "_id": "40c9fbe7f08f102e536a1e5c",
         "type": "controller",
         "room": "E11S53",
         "x": 37,
@@ -66,7 +66,7 @@
         }
       },
       {
-        "_id": "should-be-static",
+        "_id": "a79b03a8c6de36c192da573a",
         "type": "mineral",
         "room": "E11S53",
         "x": 10,
@@ -1225,7 +1225,7 @@
         "user": "5a71934f7037f829c0ba0e11"
       },
       {
-        "_id": "should-be-static",
+        "_id": "3f2aa999c43dd8196bc017ca",
         "type": "source",
         "room": "E11S53",
         "x": 39,

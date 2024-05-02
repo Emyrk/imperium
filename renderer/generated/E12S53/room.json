@@ -2,7 +2,7 @@
   {
     "objects": [
       {
-        "_id": "should-be-static",
+        "_id": "47a6244f6911a8437beed10f",
         "type": "controller",
         "room": "E12S53",
         "x": 28,
@@ -66,7 +66,7 @@
         }
       },
       {
-        "_id": "should-be-static",
+        "_id": "8a9b02b1380c3138a0c3fadf",
         "type": "mineral",
         "room": "E12S53",
         "x": 7,
@@ -1615,7 +1615,7 @@
         "user": "5a71934f7037f829c0ba0e11"
       },
       {
-        "_id": "should-be-static",
+        "_id": "f76ee45db755860afead7c0b",
         "type": "source",
         "room": "E12S53",
         "x": 28,
@@ -1628,7 +1628,7 @@
         "nextRegenerationTime": 500
       },
       {
-        "_id": "should-be-static",
+        "_id": "ceac1841618d1018abb77668",
         "type": "source",
         "room": "E12S53",
         "x": 13,
