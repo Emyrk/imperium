@@ -99,19 +99,24 @@ export class ProgramRoomHauling extends CivisProgram<ProgramRoomHaulingData> {
     let limit = this.room().sources.length + 1;
     const storage = this.room().storage;
     // This is so bad...
-    if (this.room().name != "E11S53" && storage && storage.store.getUsedCapacity(RESOURCE_ENERGY) > 300000) {
+    if (storage && storage.store.getUsedCapacity(RESOURCE_ENERGY) > 300000) {
       limit += 1;
     }
-    if (this.room().name != "E11S53" && storage && storage.store.getUsedCapacity(RESOURCE_ENERGY) > 500000) {
+    if (storage && storage.store.getUsedCapacity(RESOURCE_ENERGY) > 500000) {
       limit += 1;
     }
-    if (this.room().name != "E11S53" && storage && storage.store.getUsedCapacity(RESOURCE_ENERGY) > 800000) {
+    if (storage && storage.store.getUsedCapacity(RESOURCE_ENERGY) > 800000) {
       limit += 1;
     }
-    if (this.room().name != "E11S53" && storage && storage.store.getUsedCapacity(RESOURCE_ENERGY) > 900000) {
+    if (storage && storage.store.getUsedCapacity(RESOURCE_ENERGY) > 900000) {
       limit += 1;
     }
-    if (this.room().name != "E11S53" && storage && storage.store.getUsedCapacity(RESOURCE_ENERGY) > 950000) {
+    if (storage && storage.store.getUsedCapacity(RESOURCE_ENERGY) > 950000) {
+      limit += 1;
+    }
+
+    const terminal = this.room().terminal;
+    if (this.room().name === "E11S53" && terminal && terminal.store.getUsedCapacity(RESOURCE_ENERGY) > 100000) {
       limit += 1;
     }
 
