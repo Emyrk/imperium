@@ -158,6 +158,10 @@ export class Civis {
     return ret;
   }
 
+  public say(message: string, toPublic?: boolean): OK | ERR_NOT_OWNER | ERR_BUSY {
+    return this.creep.say(message, toPublic);
+  }
+
   // Actions
   attack(target: Creep | Structure) {
     return this.catchIntent(CivisIntentsBit.Attack, this.creep.attack(target));

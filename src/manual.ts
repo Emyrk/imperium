@@ -8,6 +8,14 @@ import { TaskGoto } from "task/instances/goto";
 import { vi } from "vitest";
 
 // @ts-ignore
+global.SendEnergy = function (): void {
+  const amt = Game.rooms["E12S53"].terminal!.store.getUsedCapacity(RESOURCE_ENERGY);
+  const fee = Game.market.calcTransactionCost(amt, "E12S53", "E11S53");
+  const ret = Game.rooms["E12S53"].terminal!.send(RESOURCE_ENERGY, amt - fee, "E11S53", "upgrade yoself");
+  log.info(`SendEnergy: ${amt - fee} :: ${ret}`);
+};
+
+// @ts-ignore
 global.Top = function (every?: number): void {
   TopF.requestTop(every);
 };

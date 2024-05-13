@@ -182,6 +182,14 @@ export class ProgramPriorityManager extends Process<ProgramPriorityManagerData> 
       case STRUCTURE_TOWER:
         return Priority.HIGH;
       case STRUCTURE_TERMINAL:
+        const term = obj as StructureTerminal;
+        // Let's get some energy into the terminal to send to the other room.
+        // TODO: Remove this.
+        if (term.store.getUsedCapacity(RESOURCE_ENERGY) < 300000) {
+          return Priority.MEDIUM;
+        }
+
+        return Priority.NEVER;
       case STRUCTURE_LINK:
       case STRUCTURE_EXTRACTOR:
       case STRUCTURE_LAB:

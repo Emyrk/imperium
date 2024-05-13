@@ -108,6 +108,12 @@ export class ProgramRoomHauling extends CivisProgram<ProgramRoomHaulingData> {
     if (this.room().name != "E11S53" && storage && storage.store.getUsedCapacity(RESOURCE_ENERGY) > 800000) {
       limit += 1;
     }
+    if (this.room().name != "E11S53" && storage && storage.store.getUsedCapacity(RESOURCE_ENERGY) > 900000) {
+      limit += 1;
+    }
+    if (this.room().name != "E11S53" && storage && storage.store.getUsedCapacity(RESOURCE_ENERGY) > 950000) {
+      limit += 1;
+    }
 
     while (this.total(workHaul) < limit) {
       const body = CalcCreepBody(cap, ProgramRoomHauling.workHaulBodies);
