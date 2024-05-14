@@ -92,3 +92,39 @@ global.haul = function (fromRef: string, toRef: string): void {
   log.info(`Hauling from ${from} to ${to} launched with pid ${pid}`);
 };
 // global.towerDrain = function (roomName: string): void {};
+
+// @ts-ignore
+global.steal = function (fromRef: string, toRef: string): void {
+  // TODO: REMOVE
+  Game.rooms["E12S53"].observer!.observeRoom("E12S55");
+
+  const from = deref(fromRef);
+  const to = deref(toRef);
+  if (!from || !to) {
+    log.error(`Hauling from ${from} to ${to} failed. One of the objects was not found.`);
+    return;
+  }
+
+  if (!isStoreStructure(to)) {
+    log.error(`Hauling from ${from} to ${to} failed. The target is not a store structure.`);
+    return;
+  }
+
+  const fromRoom = from.room;
+  const toRoom = to.room;
+
+  if (!fromRoom || !toRoom) {
+    log.error(`Hauling from ${from} to ${to} failed. One of the objects did not have a room.`);
+    return;
+  }
+
+  const village = ProgramVillage.getByRoom(toRoom.name);
+  if (!village) {
+    log.error(`Hauling from ${from} to ${to} failed. No village process found for ${toRoom.name}.`);
+    return;
+  }
+
+  const proto = ProgramHaulSpecific.new(toRoom.name, village.spawn().pid, fromRef, to);
+  const pid = village.launchChildProcess(proto);
+  log.info(`Hauling from ${from} to ${to} launched with pid ${pid}`);
+};

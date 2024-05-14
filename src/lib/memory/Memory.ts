@@ -117,6 +117,17 @@ export class Mem {
     }
   }
 
+  public static cleanCreeps() {
+    // Clear memory for non-existent flags
+    for (const name in Memory.creeps) {
+      if (!Game.creeps[name]) {
+        console.log(`Clearing non-existent creep memory: ${name}`);
+        delete Memory.creeps[name];
+        // delete global[name];
+      }
+    }
+  }
+
   // Wrap is a nice helper function to define memory for custom objects.
   static wrap(memory: any, memName: string | number, defaults = {}, deep = false) {
     if (!memory[memName]) {
@@ -130,3 +141,6 @@ export class Mem {
     return memory[memName];
   }
 }
+
+// @ts-ignore
+global.cleanCreeps = Mem.cleanCreeps;

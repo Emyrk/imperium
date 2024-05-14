@@ -317,6 +317,10 @@ export class ProgramPriorityManager extends Process<ProgramPriorityManagerData> 
     if (storage.store.getUsedCapacity(RESOURCE_ENERGY) > 200000) {
       this.data.wallTarget = 10000000;
       this.data.rampartTarget = 10000000;
+      if (this.room.controller?.level === 8) {
+        this.data.wallTarget = 30000000;
+        this.data.rampartTarget = 30000000;
+      }
       return;
     }
 

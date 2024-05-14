@@ -5,6 +5,7 @@ import { profile } from "lib/profiler/decorator";
 import { CivisProgram, CivisProgramData } from "program/SpawnControl/CivisProgram";
 import { TaskTake } from "task/actions/take";
 import ControlFlowLoop from "task/controlflows/Loop/Loop";
+import { TaskRenew } from "task/instances/renew";
 import { TaskTransfer } from "task/instances/transfer";
 
 export interface ProgramHaulSpecificData extends CivisProgramData {
@@ -108,7 +109,45 @@ export class ProgramHaulSpecific extends CivisProgram<ProgramHaulSpecificData> {
       CARRY,
       CARRY,
       CARRY
-    ] // 900
+    ], // 900
+    [
+      MOVE,
+      MOVE,
+      MOVE,
+      CARRY,
+      CARRY,
+      CARRY,
+      MOVE,
+      MOVE,
+      MOVE,
+      CARRY,
+      CARRY,
+      CARRY,
+      MOVE,
+      MOVE,
+      MOVE,
+      CARRY,
+      CARRY,
+      CARRY,
+      MOVE,
+      MOVE,
+      MOVE,
+      CARRY,
+      CARRY,
+      CARRY,
+      MOVE,
+      MOVE,
+      MOVE,
+      CARRY,
+      CARRY,
+      CARRY,
+      MOVE,
+      MOVE,
+      MOVE,
+      CARRY,
+      CARRY,
+      CARRY
+    ] // 1800
   ];
 }
 

@@ -68,6 +68,7 @@ interface Room {
   owner: string | undefined;
 
   // Some accessors
+  observer: StructureObserver | undefined;
   towers: StructureTower[];
   spawns: StructureSpawn[];
   links: StructureLink[];

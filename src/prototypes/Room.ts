@@ -24,6 +24,16 @@ Object.defineProperty(Room.prototype, "owner", {
   configurable: true
 });
 
+Object.defineProperty(Room.prototype, "observer", {
+  get() {
+    const sts = this.find(FIND_STRUCTURES, {
+      filter: (s: Structure) => s.structureType == STRUCTURE_OBSERVER
+    });
+    return sts.length > 0 ? (sts[0] as StructureObserver) : undefined;
+  },
+  configurable: true
+});
+
 // Creeps physically in the room
 // Hostile structures currently in the room
 Object.defineProperty(Room.prototype, "towers", {
