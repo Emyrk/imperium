@@ -85,14 +85,14 @@ export class ProgramRoomLogisticsBootstrap extends Process<ProgramRoomLogisticsB
       return; // We do not need to run this often at all
     }
 
-    if (this.room.name === "E11S53" && this.room.terminal?.ref) {
-      // It is a source, allow pulling from the terminal.
-      this.room.announceAvailable(this.room.terminal?.ref, RESOURCE_ENERGY);
+    const terminal = this.room.terminal;
+    if (terminal && this.room.name === "E12S53" && this.room.terminal?.ref) {
+      this.room.announceNeeded(terminal.ref, "transfer", RESOURCE_ENERGY);
       return;
     }
 
-    const terminal = this.room.terminal;
     if (terminal) {
+      // It is a source, allow pulling from the terminal.
       this.room.announceNeeded(terminal.ref, "transfer", RESOURCE_ENERGY);
     }
   }

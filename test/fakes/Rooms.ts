@@ -103,6 +103,18 @@ export class Rooms {
     );
   }
 
+  public static E12S51(mockFields: { [name: string]: any } = {}, opts: RoomOpts = { level: 0, power: false }): Room {
+    const roomName = "E12S51";
+    const shard = "shard3";
+    return Rooms.room(
+      roomName,
+      RoomTerrains.TerrainFrom(shard, roomName),
+      Rooms.StaticObjects(shard, roomName),
+      mockFields,
+      opts
+    );
+  }
+
   public static StaticObjects(shard: string, room: string): RoomConstants {
     const objectData = require(`./roomdata/${shard}-${room}/objects.json`);
     let controller = objectData.objects

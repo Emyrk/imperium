@@ -46,7 +46,9 @@ export class ProgramHaulSpecific extends CivisProgram<ProgramHaulSpecificData> {
       // Pickup
       this.take.new(),
       // Transfer.
-      TaskTransfer.new(deref(this.data.to)! as AnyStoreStructure, RESOURCE_ENERGY)
+      TaskTransfer.new(deref(this.data.to)! as AnyStoreStructure, RESOURCE_ENERGY),
+      // TODO: REMOVE THIS
+      TaskRenew.new(deref("6627df0c52f469c81240d9c2") as StructureSpawn)
     ]);
   }
 
@@ -55,6 +57,9 @@ export class ProgramHaulSpecific extends CivisProgram<ProgramHaulSpecificData> {
   }
 
   public execute(): ProcessCode {
+    // TODO: REMOVE THIS
+    Game.rooms["E12S53"].observer!.observeRoom("E12S55");
+
     if (!this.take.isValid()) {
       log.info(`Hauling from ${this.data.from} is empty, job complete!`);
       return ProcessCode.TERMINATE;
@@ -66,7 +71,7 @@ export class ProgramHaulSpecific extends CivisProgram<ProgramHaulSpecificData> {
       return ProcessCode.TERMINATE;
     }
 
-    if (this.total() < 1) {
+    if (this.total() < 2) {
       this.requestCreep(CalcCreepBody(this.room().energyCapacityAvailable, ProgramHaulSpecific.creepBodies), {
         role: "spec-hauler",
         task: this.task

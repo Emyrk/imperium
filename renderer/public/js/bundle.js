@@ -10265,6 +10265,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 var map = {
 	"./E11S53/terrain.json": 203,
+	"./E12S51/terrain.json": 210,
 	"./E12S53/terrain.json": 204,
 	"./E16S59/terrain.json": 205
 };
@@ -10353,7 +10354,7 @@ function applyDiff(objects, diff) {
 }
 
 function start() {
-    var tests = ["E11S53", "E12S53", "E16S59"];
+    var tests = ["E11S53", "E12S53", "E16S59", "E12S51"];
 
     var name = localStorage.getItem("testname") || tests[0];
     // This is jank, but clear storage if it does not exist.
@@ -90385,6 +90386,7 @@ module.exports = [
 
 var map = {
 	"./E11S53/room.json": 207,
+	"./E12S51/room.json": 211,
 	"./E12S53/room.json": 208,
 	"./E16S59/room.json": 209
 };
@@ -90412,7 +90414,7 @@ module.exports = [
 	{
 		"objects": [
 			{
-				"_id": "should-be-static",
+				"_id": "40c9fbe7f08f102e536a1e5c",
 				"type": "controller",
 				"room": "E11S53",
 				"x": 37,
@@ -90476,7 +90478,7 @@ module.exports = [
 				}
 			},
 			{
-				"_id": "should-be-static",
+				"_id": "a79b03a8c6de36c192da573a",
 				"type": "mineral",
 				"room": "E11S53",
 				"x": 10,
@@ -91635,7 +91637,7 @@ module.exports = [
 				"user": "5a71934f7037f829c0ba0e11"
 			},
 			{
-				"_id": "should-be-static",
+				"_id": "3f2aa999c43dd8196bc017ca",
 				"type": "source",
 				"room": "E11S53",
 				"x": 39,
@@ -91755,7 +91757,7 @@ module.exports = [
 	{
 		"objects": [
 			{
-				"_id": "should-be-static",
+				"_id": "47a6244f6911a8437beed10f",
 				"type": "controller",
 				"room": "E12S53",
 				"x": 28,
@@ -91776,11 +91778,11 @@ module.exports = [
 				"hitsMax": 100,
 				"nextDecayTime": 100,
 				"_isDisabled": false,
-				"_id": "00858372ffc152c556990d65",
+				"_id": "086577520b55c515622db593",
 				"room": "E12S53",
 				"type": "factory",
-				"x": 31,
-				"y": 43,
+				"x": 32,
+				"y": 41,
 				"notifyWhenAttacked": false,
 				"user": "5a71934f7037f829c0ba0e11",
 				"storeCapacity": 2000,
@@ -91800,11 +91802,11 @@ module.exports = [
 				"hitsMax": 100,
 				"nextDecayTime": 100,
 				"_isDisabled": false,
-				"_id": "7151fa36fbda212a83143787",
+				"_id": "be65f077d8341ce2104c78f8",
 				"room": "E12S53",
 				"type": "link",
 				"x": 30,
-				"y": 41,
+				"y": 42,
 				"notifyWhenAttacked": false,
 				"user": "5a71934f7037f829c0ba0e11",
 				"cooldown": 0,
@@ -91819,11 +91821,11 @@ module.exports = [
 				}
 			},
 			{
-				"_id": "should-be-static",
+				"_id": "1ddcfaf8eced5ff1209d8e7f",
 				"type": "mineral",
 				"room": "E12S53",
 				"x": 7,
-				"y": 12,
+				"y": 13,
 				"hits": 100,
 				"hitsMax": 100,
 				"nextRegenerationTime": 300,
@@ -91836,11 +91838,11 @@ module.exports = [
 				"hitsMax": 100,
 				"nextDecayTime": 100,
 				"_isDisabled": false,
-				"_id": "079d799110ab7599980edd35",
+				"_id": "893b0575fc9446fd72936bed",
 				"room": "E12S53",
 				"type": "nuker",
 				"x": 31,
-				"y": 41,
+				"y": 43,
 				"notifyWhenAttacked": false,
 				"user": "5a71934f7037f829c0ba0e11",
 				"cooldownTime": 100,
@@ -91877,36 +91879,10 @@ module.exports = [
 				"hitsMax": 100,
 				"nextDecayTime": 100,
 				"_isDisabled": false,
-				"_id": "560ddb2df1fc2b33cf686e51",
+				"_id": "59ad2efaab87f372c5c8c034",
 				"room": "E12S53",
 				"type": "road",
 				"x": 6,
-				"y": 13,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
-				"_id": "560ddb2df1fc2b33cf686e51",
-				"room": "E12S53",
-				"type": "road",
-				"x": 6,
-				"y": 13,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
-				"_id": "ba8f074fb487ab299828cd39",
-				"room": "E12S53",
-				"type": "road",
-				"x": 5,
 				"y": 14,
 				"notifyWhenAttacked": false,
 				"user": "5a71934f7037f829c0ba0e11"
@@ -91916,10 +91892,10 @@ module.exports = [
 				"hitsMax": 100,
 				"nextDecayTime": 100,
 				"_isDisabled": false,
-				"_id": "82789b4726f4f501f52bf46d",
+				"_id": "a42839d49ba0017d4decfe58",
 				"room": "E12S53",
 				"type": "road",
-				"x": 7,
+				"x": 8,
 				"y": 14,
 				"notifyWhenAttacked": false,
 				"user": "5a71934f7037f829c0ba0e11"
@@ -91968,10 +91944,10 @@ module.exports = [
 				"hitsMax": 100,
 				"nextDecayTime": 100,
 				"_isDisabled": false,
-				"_id": "7d6cf134098e79eb3398efda",
+				"_id": "29b3c5205a17203e045be19c",
 				"room": "E12S53",
 				"type": "road",
-				"x": 8,
+				"x": 5,
 				"y": 15,
 				"notifyWhenAttacked": false,
 				"user": "5a71934f7037f829c0ba0e11"
@@ -92098,6 +92074,45 @@ module.exports = [
 				"hitsMax": 100,
 				"nextDecayTime": 100,
 				"_isDisabled": false,
+				"_id": "5602ae356a36a1427a9d9757",
+				"room": "E12S53",
+				"type": "road",
+				"x": 26,
+				"y": 17,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "1e66ad6e5b3fceadb56de9bc",
+				"room": "E12S53",
+				"type": "road",
+				"x": 27,
+				"y": 17,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "5e79867cc51fff2560ea0507",
+				"room": "E12S53",
+				"type": "road",
+				"x": 28,
+				"y": 17,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
 				"_id": "e919705338360bdc7c7ff8fa",
 				"room": "E12S53",
 				"type": "road",
@@ -92124,6 +92139,136 @@ module.exports = [
 				"hitsMax": 100,
 				"nextDecayTime": 100,
 				"_isDisabled": false,
+				"_id": "fc984abc6ca21c4544a037b6",
+				"room": "E12S53",
+				"type": "road",
+				"x": 17,
+				"y": 18,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "ac8292af954ce279acd443c6",
+				"room": "E12S53",
+				"type": "road",
+				"x": 18,
+				"y": 18,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "8859169a5a73e5be1eb2716a",
+				"room": "E12S53",
+				"type": "road",
+				"x": 19,
+				"y": 18,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "58846921018114abbf798b56",
+				"room": "E12S53",
+				"type": "road",
+				"x": 20,
+				"y": 18,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "79a7f38d6eeccf205602a2c9",
+				"room": "E12S53",
+				"type": "road",
+				"x": 21,
+				"y": 18,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "36bd8bbbb6b39881b7153058",
+				"room": "E12S53",
+				"type": "road",
+				"x": 22,
+				"y": 18,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "c144bb9ab6f65204808fdb98",
+				"room": "E12S53",
+				"type": "road",
+				"x": 23,
+				"y": 18,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "74580f6862ea3986d7b7783e",
+				"room": "E12S53",
+				"type": "road",
+				"x": 24,
+				"y": 18,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "6c6e625e545b544e706ed93f",
+				"room": "E12S53",
+				"type": "road",
+				"x": 25,
+				"y": 18,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "ca59b8e99e2e36093c9ded97",
+				"room": "E12S53",
+				"type": "road",
+				"x": 29,
+				"y": 18,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
 				"_id": "69decaee64c3ad3cc898b291",
 				"room": "E12S53",
 				"type": "road",
@@ -92137,36 +92282,10 @@ module.exports = [
 				"hitsMax": 100,
 				"nextDecayTime": 100,
 				"_isDisabled": false,
-				"_id": "0be400d3b839608de7330db4",
-				"room": "E12S53",
-				"type": "road",
-				"x": 17,
-				"y": 19,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
 				"_id": "76cdd3cb863650efe708a26c",
 				"room": "E12S53",
 				"type": "road",
 				"x": 1,
-				"y": 20,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
-				"_id": "38342c192004ad4ad997f67f",
-				"room": "E12S53",
-				"type": "road",
-				"x": 18,
 				"y": 20,
 				"notifyWhenAttacked": false,
 				"user": "5a71934f7037f829c0ba0e11"
@@ -92202,19 +92321,6 @@ module.exports = [
 				"hitsMax": 100,
 				"nextDecayTime": 100,
 				"_isDisabled": false,
-				"_id": "586d6f2a5347f4aac2c9129c",
-				"room": "E12S53",
-				"type": "road",
-				"x": 19,
-				"y": 21,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
 				"_id": "eff8917a2dbb1ce475182d3d",
 				"room": "E12S53",
 				"type": "road",
@@ -92241,19 +92347,6 @@ module.exports = [
 				"hitsMax": 100,
 				"nextDecayTime": 100,
 				"_isDisabled": false,
-				"_id": "83f88f63020fc2a98d6edd52",
-				"room": "E12S53",
-				"type": "road",
-				"x": 19,
-				"y": 22,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
 				"_id": "9ed7ef603b62324bfb9afda1",
 				"room": "E12S53",
 				"type": "road",
@@ -92271,19 +92364,6 @@ module.exports = [
 				"room": "E12S53",
 				"type": "road",
 				"x": 1,
-				"y": 23,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
-				"_id": "e4aa1056e97eb98f46223d9b",
-				"room": "E12S53",
-				"type": "road",
-				"x": 20,
 				"y": 23,
 				"notifyWhenAttacked": false,
 				"user": "5a71934f7037f829c0ba0e11"
@@ -92436,19 +92516,6 @@ module.exports = [
 				"hitsMax": 100,
 				"nextDecayTime": 100,
 				"_isDisabled": false,
-				"_id": "fc83275747dae7a05b6a387b",
-				"room": "E12S53",
-				"type": "road",
-				"x": 21,
-				"y": 24,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
 				"_id": "8e6ca8d7674989aaa1e47b5d",
 				"room": "E12S53",
 				"type": "road",
@@ -92479,19 +92546,6 @@ module.exports = [
 				"room": "E12S53",
 				"type": "road",
 				"x": 14,
-				"y": 25,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
-				"_id": "74bdf4280e158491de58890f",
-				"room": "E12S53",
-				"type": "road",
-				"x": 22,
 				"y": 25,
 				"notifyWhenAttacked": false,
 				"user": "5a71934f7037f829c0ba0e11"
@@ -92540,19 +92594,6 @@ module.exports = [
 				"hitsMax": 100,
 				"nextDecayTime": 100,
 				"_isDisabled": false,
-				"_id": "e49dd3d43d03706b20bb5757",
-				"room": "E12S53",
-				"type": "road",
-				"x": 23,
-				"y": 26,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
 				"_id": "c5086bc5130a7647165ecdfb",
 				"room": "E12S53",
 				"type": "road",
@@ -92592,45 +92633,6 @@ module.exports = [
 				"hitsMax": 100,
 				"nextDecayTime": 100,
 				"_isDisabled": false,
-				"_id": "d4e6d0cf3451d1508b70cfc6",
-				"room": "E12S53",
-				"type": "road",
-				"x": 24,
-				"y": 27,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
-				"_id": "b5356b1a1492b27517ed698b",
-				"room": "E12S53",
-				"type": "road",
-				"x": 25,
-				"y": 27,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
-				"_id": "8a32ec251d7678bfef4f3024",
-				"room": "E12S53",
-				"type": "road",
-				"x": 26,
-				"y": 27,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
 				"_id": "8a32ec251d7678bfef4f3024",
 				"room": "E12S53",
 				"type": "road",
@@ -92683,50 +92685,11 @@ module.exports = [
 				"hitsMax": 100,
 				"nextDecayTime": 100,
 				"_isDisabled": false,
-				"_id": "2f2d417d3632ad9b17d899b5",
-				"room": "E12S53",
-				"type": "road",
-				"x": 27,
-				"y": 28,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
 				"_id": "4d579cda548d3a6a6e728e11",
 				"room": "E12S53",
 				"type": "road",
 				"x": 27,
 				"y": 29,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
-				"_id": "4d579cda548d3a6a6e728e11",
-				"room": "E12S53",
-				"type": "road",
-				"x": 27,
-				"y": 29,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
-				"_id": "3ff4ee1d99b92b0878570037",
-				"room": "E12S53",
-				"type": "road",
-				"x": 27,
-				"y": 30,
 				"notifyWhenAttacked": false,
 				"user": "5a71934f7037f829c0ba0e11"
 			},
@@ -92761,50 +92724,11 @@ module.exports = [
 				"hitsMax": 100,
 				"nextDecayTime": 100,
 				"_isDisabled": false,
-				"_id": "635b7a3c7f201b1ca2a3fb4b",
-				"room": "E12S53",
-				"type": "road",
-				"x": 27,
-				"y": 31,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
 				"_id": "f8a8070d1d2332447108486d",
 				"room": "E12S53",
 				"type": "road",
 				"x": 27,
 				"y": 32,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
-				"_id": "f8a8070d1d2332447108486d",
-				"room": "E12S53",
-				"type": "road",
-				"x": 27,
-				"y": 32,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
-				"_id": "ec91791481b2ec7365906b8b",
-				"room": "E12S53",
-				"type": "road",
-				"x": 26,
-				"y": 33,
 				"notifyWhenAttacked": false,
 				"user": "5a71934f7037f829c0ba0e11"
 			},
@@ -92839,50 +92763,11 @@ module.exports = [
 				"hitsMax": 100,
 				"nextDecayTime": 100,
 				"_isDisabled": false,
-				"_id": "9caec8ce42f9cc9a2b44b06b",
-				"room": "E12S53",
-				"type": "road",
-				"x": 26,
-				"y": 34,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
 				"_id": "a985ce23db736dc772fd2335",
 				"room": "E12S53",
 				"type": "road",
 				"x": 26,
 				"y": 35,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
-				"_id": "a985ce23db736dc772fd2335",
-				"room": "E12S53",
-				"type": "road",
-				"x": 26,
-				"y": 35,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
-				"_id": "4a0d41f99f6ca7a09d11c8b3",
-				"room": "E12S53",
-				"type": "road",
-				"x": 26,
-				"y": 36,
 				"notifyWhenAttacked": false,
 				"user": "5a71934f7037f829c0ba0e11"
 			},
@@ -92917,50 +92802,11 @@ module.exports = [
 				"hitsMax": 100,
 				"nextDecayTime": 100,
 				"_isDisabled": false,
-				"_id": "a4564e78586044f7ed879ecf",
-				"room": "E12S53",
-				"type": "road",
-				"x": 26,
-				"y": 37,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
 				"_id": "6bf26a52b4be61a4d5bc8f62",
 				"room": "E12S53",
 				"type": "road",
 				"x": 27,
 				"y": 38,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
-				"_id": "6bf26a52b4be61a4d5bc8f62",
-				"room": "E12S53",
-				"type": "road",
-				"x": 27,
-				"y": 38,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
-				"_id": "bb2ad04e216b7cb54b03e011",
-				"room": "E12S53",
-				"type": "road",
-				"x": 28,
-				"y": 39,
 				"notifyWhenAttacked": false,
 				"user": "5a71934f7037f829c0ba0e11"
 			},
@@ -93034,37 +92880,11 @@ module.exports = [
 				"hitsMax": 100,
 				"nextDecayTime": 100,
 				"_isDisabled": false,
-				"_id": "13c9e876756eb939ce0c7451",
-				"room": "E12S53",
-				"type": "road",
-				"x": 28,
-				"y": 40,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
 				"_id": "c8b31750f0faa58e8c4bd0b8",
 				"room": "E12S53",
 				"type": "road",
 				"x": 34,
 				"y": 40,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
-				"_id": "fb45f34318985cb7616bdb17",
-				"room": "E12S53",
-				"type": "road",
-				"x": 29,
-				"y": 41,
 				"notifyWhenAttacked": false,
 				"user": "5a71934f7037f829c0ba0e11"
 			},
@@ -93112,19 +92932,6 @@ module.exports = [
 				"hitsMax": 100,
 				"nextDecayTime": 100,
 				"_isDisabled": false,
-				"_id": "6fd2c76e81e308ee49d49e1c",
-				"room": "E12S53",
-				"type": "road",
-				"x": 29,
-				"y": 42,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
 				"_id": "e42942642002dc6071c0e4ae",
 				"room": "E12S53",
 				"type": "road",
@@ -93151,37 +92958,11 @@ module.exports = [
 				"hitsMax": 100,
 				"nextDecayTime": 100,
 				"_isDisabled": false,
-				"_id": "40f9deb949d3b73dc96c0e28",
-				"room": "E12S53",
-				"type": "road",
-				"x": 29,
-				"y": 43,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
 				"_id": "6fa1aa74b2a3cc375322c04d",
 				"room": "E12S53",
 				"type": "road",
 				"x": 34,
 				"y": 43,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
-				"_id": "2981bb3d468e65fb347566e7",
-				"room": "E12S53",
-				"type": "road",
-				"x": 28,
-				"y": 44,
 				"notifyWhenAttacked": false,
 				"user": "5a71934f7037f829c0ba0e11"
 			},
@@ -93268,19 +93049,6 @@ module.exports = [
 				"hitsMax": 100,
 				"nextDecayTime": 100,
 				"_isDisabled": false,
-				"_id": "4294a15b329970a24921b955",
-				"room": "E12S53",
-				"type": "road",
-				"x": 27,
-				"y": 45,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
 				"_id": "7cee6dde2ee0c7e6f94013de",
 				"room": "E12S53",
 				"type": "road",
@@ -93299,19 +93067,6 @@ module.exports = [
 				"type": "road",
 				"x": 29,
 				"y": 45,
-				"notifyWhenAttacked": false,
-				"user": "5a71934f7037f829c0ba0e11"
-			},
-			{
-				"hits": 100,
-				"hitsMax": 100,
-				"nextDecayTime": 100,
-				"_isDisabled": false,
-				"_id": "932c0e6fe8cff09d387bb5b4",
-				"room": "E12S53",
-				"type": "road",
-				"x": 26,
-				"y": 46,
 				"notifyWhenAttacked": false,
 				"user": "5a71934f7037f829c0ba0e11"
 			},
@@ -93368,7 +93123,7 @@ module.exports = [
 				"user": "5a71934f7037f829c0ba0e11"
 			},
 			{
-				"_id": "should-be-static",
+				"_id": "f76ee45db755860afead7c0b",
 				"type": "source",
 				"room": "E12S53",
 				"x": 28,
@@ -93381,7 +93136,7 @@ module.exports = [
 				"nextRegenerationTime": 500
 			},
 			{
-				"_id": "should-be-static",
+				"_id": "ceac1841618d1018abb77668",
 				"type": "source",
 				"room": "E12S53",
 				"x": 13,
@@ -93398,11 +93153,11 @@ module.exports = [
 				"hitsMax": 100,
 				"nextDecayTime": 100,
 				"_isDisabled": false,
-				"_id": "900704f065395b98b66dbe04",
+				"_id": "12dc3baa222edbaf8d91ce4d",
 				"room": "E12S53",
 				"type": "spawn",
-				"x": 30,
-				"y": 42,
+				"x": 31,
+				"y": 41,
 				"notifyWhenAttacked": false,
 				"user": "5a71934f7037f829c0ba0e11",
 				"store": {
@@ -93421,11 +93176,11 @@ module.exports = [
 				"hitsMax": 100,
 				"nextDecayTime": 100,
 				"_isDisabled": false,
-				"_id": "12ba59da06ae53c69e2c13da",
+				"_id": "61aabd115b0e60eb1410454f",
 				"room": "E12S53",
 				"type": "storage",
-				"x": 32,
-				"y": 42,
+				"x": 30,
+				"y": 41,
 				"notifyWhenAttacked": false,
 				"user": "5a71934f7037f829c0ba0e11",
 				"store": {
@@ -93451,11 +93206,11 @@ module.exports = [
 				"hitsMax": 100,
 				"nextDecayTime": 100,
 				"_isDisabled": false,
-				"_id": "e576baf00256c27e65bdbac0",
+				"_id": "1fb0d410e4e3e284abfd4f6d",
 				"room": "E12S53",
 				"type": "tower",
 				"x": 32,
-				"y": 41,
+				"y": 42,
 				"notifyWhenAttacked": false,
 				"user": "5a71934f7037f829c0ba0e11",
 				"actionLog": {
@@ -93501,7 +93256,7 @@ module.exports = [
 	{
 		"objects": [
 			{
-				"_id": "should-be-static",
+				"_id": "4b6c1b807db505eea378d2a1",
 				"type": "controller",
 				"room": "E16S59",
 				"x": 26,
@@ -93565,7 +93320,7 @@ module.exports = [
 				}
 			},
 			{
-				"_id": "should-be-static",
+				"_id": "aa389633122f7c20bb7bd2a1",
 				"type": "mineral",
 				"room": "E16S59",
 				"x": 28,
@@ -95959,7 +95714,7 @@ module.exports = [
 				"user": "5a71934f7037f829c0ba0e11"
 			},
 			{
-				"_id": "should-be-static",
+				"_id": "761e78b74595aadc105b28e2",
 				"type": "source",
 				"room": "E16S59",
 				"x": 7,
@@ -95972,7 +95727,7 @@ module.exports = [
 				"nextRegenerationTime": 500
 			},
 			{
-				"_id": "should-be-static",
+				"_id": "dddb041e2a9d754d5e9c29e1",
 				"type": "source",
 				"room": "E16S59",
 				"x": 3,
@@ -96047,6 +95802,5587 @@ module.exports = [
 				"type": "tower",
 				"x": 26,
 				"y": 43,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11",
+				"actionLog": {
+					"attack": null,
+					"heal": null,
+					"repair": null
+				},
+				"store": {
+					"energy": 100
+				},
+				"storeCapacityResource": {
+					"energy": 1000
+				}
+			}
+		],
+		"gameTime": 1,
+		"users": {
+			"Invader": {
+				"_id": "0",
+				"username": "Invader"
+			},
+			"5a71934f7037f829c0ba0e11": {
+				"_id": "5a71934f7037f829c0ba0e11",
+				"username": "TestUser",
+				"badge": {
+					"type": 2,
+					"color1": "#000000",
+					"color2": "#028300",
+					"color3": "#8b5c00",
+					"param": 0,
+					"flip": false
+				}
+			}
+		}
+	}
+];
+
+/***/ }),
+/* 210 */
+/***/ (function(module, exports) {
+
+module.exports = [
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 1
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 2
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 3
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 4
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 17
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 18
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 19
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 20
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 26
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 27
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 28
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 29
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 30
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 31
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 32
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 33
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 34
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 35
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 36
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 37
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 38
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 39
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 40
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 41
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 42
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 43
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 44
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 45
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 46
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 47
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 48
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 0,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 1,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 1,
+		"y": 1
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 1,
+		"y": 19
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 1,
+		"y": 20
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 1,
+		"y": 38
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 1,
+		"y": 39
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 1,
+		"y": 40
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 1,
+		"y": 41
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 1,
+		"y": 42
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 1,
+		"y": 48
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 1,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 2,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 2,
+		"y": 21
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 2,
+		"y": 22
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 2,
+		"y": 23
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 2,
+		"y": 24
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 2,
+		"y": 38
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 2,
+		"y": 39
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 2,
+		"y": 40
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 2,
+		"y": 41
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 2,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 3,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 3,
+		"y": 22
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 3,
+		"y": 23
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 3,
+		"y": 24
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 3,
+		"y": 38
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 3,
+		"y": 39
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 3,
+		"y": 40
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 3,
+		"y": 41
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 3,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 4,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 4,
+		"y": 37
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 4,
+		"y": 38
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 4,
+		"y": 39
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 4,
+		"y": 40
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 4,
+		"y": 41
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 4,
+		"y": 42
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 4,
+		"y": 48
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 4,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 5,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 5,
+		"y": 9
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 5,
+		"y": 10
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 5,
+		"y": 36
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 5,
+		"y": 37
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 5,
+		"y": 38
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 5,
+		"y": 39
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 5,
+		"y": 40
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 5,
+		"y": 41
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 5,
+		"y": 42
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 5,
+		"y": 48
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 5,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 6,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 6,
+		"y": 8
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 6,
+		"y": 9
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 6,
+		"y": 10
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 6,
+		"y": 11
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 6,
+		"y": 37
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 6,
+		"y": 38
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 6,
+		"y": 39
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 6,
+		"y": 40
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 6,
+		"y": 41
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 6,
+		"y": 48
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 6,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 7,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 7,
+		"y": 7
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 7,
+		"y": 8
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 7,
+		"y": 9
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 7,
+		"y": 10
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 7,
+		"y": 11
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 7,
+		"y": 39
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 7,
+		"y": 48
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 7,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 8,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 8,
+		"y": 8
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 8,
+		"y": 9
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 8,
+		"y": 10
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 8,
+		"y": 11
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 8,
+		"y": 24
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 8,
+		"y": 25
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 8,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 9,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 9,
+		"y": 8
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 9,
+		"y": 9
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 9,
+		"y": 10
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 9,
+		"y": 24
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 9,
+		"y": 25
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 9,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 10,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 10,
+		"y": 8
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 10,
+		"y": 9
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 10,
+		"y": 24
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 10,
+		"y": 25
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 10,
+		"y": 48
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 10,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 11,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 11,
+		"y": 9
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 11,
+		"y": 24
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 11,
+		"y": 25
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 11,
+		"y": 48
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 11,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 12,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 12,
+		"y": 25
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 12,
+		"y": 48
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 12,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 13,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 13,
+		"y": 7
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 13,
+		"y": 8
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 13,
+		"y": 9
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 13,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 14,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 14,
+		"y": 7
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 14,
+		"y": 8
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 14,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 15,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 15,
+		"y": 8
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 15,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 16,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 16,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 17,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 17,
+		"y": 13
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 17,
+		"y": 14
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 17,
+		"y": 15
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 17,
+		"y": 16
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 17,
+		"y": 42
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 17,
+		"y": 43
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 17,
+		"y": 44
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 17,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 18,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 18,
+		"y": 1
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 18,
+		"y": 12
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 18,
+		"y": 13
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 18,
+		"y": 14
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 18,
+		"y": 15
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 18,
+		"y": 16
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 18,
+		"y": 41
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 18,
+		"y": 42
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 18,
+		"y": 43
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 18,
+		"y": 44
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 18,
+		"y": 45
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 18,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 19,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 19,
+		"y": 1
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 19,
+		"y": 2
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 19,
+		"y": 12
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 19,
+		"y": 13
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 19,
+		"y": 14
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 19,
+		"y": 28
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 19,
+		"y": 29
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 19,
+		"y": 30
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 19,
+		"y": 31
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 19,
+		"y": 32
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 19,
+		"y": 37
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 19,
+		"y": 42
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 19,
+		"y": 43
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 19,
+		"y": 44
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 19,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 20,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 20,
+		"y": 1
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 20,
+		"y": 2
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 20,
+		"y": 3
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 20,
+		"y": 13
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 20,
+		"y": 27
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 20,
+		"y": 28
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 20,
+		"y": 29
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 20,
+		"y": 30
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 20,
+		"y": 31
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 20,
+		"y": 32
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 20,
+		"y": 33
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 20,
+		"y": 34
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 20,
+		"y": 36
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 20,
+		"y": 37
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 20,
+		"y": 38
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 20,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 21,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 21,
+		"y": 1
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 21,
+		"y": 2
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 21,
+		"y": 3
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 21,
+		"y": 27
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 21,
+		"y": 28
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 21,
+		"y": 29
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 21,
+		"y": 30
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 21,
+		"y": 31
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 21,
+		"y": 32
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 21,
+		"y": 33
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 21,
+		"y": 34
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 21,
+		"y": 35
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 21,
+		"y": 36
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 21,
+		"y": 37
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 21,
+		"y": 38
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 21,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 22,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 22,
+		"y": 1
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 22,
+		"y": 2
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 22,
+		"y": 27
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 22,
+		"y": 28
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 22,
+		"y": 29
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 22,
+		"y": 30
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 22,
+		"y": 32
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 22,
+		"y": 33
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 22,
+		"y": 34
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 22,
+		"y": 35
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 22,
+		"y": 36
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 22,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 23,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 23,
+		"y": 1
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 23,
+		"y": 27
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 23,
+		"y": 28
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 23,
+		"y": 29
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 23,
+		"y": 34
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 23,
+		"y": 35
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 23,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 24,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 24,
+		"y": 26
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 24,
+		"y": 27
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 24,
+		"y": 28
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 24,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 25,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 25,
+		"y": 26
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 25,
+		"y": 27
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 25,
+		"y": 41
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 25,
+		"y": 42
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 25,
+		"y": 43
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 25,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 26,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 26,
+		"y": 12
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 26,
+		"y": 13
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 26,
+		"y": 42
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 26,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 27,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 27,
+		"y": 12
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 27,
+		"y": 13
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 27,
+		"y": 14
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 27,
+		"y": 33
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 27,
+		"y": 34
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 27,
+		"y": 37
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 27,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 28,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 28,
+		"y": 12
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 28,
+		"y": 13
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 28,
+		"y": 14
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 28,
+		"y": 33
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 28,
+		"y": 34
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 28,
+		"y": 35
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 28,
+		"y": 36
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 28,
+		"y": 37
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 28,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 29,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 29,
+		"y": 1
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 29,
+		"y": 2
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 29,
+		"y": 3
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 29,
+		"y": 4
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 29,
+		"y": 12
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 29,
+		"y": 13
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 29,
+		"y": 14
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 29,
+		"y": 34
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 29,
+		"y": 35
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 29,
+		"y": 36
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 29,
+		"y": 37
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 29,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 30,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 30,
+		"y": 1
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 30,
+		"y": 2
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 30,
+		"y": 3
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 30,
+		"y": 4
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 30,
+		"y": 5
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 30,
+		"y": 13
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 30,
+		"y": 14
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 30,
+		"y": 34
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 30,
+		"y": 35
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 30,
+		"y": 36
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 30,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 31,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 31,
+		"y": 1
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 31,
+		"y": 2
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 31,
+		"y": 3
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 31,
+		"y": 4
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 31,
+		"y": 5
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 31,
+		"y": 15
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 31,
+		"y": 16
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 31,
+		"y": 17
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 31,
+		"y": 18
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 31,
+		"y": 19
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 31,
+		"y": 35
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 31,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 32,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 32,
+		"y": 1
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 32,
+		"y": 2
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 32,
+		"y": 3
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 32,
+		"y": 4
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 32,
+		"y": 5
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 32,
+		"y": 6
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 32,
+		"y": 16
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 32,
+		"y": 17
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 32,
+		"y": 18
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 32,
+		"y": 19
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 32,
+		"y": 38
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 32,
+		"y": 39
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 32,
+		"y": 48
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 32,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 33,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 33,
+		"y": 1
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 33,
+		"y": 4
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 33,
+		"y": 5
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 33,
+		"y": 6
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 33,
+		"y": 37
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 33,
+		"y": 38
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 33,
+		"y": 39
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 33,
+		"y": 40
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 33,
+		"y": 48
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 33,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 34,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 34,
+		"y": 1
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 34,
+		"y": 5
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 34,
+		"y": 6
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 34,
+		"y": 37
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 34,
+		"y": 38
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 34,
+		"y": 39
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 34,
+		"y": 40
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 34,
+		"y": 41
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 34,
+		"y": 44
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 34,
+		"y": 48
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 34,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 35,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 35,
+		"y": 1
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 35,
+		"y": 38
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 35,
+		"y": 39
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 35,
+		"y": 40
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 35,
+		"y": 41
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 35,
+		"y": 42
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 35,
+		"y": 43
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 35,
+		"y": 44
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 35,
+		"y": 45
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 35,
+		"y": 48
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 35,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 36,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 36,
+		"y": 38
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 36,
+		"y": 39
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 36,
+		"y": 40
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 36,
+		"y": 41
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 36,
+		"y": 42
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 36,
+		"y": 43
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 36,
+		"y": 44
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 36,
+		"y": 45
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 36,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 37,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 37,
+		"y": 39
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 37,
+		"y": 40
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 37,
+		"y": 41
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 37,
+		"y": 42
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 37,
+		"y": 43
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 37,
+		"y": 44
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 37,
+		"y": 45
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 37,
+		"y": 46
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 37,
+		"y": 48
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 37,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 38,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 38,
+		"y": 7
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 38,
+		"y": 8
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 38,
+		"y": 9
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 38,
+		"y": 15
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 38,
+		"y": 16
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 38,
+		"y": 40
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 38,
+		"y": 41
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 38,
+		"y": 42
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 38,
+		"y": 43
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 38,
+		"y": 44
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 38,
+		"y": 45
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 38,
+		"y": 46
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 38,
+		"y": 47
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 38,
+		"y": 48
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 38,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 39,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 39,
+		"y": 6
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 39,
+		"y": 7
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 39,
+		"y": 8
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 39,
+		"y": 9
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 39,
+		"y": 10
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 39,
+		"y": 41
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 39,
+		"y": 42
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 39,
+		"y": 43
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 39,
+		"y": 44
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 39,
+		"y": 45
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 39,
+		"y": 46
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 39,
+		"y": 47
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 39,
+		"y": 48
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 39,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 40,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 40,
+		"y": 6
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 40,
+		"y": 7
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 40,
+		"y": 8
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 40,
+		"y": 9
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 40,
+		"y": 42
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 40,
+		"y": 43
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 40,
+		"y": 44
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 40,
+		"y": 45
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 40,
+		"y": 46
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 40,
+		"y": 47
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 40,
+		"y": 48
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 40,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 41,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 41,
+		"y": 1
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 41,
+		"y": 43
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 41,
+		"y": 44
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 41,
+		"y": 45
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 41,
+		"y": 46
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 41,
+		"y": 47
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 41,
+		"y": 48
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 41,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 42,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 42,
+		"y": 1
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 42,
+		"y": 21
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 42,
+		"y": 22
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 42,
+		"y": 23
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 42,
+		"y": 45
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 42,
+		"y": 46
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 42,
+		"y": 47
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 42,
+		"y": 48
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 42,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 43,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 43,
+		"y": 1
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 43,
+		"y": 20
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 43,
+		"y": 21
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 43,
+		"y": 22
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 43,
+		"y": 23
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 43,
+		"y": 47
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 43,
+		"y": 48
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 43,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 44,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 44,
+		"y": 1
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 44,
+		"y": 4
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 44,
+		"y": 5
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 44,
+		"y": 6
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 44,
+		"y": 17
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 44,
+		"y": 18
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 44,
+		"y": 19
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 44,
+		"y": 20
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 44,
+		"y": 21
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 44,
+		"y": 22
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 44,
+		"y": 48
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 44,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 45,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 45,
+		"y": 4
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 45,
+		"y": 5
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 45,
+		"y": 6
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 45,
+		"y": 16
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 45,
+		"y": 17
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 45,
+		"y": 18
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 45,
+		"y": 19
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 45,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 46,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 46,
+		"y": 4
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 46,
+		"y": 5
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 46,
+		"y": 6
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 46,
+		"y": 16
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 46,
+		"y": 17
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 46,
+		"y": 18
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 46,
+		"y": 31
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 46,
+		"y": 32
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 46,
+		"y": 33
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 46,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 47,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 47,
+		"y": 4
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 47,
+		"y": 5
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 47,
+		"y": 6
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 47,
+		"y": 12
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 47,
+		"y": 13
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 47,
+		"y": 16
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 47,
+		"y": 17
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 47,
+		"y": 18
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 47,
+		"y": 31
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 47,
+		"y": 32
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 47,
+		"y": 33
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 47,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 48,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 48,
+		"y": 1
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 48,
+		"y": 2
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 48,
+		"y": 3
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 48,
+		"y": 4
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 48,
+		"y": 5
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 48,
+		"y": 6
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 48,
+		"y": 11
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 48,
+		"y": 12
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 48,
+		"y": 13
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 48,
+		"y": 14
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 48,
+		"y": 15
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 48,
+		"y": 16
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 48,
+		"y": 17
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 48,
+		"y": 18
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 48,
+		"y": 19
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 48,
+		"y": 22
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 48,
+		"y": 23
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 48,
+		"y": 24
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 48,
+		"y": 30
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 48,
+		"y": 31
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 48,
+		"y": 32
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 48,
+		"y": 33
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 48,
+		"y": 34
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 48,
+		"y": 48
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 48,
+		"y": 49
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 0
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 1
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 2
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 3
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 4
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 5
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 6
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 7
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 8
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 9
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 10
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 11
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 12
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 13
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 14
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 15
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 16
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 17
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 18
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 19
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 20
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 21
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 22
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 23
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 24
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 25
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 26
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 27
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 28
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 29
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 30
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 31
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 32
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 33
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 34
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 35
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 36
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 37
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 47
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 48
+	},
+	{
+		"room": "E12S51",
+		"type": "wall",
+		"x": 49,
+		"y": 49
+	}
+];
+
+/***/ }),
+/* 211 */
+/***/ (function(module, exports) {
+
+module.exports = [
+	{
+		"objects": [
+			{
+				"_id": "7bf92a8d67d06a65eb9b62d8",
+				"type": "controller",
+				"room": "E12S51",
+				"x": 42,
+				"y": 23,
+				"energy": 1500,
+				"energyCapacity": 3000,
+				"hits": 100,
+				"hitsMax": 100,
+				"level": 8,
+				"progressTotal": 0,
+				"progress": 0,
+				"downgradeTime": 18700000,
+				"user": "5a71934f7037f829c0ba0e11",
+				"sign": null
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "428abfb80871b664eaf398ca",
+				"room": "E12S51",
+				"type": "factory",
+				"x": 40,
+				"y": 19,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11",
+				"storeCapacity": 2000,
+				"store": {
+					"energy": 200
+				},
+				"cooldown": 0,
+				"actionLog": {
+					"transferEnergy": null
+				},
+				"storeCapacityResource": {
+					"energy": 800
+				}
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "e661d191d943d08c07b537c5",
+				"room": "E12S51",
+				"type": "link",
+				"x": 38,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11",
+				"cooldown": 0,
+				"actionLog": {
+					"transferEnergy": null
+				},
+				"store": {
+					"energy": 200
+				},
+				"storeCapacityResource": {
+					"energy": 800
+				}
+			},
+			{
+				"_id": "ad7488328c724366191e5231",
+				"type": "mineral",
+				"room": "E12S51",
+				"x": 19,
+				"y": 31,
+				"hits": 100,
+				"hitsMax": 100,
+				"nextRegenerationTime": 300,
+				"mineralType": "U",
+				"mineralAmount": 30580,
+				"density": 3
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "e1134feae51a914d7e04ec01",
+				"room": "E12S51",
+				"type": "nuker",
+				"x": 39,
+				"y": 21,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11",
+				"cooldownTime": 100,
+				"store": {
+					"energy": 5000,
+					"G": 5000
+				},
+				"storeCapacityResource": {
+					"energy": 300000,
+					"G": 5000
+				}
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "9e6dca02fc05a91d247221c6",
+				"room": "E12S51",
+				"type": "powerSpawn",
+				"x": 40,
+				"y": 21,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11",
+				"store": {
+					"energy": 50
+				},
+				"storeCapacityResource": {
+					"energy": 300
+				}
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "c8e574ca0bfdca75c562bcd3",
+				"room": "E12S51",
+				"type": "road",
+				"x": 18,
+				"y": 6,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "7944bb473b72001ecfe42768",
+				"room": "E12S51",
+				"type": "road",
+				"x": 32,
+				"y": 6,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "417cacc4905e87208832b822",
+				"room": "E12S51",
+				"type": "road",
+				"x": 17,
+				"y": 7,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "cccaf5aa0718fd8317f542b2",
+				"room": "E12S51",
+				"type": "road",
+				"x": 19,
+				"y": 7,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "4a5e271218fedb222536766f",
+				"room": "E12S51",
+				"type": "road",
+				"x": 31,
+				"y": 7,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "a62317c2d1ead403d6d9ad5a",
+				"room": "E12S51",
+				"type": "road",
+				"x": 16,
+				"y": 8,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "89eeb0d14132597a2921829c",
+				"room": "E12S51",
+				"type": "road",
+				"x": 20,
+				"y": 8,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "42a278a336698cb8d2564d3e",
+				"room": "E12S51",
+				"type": "road",
+				"x": 30,
+				"y": 8,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "cf68031e956398242b004e7d",
+				"room": "E12S51",
+				"type": "road",
+				"x": 14,
+				"y": 9,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "cf68031e956398242b004e7d",
+				"room": "E12S51",
+				"type": "road",
+				"x": 14,
+				"y": 9,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "1c2f43ca0345c54663d7e500",
+				"room": "E12S51",
+				"type": "road",
+				"x": 15,
+				"y": 9,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "92f8434b091c7523c0dd8d4a",
+				"room": "E12S51",
+				"type": "road",
+				"x": 16,
+				"y": 9,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "92f8434b091c7523c0dd8d4a",
+				"room": "E12S51",
+				"type": "road",
+				"x": 16,
+				"y": 9,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "92f8434b091c7523c0dd8d4a",
+				"room": "E12S51",
+				"type": "road",
+				"x": 16,
+				"y": 9,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d8df4a5fda5fcbae8d6eb722",
+				"room": "E12S51",
+				"type": "road",
+				"x": 21,
+				"y": 9,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "fd77fb8f29d67e3dfd66e33c",
+				"room": "E12S51",
+				"type": "road",
+				"x": 22,
+				"y": 9,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "31a9283af6a0fd822a598cf8",
+				"room": "E12S51",
+				"type": "road",
+				"x": 23,
+				"y": 9,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "179c768a18d81b0646d5cf4c",
+				"room": "E12S51",
+				"type": "road",
+				"x": 24,
+				"y": 9,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "986b3f70803d0119f8560ef2",
+				"room": "E12S51",
+				"type": "road",
+				"x": 25,
+				"y": 9,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "c4098ea6eb36a0269ab0e5f1",
+				"room": "E12S51",
+				"type": "road",
+				"x": 26,
+				"y": 9,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "41b4831517fa028277f73877",
+				"room": "E12S51",
+				"type": "road",
+				"x": 27,
+				"y": 9,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "6f7346cd985b3f793d529f5b",
+				"room": "E12S51",
+				"type": "road",
+				"x": 28,
+				"y": 9,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "b763f01565a8f132eb963ce5",
+				"room": "E12S51",
+				"type": "road",
+				"x": 29,
+				"y": 9,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "73d0cc9c81264dc3d48d821d",
+				"room": "E12S51",
+				"type": "road",
+				"x": 13,
+				"y": 10,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d137debdc0e7ca16248df6c8",
+				"room": "E12S51",
+				"type": "road",
+				"x": 17,
+				"y": 10,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d137debdc0e7ca16248df6c8",
+				"room": "E12S51",
+				"type": "road",
+				"x": 17,
+				"y": 10,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d137debdc0e7ca16248df6c8",
+				"room": "E12S51",
+				"type": "road",
+				"x": 17,
+				"y": 10,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d1b4d01205f11e05e0987bab",
+				"room": "E12S51",
+				"type": "road",
+				"x": 12,
+				"y": 11,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "b9c8f2a72ca6a72b1a4a662b",
+				"room": "E12S51",
+				"type": "road",
+				"x": 18,
+				"y": 11,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "b9c8f2a72ca6a72b1a4a662b",
+				"room": "E12S51",
+				"type": "road",
+				"x": 18,
+				"y": 11,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "b9c8f2a72ca6a72b1a4a662b",
+				"room": "E12S51",
+				"type": "road",
+				"x": 18,
+				"y": 11,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "2d7acbb84be2481eb760a04b",
+				"room": "E12S51",
+				"type": "road",
+				"x": 19,
+				"y": 11,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "7e65b68c3ef003501a0c934b",
+				"room": "E12S51",
+				"type": "road",
+				"x": 11,
+				"y": 12,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "9b461d60479b745af9c6a65a",
+				"room": "E12S51",
+				"type": "road",
+				"x": 17,
+				"y": 12,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "9b461d60479b745af9c6a65a",
+				"room": "E12S51",
+				"type": "road",
+				"x": 17,
+				"y": 12,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "c6667ddc3cc04119d3a7bb44",
+				"room": "E12S51",
+				"type": "road",
+				"x": 20,
+				"y": 12,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "98e49eda97679c25db5cbf4d",
+				"room": "E12S51",
+				"type": "road",
+				"x": 21,
+				"y": 12,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "666ca9076c18c9626fd1cf59",
+				"room": "E12S51",
+				"type": "road",
+				"x": 22,
+				"y": 12,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "948dfea79210db7862a3f3d2",
+				"room": "E12S51",
+				"type": "road",
+				"x": 10,
+				"y": 13,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "36a170b9a65faaf967235160",
+				"room": "E12S51",
+				"type": "road",
+				"x": 16,
+				"y": 13,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "36a170b9a65faaf967235160",
+				"room": "E12S51",
+				"type": "road",
+				"x": 16,
+				"y": 13,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "a358cb4eb6e75b8d4563366c",
+				"room": "E12S51",
+				"type": "road",
+				"x": 23,
+				"y": 13,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "fe546cdf64a569cefa7e8987",
+				"room": "E12S51",
+				"type": "road",
+				"x": 9,
+				"y": 14,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "7ca6e8998076818df8baaa09",
+				"room": "E12S51",
+				"type": "road",
+				"x": 16,
+				"y": 14,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "7ca6e8998076818df8baaa09",
+				"room": "E12S51",
+				"type": "road",
+				"x": 16,
+				"y": 14,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "75c5ec5e8aec45d64f3d70b6",
+				"room": "E12S51",
+				"type": "road",
+				"x": 24,
+				"y": 14,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "ebed137f8ade66d96c2c67f1",
+				"room": "E12S51",
+				"type": "road",
+				"x": 8,
+				"y": 15,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "71bcf2a8bf60479b2d654776",
+				"room": "E12S51",
+				"type": "road",
+				"x": 16,
+				"y": 15,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "71bcf2a8bf60479b2d654776",
+				"room": "E12S51",
+				"type": "road",
+				"x": 16,
+				"y": 15,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "8a860a7200a5297a697ee655",
+				"room": "E12S51",
+				"type": "road",
+				"x": 25,
+				"y": 15,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "ca876d85ed68876777c10d96",
+				"room": "E12S51",
+				"type": "road",
+				"x": 7,
+				"y": 16,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "b5f60aef8a98922cabb9c01d",
+				"room": "E12S51",
+				"type": "road",
+				"x": 16,
+				"y": 16,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "b5f60aef8a98922cabb9c01d",
+				"room": "E12S51",
+				"type": "road",
+				"x": 16,
+				"y": 16,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "83653b206f36bbc87e3f5d89",
+				"room": "E12S51",
+				"type": "road",
+				"x": 26,
+				"y": 16,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "df953ff06ace468a51f49829",
+				"room": "E12S51",
+				"type": "road",
+				"x": 6,
+				"y": 17,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d01b6e78f1b85471c4d7ae23",
+				"room": "E12S51",
+				"type": "road",
+				"x": 17,
+				"y": 17,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d01b6e78f1b85471c4d7ae23",
+				"room": "E12S51",
+				"type": "road",
+				"x": 17,
+				"y": 17,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "91b3f49c09679a8d036476b9",
+				"room": "E12S51",
+				"type": "road",
+				"x": 27,
+				"y": 17,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "04e99ee21f0ecde02786f227",
+				"room": "E12S51",
+				"type": "road",
+				"x": 36,
+				"y": 17,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "07af5d6b6d328cd2465a2ab1",
+				"room": "E12S51",
+				"type": "road",
+				"x": 37,
+				"y": 17,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "2bce3985d0779f411e2418db",
+				"room": "E12S51",
+				"type": "road",
+				"x": 38,
+				"y": 17,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d16f010754c112bf6808729e",
+				"room": "E12S51",
+				"type": "road",
+				"x": 39,
+				"y": 17,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "e7228a6c6a3031cce4b4acf4",
+				"room": "E12S51",
+				"type": "road",
+				"x": 40,
+				"y": 17,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "68c1a63b83ae27388e1b75f3",
+				"room": "E12S51",
+				"type": "road",
+				"x": 41,
+				"y": 17,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "03dbc2eb51eb60cc7eca4a9b",
+				"room": "E12S51",
+				"type": "road",
+				"x": 42,
+				"y": 17,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "921e82335af711321234551a",
+				"room": "E12S51",
+				"type": "road",
+				"x": 5,
+				"y": 18,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "50bde51f155e1310f6dfdb39",
+				"room": "E12S51",
+				"type": "road",
+				"x": 18,
+				"y": 18,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "50bde51f155e1310f6dfdb39",
+				"room": "E12S51",
+				"type": "road",
+				"x": 18,
+				"y": 18,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "12cc30558840f684a41915a4",
+				"room": "E12S51",
+				"type": "road",
+				"x": 28,
+				"y": 18,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "779639ede20d4d40c2afb12f",
+				"room": "E12S51",
+				"type": "road",
+				"x": 36,
+				"y": 18,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "3303aa0470bf605458c97136",
+				"room": "E12S51",
+				"type": "road",
+				"x": 42,
+				"y": 18,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "09e830a0319c7a692a50f70c",
+				"room": "E12S51",
+				"type": "road",
+				"x": 4,
+				"y": 19,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "3a78dcaf4fc5489110dad084",
+				"room": "E12S51",
+				"type": "road",
+				"x": 18,
+				"y": 19,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "053f9734fd40c5f2a51d21d4",
+				"room": "E12S51",
+				"type": "road",
+				"x": 19,
+				"y": 19,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "ee0248dcf1c9e9d0f3a1c8ff",
+				"room": "E12S51",
+				"type": "road",
+				"x": 29,
+				"y": 19,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "ec96eb203fa2ac8cba2f0702",
+				"room": "E12S51",
+				"type": "road",
+				"x": 36,
+				"y": 19,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "699e8f217219f40b1048a915",
+				"room": "E12S51",
+				"type": "road",
+				"x": 42,
+				"y": 19,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "b1c66c61af35a1bcff0da387",
+				"room": "E12S51",
+				"type": "road",
+				"x": 3,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d0965d5d6993b0df701d5f54",
+				"room": "E12S51",
+				"type": "road",
+				"x": 18,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "8cf9d057e372529d9dbf3845",
+				"room": "E12S51",
+				"type": "road",
+				"x": 20,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "80d6b5cb4951f13b22ea6cdc",
+				"room": "E12S51",
+				"type": "road",
+				"x": 30,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "000af2c4b67890fc1e82c74d",
+				"room": "E12S51",
+				"type": "road",
+				"x": 31,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "86aeb9e15aab2db5d2bc282a",
+				"room": "E12S51",
+				"type": "road",
+				"x": 32,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "b06c60c3fcc2cb67d50437c0",
+				"room": "E12S51",
+				"type": "road",
+				"x": 33,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "eb3631c79e33443e947eab27",
+				"room": "E12S51",
+				"type": "road",
+				"x": 34,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "b43b7ac44dccfb8d43fc9662",
+				"room": "E12S51",
+				"type": "road",
+				"x": 35,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "66ab5c2a7e0f05835d4ba6f7",
+				"room": "E12S51",
+				"type": "road",
+				"x": 36,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "66ab5c2a7e0f05835d4ba6f7",
+				"room": "E12S51",
+				"type": "road",
+				"x": 36,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "76634ad969a795a90b6103d6",
+				"room": "E12S51",
+				"type": "road",
+				"x": 37,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "c28d467e2a625b4564e83e1b",
+				"room": "E12S51",
+				"type": "road",
+				"x": 38,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "b04dd7e01bc88a1ac68e7688",
+				"room": "E12S51",
+				"type": "road",
+				"x": 39,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "c651e7d6aefe05d82e714f0a",
+				"room": "E12S51",
+				"type": "road",
+				"x": 42,
+				"y": 20,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "28abaea4a2ac06ff7913cabd",
+				"room": "E12S51",
+				"type": "road",
+				"x": 3,
+				"y": 21,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "93483469ac60f260ee4d8ba4",
+				"room": "E12S51",
+				"type": "road",
+				"x": 18,
+				"y": 21,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d84b9d8cee67c4c8d81de0d0",
+				"room": "E12S51",
+				"type": "road",
+				"x": 21,
+				"y": 21,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "16efeaa8581fbccba1f788d1",
+				"room": "E12S51",
+				"type": "road",
+				"x": 36,
+				"y": 21,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "7aff3ed7b0c7ff1cd99cf357",
+				"room": "E12S51",
+				"type": "road",
+				"x": 4,
+				"y": 22,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "067321ee950ad407a5b05476",
+				"room": "E12S51",
+				"type": "road",
+				"x": 18,
+				"y": 22,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "e41289fab6bc57aff4ea227a",
+				"room": "E12S51",
+				"type": "road",
+				"x": 22,
+				"y": 22,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "9e8de2dcd187e0feb84f1f72",
+				"room": "E12S51",
+				"type": "road",
+				"x": 36,
+				"y": 22,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "4ec332c3234961d49a6f84c6",
+				"room": "E12S51",
+				"type": "road",
+				"x": 4,
+				"y": 23,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "9d2f3fc82bc3f6463c63963c",
+				"room": "E12S51",
+				"type": "road",
+				"x": 18,
+				"y": 23,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "97d6652dcc8e11a8b29e66b1",
+				"room": "E12S51",
+				"type": "road",
+				"x": 23,
+				"y": 23,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "f0beba5f1d38245e94823345",
+				"room": "E12S51",
+				"type": "road",
+				"x": 36,
+				"y": 23,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d96fde9f79d45927c1ca8171",
+				"room": "E12S51",
+				"type": "road",
+				"x": 37,
+				"y": 23,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d60787a3d6829cbff1b304ee",
+				"room": "E12S51",
+				"type": "road",
+				"x": 38,
+				"y": 23,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "0f683e3625b3bf66aa7d53dd",
+				"room": "E12S51",
+				"type": "road",
+				"x": 39,
+				"y": 23,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "45e989472240f041af37e83c",
+				"room": "E12S51",
+				"type": "road",
+				"x": 40,
+				"y": 23,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "91ed56f03d2b99bb8197c388",
+				"room": "E12S51",
+				"type": "road",
+				"x": 41,
+				"y": 23,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "8018d8c0391846426bcaabea",
+				"room": "E12S51",
+				"type": "road",
+				"x": 4,
+				"y": 24,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "dd6deec85414a1ea098c7927",
+				"room": "E12S51",
+				"type": "road",
+				"x": 18,
+				"y": 24,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "ada247ae8dd28a578c297332",
+				"room": "E12S51",
+				"type": "road",
+				"x": 24,
+				"y": 24,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "1fa00abf01410b62fbdf9f5b",
+				"room": "E12S51",
+				"type": "road",
+				"x": 1,
+				"y": 25,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "7ab88734675bb277c9b4dffc",
+				"room": "E12S51",
+				"type": "road",
+				"x": 2,
+				"y": 25,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "265203f4a34933d6c22dc79e",
+				"room": "E12S51",
+				"type": "road",
+				"x": 3,
+				"y": 25,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "de1f4d7c1bdf4461e02986e8",
+				"room": "E12S51",
+				"type": "road",
+				"x": 18,
+				"y": 25,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "872c658a505b4fb9e97fd30d",
+				"room": "E12S51",
+				"type": "road",
+				"x": 25,
+				"y": 25,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "a1f904487bcbab2b8a924575",
+				"room": "E12S51",
+				"type": "road",
+				"x": 18,
+				"y": 26,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "d9ea0644441cb187f4eda849",
+				"room": "E12S51",
+				"type": "road",
+				"x": 26,
+				"y": 26,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "2ee26809d0062250165d0256",
+				"room": "E12S51",
+				"type": "road",
+				"x": 18,
+				"y": 27,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "4b8760e14456833c7e120200",
+				"room": "E12S51",
+				"type": "road",
+				"x": 27,
+				"y": 27,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "12df25de40dd0ae5555105c0",
+				"room": "E12S51",
+				"type": "road",
+				"x": 18,
+				"y": 28,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "9c6b45a8527c5ddb6f388b4e",
+				"room": "E12S51",
+				"type": "road",
+				"x": 28,
+				"y": 28,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "74c63a84a69d69e525583faa",
+				"room": "E12S51",
+				"type": "road",
+				"x": 31,
+				"y": 28,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "3b62441c20b14600a90ee8e1",
+				"room": "E12S51",
+				"type": "road",
+				"x": 18,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "27c8c8e5283af0f9dfb35a85",
+				"room": "E12S51",
+				"type": "road",
+				"x": 29,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "a12f68eb773718172c983ece",
+				"room": "E12S51",
+				"type": "road",
+				"x": 30,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "cef431b6733a276b763f9278",
+				"room": "E12S51",
+				"type": "road",
+				"x": 32,
+				"y": 29,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "4a9283f709348be8f51f1009",
+				"room": "E12S51",
+				"type": "road",
+				"x": 18,
+				"y": 30,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "34bcdc6dbc915dd104768df0",
+				"room": "E12S51",
+				"type": "road",
+				"x": 33,
+				"y": 30,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "8f19dfad17a258035d63a16c",
+				"room": "E12S51",
+				"type": "road",
+				"x": 34,
+				"y": 31,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "5d0e4ce158dcbe7124f0aa03",
+				"room": "E12S51",
+				"type": "road",
+				"x": 35,
+				"y": 32,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "abaece04b9653b2df3331d58",
+				"room": "E12S51",
+				"type": "road",
+				"x": 36,
+				"y": 33,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "abe6022f2522de185e13c13a",
+				"room": "E12S51",
+				"type": "road",
+				"x": 37,
+				"y": 34,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "41d8ea13aacc995df5553ff7",
+				"room": "E12S51",
+				"type": "road",
+				"x": 38,
+				"y": 35,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "8f608f0535f704055847a6e4",
+				"room": "E12S51",
+				"type": "road",
+				"x": 39,
+				"y": 36,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "245c6c3c5883bcdaf35daf57",
+				"room": "E12S51",
+				"type": "road",
+				"x": 40,
+				"y": 37,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "9b4c09c2f17b80f4583813f0",
+				"room": "E12S51",
+				"type": "road",
+				"x": 41,
+				"y": 38,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "974e9ed9b5517c91b8062d24",
+				"room": "E12S51",
+				"type": "road",
+				"x": 42,
+				"y": 39,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "0c5e37435170b9a1d0db81ba",
+				"room": "E12S51",
+				"type": "road",
+				"x": 43,
+				"y": 40,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "846a5207d4260ee83cadb0cc",
+				"room": "E12S51",
+				"type": "road",
+				"x": 44,
+				"y": 41,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "2078579ea5ccd2222360e4f6",
+				"room": "E12S51",
+				"type": "road",
+				"x": 45,
+				"y": 42,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "c3f4544355726702691bb7d7",
+				"room": "E12S51",
+				"type": "road",
+				"x": 46,
+				"y": 43,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "55927d44712b449cf45b1b48",
+				"room": "E12S51",
+				"type": "road",
+				"x": 47,
+				"y": 44,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "3b36810c7c0df5205ea2ea15",
+				"room": "E12S51",
+				"type": "road",
+				"x": 47,
+				"y": 45,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"_id": "1616e61804cbda8c237c5646",
+				"type": "source",
+				"room": "E12S51",
+				"x": 33,
+				"y": 5,
+				"energy": 1500,
+				"energyCapacity": 3000,
+				"hits": 100,
+				"hitsMax": 100,
+				"ticksToRegeneration": 300,
+				"nextRegenerationTime": 500
+			},
+			{
+				"_id": "bd54155cba978081e9446da1",
+				"type": "source",
+				"room": "E12S51",
+				"x": 15,
+				"y": 8,
+				"energy": 1500,
+				"energyCapacity": 3000,
+				"hits": 100,
+				"hitsMax": 100,
+				"ticksToRegeneration": 300,
+				"nextRegenerationTime": 500
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "11d02b2425c35bc44fc6de16",
+				"room": "E12S51",
+				"type": "spawn",
+				"x": 39,
+				"y": 19,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11",
+				"store": {
+					"energy": 3000,
+					"power": 65
+				},
+				"storeCapacityResource": {
+					"energy": 5000,
+					"power": 100
+				},
+				"off": false,
+				"spawning": null
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "4257874e7d8587058136bb99",
+				"room": "E12S51",
+				"type": "storage",
+				"x": 38,
+				"y": 19,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11",
+				"store": {
+					"energy": 400000
+				},
+				"storeCapacity": 1000000
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "f2d3f18c7880796b1efdb1ca",
+				"room": "E12S51",
+				"type": "terminal",
+				"x": 38,
+				"y": 21,
+				"notifyWhenAttacked": false,
+				"user": "5a71934f7037f829c0ba0e11"
+			},
+			{
+				"hits": 100,
+				"hitsMax": 100,
+				"nextDecayTime": 100,
+				"_isDisabled": false,
+				"_id": "0178fcc347bbe1b54e3dc031",
+				"room": "E12S51",
+				"type": "tower",
+				"x": 40,
+				"y": 20,
 				"notifyWhenAttacked": false,
 				"user": "5a71934f7037f829c0ba0e11",
 				"actionLog": {

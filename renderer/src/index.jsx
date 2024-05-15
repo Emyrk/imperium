@@ -44,7 +44,7 @@ function applyDiff(objects, diff) {
 
 function start() {
     const tests = [
-        "E11S53", "E12S53", "E16S59"
+        "E11S53", "E12S53", "E16S59", "E12S51"
     ]
 
     let name = localStorage.getItem("testname") || tests[0]
