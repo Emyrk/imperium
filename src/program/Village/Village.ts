@@ -163,7 +163,16 @@ export class ProgramVillage extends Process<ProgramVillageData> implements RoomV
   // }
 
   public execute(): ProcessCode {
-    this.spawn();
+    // NOTE: Order matters! SpawnControl must be initialized first (for spawnPid),
+    // but we call spawn() at the end so it runs AFTER other processes that
+    // queue spawn requests (like StaticHarvest). This ensures spawn requests
+    // added this tick get processed this tick, surviving global resets.
+    
+    // Initialize SpawnControl early to get spawnPid for other processes
+    if (!this.data.spawnPid) {
+      this.data.spawnPid = this.launchChildProcess(ProgramSpawnControl.new(this.data.roomName));
+    }
+
     this.remotes();
     this.blueprint();
     this.updatePrimaryLink(!this.executed);
@@ -204,8 +213,27 @@ export class ProgramVillage extends Process<ProgramVillageData> implements RoomV
       this.data.harvestPids[source.id] = this.launchChildProcess(harvestProcess);
     });
 
+    // Reorder children so SpawnControl runs last - this ensures spawn requests
+    // from StaticHarvest (and other processes) are processed in the same tick.
+    this.reorderSpawnControlLast();
+
     this.marketSell();
     return ProcessCode.SUCCESS;
+  }
+
+  // Ensures SpawnControl runs after all other children that queue spawn requests
+  private reorderSpawnControlLast(): void {
+    if (!this.data.spawnPid) return;
+    
+    const children = this.memory.scheduled?.children;
+    if (!children || children.length <= 1) return;
+    
+    const spawnIdx = children.indexOf(this.data.spawnPid);
+    if (spawnIdx === -1 || spawnIdx === children.length - 1) return;
+    
+    // Move SpawnControl to the end
+    children.splice(spawnIdx, 1);
+    children.push(this.data.spawnPid);
   }
 
   public heapLogistics(): ProgramHeapRoomLogistics | undefined {
