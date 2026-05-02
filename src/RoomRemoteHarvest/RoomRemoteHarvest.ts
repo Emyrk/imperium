@@ -69,6 +69,17 @@ export class ProgramRoomRemoteHarvest extends CivisProgram<ProgramRoomRemoteHarv
       }
     });
 
+    // Also pull from Memory.rooms[homeRoom].remoteHarvest = ['W22S25', ...]
+    // This lets us configure remotes without needing room vision to plant flags.
+    const homeMem = Memory.rooms[this.data.roomName] as any;
+    if (homeMem && Array.isArray(homeMem.remoteHarvest)) {
+      for (const rn of homeMem.remoteHarvest as string[]) {
+        if (typeof rn === "string" && rn.length > 0 && !harvestRooms.includes(rn)) {
+          harvestRooms.push(rn);
+        }
+      }
+    }
+
     // Delete any rooms that we are no longer harvesting
     Object.values(this.data.harvestRooms).forEach(harvestRoom => {
       // If not in harvest rooms, delete the field.
