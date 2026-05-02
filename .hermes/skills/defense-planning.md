@@ -140,6 +140,23 @@ Min-cut returns the *minimum* set. For real defense you usually want:
 
 Don't wall off too much area. Smaller perimeter = cheaper to maintain (decay).
 
+## Novice / Respawn area considerations
+
+Novice and respawn areas seal exits with code-protected walls that other players
+**cannot pass through**. While the room is in a novice sector, perimeter walls
+inside your room are useless decoration.
+
+**However: novice sectors expire** (typically a few weeks). When that happens
+the protective walls vanish and your room is suddenly exposed. So:
+
+- **Always plan walls anyway**, but tag them `rcl: 2` (or higher) so they don't
+  get placed until walls/ramparts unlock. By the time you hit RCL 2 you have
+  bandwidth to start building them, and they'll be standing well before novice
+  ends.
+- Check `Game.map.getRoomStatus(roomName).status` — `'novice'` or `'respawn'`
+  means sealed. The `timestamp` field is when it ends.
+- Don't skip walls just because the room currently looks unreachable.
+
 ## Pitfalls
 
 - **API caches Memory** — after `set_memory` or `execute_console`, wait a tick (~3-5s on shard2) before re-reading.
